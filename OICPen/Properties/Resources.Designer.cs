@@ -74,9 +74,29 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap _30215yq {
+            get {
+                object obj = ResourceManager.GetObject("30215yq", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap _57_512 {
             get {
                 object obj = ResourceManager.GetObject("57-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap gahag_0055923193_1 {
+            get {
+                object obj = ResourceManager.GetObject("gahag-0055923193-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -448,6 +468,16 @@ namespace OICPen.Properties {
         internal static System.Drawing.Bitmap school_stationery_items_1520937446_37165031 {
             get {
                 object obj = ResourceManager.GetObject("school-stationery-items-1520937446-37165031", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap set_of_stationery_pictures_csp39459981 {
+            get {
+                object obj = ResourceManager.GetObject("set-of-stationery-pictures_csp39459981", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

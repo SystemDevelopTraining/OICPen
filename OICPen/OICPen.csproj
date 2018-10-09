@@ -227,6 +227,15 @@
   <ItemGroup>
     <None Include="Resources\57-512.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set-of-stationery-pictures_csp39459981.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30215yq.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gahag-0055923193-1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
