@@ -80,6 +80,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="top.resx">
       <DependentUpon>top.cs</DependentUpon>
@@ -96,6 +97,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\蜃ｺ蠎ｫ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_1_1668045.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sales-performance-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-in-transit-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-in-transit-482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-return-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-curved-arrow-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-left-2-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-left-2-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-二重左矢印-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-注文書-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ショッピングカート-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-倉庫-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-製品-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ユーザー-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-社員カード-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-日本円-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-配達-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-日本円-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-配達-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oiclogopng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_logo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_logo_footer01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

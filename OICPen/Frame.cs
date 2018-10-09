@@ -34,5 +34,15 @@ namespace OICPen
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer2_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
