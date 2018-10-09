@@ -15,6 +15,7 @@ namespace OICPen
         public Frame()
         {
             InitializeComponent();
+            /*To know the length and width of the screen*/
            /* var f=new login();
             f.TopLevel = false;
             splitContainer2.Panel2.Controls.Add(f);
