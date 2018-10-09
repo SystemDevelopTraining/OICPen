@@ -16,13 +16,14 @@ namespace OICPen
         {
             InitializeComponent();
             /*To know the length and width of the screen*/
-           /* var f=new login();
+              var f=new login();
+         //   var f = new sales();
             f.TopLevel = false;
             splitContainer2.Panel2.Controls.Add(f);
             f.Dock = DockStyle.Fill;
             f.Show();
 
-            f.BringToFront();*/
+            f.BringToFront();
         }
 
         private void Frame_Shown(object sender, EventArgs e)

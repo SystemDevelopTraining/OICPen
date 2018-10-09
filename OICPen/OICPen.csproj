@@ -179,6 +179,54 @@
   <ItemGroup>
     <None Include="Resources\0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school-stationery-items-1520937446-3716503.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school-stationery-items-1520937446-37165031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-paper-stationery-adhesive-tape-ant-stationers-offi-school-png-image-5a752e58967e98.7882915715176290166164.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-出口-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-削除-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-配達-642.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-二重左矢印-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-注文書-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ショッピングカート-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-倉庫-64 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-製品-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ユーザー-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-社員カード-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-出口-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-削除-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\57-512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

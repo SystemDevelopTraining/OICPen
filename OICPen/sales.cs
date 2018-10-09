@@ -16,5 +16,10 @@ namespace OICPen
         {
             InitializeComponent();
         }
+
+        private void sales_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

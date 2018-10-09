@@ -74,6 +74,16 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap _57_512 {
+            get {
+                object obj = ResourceManager.GetObject("57-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_curved_arrow_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-curved-arrow-48", resourceCulture);
@@ -154,9 +164,29 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_ショッピングカート_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-ショッピングカート-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_ユーザー_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-ユーザー-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_ユーザー_64__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-ユーザー-64 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -174,9 +204,69 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_二重左矢印_48__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-二重左矢印-48 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_倉庫_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-倉庫-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_倉庫_64__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-倉庫-64 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_出口_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-出口-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_出口_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-出口-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_削除_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-削除-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_削除_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-削除-641", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -214,6 +304,26 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_注文書_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-注文書-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_社員カード_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-社員カード-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_社員カード_64__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-社員カード-64 (1)", resourceCulture);
@@ -234,6 +344,16 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_製品_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-製品-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_配達_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-配達-64", resourceCulture);
@@ -247,6 +367,16 @@ namespace OICPen.Properties {
         internal static System.Drawing.Bitmap icons8_配達_641 {
             get {
                 object obj = ResourceManager.GetObject("icons8-配達-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_配達_642 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-配達-642", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -284,9 +414,40 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap kisspng_paper_stationery_adhesive_tape_ant_stationers_offi_school_png_image_5a752e58967e98_7882915715176290166164 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-paper-stationery-adhesive-tape-ant-stationers-offi-school-png-image-5a752" +
+                        "e58967e98.7882915715176290166164", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap oiclogopng {
             get {
                 object obj = ResourceManager.GetObject("oiclogopng", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap school_stationery_items_1520937446_3716503 {
+            get {
+                object obj = ResourceManager.GetObject("school-stationery-items-1520937446-3716503", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap school_stationery_items_1520937446_37165031 {
+            get {
+                object obj = ResourceManager.GetObject("school-stationery-items-1520937446-37165031", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
