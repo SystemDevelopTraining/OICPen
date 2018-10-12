@@ -234,6 +234,7 @@
             this.staffsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.staffsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.staffsBtn.UseVisualStyleBackColor = false;
+            this.staffsBtn.Click += new System.EventHandler(this.staffsBtn_Click);
             // 
             // clientsBtn
             // 
@@ -252,6 +253,7 @@
             this.clientsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.clientsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.clientsBtn.UseVisualStyleBackColor = false;
+            this.clientsBtn.Click += new System.EventHandler(this.clientsBtn_Click);
             // 
             // itemsBtn
             // 
@@ -270,6 +272,7 @@
             this.itemsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.itemsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.itemsBtn.UseVisualStyleBackColor = false;
+            this.itemsBtn.Click += new System.EventHandler(this.itemsBtn_Click);
             // 
             // stockBtn
             // 
@@ -288,6 +291,7 @@
             this.stockBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.stockBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.stockBtn.UseVisualStyleBackColor = false;
+            this.stockBtn.Click += new System.EventHandler(this.stockBtn_Click);
             // 
             // takeorderBtn
             // 
@@ -325,6 +329,7 @@
             this.giveorderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.giveorderBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.giveorderBtn.UseVisualStyleBackColor = false;
+            this.giveorderBtn.Click += new System.EventHandler(this.giveorderBtn_Click);
             // 
             // incomingBtn
             // 
@@ -343,6 +348,7 @@
             this.incomingBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.incomingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.incomingBtn.UseVisualStyleBackColor = false;
+            this.incomingBtn.Click += new System.EventHandler(this.incomingBtn_Click);
             // 
             // shipBtn
             // 
@@ -361,6 +367,7 @@
             this.shipBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.shipBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.shipBtn.UseVisualStyleBackColor = false;
+            this.shipBtn.Click += new System.EventHandler(this.shipBtn_Click);
             // 
             // salesBtn
             // 
@@ -379,6 +386,7 @@
             this.salesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.salesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.salesBtn.UseVisualStyleBackColor = false;
+            this.salesBtn.Click += new System.EventHandler(this.salesBtn_Click);
             // 
             // splitContainer3
             // 
@@ -407,7 +415,7 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.Color.Yellow;
             this.textBox1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox1.Location = new System.Drawing.Point(374, 4);
+            this.textBox1.Location = new System.Drawing.Point(374, 7);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(1522, 34);
             this.textBox1.TabIndex = 2;
