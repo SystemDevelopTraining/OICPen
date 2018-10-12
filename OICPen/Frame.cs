@@ -132,8 +132,9 @@ private void stockBtn_Click(object sender, EventArgs e)
             f.BringToFront();
         }
 
-       
-
-
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
