@@ -135,6 +135,9 @@
     <EmbeddedResource Include="Frame.resx">
       <DependentUpon>Frame.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GiveOrder.resx">
+      <DependentUpon>GiveOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InComing.resx">
       <DependentUpon>InComing.cs</DependentUpon>
     </EmbeddedResource>
