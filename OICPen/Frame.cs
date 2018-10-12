@@ -32,22 +32,8 @@ namespace OICPen
             MessageBox.Show(splitContainer2.Panel2.Height.ToString());*/
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer2_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        
+        private void takeorderBtn_Click(object sender, EventArgs e)
         {
 
         }

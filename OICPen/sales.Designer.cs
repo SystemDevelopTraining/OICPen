@@ -1,6 +1,6 @@
 ﻿namespace OICPen
 {
-    partial class sales
+    partial class Sales
     {
         /// <summary>
         /// Required designer variable.
