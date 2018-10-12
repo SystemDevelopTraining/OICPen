@@ -140,6 +140,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InComing.resx">
       <DependentUpon>InComing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Items.resx">
       <DependentUpon>Items.cs</DependentUpon>
     </EmbeddedResource>
