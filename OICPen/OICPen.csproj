@@ -94,7 +94,6 @@
     </Compile>
     <Compile Include="Models\Configration.cs" />
     <Compile Include="Models\OICPenDbContext.cs" />
-    <Compile Include="sales.cs">
     <Compile Include="LogOut.cs">
       <SubType>Form</SubType>
     </Compile>
