@@ -50,7 +50,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(900, 958);
@@ -132,7 +132,7 @@
             this.titleLbl.BackColor = System.Drawing.Color.Transparent;
             this.titleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.titleLbl.ForeColor = System.Drawing.Color.Black;
-            this.titleLbl.Location = new System.Drawing.Point(1386, 9);
+            this.titleLbl.Location = new System.Drawing.Point(1373, 19);
             this.titleLbl.Name = "titleLbl";
             this.titleLbl.Size = new System.Drawing.Size(212, 48);
             this.titleLbl.TabIndex = 10;
