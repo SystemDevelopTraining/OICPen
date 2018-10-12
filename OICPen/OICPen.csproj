@@ -157,6 +157,9 @@
     <EmbeddedResource Include="Sales.resx">
       <DependentUpon>Sales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <EmbeddedResource Include="Ship.resx">
       <DependentUpon>Ship.cs</DependentUpon>
@@ -302,6 +305,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gahag-0055923193-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-rectangle-horizontal-line-5ac44e44e7fce7.2607150015228145329502.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
