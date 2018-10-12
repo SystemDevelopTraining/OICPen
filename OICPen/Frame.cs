@@ -16,14 +16,14 @@ namespace OICPen
         {
             InitializeComponent();
             /*To know the length and width of the screen*/
-             // var f=new login();
-          var f = new sales();
+            var f=new login();
+          /*var f = new sales();
             f.TopLevel = false;
             splitContainer2.Panel2.Controls.Add(f);
             f.Dock = DockStyle.Fill;
             f.Show();
 
-            f.BringToFront();
+            f.BringToFront();*/
         }
 
         private void Frame_Shown(object sender, EventArgs e)
@@ -43,6 +43,11 @@ namespace OICPen
         }
 
         private void splitContainer2_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
