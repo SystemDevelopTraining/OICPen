@@ -138,6 +138,11 @@
     <EmbeddedResource Include="Frame.resx">
       <DependentUpon>Frame.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InComing.resx">
+      <DependentUpon>InComing.cs</DependentUpon>
+    <EmbeddedResource Include="Items.resx">
+      <DependentUpon>Items.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +160,9 @@
       <DependentUpon>Sales.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <EmbeddedResource Include="Ship.resx">
+      <DependentUpon>Ship.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
