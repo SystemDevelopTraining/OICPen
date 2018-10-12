@@ -92,7 +92,7 @@
             this.button3.Text = "ランキング";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // sales
+            // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -104,8 +104,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "sales";
-            this.Text = "sales";
+            this.Name = "Sales";
             this.Load += new System.EventHandler(this.sales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
