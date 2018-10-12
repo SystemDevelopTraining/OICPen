@@ -132,6 +132,9 @@
     <Compile Include="TakeOrder.Designer.cs">
       <DependentUpon>TakeOrder.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Clients.resx">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frame.resx">
       <DependentUpon>Frame.cs</DependentUpon>
     </EmbeddedResource>
