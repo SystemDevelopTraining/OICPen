@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,11 +56,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clients.Designer.cs">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frame.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frame.Designer.cs">
       <DependentUpon>Frame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiveOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiveOrder.Designer.cs">
+      <DependentUpon>GiveOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InComing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InComing.Designer.cs">
+      <DependentUpon>InComing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items.Designer.cs">
+      <DependentUpon>Items.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -70,19 +95,44 @@
     <Compile Include="Models\Configration.cs" />
     <Compile Include="Models\OICPenDbContext.cs" />
     <Compile Include="sales.cs">
+    <Compile Include="LogOut.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sales.Designer.cs">
-      <DependentUpon>sales.cs</DependentUpon>
+    <Compile Include="LogOut.Designer.cs">
+      <DependentUpon>LogOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="top.cs">
+    <Compile Include="Sales.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="top.Designer.cs">
-      <DependentUpon>top.cs</DependentUpon>
+    <Compile Include="Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ship.Designer.cs">
+      <DependentUpon>Ship.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staffs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffs.Designer.cs">
+      <DependentUpon>Staffs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeOrder.Designer.cs">
+      <DependentUpon>TakeOrder.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Frame.resx">
       <DependentUpon>Frame.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,11 +149,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="sales.resx">
-      <DependentUpon>sales.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="top.resx">
-      <DependentUpon>top.cs</DependentUpon>
+    <EmbeddedResource Include="Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

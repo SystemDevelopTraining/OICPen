@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OICPen
 {
-    public partial class top : Form
+    public partial class TakeOrder : Form
     {
-        public top()
+        public TakeOrder()
         {
             InitializeComponent();
         }

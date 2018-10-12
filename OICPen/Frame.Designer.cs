@@ -29,31 +29,32 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.在庫管理システム = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.logoutBtn = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
+            this.staffsBtn = new System.Windows.Forms.Button();
+            this.clientsBtn = new System.Windows.Forms.Button();
+            this.itemsBtn = new System.Windows.Forms.Button();
+            this.stockBtn = new System.Windows.Forms.Button();
+            this.takeorderBtn = new System.Windows.Forms.Button();
+            this.giveorderBtn = new System.Windows.Forms.Button();
+            this.incomingBtn = new System.Windows.Forms.Button();
+            this.shipBtn = new System.Windows.Forms.Button();
+            this.salesBtn = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.SuspendLayout();
@@ -61,7 +62,6 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -90,6 +90,29 @@
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe Marker", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Orange;
+            this.label5.Location = new System.Drawing.Point(199, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 38);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "IM-21";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.White;
+            this.pictureBox10.BackgroundImage = global::OICPen.Properties.Resources._0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox10.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(190, 57);
+            this.pictureBox10.TabIndex = 3;
+            this.pictureBox10.TabStop = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -101,7 +124,6 @@
             this.label4.Size = new System.Drawing.Size(100, 33);
             this.label4.TabIndex = 2;
             this.label4.Text = "13：56";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label1
             // 
@@ -139,27 +161,232 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Black;
-            this.splitContainer2.Panel1.Controls.Add(this.button11);
-            this.splitContainer2.Panel1.Controls.Add(this.button10);
-            this.splitContainer2.Panel1.Controls.Add(this.button9);
-            this.splitContainer2.Panel1.Controls.Add(this.button8);
-            this.splitContainer2.Panel1.Controls.Add(this.button7);
-            this.splitContainer2.Panel1.Controls.Add(this.button6);
-            this.splitContainer2.Panel1.Controls.Add(this.button5);
-            this.splitContainer2.Panel1.Controls.Add(this.button4);
-            this.splitContainer2.Panel1.Controls.Add(this.button3);
-            this.splitContainer2.Panel1.Controls.Add(this.button1);
-            this.splitContainer2.Panel1.Controls.Add(this.button2);
+            this.splitContainer2.Panel1.Controls.Add(this.logoutBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.exitBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.staffsBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.clientsBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.itemsBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.stockBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.takeorderBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.giveorderBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.incomingBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.shipBtn);
+            this.splitContainer2.Panel1.Controls.Add(this.salesBtn);
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.PeachPuff;
             this.splitContainer2.Panel2.ForeColor = System.Drawing.Color.Black;
-            this.splitContainer2.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer2_Panel2_Paint);
             this.splitContainer2.Size = new System.Drawing.Size(1937, 1000);
             this.splitContainer2.SplitterDistance = 309;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackColor = System.Drawing.Color.Black;
+            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.logoutBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.logoutBtn.ForeColor = System.Drawing.Color.White;
+            this.logoutBtn.Image = global::OICPen.Properties.Resources.icons8_出口_641;
+            this.logoutBtn.Location = new System.Drawing.Point(-3, 837);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(309, 70);
+            this.logoutBtn.TabIndex = 6;
+            this.logoutBtn.Text = "　ログアウト";
+            this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.Black;
+            this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exitBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.exitBtn.ForeColor = System.Drawing.Color.White;
+            this.exitBtn.Image = global::OICPen.Properties.Resources.icons8_削除_641;
+            this.exitBtn.Location = new System.Drawing.Point(0, 930);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(309, 70);
+            this.exitBtn.TabIndex = 0;
+            this.exitBtn.Text = "　終了　";
+            this.exitBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.exitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.exitBtn.UseVisualStyleBackColor = false;
+            // 
+            // staffsBtn
+            // 
+            this.staffsBtn.BackColor = System.Drawing.Color.Black;
+            this.staffsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.staffsBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.staffsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.staffsBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.staffsBtn.ForeColor = System.Drawing.Color.White;
+            this.staffsBtn.Image = global::OICPen.Properties.Resources.icons8_社員カード_64;
+            this.staffsBtn.Location = new System.Drawing.Point(0, 714);
+            this.staffsBtn.Name = "staffsBtn";
+            this.staffsBtn.Size = new System.Drawing.Size(309, 90);
+            this.staffsBtn.TabIndex = 0;
+            this.staffsBtn.Text = "　社員管理";
+            this.staffsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.staffsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.staffsBtn.UseVisualStyleBackColor = false;
+            this.staffsBtn.Click += new System.EventHandler(this.staffsBtn_Click);
+            // 
+            // clientsBtn
+            // 
+            this.clientsBtn.BackColor = System.Drawing.Color.Black;
+            this.clientsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clientsBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.clientsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.clientsBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.clientsBtn.ForeColor = System.Drawing.Color.White;
+            this.clientsBtn.Image = global::OICPen.Properties.Resources.icons8_ユーザー_64__1_;
+            this.clientsBtn.Location = new System.Drawing.Point(0, 624);
+            this.clientsBtn.Name = "clientsBtn";
+            this.clientsBtn.Size = new System.Drawing.Size(309, 90);
+            this.clientsBtn.TabIndex = 0;
+            this.clientsBtn.Text = "　会員管理";
+            this.clientsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clientsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.clientsBtn.UseVisualStyleBackColor = false;
+            this.clientsBtn.Click += new System.EventHandler(this.clientsBtn_Click);
+            // 
+            // itemsBtn
+            // 
+            this.itemsBtn.BackColor = System.Drawing.Color.Black;
+            this.itemsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.itemsBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.itemsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.itemsBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.itemsBtn.ForeColor = System.Drawing.Color.White;
+            this.itemsBtn.Image = global::OICPen.Properties.Resources.icons8_製品_641;
+            this.itemsBtn.Location = new System.Drawing.Point(0, 534);
+            this.itemsBtn.Name = "itemsBtn";
+            this.itemsBtn.Size = new System.Drawing.Size(309, 90);
+            this.itemsBtn.TabIndex = 0;
+            this.itemsBtn.Text = "　商品管理";
+            this.itemsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.itemsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.itemsBtn.UseVisualStyleBackColor = false;
+            this.itemsBtn.Click += new System.EventHandler(this.itemsBtn_Click);
+            // 
+            // stockBtn
+            // 
+            this.stockBtn.BackColor = System.Drawing.Color.Black;
+            this.stockBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.stockBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.stockBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.stockBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.stockBtn.ForeColor = System.Drawing.Color.White;
+            this.stockBtn.Image = global::OICPen.Properties.Resources.icons8_倉庫_64__2_;
+            this.stockBtn.Location = new System.Drawing.Point(0, 444);
+            this.stockBtn.Name = "stockBtn";
+            this.stockBtn.Size = new System.Drawing.Size(309, 90);
+            this.stockBtn.TabIndex = 0;
+            this.stockBtn.Text = "　在庫管理";
+            this.stockBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.stockBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.stockBtn.UseVisualStyleBackColor = false;
+            this.stockBtn.Click += new System.EventHandler(this.stockBtn_Click);
+            // 
+            // takeorderBtn
+            // 
+            this.takeorderBtn.BackColor = System.Drawing.Color.Black;
+            this.takeorderBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.takeorderBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.takeorderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.takeorderBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.takeorderBtn.ForeColor = System.Drawing.Color.White;
+            this.takeorderBtn.Image = global::OICPen.Properties.Resources.icons8_ショッピングカート_641;
+            this.takeorderBtn.Location = new System.Drawing.Point(0, 354);
+            this.takeorderBtn.Name = "takeorderBtn";
+            this.takeorderBtn.Size = new System.Drawing.Size(309, 90);
+            this.takeorderBtn.TabIndex = 0;
+            this.takeorderBtn.Text = "　注文管理";
+            this.takeorderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.takeorderBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.takeorderBtn.UseVisualStyleBackColor = false;
+            this.takeorderBtn.Click += new System.EventHandler(this.takeorderBtn_Click);
+            // 
+            // giveorderBtn
+            // 
+            this.giveorderBtn.BackColor = System.Drawing.Color.Black;
+            this.giveorderBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.giveorderBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.giveorderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.giveorderBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.giveorderBtn.ForeColor = System.Drawing.Color.White;
+            this.giveorderBtn.Image = global::OICPen.Properties.Resources.icons8_注文書_641;
+            this.giveorderBtn.Location = new System.Drawing.Point(0, 264);
+            this.giveorderBtn.Name = "giveorderBtn";
+            this.giveorderBtn.Size = new System.Drawing.Size(309, 90);
+            this.giveorderBtn.TabIndex = 0;
+            this.giveorderBtn.Text = "　発注管理";
+            this.giveorderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.giveorderBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.giveorderBtn.UseVisualStyleBackColor = false;
+            this.giveorderBtn.Click += new System.EventHandler(this.giveorderBtn_Click);
+            // 
+            // incomingBtn
+            // 
+            this.incomingBtn.BackColor = System.Drawing.Color.Black;
+            this.incomingBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.incomingBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.incomingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.incomingBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.incomingBtn.ForeColor = System.Drawing.Color.White;
+            this.incomingBtn.Image = global::OICPen.Properties.Resources.icons8_二重左矢印_48__1_;
+            this.incomingBtn.Location = new System.Drawing.Point(0, 174);
+            this.incomingBtn.Name = "incomingBtn";
+            this.incomingBtn.Size = new System.Drawing.Size(309, 90);
+            this.incomingBtn.TabIndex = 0;
+            this.incomingBtn.Text = "　入庫管理";
+            this.incomingBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.incomingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.incomingBtn.UseVisualStyleBackColor = false;
+            this.incomingBtn.Click += new System.EventHandler(this.incomingBtn_Click);
+            // 
+            // shipBtn
+            // 
+            this.shipBtn.BackColor = System.Drawing.Color.Black;
+            this.shipBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shipBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.shipBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.shipBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.shipBtn.ForeColor = System.Drawing.Color.White;
+            this.shipBtn.Image = global::OICPen.Properties.Resources.icons8_配達_642;
+            this.shipBtn.Location = new System.Drawing.Point(0, 84);
+            this.shipBtn.Name = "shipBtn";
+            this.shipBtn.Size = new System.Drawing.Size(309, 90);
+            this.shipBtn.TabIndex = 0;
+            this.shipBtn.Text = "　出庫管理　";
+            this.shipBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.shipBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.shipBtn.UseVisualStyleBackColor = false;
+            this.shipBtn.Click += new System.EventHandler(this.shipBtn_Click);
+            // 
+            // salesBtn
+            // 
+            this.salesBtn.BackColor = System.Drawing.Color.Black;
+            this.salesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.salesBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.salesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.salesBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.salesBtn.ForeColor = System.Drawing.Color.White;
+            this.salesBtn.Image = global::OICPen.Properties.Resources.icons8_日本円_64;
+            this.salesBtn.Location = new System.Drawing.Point(0, 0);
+            this.salesBtn.Name = "salesBtn";
+            this.salesBtn.Size = new System.Drawing.Size(309, 84);
+            this.salesBtn.TabIndex = 0;
+            this.salesBtn.Text = "　売上管理　";
+            this.salesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.salesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.salesBtn.UseVisualStyleBackColor = false;
+            this.salesBtn.Click += new System.EventHandler(this.salesBtn_Click);
             // 
             // splitContainer3
             // 
@@ -188,7 +415,7 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.Color.Yellow;
             this.textBox1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox1.Location = new System.Drawing.Point(374, -2);
+            this.textBox1.Location = new System.Drawing.Point(374, 7);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(1522, 34);
             this.textBox1.TabIndex = 2;
@@ -215,227 +442,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "社員名";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe Marker", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Orange;
-            this.label5.Location = new System.Drawing.Point(199, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 38);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "IM-21";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.White;
-            this.pictureBox10.BackgroundImage = global::OICPen.Properties.Resources._0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox10.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(190, 57);
-            this.pictureBox10.TabIndex = 3;
-            this.pictureBox10.TabStop = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Black;
-            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Image = global::OICPen.Properties.Resources.icons8_出口_641;
-            this.button11.Location = new System.Drawing.Point(-3, 837);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(309, 70);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "　ログアウト";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Black;
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button10.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Image = global::OICPen.Properties.Resources.icons8_削除_641;
-            this.button10.Location = new System.Drawing.Point(0, 930);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(309, 70);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "　終了　";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Black;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Image = global::OICPen.Properties.Resources.icons8_社員カード_64;
-            this.button9.Location = new System.Drawing.Point(0, 714);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(309, 90);
-            this.button9.TabIndex = 0;
-            this.button9.Text = "　社員管理";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Black;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = global::OICPen.Properties.Resources.icons8_ユーザー_64__1_;
-            this.button8.Location = new System.Drawing.Point(0, 624);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(309, 90);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "　会員管理";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Black;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = global::OICPen.Properties.Resources.icons8_製品_641;
-            this.button7.Location = new System.Drawing.Point(0, 534);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(309, 90);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "　商品管理";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Black;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = global::OICPen.Properties.Resources.icons8_倉庫_64__2_;
-            this.button6.Location = new System.Drawing.Point(0, 444);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(309, 90);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "　在庫管理";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Black;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::OICPen.Properties.Resources.icons8_ショッピングカート_641;
-            this.button5.Location = new System.Drawing.Point(0, 354);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(309, 90);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "　注文管理";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::OICPen.Properties.Resources.icons8_注文書_641;
-            this.button4.Location = new System.Drawing.Point(0, 264);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(309, 90);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "　発注管理";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::OICPen.Properties.Resources.icons8_二重左矢印_48__1_;
-            this.button3.Location = new System.Drawing.Point(0, 174);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(309, 90);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "　入庫管理";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::OICPen.Properties.Resources.icons8_配達_642;
-            this.button1.Location = new System.Drawing.Point(0, 84);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(309, 90);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "　出庫管理　";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::OICPen.Properties.Resources.icons8_日本円_64;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(309, 84);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "　売上管理　";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // Frame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -452,6 +458,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
@@ -460,7 +467,6 @@
             this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -469,16 +475,16 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button shipBtn;
+        private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Button staffsBtn;
+        private System.Windows.Forms.Button clientsBtn;
+        private System.Windows.Forms.Button itemsBtn;
+        private System.Windows.Forms.Button stockBtn;
+        private System.Windows.Forms.Button takeorderBtn;
+        private System.Windows.Forms.Button giveorderBtn;
+        private System.Windows.Forms.Button incomingBtn;
+        private System.Windows.Forms.Button salesBtn;
         private System.Windows.Forms.Label 在庫管理システム;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label1;
@@ -488,6 +494,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button logoutBtn;
     }
 }

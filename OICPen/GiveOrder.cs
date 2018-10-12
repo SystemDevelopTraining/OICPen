@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace OICPen
 {
-    public partial class Sales : Form
+    public partial class GiveOrder : Form
     {
-        public Sales()
+        public GiveOrder()
         {
             InitializeComponent();
-        }
-
-        private void sales_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
