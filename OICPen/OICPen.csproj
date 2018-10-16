@@ -34,7 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -83,6 +92,8 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Configration.cs" />
+    <Compile Include="Models\OICPenDbContext.cs" />
     <Compile Include="LogOut.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,8 +132,17 @@
     <Compile Include="TakeOrder.Designer.cs">
       <DependentUpon>TakeOrder.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Clients.resx">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frame.resx">
       <DependentUpon>Frame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiveOrder.resx">
+      <DependentUpon>GiveOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InComing.resx">
+      <DependentUpon>InComing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Items.resx">
       <DependentUpon>Items.cs</DependentUpon>
@@ -143,6 +163,13 @@
     <EmbeddedResource Include="Sales.resx">
       <DependentUpon>Sales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Staffs.resx">
+      <DependentUpon>Staffs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <EmbeddedResource Include="Ship.resx">
       <DependentUpon>Ship.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,6 +314,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gahag-0055923193-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-rectangle-horizontal-line-5ac44e44e7fce7.2607150015228145329502.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

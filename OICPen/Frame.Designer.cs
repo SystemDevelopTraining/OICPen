@@ -216,6 +216,7 @@
             this.exitBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // staffsBtn
             // 
@@ -415,7 +416,7 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.Color.Yellow;
             this.textBox1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox1.Location = new System.Drawing.Point(374, 7);
+            this.textBox1.Location = new System.Drawing.Point(374, 10);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(1522, 34);
             this.textBox1.TabIndex = 2;
