@@ -75,7 +75,7 @@
             this.updateBtn.Location = new System.Drawing.Point(1163, 865);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(186, 58);
-            this.updateBtn.TabIndex = 2;
+            this.updateBtn.TabIndex = 12;
             this.updateBtn.Text = "更新";
             this.updateBtn.UseVisualStyleBackColor = true;
             // 
@@ -85,7 +85,7 @@
             this.deleteBtn.Location = new System.Drawing.Point(1355, 865);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(186, 58);
-            this.deleteBtn.TabIndex = 3;
+            this.deleteBtn.TabIndex = 13;
             this.deleteBtn.Text = "削除";
             this.deleteBtn.UseVisualStyleBackColor = true;
             // 
@@ -95,7 +95,7 @@
             this.registBtn.Location = new System.Drawing.Point(971, 865);
             this.registBtn.Name = "registBtn";
             this.registBtn.Size = new System.Drawing.Size(186, 58);
-            this.registBtn.TabIndex = 4;
+            this.registBtn.TabIndex = 11;
             this.registBtn.Text = "商品登録";
             this.registBtn.UseVisualStyleBackColor = true;
             // 
@@ -106,7 +106,7 @@
             this.itemDgv.Name = "itemDgv";
             this.itemDgv.RowTemplate.Height = 21;
             this.itemDgv.Size = new System.Drawing.Size(888, 912);
-            this.itemDgv.TabIndex = 5;
+            this.itemDgv.TabIndex = 14;
             // 
             // searchBtn
             // 
@@ -114,7 +114,7 @@
             this.searchBtn.Location = new System.Drawing.Point(1072, 475);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(186, 58);
-            this.searchBtn.TabIndex = 6;
+            this.searchBtn.TabIndex = 4;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
             // 
@@ -124,7 +124,7 @@
             this.itemNameTbox.Location = new System.Drawing.Point(1151, 598);
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(284, 36);
-            this.itemNameTbox.TabIndex = 7;
+            this.itemNameTbox.TabIndex = 5;
             // 
             // itemNameLbl
             // 
@@ -158,7 +158,7 @@
             this.searchItemIdTbox.Location = new System.Drawing.Point(1151, 322);
             this.searchItemIdTbox.Name = "searchItemIdTbox";
             this.searchItemIdTbox.Size = new System.Drawing.Size(284, 36);
-            this.searchItemIdTbox.TabIndex = 10;
+            this.searchItemIdTbox.TabIndex = 1;
             // 
             // janLbl
             // 
@@ -231,7 +231,7 @@
             this.janTbox.Location = new System.Drawing.Point(1151, 640);
             this.janTbox.Name = "janTbox";
             this.janTbox.Size = new System.Drawing.Size(284, 36);
-            this.janTbox.TabIndex = 17;
+            this.janTbox.TabIndex = 6;
             // 
             // priceTbox
             // 
@@ -239,7 +239,7 @@
             this.priceTbox.Location = new System.Drawing.Point(1151, 682);
             this.priceTbox.Name = "priceTbox";
             this.priceTbox.Size = new System.Drawing.Size(284, 36);
-            this.priceTbox.TabIndex = 18;
+            this.priceTbox.TabIndex = 7;
             // 
             // noteTbox
             // 
@@ -247,7 +247,7 @@
             this.noteTbox.Location = new System.Drawing.Point(1151, 808);
             this.noteTbox.Name = "noteTbox";
             this.noteTbox.Size = new System.Drawing.Size(284, 36);
-            this.noteTbox.TabIndex = 19;
+            this.noteTbox.TabIndex = 10;
             // 
             // safetyStockTbox
             // 
@@ -255,7 +255,7 @@
             this.safetyStockTbox.Location = new System.Drawing.Point(1151, 766);
             this.safetyStockTbox.Name = "safetyStockTbox";
             this.safetyStockTbox.Size = new System.Drawing.Size(284, 36);
-            this.safetyStockTbox.TabIndex = 20;
+            this.safetyStockTbox.TabIndex = 9;
             // 
             // furiganaTbox
             // 
@@ -263,7 +263,7 @@
             this.furiganaTbox.Location = new System.Drawing.Point(1151, 724);
             this.furiganaTbox.Name = "furiganaTbox";
             this.furiganaTbox.Size = new System.Drawing.Size(284, 36);
-            this.furiganaTbox.TabIndex = 21;
+            this.furiganaTbox.TabIndex = 8;
             // 
             // searchItemNameLbl
             // 
@@ -297,7 +297,7 @@
             this.searchItemNameTbox.Location = new System.Drawing.Point(1151, 406);
             this.searchItemNameTbox.Name = "searchItemNameTbox";
             this.searchItemNameTbox.Size = new System.Drawing.Size(284, 36);
-            this.searchItemNameTbox.TabIndex = 24;
+            this.searchItemNameTbox.TabIndex = 3;
             // 
             // searchJanTbox
             // 
@@ -305,7 +305,7 @@
             this.searchJanTbox.Location = new System.Drawing.Point(1151, 364);
             this.searchJanTbox.Name = "searchJanTbox";
             this.searchJanTbox.Size = new System.Drawing.Size(284, 36);
-            this.searchJanTbox.TabIndex = 25;
+            this.searchJanTbox.TabIndex = 2;
             // 
             // itemsUpdateBtn
             // 
@@ -313,7 +313,7 @@
             this.itemsUpdateBtn.Location = new System.Drawing.Point(938, 21);
             this.itemsUpdateBtn.Name = "itemsUpdateBtn";
             this.itemsUpdateBtn.Size = new System.Drawing.Size(240, 58);
-            this.itemsUpdateBtn.TabIndex = 26;
+            this.itemsUpdateBtn.TabIndex = 0;
             this.itemsUpdateBtn.Text = "商品一覧更新";
             this.itemsUpdateBtn.UseVisualStyleBackColor = true;
             // 
