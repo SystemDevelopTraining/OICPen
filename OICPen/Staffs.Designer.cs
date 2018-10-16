@@ -28,181 +28,188 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.staffsDgv = new System.Windows.Forms.DataGridView();
+            this.registerBtn = new System.Windows.Forms.Button();
+            this.titleLbl = new System.Windows.Forms.Label();
+            this.idTbox = new System.Windows.Forms.TextBox();
+            this.searchnameLbl = new System.Windows.Forms.Label();
+            this.idLbl = new System.Windows.Forms.Label();
+            this.searchnameTbox = new System.Windows.Forms.TextBox();
+            this.fixBtn = new System.Windows.Forms.Button();
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.deleteBtn = new System.Windows.Forms.Button();
+            this.registernameTbox = new System.Windows.Forms.TextBox();
+            this.registernameLbl = new System.Windows.Forms.Label();
+            this.passwordLbl = new System.Windows.Forms.Label();
+            this.passwordTbox = new System.Windows.Forms.TextBox();
+            this.password2Tbox = new System.Windows.Forms.TextBox();
+            this.password2Lbl = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.registertitleLbl = new System.Windows.Forms.Label();
+            this.permissionLbl = new System.Windows.Forms.Label();
+            this.permissionTbox = new System.Windows.Forms.TextBox();
+            this.searchtitleLbl = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.staffsDgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // staffsDgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 32);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(774, 920);
-            this.dataGridView1.TabIndex = 0;
+            this.staffsDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.staffsDgv.Location = new System.Drawing.Point(36, 32);
+            this.staffsDgv.Name = "staffsDgv";
+            this.staffsDgv.RowTemplate.Height = 21;
+            this.staffsDgv.Size = new System.Drawing.Size(774, 920);
+            this.staffsDgv.TabIndex = 0;
             // 
-            // button2
+            // registerBtn
             // 
-            this.button2.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.Location = new System.Drawing.Point(1023, 829);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 60);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "登録";
-            this.button2.UseVisualStyleBackColor = true;
+            this.registerBtn.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.registerBtn.Location = new System.Drawing.Point(1023, 829);
+            this.registerBtn.Name = "registerBtn";
+            this.registerBtn.Size = new System.Drawing.Size(125, 60);
+            this.registerBtn.TabIndex = 2;
+            this.registerBtn.Text = "登録";
+            this.registerBtn.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // titleLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(1350, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 48);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "社員管理";
+            this.titleLbl.AutoSize = true;
+            this.titleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.titleLbl.Location = new System.Drawing.Point(1350, 12);
+            this.titleLbl.Name = "titleLbl";
+            this.titleLbl.Size = new System.Drawing.Size(212, 48);
+            this.titleLbl.TabIndex = 3;
+            this.titleLbl.Text = "社員管理";
             // 
-            // textBox1
+            // idTbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(1180, 201);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(320, 33);
-            this.textBox1.TabIndex = 4;
+            this.idTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.idTbox.Location = new System.Drawing.Point(1180, 201);
+            this.idTbox.Multiline = true;
+            this.idTbox.Name = "idTbox";
+            this.idTbox.Size = new System.Drawing.Size(320, 33);
+            this.idTbox.TabIndex = 4;
             // 
-            // label2
+            // searchnameLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(999, 269);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 33);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "社員名 :";
+            this.searchnameLbl.AutoSize = true;
+            this.searchnameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.searchnameLbl.Location = new System.Drawing.Point(999, 269);
+            this.searchnameLbl.Name = "searchnameLbl";
+            this.searchnameLbl.Size = new System.Drawing.Size(136, 33);
+            this.searchnameLbl.TabIndex = 5;
+            this.searchnameLbl.Text = "社員名 :";
             // 
-            // label3
+            // idLbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(999, 201);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 33);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "社員ID :";
+            this.idLbl.AutoSize = true;
+            this.idLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.idLbl.Location = new System.Drawing.Point(999, 201);
+            this.idLbl.Name = "idLbl";
+            this.idLbl.Size = new System.Drawing.Size(145, 33);
+            this.idLbl.TabIndex = 5;
+            this.idLbl.Text = "社員ID :";
             // 
-            // textBox2
+            // searchnameTbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(1180, 269);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(320, 33);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.searchnameTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.searchnameTbox.Location = new System.Drawing.Point(1180, 269);
+            this.searchnameTbox.Multiline = true;
+            this.searchnameTbox.Name = "searchnameTbox";
+            this.searchnameTbox.Size = new System.Drawing.Size(320, 33);
+            this.searchnameTbox.TabIndex = 4;
+            this.searchnameTbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // button3
+            // fixBtn
             // 
-            this.button3.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.Location = new System.Drawing.Point(1190, 829);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 60);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "修正";
-            this.button3.UseVisualStyleBackColor = true;
+            this.fixBtn.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.fixBtn.Location = new System.Drawing.Point(1190, 829);
+            this.fixBtn.Name = "fixBtn";
+            this.fixBtn.Size = new System.Drawing.Size(125, 60);
+            this.fixBtn.TabIndex = 2;
+            this.fixBtn.Text = "修正";
+            this.fixBtn.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // searchBtn
             // 
-            this.button5.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button5.Location = new System.Drawing.Point(1190, 327);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(125, 60);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "検索";
-            this.button5.UseVisualStyleBackColor = true;
+            this.searchBtn.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.searchBtn.Location = new System.Drawing.Point(1190, 327);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(125, 60);
+            this.searchBtn.TabIndex = 2;
+            this.searchBtn.Text = "検索";
+            this.searchBtn.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // deleteBtn
             // 
-            this.button6.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button6.Location = new System.Drawing.Point(1358, 829);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(125, 60);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "削除";
-            this.button6.UseVisualStyleBackColor = true;
+            this.deleteBtn.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.deleteBtn.Location = new System.Drawing.Point(1358, 829);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(125, 60);
+            this.deleteBtn.TabIndex = 2;
+            this.deleteBtn.Text = "削除";
+            this.deleteBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // registernameTbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(1180, 513);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(320, 33);
-            this.textBox3.TabIndex = 4;
+            this.registernameTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.registernameTbox.Location = new System.Drawing.Point(1180, 513);
+            this.registernameTbox.Multiline = true;
+            this.registernameTbox.Name = "registernameTbox";
+            this.registernameTbox.Size = new System.Drawing.Size(320, 33);
+            this.registernameTbox.TabIndex = 4;
             // 
-            // label4
+            // registernameLbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(1000, 513);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 33);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "社員名 :";
+            this.registernameLbl.AutoSize = true;
+            this.registernameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.registernameLbl.Location = new System.Drawing.Point(1000, 513);
+            this.registernameLbl.Name = "registernameLbl";
+            this.registernameLbl.Size = new System.Drawing.Size(136, 33);
+            this.registernameLbl.TabIndex = 5;
+            this.registernameLbl.Text = "社員名 :";
             // 
-            // label5
+            // passwordLbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(951, 592);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(197, 33);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "パスワード:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.passwordLbl.AutoSize = true;
+            this.passwordLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.passwordLbl.Location = new System.Drawing.Point(951, 592);
+            this.passwordLbl.Name = "passwordLbl";
+            this.passwordLbl.Size = new System.Drawing.Size(192, 33);
+            this.passwordLbl.TabIndex = 5;
+            this.passwordLbl.Text = "パスワード:";
+            this.passwordLbl.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox4
+            // passwordTbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(1180, 592);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(320, 33);
-            this.textBox4.TabIndex = 4;
+            this.passwordTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.passwordTbox.Location = new System.Drawing.Point(1180, 592);
+            this.passwordTbox.Multiline = true;
+            this.passwordTbox.Name = "passwordTbox";
+            this.passwordTbox.PasswordChar = '*';
+            this.passwordTbox.Size = new System.Drawing.Size(320, 33);
+            this.passwordTbox.TabIndex = 4;
             // 
-            // textBox5
+            // password2Tbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(1180, 671);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(320, 33);
-            this.textBox5.TabIndex = 4;
+            this.password2Tbox.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.password2Tbox.Location = new System.Drawing.Point(1180, 671);
+            this.password2Tbox.Multiline = true;
+            this.password2Tbox.Name = "password2Tbox";
+            this.password2Tbox.PasswordChar = '*';
+            this.password2Tbox.Size = new System.Drawing.Size(320, 33);
+            this.password2Tbox.TabIndex = 4;
             // 
-            // label6
+            // password2Lbl
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(851, 671);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(297, 33);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "パスワード(確認):";
-            this.label6.Click += new System.EventHandler(this.label5_Click);
+            this.password2Lbl.AutoSize = true;
+            this.password2Lbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.password2Lbl.Location = new System.Drawing.Point(851, 671);
+            this.password2Lbl.Name = "password2Lbl";
+            this.password2Lbl.Size = new System.Drawing.Size(288, 33);
+            this.password2Lbl.TabIndex = 5;
+            this.password2Lbl.Text = "パスワード(確認):";
+            this.password2Lbl.Click += new System.EventHandler(this.label5_Click);
             // 
             // label7
             // 
@@ -214,44 +221,45 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "label7";
             // 
-            // label8
+            // registertitleLbl
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label8.Location = new System.Drawing.Point(1123, 441);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 29);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "登録・修正";
+            this.registertitleLbl.AutoSize = true;
+            this.registertitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.registertitleLbl.Location = new System.Drawing.Point(1123, 441);
+            this.registertitleLbl.Name = "registertitleLbl";
+            this.registertitleLbl.Size = new System.Drawing.Size(180, 33);
+            this.registertitleLbl.TabIndex = 7;
+            this.registertitleLbl.Text = "登録・修正";
             // 
-            // label9
+            // permissionLbl
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label9.Location = new System.Drawing.Point(1050, 750);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 33);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "権限:";
-            this.label9.Click += new System.EventHandler(this.label5_Click);
+            this.permissionLbl.AutoSize = true;
+            this.permissionLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.permissionLbl.Location = new System.Drawing.Point(1050, 750);
+            this.permissionLbl.Name = "permissionLbl";
+            this.permissionLbl.Size = new System.Drawing.Size(93, 33);
+            this.permissionLbl.TabIndex = 5;
+            this.permissionLbl.Text = "権限:";
+            this.permissionLbl.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox6
+            // permissionTbox
             // 
-            this.textBox6.Location = new System.Drawing.Point(1180, 750);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(105, 33);
-            this.textBox6.TabIndex = 4;
+            this.permissionTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.permissionTbox.Location = new System.Drawing.Point(1180, 750);
+            this.permissionTbox.Multiline = true;
+            this.permissionTbox.Name = "permissionTbox";
+            this.permissionTbox.Size = new System.Drawing.Size(105, 33);
+            this.permissionTbox.TabIndex = 4;
             // 
-            // label10
+            // searchtitleLbl
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label10.Location = new System.Drawing.Point(1175, 94);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 29);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "検索";
+            this.searchtitleLbl.AutoSize = true;
+            this.searchtitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.searchtitleLbl.Location = new System.Drawing.Point(1175, 94);
+            this.searchtitleLbl.Name = "searchtitleLbl";
+            this.searchtitleLbl.Size = new System.Drawing.Size(81, 33);
+            this.searchtitleLbl.TabIndex = 7;
+            this.searchtitleLbl.Text = "検索";
             // 
             // Staffs
             // 
@@ -259,31 +267,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.searchtitleLbl);
+            this.Controls.Add(this.registertitleLbl);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.idLbl);
+            this.Controls.Add(this.permissionLbl);
+            this.Controls.Add(this.password2Lbl);
+            this.Controls.Add(this.passwordLbl);
+            this.Controls.Add(this.registernameLbl);
+            this.Controls.Add(this.searchnameLbl);
+            this.Controls.Add(this.searchnameTbox);
+            this.Controls.Add(this.permissionTbox);
+            this.Controls.Add(this.password2Tbox);
+            this.Controls.Add(this.passwordTbox);
+            this.Controls.Add(this.registernameTbox);
+            this.Controls.Add(this.idTbox);
+            this.Controls.Add(this.titleLbl);
+            this.Controls.Add(this.searchBtn);
+            this.Controls.Add(this.deleteBtn);
+            this.Controls.Add(this.fixBtn);
+            this.Controls.Add(this.registerBtn);
+            this.Controls.Add(this.staffsDgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Staffs";
             this.Text = "Staffs";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffsDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,26 +299,26 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView staffsDgv;
+        private System.Windows.Forms.Button registerBtn;
+        private System.Windows.Forms.Label titleLbl;
+        private System.Windows.Forms.TextBox idTbox;
+        private System.Windows.Forms.Label searchnameLbl;
+        private System.Windows.Forms.Label idLbl;
+        private System.Windows.Forms.TextBox searchnameTbox;
+        private System.Windows.Forms.Button fixBtn;
+        private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.TextBox registernameTbox;
+        private System.Windows.Forms.Label registernameLbl;
+        private System.Windows.Forms.Label passwordLbl;
+        private System.Windows.Forms.TextBox passwordTbox;
+        private System.Windows.Forms.TextBox password2Tbox;
+        private System.Windows.Forms.Label password2Lbl;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label registertitleLbl;
+        private System.Windows.Forms.Label permissionLbl;
+        private System.Windows.Forms.TextBox permissionTbox;
+        private System.Windows.Forms.Label searchtitleLbl;
     }
 }
