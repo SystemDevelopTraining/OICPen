@@ -58,7 +58,7 @@
             this.salesSelectBtn.Location = new System.Drawing.Point(1384, 245);
             this.salesSelectBtn.Name = "salesSelectBtn";
             this.salesSelectBtn.Size = new System.Drawing.Size(186, 58);
-            this.salesSelectBtn.TabIndex = 1;
+            this.salesSelectBtn.TabIndex = 2;
             this.salesSelectBtn.Text = "売上表";
             this.salesSelectBtn.UseVisualStyleBackColor = true;
             // 
@@ -70,7 +70,7 @@
             this.salesDgv.Name = "salesDgv";
             this.salesDgv.RowTemplate.Height = 21;
             this.salesDgv.Size = new System.Drawing.Size(1310, 936);
-            this.salesDgv.TabIndex = 2;
+            this.salesDgv.TabIndex = 0;
             // 
             // rankBtn
             // 
@@ -106,7 +106,7 @@
             this.salesBetweenLbl.Location = new System.Drawing.Point(1453, 797);
             this.salesBetweenLbl.Name = "salesBetweenLbl";
             this.salesBetweenLbl.Size = new System.Drawing.Size(43, 29);
-            this.salesBetweenLbl.TabIndex = 5;
+            this.salesBetweenLbl.TabIndex = 0;
             this.salesBetweenLbl.Text = "～";
             // 
             // Sales
@@ -124,7 +124,6 @@
             this.Controls.Add(this.salesLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Sales";
-            this.Text = "sales";
             this.Load += new System.EventHandler(this.sales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.salesDgv)).EndInit();
             this.ResumeLayout(false);
