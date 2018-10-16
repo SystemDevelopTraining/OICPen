@@ -445,6 +445,16 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap kisspng_rectangle_horizontal_line_5ac44e44e7fce7_2607150015228145329502 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-rectangle-horizontal-line-5ac44e44e7fce7.2607150015228145329502", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap oiclogopng {
             get {
                 object obj = ResourceManager.GetObject("oiclogopng", resourceCulture);
