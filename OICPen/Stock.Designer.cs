@@ -28,144 +28,144 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.incomingDgv = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.fixBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.incomingDgv)).BeginInit();
+            this.stocktitleLbl = new System.Windows.Forms.Label();
+            this.stockDgv = new System.Windows.Forms.DataGridView();
+            this.itemscodeLbl = new System.Windows.Forms.Label();
+            this.itemsnameLbl = new System.Windows.Forms.Label();
+            this.itemscodeTbox = new System.Windows.Forms.TextBox();
+            this.itemsnameTbox = new System.Windows.Forms.TextBox();
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.stockdangerviewBtn = new System.Windows.Forms.Button();
+            this.stockdate1Dtp = new System.Windows.Forms.DateTimePicker();
+            this.stockviewBtn = new System.Windows.Forms.Button();
+            this.separatorLbl = new System.Windows.Forms.Label();
+            this.stockdate2Dtp = new System.Windows.Forms.DateTimePicker();
+            this.hebiLbl = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // stocktitleLbl
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(1373, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 48);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "在庫管理";
+            this.stocktitleLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stocktitleLbl.AutoSize = true;
+            this.stocktitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.stocktitleLbl.Location = new System.Drawing.Point(1373, 19);
+            this.stocktitleLbl.Name = "stocktitleLbl";
+            this.stocktitleLbl.Size = new System.Drawing.Size(212, 48);
+            this.stocktitleLbl.TabIndex = 0;
+            this.stocktitleLbl.Text = "在庫管理";
             // 
-            // incomingDgv
+            // stockDgv
             // 
-            this.incomingDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.incomingDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.incomingDgv.Location = new System.Drawing.Point(52, 66);
-            this.incomingDgv.Name = "incomingDgv";
-            this.incomingDgv.RowTemplate.Height = 21;
-            this.incomingDgv.Size = new System.Drawing.Size(800, 852);
-            this.incomingDgv.TabIndex = 4;
+            this.stockDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.stockDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stockDgv.Location = new System.Drawing.Point(52, 66);
+            this.stockDgv.Name = "stockDgv";
+            this.stockDgv.RowTemplate.Height = 21;
+            this.stockDgv.Size = new System.Drawing.Size(800, 852);
+            this.stockDgv.TabIndex = 4;
             // 
-            // label2
+            // itemscodeLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(1036, 256);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 29);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "商品コード　";
+            this.itemscodeLbl.AutoSize = true;
+            this.itemscodeLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.itemscodeLbl.Location = new System.Drawing.Point(1067, 256);
+            this.itemscodeLbl.Name = "itemscodeLbl";
+            this.itemscodeLbl.Size = new System.Drawing.Size(130, 29);
+            this.itemscodeLbl.TabIndex = 5;
+            this.itemscodeLbl.Text = "商品ID　";
             // 
-            // label3
+            // itemsnameLbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(1313, 256);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 29);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "商品名　";
+            this.itemsnameLbl.AutoSize = true;
+            this.itemsnameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.itemsnameLbl.Location = new System.Drawing.Point(1313, 256);
+            this.itemsnameLbl.Name = "itemsnameLbl";
+            this.itemsnameLbl.Size = new System.Drawing.Size(129, 29);
+            this.itemsnameLbl.TabIndex = 5;
+            this.itemsnameLbl.Text = "商品名　";
             // 
-            // textBox1
+            // itemscodeTbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox1.Location = new System.Drawing.Point(1005, 318);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 36);
-            this.textBox1.TabIndex = 6;
+            this.itemscodeTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.itemscodeTbox.Location = new System.Drawing.Point(1005, 318);
+            this.itemscodeTbox.Name = "itemscodeTbox";
+            this.itemscodeTbox.Size = new System.Drawing.Size(218, 36);
+            this.itemscodeTbox.TabIndex = 6;
             // 
-            // textBox2
+            // itemsnameTbox
             // 
-            this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox2.Location = new System.Drawing.Point(1255, 318);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(218, 36);
-            this.textBox2.TabIndex = 6;
+            this.itemsnameTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.itemsnameTbox.Location = new System.Drawing.Point(1255, 318);
+            this.itemsnameTbox.Name = "itemsnameTbox";
+            this.itemsnameTbox.Size = new System.Drawing.Size(218, 36);
+            this.itemsnameTbox.TabIndex = 6;
             // 
-            // fixBtn
+            // searchBtn
             // 
-            this.fixBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.fixBtn.Location = new System.Drawing.Point(1194, 387);
-            this.fixBtn.Name = "fixBtn";
-            this.fixBtn.Size = new System.Drawing.Size(104, 54);
-            this.fixBtn.TabIndex = 8;
-            this.fixBtn.Text = "検索";
-            this.fixBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.searchBtn.Location = new System.Drawing.Point(1194, 387);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(104, 54);
+            this.searchBtn.TabIndex = 8;
+            this.searchBtn.Text = "検索";
+            this.searchBtn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // stockdangerviewBtn
             // 
-            this.button1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(1024, 774);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(316, 53);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "安全在庫数以下一覧";
-            this.button1.UseVisualStyleBackColor = true;
+            this.stockdangerviewBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.stockdangerviewBtn.Location = new System.Drawing.Point(1024, 774);
+            this.stockdangerviewBtn.Name = "stockdangerviewBtn";
+            this.stockdangerviewBtn.Size = new System.Drawing.Size(316, 53);
+            this.stockdangerviewBtn.TabIndex = 8;
+            this.stockdangerviewBtn.Text = "安全在庫数以下一覧";
+            this.stockdangerviewBtn.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // stockdate1Dtp
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(907, 608);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(239, 36);
-            this.dateTimePicker1.TabIndex = 9;
+            this.stockdate1Dtp.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.stockdate1Dtp.Location = new System.Drawing.Point(907, 608);
+            this.stockdate1Dtp.Name = "stockdate1Dtp";
+            this.stockdate1Dtp.Size = new System.Drawing.Size(239, 36);
+            this.stockdate1Dtp.TabIndex = 9;
             // 
-            // button2
+            // stockviewBtn
             // 
-            this.button2.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.Location = new System.Drawing.Point(1024, 679);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(316, 53);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "在庫状況一覧表示";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.stockviewBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.stockviewBtn.Location = new System.Drawing.Point(1024, 679);
+            this.stockviewBtn.Name = "stockviewBtn";
+            this.stockviewBtn.Size = new System.Drawing.Size(316, 53);
+            this.stockviewBtn.TabIndex = 8;
+            this.stockviewBtn.Text = "在庫状況一覧表示";
+            this.stockviewBtn.UseVisualStyleBackColor = true;
+            this.stockviewBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label6
+            // separatorLbl
             // 
-            this.label6.BackColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(898, 501);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(643, 5);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "label6";
+            this.separatorLbl.BackColor = System.Drawing.Color.Black;
+            this.separatorLbl.Location = new System.Drawing.Point(898, 501);
+            this.separatorLbl.Name = "separatorLbl";
+            this.separatorLbl.Size = new System.Drawing.Size(643, 5);
+            this.separatorLbl.TabIndex = 0;
+            this.separatorLbl.Text = "label6";
             // 
-            // dateTimePicker2
+            // stockdate2Dtp
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(1255, 608);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(239, 36);
-            this.dateTimePicker2.TabIndex = 9;
+            this.stockdate2Dtp.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.stockdate2Dtp.Location = new System.Drawing.Point(1255, 608);
+            this.stockdate2Dtp.Name = "stockdate2Dtp";
+            this.stockdate2Dtp.Size = new System.Drawing.Size(239, 36);
+            this.stockdate2Dtp.TabIndex = 9;
             // 
-            // label4
+            // hebiLbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(1169, 607);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 37);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "～";
+            this.hebiLbl.AutoSize = true;
+            this.hebiLbl.Font = new System.Drawing.Font("MS UI Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.hebiLbl.Location = new System.Drawing.Point(1169, 607);
+            this.hebiLbl.Name = "hebiLbl";
+            this.hebiLbl.Size = new System.Drawing.Size(54, 37);
+            this.hebiLbl.TabIndex = 10;
+            this.hebiLbl.Text = "～";
             // 
             // Stock
             // 
@@ -173,23 +173,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.fixBtn);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.incomingDgv);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.hebiLbl);
+            this.Controls.Add(this.separatorLbl);
+            this.Controls.Add(this.stockdate2Dtp);
+            this.Controls.Add(this.stockdate1Dtp);
+            this.Controls.Add(this.stockviewBtn);
+            this.Controls.Add(this.stockdangerviewBtn);
+            this.Controls.Add(this.searchBtn);
+            this.Controls.Add(this.itemsnameTbox);
+            this.Controls.Add(this.itemscodeTbox);
+            this.Controls.Add(this.itemsnameLbl);
+            this.Controls.Add(this.itemscodeLbl);
+            this.Controls.Add(this.stockDgv);
+            this.Controls.Add(this.stocktitleLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Stock";
             this.Text = "Stock";
-            ((System.ComponentModel.ISupportInitialize)(this.incomingDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,18 +197,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView incomingDgv;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button fixBtn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label stocktitleLbl;
+        private System.Windows.Forms.DataGridView stockDgv;
+        private System.Windows.Forms.Label itemscodeLbl;
+        private System.Windows.Forms.Label itemsnameLbl;
+        private System.Windows.Forms.TextBox itemscodeTbox;
+        private System.Windows.Forms.TextBox itemsnameTbox;
+        private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.Button stockdangerviewBtn;
+        private System.Windows.Forms.DateTimePicker stockdate1Dtp;
+        private System.Windows.Forms.Button stockviewBtn;
+        private System.Windows.Forms.Label separatorLbl;
+        private System.Windows.Forms.DateTimePicker stockdate2Dtp;
+        private System.Windows.Forms.Label hebiLbl;
     }
 }

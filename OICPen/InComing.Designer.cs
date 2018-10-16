@@ -100,9 +100,9 @@
             this.itemsLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemsLbl.Location = new System.Drawing.Point(902, 401);
             this.itemsLbl.Name = "itemsLbl";
-            this.itemsLbl.Size = new System.Drawing.Size(216, 29);
+            this.itemsLbl.Size = new System.Drawing.Size(159, 29);
             this.itemsLbl.TabIndex = 1;
-            this.itemsLbl.Text = "商品コード　：";
+            this.itemsLbl.Text = "商品ID　：";
             // 
             // incomingTbox
             // 
