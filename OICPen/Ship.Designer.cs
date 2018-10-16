@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.shipDgv = new System.Windows.Forms.DataGridView();
-            this.shiptitleLbl = new System.Windows.Forms.Label();
-            this.shipcheckBtn = new System.Windows.Forms.Button();
-            this.shipprocessingBtn = new System.Windows.Forms.Button();
+            this.shipTitleLbl = new System.Windows.Forms.Label();
+            this.shipCheckBtn = new System.Windows.Forms.Button();
+            this.shipProcessingBtn = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button3 = new System.Windows.Forms.Button();
+            this.shipfixBtn = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.shipDgv)).BeginInit();
             this.SuspendLayout();
@@ -47,35 +47,35 @@
             this.shipDgv.Size = new System.Drawing.Size(1310, 936);
             this.shipDgv.TabIndex = 0;
             // 
-            // shiptitleLbl
+            // shipTitleLbl
             // 
-            this.shiptitleLbl.AutoSize = true;
-            this.shiptitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.shiptitleLbl.Location = new System.Drawing.Point(1373, 19);
-            this.shiptitleLbl.Name = "shiptitleLbl";
-            this.shiptitleLbl.Size = new System.Drawing.Size(212, 48);
-            this.shiptitleLbl.TabIndex = 2;
-            this.shiptitleLbl.Text = "出庫管理";
+            this.shipTitleLbl.AutoSize = true;
+            this.shipTitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.shipTitleLbl.Location = new System.Drawing.Point(1373, 19);
+            this.shipTitleLbl.Name = "shipTitleLbl";
+            this.shipTitleLbl.Size = new System.Drawing.Size(212, 48);
+            this.shipTitleLbl.TabIndex = 2;
+            this.shipTitleLbl.Text = "出庫管理";
             // 
-            // shipcheckBtn
+            // shipCheckBtn
             // 
-            this.shipcheckBtn.Font = new System.Drawing.Font("HGP創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.shipcheckBtn.Location = new System.Drawing.Point(1374, 227);
-            this.shipcheckBtn.Name = "shipcheckBtn";
-            this.shipcheckBtn.Size = new System.Drawing.Size(224, 58);
-            this.shipcheckBtn.TabIndex = 3;
-            this.shipcheckBtn.Text = "出庫情報確認";
-            this.shipcheckBtn.UseVisualStyleBackColor = true;
+            this.shipCheckBtn.Font = new System.Drawing.Font("HGP創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.shipCheckBtn.Location = new System.Drawing.Point(1374, 227);
+            this.shipCheckBtn.Name = "shipCheckBtn";
+            this.shipCheckBtn.Size = new System.Drawing.Size(224, 58);
+            this.shipCheckBtn.TabIndex = 3;
+            this.shipCheckBtn.Text = "出庫情報確認";
+            this.shipCheckBtn.UseVisualStyleBackColor = true;
             // 
-            // shipprocessingBtn
+            // shipProcessingBtn
             // 
-            this.shipprocessingBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.shipprocessingBtn.Location = new System.Drawing.Point(1374, 336);
-            this.shipprocessingBtn.Name = "shipprocessingBtn";
-            this.shipprocessingBtn.Size = new System.Drawing.Size(224, 58);
-            this.shipprocessingBtn.TabIndex = 4;
-            this.shipprocessingBtn.Text = "出庫処理実行";
-            this.shipprocessingBtn.UseVisualStyleBackColor = true;
+            this.shipProcessingBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.shipProcessingBtn.Location = new System.Drawing.Point(1374, 336);
+            this.shipProcessingBtn.Name = "shipProcessingBtn";
+            this.shipProcessingBtn.Size = new System.Drawing.Size(224, 58);
+            this.shipProcessingBtn.TabIndex = 4;
+            this.shipProcessingBtn.Text = "出庫処理実行";
+            this.shipProcessingBtn.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -85,15 +85,15 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(224, 36);
             this.dateTimePicker1.TabIndex = 5;
             // 
-            // button3
+            // shipfixBtn
             // 
-            this.button3.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.Location = new System.Drawing.Point(1374, 445);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(224, 58);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "出庫日修正";
-            this.button3.UseVisualStyleBackColor = true;
+            this.shipfixBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.shipfixBtn.Location = new System.Drawing.Point(1374, 445);
+            this.shipfixBtn.Name = "shipfixBtn";
+            this.shipfixBtn.Size = new System.Drawing.Size(224, 58);
+            this.shipfixBtn.TabIndex = 4;
+            this.shipfixBtn.Text = "出庫日修正";
+            this.shipfixBtn.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker2
             // 
@@ -111,10 +111,10 @@
             this.ClientSize = new System.Drawing.Size(1610, 982);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.shipprocessingBtn);
-            this.Controls.Add(this.shipcheckBtn);
-            this.Controls.Add(this.shiptitleLbl);
+            this.Controls.Add(this.shipfixBtn);
+            this.Controls.Add(this.shipProcessingBtn);
+            this.Controls.Add(this.shipCheckBtn);
+            this.Controls.Add(this.shipTitleLbl);
             this.Controls.Add(this.shipDgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ship";
@@ -128,11 +128,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView shipDgv;
-        private System.Windows.Forms.Label shiptitleLbl;
-        private System.Windows.Forms.Button shipcheckBtn;
-        private System.Windows.Forms.Button shipprocessingBtn;
+        private System.Windows.Forms.Label shipTitleLbl;
+        private System.Windows.Forms.Button shipCheckBtn;
+        private System.Windows.Forms.Button shipProcessingBtn;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button shipfixBtn;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }
