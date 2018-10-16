@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ClientsDgv = new System.Windows.Forms.DataGridView();
+            this.clientsDgv = new System.Windows.Forms.DataGridView();
             this.registBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
-            this.IdLbl = new System.Windows.Forms.Label();
+            this.idLbl = new System.Windows.Forms.Label();
             this.idTbox = new System.Windows.Forms.TextBox();
             this.nameTbox = new System.Windows.Forms.TextBox();
             this.nameLbl = new System.Windows.Forms.Label();
@@ -44,26 +44,26 @@
             this.PostalCodeTbox = new System.Windows.Forms.TextBox();
             this.addressTbox = new System.Windows.Forms.TextBox();
             this.postalCodeLbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.histroryViewBtn = new System.Windows.Forms.Button();
+            this.huriganaTbox = new System.Windows.Forms.TextBox();
+            this.huriganaLbl = new System.Windows.Forms.Label();
             this.searchHuriganaTbox = new System.Windows.Forms.TextBox();
             this.searchHuriganaLbl = new System.Windows.Forms.Label();
             this.searchNameTbox = new System.Windows.Forms.TextBox();
             this.searchNameLbl = new System.Windows.Forms.Label();
             this.searchIdTbox = new System.Windows.Forms.TextBox();
             this.searchIdLbl = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.ClientsDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsDgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // ClientsDgv
+            // clientsDgv
             // 
-            this.ClientsDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ClientsDgv.Location = new System.Drawing.Point(12, 12);
-            this.ClientsDgv.Name = "ClientsDgv";
-            this.ClientsDgv.RowTemplate.Height = 21;
-            this.ClientsDgv.Size = new System.Drawing.Size(900, 958);
-            this.ClientsDgv.TabIndex = 0;
+            this.clientsDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clientsDgv.Location = new System.Drawing.Point(12, 12);
+            this.clientsDgv.Name = "clientsDgv";
+            this.clientsDgv.RowTemplate.Height = 21;
+            this.clientsDgv.Size = new System.Drawing.Size(900, 958);
+            this.clientsDgv.TabIndex = 0;
             // 
             // registBtn
             // 
@@ -99,15 +99,15 @@
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
-            // IdLbl
+            // idLbl
             // 
-            this.IdLbl.AutoSize = true;
-            this.IdLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
-            this.IdLbl.Location = new System.Drawing.Point(1033, 437);
-            this.IdLbl.Name = "IdLbl";
-            this.IdLbl.Size = new System.Drawing.Size(66, 33);
-            this.IdLbl.TabIndex = 0;
-            this.IdLbl.Text = "ID:";
+            this.idLbl.AutoSize = true;
+            this.idLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.idLbl.Location = new System.Drawing.Point(1033, 437);
+            this.idLbl.Name = "idLbl";
+            this.idLbl.Size = new System.Drawing.Size(66, 33);
+            this.idLbl.TabIndex = 0;
+            this.idLbl.Text = "ID:";
             // 
             // idTbox
             // 
@@ -213,34 +213,34 @@
             this.postalCodeLbl.TabIndex = 18;
             this.postalCodeLbl.Text = "郵便番号:";
             // 
-            // button1
+            // histroryViewBtn
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(1323, 858);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 58);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "購入履歴";
-            this.button1.UseVisualStyleBackColor = true;
+            this.histroryViewBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.histroryViewBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.histroryViewBtn.Location = new System.Drawing.Point(1323, 858);
+            this.histroryViewBtn.Name = "histroryViewBtn";
+            this.histroryViewBtn.Size = new System.Drawing.Size(186, 58);
+            this.histroryViewBtn.TabIndex = 22;
+            this.histroryViewBtn.Text = "購入履歴";
+            this.histroryViewBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // huriganaTbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
-            this.textBox1.Location = new System.Drawing.Point(1105, 526);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(404, 40);
-            this.textBox1.TabIndex = 24;
+            this.huriganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.huriganaTbox.Location = new System.Drawing.Point(1105, 526);
+            this.huriganaTbox.Name = "huriganaTbox";
+            this.huriganaTbox.Size = new System.Drawing.Size(404, 40);
+            this.huriganaTbox.TabIndex = 24;
             // 
-            // label1
+            // huriganaLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
-            this.label1.Location = new System.Drawing.Point(931, 529);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 33);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "ふりがな:";
+            this.huriganaLbl.AutoSize = true;
+            this.huriganaLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.huriganaLbl.Location = new System.Drawing.Point(931, 529);
+            this.huriganaLbl.Name = "huriganaLbl";
+            this.huriganaLbl.Size = new System.Drawing.Size(168, 33);
+            this.huriganaLbl.TabIndex = 23;
+            this.huriganaLbl.Text = "ふりがな:";
             // 
             // searchHuriganaTbox
             // 
@@ -309,9 +309,9 @@
             this.Controls.Add(this.searchNameLbl);
             this.Controls.Add(this.searchIdTbox);
             this.Controls.Add(this.searchIdLbl);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.huriganaTbox);
+            this.Controls.Add(this.huriganaLbl);
+            this.Controls.Add(this.histroryViewBtn);
             this.Controls.Add(this.phoneNumberTbox);
             this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.phoneNumberLbl);
@@ -323,15 +323,15 @@
             this.Controls.Add(this.nameTbox);
             this.Controls.Add(this.nameLbl);
             this.Controls.Add(this.idTbox);
-            this.Controls.Add(this.IdLbl);
+            this.Controls.Add(this.idLbl);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.registBtn);
-            this.Controls.Add(this.ClientsDgv);
+            this.Controls.Add(this.clientsDgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Clients";
             this.Text = "Clients";
-            ((System.ComponentModel.ISupportInitialize)(this.ClientsDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,11 +339,11 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView ClientsDgv;
+        private System.Windows.Forms.DataGridView clientsDgv;
         private System.Windows.Forms.Button registBtn;
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Button clearBtn;
-        private System.Windows.Forms.Label IdLbl;
+        private System.Windows.Forms.Label idLbl;
         private System.Windows.Forms.TextBox idTbox;
         private System.Windows.Forms.TextBox nameTbox;
         private System.Windows.Forms.Label nameLbl;
@@ -355,9 +355,9 @@
         private System.Windows.Forms.TextBox PostalCodeTbox;
         private System.Windows.Forms.TextBox addressTbox;
         private System.Windows.Forms.Label postalCodeLbl;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button histroryViewBtn;
+        private System.Windows.Forms.TextBox huriganaTbox;
+        private System.Windows.Forms.Label huriganaLbl;
         private System.Windows.Forms.TextBox searchHuriganaTbox;
         private System.Windows.Forms.Label searchHuriganaLbl;
         private System.Windows.Forms.TextBox searchNameTbox;
