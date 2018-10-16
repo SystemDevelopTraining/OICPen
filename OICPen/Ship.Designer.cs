@@ -98,9 +98,9 @@
             // shipDtp
             // 
             this.shipDtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.shipDtp.Location = new System.Drawing.Point(1374, 140);
+            this.shipDtp.Location = new System.Drawing.Point(1369, 140);
             this.shipDtp.Name = "shipDtp";
-            this.shipDtp.Size = new System.Drawing.Size(224, 40);
+            this.shipDtp.Size = new System.Drawing.Size(233, 40);
             this.shipDtp.TabIndex = 5;
             // 
             // Ship
