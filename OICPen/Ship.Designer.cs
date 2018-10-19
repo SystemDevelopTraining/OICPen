@@ -87,7 +87,7 @@
             // 
             // shipFixBtn
             // 
-            this.shipFixBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.shipFixBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.shipFixBtn.Location = new System.Drawing.Point(1374, 445);
             this.shipFixBtn.Name = "shipFixBtn";
             this.shipFixBtn.Size = new System.Drawing.Size(224, 58);
