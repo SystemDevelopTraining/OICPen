@@ -21,5 +21,10 @@ namespace OICPen
         {
 
         }
+
+        private void GiveOrder_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

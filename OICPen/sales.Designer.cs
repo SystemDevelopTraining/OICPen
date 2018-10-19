@@ -31,10 +31,10 @@
             this.salesLbl = new System.Windows.Forms.Label();
             this.salesSelectBtn = new System.Windows.Forms.Button();
             this.salesDgv = new System.Windows.Forms.DataGridView();
-            this.rankBtn = new System.Windows.Forms.Button();
             this.salesStartDtp = new System.Windows.Forms.DateTimePicker();
             this.salesEndDtp = new System.Windows.Forms.DateTimePicker();
             this.salesBetweenLbl = new System.Windows.Forms.Label();
+            this.rankBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.salesDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,17 +72,6 @@
             this.salesDgv.Size = new System.Drawing.Size(1310, 936);
             this.salesDgv.TabIndex = 2;
             // 
-            // rankBtn
-            // 
-            this.rankBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.rankBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.rankBtn.Location = new System.Drawing.Point(1384, 107);
-            this.rankBtn.Name = "rankBtn";
-            this.rankBtn.Size = new System.Drawing.Size(186, 58);
-            this.rankBtn.TabIndex = 1;
-            this.rankBtn.Text = "ランキング";
-            this.rankBtn.UseVisualStyleBackColor = true;
-            // 
             // salesStartDtp
             // 
             this.salesStartDtp.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -108,6 +97,17 @@
             this.salesBetweenLbl.Size = new System.Drawing.Size(43, 29);
             this.salesBetweenLbl.TabIndex = 5;
             this.salesBetweenLbl.Text = "～";
+            // 
+            // rankBtn
+            // 
+            this.rankBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.rankBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.rankBtn.Location = new System.Drawing.Point(1384, 107);
+            this.rankBtn.Name = "rankBtn";
+            this.rankBtn.Size = new System.Drawing.Size(186, 58);
+            this.rankBtn.TabIndex = 1;
+            this.rankBtn.Text = "ランキング";
+            this.rankBtn.UseVisualStyleBackColor = true;
             // 
             // Sales
             // 
@@ -137,9 +137,9 @@
         private System.Windows.Forms.Label salesLbl;
         private System.Windows.Forms.Button salesSelectBtn;
         private System.Windows.Forms.DataGridView salesDgv;
-        private System.Windows.Forms.Button rankBtn;
         private System.Windows.Forms.DateTimePicker salesStartDtp;
         private System.Windows.Forms.DateTimePicker salesEndDtp;
         private System.Windows.Forms.Label salesBetweenLbl;
+        private System.Windows.Forms.Button rankBtn;
     }
 }
