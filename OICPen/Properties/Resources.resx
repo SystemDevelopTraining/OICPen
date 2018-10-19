@@ -145,6 +145,12 @@
   <data name="cooltext302673263607342" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext302673263607342.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-ショッピングカート-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-ショッピングカート-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-注文書-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-注文書-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cooltext3026738647054531" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext3026738647054531.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,6 +217,12 @@
   <data name="0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cooltext3026738647054531" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cooltext3026738647054531.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="30215yq" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\30215yq.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -222,6 +234,12 @@
   </data>
   <data name="cooltext302673830226924" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext302673830226924.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jess-watters-665170-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jess-watters-665170-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-curved-arrow-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-curved-arrow-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-日本円-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-日本円-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -256,6 +274,12 @@
   <data name="icons8-出口-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-出口-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-left-2-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-left-2-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cooltext302673919131457" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cooltext302673919131457.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cooltext3026723805500701" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext3026723805500701.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -270,6 +294,12 @@
   </data>
   <data name="icons8-left-2-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-left-2-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jess-watters-665170-unsplash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jess-watters-665170-unsplash1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-in-transit-482" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-in-transit-482.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-ショッピングカート-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-ショッピングカート-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -312,6 +342,12 @@
   </data>
   <data name="oiclogopng" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\oiclogopng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jess-watters-665170-unsplash2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jess-watters-665170-unsplash2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-left-2-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-left-2-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cool Text - IM-21 302690885821689" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cool Text - IM-21 302690885821689.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
