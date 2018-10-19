@@ -16,5 +16,12 @@ namespace OICPen
         {
             InitializeComponent();
         }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            searchIdTbox.Text = "";
+            searchNameTbox.Text = "";
+            searchHuriganaTbox.Text = "";
+        }
     }
 }

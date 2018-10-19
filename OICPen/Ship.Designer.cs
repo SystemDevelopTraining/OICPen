@@ -34,7 +34,7 @@
             this.shipProcessingBtn = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.shipFixBtn = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.shipDtp = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.shipDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@
             // 
             // shipCheckBtn
             // 
-            this.shipCheckBtn.Font = new System.Drawing.Font("HGP創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.shipCheckBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.shipCheckBtn.Location = new System.Drawing.Point(1374, 227);
             this.shipCheckBtn.Name = "shipCheckBtn";
             this.shipCheckBtn.Size = new System.Drawing.Size(224, 58);
@@ -69,7 +69,7 @@
             // 
             // shipProcessingBtn
             // 
-            this.shipProcessingBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.shipProcessingBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.shipProcessingBtn.Location = new System.Drawing.Point(1374, 336);
             this.shipProcessingBtn.Name = "shipProcessingBtn";
             this.shipProcessingBtn.Size = new System.Drawing.Size(224, 58);
@@ -79,10 +79,10 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.dateTimePicker1.Location = new System.Drawing.Point(1374, 140);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(224, 36);
+            this.dateTimePicker1.Size = new System.Drawing.Size(224, 40);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // shipFixBtn
@@ -95,13 +95,13 @@
             this.shipFixBtn.Text = "出庫日修正";
             this.shipFixBtn.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker2
+            // shipDtp
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(1374, 140);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(224, 36);
-            this.dateTimePicker2.TabIndex = 5;
+            this.shipDtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.shipDtp.Location = new System.Drawing.Point(1369, 140);
+            this.shipDtp.Name = "shipDtp";
+            this.shipDtp.Size = new System.Drawing.Size(233, 40);
+            this.shipDtp.TabIndex = 5;
             // 
             // Ship
             // 
@@ -109,7 +109,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.shipDtp);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.shipFixBtn);
             this.Controls.Add(this.shipProcessingBtn);
@@ -133,6 +133,6 @@
         private System.Windows.Forms.Button shipProcessingBtn;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button shipFixBtn;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker shipDtp;
     }
 }
