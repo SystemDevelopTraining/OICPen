@@ -55,14 +55,14 @@
             this.giveOrderDgv.Location = new System.Drawing.Point(29, 155);
             this.giveOrderDgv.Name = "giveOrderDgv";
             this.giveOrderDgv.RowTemplate.Height = 21;
-            this.giveOrderDgv.Size = new System.Drawing.Size(726, 782);
+            this.giveOrderDgv.Size = new System.Drawing.Size(951, 782);
             this.giveOrderDgv.TabIndex = 1;
             // 
             // dgvTitleLbl
             // 
             this.dgvTitleLbl.AutoSize = true;
             this.dgvTitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.dgvTitleLbl.Location = new System.Drawing.Point(278, 95);
+            this.dgvTitleLbl.Location = new System.Drawing.Point(389, 93);
             this.dgvTitleLbl.Name = "dgvTitleLbl";
             this.dgvTitleLbl.Size = new System.Drawing.Size(212, 48);
             this.dgvTitleLbl.TabIndex = 2;
