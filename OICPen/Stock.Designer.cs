@@ -66,26 +66,26 @@
             // 
             this.itemsCodeLbl.AutoSize = true;
             this.itemsCodeLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.itemsCodeLbl.Location = new System.Drawing.Point(1168, 132);
+            this.itemsCodeLbl.Location = new System.Drawing.Point(1000, 228);
             this.itemsCodeLbl.Name = "itemsCodeLbl";
-            this.itemsCodeLbl.Size = new System.Drawing.Size(130, 29);
+            this.itemsCodeLbl.Size = new System.Drawing.Size(159, 29);
             this.itemsCodeLbl.TabIndex = 5;
-            this.itemsCodeLbl.Text = "商品ID　";
+            this.itemsCodeLbl.Text = "商品ID：　";
             // 
             // itemsNameLbl
             // 
             this.itemsNameLbl.AutoSize = true;
             this.itemsNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.itemsNameLbl.Location = new System.Drawing.Point(1169, 252);
+            this.itemsNameLbl.Location = new System.Drawing.Point(1001, 316);
             this.itemsNameLbl.Name = "itemsNameLbl";
-            this.itemsNameLbl.Size = new System.Drawing.Size(129, 29);
+            this.itemsNameLbl.Size = new System.Drawing.Size(158, 29);
             this.itemsNameLbl.TabIndex = 5;
-            this.itemsNameLbl.Text = "商品名　";
+            this.itemsNameLbl.Text = "商品名：　";
             // 
             // itemsCodeTbox
             // 
             this.itemsCodeTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.itemsCodeTbox.Location = new System.Drawing.Point(1122, 190);
+            this.itemsCodeTbox.Location = new System.Drawing.Point(1165, 226);
             this.itemsCodeTbox.Name = "itemsCodeTbox";
             this.itemsCodeTbox.Size = new System.Drawing.Size(218, 36);
             this.itemsCodeTbox.TabIndex = 6;
@@ -93,10 +93,11 @@
             // itemsNameTbox
             // 
             this.itemsNameTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.itemsNameTbox.Location = new System.Drawing.Point(1122, 314);
+            this.itemsNameTbox.Location = new System.Drawing.Point(1165, 314);
             this.itemsNameTbox.Name = "itemsNameTbox";
-            this.itemsNameTbox.Size = new System.Drawing.Size(218, 36);
+            this.itemsNameTbox.Size = new System.Drawing.Size(358, 36);
             this.itemsNameTbox.TabIndex = 6;
+            this.itemsNameTbox.TextChanged += new System.EventHandler(this.itemsNameTbox_TextChanged);
             // 
             // searchBtn
             // 

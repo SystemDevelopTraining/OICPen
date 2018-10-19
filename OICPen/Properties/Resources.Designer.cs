@@ -94,6 +94,16 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap Cool_Text___IM_21_302690885821689 {
+            get {
+                object obj = ResourceManager.GetObject("Cool Text - IM-21 302690885821689", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap cooltext302672380550070 {
             get {
                 object obj = ResourceManager.GetObject("cooltext302672380550070", resourceCulture);
@@ -594,6 +604,26 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap img_depot {
+            get {
+                object obj = ResourceManager.GetObject("img_depot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap img_depot1 {
+            get {
+                object obj = ResourceManager.GetObject("img_depot1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap img_logo {
             get {
                 object obj = ResourceManager.GetObject("img_logo", resourceCulture);
@@ -668,6 +698,16 @@ namespace OICPen.Properties {
         internal static System.Drawing.Bitmap set_of_stationery_pictures_csp39459981 {
             get {
                 object obj = ResourceManager.GetObject("set-of-stationery-pictures_csp39459981", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap sh_26 {
+            get {
+                object obj = ResourceManager.GetObject("sh_26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
