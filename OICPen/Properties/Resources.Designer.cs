@@ -614,6 +614,36 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap jess_watters_665170_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("jess-watters-665170-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap jess_watters_665170_unsplash1 {
+            get {
+                object obj = ResourceManager.GetObject("jess-watters-665170-unsplash1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap jess_watters_665170_unsplash2 {
+            get {
+                object obj = ResourceManager.GetObject("jess-watters-665170-unsplash2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap kisspng_paper_stationery_adhesive_tape_ant_stationers_offi_school_png_image_5a752e58967e98_7882915715176290166164 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-paper-stationery-adhesive-tape-ant-stationers-offi-school-png-image-5a752" +
