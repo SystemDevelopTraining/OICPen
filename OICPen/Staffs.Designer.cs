@@ -75,7 +75,7 @@
             // 
             this.titleLbl.AutoSize = true;
             this.titleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.titleLbl.Location = new System.Drawing.Point(1350, 12);
+            this.titleLbl.Location = new System.Drawing.Point(1373, 19);
             this.titleLbl.Name = "titleLbl";
             this.titleLbl.Size = new System.Drawing.Size(212, 48);
             this.titleLbl.TabIndex = 3;
