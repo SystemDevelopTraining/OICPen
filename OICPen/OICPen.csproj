@@ -330,6 +330,60 @@
   <ItemGroup>
     <None Include="Resources\jess-watters-665170-unsplash2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302672380550070.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext3026723805500701.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302672489979675.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302672549851951.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673263607342.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673350769687.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673427531843.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673740273912.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673830226924.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673864705453.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext3026737402739121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext3026738302269241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext3026738647054531.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673919131457.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302674035806542.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302674204837578.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302674252430085.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hello-i-m-nik-745051-unsplash.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
