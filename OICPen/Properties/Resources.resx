@@ -142,6 +142,9 @@
   <data name="school-stationery-items-1520937446-37165031" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\school-stationery-items-1520937446-37165031.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-ショッピングカート-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-ショッピングカート-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="蜃ｺ蠎ｫ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\蜃ｺ蠎ｫ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,9 +156,6 @@
   </data>
   <data name="school-stationery-items-1520937446-3716503" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\school-stationery-items-1520937446-3716503.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-倉庫-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-倉庫-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,14 +187,17 @@
   <data name="icons8-注文書-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-注文書-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="57-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\57-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kisspng-rectangle-horizontal-line-5ac44e44e7fce7.2607150015228145329502" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-rectangle-horizontal-line-5ac44e44e7fce7.2607150015228145329502.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-ショッピングカート-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-ショッピングカート-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-日本円-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-日本円-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jess-watters-665170-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jess-watters-665170-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-curved-arrow-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-curved-arrow-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,6 +214,9 @@
   <data name="icons8-ショッピングカート-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-ショッピングカート-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="57-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\57-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-left-2-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-left-2-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -222,6 +228,9 @@
   </data>
   <data name="icons8-注文書-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-注文書-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jess-watters-665170-unsplash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jess-watters-665170-unsplash1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-in-transit-482" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-in-transit-482.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,7 +256,7 @@
   <data name="kisspng-paper-stationery-adhesive-tape-ant-stationers-offi-school-png-image-5a752e58967e98.7882915715176290166164" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-paper-stationery-adhesive-tape-ant-stationers-offi-school-png-image-5a752e58967e98.7882915715176290166164.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kisspng-rectangle-horizontal-line-5ac44e44e7fce7.2607150015228145329502" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-rectangle-horizontal-line-5ac44e44e7fce7.2607150015228145329502.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="jess-watters-665170-unsplash2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jess-watters-665170-unsplash2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
