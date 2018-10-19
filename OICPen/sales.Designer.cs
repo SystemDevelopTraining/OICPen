@@ -126,6 +126,17 @@
             this.salesBetweenLbl.TabIndex = 6;
             this.salesBetweenLbl.Text = "指定期間";
             // 
+            // rankBtn
+            // 
+            this.rankBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.rankBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.rankBtn.Location = new System.Drawing.Point(1384, 107);
+            this.rankBtn.Name = "rankBtn";
+            this.rankBtn.Size = new System.Drawing.Size(186, 58);
+            this.rankBtn.TabIndex = 1;
+            this.rankBtn.Text = "ランキング";
+            this.rankBtn.UseVisualStyleBackColor = true;
+            // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -159,5 +170,6 @@
         private System.Windows.Forms.DateTimePicker salesStartDtp;
         private System.Windows.Forms.Label salesAndLbl;
         private System.Windows.Forms.Label salesBetweenLbl;
+        private System.Windows.Forms.Button rankBtn;
     }
 }

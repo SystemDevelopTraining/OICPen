@@ -50,6 +50,7 @@
             this.phoneNoViewLbl = new System.Windows.Forms.Label();
             this.confirmBtn = new System.Windows.Forms.Button();
             this.completeOrdersTitleLbl = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.completeOrdersViewDgv)).BeginInit();
             this.SuspendLayout();
@@ -135,7 +136,7 @@
             // completeBtn
             // 
             this.completeBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.completeBtn.Location = new System.Drawing.Point(1365, 639);
+            this.completeBtn.Location = new System.Drawing.Point(1365, 740);
             this.completeBtn.Name = "completeBtn";
             this.completeBtn.Size = new System.Drawing.Size(104, 54);
             this.completeBtn.TabIndex = 11;
@@ -146,7 +147,7 @@
             // changeBtn
             // 
             this.changeBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.changeBtn.Location = new System.Drawing.Point(1365, 525);
+            this.changeBtn.Location = new System.Drawing.Point(1365, 616);
             this.changeBtn.Name = "changeBtn";
             this.changeBtn.Size = new System.Drawing.Size(104, 54);
             this.changeBtn.TabIndex = 12;
@@ -268,12 +269,23 @@
             this.completeOrdersTitleLbl.TabIndex = 24;
             this.completeOrdersTitleLbl.Text = "注文リスト";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.Location = new System.Drawing.Point(1365, 500);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 54);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "削除";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // TakeOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.completeOrdersTitleLbl);
             this.Controls.Add(this.confirmBtn);
             this.Controls.Add(this.phoneNoViewLbl);
@@ -331,5 +343,6 @@
         private System.Windows.Forms.Label phoneNoViewLbl;
         private System.Windows.Forms.Button confirmBtn;
         private System.Windows.Forms.Label completeOrdersTitleLbl;
+        private System.Windows.Forms.Button button1;
     }
 }

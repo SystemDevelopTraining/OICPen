@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.incomingTitleLbl = new System.Windows.Forms.Label();
-            this.dateLbl = new System.Windows.Forms.Label();
-            this.incomingDtp = new System.Windows.Forms.DateTimePicker();
             this.incomingDgv = new System.Windows.Forms.DataGridView();
             this.orderCheckBtn = new System.Windows.Forms.Button();
             this.itemsLbl = new System.Windows.Forms.Label();
@@ -55,24 +53,6 @@
             this.incomingTitleLbl.Size = new System.Drawing.Size(212, 48);
             this.incomingTitleLbl.TabIndex = 0;
             this.incomingTitleLbl.Text = "入庫管理";
-            // 
-            // dateLbl
-            // 
-            this.dateLbl.AutoSize = true;
-            this.dateLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.dateLbl.Location = new System.Drawing.Point(902, 324);
-            this.dateLbl.Name = "dateLbl";
-            this.dateLbl.Size = new System.Drawing.Size(116, 29);
-            this.dateLbl.TabIndex = 1;
-            this.dateLbl.Text = "日付  :";
-            // 
-            // incomingDtp
-            // 
-            this.incomingDtp.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.incomingDtp.Location = new System.Drawing.Point(1113, 324);
-            this.incomingDtp.Name = "incomingDtp";
-            this.incomingDtp.Size = new System.Drawing.Size(230, 36);
-            this.incomingDtp.TabIndex = 2;
             // 
             // incomingDgv
             // 
@@ -98,7 +78,7 @@
             // 
             this.itemsLbl.AutoSize = true;
             this.itemsLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.itemsLbl.Location = new System.Drawing.Point(902, 401);
+            this.itemsLbl.Location = new System.Drawing.Point(902, 324);
             this.itemsLbl.Name = "itemsLbl";
             this.itemsLbl.Size = new System.Drawing.Size(159, 29);
             this.itemsLbl.TabIndex = 1;
@@ -107,7 +87,7 @@
             // incomingTbox
             // 
             this.incomingTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.incomingTbox.Location = new System.Drawing.Point(1113, 401);
+            this.incomingTbox.Location = new System.Drawing.Point(1111, 322);
             this.incomingTbox.Name = "incomingTbox";
             this.incomingTbox.Size = new System.Drawing.Size(230, 36);
             this.incomingTbox.TabIndex = 5;
@@ -115,7 +95,7 @@
             // searchBtn
             // 
             this.searchBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.searchBtn.Location = new System.Drawing.Point(1363, 401);
+            this.searchBtn.Location = new System.Drawing.Point(1381, 324);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(85, 42);
             this.searchBtn.TabIndex = 6;
@@ -125,21 +105,21 @@
             // registerBtn
             // 
             this.registerBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.registerBtn.Location = new System.Drawing.Point(907, 489);
+            this.registerBtn.Location = new System.Drawing.Point(907, 411);
             this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(104, 54);
+            this.registerBtn.Size = new System.Drawing.Size(154, 54);
             this.registerBtn.TabIndex = 7;
-            this.registerBtn.Text = "登録";
+            this.registerBtn.Text = "入庫完了";
             this.registerBtn.UseVisualStyleBackColor = true;
             // 
             // fixBtn
             // 
             this.fixBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.fixBtn.Location = new System.Drawing.Point(1068, 489);
+            this.fixBtn.Location = new System.Drawing.Point(1111, 411);
             this.fixBtn.Name = "fixBtn";
-            this.fixBtn.Size = new System.Drawing.Size(104, 54);
+            this.fixBtn.Size = new System.Drawing.Size(223, 54);
             this.fixBtn.TabIndex = 7;
-            this.fixBtn.Text = "修正";
+            this.fixBtn.Text = "入庫取り消し";
             this.fixBtn.UseVisualStyleBackColor = true;
             // 
             // InComing
@@ -154,9 +134,7 @@
             this.Controls.Add(this.incomingTbox);
             this.Controls.Add(this.orderCheckBtn);
             this.Controls.Add(this.incomingDgv);
-            this.Controls.Add(this.incomingDtp);
             this.Controls.Add(this.itemsLbl);
-            this.Controls.Add(this.dateLbl);
             this.Controls.Add(this.incomingTitleLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InComing";
@@ -171,8 +149,6 @@
         #endregion
 
         private System.Windows.Forms.Label incomingTitleLbl;
-        private System.Windows.Forms.Label dateLbl;
-        private System.Windows.Forms.DateTimePicker incomingDtp;
         private System.Windows.Forms.DataGridView incomingDgv;
         private System.Windows.Forms.Button orderCheckBtn;
         private System.Windows.Forms.Label itemsLbl;
