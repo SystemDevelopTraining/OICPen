@@ -169,6 +169,9 @@
     <EmbeddedResource Include="Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TakeOrder.resx">
+      <DependentUpon>TakeOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <EmbeddedResource Include="Ship.resx">
       <DependentUpon>Ship.cs</DependentUpon>
