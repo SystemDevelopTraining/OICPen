@@ -75,7 +75,7 @@
             this.updateBtn.Location = new System.Drawing.Point(1163, 865);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(186, 58);
-            this.updateBtn.TabIndex = 2;
+            this.updateBtn.TabIndex = 12;
             this.updateBtn.Text = "更新";
             this.updateBtn.UseVisualStyleBackColor = true;
             // 
@@ -85,7 +85,7 @@
             this.deleteBtn.Location = new System.Drawing.Point(1355, 865);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(186, 58);
-            this.deleteBtn.TabIndex = 3;
+            this.deleteBtn.TabIndex = 13;
             this.deleteBtn.Text = "削除";
             this.deleteBtn.UseVisualStyleBackColor = true;
             // 
@@ -95,7 +95,7 @@
             this.registBtn.Location = new System.Drawing.Point(971, 865);
             this.registBtn.Name = "registBtn";
             this.registBtn.Size = new System.Drawing.Size(186, 58);
-            this.registBtn.TabIndex = 4;
+            this.registBtn.TabIndex = 11;
             this.registBtn.Text = "商品登録";
             this.registBtn.UseVisualStyleBackColor = true;
             // 
@@ -106,25 +106,25 @@
             this.itemDgv.Name = "itemDgv";
             this.itemDgv.RowTemplate.Height = 21;
             this.itemDgv.Size = new System.Drawing.Size(888, 912);
-            this.itemDgv.TabIndex = 5;
+            this.itemDgv.TabIndex = 14;
             // 
             // searchBtn
             // 
             this.searchBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.searchBtn.Location = new System.Drawing.Point(1072, 475);
+            this.searchBtn.Location = new System.Drawing.Point(1062, 314);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(186, 58);
-            this.searchBtn.TabIndex = 6;
+            this.searchBtn.TabIndex = 4;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
             // 
             // itemNameTbox
             // 
             this.itemNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.itemNameTbox.Location = new System.Drawing.Point(1151, 598);
+            this.itemNameTbox.Location = new System.Drawing.Point(1151, 458);
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(284, 36);
-            this.itemNameTbox.TabIndex = 7;
+            this.itemNameTbox.TabIndex = 5;
             // 
             // itemNameLbl
             // 
@@ -133,7 +133,7 @@
             this.itemNameLbl.BackColor = System.Drawing.Color.Transparent;
             this.itemNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemNameLbl.ForeColor = System.Drawing.Color.Black;
-            this.itemNameLbl.Location = new System.Drawing.Point(998, 601);
+            this.itemNameLbl.Location = new System.Drawing.Point(999, 461);
             this.itemNameLbl.Name = "itemNameLbl";
             this.itemNameLbl.Size = new System.Drawing.Size(147, 33);
             this.itemNameLbl.TabIndex = 8;
@@ -146,7 +146,7 @@
             this.searchItemIdLbl.BackColor = System.Drawing.Color.Transparent;
             this.searchItemIdLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.searchItemIdLbl.ForeColor = System.Drawing.Color.Black;
-            this.searchItemIdLbl.Location = new System.Drawing.Point(998, 321);
+            this.searchItemIdLbl.Location = new System.Drawing.Point(998, 159);
             this.searchItemIdLbl.Name = "searchItemIdLbl";
             this.searchItemIdLbl.Size = new System.Drawing.Size(148, 33);
             this.searchItemIdLbl.TabIndex = 9;
@@ -155,10 +155,10 @@
             // searchItemIdTbox
             // 
             this.searchItemIdTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.searchItemIdTbox.Location = new System.Drawing.Point(1151, 322);
+            this.searchItemIdTbox.Location = new System.Drawing.Point(1151, 160);
             this.searchItemIdTbox.Name = "searchItemIdTbox";
             this.searchItemIdTbox.Size = new System.Drawing.Size(284, 36);
-            this.searchItemIdTbox.TabIndex = 10;
+            this.searchItemIdTbox.TabIndex = 1;
             // 
             // janLbl
             // 
@@ -167,7 +167,7 @@
             this.janLbl.BackColor = System.Drawing.Color.Transparent;
             this.janLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.janLbl.ForeColor = System.Drawing.Color.Black;
-            this.janLbl.Location = new System.Drawing.Point(1046, 643);
+            this.janLbl.Location = new System.Drawing.Point(1046, 584);
             this.janLbl.Name = "janLbl";
             this.janLbl.Size = new System.Drawing.Size(99, 33);
             this.janLbl.TabIndex = 11;
@@ -180,7 +180,7 @@
             this.noteLbl.BackColor = System.Drawing.Color.Transparent;
             this.noteLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.noteLbl.ForeColor = System.Drawing.Color.Black;
-            this.noteLbl.Location = new System.Drawing.Point(1031, 811);
+            this.noteLbl.Location = new System.Drawing.Point(1031, 671);
             this.noteLbl.Name = "noteLbl";
             this.noteLbl.Size = new System.Drawing.Size(114, 33);
             this.noteLbl.TabIndex = 13;
@@ -193,7 +193,7 @@
             this.safetyStockLbl.BackColor = System.Drawing.Color.Transparent;
             this.safetyStockLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.safetyStockLbl.ForeColor = System.Drawing.Color.Black;
-            this.safetyStockLbl.Location = new System.Drawing.Point(932, 766);
+            this.safetyStockLbl.Location = new System.Drawing.Point(932, 626);
             this.safetyStockLbl.Name = "safetyStockLbl";
             this.safetyStockLbl.Size = new System.Drawing.Size(213, 33);
             this.safetyStockLbl.TabIndex = 14;
@@ -206,7 +206,7 @@
             this.furiganaLbl.BackColor = System.Drawing.Color.Transparent;
             this.furiganaLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.furiganaLbl.ForeColor = System.Drawing.Color.Black;
-            this.furiganaLbl.Location = new System.Drawing.Point(965, 723);
+            this.furiganaLbl.Location = new System.Drawing.Point(966, 503);
             this.furiganaLbl.Name = "furiganaLbl";
             this.furiganaLbl.Size = new System.Drawing.Size(180, 33);
             this.furiganaLbl.TabIndex = 15;
@@ -219,7 +219,7 @@
             this.priceLbl.BackColor = System.Drawing.Color.Transparent;
             this.priceLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.priceLbl.ForeColor = System.Drawing.Color.Black;
-            this.priceLbl.Location = new System.Drawing.Point(965, 685);
+            this.priceLbl.Location = new System.Drawing.Point(966, 545);
             this.priceLbl.Name = "priceLbl";
             this.priceLbl.Size = new System.Drawing.Size(180, 33);
             this.priceLbl.TabIndex = 16;
@@ -228,42 +228,44 @@
             // janTbox
             // 
             this.janTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.janTbox.Location = new System.Drawing.Point(1151, 640);
+            this.janTbox.Location = new System.Drawing.Point(1151, 585);
             this.janTbox.Name = "janTbox";
             this.janTbox.Size = new System.Drawing.Size(284, 36);
-            this.janTbox.TabIndex = 17;
+            this.janTbox.TabIndex = 6;
             // 
             // priceTbox
             // 
             this.priceTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.priceTbox.Location = new System.Drawing.Point(1151, 682);
+            this.priceTbox.Location = new System.Drawing.Point(1151, 542);
             this.priceTbox.Name = "priceTbox";
             this.priceTbox.Size = new System.Drawing.Size(284, 36);
-            this.priceTbox.TabIndex = 18;
+            this.priceTbox.TabIndex = 7;
             // 
             // noteTbox
             // 
             this.noteTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.noteTbox.Location = new System.Drawing.Point(1151, 808);
+            this.noteTbox.Location = new System.Drawing.Point(1151, 668);
+            this.noteTbox.Multiline = true;
             this.noteTbox.Name = "noteTbox";
-            this.noteTbox.Size = new System.Drawing.Size(284, 36);
-            this.noteTbox.TabIndex = 19;
+            this.noteTbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.noteTbox.Size = new System.Drawing.Size(284, 155);
+            this.noteTbox.TabIndex = 10;
             // 
             // safetyStockTbox
             // 
             this.safetyStockTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.safetyStockTbox.Location = new System.Drawing.Point(1151, 766);
+            this.safetyStockTbox.Location = new System.Drawing.Point(1151, 626);
             this.safetyStockTbox.Name = "safetyStockTbox";
             this.safetyStockTbox.Size = new System.Drawing.Size(284, 36);
-            this.safetyStockTbox.TabIndex = 20;
+            this.safetyStockTbox.TabIndex = 9;
             // 
             // furiganaTbox
             // 
             this.furiganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.furiganaTbox.Location = new System.Drawing.Point(1151, 724);
+            this.furiganaTbox.Location = new System.Drawing.Point(1151, 500);
             this.furiganaTbox.Name = "furiganaTbox";
             this.furiganaTbox.Size = new System.Drawing.Size(284, 36);
-            this.furiganaTbox.TabIndex = 21;
+            this.furiganaTbox.TabIndex = 8;
             // 
             // searchItemNameLbl
             // 
@@ -272,7 +274,7 @@
             this.searchItemNameLbl.BackColor = System.Drawing.Color.Transparent;
             this.searchItemNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.searchItemNameLbl.ForeColor = System.Drawing.Color.Black;
-            this.searchItemNameLbl.Location = new System.Drawing.Point(998, 409);
+            this.searchItemNameLbl.Location = new System.Drawing.Point(998, 247);
             this.searchItemNameLbl.Name = "searchItemNameLbl";
             this.searchItemNameLbl.Size = new System.Drawing.Size(147, 33);
             this.searchItemNameLbl.TabIndex = 22;
@@ -285,7 +287,7 @@
             this.searchJanLbl.BackColor = System.Drawing.Color.Transparent;
             this.searchJanLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.searchJanLbl.ForeColor = System.Drawing.Color.Black;
-            this.searchJanLbl.Location = new System.Drawing.Point(1046, 367);
+            this.searchJanLbl.Location = new System.Drawing.Point(1046, 205);
             this.searchJanLbl.Name = "searchJanLbl";
             this.searchJanLbl.Size = new System.Drawing.Size(99, 33);
             this.searchJanLbl.TabIndex = 23;
@@ -294,18 +296,18 @@
             // searchItemNameTbox
             // 
             this.searchItemNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.searchItemNameTbox.Location = new System.Drawing.Point(1151, 406);
+            this.searchItemNameTbox.Location = new System.Drawing.Point(1151, 244);
             this.searchItemNameTbox.Name = "searchItemNameTbox";
             this.searchItemNameTbox.Size = new System.Drawing.Size(284, 36);
-            this.searchItemNameTbox.TabIndex = 24;
+            this.searchItemNameTbox.TabIndex = 3;
             // 
             // searchJanTbox
             // 
             this.searchJanTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.searchJanTbox.Location = new System.Drawing.Point(1151, 364);
+            this.searchJanTbox.Location = new System.Drawing.Point(1151, 202);
             this.searchJanTbox.Name = "searchJanTbox";
             this.searchJanTbox.Size = new System.Drawing.Size(284, 36);
-            this.searchJanTbox.TabIndex = 25;
+            this.searchJanTbox.TabIndex = 2;
             // 
             // itemsUpdateBtn
             // 
@@ -313,7 +315,7 @@
             this.itemsUpdateBtn.Location = new System.Drawing.Point(938, 21);
             this.itemsUpdateBtn.Name = "itemsUpdateBtn";
             this.itemsUpdateBtn.Size = new System.Drawing.Size(240, 58);
-            this.itemsUpdateBtn.TabIndex = 26;
+            this.itemsUpdateBtn.TabIndex = 0;
             this.itemsUpdateBtn.Text = "商品一覧更新";
             this.itemsUpdateBtn.UseVisualStyleBackColor = true;
             // 
