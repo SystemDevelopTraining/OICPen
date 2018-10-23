@@ -35,15 +35,17 @@
             this.searchBtn = new System.Windows.Forms.Button();
             this.itemNameTbox = new System.Windows.Forms.TextBox();
             this.itemsViewDgv = new System.Windows.Forms.DataGridView();
-            this.updateBtn = new System.Windows.Forms.Button();
-            this.completedBtn = new System.Windows.Forms.Button();
-            this.quantityTbox = new System.Windows.Forms.TextBox();
+            this.allClearBtn = new System.Windows.Forms.Button();
+            this.completeBtn = new System.Windows.Forms.Button();
+            this.countsTb = new System.Windows.Forms.TextBox();
             this.itemIdTbox = new System.Windows.Forms.TextBox();
             this.quantityLbl = new System.Windows.Forms.Label();
             this.itemNameLbl = new System.Windows.Forms.Label();
             this.itemIdLbl = new System.Windows.Forms.Label();
             this.seachResultLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.giveOrderListDgv)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.clearBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,25 +116,25 @@
             this.itemsViewDgv.Size = new System.Drawing.Size(378, 351);
             this.itemsViewDgv.TabIndex = 4;
             // 
-            // updateBtn
+            // allClearBtn
             // 
-            this.updateBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.updateBtn.Location = new System.Drawing.Point(1388, 534);
-            this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(104, 54);
-            this.updateBtn.TabIndex = 8;
-            this.updateBtn.Text = "更新";
-            this.updateBtn.UseVisualStyleBackColor = true;
+            this.allClearBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.allClearBtn.Location = new System.Drawing.Point(1388, 534);
+            this.allClearBtn.Name = "allClearBtn";
+            this.allClearBtn.Size = new System.Drawing.Size(138, 54);
+            this.allClearBtn.TabIndex = 8;
+            this.allClearBtn.Text = "クリア";
+            this.allClearBtn.UseVisualStyleBackColor = true;
             // 
-            // completedBtn
+            // completeBtn
             // 
-            this.completedBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.completedBtn.Location = new System.Drawing.Point(1388, 639);
-            this.completedBtn.Name = "completedBtn";
-            this.completedBtn.Size = new System.Drawing.Size(104, 54);
-            this.completedBtn.TabIndex = 9;
-            this.completedBtn.Text = "完了";
-            this.completedBtn.UseVisualStyleBackColor = true;
+            this.completeBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.completeBtn.Location = new System.Drawing.Point(1388, 639);
+            this.completeBtn.Name = "completeBtn";
+            this.completeBtn.Size = new System.Drawing.Size(138, 54);
+            this.completeBtn.TabIndex = 9;
+            this.completeBtn.Text = "完了";
+            this.completeBtn.UseVisualStyleBackColor = true;
             // 
             // quantityTbox
             // 
@@ -191,6 +193,16 @@
             this.seachResultLbl.TabIndex = 42;
             this.seachResultLbl.Text = "検索結果";
             // 
+            // clearBtn
+            // 
+            this.clearBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.clearBtn.Location = new System.Drawing.Point(1388, 432);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(138, 54);
+            this.clearBtn.TabIndex = 43;
+            this.clearBtn.Text = "削除";
+            this.clearBtn.UseVisualStyleBackColor = true;
+            // 
             // GiveOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -198,6 +210,8 @@
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
             this.Controls.Add(this.seachResultLbl);
+            this.Controls.Add(this.clearBtn);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.itemNameLbl);
             this.Controls.Add(this.itemIdLbl);
             this.Controls.Add(this.giveOrderListLbl);
@@ -206,9 +220,9 @@
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.itemNameTbox);
             this.Controls.Add(this.itemsViewDgv);
-            this.Controls.Add(this.updateBtn);
-            this.Controls.Add(this.completedBtn);
-            this.Controls.Add(this.quantityTbox);
+            this.Controls.Add(this.allClearBtn);
+            this.Controls.Add(this.completeBtn);
+            this.Controls.Add(this.countsTb);
             this.Controls.Add(this.itemIdTbox);
             this.Controls.Add(this.quantityLbl);
             this.Controls.Add(this.giveOrderTitleLbl);
@@ -232,13 +246,16 @@
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.TextBox itemNameTbox;
         private System.Windows.Forms.DataGridView itemsViewDgv;
-        private System.Windows.Forms.Button updateBtn;
-        private System.Windows.Forms.Button completedBtn;
         private System.Windows.Forms.TextBox quantityTbox;
+        private System.Windows.Forms.Button allClearBtn;
+        private System.Windows.Forms.Button completeBtn;
+
         private System.Windows.Forms.TextBox itemIdTbox;
         private System.Windows.Forms.Label quantityLbl;
         private System.Windows.Forms.Label itemNameLbl;
         private System.Windows.Forms.Label itemIdLbl;
         private System.Windows.Forms.Label seachResultLbl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button clearBtn;
     }
 }
