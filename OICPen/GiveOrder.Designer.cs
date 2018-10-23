@@ -35,7 +35,7 @@
             this.searchBtn = new System.Windows.Forms.Button();
             this.itemNameTbox = new System.Windows.Forms.TextBox();
             this.itemsViewDgv = new System.Windows.Forms.DataGridView();
-            this.changeBtn = new System.Windows.Forms.Button();
+            this.allClearBtn = new System.Windows.Forms.Button();
             this.completeBtn = new System.Windows.Forms.Button();
             this.countsTb = new System.Windows.Forms.TextBox();
             this.itemIdTbox = new System.Windows.Forms.TextBox();
@@ -43,6 +43,7 @@
             this.itemNameLbl = new System.Windows.Forms.Label();
             this.itemIdLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.clearBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.completeOrdersViewDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
             this.SuspendLayout();
@@ -114,22 +115,22 @@
             this.itemsViewDgv.Size = new System.Drawing.Size(378, 351);
             this.itemsViewDgv.TabIndex = 31;
             // 
-            // changeBtn
+            // allClearBtn
             // 
-            this.changeBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.changeBtn.Location = new System.Drawing.Point(1388, 534);
-            this.changeBtn.Name = "changeBtn";
-            this.changeBtn.Size = new System.Drawing.Size(104, 54);
-            this.changeBtn.TabIndex = 30;
-            this.changeBtn.Text = "更新";
-            this.changeBtn.UseVisualStyleBackColor = true;
+            this.allClearBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.allClearBtn.Location = new System.Drawing.Point(1388, 534);
+            this.allClearBtn.Name = "allClearBtn";
+            this.allClearBtn.Size = new System.Drawing.Size(138, 54);
+            this.allClearBtn.TabIndex = 30;
+            this.allClearBtn.Text = "クリア";
+            this.allClearBtn.UseVisualStyleBackColor = true;
             // 
             // completeBtn
             // 
             this.completeBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.completeBtn.Location = new System.Drawing.Point(1388, 639);
             this.completeBtn.Name = "completeBtn";
-            this.completeBtn.Size = new System.Drawing.Size(104, 54);
+            this.completeBtn.Size = new System.Drawing.Size(138, 54);
             this.completeBtn.TabIndex = 29;
             this.completeBtn.Text = "完了";
             this.completeBtn.UseVisualStyleBackColor = true;
@@ -191,12 +192,23 @@
             this.label1.TabIndex = 42;
             this.label1.Text = "検索結果";
             // 
+            // clearBtn
+            // 
+            this.clearBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.clearBtn.Location = new System.Drawing.Point(1388, 432);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(138, 54);
+            this.clearBtn.TabIndex = 43;
+            this.clearBtn.Text = "削除";
+            this.clearBtn.UseVisualStyleBackColor = true;
+            // 
             // GiveOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
+            this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.itemNameLbl);
             this.Controls.Add(this.itemIdLbl);
@@ -206,7 +218,7 @@
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.itemNameTbox);
             this.Controls.Add(this.itemsViewDgv);
-            this.Controls.Add(this.changeBtn);
+            this.Controls.Add(this.allClearBtn);
             this.Controls.Add(this.completeBtn);
             this.Controls.Add(this.countsTb);
             this.Controls.Add(this.itemIdTbox);
@@ -232,7 +244,7 @@
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.TextBox itemNameTbox;
         private System.Windows.Forms.DataGridView itemsViewDgv;
-        private System.Windows.Forms.Button changeBtn;
+        private System.Windows.Forms.Button allClearBtn;
         private System.Windows.Forms.Button completeBtn;
         private System.Windows.Forms.TextBox countsTb;
         private System.Windows.Forms.TextBox itemIdTbox;
@@ -240,5 +252,6 @@
         private System.Windows.Forms.Label itemNameLbl;
         private System.Windows.Forms.Label itemIdLbl;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button clearBtn;
     }
 }
