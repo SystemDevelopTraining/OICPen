@@ -40,6 +40,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.salesDgv)).BeginInit();
             this.SuspendLayout();
             // 
+            // salesEndDtp
+            // 
+            salesEndDtp.AllowDrop = true;
+            salesEndDtp.CustomFormat = "";
+            salesEndDtp.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            salesEndDtp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            salesEndDtp.Location = new System.Drawing.Point(1357, 838);
+            salesEndDtp.Name = "salesEndDtp";
+            salesEndDtp.Size = new System.Drawing.Size(228, 36);
+            salesEndDtp.TabIndex = 4;
+            salesEndDtp.Tag = "";
+            // 
             // salesLbl
             // 
             this.salesLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -89,22 +101,10 @@
             // 
             this.salesStartDtp.CustomFormat = "";
             this.salesStartDtp.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.salesStartDtp.Location = new System.Drawing.Point(1370, 741);
+            this.salesStartDtp.Location = new System.Drawing.Point(1357, 740);
             this.salesStartDtp.Name = "salesStartDtp";
-            this.salesStartDtp.Size = new System.Drawing.Size(200, 36);
+            this.salesStartDtp.Size = new System.Drawing.Size(228, 36);
             this.salesStartDtp.TabIndex = 3;
-            // 
-            // salesEndDtp
-            // 
-            salesEndDtp.AllowDrop = true;
-            salesEndDtp.CustomFormat = "";
-            salesEndDtp.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            salesEndDtp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            salesEndDtp.Location = new System.Drawing.Point(1370, 844);
-            salesEndDtp.Name = "salesEndDtp";
-            salesEndDtp.Size = new System.Drawing.Size(200, 36);
-            salesEndDtp.TabIndex = 4;
-            salesEndDtp.Tag = "";
             // 
             // salesAndLbl
             // 
@@ -113,17 +113,17 @@
             this.salesAndLbl.Location = new System.Drawing.Point(1453, 797);
             this.salesAndLbl.Name = "salesAndLbl";
             this.salesAndLbl.Size = new System.Drawing.Size(42, 29);
-            this.salesAndLbl.TabIndex = 5;
+            this.salesAndLbl.TabIndex = 0;
             this.salesAndLbl.Text = "～";
             // 
             // salesBetweenLbl
             // 
             this.salesBetweenLbl.AutoSize = true;
             this.salesBetweenLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.salesBetweenLbl.Location = new System.Drawing.Point(1394, 665);
+            this.salesBetweenLbl.Location = new System.Drawing.Point(1398, 663);
             this.salesBetweenLbl.Name = "salesBetweenLbl";
             this.salesBetweenLbl.Size = new System.Drawing.Size(147, 33);
-            this.salesBetweenLbl.TabIndex = 6;
+            this.salesBetweenLbl.TabIndex = 0;
             this.salesBetweenLbl.Text = "指定期間";
             // 
             // Sales
