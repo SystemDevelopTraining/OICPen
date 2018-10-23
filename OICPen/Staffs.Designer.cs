@@ -257,10 +257,16 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "特権管理者",
+            "客管理者",
+            "社員管理者",
+            "商品管理者",
+            "入庫管理者"});
             this.comboBox1.Location = new System.Drawing.Point(1181, 750);
             this.comboBox1.MaxDropDownItems = 4;
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 37);
+            this.comboBox1.Size = new System.Drawing.Size(176, 37);
             this.comboBox1.TabIndex = 8;
             // 
             // Staffs
