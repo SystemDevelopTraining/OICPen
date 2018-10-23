@@ -37,7 +37,7 @@
             this.itemsViewDgv = new System.Windows.Forms.DataGridView();
             this.allClearBtn = new System.Windows.Forms.Button();
             this.completeBtn = new System.Windows.Forms.Button();
-            this.countsTb = new System.Windows.Forms.TextBox();
+            this.quantityTbox = new System.Windows.Forms.TextBox();
             this.itemIdTbox = new System.Windows.Forms.TextBox();
             this.quantityLbl = new System.Windows.Forms.Label();
             this.itemNameLbl = new System.Windows.Forms.Label();
@@ -222,7 +222,7 @@
             this.Controls.Add(this.itemsViewDgv);
             this.Controls.Add(this.allClearBtn);
             this.Controls.Add(this.completeBtn);
-            this.Controls.Add(this.countsTb);
+            this.Controls.Add(this.quantityTbox);
             this.Controls.Add(this.itemIdTbox);
             this.Controls.Add(this.quantityLbl);
             this.Controls.Add(this.giveOrderTitleLbl);
