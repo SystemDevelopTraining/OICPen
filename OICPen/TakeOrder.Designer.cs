@@ -37,7 +37,7 @@
             this.countsLbl = new System.Windows.Forms.Label();
             this.countsTb = new System.Windows.Forms.TextBox();
             this.completeBtn = new System.Windows.Forms.Button();
-            this.changeBtn = new System.Windows.Forms.Button();
+            this.clearBtn = new System.Windows.Forms.Button();
             this.staffsTbox = new System.Windows.Forms.TextBox();
             this.checkBtn = new System.Windows.Forms.Button();
             this.itemNameLbl = new System.Windows.Forms.Label();
@@ -136,23 +136,23 @@
             // completeBtn
             // 
             this.completeBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.completeBtn.Location = new System.Drawing.Point(1365, 740);
+            this.completeBtn.Location = new System.Drawing.Point(1365, 727);
             this.completeBtn.Name = "completeBtn";
-            this.completeBtn.Size = new System.Drawing.Size(104, 54);
+            this.completeBtn.Size = new System.Drawing.Size(125, 54);
             this.completeBtn.TabIndex = 11;
             this.completeBtn.Text = "完了";
             this.completeBtn.UseVisualStyleBackColor = true;
             this.completeBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // changeBtn
+            // clearBtn
             // 
-            this.changeBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.changeBtn.Location = new System.Drawing.Point(1365, 616);
-            this.changeBtn.Name = "changeBtn";
-            this.changeBtn.Size = new System.Drawing.Size(104, 54);
-            this.changeBtn.TabIndex = 12;
-            this.changeBtn.Text = "更新";
-            this.changeBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.clearBtn.Location = new System.Drawing.Point(1365, 616);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(125, 54);
+            this.clearBtn.TabIndex = 12;
+            this.clearBtn.Text = "クリア";
+            this.clearBtn.UseVisualStyleBackColor = true;
             // 
             // staffsTbox
             // 
@@ -196,9 +196,9 @@
             this.staffsIdViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.staffsIdViewLbl.Location = new System.Drawing.Point(96, 327);
             this.staffsIdViewLbl.Name = "staffsIdViewLbl";
-            this.staffsIdViewLbl.Size = new System.Drawing.Size(193, 29);
+            this.staffsIdViewLbl.Size = new System.Drawing.Size(223, 29);
             this.staffsIdViewLbl.TabIndex = 17;
-            this.staffsIdViewLbl.Text = "会員IDが表示";
+            this.staffsIdViewLbl.Text = "{会員IDが表示}";
             // 
             // staffsNameViewLbl
             // 
@@ -206,9 +206,9 @@
             this.staffsNameViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.staffsNameViewLbl.Location = new System.Drawing.Point(324, 327);
             this.staffsNameViewLbl.Name = "staffsNameViewLbl";
-            this.staffsNameViewLbl.Size = new System.Drawing.Size(193, 29);
+            this.staffsNameViewLbl.Size = new System.Drawing.Size(223, 29);
             this.staffsNameViewLbl.TabIndex = 18;
-            this.staffsNameViewLbl.Text = "会員名が表示";
+            this.staffsNameViewLbl.Text = "{会員名が表示}";
             // 
             // itemsViewDgv
             // 
@@ -244,9 +244,9 @@
             this.phoneNoViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.phoneNoViewLbl.Location = new System.Drawing.Point(558, 327);
             this.phoneNoViewLbl.Name = "phoneNoViewLbl";
-            this.phoneNoViewLbl.Size = new System.Drawing.Size(133, 29);
+            this.phoneNoViewLbl.Size = new System.Drawing.Size(163, 29);
             this.phoneNoViewLbl.TabIndex = 22;
-            this.phoneNoViewLbl.Text = "電話番号";
+            this.phoneNoViewLbl.Text = "{電話番号}";
             // 
             // confirmBtn
             // 
@@ -272,9 +272,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(1365, 500);
+            this.button1.Location = new System.Drawing.Point(1365, 507);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 54);
+            this.button1.Size = new System.Drawing.Size(125, 54);
             this.button1.TabIndex = 25;
             this.button1.Text = "削除";
             this.button1.UseVisualStyleBackColor = true;
@@ -297,7 +297,7 @@
             this.Controls.Add(this.itemNameLbl);
             this.Controls.Add(this.itemsViewDgv);
             this.Controls.Add(this.checkBtn);
-            this.Controls.Add(this.changeBtn);
+            this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.completeBtn);
             this.Controls.Add(this.uketsukeLbl);
             this.Controls.Add(this.separatorLbl);
@@ -330,7 +330,7 @@
         private System.Windows.Forms.Label countsLbl;
         private System.Windows.Forms.TextBox countsTb;
         private System.Windows.Forms.Button completeBtn;
-        private System.Windows.Forms.Button changeBtn;
+        private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.TextBox staffsTbox;
         private System.Windows.Forms.Button checkBtn;
         private System.Windows.Forms.Label itemNameLbl;

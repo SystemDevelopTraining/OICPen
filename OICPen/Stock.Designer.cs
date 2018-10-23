@@ -60,7 +60,8 @@
             this.stockDgv.Name = "stockDgv";
             this.stockDgv.RowTemplate.Height = 21;
             this.stockDgv.Size = new System.Drawing.Size(800, 852);
-            this.stockDgv.TabIndex = 4;
+            this.stockDgv.TabIndex = 6;
+            this.stockDgv.TabStop = false;
             // 
             // itemsCodeLbl
             // 
@@ -88,7 +89,7 @@
             this.itemsCodeTbox.Location = new System.Drawing.Point(1165, 226);
             this.itemsCodeTbox.Name = "itemsCodeTbox";
             this.itemsCodeTbox.Size = new System.Drawing.Size(218, 36);
-            this.itemsCodeTbox.TabIndex = 6;
+            this.itemsCodeTbox.TabIndex = 1;
             // 
             // itemsNameTbox
             // 
@@ -96,7 +97,7 @@
             this.itemsNameTbox.Location = new System.Drawing.Point(1165, 314);
             this.itemsNameTbox.Name = "itemsNameTbox";
             this.itemsNameTbox.Size = new System.Drawing.Size(358, 36);
-            this.itemsNameTbox.TabIndex = 6;
+            this.itemsNameTbox.TabIndex = 2;
             this.itemsNameTbox.TextChanged += new System.EventHandler(this.itemsNameTbox_TextChanged);
             // 
             // searchBtn
@@ -105,7 +106,7 @@
             this.searchBtn.Location = new System.Drawing.Point(1174, 378);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(104, 54);
-            this.searchBtn.TabIndex = 8;
+            this.searchBtn.TabIndex = 3;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
             // 
@@ -115,7 +116,7 @@
             this.stockDangerViewBtn.Location = new System.Drawing.Point(1046, 732);
             this.stockDangerViewBtn.Name = "stockDangerViewBtn";
             this.stockDangerViewBtn.Size = new System.Drawing.Size(316, 53);
-            this.stockDangerViewBtn.TabIndex = 8;
+            this.stockDangerViewBtn.TabIndex = 5;
             this.stockDangerViewBtn.Text = "安全在庫数以下一覧";
             this.stockDangerViewBtn.UseVisualStyleBackColor = true;
             // 
@@ -125,7 +126,7 @@
             this.stockViewBtn.Location = new System.Drawing.Point(1046, 618);
             this.stockViewBtn.Name = "stockViewBtn";
             this.stockViewBtn.Size = new System.Drawing.Size(316, 53);
-            this.stockViewBtn.TabIndex = 8;
+            this.stockViewBtn.TabIndex = 4;
             this.stockViewBtn.Text = "在庫状況一覧表示";
             this.stockViewBtn.UseVisualStyleBackColor = true;
             this.stockViewBtn.Click += new System.EventHandler(this.button2_Click);
