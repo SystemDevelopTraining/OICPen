@@ -44,11 +44,11 @@
             this.passwordTbox = new System.Windows.Forms.TextBox();
             this.password2Tbox = new System.Windows.Forms.TextBox();
             this.password2Lbl = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.seperatorLbl = new System.Windows.Forms.Label();
             this.registerTitleLbl = new System.Windows.Forms.Label();
             this.permissionLbl = new System.Windows.Forms.Label();
-            this.permissionTbox = new System.Windows.Forms.TextBox();
             this.searchTitleLbl = new System.Windows.Forms.Label();
+            this.permissionCbox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.staffsDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +75,7 @@
             // 
             this.titleLbl.AutoSize = true;
             this.titleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.titleLbl.Location = new System.Drawing.Point(1350, 12);
+            this.titleLbl.Location = new System.Drawing.Point(1373, 19);
             this.titleLbl.Name = "titleLbl";
             this.titleLbl.Size = new System.Drawing.Size(212, 48);
             this.titleLbl.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             // idTbox
             // 
-            this.idTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.idTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.idTbox.Location = new System.Drawing.Point(1180, 201);
             this.idTbox.Multiline = true;
             this.idTbox.Name = "idTbox";
@@ -112,7 +112,7 @@
             // 
             // searchNameTbox
             // 
-            this.searchNameTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.searchNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.searchNameTbox.Location = new System.Drawing.Point(1180, 269);
             this.searchNameTbox.Multiline = true;
             this.searchNameTbox.Name = "searchNameTbox";
@@ -152,7 +152,7 @@
             // 
             // registerNameTbox
             // 
-            this.registerNameTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.registerNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.registerNameTbox.Location = new System.Drawing.Point(1180, 513);
             this.registerNameTbox.Multiline = true;
             this.registerNameTbox.Name = "registerNameTbox";
@@ -182,7 +182,7 @@
             // 
             // passwordTbox
             // 
-            this.passwordTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.passwordTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.passwordTbox.Location = new System.Drawing.Point(1180, 592);
             this.passwordTbox.Multiline = true;
             this.passwordTbox.Name = "passwordTbox";
@@ -192,7 +192,7 @@
             // 
             // password2Tbox
             // 
-            this.password2Tbox.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.password2Tbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.password2Tbox.Location = new System.Drawing.Point(1180, 671);
             this.password2Tbox.Multiline = true;
             this.password2Tbox.Name = "password2Tbox";
@@ -211,15 +211,14 @@
             this.password2Lbl.Text = "パスワード(確認):";
             this.password2Lbl.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label7
+            // seperatorLbl
             // 
-            this.label7.BackColor = System.Drawing.Color.Black;
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.Location = new System.Drawing.Point(832, 421);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(750, 3);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "label7";
+            this.seperatorLbl.BackColor = System.Drawing.Color.Black;
+            this.seperatorLbl.Font = new System.Drawing.Font("MS UI Gothic", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.seperatorLbl.Location = new System.Drawing.Point(832, 421);
+            this.seperatorLbl.Name = "seperatorLbl";
+            this.seperatorLbl.Size = new System.Drawing.Size(750, 3);
+            this.seperatorLbl.TabIndex = 6;
             // 
             // registerTitleLbl
             // 
@@ -242,15 +241,6 @@
             this.permissionLbl.Text = "権限:";
             this.permissionLbl.Click += new System.EventHandler(this.label5_Click);
             // 
-            // permissionTbox
-            // 
-            this.permissionTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.permissionTbox.Location = new System.Drawing.Point(1180, 750);
-            this.permissionTbox.Multiline = true;
-            this.permissionTbox.Name = "permissionTbox";
-            this.permissionTbox.Size = new System.Drawing.Size(105, 33);
-            this.permissionTbox.TabIndex = 4;
-            // 
             // searchTitleLbl
             // 
             this.searchTitleLbl.AutoSize = true;
@@ -261,15 +251,33 @@
             this.searchTitleLbl.TabIndex = 7;
             this.searchTitleLbl.Text = "検索";
             // 
+            // permissionCbox
+            // 
+            this.permissionCbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.permissionCbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.permissionCbox.FormattingEnabled = true;
+            this.permissionCbox.Items.AddRange(new object[] {
+            "特権管理者",
+            "客管理者",
+            "社員管理者",
+            "商品管理者",
+            "入庫管理者"});
+            this.permissionCbox.Location = new System.Drawing.Point(1181, 750);
+            this.permissionCbox.MaxDropDownItems = 4;
+            this.permissionCbox.Name = "permissionCbox";
+            this.permissionCbox.Size = new System.Drawing.Size(176, 37);
+            this.permissionCbox.TabIndex = 8;
+            // 
             // Staffs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
+            this.Controls.Add(this.permissionCbox);
             this.Controls.Add(this.searchTitleLbl);
             this.Controls.Add(this.registerTitleLbl);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.seperatorLbl);
             this.Controls.Add(this.idLbl);
             this.Controls.Add(this.permissionLbl);
             this.Controls.Add(this.password2Lbl);
@@ -277,7 +285,6 @@
             this.Controls.Add(this.registerNameLbl);
             this.Controls.Add(this.searchNameLbl);
             this.Controls.Add(this.searchNameTbox);
-            this.Controls.Add(this.permissionTbox);
             this.Controls.Add(this.password2Tbox);
             this.Controls.Add(this.passwordTbox);
             this.Controls.Add(this.registerNameTbox);
@@ -315,10 +322,10 @@
         private System.Windows.Forms.TextBox passwordTbox;
         private System.Windows.Forms.TextBox password2Tbox;
         private System.Windows.Forms.Label password2Lbl;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label seperatorLbl;
         private System.Windows.Forms.Label registerTitleLbl;
         private System.Windows.Forms.Label permissionLbl;
-        private System.Windows.Forms.TextBox permissionTbox;
         private System.Windows.Forms.Label searchTitleLbl;
+        private System.Windows.Forms.ComboBox permissionCbox;
     }
 }

@@ -28,22 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DateTimePicker salesEndDtp;
             this.salesLbl = new System.Windows.Forms.Label();
-            this.salesSelectBtn = new System.Windows.Forms.Button();
+            this.salesDisplayBtn = new System.Windows.Forms.Button();
             this.salesDgv = new System.Windows.Forms.DataGridView();
-            this.rankBtn = new System.Windows.Forms.Button();
+            this.salesSortBtn = new System.Windows.Forms.Button();
             this.salesStartDtp = new System.Windows.Forms.DateTimePicker();
-            this.salesEndDtp = new System.Windows.Forms.DateTimePicker();
+            this.salesAndLbl = new System.Windows.Forms.Label();
             this.salesBetweenLbl = new System.Windows.Forms.Label();
+            salesEndDtp = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.salesDgv)).BeginInit();
             this.SuspendLayout();
+            // 
+            // salesEndDtp
+            // 
+            salesEndDtp.AllowDrop = true;
+            salesEndDtp.CustomFormat = "";
+            salesEndDtp.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            salesEndDtp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            salesEndDtp.Location = new System.Drawing.Point(1357, 838);
+            salesEndDtp.Name = "salesEndDtp";
+            salesEndDtp.Size = new System.Drawing.Size(228, 36);
+            salesEndDtp.TabIndex = 4;
+            salesEndDtp.Tag = "";
             // 
             // salesLbl
             // 
             this.salesLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.salesLbl.AutoSize = true;
             this.salesLbl.BackColor = System.Drawing.Color.Transparent;
-            this.salesLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.salesLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.salesLbl.ForeColor = System.Drawing.Color.Black;
             this.salesLbl.Location = new System.Drawing.Point(1373, 19);
             this.salesLbl.Name = "salesLbl";
@@ -51,16 +65,16 @@
             this.salesLbl.TabIndex = 0;
             this.salesLbl.Text = "売上管理";
             // 
-            // salesSelectBtn
+            // salesDisplayBtn
             // 
-            this.salesSelectBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.salesSelectBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.salesSelectBtn.Location = new System.Drawing.Point(1384, 245);
-            this.salesSelectBtn.Name = "salesSelectBtn";
-            this.salesSelectBtn.Size = new System.Drawing.Size(186, 58);
-            this.salesSelectBtn.TabIndex = 1;
-            this.salesSelectBtn.Text = "売上表";
-            this.salesSelectBtn.UseVisualStyleBackColor = true;
+            this.salesDisplayBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.salesDisplayBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.salesDisplayBtn.Location = new System.Drawing.Point(1384, 125);
+            this.salesDisplayBtn.Name = "salesDisplayBtn";
+            this.salesDisplayBtn.Size = new System.Drawing.Size(186, 58);
+            this.salesDisplayBtn.TabIndex = 1;
+            this.salesDisplayBtn.Text = "売上表示";
+            this.salesDisplayBtn.UseVisualStyleBackColor = true;
             // 
             // salesDgv
             // 
@@ -70,44 +84,47 @@
             this.salesDgv.Name = "salesDgv";
             this.salesDgv.RowTemplate.Height = 21;
             this.salesDgv.Size = new System.Drawing.Size(1310, 936);
-            this.salesDgv.TabIndex = 2;
+            this.salesDgv.TabIndex = 0;
             // 
-            // rankBtn
+            // salesSortBtn
             // 
-            this.rankBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.rankBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.rankBtn.Location = new System.Drawing.Point(1384, 107);
-            this.rankBtn.Name = "rankBtn";
-            this.rankBtn.Size = new System.Drawing.Size(186, 58);
-            this.rankBtn.TabIndex = 1;
-            this.rankBtn.Text = "ランキング";
-            this.rankBtn.UseVisualStyleBackColor = true;
+            this.salesSortBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.salesSortBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.salesSortBtn.Location = new System.Drawing.Point(1384, 251);
+            this.salesSortBtn.Name = "salesSortBtn";
+            this.salesSortBtn.Size = new System.Drawing.Size(186, 83);
+            this.salesSortBtn.TabIndex = 2;
+            this.salesSortBtn.Text = "昇順/降順\r\n切り替え";
+            this.salesSortBtn.UseVisualStyleBackColor = true;
             // 
             // salesStartDtp
             // 
+            this.salesStartDtp.CustomFormat = "";
             this.salesStartDtp.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.salesStartDtp.Location = new System.Drawing.Point(1370, 741);
+            this.salesStartDtp.Location = new System.Drawing.Point(1357, 740);
             this.salesStartDtp.Name = "salesStartDtp";
-            this.salesStartDtp.Size = new System.Drawing.Size(200, 36);
+            this.salesStartDtp.Size = new System.Drawing.Size(228, 36);
             this.salesStartDtp.TabIndex = 3;
             // 
-            // salesEndDtp
+            // salesAndLbl
             // 
-            this.salesEndDtp.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.salesEndDtp.Location = new System.Drawing.Point(1370, 844);
-            this.salesEndDtp.Name = "salesEndDtp";
-            this.salesEndDtp.Size = new System.Drawing.Size(200, 36);
-            this.salesEndDtp.TabIndex = 4;
+            this.salesAndLbl.AutoSize = true;
+            this.salesAndLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.salesAndLbl.Location = new System.Drawing.Point(1453, 797);
+            this.salesAndLbl.Name = "salesAndLbl";
+            this.salesAndLbl.Size = new System.Drawing.Size(42, 29);
+            this.salesAndLbl.TabIndex = 0;
+            this.salesAndLbl.Text = "～";
             // 
             // salesBetweenLbl
             // 
             this.salesBetweenLbl.AutoSize = true;
-            this.salesBetweenLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.salesBetweenLbl.Location = new System.Drawing.Point(1453, 797);
+            this.salesBetweenLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.salesBetweenLbl.Location = new System.Drawing.Point(1398, 663);
             this.salesBetweenLbl.Name = "salesBetweenLbl";
-            this.salesBetweenLbl.Size = new System.Drawing.Size(43, 29);
-            this.salesBetweenLbl.TabIndex = 5;
-            this.salesBetweenLbl.Text = "～";
+            this.salesBetweenLbl.Size = new System.Drawing.Size(147, 33);
+            this.salesBetweenLbl.TabIndex = 0;
+            this.salesBetweenLbl.Text = "指定期間";
             // 
             // Sales
             // 
@@ -116,11 +133,12 @@
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
             this.Controls.Add(this.salesBetweenLbl);
-            this.Controls.Add(this.salesEndDtp);
+            this.Controls.Add(this.salesAndLbl);
+            this.Controls.Add(salesEndDtp);
             this.Controls.Add(this.salesStartDtp);
             this.Controls.Add(this.salesDgv);
-            this.Controls.Add(this.rankBtn);
-            this.Controls.Add(this.salesSelectBtn);
+            this.Controls.Add(this.salesSortBtn);
+            this.Controls.Add(this.salesDisplayBtn);
             this.Controls.Add(this.salesLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Sales";
@@ -135,11 +153,12 @@
         #endregion
 
         private System.Windows.Forms.Label salesLbl;
-        private System.Windows.Forms.Button salesSelectBtn;
+        private System.Windows.Forms.Button salesDisplayBtn;
         private System.Windows.Forms.DataGridView salesDgv;
-        private System.Windows.Forms.Button rankBtn;
+        private System.Windows.Forms.Button salesSortBtn;
         private System.Windows.Forms.DateTimePicker salesStartDtp;
-        private System.Windows.Forms.DateTimePicker salesEndDtp;
+        private System.Windows.Forms.Label salesAndLbl;
         private System.Windows.Forms.Label salesBetweenLbl;
+        private System.Windows.Forms.Button rankBtn;
     }
 }
