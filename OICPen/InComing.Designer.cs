@@ -38,6 +38,7 @@
             this.registerBtn = new System.Windows.Forms.Button();
             this.fixBtn = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.incomingDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -67,11 +68,11 @@
             // orderCheckBtn
             // 
             this.orderCheckBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.orderCheckBtn.Location = new System.Drawing.Point(907, 209);
+            this.orderCheckBtn.Location = new System.Drawing.Point(1374, 116);
             this.orderCheckBtn.Name = "orderCheckBtn";
-            this.orderCheckBtn.Size = new System.Drawing.Size(265, 47);
+            this.orderCheckBtn.Size = new System.Drawing.Size(224, 58);
             this.orderCheckBtn.TabIndex = 4;
-            this.orderCheckBtn.Text = "発注状況確認";
+            this.orderCheckBtn.Text = "入庫済一覧";
             this.orderCheckBtn.UseVisualStyleBackColor = true;
             // 
             // itemsLbl
@@ -122,12 +123,23 @@
             this.fixBtn.Text = "入庫取り消し";
             this.fixBtn.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.Location = new System.Drawing.Point(1374, 220);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(224, 58);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "未入庫一覧";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // InComing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.fixBtn);
             this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.searchBtn);
@@ -157,5 +169,6 @@
         private System.Windows.Forms.Button registerBtn;
         private System.Windows.Forms.Button fixBtn;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Button button1;
     }
 }
