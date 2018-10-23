@@ -74,7 +74,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Black;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Gold;
             this.splitContainer1.Panel1.Controls.Add(this.teamNameLbl);
             this.splitContainer1.Panel1.Controls.Add(this.logoPbox);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
@@ -163,7 +163,7 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.BackColor = System.Drawing.Color.PeachPuff;
+            this.splitContainer2.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer2.Panel2.ForeColor = System.Drawing.Color.Black;
             this.splitContainer2.Size = new System.Drawing.Size(1937, 1000);
