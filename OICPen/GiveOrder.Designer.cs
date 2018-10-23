@@ -37,12 +37,12 @@
             this.itemsViewDgv = new System.Windows.Forms.DataGridView();
             this.allClearBtn = new System.Windows.Forms.Button();
             this.completeBtn = new System.Windows.Forms.Button();
-            this.countsTb = new System.Windows.Forms.TextBox();
+            this.countsTbox = new System.Windows.Forms.TextBox();
             this.itemIdTbox = new System.Windows.Forms.TextBox();
             this.countsLbl = new System.Windows.Forms.Label();
             this.itemNameLbl = new System.Windows.Forms.Label();
             this.itemIdLbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.searchResultLbl = new System.Windows.Forms.Label();
             this.clearBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.completeOrdersViewDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
@@ -135,13 +135,13 @@
             this.completeBtn.Text = "完了";
             this.completeBtn.UseVisualStyleBackColor = true;
             // 
-            // countsTb
+            // countsTbox
             // 
-            this.countsTb.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.countsTb.Location = new System.Drawing.Point(629, 554);
-            this.countsTb.Name = "countsTb";
-            this.countsTb.Size = new System.Drawing.Size(83, 36);
-            this.countsTb.TabIndex = 4;
+            this.countsTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.countsTbox.Location = new System.Drawing.Point(629, 554);
+            this.countsTbox.Name = "countsTbox";
+            this.countsTbox.Size = new System.Drawing.Size(83, 36);
+            this.countsTbox.TabIndex = 4;
             // 
             // itemIdTbox
             // 
@@ -181,16 +181,16 @@
             this.itemIdLbl.TabIndex = 0;
             this.itemIdLbl.Text = "商品ID：　";
             // 
-            // label1
+            // searchResultLbl
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(248, 470);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 48);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "検索結果";
+            this.searchResultLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.searchResultLbl.AutoSize = true;
+            this.searchResultLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.searchResultLbl.Location = new System.Drawing.Point(248, 470);
+            this.searchResultLbl.Name = "searchResultLbl";
+            this.searchResultLbl.Size = new System.Drawing.Size(212, 48);
+            this.searchResultLbl.TabIndex = 0;
+            this.searchResultLbl.Text = "検索結果";
             // 
             // clearBtn
             // 
@@ -209,7 +209,7 @@
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
             this.Controls.Add(this.clearBtn);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.searchResultLbl);
             this.Controls.Add(this.itemNameLbl);
             this.Controls.Add(this.itemIdLbl);
             this.Controls.Add(this.completeOrdersTitleLbl);
@@ -220,7 +220,7 @@
             this.Controls.Add(this.itemsViewDgv);
             this.Controls.Add(this.allClearBtn);
             this.Controls.Add(this.completeBtn);
-            this.Controls.Add(this.countsTb);
+            this.Controls.Add(this.countsTbox);
             this.Controls.Add(this.itemIdTbox);
             this.Controls.Add(this.countsLbl);
             this.Controls.Add(this.giveorderTitleLbl);
@@ -246,12 +246,12 @@
         private System.Windows.Forms.DataGridView itemsViewDgv;
         private System.Windows.Forms.Button allClearBtn;
         private System.Windows.Forms.Button completeBtn;
-        private System.Windows.Forms.TextBox countsTb;
+        private System.Windows.Forms.TextBox countsTbox;
         private System.Windows.Forms.TextBox itemIdTbox;
         private System.Windows.Forms.Label countsLbl;
         private System.Windows.Forms.Label itemNameLbl;
         private System.Windows.Forms.Label itemIdLbl;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label searchResultLbl;
         private System.Windows.Forms.Button clearBtn;
     }
 }
