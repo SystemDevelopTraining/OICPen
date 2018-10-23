@@ -92,7 +92,11 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Configration.cs" />
+    <Compile Include="Models\GiveOrder.cs" />
+    <Compile Include="Models\GiveOrderDetail.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\OICPenDbContext.cs" />
     <Compile Include="LogOut.cs">
       <SubType>Form</SubType>
@@ -100,6 +104,10 @@
     <Compile Include="LogOut.Designer.cs">
       <DependentUpon>LogOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Staff.cs" />
+    <Compile Include="Models\Stock.cs" />
+    <Compile Include="Models\TakeOrder.cs" />
+    <Compile Include="Models\TakeOrderDetail.cs" />
     <Compile Include="Sales.cs">
       <SubType>Form</SubType>
     </Compile>

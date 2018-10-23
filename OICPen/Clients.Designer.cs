@@ -259,7 +259,7 @@
             // searchNameTbox
             // 
             this.searchNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
-            this.searchNameTbox.Location = new System.Drawing.Point(1105, 237);
+            this.searchNameTbox.Location = new System.Drawing.Point(1105, 191);
             this.searchNameTbox.Name = "searchNameTbox";
             this.searchNameTbox.Size = new System.Drawing.Size(404, 40);
             this.searchNameTbox.TabIndex = 28;
@@ -268,7 +268,7 @@
             // 
             this.searchNameLbl.AutoSize = true;
             this.searchNameLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
-            this.searchNameLbl.Location = new System.Drawing.Point(999, 237);
+            this.searchNameLbl.Location = new System.Drawing.Point(999, 191);
             this.searchNameLbl.Name = "searchNameLbl";
             this.searchNameLbl.Size = new System.Drawing.Size(100, 33);
             this.searchNameLbl.TabIndex = 27;
@@ -277,7 +277,7 @@
             // searchIdTbox
             // 
             this.searchIdTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
-            this.searchIdTbox.Location = new System.Drawing.Point(1105, 191);
+            this.searchIdTbox.Location = new System.Drawing.Point(1105, 237);
             this.searchIdTbox.Name = "searchIdTbox";
             this.searchIdTbox.Size = new System.Drawing.Size(404, 40);
             this.searchIdTbox.TabIndex = 26;
@@ -286,7 +286,7 @@
             // 
             this.searchIdLbl.AutoSize = true;
             this.searchIdLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
-            this.searchIdLbl.Location = new System.Drawing.Point(1033, 194);
+            this.searchIdLbl.Location = new System.Drawing.Point(1033, 240);
             this.searchIdLbl.Name = "searchIdLbl";
             this.searchIdLbl.Size = new System.Drawing.Size(66, 33);
             this.searchIdLbl.TabIndex = 25;
