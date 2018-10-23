@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.takeOrdersTitleLbl = new System.Windows.Forms.Label();
-            this.clientsLbl = new System.Windows.Forms.Label();
+            this.clientsIdLbl = new System.Windows.Forms.Label();
             this.separatorLbl = new System.Windows.Forms.Label();
-            this.uketsukeLbl = new System.Windows.Forms.Label();
+            this.receptionLbl = new System.Windows.Forms.Label();
             this.itemIdLbl = new System.Windows.Forms.Label();
             this.itemIdTbox = new System.Windows.Forms.TextBox();
             this.countsLbl = new System.Windows.Forms.Label();
-            this.countsTb = new System.Windows.Forms.TextBox();
+            this.countsTbox = new System.Windows.Forms.TextBox();
             this.completeBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
-            this.clientsTbox = new System.Windows.Forms.TextBox();
-            this.checkBtn = new System.Windows.Forms.Button();
+            this.clientsIdTbox = new System.Windows.Forms.TextBox();
+            this.clientsIdCheckBtn = new System.Windows.Forms.Button();
             this.itemNameLbl = new System.Windows.Forms.Label();
             this.itemNameTbox = new System.Windows.Forms.TextBox();
             this.clientsIdViewLbl = new System.Windows.Forms.Label();
             this.clientsNameViewLbl = new System.Windows.Forms.Label();
             this.itemsViewDgv = new System.Windows.Forms.DataGridView();
             this.searchBtn = new System.Windows.Forms.Button();
-            this.completeOrdersViewDgv = new System.Windows.Forms.DataGridView();
+            this.completeOrdersDgv = new System.Windows.Forms.DataGridView();
             this.clientsPhoneNoViewLbl = new System.Windows.Forms.Label();
             this.confirmBtn = new System.Windows.Forms.Button();
             this.completeOrdersTitleLbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.delBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.completeOrdersViewDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.completeOrdersDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // takeOrdersTitleLbl
@@ -67,16 +67,16 @@
             this.takeOrdersTitleLbl.TabIndex = 1;
             this.takeOrdersTitleLbl.Text = "注文管理";
             // 
-            // clientsLbl
+            // clientsIdLbl
             // 
-            this.clientsLbl.AutoSize = true;
-            this.clientsLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsLbl.Location = new System.Drawing.Point(928, 285);
-            this.clientsLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.clientsLbl.Name = "clientsLbl";
-            this.clientsLbl.Size = new System.Drawing.Size(278, 51);
-            this.clientsLbl.TabIndex = 6;
-            this.clientsLbl.Text = "会員ID：　";
+            this.clientsIdLbl.AutoSize = true;
+            this.clientsIdLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.clientsIdLbl.Location = new System.Drawing.Point(928, 285);
+            this.clientsIdLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.clientsIdLbl.Name = "clientsIdLbl";
+            this.clientsIdLbl.Size = new System.Drawing.Size(278, 51);
+            this.clientsIdLbl.TabIndex = 6;
+            this.clientsIdLbl.Text = "会員ID：　";
             // 
             // separatorLbl
             // 
@@ -86,20 +86,19 @@
             this.separatorLbl.Name = "separatorLbl";
             this.separatorLbl.Size = new System.Drawing.Size(2636, 18);
             this.separatorLbl.TabIndex = 8;
-            this.separatorLbl.Text = "label6";
             this.separatorLbl.Click += new System.EventHandler(this.separatorLbl_Click);
             // 
-            // uketsukeLbl
+            // receptionLbl
             // 
-            this.uketsukeLbl.AutoSize = true;
-            this.uketsukeLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.uketsukeLbl.ForeColor = System.Drawing.Color.Red;
-            this.uketsukeLbl.Location = new System.Drawing.Point(711, 458);
-            this.uketsukeLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.uketsukeLbl.Name = "uketsukeLbl";
-            this.uketsukeLbl.Size = new System.Drawing.Size(226, 51);
-            this.uketsukeLbl.TabIndex = 10;
-            this.uketsukeLbl.Text = "注文受付";
+            this.receptionLbl.AutoSize = true;
+            this.receptionLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.receptionLbl.ForeColor = System.Drawing.Color.Red;
+            this.receptionLbl.Location = new System.Drawing.Point(711, 458);
+            this.receptionLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.receptionLbl.Name = "receptionLbl";
+            this.receptionLbl.Size = new System.Drawing.Size(226, 51);
+            this.receptionLbl.TabIndex = 10;
+            this.receptionLbl.Text = "注文受付";
             // 
             // itemIdLbl
             // 
@@ -132,14 +131,14 @@
             this.countsLbl.TabIndex = 6;
             this.countsLbl.Text = "数量";
             // 
-            // countsTb
+            // countsTbox
             // 
-            this.countsTb.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.countsTb.Location = new System.Drawing.Point(1098, 1410);
-            this.countsTb.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.countsTb.Name = "countsTb";
-            this.countsTb.Size = new System.Drawing.Size(149, 58);
-            this.countsTb.TabIndex = 7;
+            this.countsTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.countsTbox.Location = new System.Drawing.Point(1098, 1410);
+            this.countsTbox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.countsTbox.Name = "countsTbox";
+            this.countsTbox.Size = new System.Drawing.Size(149, 58);
+            this.countsTbox.TabIndex = 7;
             // 
             // completeBtn
             // 
@@ -164,25 +163,25 @@
             this.clearBtn.Text = "クリア";
             this.clearBtn.UseVisualStyleBackColor = true;
             // 
-            // clientsTbox
+            // clientsIdTbox
             // 
-            this.clientsTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsTbox.Location = new System.Drawing.Point(1247, 282);
-            this.clientsTbox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.clientsTbox.Name = "clientsTbox";
-            this.clientsTbox.Size = new System.Drawing.Size(396, 58);
-            this.clientsTbox.TabIndex = 7;
+            this.clientsIdTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.clientsIdTbox.Location = new System.Drawing.Point(1247, 282);
+            this.clientsIdTbox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.clientsIdTbox.Name = "clientsIdTbox";
+            this.clientsIdTbox.Size = new System.Drawing.Size(396, 58);
+            this.clientsIdTbox.TabIndex = 7;
             // 
-            // checkBtn
+            // clientsIdCheckBtn
             // 
-            this.checkBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.checkBtn.Location = new System.Drawing.Point(1712, 264);
-            this.checkBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.checkBtn.Name = "checkBtn";
-            this.checkBtn.Size = new System.Drawing.Size(191, 94);
-            this.checkBtn.TabIndex = 13;
-            this.checkBtn.Text = "確認";
-            this.checkBtn.UseVisualStyleBackColor = true;
+            this.clientsIdCheckBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.clientsIdCheckBtn.Location = new System.Drawing.Point(1712, 264);
+            this.clientsIdCheckBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.clientsIdCheckBtn.Name = "clientsIdCheckBtn";
+            this.clientsIdCheckBtn.Size = new System.Drawing.Size(191, 94);
+            this.clientsIdCheckBtn.TabIndex = 13;
+            this.clientsIdCheckBtn.Text = "確認";
+            this.clientsIdCheckBtn.UseVisualStyleBackColor = true;
             // 
             // itemNameLbl
             // 
@@ -247,15 +246,15 @@
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
             // 
-            // completeOrdersViewDgv
+            // completeOrdersDgv
             // 
-            this.completeOrdersViewDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.completeOrdersViewDgv.Location = new System.Drawing.Point(1404, 620);
-            this.completeOrdersViewDgv.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.completeOrdersViewDgv.Name = "completeOrdersViewDgv";
-            this.completeOrdersViewDgv.RowTemplate.Height = 21;
-            this.completeOrdersViewDgv.Size = new System.Drawing.Size(981, 1038);
-            this.completeOrdersViewDgv.TabIndex = 20;
+            this.completeOrdersDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.completeOrdersDgv.Location = new System.Drawing.Point(1404, 620);
+            this.completeOrdersDgv.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.completeOrdersDgv.Name = "completeOrdersDgv";
+            this.completeOrdersDgv.RowTemplate.Height = 21;
+            this.completeOrdersDgv.Size = new System.Drawing.Size(981, 1038);
+            this.completeOrdersDgv.TabIndex = 20;
             // 
             // clientsPhoneNoViewLbl
             // 
@@ -291,16 +290,16 @@
             this.completeOrdersTitleLbl.TabIndex = 24;
             this.completeOrdersTitleLbl.Text = "注文リスト";
             // 
-            // button1
+            // delBtn
             // 
-            this.button1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(2503, 887);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(229, 94);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "削除";
-            this.button1.UseVisualStyleBackColor = true;
+            this.delBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.delBtn.Location = new System.Drawing.Point(2503, 887);
+            this.delBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.delBtn.Name = "delBtn";
+            this.delBtn.Size = new System.Drawing.Size(229, 94);
+            this.delBtn.TabIndex = 25;
+            this.delBtn.Text = "削除";
+            this.delBtn.UseVisualStyleBackColor = true;
             // 
             // TakeOrder
             // 
@@ -308,28 +307,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(2908, 1718);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.delBtn);
             this.Controls.Add(this.completeOrdersTitleLbl);
             this.Controls.Add(this.confirmBtn);
             this.Controls.Add(this.clientsPhoneNoViewLbl);
-            this.Controls.Add(this.completeOrdersViewDgv);
+            this.Controls.Add(this.completeOrdersDgv);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.clientsNameViewLbl);
             this.Controls.Add(this.clientsIdViewLbl);
             this.Controls.Add(this.itemNameTbox);
             this.Controls.Add(this.itemNameLbl);
             this.Controls.Add(this.itemsViewDgv);
-            this.Controls.Add(this.checkBtn);
+            this.Controls.Add(this.clientsIdCheckBtn);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.completeBtn);
-            this.Controls.Add(this.uketsukeLbl);
+            this.Controls.Add(this.receptionLbl);
             this.Controls.Add(this.separatorLbl);
-            this.Controls.Add(this.countsTb);
+            this.Controls.Add(this.countsTbox);
             this.Controls.Add(this.itemIdTbox);
-            this.Controls.Add(this.clientsTbox);
+            this.Controls.Add(this.clientsIdTbox);
             this.Controls.Add(this.countsLbl);
             this.Controls.Add(this.itemIdLbl);
-            this.Controls.Add(this.clientsLbl);
+            this.Controls.Add(this.clientsIdLbl);
             this.Controls.Add(this.takeOrdersTitleLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -337,7 +336,7 @@
             this.Text = "TakeOrder";
             this.Load += new System.EventHandler(this.TakeOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.completeOrdersViewDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.completeOrdersDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,27 +345,27 @@
         #endregion
 
         private System.Windows.Forms.Label takeOrdersTitleLbl;
-        private System.Windows.Forms.Label clientsLbl;
+        private System.Windows.Forms.Label clientsIdLbl;
         private System.Windows.Forms.Label separatorLbl;
-        private System.Windows.Forms.Label uketsukeLbl;
+        private System.Windows.Forms.Label receptionLbl;
         private System.Windows.Forms.Label itemIdLbl;
         private System.Windows.Forms.TextBox itemIdTbox;
         private System.Windows.Forms.Label countsLbl;
-        private System.Windows.Forms.TextBox countsTb;
+        private System.Windows.Forms.TextBox countsTbox;
         private System.Windows.Forms.Button completeBtn;
         private System.Windows.Forms.Button clearBtn;
-        private System.Windows.Forms.TextBox clientsTbox;
-        private System.Windows.Forms.Button checkBtn;
+        private System.Windows.Forms.TextBox clientsIdTbox;
+        private System.Windows.Forms.Button clientsIdCheckBtn;
         private System.Windows.Forms.Label itemNameLbl;
         private System.Windows.Forms.TextBox itemNameTbox;
         private System.Windows.Forms.Label clientsIdViewLbl;
         private System.Windows.Forms.Label clientsNameViewLbl;
         private System.Windows.Forms.DataGridView itemsViewDgv;
         private System.Windows.Forms.Button searchBtn;
-        private System.Windows.Forms.DataGridView completeOrdersViewDgv;
+        private System.Windows.Forms.DataGridView completeOrdersDgv;
         private System.Windows.Forms.Label clientsPhoneNoViewLbl;
         private System.Windows.Forms.Button confirmBtn;
         private System.Windows.Forms.Label completeOrdersTitleLbl;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button delBtn;
     }
 }
