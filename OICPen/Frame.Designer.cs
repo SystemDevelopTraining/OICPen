@@ -30,14 +30,10 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.teamNameLbl = new System.Windows.Forms.Label();
+            this.logoPbox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.systemNameLbl = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.warningLbl = new System.Windows.Forms.TextBox();
-            this.loginStaffsNameLbl = new System.Windows.Forms.Label();
-            this.statusStaffsLbl = new System.Windows.Forms.Label();
-            this.logoPbox = new System.Windows.Forms.PictureBox();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.staffsBtn = new System.Windows.Forms.Button();
@@ -50,10 +46,15 @@
             this.shipBtn = new System.Windows.Forms.Button();
             this.salesBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.warningLbl = new System.Windows.Forms.TextBox();
+            this.loginStaffsNameLbl = new System.Windows.Forms.Label();
+            this.statusStaffsLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -62,7 +63,6 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logoPbox)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -74,7 +74,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Black;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Gold;
             this.splitContainer1.Panel1.Controls.Add(this.teamNameLbl);
             this.splitContainer1.Panel1.Controls.Add(this.logoPbox);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
@@ -101,6 +101,17 @@
             this.teamNameLbl.Size = new System.Drawing.Size(100, 37);
             this.teamNameLbl.TabIndex = 4;
             this.teamNameLbl.Text = "IM-21";
+            // 
+            // logoPbox
+            // 
+            this.logoPbox.BackColor = System.Drawing.Color.White;
+            this.logoPbox.BackgroundImage = global::OICPen.Properties.Resources._0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59;
+            this.logoPbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logoPbox.Location = new System.Drawing.Point(3, 3);
+            this.logoPbox.Name = "logoPbox";
+            this.logoPbox.Size = new System.Drawing.Size(190, 57);
+            this.logoPbox.TabIndex = 3;
+            this.logoPbox.TabStop = false;
             // 
             // label1
             // 
@@ -152,78 +163,13 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.BackColor = System.Drawing.Color.PeachPuff;
+            this.splitContainer2.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer2.Panel2.ForeColor = System.Drawing.Color.Black;
             this.splitContainer2.Size = new System.Drawing.Size(1937, 1000);
             this.splitContainer2.SplitterDistance = 309;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
-            // 
-            // splitContainer3
-            // 
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer3.Name = "splitContainer3";
-            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.splitContainer1);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.splitContainer3.Panel2.Controls.Add(this.warningLbl);
-            this.splitContainer3.Panel2.Controls.Add(this.loginStaffsNameLbl);
-            this.splitContainer3.Panel2.Controls.Add(this.statusStaffsLbl);
-            this.splitContainer3.Size = new System.Drawing.Size(1937, 1100);
-            this.splitContainer3.SplitterDistance = 1064;
-            this.splitContainer3.SplitterWidth = 1;
-            this.splitContainer3.TabIndex = 1;
-            // 
-            // warningLbl
-            // 
-            this.warningLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.warningLbl.BackColor = System.Drawing.Color.Yellow;
-            this.warningLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.warningLbl.Location = new System.Drawing.Point(308, 1);
-            this.warningLbl.Name = "warningLbl";
-            this.warningLbl.Size = new System.Drawing.Size(1604, 38);
-            this.warningLbl.TabIndex = 2;
-            this.warningLbl.Text = "在庫数警報！または大事な情報または店長からの連絡事項";
-            // 
-            // loginStaffsNameLbl
-            // 
-            this.loginStaffsNameLbl.AutoSize = true;
-            this.loginStaffsNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.loginStaffsNameLbl.ForeColor = System.Drawing.Color.Blue;
-            this.loginStaffsNameLbl.Location = new System.Drawing.Point(137, 5);
-            this.loginStaffsNameLbl.Name = "loginStaffsNameLbl";
-            this.loginStaffsNameLbl.Size = new System.Drawing.Size(95, 25);
-            this.loginStaffsNameLbl.TabIndex = 1;
-            this.loginStaffsNameLbl.Text = "ログイン中";
-            // 
-            // statusStaffsLbl
-            // 
-            this.statusStaffsLbl.AutoSize = true;
-            this.statusStaffsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.statusStaffsLbl.Location = new System.Drawing.Point(27, 5);
-            this.statusStaffsLbl.Name = "statusStaffsLbl";
-            this.statusStaffsLbl.Size = new System.Drawing.Size(75, 25);
-            this.statusStaffsLbl.TabIndex = 0;
-            this.statusStaffsLbl.Text = "社員名";
-            // 
-            // logoPbox
-            // 
-            this.logoPbox.BackColor = System.Drawing.Color.White;
-            this.logoPbox.BackgroundImage = global::OICPen.Properties.Resources._0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59;
-            this.logoPbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logoPbox.Location = new System.Drawing.Point(3, 3);
-            this.logoPbox.Name = "logoPbox";
-            this.logoPbox.Size = new System.Drawing.Size(190, 57);
-            this.logoPbox.TabIndex = 3;
-            this.logoPbox.TabStop = false;
             // 
             // logoutBtn
             // 
@@ -278,7 +224,6 @@
             this.staffsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.staffsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.staffsBtn.UseVisualStyleBackColor = false;
-            this.staffsBtn.Click += new System.EventHandler(this.staffsBtn_Click);
             // 
             // clientsBtn
             // 
@@ -297,7 +242,6 @@
             this.clientsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.clientsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.clientsBtn.UseVisualStyleBackColor = false;
-            this.clientsBtn.Click += new System.EventHandler(this.clientsBtn_Click);
             // 
             // itemsBtn
             // 
@@ -316,7 +260,6 @@
             this.itemsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.itemsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.itemsBtn.UseVisualStyleBackColor = false;
-            this.itemsBtn.Click += new System.EventHandler(this.itemsBtn_Click);
             // 
             // stockBtn
             // 
@@ -335,7 +278,6 @@
             this.stockBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.stockBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.stockBtn.UseVisualStyleBackColor = false;
-            this.stockBtn.Click += new System.EventHandler(this.stockBtn_Click);
             // 
             // takeorderBtn
             // 
@@ -354,7 +296,6 @@
             this.takeorderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.takeorderBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.takeorderBtn.UseVisualStyleBackColor = false;
-            this.takeorderBtn.Click += new System.EventHandler(this.takeorderBtn_Click);
             // 
             // giveorderBtn
             // 
@@ -373,7 +314,6 @@
             this.giveorderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.giveorderBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.giveorderBtn.UseVisualStyleBackColor = false;
-            this.giveorderBtn.Click += new System.EventHandler(this.giveorderBtn_Click);
             // 
             // incomingBtn
             // 
@@ -392,7 +332,6 @@
             this.incomingBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.incomingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.incomingBtn.UseVisualStyleBackColor = false;
-            this.incomingBtn.Click += new System.EventHandler(this.incomingBtn_Click);
             // 
             // shipBtn
             // 
@@ -411,7 +350,6 @@
             this.shipBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.shipBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.shipBtn.UseVisualStyleBackColor = false;
-            this.shipBtn.Click += new System.EventHandler(this.shipBtn_Click);
             // 
             // salesBtn
             // 
@@ -430,7 +368,6 @@
             this.salesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.salesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.salesBtn.UseVisualStyleBackColor = false;
-            this.salesBtn.Click += new System.EventHandler(this.salesBtn_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -438,6 +375,60 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
             this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.splitContainer1);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer3.Panel2.Controls.Add(this.warningLbl);
+            this.splitContainer3.Panel2.Controls.Add(this.loginStaffsNameLbl);
+            this.splitContainer3.Panel2.Controls.Add(this.statusStaffsLbl);
+            this.splitContainer3.Size = new System.Drawing.Size(1937, 1100);
+            this.splitContainer3.SplitterDistance = 1064;
+            this.splitContainer3.SplitterWidth = 1;
+            this.splitContainer3.TabIndex = 1;
+            // 
+            // warningLbl
+            // 
+            this.warningLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.warningLbl.BackColor = System.Drawing.Color.Yellow;
+            this.warningLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.warningLbl.Location = new System.Drawing.Point(308, 7);
+            this.warningLbl.Name = "warningLbl";
+            this.warningLbl.Size = new System.Drawing.Size(1604, 38);
+            this.warningLbl.TabIndex = 2;
+            this.warningLbl.Text = "在庫数警報！または大事な情報または店長からの連絡事項";
+            // 
+            // loginStaffsNameLbl
+            // 
+            this.loginStaffsNameLbl.AutoSize = true;
+            this.loginStaffsNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.loginStaffsNameLbl.ForeColor = System.Drawing.Color.Blue;
+            this.loginStaffsNameLbl.Location = new System.Drawing.Point(137, 5);
+            this.loginStaffsNameLbl.Name = "loginStaffsNameLbl";
+            this.loginStaffsNameLbl.Size = new System.Drawing.Size(95, 25);
+            this.loginStaffsNameLbl.TabIndex = 1;
+            this.loginStaffsNameLbl.Text = "ログイン中";
+            // 
+            // statusStaffsLbl
+            // 
+            this.statusStaffsLbl.AutoSize = true;
+            this.statusStaffsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.statusStaffsLbl.Location = new System.Drawing.Point(27, 5);
+            this.statusStaffsLbl.Name = "statusStaffsLbl";
+            this.statusStaffsLbl.Size = new System.Drawing.Size(75, 25);
+            this.statusStaffsLbl.TabIndex = 0;
+            this.statusStaffsLbl.Text = "社員名";
             // 
             // Frame
             // 
@@ -449,12 +440,14 @@
             this.Name = "Frame";
             this.Text = "Frame";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frame_FormClosing);
             this.Shown += new System.EventHandler(this.Frame_Shown);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logoPbox)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -464,7 +457,6 @@
             this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logoPbox)).EndInit();
             this.ResumeLayout(false);
 
         }
