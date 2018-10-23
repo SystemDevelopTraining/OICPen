@@ -69,12 +69,13 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Gold;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Black;
             this.splitContainer1.Panel1.Controls.Add(this.teamNameLbl);
             this.splitContainer1.Panel1.Controls.Add(this.logoPbox);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
@@ -85,9 +86,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1937, 1064);
-            this.splitContainer1.SplitterDistance = 63;
-            this.splitContainer1.SplitterWidth = 1;
+            this.splitContainer1.Size = new System.Drawing.Size(2908, 1768);
+            this.splitContainer1.SplitterDistance = 104;
+            this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 0;
             // 
             // teamNameLbl
@@ -96,9 +97,10 @@
             this.teamNameLbl.BackColor = System.Drawing.Color.Transparent;
             this.teamNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teamNameLbl.ForeColor = System.Drawing.Color.Orange;
-            this.teamNameLbl.Location = new System.Drawing.Point(199, 10);
+            this.teamNameLbl.Location = new System.Drawing.Point(365, 18);
+            this.teamNameLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.teamNameLbl.Name = "teamNameLbl";
-            this.teamNameLbl.Size = new System.Drawing.Size(100, 37);
+            this.teamNameLbl.Size = new System.Drawing.Size(177, 64);
             this.teamNameLbl.TabIndex = 4;
             this.teamNameLbl.Text = "IM-21";
             // 
@@ -107,9 +109,10 @@
             this.logoPbox.BackColor = System.Drawing.Color.White;
             this.logoPbox.BackgroundImage = global::OICPen.Properties.Resources._0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59;
             this.logoPbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logoPbox.Location = new System.Drawing.Point(3, 3);
+            this.logoPbox.Location = new System.Drawing.Point(6, 5);
+            this.logoPbox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.logoPbox.Name = "logoPbox";
-            this.logoPbox.Size = new System.Drawing.Size(190, 57);
+            this.logoPbox.Size = new System.Drawing.Size(348, 100);
             this.logoPbox.TabIndex = 3;
             this.logoPbox.TabStop = false;
             // 
@@ -119,9 +122,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1586, 10);
+            this.label1.Location = new System.Drawing.Point(2265, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(339, 38);
+            this.label1.Size = new System.Drawing.Size(595, 67);
             this.label1.TabIndex = 1;
             this.label1.Text = "2018/01/01 (月）   0:00";
             // 
@@ -132,9 +136,10 @@
             this.systemNameLbl.AutoSize = true;
             this.systemNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.systemNameLbl.ForeColor = System.Drawing.Color.White;
-            this.systemNameLbl.Location = new System.Drawing.Point(838, 9);
+            this.systemNameLbl.Location = new System.Drawing.Point(1536, 16);
+            this.systemNameLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.systemNameLbl.Name = "systemNameLbl";
-            this.systemNameLbl.Size = new System.Drawing.Size(279, 33);
+            this.systemNameLbl.Size = new System.Drawing.Size(489, 58);
             this.systemNameLbl.TabIndex = 0;
             this.systemNameLbl.Text = "在庫管理システム";
             this.systemNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -144,6 +149,7 @@
             this.splitContainer2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.splitContainer2.Name = "splitContainer2";
             // 
             // splitContainer2.Panel1
@@ -166,9 +172,9 @@
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer2.Panel2.ForeColor = System.Drawing.Color.Black;
-            this.splitContainer2.Size = new System.Drawing.Size(1937, 1000);
-            this.splitContainer2.SplitterDistance = 309;
-            this.splitContainer2.SplitterWidth = 1;
+            this.splitContainer2.Size = new System.Drawing.Size(2908, 1662);
+            this.splitContainer2.SplitterDistance = 463;
+            this.splitContainer2.SplitterWidth = 2;
             this.splitContainer2.TabIndex = 0;
             // 
             // logoutBtn
@@ -179,9 +185,10 @@
             this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.logoutBtn.ForeColor = System.Drawing.Color.White;
             this.logoutBtn.Image = global::OICPen.Properties.Resources.icons8_出口_641;
-            this.logoutBtn.Location = new System.Drawing.Point(-3, 837);
+            this.logoutBtn.Location = new System.Drawing.Point(-6, 1465);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(309, 70);
+            this.logoutBtn.Size = new System.Drawing.Size(567, 122);
             this.logoutBtn.TabIndex = 6;
             this.logoutBtn.Text = "　ログアウト";
             this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,9 +204,10 @@
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.exitBtn.ForeColor = System.Drawing.Color.White;
             this.exitBtn.Image = global::OICPen.Properties.Resources.icons8_削除_641;
-            this.exitBtn.Location = new System.Drawing.Point(0, 930);
+            this.exitBtn.Location = new System.Drawing.Point(0, 1540);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(309, 70);
+            this.exitBtn.Size = new System.Drawing.Size(463, 122);
             this.exitBtn.TabIndex = 0;
             this.exitBtn.Text = "　終了　";
             this.exitBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,9 +224,10 @@
             this.staffsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.staffsBtn.ForeColor = System.Drawing.Color.White;
             this.staffsBtn.Image = global::OICPen.Properties.Resources.icons8_社員カード_64;
-            this.staffsBtn.Location = new System.Drawing.Point(0, 714);
+            this.staffsBtn.Location = new System.Drawing.Point(0, 1253);
+            this.staffsBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.staffsBtn.Name = "staffsBtn";
-            this.staffsBtn.Size = new System.Drawing.Size(309, 90);
+            this.staffsBtn.Size = new System.Drawing.Size(463, 158);
             this.staffsBtn.TabIndex = 0;
             this.staffsBtn.Text = "　社員管理";
             this.staffsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -234,9 +243,10 @@
             this.clientsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.clientsBtn.ForeColor = System.Drawing.Color.White;
             this.clientsBtn.Image = global::OICPen.Properties.Resources.icons8_ユーザー_64__1_;
-            this.clientsBtn.Location = new System.Drawing.Point(0, 624);
+            this.clientsBtn.Location = new System.Drawing.Point(0, 1095);
+            this.clientsBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.clientsBtn.Name = "clientsBtn";
-            this.clientsBtn.Size = new System.Drawing.Size(309, 90);
+            this.clientsBtn.Size = new System.Drawing.Size(463, 158);
             this.clientsBtn.TabIndex = 0;
             this.clientsBtn.Text = "　会員管理";
             this.clientsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -252,9 +262,10 @@
             this.itemsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemsBtn.ForeColor = System.Drawing.Color.White;
             this.itemsBtn.Image = global::OICPen.Properties.Resources.icons8_製品_641;
-            this.itemsBtn.Location = new System.Drawing.Point(0, 534);
+            this.itemsBtn.Location = new System.Drawing.Point(0, 937);
+            this.itemsBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.itemsBtn.Name = "itemsBtn";
-            this.itemsBtn.Size = new System.Drawing.Size(309, 90);
+            this.itemsBtn.Size = new System.Drawing.Size(463, 158);
             this.itemsBtn.TabIndex = 0;
             this.itemsBtn.Text = "　商品管理";
             this.itemsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -270,9 +281,10 @@
             this.stockBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.stockBtn.ForeColor = System.Drawing.Color.White;
             this.stockBtn.Image = global::OICPen.Properties.Resources.icons8_倉庫_64__2_;
-            this.stockBtn.Location = new System.Drawing.Point(0, 444);
+            this.stockBtn.Location = new System.Drawing.Point(0, 779);
+            this.stockBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.stockBtn.Name = "stockBtn";
-            this.stockBtn.Size = new System.Drawing.Size(309, 90);
+            this.stockBtn.Size = new System.Drawing.Size(463, 158);
             this.stockBtn.TabIndex = 0;
             this.stockBtn.Text = "　在庫管理";
             this.stockBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -288,9 +300,10 @@
             this.takeorderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.takeorderBtn.ForeColor = System.Drawing.Color.White;
             this.takeorderBtn.Image = global::OICPen.Properties.Resources.icons8_ショッピングカート_641;
-            this.takeorderBtn.Location = new System.Drawing.Point(0, 354);
+            this.takeorderBtn.Location = new System.Drawing.Point(0, 621);
+            this.takeorderBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.takeorderBtn.Name = "takeorderBtn";
-            this.takeorderBtn.Size = new System.Drawing.Size(309, 90);
+            this.takeorderBtn.Size = new System.Drawing.Size(463, 158);
             this.takeorderBtn.TabIndex = 0;
             this.takeorderBtn.Text = "　注文管理";
             this.takeorderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -306,9 +319,10 @@
             this.giveorderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.giveorderBtn.ForeColor = System.Drawing.Color.White;
             this.giveorderBtn.Image = global::OICPen.Properties.Resources.icons8_注文書_641;
-            this.giveorderBtn.Location = new System.Drawing.Point(0, 264);
+            this.giveorderBtn.Location = new System.Drawing.Point(0, 463);
+            this.giveorderBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.giveorderBtn.Name = "giveorderBtn";
-            this.giveorderBtn.Size = new System.Drawing.Size(309, 90);
+            this.giveorderBtn.Size = new System.Drawing.Size(463, 158);
             this.giveorderBtn.TabIndex = 0;
             this.giveorderBtn.Text = "　発注管理";
             this.giveorderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -324,9 +338,10 @@
             this.incomingBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.incomingBtn.ForeColor = System.Drawing.Color.White;
             this.incomingBtn.Image = global::OICPen.Properties.Resources.icons8_二重左矢印_48__1_;
-            this.incomingBtn.Location = new System.Drawing.Point(0, 174);
+            this.incomingBtn.Location = new System.Drawing.Point(0, 305);
+            this.incomingBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.incomingBtn.Name = "incomingBtn";
-            this.incomingBtn.Size = new System.Drawing.Size(309, 90);
+            this.incomingBtn.Size = new System.Drawing.Size(463, 158);
             this.incomingBtn.TabIndex = 0;
             this.incomingBtn.Text = "　入庫管理";
             this.incomingBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -342,9 +357,10 @@
             this.shipBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.shipBtn.ForeColor = System.Drawing.Color.White;
             this.shipBtn.Image = global::OICPen.Properties.Resources.icons8_配達_642;
-            this.shipBtn.Location = new System.Drawing.Point(0, 84);
+            this.shipBtn.Location = new System.Drawing.Point(0, 147);
+            this.shipBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.shipBtn.Name = "shipBtn";
-            this.shipBtn.Size = new System.Drawing.Size(309, 90);
+            this.shipBtn.Size = new System.Drawing.Size(463, 158);
             this.shipBtn.TabIndex = 0;
             this.shipBtn.Text = "　出庫管理　";
             this.shipBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -361,8 +377,9 @@
             this.salesBtn.ForeColor = System.Drawing.Color.White;
             this.salesBtn.Image = global::OICPen.Properties.Resources.icons8_日本円_64;
             this.salesBtn.Location = new System.Drawing.Point(0, 0);
+            this.salesBtn.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.salesBtn.Name = "salesBtn";
-            this.salesBtn.Size = new System.Drawing.Size(309, 84);
+            this.salesBtn.Size = new System.Drawing.Size(463, 147);
             this.salesBtn.TabIndex = 0;
             this.salesBtn.Text = "　売上管理　";
             this.salesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -371,15 +388,17 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(138, 127);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(253, 222);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(367, 175);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // splitContainer3
             // 
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.splitContainer3.Name = "splitContainer3";
             this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -393,9 +412,9 @@
             this.splitContainer3.Panel2.Controls.Add(this.warningLbl);
             this.splitContainer3.Panel2.Controls.Add(this.loginStaffsNameLbl);
             this.splitContainer3.Panel2.Controls.Add(this.statusStaffsLbl);
-            this.splitContainer3.Size = new System.Drawing.Size(1937, 1100);
-            this.splitContainer3.SplitterDistance = 1064;
-            this.splitContainer3.SplitterWidth = 1;
+            this.splitContainer3.Size = new System.Drawing.Size(2908, 1828);
+            this.splitContainer3.SplitterDistance = 1768;
+            this.splitContainer3.SplitterWidth = 2;
             this.splitContainer3.TabIndex = 1;
             // 
             // warningLbl
@@ -403,9 +422,10 @@
             this.warningLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.warningLbl.BackColor = System.Drawing.Color.Yellow;
             this.warningLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.warningLbl.Location = new System.Drawing.Point(308, 7);
+            this.warningLbl.Location = new System.Drawing.Point(-78, 15);
+            this.warningLbl.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.warningLbl.Name = "warningLbl";
-            this.warningLbl.Size = new System.Drawing.Size(1604, 38);
+            this.warningLbl.Size = new System.Drawing.Size(2937, 61);
             this.warningLbl.TabIndex = 2;
             this.warningLbl.Text = "在庫数警報！または大事な情報または店長からの連絡事項";
             // 
@@ -414,9 +434,10 @@
             this.loginStaffsNameLbl.AutoSize = true;
             this.loginStaffsNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.loginStaffsNameLbl.ForeColor = System.Drawing.Color.Blue;
-            this.loginStaffsNameLbl.Location = new System.Drawing.Point(137, 5);
+            this.loginStaffsNameLbl.Location = new System.Drawing.Point(251, 9);
+            this.loginStaffsNameLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.loginStaffsNameLbl.Name = "loginStaffsNameLbl";
-            this.loginStaffsNameLbl.Size = new System.Drawing.Size(95, 25);
+            this.loginStaffsNameLbl.Size = new System.Drawing.Size(165, 42);
             this.loginStaffsNameLbl.TabIndex = 1;
             this.loginStaffsNameLbl.Text = "ログイン中";
             // 
@@ -424,19 +445,21 @@
             // 
             this.statusStaffsLbl.AutoSize = true;
             this.statusStaffsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.statusStaffsLbl.Location = new System.Drawing.Point(27, 5);
+            this.statusStaffsLbl.Location = new System.Drawing.Point(50, 9);
+            this.statusStaffsLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.statusStaffsLbl.Name = "statusStaffsLbl";
-            this.statusStaffsLbl.Size = new System.Drawing.Size(75, 25);
+            this.statusStaffsLbl.Size = new System.Drawing.Size(129, 42);
             this.statusStaffsLbl.TabIndex = 0;
             this.statusStaffsLbl.Text = "社員名";
             // 
             // Frame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1937, 1100);
+            this.ClientSize = new System.Drawing.Size(2908, 1828);
             this.Controls.Add(this.splitContainer3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "Frame";
             this.Text = "Frame";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
