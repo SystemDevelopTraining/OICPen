@@ -46,7 +46,13 @@ namespace OICPen
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            Close();
+                Close();
+        }
+
+        private void Frame_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("終了しますか？", "終了", MessageBoxButtons.OKCancel) == DialogResult.Cancel)
+                e.Cancel = true;
         }
     }
 }

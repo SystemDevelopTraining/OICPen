@@ -403,7 +403,7 @@
             this.warningLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.warningLbl.BackColor = System.Drawing.Color.Yellow;
             this.warningLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.warningLbl.Location = new System.Drawing.Point(308, 4);
+            this.warningLbl.Location = new System.Drawing.Point(308, 7);
             this.warningLbl.Name = "warningLbl";
             this.warningLbl.Size = new System.Drawing.Size(1604, 38);
             this.warningLbl.TabIndex = 2;
@@ -440,6 +440,7 @@
             this.Name = "Frame";
             this.Text = "Frame";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frame_FormClosing);
             this.Shown += new System.EventHandler(this.Frame_Shown);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
