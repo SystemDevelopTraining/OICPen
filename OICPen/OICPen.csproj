@@ -375,6 +375,75 @@
   <ItemGroup>
     <None Include="Resources\hello-i-m-nik-745051-unsplash.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext303079794295816.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext303079880444938.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext303079969969450.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055.9463497515196977663497.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4322.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055.9463497515196977663497.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055.94634975151969776634971.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set-of-stationery-pictures_csp394599811.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055.94634975151969776634972.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f96bd45644a9657a147645c0f763f701.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_depot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext303080754992354.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-box-clipart-28.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purepng.com-erasereraserstationeryremovingwritingrubberyshapescolourspencil-eraser-1421526504923jaacw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colored-pencils9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8ccc758cae6b87ab33fdf23b2548bbfc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8bc8a23c65c1d8ced3aab5a7317fa5d4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stationary-500x500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C4n3i10WQAEmisf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fc3ec593-dffc-411c-8717-21f97af10a68.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_depot1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\869c0d3a69611c1f4e976184393fc81c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8ccc758cae6b87ab33fdf23b2548bbfc1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
