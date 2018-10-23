@@ -66,7 +66,7 @@
             this.completeOrdersTitleLbl.Location = new System.Drawing.Point(949, 181);
             this.completeOrdersTitleLbl.Name = "completeOrdersTitleLbl";
             this.completeOrdersTitleLbl.Size = new System.Drawing.Size(260, 48);
-            this.completeOrdersTitleLbl.TabIndex = 39;
+            this.completeOrdersTitleLbl.TabIndex = 0;
             this.completeOrdersTitleLbl.Text = "発注リスト";
             // 
             // confirmBtn
@@ -75,7 +75,7 @@
             this.confirmBtn.Location = new System.Drawing.Point(629, 613);
             this.confirmBtn.Name = "confirmBtn";
             this.confirmBtn.Size = new System.Drawing.Size(83, 54);
-            this.confirmBtn.TabIndex = 38;
+            this.confirmBtn.TabIndex = 5;
             this.confirmBtn.Text = "確定";
             this.confirmBtn.UseVisualStyleBackColor = true;
             // 
@@ -86,7 +86,7 @@
             this.completeOrdersViewDgv.Name = "completeOrdersViewDgv";
             this.completeOrdersViewDgv.RowTemplate.Height = 21;
             this.completeOrdersViewDgv.Size = new System.Drawing.Size(535, 593);
-            this.completeOrdersViewDgv.TabIndex = 36;
+            this.completeOrdersViewDgv.TabIndex = 0;
             // 
             // searchBtn
             // 
@@ -94,7 +94,7 @@
             this.searchBtn.Location = new System.Drawing.Point(286, 370);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(104, 54);
-            this.searchBtn.TabIndex = 35;
+            this.searchBtn.TabIndex = 3;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
             // 
@@ -104,7 +104,7 @@
             this.itemNameTbox.Location = new System.Drawing.Point(286, 228);
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(218, 36);
-            this.itemNameTbox.TabIndex = 32;
+            this.itemNameTbox.TabIndex = 1;
             // 
             // itemsViewDgv
             // 
@@ -113,7 +113,7 @@
             this.itemsViewDgv.Name = "itemsViewDgv";
             this.itemsViewDgv.RowTemplate.Height = 21;
             this.itemsViewDgv.Size = new System.Drawing.Size(378, 351);
-            this.itemsViewDgv.TabIndex = 31;
+            this.itemsViewDgv.TabIndex = 0;
             // 
             // allClearBtn
             // 
@@ -121,7 +121,7 @@
             this.allClearBtn.Location = new System.Drawing.Point(1388, 534);
             this.allClearBtn.Name = "allClearBtn";
             this.allClearBtn.Size = new System.Drawing.Size(138, 54);
-            this.allClearBtn.TabIndex = 30;
+            this.allClearBtn.TabIndex = 7;
             this.allClearBtn.Text = "クリア";
             this.allClearBtn.UseVisualStyleBackColor = true;
             // 
@@ -131,7 +131,7 @@
             this.completeBtn.Location = new System.Drawing.Point(1388, 639);
             this.completeBtn.Name = "completeBtn";
             this.completeBtn.Size = new System.Drawing.Size(138, 54);
-            this.completeBtn.TabIndex = 29;
+            this.completeBtn.TabIndex = 8;
             this.completeBtn.Text = "完了";
             this.completeBtn.UseVisualStyleBackColor = true;
             // 
@@ -141,7 +141,7 @@
             this.countsTb.Location = new System.Drawing.Point(629, 554);
             this.countsTb.Name = "countsTb";
             this.countsTb.Size = new System.Drawing.Size(83, 36);
-            this.countsTb.TabIndex = 26;
+            this.countsTb.TabIndex = 4;
             // 
             // itemIdTbox
             // 
@@ -149,7 +149,7 @@
             this.itemIdTbox.Location = new System.Drawing.Point(286, 298);
             this.itemIdTbox.Name = "itemIdTbox";
             this.itemIdTbox.Size = new System.Drawing.Size(218, 36);
-            this.itemIdTbox.TabIndex = 27;
+            this.itemIdTbox.TabIndex = 2;
             // 
             // countsLbl
             // 
@@ -158,7 +158,7 @@
             this.countsLbl.Location = new System.Drawing.Point(641, 501);
             this.countsLbl.Name = "countsLbl";
             this.countsLbl.Size = new System.Drawing.Size(71, 29);
-            this.countsLbl.TabIndex = 25;
+            this.countsLbl.TabIndex = 0;
             this.countsLbl.Text = "数量";
             // 
             // itemNameLbl
@@ -168,7 +168,7 @@
             this.itemNameLbl.Location = new System.Drawing.Point(101, 235);
             this.itemNameLbl.Name = "itemNameLbl";
             this.itemNameLbl.Size = new System.Drawing.Size(158, 29);
-            this.itemNameLbl.TabIndex = 41;
+            this.itemNameLbl.TabIndex = 0;
             this.itemNameLbl.Text = "商品名：　";
             // 
             // itemIdLbl
@@ -178,7 +178,7 @@
             this.itemIdLbl.Location = new System.Drawing.Point(101, 305);
             this.itemIdLbl.Name = "itemIdLbl";
             this.itemIdLbl.Size = new System.Drawing.Size(159, 29);
-            this.itemIdLbl.TabIndex = 40;
+            this.itemIdLbl.TabIndex = 0;
             this.itemIdLbl.Text = "商品ID：　";
             // 
             // label1
@@ -189,7 +189,7 @@
             this.label1.Location = new System.Drawing.Point(248, 470);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(212, 48);
-            this.label1.TabIndex = 42;
+            this.label1.TabIndex = 0;
             this.label1.Text = "検索結果";
             // 
             // clearBtn
@@ -198,7 +198,7 @@
             this.clearBtn.Location = new System.Drawing.Point(1388, 432);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(138, 54);
-            this.clearBtn.TabIndex = 43;
+            this.clearBtn.TabIndex = 6;
             this.clearBtn.Text = "削除";
             this.clearBtn.UseVisualStyleBackColor = true;
             // 

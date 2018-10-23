@@ -63,7 +63,7 @@
             this.incomingDgv.Name = "incomingDgv";
             this.incomingDgv.RowTemplate.Height = 21;
             this.incomingDgv.Size = new System.Drawing.Size(1297, 891);
-            this.incomingDgv.TabIndex = 3;
+            this.incomingDgv.TabIndex = 0;
             // 
             // giveOrderedCheckBtn
             // 
@@ -71,7 +71,7 @@
             this.giveOrderedCheckBtn.Location = new System.Drawing.Point(1374, 116);
             this.giveOrderedCheckBtn.Name = "giveOrderedCheckBtn";
             this.giveOrderedCheckBtn.Size = new System.Drawing.Size(224, 58);
-            this.giveOrderedCheckBtn.TabIndex = 4;
+            this.giveOrderedCheckBtn.TabIndex = 1;
             this.giveOrderedCheckBtn.Text = "入庫済一覧";
             this.giveOrderedCheckBtn.UseVisualStyleBackColor = true;
             // 
@@ -82,7 +82,7 @@
             this.giveOrderLbl.Location = new System.Drawing.Point(1427, 506);
             this.giveOrderLbl.Name = "giveOrderLbl";
             this.giveOrderLbl.Size = new System.Drawing.Size(101, 29);
-            this.giveOrderLbl.TabIndex = 1;
+            this.giveOrderLbl.TabIndex = 0;
             this.giveOrderLbl.Text = "発注ID";
             // 
             // incomingTbox
@@ -91,7 +91,7 @@
             this.incomingTbox.Location = new System.Drawing.Point(1374, 577);
             this.incomingTbox.Name = "incomingTbox";
             this.incomingTbox.Size = new System.Drawing.Size(224, 36);
-            this.incomingTbox.TabIndex = 5;
+            this.incomingTbox.TabIndex = 3;
             // 
             // searchBtn
             // 
@@ -99,7 +99,7 @@
             this.searchBtn.Location = new System.Drawing.Point(1432, 660);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(112, 58);
-            this.searchBtn.TabIndex = 6;
+            this.searchBtn.TabIndex = 4;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
             // 
@@ -109,7 +109,7 @@
             this.registerBtn.Location = new System.Drawing.Point(1374, 854);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(224, 58);
-            this.registerBtn.TabIndex = 7;
+            this.registerBtn.TabIndex = 6;
             this.registerBtn.Text = "入庫完了";
             this.registerBtn.UseVisualStyleBackColor = true;
             // 
@@ -119,7 +119,7 @@
             this.fixBtn.Location = new System.Drawing.Point(1374, 755);
             this.fixBtn.Name = "fixBtn";
             this.fixBtn.Size = new System.Drawing.Size(224, 58);
-            this.fixBtn.TabIndex = 7;
+            this.fixBtn.TabIndex = 5;
             this.fixBtn.Text = "入庫取り消し";
             this.fixBtn.UseVisualStyleBackColor = true;
             // 
@@ -129,7 +129,7 @@
             this.giveOrderCheckBtn.Location = new System.Drawing.Point(1374, 220);
             this.giveOrderCheckBtn.Name = "giveOrderCheckBtn";
             this.giveOrderCheckBtn.Size = new System.Drawing.Size(224, 58);
-            this.giveOrderCheckBtn.TabIndex = 8;
+            this.giveOrderCheckBtn.TabIndex = 2;
             this.giveOrderCheckBtn.Text = "未入庫一覧";
             this.giveOrderCheckBtn.UseVisualStyleBackColor = true;
             // 
