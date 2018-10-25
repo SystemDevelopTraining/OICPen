@@ -28,46 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.giveorderTitleLbl = new System.Windows.Forms.Label();
-            this.completeOrdersTitleLbl = new System.Windows.Forms.Label();
+            this.giveOrderTitleLbl = new System.Windows.Forms.Label();
+            this.giveOrderListLbl = new System.Windows.Forms.Label();
             this.confirmBtn = new System.Windows.Forms.Button();
-            this.completeOrdersViewDgv = new System.Windows.Forms.DataGridView();
+            this.giveOrderListDgv = new System.Windows.Forms.DataGridView();
             this.searchBtn = new System.Windows.Forms.Button();
             this.itemNameTbox = new System.Windows.Forms.TextBox();
             this.itemsViewDgv = new System.Windows.Forms.DataGridView();
             this.allClearBtn = new System.Windows.Forms.Button();
             this.completeBtn = new System.Windows.Forms.Button();
-            this.countsTbox = new System.Windows.Forms.TextBox();
+            this.quantityTbox = new System.Windows.Forms.TextBox();
             this.itemIdTbox = new System.Windows.Forms.TextBox();
-            this.countsLbl = new System.Windows.Forms.Label();
+            this.quantityLbl = new System.Windows.Forms.Label();
             this.itemNameLbl = new System.Windows.Forms.Label();
             this.itemIdLbl = new System.Windows.Forms.Label();
             this.searchResultLbl = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.giveOrderListDgv)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
             this.clearBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.completeOrdersViewDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // giveorderTitleLbl
+            // giveOrderTitleLbl
             // 
-            this.giveorderTitleLbl.AutoSize = true;
-            this.giveorderTitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.giveorderTitleLbl.Location = new System.Drawing.Point(1374, 19);
-            this.giveorderTitleLbl.Name = "giveorderTitleLbl";
-            this.giveorderTitleLbl.Size = new System.Drawing.Size(212, 48);
-            this.giveorderTitleLbl.TabIndex = 0;
-            this.giveorderTitleLbl.Text = "発注管理";
+            this.giveOrderTitleLbl.AutoSize = true;
+            this.giveOrderTitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.giveOrderTitleLbl.Location = new System.Drawing.Point(1374, 19);
+            this.giveOrderTitleLbl.Name = "giveOrderTitleLbl";
+            this.giveOrderTitleLbl.Size = new System.Drawing.Size(212, 48);
+            this.giveOrderTitleLbl.TabIndex = 0;
+            this.giveOrderTitleLbl.Text = "発注管理";
             // 
-            // completeOrdersTitleLbl
+            // giveOrderListLbl
             // 
-            this.completeOrdersTitleLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.completeOrdersTitleLbl.AutoSize = true;
-            this.completeOrdersTitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.completeOrdersTitleLbl.Location = new System.Drawing.Point(949, 181);
-            this.completeOrdersTitleLbl.Name = "completeOrdersTitleLbl";
-            this.completeOrdersTitleLbl.Size = new System.Drawing.Size(260, 48);
-            this.completeOrdersTitleLbl.TabIndex = 0;
-            this.completeOrdersTitleLbl.Text = "発注リスト";
+            this.giveOrderListLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.giveOrderListLbl.AutoSize = true;
+            this.giveOrderListLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.giveOrderListLbl.Location = new System.Drawing.Point(949, 181);
+            this.giveOrderListLbl.Name = "giveOrderListLbl";
+            this.giveOrderListLbl.Size = new System.Drawing.Size(260, 48);
+            this.giveOrderListLbl.TabIndex = 0;
+            this.giveOrderListLbl.Text = "発注リスト";
             // 
             // confirmBtn
             // 
@@ -79,14 +80,14 @@
             this.confirmBtn.Text = "確定";
             this.confirmBtn.UseVisualStyleBackColor = true;
             // 
-            // completeOrdersViewDgv
+            // giveOrderListDgv
             // 
-            this.completeOrdersViewDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.completeOrdersViewDgv.Location = new System.Drawing.Point(789, 241);
-            this.completeOrdersViewDgv.Name = "completeOrdersViewDgv";
-            this.completeOrdersViewDgv.RowTemplate.Height = 21;
-            this.completeOrdersViewDgv.Size = new System.Drawing.Size(535, 593);
-            this.completeOrdersViewDgv.TabIndex = 0;
+            this.giveOrderListDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.giveOrderListDgv.Location = new System.Drawing.Point(789, 241);
+            this.giveOrderListDgv.Name = "giveOrderListDgv";
+            this.giveOrderListDgv.RowTemplate.Height = 21;
+            this.giveOrderListDgv.Size = new System.Drawing.Size(535, 593);
+            this.giveOrderListDgv.TabIndex = 0;
             // 
             // searchBtn
             // 
@@ -135,13 +136,13 @@
             this.completeBtn.Text = "完了";
             this.completeBtn.UseVisualStyleBackColor = true;
             // 
-            // countsTbox
+            // quantityTbox
             // 
-            this.countsTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.countsTbox.Location = new System.Drawing.Point(629, 554);
-            this.countsTbox.Name = "countsTbox";
-            this.countsTbox.Size = new System.Drawing.Size(83, 36);
-            this.countsTbox.TabIndex = 4;
+            this.quantityTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.quantityTbox.Location = new System.Drawing.Point(629, 554);
+            this.quantityTbox.Name = "quantityTbox";
+            this.quantityTbox.Size = new System.Drawing.Size(83, 36);
+            this.quantityTbox.TabIndex = 4;
             // 
             // itemIdTbox
             // 
@@ -151,15 +152,15 @@
             this.itemIdTbox.Size = new System.Drawing.Size(218, 36);
             this.itemIdTbox.TabIndex = 2;
             // 
-            // countsLbl
+            // quantityLbl
             // 
-            this.countsLbl.AutoSize = true;
-            this.countsLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.countsLbl.Location = new System.Drawing.Point(641, 501);
-            this.countsLbl.Name = "countsLbl";
-            this.countsLbl.Size = new System.Drawing.Size(71, 29);
-            this.countsLbl.TabIndex = 0;
-            this.countsLbl.Text = "数量";
+            this.quantityLbl.AutoSize = true;
+            this.quantityLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.quantityLbl.Location = new System.Drawing.Point(641, 501);
+            this.quantityLbl.Name = "quantityLbl";
+            this.quantityLbl.Size = new System.Drawing.Size(71, 29);
+            this.quantityLbl.TabIndex = 0;
+            this.quantityLbl.Text = "数量";
             // 
             // itemNameLbl
             // 
@@ -187,7 +188,7 @@
             this.searchResultLbl.AutoSize = true;
             this.searchResultLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.searchResultLbl.Location = new System.Drawing.Point(248, 470);
-            this.searchResultLbl.Name = "searchResultLbl";
+            this.searchResultLbl.Name = "seachResultLbl";
             this.searchResultLbl.Size = new System.Drawing.Size(212, 48);
             this.searchResultLbl.TabIndex = 0;
             this.searchResultLbl.Text = "検索結果";
@@ -208,27 +209,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
+            this.Controls.Add(this.searchResultLbl);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.searchResultLbl);
             this.Controls.Add(this.itemNameLbl);
             this.Controls.Add(this.itemIdLbl);
-            this.Controls.Add(this.completeOrdersTitleLbl);
+            this.Controls.Add(this.giveOrderListLbl);
             this.Controls.Add(this.confirmBtn);
-            this.Controls.Add(this.completeOrdersViewDgv);
+            this.Controls.Add(this.giveOrderListDgv);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.itemNameTbox);
             this.Controls.Add(this.itemsViewDgv);
             this.Controls.Add(this.allClearBtn);
             this.Controls.Add(this.completeBtn);
-            this.Controls.Add(this.countsTbox);
+            this.Controls.Add(this.quantityTbox);
             this.Controls.Add(this.itemIdTbox);
-            this.Controls.Add(this.countsLbl);
-            this.Controls.Add(this.giveorderTitleLbl);
+            this.Controls.Add(this.quantityLbl);
+            this.Controls.Add(this.giveOrderTitleLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GiveOrder";
             this.Text = "GiveOrder";
             this.Load += new System.EventHandler(this.GiveOrder_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.completeOrdersViewDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giveOrderListDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -237,21 +239,23 @@
 
         #endregion
 
-        private System.Windows.Forms.Label giveorderTitleLbl;
-        private System.Windows.Forms.Label completeOrdersTitleLbl;
+        private System.Windows.Forms.Label giveOrderTitleLbl;
+        private System.Windows.Forms.Label giveOrderListLbl;
         private System.Windows.Forms.Button confirmBtn;
-        private System.Windows.Forms.DataGridView completeOrdersViewDgv;
+        private System.Windows.Forms.DataGridView giveOrderListDgv;
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.TextBox itemNameTbox;
         private System.Windows.Forms.DataGridView itemsViewDgv;
+        private System.Windows.Forms.TextBox quantityTbox;
         private System.Windows.Forms.Button allClearBtn;
         private System.Windows.Forms.Button completeBtn;
-        private System.Windows.Forms.TextBox countsTbox;
+
         private System.Windows.Forms.TextBox itemIdTbox;
-        private System.Windows.Forms.Label countsLbl;
+        private System.Windows.Forms.Label quantityLbl;
         private System.Windows.Forms.Label itemNameLbl;
         private System.Windows.Forms.Label itemIdLbl;
         private System.Windows.Forms.Label searchResultLbl;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button clearBtn;
     }
 }
