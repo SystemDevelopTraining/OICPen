@@ -46,11 +46,10 @@
             this.incomingBtn = new System.Windows.Forms.Button();
             this.shipBtn = new System.Windows.Forms.Button();
             this.salesBtn = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.warningLbl = new System.Windows.Forms.TextBox();
-            this.loginStaffsNameLbl = new System.Windows.Forms.Label();
-            this.statusStaffsLbl = new System.Windows.Forms.Label();
+            this.nowLoginLbl = new System.Windows.Forms.Label();
+            this.staffsNameLbl = new System.Windows.Forms.Label();
+            this.warningLbl = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -59,7 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.logoPbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -98,7 +96,7 @@
             this.teamNameLbl.BackColor = System.Drawing.Color.Transparent;
             this.teamNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teamNameLbl.ForeColor = System.Drawing.Color.Orange;
-            this.teamNameLbl.Location = new System.Drawing.Point(199, 10);
+            this.teamNameLbl.Location = new System.Drawing.Point(199, 16);
             this.teamNameLbl.Name = "teamNameLbl";
             this.teamNameLbl.Size = new System.Drawing.Size(100, 37);
             this.teamNameLbl.TabIndex = 4;
@@ -121,7 +119,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1586, 10);
+            this.label1.Location = new System.Drawing.Point(1586, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(339, 38);
             this.label1.TabIndex = 1;
@@ -134,7 +132,7 @@
             this.systemNameLbl.AutoSize = true;
             this.systemNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.systemNameLbl.ForeColor = System.Drawing.Color.White;
-            this.systemNameLbl.Location = new System.Drawing.Point(838, 9);
+            this.systemNameLbl.Location = new System.Drawing.Point(839, 16);
             this.systemNameLbl.Name = "systemNameLbl";
             this.systemNameLbl.Size = new System.Drawing.Size(279, 33);
             this.systemNameLbl.TabIndex = 0;
@@ -166,7 +164,6 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.PeachPuff;
-            this.splitContainer2.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer2.Panel2.ForeColor = System.Drawing.Color.Black;
             this.splitContainer2.Size = new System.Drawing.Size(1937, 1000);
             this.splitContainer2.SplitterDistance = 309;
@@ -371,13 +368,6 @@
             this.salesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.salesBtn.UseVisualStyleBackColor = false;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(138, 127);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
             // splitContainer3
             // 
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -392,51 +382,45 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer3.Panel2.Controls.Add(this.nowLoginLbl);
             this.splitContainer3.Panel2.Controls.Add(this.warningLbl);
-            this.splitContainer3.Panel2.Controls.Add(this.loginStaffsNameLbl);
-            this.splitContainer3.Panel2.Controls.Add(this.statusStaffsLbl);
+            this.splitContainer3.Panel2.Controls.Add(this.staffsNameLbl);
             this.splitContainer3.Size = new System.Drawing.Size(1937, 1100);
             this.splitContainer3.SplitterDistance = 1064;
             this.splitContainer3.SplitterWidth = 1;
             this.splitContainer3.TabIndex = 1;
             // 
+            // nowLoginLbl
+            // 
+            this.nowLoginLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.nowLoginLbl.ForeColor = System.Drawing.Color.Blue;
+            this.nowLoginLbl.Location = new System.Drawing.Point(137, 2);
+            this.nowLoginLbl.Name = "nowLoginLbl";
+            this.nowLoginLbl.Size = new System.Drawing.Size(162, 31);
+            this.nowLoginLbl.TabIndex = 1;
+            this.nowLoginLbl.Text = "ログイン中";
+            this.nowLoginLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // staffsNameLbl
+            // 
+            this.staffsNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.staffsNameLbl.Location = new System.Drawing.Point(3, 2);
+            this.staffsNameLbl.Name = "staffsNameLbl";
+            this.staffsNameLbl.Size = new System.Drawing.Size(135, 31);
+            this.staffsNameLbl.TabIndex = 0;
+            this.staffsNameLbl.Text = "古谷";
+            this.staffsNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // warningLbl
             // 
-            this.warningLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.warningLbl.BackColor = System.Drawing.Color.Yellow;
-            this.warningLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.warningLbl.Location = new System.Drawing.Point(308, 7);
+            this.warningLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.warningLbl.Location = new System.Drawing.Point(305, 0);
             this.warningLbl.Name = "warningLbl";
-            this.warningLbl.Size = new System.Drawing.Size(1604, 38);
-            this.warningLbl.TabIndex = 2;
+            this.warningLbl.Size = new System.Drawing.Size(1632, 33);
+            this.warningLbl.TabIndex = 1;
             this.warningLbl.Text = "在庫数警報！または大事な情報または店長からの連絡事項";
-            // 
-            // loginStaffsNameLbl
-            // 
-            this.loginStaffsNameLbl.AutoSize = true;
-            this.loginStaffsNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.loginStaffsNameLbl.ForeColor = System.Drawing.Color.Blue;
-            this.loginStaffsNameLbl.Location = new System.Drawing.Point(137, 5);
-            this.loginStaffsNameLbl.Name = "loginStaffsNameLbl";
-            this.loginStaffsNameLbl.Size = new System.Drawing.Size(95, 25);
-            this.loginStaffsNameLbl.TabIndex = 1;
-            this.loginStaffsNameLbl.Text = "ログイン中";
-            // 
-            // statusStaffsLbl
-            // 
-            this.statusStaffsLbl.AutoSize = true;
-            this.statusStaffsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.statusStaffsLbl.Location = new System.Drawing.Point(27, 5);
-            this.statusStaffsLbl.Name = "statusStaffsLbl";
-            this.statusStaffsLbl.Size = new System.Drawing.Size(75, 25);
-            this.statusStaffsLbl.TabIndex = 0;
-            this.statusStaffsLbl.Text = "社員名";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 5000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.warningLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Frame
             // 
@@ -457,12 +441,10 @@
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoPbox)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
-            this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -486,13 +468,12 @@
         private System.Windows.Forms.Label systemNameLbl;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label statusStaffsLbl;
-        private System.Windows.Forms.Label loginStaffsNameLbl;
-        private System.Windows.Forms.TextBox warningLbl;
+        private System.Windows.Forms.Label staffsNameLbl;
+        private System.Windows.Forms.Label nowLoginLbl;
         private System.Windows.Forms.PictureBox logoPbox;
         private System.Windows.Forms.Label teamNameLbl;
         private System.Windows.Forms.Button logoutBtn;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label warningLbl;
     }
 }
