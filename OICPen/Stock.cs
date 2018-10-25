@@ -21,5 +21,10 @@ namespace OICPen
         {
 
         }
+
+        private void itemsNameTbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,5 +16,15 @@ namespace OICPen
         {
             InitializeComponent();
         }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
     }
 }

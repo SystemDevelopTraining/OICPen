@@ -92,7 +92,11 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Configration.cs" />
+    <Compile Include="Models\GiveOrder.cs" />
+    <Compile Include="Models\GiveOrderDetail.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Models\OICPenDbContext.cs" />
     <Compile Include="LogOut.cs">
       <SubType>Form</SubType>
@@ -100,6 +104,10 @@
     <Compile Include="LogOut.Designer.cs">
       <DependentUpon>LogOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Staff.cs" />
+    <Compile Include="Models\Stock.cs" />
+    <Compile Include="Models\TakeOrder.cs" />
+    <Compile Include="Models\TakeOrderDetail.cs" />
     <Compile Include="Sales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +328,129 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\kisspng-rectangle-horizontal-line-5ac44e44e7fce7.2607150015228145329502.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302672380550070.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext3026723805500701.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302672489979675.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302672549851951.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673263607342.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673350769687.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673427531843.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673740273912.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673830226924.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673864705453.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext3026737402739121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext3026738302269241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext3026738647054531.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302673919131457.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302674035806542.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302674204837578.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext302674252430085.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hello-i-m-nik-745051-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext303079794295816.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext303079880444938.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext303079969969450.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055.9463497515196977663497.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4322.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055.9463497515196977663497.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055.94634975151969776634971.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\set-of-stationery-pictures_csp394599811.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055.94634975151969776634972.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f96bd45644a9657a147645c0f763f701.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_depot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext303080754992354.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-box-clipart-28.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purepng.com-erasereraserstationeryremovingwritingrubberyshapescolourspencil-eraser-1421526504923jaacw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colored-pencils9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8ccc758cae6b87ab33fdf23b2548bbfc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8bc8a23c65c1d8ced3aab5a7317fa5d4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stationary-500x500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C4n3i10WQAEmisf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fc3ec593-dffc-411c-8717-21f97af10a68.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_depot1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\869c0d3a69611c1f4e976184393fc81c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8ccc758cae6b87ab33fdf23b2548bbfc1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

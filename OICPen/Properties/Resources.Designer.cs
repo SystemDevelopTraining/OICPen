@@ -84,6 +84,16 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap _4322 {
+            get {
+                object obj = ResourceManager.GetObject("4322", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap _57_512 {
             get {
                 object obj = ResourceManager.GetObject("57-512", resourceCulture);
@@ -94,9 +104,309 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap _869c0d3a69611c1f4e976184393fc81c {
+            get {
+                object obj = ResourceManager.GetObject("869c0d3a69611c1f4e976184393fc81c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _8bc8a23c65c1d8ced3aab5a7317fa5d4 {
+            get {
+                object obj = ResourceManager.GetObject("8bc8a23c65c1d8ced3aab5a7317fa5d4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _8ccc758cae6b87ab33fdf23b2548bbfc {
+            get {
+                object obj = ResourceManager.GetObject("8ccc758cae6b87ab33fdf23b2548bbfc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap _8ccc758cae6b87ab33fdf23b2548bbfc1 {
+            get {
+                object obj = ResourceManager.GetObject("8ccc758cae6b87ab33fdf23b2548bbfc1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap C4n3i10WQAEmisf {
+            get {
+                object obj = ResourceManager.GetObject("C4n3i10WQAEmisf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap colored_pencils9 {
+            get {
+                object obj = ResourceManager.GetObject("colored-pencils9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext302672380550070 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext302672380550070", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext3026723805500701 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext3026723805500701", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext302672489979675 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext302672489979675", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext302672549851951 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext302672549851951", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext302673263607342 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext302673263607342", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext302673350769687 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext302673350769687", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext302673427531843 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext302673427531843", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext302673740273912 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext302673740273912", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext3026737402739121 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext3026737402739121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext302673830226924 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext302673830226924", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext3026738302269241 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext3026738302269241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext302673864705453 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext302673864705453", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext3026738647054531 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext3026738647054531", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext302673919131457 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext302673919131457", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext302674035806542 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext302674035806542", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext302674204837578 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext302674204837578", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext302674252430085 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext302674252430085", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext303079794295816 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext303079794295816", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext303079880444938 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext303079880444938", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext303079969969450 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext303079969969450", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext303080754992354 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext303080754992354", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap f96bd45644a9657a147645c0f763f701 {
+            get {
+                object obj = ResourceManager.GetObject("f96bd45644a9657a147645c0f763f701", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap fc3ec593_dffc_411c_8717_21f97af10a68 {
+            get {
+                object obj = ResourceManager.GetObject("fc3ec593-dffc-411c-8717-21f97af10a68", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap gahag_0055923193_1 {
             get {
                 object obj = ResourceManager.GetObject("gahag-0055923193-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap hello_i_m_nik_745051_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("hello-i-m-nik-745051-unsplash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -414,6 +724,26 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap img_depot {
+            get {
+                object obj = ResourceManager.GetObject("img_depot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap img_depot1 {
+            get {
+                object obj = ResourceManager.GetObject("img_depot1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap img_logo {
             get {
                 object obj = ResourceManager.GetObject("img_logo", resourceCulture);
@@ -427,6 +757,50 @@ namespace OICPen.Properties {
         internal static System.Drawing.Bitmap img_logo_footer01 {
             get {
                 object obj = ResourceManager.GetObject("img_logo_footer01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_colored_pencil_drawing_stationery_clip_art_cartoon_pencil_5a94bf66556055_9463497515196977663497 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055." +
+                        "9463497515196977663497", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_colored_pencil_drawing_stationery_clip_art_cartoon_pencil_5a94bf665560551 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf665560551" +
+                        "", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_colored_pencil_drawing_stationery_clip_art_cartoon_pencil_5a94bf665560552 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf665560552" +
+                        "", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_colored_pencil_drawing_stationery_clip_art_cartoon_pencil_5a94bf665560553 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf665560553" +
+                        "", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -465,6 +839,27 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap pencil_box_clipart_28 {
+            get {
+                object obj = ResourceManager.GetObject("pencil-box-clipart-28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap purepng_com_erasereraserstationeryremovingwritingrubberyshapescolourspencil_eraser_1421526504923jaacw {
+            get {
+                object obj = ResourceManager.GetObject("purepng.com-erasereraserstationeryremovingwritingrubberyshapescolourspencil-erase" +
+                        "r-1421526504923jaacw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap school_stationery_items_1520937446_3716503 {
             get {
                 object obj = ResourceManager.GetObject("school-stationery-items-1520937446-3716503", resourceCulture);
@@ -488,6 +883,26 @@ namespace OICPen.Properties {
         internal static System.Drawing.Bitmap set_of_stationery_pictures_csp39459981 {
             get {
                 object obj = ResourceManager.GetObject("set-of-stationery-pictures_csp39459981", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap set_of_stationery_pictures_csp394599811 {
+            get {
+                object obj = ResourceManager.GetObject("set-of-stationery-pictures_csp394599811", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap stationary_500x500 {
+            get {
+                object obj = ResourceManager.GetObject("stationary-500x500", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
