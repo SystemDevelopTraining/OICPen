@@ -115,6 +115,7 @@
             // 
             this.nameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
             this.nameTbox.Location = new System.Drawing.Point(1099, 546);
+            this.nameTbox.MaxLength = 30;
             this.nameTbox.Name = "nameTbox";
             this.nameTbox.Size = new System.Drawing.Size(404, 40);
             this.nameTbox.TabIndex = 7;
@@ -146,6 +147,7 @@
             // 
             this.phoneNumberTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
             this.phoneNumberTbox.Location = new System.Drawing.Point(1099, 638);
+            this.phoneNumberTbox.MaxLength = 13;
             this.phoneNumberTbox.Name = "phoneNumberTbox";
             this.phoneNumberTbox.Size = new System.Drawing.Size(404, 40);
             this.phoneNumberTbox.TabIndex = 21;
@@ -185,6 +187,7 @@
             // 
             this.PostalCodeTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
             this.PostalCodeTbox.Location = new System.Drawing.Point(1099, 684);
+            this.PostalCodeTbox.MaxLength = 8;
             this.PostalCodeTbox.Name = "PostalCodeTbox";
             this.PostalCodeTbox.Size = new System.Drawing.Size(404, 40);
             this.PostalCodeTbox.TabIndex = 19;
@@ -193,6 +196,7 @@
             // 
             this.addressTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
             this.addressTbox.Location = new System.Drawing.Point(1099, 730);
+            this.addressTbox.MaxLength = 50;
             this.addressTbox.Multiline = true;
             this.addressTbox.Name = "addressTbox";
             this.addressTbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -224,6 +228,7 @@
             // 
             this.huriganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
             this.huriganaTbox.Location = new System.Drawing.Point(1099, 592);
+            this.huriganaTbox.MaxLength = 30;
             this.huriganaTbox.Name = "huriganaTbox";
             this.huriganaTbox.Size = new System.Drawing.Size(404, 40);
             this.huriganaTbox.TabIndex = 24;
@@ -242,6 +247,7 @@
             // 
             this.searchHuriganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
             this.searchHuriganaTbox.Location = new System.Drawing.Point(1105, 283);
+            this.searchHuriganaTbox.MaxLength = 30;
             this.searchHuriganaTbox.Name = "searchHuriganaTbox";
             this.searchHuriganaTbox.Size = new System.Drawing.Size(404, 40);
             this.searchHuriganaTbox.TabIndex = 30;
@@ -260,6 +266,7 @@
             // 
             this.searchNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
             this.searchNameTbox.Location = new System.Drawing.Point(1105, 191);
+            this.searchNameTbox.MaxLength = 30;
             this.searchNameTbox.Name = "searchNameTbox";
             this.searchNameTbox.Size = new System.Drawing.Size(404, 40);
             this.searchNameTbox.TabIndex = 28;
@@ -278,6 +285,7 @@
             // 
             this.searchIdTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
             this.searchIdTbox.Location = new System.Drawing.Point(1105, 237);
+            this.searchIdTbox.MaxLength = 6;
             this.searchIdTbox.Name = "searchIdTbox";
             this.searchIdTbox.Size = new System.Drawing.Size(404, 40);
             this.searchIdTbox.TabIndex = 26;
