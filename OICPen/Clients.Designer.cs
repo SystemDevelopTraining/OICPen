@@ -50,11 +50,12 @@
             this.searchHuriganaLbl = new System.Windows.Forms.Label();
             this.searchNameTbox = new System.Windows.Forms.TextBox();
             this.searchNameLbl = new System.Windows.Forms.Label();
-            this.searchIdTbox = new System.Windows.Forms.TextBox();
             this.searchIdLbl = new System.Windows.Forms.Label();
             this.idDispLbl = new System.Windows.Forms.Label();
             this.regAndUpdSubtTtleLbl = new System.Windows.Forms.Label();
             this.searchClientSubTitleLbl = new System.Windows.Forms.Label();
+            this.searchIdMaskdTbox = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -227,7 +228,7 @@
             // huriganaTbox
             // 
             this.huriganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
-            this.huriganaTbox.Location = new System.Drawing.Point(1099, 592);
+            this.huriganaTbox.Location = new System.Drawing.Point(1131, 414);
             this.huriganaTbox.MaxLength = 30;
             this.huriganaTbox.Name = "huriganaTbox";
             this.huriganaTbox.Size = new System.Drawing.Size(404, 40);
@@ -281,15 +282,6 @@
             this.searchNameLbl.TabIndex = 27;
             this.searchNameLbl.Text = "名前:";
             // 
-            // searchIdTbox
-            // 
-            this.searchIdTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
-            this.searchIdTbox.Location = new System.Drawing.Point(1105, 237);
-            this.searchIdTbox.MaxLength = 6;
-            this.searchIdTbox.Name = "searchIdTbox";
-            this.searchIdTbox.Size = new System.Drawing.Size(404, 40);
-            this.searchIdTbox.TabIndex = 26;
-            // 
             // searchIdLbl
             // 
             this.searchIdLbl.AutoSize = true;
@@ -330,6 +322,25 @@
             this.searchClientSubTitleLbl.TabIndex = 33;
             this.searchClientSubTitleLbl.Text = "会員検索";
             // 
+            // searchIdMaskdTbox
+            // 
+            this.searchIdMaskdTbox.Font = new System.Drawing.Font("HGP創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.searchIdMaskdTbox.Location = new System.Drawing.Point(1105, 240);
+            this.searchIdMaskdTbox.Mask = "999999";
+            this.searchIdMaskdTbox.Name = "searchIdMaskdTbox";
+            this.searchIdMaskdTbox.PromptChar = '‐';
+            this.searchIdMaskdTbox.ResetOnSpace = false;
+            this.searchIdMaskdTbox.Size = new System.Drawing.Size(108, 36);
+            this.searchIdMaskdTbox.TabIndex = 29;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("HGP創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.maskedTextBox1.Location = new System.Drawing.Point(1099, 595);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(404, 36);
+            this.maskedTextBox1.TabIndex = 34;
+            // 
             // Clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -337,6 +348,8 @@
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
             this.ControlBox = false;
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.searchIdMaskdTbox);
             this.Controls.Add(this.searchClientSubTitleLbl);
             this.Controls.Add(this.regAndUpdSubtTtleLbl);
             this.Controls.Add(this.idDispLbl);
@@ -344,7 +357,6 @@
             this.Controls.Add(this.searchHuriganaLbl);
             this.Controls.Add(this.searchNameTbox);
             this.Controls.Add(this.searchNameLbl);
-            this.Controls.Add(this.searchIdTbox);
             this.Controls.Add(this.searchIdLbl);
             this.Controls.Add(this.huriganaTbox);
             this.Controls.Add(this.huriganaLbl);
@@ -397,10 +409,11 @@
         private System.Windows.Forms.Label searchHuriganaLbl;
         private System.Windows.Forms.TextBox searchNameTbox;
         private System.Windows.Forms.Label searchNameLbl;
-        private System.Windows.Forms.TextBox searchIdTbox;
         private System.Windows.Forms.Label searchIdLbl;
         private System.Windows.Forms.Label idDispLbl;
         private System.Windows.Forms.Label regAndUpdSubtTtleLbl;
         private System.Windows.Forms.Label searchClientSubTitleLbl;
+        private System.Windows.Forms.MaskedTextBox searchIdMaskdTbox;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

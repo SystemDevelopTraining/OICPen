@@ -15,11 +15,12 @@ namespace OICPen
         public Clients()
         {
             InitializeComponent();
+            searchIdMaskdTbox.PromptChar = ' ';
         }
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            searchIdTbox.Text = "";
+            searchIdMaskdTbox.Text = "";
             searchNameTbox.Text = "";
             searchHuriganaTbox.Text = "";
         }
