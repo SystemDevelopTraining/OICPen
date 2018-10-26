@@ -43,9 +43,9 @@
             this.itemNameLbl = new System.Windows.Forms.Label();
             this.itemIdLbl = new System.Windows.Forms.Label();
             this.searchResultLbl = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.giveOrderListDgv)).BeginInit();
             this.label1 = new System.Windows.Forms.Label();
             this.clearBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.giveOrderListDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,6 +103,7 @@
             // 
             this.itemNameTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemNameTbox.Location = new System.Drawing.Point(286, 228);
+            this.itemNameTbox.MaxLength = 50;
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(218, 36);
             this.itemNameTbox.TabIndex = 1;
@@ -140,6 +141,7 @@
             // 
             this.quantityTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.quantityTbox.Location = new System.Drawing.Point(629, 554);
+            this.quantityTbox.MaxLength = 6;
             this.quantityTbox.Name = "quantityTbox";
             this.quantityTbox.Size = new System.Drawing.Size(83, 36);
             this.quantityTbox.TabIndex = 4;
@@ -148,6 +150,7 @@
             // 
             this.itemIdTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemIdTbox.Location = new System.Drawing.Point(286, 298);
+            this.itemIdTbox.MaxLength = 6;
             this.itemIdTbox.Name = "itemIdTbox";
             this.itemIdTbox.Size = new System.Drawing.Size(218, 36);
             this.itemIdTbox.TabIndex = 2;
@@ -188,10 +191,17 @@
             this.searchResultLbl.AutoSize = true;
             this.searchResultLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.searchResultLbl.Location = new System.Drawing.Point(248, 470);
-            this.searchResultLbl.Name = "seachResultLbl";
+            this.searchResultLbl.Name = "searchResultLbl";
             this.searchResultLbl.Size = new System.Drawing.Size(212, 48);
             this.searchResultLbl.TabIndex = 0;
             this.searchResultLbl.Text = "検索結果";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 0;
             // 
             // clearBtn
             // 
@@ -209,7 +219,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
-            this.Controls.Add(this.searchResultLbl);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.searchResultLbl);
             this.Controls.Add(this.itemNameLbl);
