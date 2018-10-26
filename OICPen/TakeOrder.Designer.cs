@@ -110,6 +110,7 @@
             // 
             this.itemIdTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemIdTbox.Location = new System.Drawing.Point(260, 525);
+            this.itemIdTbox.MaxLength = 6;
             this.itemIdTbox.Name = "itemIdTbox";
             this.itemIdTbox.Size = new System.Drawing.Size(218, 36);
             this.itemIdTbox.TabIndex = 7;
@@ -128,6 +129,7 @@
             // 
             this.countsTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.countsTbox.Location = new System.Drawing.Point(599, 806);
+            this.countsTbox.MaxLength = 6;
             this.countsTbox.Name = "countsTbox";
             this.countsTbox.Size = new System.Drawing.Size(83, 36);
             this.countsTbox.TabIndex = 7;
@@ -157,6 +159,7 @@
             // 
             this.clientsIdTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.clientsIdTbox.Location = new System.Drawing.Point(680, 161);
+            this.clientsIdTbox.MaxLength = 6;
             this.clientsIdTbox.Name = "clientsIdTbox";
             this.clientsIdTbox.Size = new System.Drawing.Size(218, 36);
             this.clientsIdTbox.TabIndex = 7;
@@ -185,6 +188,7 @@
             // 
             this.itemNameTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemNameTbox.Location = new System.Drawing.Point(260, 455);
+            this.itemNameTbox.MaxLength = 50;
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(218, 36);
             this.itemNameTbox.TabIndex = 16;
