@@ -12,9 +12,13 @@ namespace OICPen
 {
     public partial class login : Form
     {
-        public login()
+    
+    private Frame frame;
+    public login(Frame frm)
         {
             InitializeComponent();
+            frame = frm;
+
         }
 
         private void login_Load(object sender, EventArgs e)
@@ -26,6 +30,11 @@ namespace OICPen
         {
 
         }
-        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            frame.SetUserName("Leo");
+        }
     }
 }
