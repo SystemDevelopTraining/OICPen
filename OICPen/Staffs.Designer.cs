@@ -49,6 +49,8 @@
             this.permissionLbl = new System.Windows.Forms.Label();
             this.searchTitleLbl = new System.Windows.Forms.Label();
             this.permissionCbox = new System.Windows.Forms.ComboBox();
+            this.registerNamePhoneticLbl = new System.Windows.Forms.Label();
+            this.registerNamePhoneticTbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.staffsDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +69,7 @@
             this.registerBtn.Location = new System.Drawing.Point(1023, 829);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(125, 60);
-            this.registerBtn.TabIndex = 2;
+            this.registerBtn.TabIndex = 9;
             this.registerBtn.Text = "登録";
             this.registerBtn.UseVisualStyleBackColor = true;
             // 
@@ -88,7 +90,7 @@
             this.idTbox.Multiline = true;
             this.idTbox.Name = "idTbox";
             this.idTbox.Size = new System.Drawing.Size(320, 33);
-            this.idTbox.TabIndex = 4;
+            this.idTbox.TabIndex = 1;
             // 
             // searchNameLbl
             // 
@@ -97,17 +99,17 @@
             this.searchNameLbl.Location = new System.Drawing.Point(999, 269);
             this.searchNameLbl.Name = "searchNameLbl";
             this.searchNameLbl.Size = new System.Drawing.Size(136, 33);
-            this.searchNameLbl.TabIndex = 5;
+            this.searchNameLbl.TabIndex = 0;
             this.searchNameLbl.Text = "社員名 :";
             // 
             // idLbl
             // 
             this.idLbl.AutoSize = true;
             this.idLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.idLbl.Location = new System.Drawing.Point(999, 201);
+            this.idLbl.Location = new System.Drawing.Point(990, 201);
             this.idLbl.Name = "idLbl";
             this.idLbl.Size = new System.Drawing.Size(145, 33);
-            this.idLbl.TabIndex = 5;
+            this.idLbl.TabIndex = 0;
             this.idLbl.Text = "社員ID :";
             // 
             // searchNameTbox
@@ -117,7 +119,7 @@
             this.searchNameTbox.Multiline = true;
             this.searchNameTbox.Name = "searchNameTbox";
             this.searchNameTbox.Size = new System.Drawing.Size(320, 33);
-            this.searchNameTbox.TabIndex = 4;
+            this.searchNameTbox.TabIndex = 2;
             this.searchNameTbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // fixBtn
@@ -126,7 +128,7 @@
             this.fixBtn.Location = new System.Drawing.Point(1190, 829);
             this.fixBtn.Name = "fixBtn";
             this.fixBtn.Size = new System.Drawing.Size(125, 60);
-            this.fixBtn.TabIndex = 2;
+            this.fixBtn.TabIndex = 10;
             this.fixBtn.Text = "修正";
             this.fixBtn.UseVisualStyleBackColor = true;
             // 
@@ -136,7 +138,7 @@
             this.searchBtn.Location = new System.Drawing.Point(1190, 327);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(125, 60);
-            this.searchBtn.TabIndex = 2;
+            this.searchBtn.TabIndex = 3;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
             // 
@@ -146,70 +148,68 @@
             this.deleteBtn.Location = new System.Drawing.Point(1358, 829);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(125, 60);
-            this.deleteBtn.TabIndex = 2;
+            this.deleteBtn.TabIndex = 11;
             this.deleteBtn.Text = "削除";
             this.deleteBtn.UseVisualStyleBackColor = true;
             // 
             // registerNameTbox
             // 
             this.registerNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.registerNameTbox.Location = new System.Drawing.Point(1180, 513);
+            this.registerNameTbox.Location = new System.Drawing.Point(1180, 562);
             this.registerNameTbox.Multiline = true;
             this.registerNameTbox.Name = "registerNameTbox";
             this.registerNameTbox.Size = new System.Drawing.Size(320, 33);
-            this.registerNameTbox.TabIndex = 4;
+            this.registerNameTbox.TabIndex = 5;
             // 
             // registerNameLbl
             // 
             this.registerNameLbl.AutoSize = true;
             this.registerNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.registerNameLbl.Location = new System.Drawing.Point(1000, 513);
+            this.registerNameLbl.Location = new System.Drawing.Point(999, 562);
             this.registerNameLbl.Name = "registerNameLbl";
             this.registerNameLbl.Size = new System.Drawing.Size(136, 33);
-            this.registerNameLbl.TabIndex = 5;
+            this.registerNameLbl.TabIndex = 0;
             this.registerNameLbl.Text = "社員名 :";
             // 
             // passwordLbl
             // 
             this.passwordLbl.AutoSize = true;
             this.passwordLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.passwordLbl.Location = new System.Drawing.Point(951, 592);
+            this.passwordLbl.Location = new System.Drawing.Point(943, 623);
             this.passwordLbl.Name = "passwordLbl";
             this.passwordLbl.Size = new System.Drawing.Size(192, 33);
-            this.passwordLbl.TabIndex = 5;
+            this.passwordLbl.TabIndex = 0;
             this.passwordLbl.Text = "パスワード:";
-            this.passwordLbl.Click += new System.EventHandler(this.label5_Click);
             // 
             // passwordTbox
             // 
             this.passwordTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.passwordTbox.Location = new System.Drawing.Point(1180, 592);
+            this.passwordTbox.Location = new System.Drawing.Point(1180, 623);
             this.passwordTbox.Multiline = true;
             this.passwordTbox.Name = "passwordTbox";
             this.passwordTbox.PasswordChar = '*';
             this.passwordTbox.Size = new System.Drawing.Size(320, 33);
-            this.passwordTbox.TabIndex = 4;
+            this.passwordTbox.TabIndex = 6;
             // 
             // password2Tbox
             // 
             this.password2Tbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.password2Tbox.Location = new System.Drawing.Point(1180, 671);
+            this.password2Tbox.Location = new System.Drawing.Point(1180, 684);
             this.password2Tbox.Multiline = true;
             this.password2Tbox.Name = "password2Tbox";
             this.password2Tbox.PasswordChar = '*';
             this.password2Tbox.Size = new System.Drawing.Size(320, 33);
-            this.password2Tbox.TabIndex = 4;
+            this.password2Tbox.TabIndex = 7;
             // 
             // password2Lbl
             // 
             this.password2Lbl.AutoSize = true;
             this.password2Lbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.password2Lbl.Location = new System.Drawing.Point(851, 671);
+            this.password2Lbl.Location = new System.Drawing.Point(847, 684);
             this.password2Lbl.Name = "password2Lbl";
             this.password2Lbl.Size = new System.Drawing.Size(288, 33);
-            this.password2Lbl.TabIndex = 5;
+            this.password2Lbl.TabIndex = 0;
             this.password2Lbl.Text = "パスワード(確認):";
-            this.password2Lbl.Click += new System.EventHandler(this.label5_Click);
             // 
             // seperatorLbl
             // 
@@ -218,7 +218,7 @@
             this.seperatorLbl.Location = new System.Drawing.Point(832, 421);
             this.seperatorLbl.Name = "seperatorLbl";
             this.seperatorLbl.Size = new System.Drawing.Size(750, 3);
-            this.seperatorLbl.TabIndex = 6;
+            this.seperatorLbl.TabIndex = 0;
             // 
             // registerTitleLbl
             // 
@@ -227,19 +227,18 @@
             this.registerTitleLbl.Location = new System.Drawing.Point(1123, 441);
             this.registerTitleLbl.Name = "registerTitleLbl";
             this.registerTitleLbl.Size = new System.Drawing.Size(180, 33);
-            this.registerTitleLbl.TabIndex = 7;
+            this.registerTitleLbl.TabIndex = 0;
             this.registerTitleLbl.Text = "登録・修正";
             // 
             // permissionLbl
             // 
             this.permissionLbl.AutoSize = true;
             this.permissionLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.permissionLbl.Location = new System.Drawing.Point(1050, 750);
+            this.permissionLbl.Location = new System.Drawing.Point(1042, 749);
             this.permissionLbl.Name = "permissionLbl";
             this.permissionLbl.Size = new System.Drawing.Size(93, 33);
-            this.permissionLbl.TabIndex = 5;
+            this.permissionLbl.TabIndex = 0;
             this.permissionLbl.Text = "権限:";
-            this.permissionLbl.Click += new System.EventHandler(this.label5_Click);
             // 
             // searchTitleLbl
             // 
@@ -248,7 +247,7 @@
             this.searchTitleLbl.Location = new System.Drawing.Point(1175, 94);
             this.searchTitleLbl.Name = "searchTitleLbl";
             this.searchTitleLbl.Size = new System.Drawing.Size(81, 33);
-            this.searchTitleLbl.TabIndex = 7;
+            this.searchTitleLbl.TabIndex = 0;
             this.searchTitleLbl.Text = "検索";
             // 
             // permissionCbox
@@ -268,12 +267,33 @@
             this.permissionCbox.Size = new System.Drawing.Size(176, 37);
             this.permissionCbox.TabIndex = 8;
             // 
+            // registerNamePhoneticLbl
+            // 
+            this.registerNamePhoneticLbl.AutoSize = true;
+            this.registerNamePhoneticLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.registerNamePhoneticLbl.Location = new System.Drawing.Point(976, 503);
+            this.registerNamePhoneticLbl.Name = "registerNamePhoneticLbl";
+            this.registerNamePhoneticLbl.Size = new System.Drawing.Size(159, 33);
+            this.registerNamePhoneticLbl.TabIndex = 0;
+            this.registerNamePhoneticLbl.Text = "ふりがな:";
+            // 
+            // registerNamePhoneticTbox
+            // 
+            this.registerNamePhoneticTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.registerNamePhoneticTbox.Location = new System.Drawing.Point(1180, 503);
+            this.registerNamePhoneticTbox.Multiline = true;
+            this.registerNamePhoneticTbox.Name = "registerNamePhoneticTbox";
+            this.registerNamePhoneticTbox.Size = new System.Drawing.Size(320, 33);
+            this.registerNamePhoneticTbox.TabIndex = 4;
+            // 
             // Staffs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
+            this.Controls.Add(this.registerNamePhoneticTbox);
+            this.Controls.Add(this.registerNamePhoneticLbl);
             this.Controls.Add(this.permissionCbox);
             this.Controls.Add(this.searchTitleLbl);
             this.Controls.Add(this.registerTitleLbl);
@@ -327,5 +347,7 @@
         private System.Windows.Forms.Label permissionLbl;
         private System.Windows.Forms.Label searchTitleLbl;
         private System.Windows.Forms.ComboBox permissionCbox;
+        private System.Windows.Forms.Label registerNamePhoneticLbl;
+        private System.Windows.Forms.TextBox registerNamePhoneticTbox;
     }
 }
