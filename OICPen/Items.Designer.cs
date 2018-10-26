@@ -107,10 +107,10 @@
             // itemDgv
             // 
             this.itemDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.itemDgv.Location = new System.Drawing.Point(27, 19);
+            this.itemDgv.Location = new System.Drawing.Point(12, 21);
             this.itemDgv.Name = "itemDgv";
             this.itemDgv.RowTemplate.Height = 21;
-            this.itemDgv.Size = new System.Drawing.Size(890, 939);
+            this.itemDgv.Size = new System.Drawing.Size(890, 949);
             this.itemDgv.TabIndex = 5;
             // 
             // searchBtn

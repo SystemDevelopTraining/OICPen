@@ -61,10 +61,10 @@
             // clientsDgv
             // 
             this.clientsDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clientsDgv.Location = new System.Drawing.Point(12, 12);
+            this.clientsDgv.Location = new System.Drawing.Point(12, 21);
             this.clientsDgv.Name = "clientsDgv";
             this.clientsDgv.RowTemplate.Height = 21;
-            this.clientsDgv.Size = new System.Drawing.Size(900, 958);
+            this.clientsDgv.Size = new System.Drawing.Size(900, 949);
             this.clientsDgv.TabIndex = 0;
             // 
             // registBtn

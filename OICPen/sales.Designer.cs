@@ -80,10 +80,10 @@
             // 
             this.salesDgv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.salesDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.salesDgv.Location = new System.Drawing.Point(8, 28);
+            this.salesDgv.Location = new System.Drawing.Point(12, 21);
             this.salesDgv.Name = "salesDgv";
             this.salesDgv.RowTemplate.Height = 21;
-            this.salesDgv.Size = new System.Drawing.Size(1310, 936);
+            this.salesDgv.Size = new System.Drawing.Size(1310, 949);
             this.salesDgv.TabIndex = 0;
             // 
             // salesSortBtn
