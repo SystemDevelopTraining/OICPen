@@ -104,6 +104,16 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap _6909249_black_hd_background {
+            get {
+                object obj = ResourceManager.GetObject("6909249-black-hd-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap _869c0d3a69611c1f4e976184393fc81c {
             get {
                 object obj = ResourceManager.GetObject("869c0d3a69611c1f4e976184393fc81c", resourceCulture);
@@ -144,6 +154,16 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap alienware_ui___for_windows_7_by_mvgraphics {
+            get {
+                object obj = ResourceManager.GetObject("alienware_ui___for_windows_7_by_mvgraphics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap C4n3i10WQAEmisf {
             get {
                 object obj = ResourceManager.GetObject("C4n3i10WQAEmisf", resourceCulture);
@@ -157,6 +177,16 @@ namespace OICPen.Properties {
         internal static System.Drawing.Bitmap colored_pencils9 {
             get {
                 object obj = ResourceManager.GetObject("colored-pencils9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap colored_pencils91 {
+            get {
+                object obj = ResourceManager.GetObject("colored-pencils91", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -377,6 +407,16 @@ namespace OICPen.Properties {
         internal static System.Drawing.Bitmap f96bd45644a9657a147645c0f763f701 {
             get {
                 object obj = ResourceManager.GetObject("f96bd45644a9657a147645c0f763f701", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap f96bd45644a9657a147645c0f763f7011 {
+            get {
+                object obj = ResourceManager.GetObject("f96bd45644a9657a147645c0f763f7011", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -808,6 +848,17 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_login_user_system_administrator_ima_editing_mafsyah_template_5b75843a7b1045_0356392015344282185041 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-login-user-system-administrator-ima-editing-mafsyah-templa" +
+                        "te-5b75843a7b1045.0356392015344282185041", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap kisspng_paper_stationery_adhesive_tape_ant_stationers_offi_school_png_image_5a752e58967e98_7882915715176290166164 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-paper-stationery-adhesive-tape-ant-stationers-offi-school-png-image-5a752" +
@@ -822,6 +873,26 @@ namespace OICPen.Properties {
         internal static System.Drawing.Bitmap kisspng_rectangle_horizontal_line_5ac44e44e7fce7_2607150015228145329502 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-rectangle-horizontal-line-5ac44e44e7fce7.2607150015228145329502", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_Screen_Background_Wood_5 {
+            get {
+                object obj = ResourceManager.GetObject("Login-Screen-Background-Wood-5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_Screen_Background_Wood_51 {
+            get {
+                object obj = ResourceManager.GetObject("Login-Screen-Background-Wood-51", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -903,6 +974,26 @@ namespace OICPen.Properties {
         internal static System.Drawing.Bitmap stationary_500x500 {
             get {
                 object obj = ResourceManager.GetObject("stationary-500x500", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap ダウンロード__1_ {
+            get {
+                object obj = ResourceManager.GetObject("ダウンロード (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap ダウンロード__2_ {
+            get {
+                object obj = ResourceManager.GetObject("ダウンロード (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
