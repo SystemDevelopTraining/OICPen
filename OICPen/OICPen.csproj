@@ -452,6 +452,33 @@
   <ItemGroup>
     <None Include="Resources\8ccc758cae6b87ab33fdf23b2548bbfc1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login-Screen-Background-Wood-5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alienware_ui___for_windows_7_by_mvgraphics.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6909249-black-hd-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login-Screen-Background-Wood-51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-login-user-system-administrator-ima-editing-mafsyah-template-5b75843a7b1045.0356392015344282185041.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ダウンロード %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ダウンロード %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f96bd45644a9657a147645c0f763f7011.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colored-pencils91.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

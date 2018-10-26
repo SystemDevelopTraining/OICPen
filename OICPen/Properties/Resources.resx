@@ -136,6 +136,9 @@
   <data name="icons8-配達-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-配達-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-倉庫-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-倉庫-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cooltext3026737402739121" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext3026737402739121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,14 +157,17 @@
   <data name="cooltext3026738302269241" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext3026738302269241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ダウンロード (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ダウンロード (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf665560552" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055.94634975151969776634971.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cooltext303079880444938" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext303079880444938.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-倉庫-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-倉庫-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Login-Screen-Background-Wood-51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login-Screen-Background-Wood-51.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-日本円-641" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-日本円-641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,6 +186,9 @@
   </data>
   <data name="icons8-倉庫-64 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-倉庫-64 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8ccc758cae6b87ab33fdf23b2548bbfc1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8ccc758cae6b87ab33fdf23b2548bbfc1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="869c0d3a69611c1f4e976184393fc81c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\869c0d3a69611c1f4e976184393fc81c.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,20 +211,29 @@
   <data name="cooltext302674204837578" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext302674204837578.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="kisspng-computer-icons-login-user-system-administrator-ima-editing-mafsyah-template-5b75843a7b1045.0356392015344282185041" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-login-user-system-administrator-ima-editing-mafsyah-template-5b75843a7b1045.0356392015344282185041.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cooltext302673350769687" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext302673350769687.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf665560553" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055.94634975151969776634972.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-社員カード-64 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-社員カード-64 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="8bc8a23c65c1d8ced3aab5a7317fa5d4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8bc8a23c65c1d8ced3aab5a7317fa5d4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf665560551" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055.9463497515196977663497.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="6909249-black-hd-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6909249-black-hd-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="img_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img_logo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login-Screen-Background-Wood-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login-Screen-Background-Wood-5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cooltext302672380550070" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext302672380550070.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,8 +277,8 @@
   <data name="kisspng-rectangle-horizontal-line-5ac44e44e7fce7.2607150015228145329502" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-rectangle-horizontal-line-5ac44e44e7fce7.2607150015228145329502.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-二重左矢印-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-二重左矢印-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="alienware_ui___for_windows_7_by_mvgraphics" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alienware_ui___for_windows_7_by_mvgraphics.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cooltext302673919131457" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext302673919131457.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -283,14 +301,14 @@
   <data name="school-stationery-items-1520937446-3716503" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\school-stationery-items-1520937446-3716503.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-社員カード-64 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-社員カード-64 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cooltext302673864705453" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext302673864705453.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\0m012d825c5b12705c606812447e243c22686e64752f477d470e7f396f7a3237746837646131373e59.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf665560553" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055.94634975151969776634972.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-二重左矢印-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-二重左矢印-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cooltext303079969969450" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext303079969969450.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,11 +346,20 @@
   <data name="icons8-left-2-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-left-2-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf665560551" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-colored-pencil-drawing-stationery-clip-art-cartoon-pencil-5a94bf66556055.9463497515196977663497.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-ショッピングカート-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-ショッピングカート-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-left-2-481" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-left-2-481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ダウンロード (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ダウンロード (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="f96bd45644a9657a147645c0f763f7011" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\f96bd45644a9657a147645c0f763f7011.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cooltext302673427531843" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext302673427531843.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -370,7 +397,7 @@
   <data name="cooltext303079794295816" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cooltext303079794295816.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="8ccc758cae6b87ab33fdf23b2548bbfc1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8ccc758cae6b87ab33fdf23b2548bbfc1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="colored-pencils91" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\colored-pencils91.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
