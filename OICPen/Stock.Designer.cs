@@ -89,6 +89,7 @@
             // 
             this.itemsCodeTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemsCodeTbox.Location = new System.Drawing.Point(1005, 318);
+            this.itemsCodeTbox.MaxLength = 6;
             this.itemsCodeTbox.Name = "itemsCodeTbox";
             this.itemsCodeTbox.Size = new System.Drawing.Size(218, 36);
             this.itemsCodeTbox.TabIndex = 6;
@@ -97,6 +98,7 @@
             // 
             this.itemsNameTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemsNameTbox.Location = new System.Drawing.Point(1255, 318);
+            this.itemsNameTbox.MaxLength = 50;
             this.itemsNameTbox.Name = "itemsNameTbox";
             this.itemsNameTbox.Size = new System.Drawing.Size(218, 36);
             this.itemsNameTbox.TabIndex = 6;
