@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.teamNameLbl = new System.Windows.Forms.Label();
             this.logoPbox = new System.Windows.Forms.PictureBox();
@@ -49,6 +50,7 @@
             this.nowLoginLbl = new System.Windows.Forms.Label();
             this.staffsNameLbl = new System.Windows.Forms.Label();
             this.warningLbl = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -471,6 +473,7 @@
         private System.Windows.Forms.PictureBox logoPbox;
         private System.Windows.Forms.Label teamNameLbl;
         private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label warningLbl;
     }
 }
