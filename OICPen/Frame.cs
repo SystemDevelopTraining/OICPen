@@ -12,6 +12,10 @@ namespace OICPen
 {
     public partial class Frame : Form
     {
+        public void SetUserName(string userName)
+        {
+            staffsNameLbl.Text = userName;
+        }
         public Frame()
         {
             InitializeComponent();
@@ -22,7 +26,7 @@ namespace OICPen
 
             label1.Text = DateTime.Now.ToString("yyyy/MM/dd(ddd) HH:mm");
 
-            var login =new login();
+            var login =new login(this);
             ChangeForm(login);
             var btnList=new Button[] {
                 takeorderBtn,salesBtn,shipBtn,incomingBtn,giveorderBtn,stockBtn,itemsBtn,clientsBtn,staffsBtn,logoutBtn

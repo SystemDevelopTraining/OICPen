@@ -48,8 +48,8 @@
             this.salesBtn = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.nowLoginLbl = new System.Windows.Forms.Label();
-            this.staffsNameLbl = new System.Windows.Forms.Label();
             this.warningLbl = new System.Windows.Forms.Label();
+            this.staffsNameLbl = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -401,16 +401,6 @@
             this.nowLoginLbl.Text = "ログイン中";
             this.nowLoginLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // staffsNameLbl
-            // 
-            this.staffsNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.staffsNameLbl.Location = new System.Drawing.Point(3, 2);
-            this.staffsNameLbl.Name = "staffsNameLbl";
-            this.staffsNameLbl.Size = new System.Drawing.Size(135, 31);
-            this.staffsNameLbl.TabIndex = 0;
-            this.staffsNameLbl.Text = "古谷";
-            this.staffsNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // warningLbl
             // 
             this.warningLbl.BackColor = System.Drawing.Color.Yellow;
@@ -421,6 +411,16 @@
             this.warningLbl.TabIndex = 1;
             this.warningLbl.Text = "在庫数警報！または大事な情報または店長からの連絡事項";
             this.warningLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // staffsNameLbl
+            // 
+            this.staffsNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.staffsNameLbl.Location = new System.Drawing.Point(3, 2);
+            this.staffsNameLbl.Name = "staffsNameLbl";
+            this.staffsNameLbl.Size = new System.Drawing.Size(135, 31);
+            this.staffsNameLbl.TabIndex = 0;
+            this.staffsNameLbl.Text = "古谷";
+            this.staffsNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Frame
             // 
