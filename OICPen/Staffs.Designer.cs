@@ -87,6 +87,7 @@
             // 
             this.idTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.idTbox.Location = new System.Drawing.Point(1180, 201);
+            this.idTbox.MaxLength = 6;
             this.idTbox.Multiline = true;
             this.idTbox.Name = "idTbox";
             this.idTbox.Size = new System.Drawing.Size(320, 33);
@@ -116,6 +117,7 @@
             // 
             this.searchNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.searchNameTbox.Location = new System.Drawing.Point(1180, 269);
+            this.searchNameTbox.MaxLength = 30;
             this.searchNameTbox.Multiline = true;
             this.searchNameTbox.Name = "searchNameTbox";
             this.searchNameTbox.Size = new System.Drawing.Size(320, 33);
@@ -156,6 +158,7 @@
             // 
             this.registerNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.registerNameTbox.Location = new System.Drawing.Point(1180, 562);
+            this.registerNameTbox.MaxLength = 15;
             this.registerNameTbox.Multiline = true;
             this.registerNameTbox.Name = "registerNameTbox";
             this.registerNameTbox.Size = new System.Drawing.Size(320, 33);
@@ -185,6 +188,7 @@
             // 
             this.passwordTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.passwordTbox.Location = new System.Drawing.Point(1180, 623);
+            this.passwordTbox.MaxLength = 20;
             this.passwordTbox.Multiline = true;
             this.passwordTbox.Name = "passwordTbox";
             this.passwordTbox.PasswordChar = '*';
@@ -195,6 +199,7 @@
             // 
             this.password2Tbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.password2Tbox.Location = new System.Drawing.Point(1180, 684);
+            this.password2Tbox.MaxLength = 20;
             this.password2Tbox.Multiline = true;
             this.password2Tbox.Name = "password2Tbox";
             this.password2Tbox.PasswordChar = '*';
@@ -281,6 +286,7 @@
             // 
             this.registerNamePhoneticTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.registerNamePhoneticTbox.Location = new System.Drawing.Point(1180, 503);
+            this.registerNamePhoneticTbox.MaxLength = 30;
             this.registerNamePhoneticTbox.Multiline = true;
             this.registerNamePhoneticTbox.Name = "registerNamePhoneticTbox";
             this.registerNamePhoneticTbox.Size = new System.Drawing.Size(320, 33);
