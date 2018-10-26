@@ -127,6 +127,7 @@
             // 
             this.itemNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.itemNameTbox.Location = new System.Drawing.Point(1163, 464);
+            this.itemNameTbox.MaxLength = 50;
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(284, 36);
             this.itemNameTbox.TabIndex = 6;
@@ -161,6 +162,7 @@
             // 
             this.searchItemIdTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.searchItemIdTbox.Location = new System.Drawing.Point(1163, 153);
+            this.searchItemIdTbox.MaxLength = 6;
             this.searchItemIdTbox.Name = "searchItemIdTbox";
             this.searchItemIdTbox.Size = new System.Drawing.Size(284, 36);
             this.searchItemIdTbox.TabIndex = 1;
@@ -234,6 +236,7 @@
             // 
             this.janTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.janTbox.Location = new System.Drawing.Point(1163, 632);
+            this.janTbox.MaxLength = 13;
             this.janTbox.Name = "janTbox";
             this.janTbox.Size = new System.Drawing.Size(284, 36);
             this.janTbox.TabIndex = 10;
@@ -242,6 +245,7 @@
             // 
             this.priceTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.priceTbox.Location = new System.Drawing.Point(1163, 589);
+            this.priceTbox.MaxLength = 6;
             this.priceTbox.Name = "priceTbox";
             this.priceTbox.Size = new System.Drawing.Size(284, 36);
             this.priceTbox.TabIndex = 9;
@@ -250,6 +254,7 @@
             // 
             this.noteTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.noteTbox.Location = new System.Drawing.Point(1163, 715);
+            this.noteTbox.MaxLength = 30;
             this.noteTbox.Multiline = true;
             this.noteTbox.Name = "noteTbox";
             this.noteTbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -260,6 +265,7 @@
             // 
             this.safetyStockTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.safetyStockTbox.Location = new System.Drawing.Point(1163, 673);
+            this.safetyStockTbox.MaxLength = 6;
             this.safetyStockTbox.Name = "safetyStockTbox";
             this.safetyStockTbox.Size = new System.Drawing.Size(284, 36);
             this.safetyStockTbox.TabIndex = 11;
@@ -268,6 +274,7 @@
             // 
             this.furiganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.furiganaTbox.Location = new System.Drawing.Point(1163, 506);
+            this.furiganaTbox.MaxLength = 30;
             this.furiganaTbox.Name = "furiganaTbox";
             this.furiganaTbox.Size = new System.Drawing.Size(284, 36);
             this.furiganaTbox.TabIndex = 7;
@@ -302,6 +309,7 @@
             // 
             this.searchItemNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.searchItemNameTbox.Location = new System.Drawing.Point(1163, 237);
+            this.searchItemNameTbox.MaxLength = 50;
             this.searchItemNameTbox.Name = "searchItemNameTbox";
             this.searchItemNameTbox.Size = new System.Drawing.Size(284, 36);
             this.searchItemNameTbox.TabIndex = 3;
@@ -310,6 +318,7 @@
             // 
             this.searchJanTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.searchJanTbox.Location = new System.Drawing.Point(1163, 195);
+            this.searchJanTbox.MaxLength = 13;
             this.searchJanTbox.Name = "searchJanTbox";
             this.searchJanTbox.Size = new System.Drawing.Size(284, 36);
             this.searchJanTbox.TabIndex = 2;
@@ -369,6 +378,7 @@
             // 
             this.purchasePriceTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.purchasePriceTbox.Location = new System.Drawing.Point(1163, 548);
+            this.purchasePriceTbox.MaxLength = 6;
             this.purchasePriceTbox.Name = "purchasePriceTbox";
             this.purchasePriceTbox.Size = new System.Drawing.Size(284, 36);
             this.purchasePriceTbox.TabIndex = 8;
