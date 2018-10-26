@@ -59,10 +59,10 @@
             // 
             this.incomingDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.incomingDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.incomingDgv.Location = new System.Drawing.Point(44, 55);
+            this.incomingDgv.Location = new System.Drawing.Point(12, 21);
             this.incomingDgv.Name = "incomingDgv";
             this.incomingDgv.RowTemplate.Height = 21;
-            this.incomingDgv.Size = new System.Drawing.Size(1297, 891);
+            this.incomingDgv.Size = new System.Drawing.Size(1310, 949);
             this.incomingDgv.TabIndex = 0;
             // 
             // giveOrderedCheckBtn

@@ -56,10 +56,10 @@
             // 
             this.stockDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.stockDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.stockDgv.Location = new System.Drawing.Point(52, 66);
+            this.stockDgv.Location = new System.Drawing.Point(12, 21);
             this.stockDgv.Name = "stockDgv";
             this.stockDgv.RowTemplate.Height = 21;
-            this.stockDgv.Size = new System.Drawing.Size(800, 852);
+            this.stockDgv.Size = new System.Drawing.Size(800, 949);
             this.stockDgv.TabIndex = 6;
             this.stockDgv.TabStop = false;
             // 

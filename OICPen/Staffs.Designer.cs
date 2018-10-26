@@ -55,10 +55,10 @@
             // staffsDgv
             // 
             this.staffsDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.staffsDgv.Location = new System.Drawing.Point(36, 32);
+            this.staffsDgv.Location = new System.Drawing.Point(12, 21);
             this.staffsDgv.Name = "staffsDgv";
             this.staffsDgv.RowTemplate.Height = 21;
-            this.staffsDgv.Size = new System.Drawing.Size(774, 920);
+            this.staffsDgv.Size = new System.Drawing.Size(774, 949);
             this.staffsDgv.TabIndex = 0;
             // 
             // registerBtn

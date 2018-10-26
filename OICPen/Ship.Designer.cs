@@ -40,10 +40,10 @@
             // shipDgv
             // 
             this.shipDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.shipDgv.Location = new System.Drawing.Point(33, 34);
+            this.shipDgv.Location = new System.Drawing.Point(12, 21);
             this.shipDgv.Name = "shipDgv";
             this.shipDgv.RowTemplate.Height = 21;
-            this.shipDgv.Size = new System.Drawing.Size(1310, 936);
+            this.shipDgv.Size = new System.Drawing.Size(1310, 949);
             this.shipDgv.TabIndex = 0;
             // 
             // shipTitleLbl
