@@ -89,6 +89,7 @@
             // 
             this.incomingTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.incomingTbox.Location = new System.Drawing.Point(1374, 577);
+            this.incomingTbox.MaxLength = 8;
             this.incomingTbox.Name = "incomingTbox";
             this.incomingTbox.Size = new System.Drawing.Size(224, 36);
             this.incomingTbox.TabIndex = 3;
