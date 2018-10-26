@@ -17,9 +17,9 @@ namespace UnitTestProject1
             this.context = context;
         }
 
-        public TakeOrder AddTakeOrder(int  staffId)
+        public TakeOrder AddTakeOrder(int  clientId)
         {
-            var takeOrder = context.TakeOrders.Add(new TakeOrder {StaffId = staffId, TakeOrdDate = DateTime.Now});
+            var takeOrder = context.TakeOrders.Add(new TakeOrder {ClientId = clientId, TakeOrdDate = DateTime.Now});
             context.SaveChanges();
 
             return takeOrder;
