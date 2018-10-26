@@ -89,12 +89,14 @@
             this.itemsCodeTbox.Location = new System.Drawing.Point(1165, 226);
             this.itemsCodeTbox.Name = "itemsCodeTbox";
             this.itemsCodeTbox.Size = new System.Drawing.Size(218, 36);
+            this.itemsCodeTbox.MaxLength = 6;
             this.itemsCodeTbox.TabIndex = 1;
             // 
             // itemsNameTbox
             // 
             this.itemsNameTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemsNameTbox.Location = new System.Drawing.Point(1165, 314);
+            this.itemsNameTbox.MaxLength = 50;
             this.itemsNameTbox.Name = "itemsNameTbox";
             this.itemsNameTbox.Size = new System.Drawing.Size(358, 36);
             this.itemsNameTbox.TabIndex = 2;
