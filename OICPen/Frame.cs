@@ -20,7 +20,9 @@ namespace OICPen
         private void Frame_Shown(object sender, EventArgs e)
         {
 
-            var login=new login();
+            label1.Text = DateTime.Now.ToString("yyyy/MM/dd(ddd) HH:mm");
+
+            var login =new login();
             ChangeForm(login);
             var btnList=new Button[] {
                 takeorderBtn,salesBtn,shipBtn,incomingBtn,giveorderBtn,stockBtn,itemsBtn,clientsBtn,staffsBtn,logoutBtn
@@ -55,5 +57,9 @@ namespace OICPen
                 e.Cancel = true;
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString("yyyy/MM/dd(ddd) HH:mm");
+        }
     }
 }

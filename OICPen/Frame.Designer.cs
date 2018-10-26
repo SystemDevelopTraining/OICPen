@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.teamNameLbl = new System.Windows.Forms.Label();
             this.logoPbox = new System.Windows.Forms.PictureBox();
@@ -50,6 +51,7 @@
             this.warningLbl = new System.Windows.Forms.TextBox();
             this.loginStaffsNameLbl = new System.Windows.Forms.Label();
             this.statusStaffsLbl = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -403,7 +405,7 @@
             this.warningLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.warningLbl.BackColor = System.Drawing.Color.Yellow;
             this.warningLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.warningLbl.Location = new System.Drawing.Point(308, 4);
+            this.warningLbl.Location = new System.Drawing.Point(308, 7);
             this.warningLbl.Name = "warningLbl";
             this.warningLbl.Size = new System.Drawing.Size(1604, 38);
             this.warningLbl.TabIndex = 2;
@@ -429,6 +431,12 @@
             this.statusStaffsLbl.Size = new System.Drawing.Size(75, 25);
             this.statusStaffsLbl.TabIndex = 0;
             this.statusStaffsLbl.Text = "社員名";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Frame
             // 
@@ -485,5 +493,6 @@
         private System.Windows.Forms.Label teamNameLbl;
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
