@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -33,7 +34,14 @@ namespace OICPen
 
         private void registBtn_Click(object sender, EventArgs e)
         {
-            hiraganacheek(huriganaTbox.Text);
+                       if (nullcheek(nameTbox.Text)
+                            &&phonenumbercheek(phoneNumberMaskedTbox.Text)
+                            &&postalcode(postalCodeMaskedTbox.Text)
+                            &&nullcheek(addressTbox.Text))
+                        {
+                            hiraganacheek(huriganaTbox.Text);
+                        }
+//           MessageBox.Show(phoneNumberMaskedTbox.Text, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
@@ -54,6 +62,42 @@ namespace OICPen
                 MessageBox.Show("ふりがなにはひらがなのみを入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+        }
+
+        private bool nullcheek(string text)
+        {
+            if (text != "")
+            {
+                return true;
+            }
+
+            MessageBox.Show("すべてに記入されていません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
+        }
+
+        private bool phonenumbercheek(string text)
+        {
+            if (Regex.IsMatch(text, @"^\d+-\d+-\d+$"))
+            {
+                return true;
+
+            }
+
+            MessageBox.Show("電話番号が正しく記入されてません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
+        }
+
+
+        private bool postalcode(string text)
+        {
+            if (Regex.IsMatch(text, @"^\d+-\d+$"))
+            {
+                return true;
+
+            }
+
+            MessageBox.Show("住所が正しく記入されてません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
         }
     }
 }
