@@ -115,6 +115,7 @@
       <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\ClientService.cs" />
+    <Compile Include="Services\GiveOrderService.cs" />
     <Compile Include="Services\ItemService.cs" />
     <Compile Include="Ship.cs">
       <SubType>Form</SubType>
