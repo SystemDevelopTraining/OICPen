@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OICPen.Models
 {
-    class Item
+    public class Item
     {
         [Key]
         public int Id { get; set; } //商品ID

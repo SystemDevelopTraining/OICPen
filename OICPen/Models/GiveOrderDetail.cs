@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OICPen.Models
 {
-    class GiveOrderDetail
+    public class GiveOrderDetail
     {
         [Key]
         public int Id { get; set; } // 注文明細ID
