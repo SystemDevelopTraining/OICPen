@@ -56,14 +56,12 @@ namespace OICPen
 
         private void quantityMaskedTbox_Click(object sender, EventArgs e)
         {
-            if(quantityMaskedTbox.Text=="")
-            quantityMaskedTbox.SelectionStart = 0;
+            Utility.maskedTboxStart(quantityMaskedTbox);
         }
 
         private void itemIdMaskedTbox_Click(object sender, EventArgs e)
         {
-            if (itemIdMaskedTbox.Text == "")
-                itemIdMaskedTbox.SelectionStart = 0;
+            Utility.maskedTboxStart(itemIdMaskedTbox);
         }
     }
 }
