@@ -30,7 +30,6 @@ namespace OICPen
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            int ok=0;
 
             if (quantityMaskedTbox.Text != "")
             {
@@ -65,12 +64,6 @@ namespace OICPen
             {
                 //数量がNullの時
                 MessageBox.Show("数量を入力して下さい。","エラー",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-            if (ok == 1)
-            {
-                //実行内容
-
-
             }
         }
     }
