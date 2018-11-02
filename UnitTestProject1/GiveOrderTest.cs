@@ -31,8 +31,8 @@ namespace UnitTestProject1
             var mockContext = new Mock<OICPenDbContext>();
             mockContext.Setup(c => c.GiveOrders).Returns(mockSet.Object);
 
-            var service = new GiveOrderService(mockContext.Object);
-            var takeOrders = service.GetAllGiveOrders();
+            var service = new OICPen.Services.GiveOrderService(mockContext.Object);
+            var giveOrders = service.GetGiveOrders();
         }
     }
 }

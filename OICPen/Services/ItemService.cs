@@ -15,16 +15,40 @@ namespace OICPen.Services
             this.context = context;
         }
 
-        
+        /*---------------------------------------------------------------
+         [役割] すべての商品情報をItem型のListにして返す
+         [引数] なし
+         [返り値] すべての商品情報
+         ---------------------------------------------------------------*/
         public List<Item> GetAllItems()
         {
-            var query = from i in context.Items
+            var items = from i in context.Items
                         orderby i.Id
                         select i;
 
-            return query.ToList();
+            return items.ToList();
         }
 
+        /*---------------------------------------------------------------
+         [役割] 削除されていない商品情報をItem型のListにして返す
+         [引数] なし
+         [返り値] 削除されていない商品情報
+         ---------------------------------------------------------------*/
+        public List<Item> GetItems()
+        {
+            var items = from i in context.Items
+                        orderby i.Id
+                        where i.IsDeleted == false
+                        select i;
+
+            return items.ToList();
+        }
+
+        /*---------------------------------------------------------------
+         [役割] 商品を追加する
+         [引数] i: 追加したい商品情報
+         [返り値] 追加した商品情報
+         ---------------------------------------------------------------*/
         public Item AddItem(Item i)
         {
             var item = context.Items.Add(i);
@@ -33,6 +57,11 @@ namespace OICPen.Services
             return item;
         }
 
+        /*---------------------------------------------------------------
+         [役割] 商品情報の更新
+         [引数] i: 更新したい商品情報
+         [返り値] 更新した商品情報
+         ---------------------------------------------------------------*/
         public Item UpdateItem(Item i)
         {
             var item = context.Items.Single(x => x.Id == i.Id);

@@ -31,13 +31,16 @@ namespace UnitTestProject1
             var mockContext = new Mock<OICPenDbContext> ();
             mockContext.Setup(c => c.Clients).Returns(mockMyEntity.Object);
 
-            var service = new ClientService(mockContext.Object);
-            var clients = service.GetAllClients();
+            var service = new OICPen.Services.ClientService(mockContext.Object);
+            var clients = service.GetClients();
 
             Assert.AreEqual(2, clients.Count);
             Assert.AreEqual("かみなし　はげぞう", clients[0].Hurigana);
             Assert.AreEqual("はげおか　つるお", clients[1].Hurigana);
 
+            var addC = new Client{Name = "田中 かなた", Hurigana = "たなか　かなた", Address = "奈良県桜井市芝1343-5", PostNum = "22222222", PhoneNum = "0722221221" };
+
+            service.AddClient(addC);
         }
     }
 }

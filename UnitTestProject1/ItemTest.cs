@@ -32,7 +32,7 @@ namespace UnitTestProject1
             mockContext.Setup(c => c.Items).Returns(mockSet.Object);
 
             var service = new OICPen.Services.ItemService(mockContext.Object);
-            var items = service.GetAllItems();
+            var items = service.GetItems();
 
             Assert.AreEqual("鉛筆", items[0].Name);
             Assert.AreEqual(2, items.Count);
@@ -44,8 +44,6 @@ namespace UnitTestProject1
 
             mockSet.Verify(m => m.Add(It.Is<Item>(x => i.Name == x.Name)), Times.Exactly(1));
             mockContext.Verify(m => m.SaveChanges(), Times.Exactly(1));
-
-            items = service.GetAllItems();
 
         }
     }

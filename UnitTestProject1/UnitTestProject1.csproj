@@ -78,8 +78,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ClientService.cs" />
-    <Compile Include="GiveOrderService.cs" />
     <Compile Include="GiveOrderTest.cs" />
     <Compile Include="ItemTest.cs" />
     <Compile Include="TakeOrderService.cs" />
