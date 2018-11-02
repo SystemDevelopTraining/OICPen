@@ -122,6 +122,7 @@
             this.searchBtn.TabIndex = 4;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // itemNameTbox
             // 
@@ -166,6 +167,7 @@
             this.searchItemIdTbox.Name = "searchItemIdTbox";
             this.searchItemIdTbox.Size = new System.Drawing.Size(284, 36);
             this.searchItemIdTbox.TabIndex = 1;
+            this.searchItemIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchItemIdTbox_KeyPress);
             // 
             // janLbl
             // 
@@ -313,6 +315,7 @@
             this.searchItemNameTbox.Name = "searchItemNameTbox";
             this.searchItemNameTbox.Size = new System.Drawing.Size(284, 36);
             this.searchItemNameTbox.TabIndex = 3;
+            this.searchItemNameTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchItemNameTbox_KeyPress);
             // 
             // searchJanTbox
             // 
