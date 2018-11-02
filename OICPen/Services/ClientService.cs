@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OICPen.Services
 {
-    class ClientService
+    public class ClientService
     {
         private OICPenDbContext context;
 
