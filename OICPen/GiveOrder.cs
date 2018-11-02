@@ -53,5 +53,15 @@ namespace OICPen
             else
                 MessageBox.Show("数量を入力して下さい。","エラー",MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
+
+        private void quantityMaskedTbox_Click(object sender, EventArgs e)
+        {
+            Utility.maskedTboxStart(quantityMaskedTbox);
+        }
+
+        private void itemIdMaskedTbox_Click(object sender, EventArgs e)
+        {
+            Utility.maskedTboxStart(itemIdMaskedTbox);
+        }
     }
 }

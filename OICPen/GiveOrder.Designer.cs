@@ -202,9 +202,10 @@
             this.itemIdMaskedTbox.Location = new System.Drawing.Point(286, 298);
             this.itemIdMaskedTbox.Mask = "999999";
             this.itemIdMaskedTbox.Name = "itemIdMaskedTbox";
-            this.itemIdMaskedTbox.PromptChar = '-';
+            this.itemIdMaskedTbox.PromptChar = ' ';
             this.itemIdMaskedTbox.Size = new System.Drawing.Size(218, 36);
             this.itemIdMaskedTbox.TabIndex = 9;
+            this.itemIdMaskedTbox.Click += new System.EventHandler(this.itemIdMaskedTbox_Click);
             // 
             // quantityMaskedTbox
             // 
@@ -212,9 +213,10 @@
             this.quantityMaskedTbox.Location = new System.Drawing.Point(618, 561);
             this.quantityMaskedTbox.Mask = "999999";
             this.quantityMaskedTbox.Name = "quantityMaskedTbox";
-            this.quantityMaskedTbox.PromptChar = '-';
+            this.quantityMaskedTbox.PromptChar = ' ';
             this.quantityMaskedTbox.Size = new System.Drawing.Size(108, 36);
             this.quantityMaskedTbox.TabIndex = 10;
+            this.quantityMaskedTbox.Click += new System.EventHandler(this.quantityMaskedTbox_Click);
             // 
             // GiveOrder
             // 
