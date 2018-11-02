@@ -45,14 +45,6 @@ namespace UnitTestProject1
             mockSet.Verify(m => m.Add(It.IsAny<TakeOrder>()), Times.Exactly(2));
             mockContext.Verify(m => m.SaveChanges(), Times.Exactly(2));
 
-            Assert.AreEqual(2, takeOrders.Count);
-            Assert.AreEqual(0, takeOrders[0].Id);
-            Assert.AreEqual(1, takeOrders[0].ClientId);
-            Assert.AreEqual(null, takeOrders[0].ShipDate);
-
-
-
-
         }
     }
 }
