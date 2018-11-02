@@ -14,11 +14,14 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            var data = new List<TakeOrder>
+
+            var data= new List<TakeOrder>
             {
-                new TakeOrder {TakeOrdDate = DateTime.Now, StaffId = 1},
-                new TakeOrder {TakeOrdDate = DateTime.Now, StaffId = 2}
+                new TakeOrder {TakeOrdDate = DateTime.Now, ClientId = 1},
+                new TakeOrder {TakeOrdDate = DateTime.Now, ClientId = 2}
             }.AsQueryable();
+
+            
 
             var mockSet = new Mock<DbSet<TakeOrder>>();
             mockSet.As<IQueryable<TakeOrder>>().Setup(m => m.Provider).Returns(data.Provider);
@@ -34,10 +37,13 @@ namespace UnitTestProject1
 
             Assert.AreEqual(2, takeOrders.Count);
             Assert.AreEqual(0, takeOrders[0].Id);
-            Assert.AreEqual(1, takeOrders[0].StaffId);
+            Assert.AreEqual(1, takeOrders[0].ClientId);
             Assert.AreEqual(null, takeOrders[0].ShipDate);
 
-
+            service.AddTakeOrder(3);
+            service.AddTakeOrder(4);
+            mockSet.Verify(m => m.Add(It.IsAny<TakeOrder>()), Times.Exactly(2));
+            mockContext.Verify(m => m.SaveChanges(), Times.Exactly(2));
 
         }
     }

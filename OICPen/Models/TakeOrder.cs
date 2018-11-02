@@ -13,9 +13,9 @@ namespace OICPen.Models
         public DateTime TakeOrdDate { get; set; } // 注文日
         public DateTime? ShipDate { get; set; } // 出庫日
         [Required]
-        public int StaffId { get; set; } // 社員ID
+        public int ClientId { get; set; } // 会員ID
 
-        [ForeignKey("StaffId")]
-        public virtual Staff Staff { get; set; }
+        [ForeignKey("ClientId")]
+        public virtual Client Client { get; set; }
     }
 }
