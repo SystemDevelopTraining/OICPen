@@ -22,49 +22,36 @@ namespace OICPen
 
         }
 
+        //数量チェックが通ったあとの処理
         private void quanitity()
         {
             MessageBox.Show(quantityMaskedTbox.Text, "GOOD", MessageBoxButtons.OK, MessageBoxIcon.Information);
             quantityMaskedTbox.Text = null;
         }
 
+        //数量チェック
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-
             if (quantityMaskedTbox.Text != "")
             {
                 if (int.Parse(quantityMaskedTbox.Text) >= 1000)
                 {
-
-                    //数量確認メッセージボックスを表示する
                     DialogResult result = MessageBox.Show("1000個以上の発注になりますがよろしいですか？",
                         "質問",
                         MessageBoxButtons.YesNo,
                         MessageBoxIcon.Exclamation,
                         MessageBoxDefaultButton.Button2);
 
-                    //何が選択されたか調べる
-                    if (result == DialogResult.Yes)
+                    if (result == DialogResult.No)
                     {
-                        //「はい」が選択された時
-                        quanitity();
-                    }
-                    else
-                    {
-                        //「いいえ」が選択された時
                         quantityMaskedTbox.Focus();
+                        return;
                     }
                 }
-                else
-                {
-                    quanitity();
-                }
+                quanitity();
             }
             else
-            {
-                //数量がNullの時
                 MessageBox.Show("数量を入力して下さい。","エラー",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
         }
     }
 }
