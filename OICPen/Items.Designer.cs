@@ -37,7 +37,6 @@
             this.itemNameTbox = new System.Windows.Forms.TextBox();
             this.itemNameLbl = new System.Windows.Forms.Label();
             this.searchItemIdLbl = new System.Windows.Forms.Label();
-            this.searchItemIdTbox = new System.Windows.Forms.TextBox();
             this.janLbl = new System.Windows.Forms.Label();
             this.noteLbl = new System.Windows.Forms.Label();
             this.safetyStockLbl = new System.Windows.Forms.Label();
@@ -51,13 +50,15 @@
             this.searchItemNameLbl = new System.Windows.Forms.Label();
             this.searchJanLbl = new System.Windows.Forms.Label();
             this.searchItemNameTbox = new System.Windows.Forms.TextBox();
-            this.searchJanTbox = new System.Windows.Forms.TextBox();
             this.itemsUpdateBtn = new System.Windows.Forms.Button();
             this.separatorLbl = new System.Windows.Forms.Label();
             this.searchItemLbl = new System.Windows.Forms.Label();
             this.itemRegistLbl = new System.Windows.Forms.Label();
             this.purchasePriceLbl = new System.Windows.Forms.Label();
-            this.purchasePriceTbox = new System.Windows.Forms.TextBox();
+            this.searchItemIdMaskedTbox = new System.Windows.Forms.MaskedTextBox();
+            this.searchJanMaskedTbox = new System.Windows.Forms.MaskedTextBox();
+            this.purchasePriceMaskedTbox = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.itemDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +84,7 @@
             this.updateBtn.TabIndex = 14;
             this.updateBtn.Text = "更新";
             this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // deleteBtn
             // 
@@ -103,6 +105,7 @@
             this.registBtn.TabIndex = 13;
             this.registBtn.Text = "商品登録";
             this.registBtn.UseVisualStyleBackColor = true;
+            this.registBtn.Click += new System.EventHandler(this.registBtn_Click);
             // 
             // itemDgv
             // 
@@ -122,6 +125,7 @@
             this.searchBtn.TabIndex = 4;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // itemNameTbox
             // 
@@ -157,15 +161,6 @@
             this.searchItemIdLbl.Size = new System.Drawing.Size(148, 33);
             this.searchItemIdLbl.TabIndex = 9;
             this.searchItemIdLbl.Text = "商品ID：";
-            // 
-            // searchItemIdTbox
-            // 
-            this.searchItemIdTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.searchItemIdTbox.Location = new System.Drawing.Point(1163, 153);
-            this.searchItemIdTbox.MaxLength = 6;
-            this.searchItemIdTbox.Name = "searchItemIdTbox";
-            this.searchItemIdTbox.Size = new System.Drawing.Size(284, 36);
-            this.searchItemIdTbox.TabIndex = 1;
             // 
             // janLbl
             // 
@@ -314,15 +309,6 @@
             this.searchItemNameTbox.Size = new System.Drawing.Size(284, 36);
             this.searchItemNameTbox.TabIndex = 3;
             // 
-            // searchJanTbox
-            // 
-            this.searchJanTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.searchJanTbox.Location = new System.Drawing.Point(1163, 195);
-            this.searchJanTbox.MaxLength = 13;
-            this.searchJanTbox.Name = "searchJanTbox";
-            this.searchJanTbox.Size = new System.Drawing.Size(284, 36);
-            this.searchJanTbox.TabIndex = 2;
-            // 
             // itemsUpdateBtn
             // 
             this.itemsUpdateBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
@@ -374,14 +360,54 @@
             this.purchasePriceLbl.TabIndex = 16;
             this.purchasePriceLbl.Text = "仕入価格：";
             // 
-            // purchasePriceTbox
+            // searchItemIdMaskedTbox
             // 
-            this.purchasePriceTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.purchasePriceTbox.Location = new System.Drawing.Point(1163, 548);
-            this.purchasePriceTbox.MaxLength = 6;
-            this.purchasePriceTbox.Name = "purchasePriceTbox";
-            this.purchasePriceTbox.Size = new System.Drawing.Size(284, 36);
-            this.purchasePriceTbox.TabIndex = 8;
+            this.searchItemIdMaskedTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.searchItemIdMaskedTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.searchItemIdMaskedTbox.Location = new System.Drawing.Point(1164, 152);
+            this.searchItemIdMaskedTbox.Mask = "999999";
+            this.searchItemIdMaskedTbox.Name = "searchItemIdMaskedTbox";
+            this.searchItemIdMaskedTbox.PromptChar = ' ';
+            this.searchItemIdMaskedTbox.Size = new System.Drawing.Size(99, 36);
+            this.searchItemIdMaskedTbox.TabIndex = 26;
+            this.searchItemIdMaskedTbox.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.searchItemIdMaskedTbox.Click += new System.EventHandler(this.searchItemIdMaskedTbox_Click);
+            // 
+            // searchJanMaskedTbox
+            // 
+            this.searchJanMaskedTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.searchJanMaskedTbox.Location = new System.Drawing.Point(1164, 195);
+            this.searchJanMaskedTbox.Mask = "9999999999999";
+            this.searchJanMaskedTbox.Name = "searchJanMaskedTbox";
+            this.searchJanMaskedTbox.PromptChar = ' ';
+            this.searchJanMaskedTbox.ShortcutsEnabled = false;
+            this.searchJanMaskedTbox.Size = new System.Drawing.Size(198, 36);
+            this.searchJanMaskedTbox.TabIndex = 27;
+            this.searchJanMaskedTbox.Click += new System.EventHandler(this.searchJanMaskedTbox_Click);
+            // 
+            // purchasePriceMaskedTbox
+            // 
+            this.purchasePriceMaskedTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.purchasePriceMaskedTbox.Location = new System.Drawing.Point(1198, 548);
+            this.purchasePriceMaskedTbox.Mask = "999999";
+            this.purchasePriceMaskedTbox.Name = "purchasePriceMaskedTbox";
+            this.purchasePriceMaskedTbox.PromptChar = ' ';
+            this.purchasePriceMaskedTbox.Size = new System.Drawing.Size(113, 36);
+            this.purchasePriceMaskedTbox.TabIndex = 28;
+            this.purchasePriceMaskedTbox.Tag = "";
+            this.purchasePriceMaskedTbox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.purchasePriceMaskedTbox_MaskInputRejected);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(1164, 551);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 29);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "\\";
             // 
             // Items
             // 
@@ -389,18 +415,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.purchasePriceMaskedTbox);
+            this.Controls.Add(this.searchJanMaskedTbox);
+            this.Controls.Add(this.searchItemIdMaskedTbox);
             this.Controls.Add(this.itemRegistLbl);
             this.Controls.Add(this.searchItemLbl);
             this.Controls.Add(this.separatorLbl);
             this.Controls.Add(this.itemsUpdateBtn);
-            this.Controls.Add(this.searchJanTbox);
             this.Controls.Add(this.searchItemNameTbox);
             this.Controls.Add(this.searchJanLbl);
             this.Controls.Add(this.searchItemNameLbl);
             this.Controls.Add(this.furiganaTbox);
             this.Controls.Add(this.safetyStockTbox);
             this.Controls.Add(this.noteTbox);
-            this.Controls.Add(this.purchasePriceTbox);
             this.Controls.Add(this.priceTbox);
             this.Controls.Add(this.purchasePriceLbl);
             this.Controls.Add(this.janTbox);
@@ -409,7 +437,6 @@
             this.Controls.Add(this.safetyStockLbl);
             this.Controls.Add(this.noteLbl);
             this.Controls.Add(this.janLbl);
-            this.Controls.Add(this.searchItemIdTbox);
             this.Controls.Add(this.searchItemIdLbl);
             this.Controls.Add(this.itemNameLbl);
             this.Controls.Add(this.itemNameTbox);
@@ -440,7 +467,6 @@
         private System.Windows.Forms.TextBox itemNameTbox;
         private System.Windows.Forms.Label itemNameLbl;
         private System.Windows.Forms.Label searchItemIdLbl;
-        private System.Windows.Forms.TextBox searchItemIdTbox;
         private System.Windows.Forms.Label janLbl;
         private System.Windows.Forms.Label noteLbl;
         private System.Windows.Forms.Label safetyStockLbl;
@@ -454,12 +480,14 @@
         private System.Windows.Forms.Label searchItemNameLbl;
         private System.Windows.Forms.Label searchJanLbl;
         private System.Windows.Forms.TextBox searchItemNameTbox;
-        private System.Windows.Forms.TextBox searchJanTbox;
         private System.Windows.Forms.Button itemsUpdateBtn;
         private System.Windows.Forms.Label separatorLbl;
         private System.Windows.Forms.Label searchItemLbl;
         private System.Windows.Forms.Label itemRegistLbl;
         private System.Windows.Forms.Label purchasePriceLbl;
-        private System.Windows.Forms.TextBox purchasePriceTbox;
+        private System.Windows.Forms.MaskedTextBox searchItemIdMaskedTbox;
+        private System.Windows.Forms.MaskedTextBox searchJanMaskedTbox;
+        private System.Windows.Forms.MaskedTextBox purchasePriceMaskedTbox;
+        private System.Windows.Forms.Label label1;
     }
 }
