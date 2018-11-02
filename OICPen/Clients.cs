@@ -29,27 +29,33 @@ namespace OICPen
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            hiraganacheek(searchHuriganaTbox.Text);
+            HiraganaCheek(searchHuriganaTbox.Text);
         }
 
         private void registBtn_Click(object sender, EventArgs e)
         {
-                       if (nullcheek(nameTbox.Text)
-                            &&phonenumbercheek(phoneNumberMaskedTbox.Text)
-                            &&postalcode(postalCodeMaskedTbox.Text)
-                            &&nullcheek(addressTbox.Text))
+                       if (NullCheek(nameTbox.Text)
+                            &&PhoneNumberCheek(phoneNumberMaskedTbox.Text)
+                            && PostalCodeCheek(postalCodeMaskedTbox.Text)
+                            &&NullCheek(addressTbox.Text))
                         {
-                            hiraganacheek(huriganaTbox.Text);
+                            HiraganaCheek(huriganaTbox.Text);
                         }
 //           MessageBox.Show(phoneNumberMaskedTbox.Text, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            hiraganacheek(huriganaTbox.Text);
+            if (NullCheek(nameTbox.Text)
+                 && PhoneNumberCheek(phoneNumberMaskedTbox.Text)
+                 && PostalCodeCheek(postalCodeMaskedTbox.Text)
+                 && NullCheek(addressTbox.Text))
+            {
+                HiraganaCheek(huriganaTbox.Text);
+            }
         }
 
-        private bool hiraganacheek(string text){
+        private bool HiraganaCheek(string text){
             //ひらがなチェック
             if (System.Text.RegularExpressions.Regex.IsMatch(text, @"^\p{IsHiragana}+$"))
             {
@@ -64,7 +70,7 @@ namespace OICPen
             }
         }
 
-        private bool nullcheek(string text)
+        private bool NullCheek(string text)
         {
             if (text != "")
             {
@@ -75,7 +81,7 @@ namespace OICPen
             return false;
         }
 
-        private bool phonenumbercheek(string text)
+        private bool PhoneNumberCheek(string text)
         {
             if (Regex.IsMatch(text, @"^\d+-\d+-\d+$"))
             {
@@ -88,7 +94,7 @@ namespace OICPen
         }
 
 
-        private bool postalcode(string text)
+        private bool PostalCodeCheek(string text)
         {
             if (Regex.IsMatch(text, @"^\d+-\d+$"))
             {
@@ -96,7 +102,7 @@ namespace OICPen
 
             }
 
-            MessageBox.Show("住所が正しく記入されてません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("郵便番号が正しく記入されてません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
     }
