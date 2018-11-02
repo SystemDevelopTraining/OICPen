@@ -23,11 +23,11 @@ namespace OICPen.Models
         [Required]
         public uint Price { get; set; } //販売価格
         [Required]
-        public uint SaftyStock { get; set; } //安全在庫数
+        public uint SafetyStock { get; set; } //安全在庫数
         [Required]
         public DateTime RegistDate { get; set; } //登録日
         [Required]
         public bool IsDeleted { get; set; } //削除フラグ
-        public string note { get; set; } //備考
+        public string Note { get; set; } //備考
     }
 }
