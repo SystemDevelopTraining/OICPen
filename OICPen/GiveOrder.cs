@@ -22,6 +22,12 @@ namespace OICPen
 
         }
 
+        private void quanitity()
+        {
+            MessageBox.Show(quantityMaskedTbox.Text, "GOOD", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            quantityMaskedTbox.Text = null;
+        }
+
         private void confirmBtn_Click(object sender, EventArgs e)
         {
             int ok=0;
@@ -42,9 +48,9 @@ namespace OICPen
                     if (result == DialogResult.Yes)
                     {
                         //「はい」が選択された時
-                        ok = 1;
+                        quanitity();
                     }
-                    else if (result == DialogResult.No)
+                    else
                     {
                         //「いいえ」が選択された時
                         quantityMaskedTbox.Focus();
@@ -52,8 +58,7 @@ namespace OICPen
                 }
                 else
                 {
-                    //Okay
-                    ok = 1;
+                    quanitity();
                 }
             }
             else
@@ -64,8 +69,7 @@ namespace OICPen
             if (ok == 1)
             {
                 //実行内容
-                MessageBox.Show(quantityMaskedTbox.Text, "GOOD", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                quantityMaskedTbox.Text = null;
+
 
             }
         }
