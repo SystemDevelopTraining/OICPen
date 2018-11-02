@@ -41,6 +41,7 @@ namespace UnitTestProject1
             Assert.AreEqual(null, takeOrders[0].ShipDate);
 
             service.AddTakeOrder(3);
+
             service.AddTakeOrder(4);
             mockSet.Verify(m => m.Add(It.IsAny<TakeOrder>()), Times.Exactly(2));
             mockContext.Verify(m => m.SaveChanges(), Times.Exactly(2));

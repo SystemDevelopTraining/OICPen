@@ -17,6 +17,7 @@ namespace OICPen.Services
             this.context = context;
         }
 
+
         public Client AddClient(string name, string hurigana, string address, string postNum, string phoneNum)
         {
             var client = context.Clients.Add(new Client { Name = name, Hurigana = hurigana, Address = address, PostNum = postNum, PhoneNum = phoneNum });
