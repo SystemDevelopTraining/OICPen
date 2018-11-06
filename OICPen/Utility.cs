@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +15,15 @@ namespace OICPen
         {
             if (x.Text == "")
                 x.SelectionStart = 0;
+        }
+
+        //textBoxに半角数字しか入らないようにする
+        public static void textBoxDigitCheck(TextBox x,KeyPressEventArgs e)
+        {
+            if (!Regex.IsMatch(e.KeyChar.ToString(), "[0-9]") && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 
