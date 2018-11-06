@@ -12,7 +12,6 @@ namespace OICPen.Services
     {
         private OICPenDbContext context;
 
-        
         public TakeOrderService(OICPenDbContext context)
         {
             this.context = context;
@@ -54,12 +53,6 @@ namespace OICPen.Services
         {
             var takeOrder = context.TakeOrders.Single(x => x.Id == t.Id);
             takeOrder.ShipDate = DateTime.Now;
-        }
-
-        public void AppendTakeOrderDetails(int itemid, int quantity, Models.TakeOrder order)
-        {
-            var orderDetails = new TakeOrderDetail { Itemid = itemid, Quantity = (uint)quantity, TakeOrderId = order.Id };
-            context.SaveChanges();
         }
     }
 }
