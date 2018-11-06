@@ -15,13 +15,13 @@ namespace UnitTestProject1
         public void TestMethod1()
         {
 
-            var data= new List<TakeOrder>
+            var data = new List<TakeOrder>
             {
                 new TakeOrder {TakeOrdDate = DateTime.Now, ClientId = 1},
                 new TakeOrder {TakeOrdDate = DateTime.Now, ClientId = 2}
             }.AsQueryable();
 
-            
+
 
             var mockSet = new Mock<DbSet<TakeOrder>>();
             mockSet.As<IQueryable<TakeOrder>>().Setup(m => m.Provider).Returns(data.Provider);
@@ -32,7 +32,7 @@ namespace UnitTestProject1
             var mockContext = new Mock<OICPenDbContext>();
             mockContext.Setup(c => c.TakeOrders).Returns(mockSet.Object);
 
-            var service = new TakeOrderService(mockContext.Object);
+            var service = new OICPen.Services.TakeOrderService(mockContext.Object);
             var takeOrders = service.GetAllTakeOrders();
 
             Assert.AreEqual(2, takeOrders.Count);
@@ -40,11 +40,11 @@ namespace UnitTestProject1
             Assert.AreEqual(1, takeOrders[0].ClientId);
             Assert.AreEqual(null, takeOrders[0].ShipDate);
 
-            service.AddTakeOrder(3);
+            service.AddTakeOrder(new TakeOrder { ClientId = 1, TakeOrdDate = DateTime.Now });
+            mockSet.Verify(m => m.Add(It.IsAny<TakeOrder>()), Times.Exactly(1));
+            mockContext.Verify(m => m.SaveChanges(), Times.Exactly(1));
 
-            service.AddTakeOrder(4);
-            mockSet.Verify(m => m.Add(It.IsAny<TakeOrder>()), Times.Exactly(2));
-            mockContext.Verify(m => m.SaveChanges(), Times.Exactly(2));
+            service.AppendTakeOrderDetails(1, 2, service.AddTakeOrder(new TakeOrder { ClientId = 2, TakeOrdDate = DateTime.Now }));
 
         }
     }
