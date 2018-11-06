@@ -115,6 +115,8 @@
       <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\ClientService.cs" />
+    <Compile Include="Services\GiveOrderService.cs" />
+    <Compile Include="Services\ItemService.cs" />
     <Compile Include="Ship.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +143,7 @@
     <Compile Include="TakeOrder.Designer.cs">
       <DependentUpon>TakeOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utility.cs" />
     <EmbeddedResource Include="Clients.resx">
       <DependentUpon>Clients.cs</DependentUpon>
     </EmbeddedResource>

@@ -78,7 +78,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ClientService.cs" />
+    <Compile Include="GiveOrderTest.cs" />
+    <Compile Include="ItemTest.cs" />
     <Compile Include="TakeOrderService.cs" />
     <Compile Include="ClientTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

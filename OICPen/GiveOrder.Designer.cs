@@ -37,14 +37,14 @@
             this.itemsViewDgv = new System.Windows.Forms.DataGridView();
             this.allClearBtn = new System.Windows.Forms.Button();
             this.completeBtn = new System.Windows.Forms.Button();
-            this.quantityTbox = new System.Windows.Forms.TextBox();
-            this.itemIdTbox = new System.Windows.Forms.TextBox();
             this.quantityLbl = new System.Windows.Forms.Label();
             this.itemNameLbl = new System.Windows.Forms.Label();
             this.itemIdLbl = new System.Windows.Forms.Label();
             this.searchResultLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.clearBtn = new System.Windows.Forms.Button();
+            this.itemIdMaskedTbox = new System.Windows.Forms.MaskedTextBox();
+            this.quantityMaskedTbox = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.giveOrderListDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +79,7 @@
             this.confirmBtn.TabIndex = 5;
             this.confirmBtn.Text = "確定";
             this.confirmBtn.UseVisualStyleBackColor = true;
+            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             // 
             // giveOrderListDgv
             // 
@@ -137,29 +138,11 @@
             this.completeBtn.Text = "完了";
             this.completeBtn.UseVisualStyleBackColor = true;
             // 
-            // quantityTbox
-            // 
-            this.quantityTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.quantityTbox.Location = new System.Drawing.Point(629, 554);
-            this.quantityTbox.MaxLength = 6;
-            this.quantityTbox.Name = "quantityTbox";
-            this.quantityTbox.Size = new System.Drawing.Size(83, 36);
-            this.quantityTbox.TabIndex = 4;
-            // 
-            // itemIdTbox
-            // 
-            this.itemIdTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.itemIdTbox.Location = new System.Drawing.Point(286, 298);
-            this.itemIdTbox.MaxLength = 6;
-            this.itemIdTbox.Name = "itemIdTbox";
-            this.itemIdTbox.Size = new System.Drawing.Size(218, 36);
-            this.itemIdTbox.TabIndex = 2;
-            // 
             // quantityLbl
             // 
             this.quantityLbl.AutoSize = true;
             this.quantityLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.quantityLbl.Location = new System.Drawing.Point(641, 501);
+            this.quantityLbl.Location = new System.Drawing.Point(639, 501);
             this.quantityLbl.Name = "quantityLbl";
             this.quantityLbl.Size = new System.Drawing.Size(71, 29);
             this.quantityLbl.TabIndex = 0;
@@ -213,12 +196,36 @@
             this.clearBtn.Text = "削除";
             this.clearBtn.UseVisualStyleBackColor = true;
             // 
+            // itemIdMaskedTbox
+            // 
+            this.itemIdMaskedTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F);
+            this.itemIdMaskedTbox.Location = new System.Drawing.Point(286, 298);
+            this.itemIdMaskedTbox.Mask = "999999";
+            this.itemIdMaskedTbox.Name = "itemIdMaskedTbox";
+            this.itemIdMaskedTbox.PromptChar = ' ';
+            this.itemIdMaskedTbox.Size = new System.Drawing.Size(218, 36);
+            this.itemIdMaskedTbox.TabIndex = 9;
+            this.itemIdMaskedTbox.Click += new System.EventHandler(this.itemIdMaskedTbox_Click);
+            // 
+            // quantityMaskedTbox
+            // 
+            this.quantityMaskedTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F);
+            this.quantityMaskedTbox.Location = new System.Drawing.Point(618, 561);
+            this.quantityMaskedTbox.Mask = "999999";
+            this.quantityMaskedTbox.Name = "quantityMaskedTbox";
+            this.quantityMaskedTbox.PromptChar = ' ';
+            this.quantityMaskedTbox.Size = new System.Drawing.Size(108, 36);
+            this.quantityMaskedTbox.TabIndex = 10;
+            this.quantityMaskedTbox.Click += new System.EventHandler(this.quantityMaskedTbox_Click);
+            // 
             // GiveOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
+            this.Controls.Add(this.quantityMaskedTbox);
+            this.Controls.Add(this.itemIdMaskedTbox);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.searchResultLbl);
             this.Controls.Add(this.itemNameLbl);
@@ -231,8 +238,6 @@
             this.Controls.Add(this.itemsViewDgv);
             this.Controls.Add(this.allClearBtn);
             this.Controls.Add(this.completeBtn);
-            this.Controls.Add(this.quantityTbox);
-            this.Controls.Add(this.itemIdTbox);
             this.Controls.Add(this.quantityLbl);
             this.Controls.Add(this.giveOrderTitleLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -255,16 +260,15 @@
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.TextBox itemNameTbox;
         private System.Windows.Forms.DataGridView itemsViewDgv;
-        private System.Windows.Forms.TextBox quantityTbox;
         private System.Windows.Forms.Button allClearBtn;
         private System.Windows.Forms.Button completeBtn;
-
-        private System.Windows.Forms.TextBox itemIdTbox;
         private System.Windows.Forms.Label quantityLbl;
         private System.Windows.Forms.Label itemNameLbl;
         private System.Windows.Forms.Label itemIdLbl;
         private System.Windows.Forms.Label searchResultLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button clearBtn;
+        private System.Windows.Forms.MaskedTextBox itemIdMaskedTbox;
+        private System.Windows.Forms.MaskedTextBox quantityMaskedTbox;
     }
 }
