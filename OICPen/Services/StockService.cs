@@ -16,7 +16,7 @@ namespace OICPen.Services
             this.context = context;
         }
 
-        public void WriteStock(Models.Stock s)
+        public void WriteStock(StockT s)
         {
             var stock = context.Stocks.Add(s);
         }

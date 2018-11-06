@@ -92,11 +92,11 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\ClientT.cs" />
     <Compile Include="Models\Configration.cs" />
-    <Compile Include="Models\GiveOrder.cs" />
-    <Compile Include="Models\GiveOrderDetail.cs" />
-    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\GiveOrderT.cs" />
+    <Compile Include="Models\GiveOrderDetailT.cs" />
+    <Compile Include="Models\ItemT.cs" />
     <Compile Include="Models\OICPenDbContext.cs" />
     <Compile Include="LogOut.cs">
       <SubType>Form</SubType>
@@ -104,10 +104,10 @@
     <Compile Include="LogOut.Designer.cs">
       <DependentUpon>LogOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Staff.cs" />
-    <Compile Include="Models\Stock.cs" />
-    <Compile Include="Models\TakeOrder.cs" />
-    <Compile Include="Models\TakeOrderDetail.cs" />
+    <Compile Include="Models\StaffT.cs" />
+    <Compile Include="Models\StockT.cs" />
+    <Compile Include="Models\TakeOrderT.cs" />
+    <Compile Include="Models\TakeOrderDetailT.cs" />
     <Compile Include="Sales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,8 +115,10 @@
       <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\ClientService.cs" />
+    <Compile Include="Services\GiveOrderDetailService.cs" />
     <Compile Include="Services\GiveOrderService.cs" />
     <Compile Include="Services\ItemService.cs" />
+    <Compile Include="Services\StockService.cs" />
     <Compile Include="Services\TakeOrderDetailService.cs" />
     <Compile Include="Services\TakeOrderService.cs" />
     <Compile Include="Ship.cs">

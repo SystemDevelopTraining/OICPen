@@ -24,9 +24,9 @@ namespace OICPen.Services
                 order: 登録したい注文
          [返り値] なし
          ---------------------------------------------------------------*/
-        public void AddTakeOrderDetail(Item item, int quantity, Models.GiveOrder order)
+        public void AddTakeOrderDetail(ItemT item, int quantity, Models.GiveOrderT order)
         {
-            var orderDetails = new GiveOrderDetail { Itemid = item.Id, Quantity = quantity, GiveOrderId = order.Id };
+            var orderDetails = new GiveOrderDetailT { Itemid = item.Id, Quantity = (uint)quantity, GiveOrderId = order.Id };
             context.SaveChanges();
         }
 

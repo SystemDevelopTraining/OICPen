@@ -8,14 +8,14 @@
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<OICPenDbContext, Configuration>());
         }
-        public virtual DbSet<GiveOrder> GiveOrders { get; set; }
-        public virtual DbSet<GiveOrderDetail> GiveOrderDetails { get; set; }
-        public virtual DbSet<Client> Clients { get; set; }
-        public virtual DbSet<TakeOrder> TakeOrders { get; set; }
-        public virtual DbSet<TakeOrderDetail> TakeOrderDetails { get; set; }
-        public virtual DbSet<Item> Items { get; set; }
-        public virtual DbSet<Stock> Stocks { get; set; }
-        public virtual DbSet<Staff> Staffs { get; set; }
+        public virtual DbSet<GiveOrderT> GiveOrders { get; set; }
+        public virtual DbSet<GiveOrderDetailT> GiveOrderDetails { get; set; }
+        public virtual DbSet<ClientT> Clients { get; set; }
+        public virtual DbSet<TakeOrderT> TakeOrders { get; set; }
+        public virtual DbSet<TakeOrderDetailT> TakeOrderDetails { get; set; }
+        public virtual DbSet<ItemT> Items { get; set; }
+        public virtual DbSet<StockT> Stocks { get; set; }
+        public virtual DbSet<StaffT> Staffs { get; set; }
 
     }
 }
