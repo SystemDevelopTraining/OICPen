@@ -2,7 +2,7 @@
 
 namespace OICPen.Models
 {
-    public class Client
+    public class ClientT
     {
         [Key]
         public int Id { get; set; } // 会員ID

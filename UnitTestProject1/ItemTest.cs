@@ -14,19 +14,19 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            var data = new List<Item>
+            var data = new List<ItemT>
             {
-                new Item {Name = "鉛筆", Hurigana = "えんぴつ" , JAN = "1234567890123", PurchasePrice = 50, Price = 100, SafetyStock = 30, RegistDate = DateTime.Now,  Note = "", IsDeleted = false},
-                new Item {Name = "シャープペンシル", Hurigana = "しゃーぷぺんしる" , JAN = "0123456789012", PurchasePrice = 100, Price = 120, SafetyStock = 40, RegistDate = DateTime.Now,  Note = "", IsDeleted = false}
+                new ItemT {Name = "鉛筆", Hurigana = "えんぴつ" , JAN = "1234567890123", PurchasePrice = 50, Price = 100, SafetyStock = 30, RegistDate = DateTime.Now,  Note = "", IsDeleted = false},
+                new ItemT {Name = "シャープペンシル", Hurigana = "しゃーぷぺんしる" , JAN = "0123456789012", PurchasePrice = 100, Price = 120, SafetyStock = 40, RegistDate = DateTime.Now,  Note = "", IsDeleted = false}
             }.AsQueryable();
 
 
 
-            var mockSet = new Mock<DbSet<Item>>();
-            mockSet.As<IQueryable<Item>>().Setup(m => m.Provider).Returns(data.Provider);
-            mockSet.As<IQueryable<Item>>().Setup(m => m.Expression).Returns(data.Expression);
-            mockSet.As<IQueryable<Item>>().Setup(m => m.ElementType).Returns(data.ElementType);
-            mockSet.As<IQueryable<Item>>().Setup(m => m.GetEnumerator()).Returns(data.GetEnumerator());
+            var mockSet = new Mock<DbSet<ItemT>>();
+            mockSet.As<IQueryable<ItemT>>().Setup(m => m.Provider).Returns(data.Provider);
+            mockSet.As<IQueryable<ItemT>>().Setup(m => m.Expression).Returns(data.Expression);
+            mockSet.As<IQueryable<ItemT>>().Setup(m => m.ElementType).Returns(data.ElementType);
+            mockSet.As<IQueryable<ItemT>>().Setup(m => m.GetEnumerator()).Returns(data.GetEnumerator());
 
             var mockContext = new Mock<OICPenDbContext>();
             mockContext.Setup(c => c.Items).Returns(mockSet.Object);
@@ -38,11 +38,11 @@ namespace UnitTestProject1
             Assert.AreEqual(2, items.Count);
             Assert.AreEqual("しゃーぷぺんしる", items[1].Hurigana);
 
-            var i = new Item { Name = "消しゴム", Hurigana = "けしごむ", JAN = "9012345678901", PurchasePrice = 30, Price = 80, SafetyStock = 30, RegistDate = DateTime.Now, Note = "よく消える", IsDeleted = false };
+            var i = new ItemT { Name = "消しゴム", Hurigana = "けしごむ", JAN = "9012345678901", PurchasePrice = 30, Price = 80, SafetyStock = 30, RegistDate = DateTime.Now, Note = "よく消える", IsDeleted = false };
 
             service.AddItem(i);
 
-            mockSet.Verify(m => m.Add(It.Is<Item>(x => i.Name == x.Name)), Times.Exactly(1));
+            mockSet.Verify(m => m.Add(It.Is<ItemT>(x => i.Name == x.Name)), Times.Exactly(1));
             mockContext.Verify(m => m.SaveChanges(), Times.Exactly(1));
 
         }

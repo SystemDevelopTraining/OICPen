@@ -2,7 +2,7 @@
 
 namespace OICPen.Models
 {
-    public class Staff
+    public class StaffT
     {
         [Key]
         public int Id { get; set; } // 社員ID

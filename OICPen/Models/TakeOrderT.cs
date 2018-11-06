@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OICPen.Models
 {
-    public class TakeOrder
+    public class TakeOrderT
     {
         [Key]
         public int Id { get; set; } //注文ID
@@ -16,6 +16,6 @@ namespace OICPen.Models
         public int ClientId { get; set; } // 会員ID
 
         [ForeignKey("ClientId")]
-        public virtual Client Client { get; set; }
+        public virtual ClientT Client { get; set; }
     }
 }
