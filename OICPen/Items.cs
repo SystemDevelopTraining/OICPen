@@ -51,7 +51,7 @@ namespace OICPen
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            if (searchItemIdTbox.Text == "" || searchItemNameTbox.Text == "" || searchJanTbox.Text == "")
+            if (searchItemIdTbox.Text == "" && searchItemNameTbox.Text == "" && searchJanTbox.Text == "")
             {
                 MessageBox.Show("検索内容を入力してください。", "エラー",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
