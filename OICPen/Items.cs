@@ -18,23 +18,45 @@ namespace OICPen
             InitializeComponent();
         }
 
-        private void searchBtn_Click(object sender, EventArgs e)
-        {
-           
-        }
-
+       
         private void searchItemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Regex.IsMatch(e.KeyChar.ToString(), "[0-9]")/*!Char.IsDigit(e.KeyChar)*/ && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-
+            Utility.textBoxDigitCheck(searchItemIdTbox,e);
         }
 
-        private void searchItemNameTbox_KeyPress(object sender, KeyPressEventArgs e)
+        private void searchJanTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Utility.textBoxDigitCheck(searchJanTbox, e);
+        }
 
+        private void purchasePriceTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.textBoxDigitCheck(purchasePriceTbox, e);
+        }
+
+        private void priceTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.textBoxDigitCheck(priceTbox, e);
+        }
+
+        private void janTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.textBoxDigitCheck(janTbox, e);
+        }
+
+        private void safetyStockTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.textBoxDigitCheck(safetyStockTbox, e);
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            if (searchItemIdTbox.Text == "" || searchItemNameTbox.Text == "" || searchJanTbox.Text == "")
+            {
+                MessageBox.Show("検索内容を入力してください。", "エラー",MessageBoxButtons.OK,MessageBoxIcon.Error);
+
+            }
+           
         }
     }
 }

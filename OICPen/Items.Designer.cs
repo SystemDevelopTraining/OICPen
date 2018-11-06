@@ -242,6 +242,7 @@
             this.janTbox.Name = "janTbox";
             this.janTbox.Size = new System.Drawing.Size(284, 36);
             this.janTbox.TabIndex = 10;
+            this.janTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.janTbox_KeyPress);
             // 
             // priceTbox
             // 
@@ -251,6 +252,7 @@
             this.priceTbox.Name = "priceTbox";
             this.priceTbox.Size = new System.Drawing.Size(284, 36);
             this.priceTbox.TabIndex = 9;
+            this.priceTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.priceTbox_KeyPress);
             // 
             // noteTbox
             // 
@@ -271,6 +273,7 @@
             this.safetyStockTbox.Name = "safetyStockTbox";
             this.safetyStockTbox.Size = new System.Drawing.Size(284, 36);
             this.safetyStockTbox.TabIndex = 11;
+            this.safetyStockTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.safetyStockTbox_KeyPress);
             // 
             // furiganaTbox
             // 
@@ -315,7 +318,6 @@
             this.searchItemNameTbox.Name = "searchItemNameTbox";
             this.searchItemNameTbox.Size = new System.Drawing.Size(284, 36);
             this.searchItemNameTbox.TabIndex = 3;
-            this.searchItemNameTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchItemNameTbox_KeyPress);
             // 
             // searchJanTbox
             // 
@@ -325,6 +327,7 @@
             this.searchJanTbox.Name = "searchJanTbox";
             this.searchJanTbox.Size = new System.Drawing.Size(284, 36);
             this.searchJanTbox.TabIndex = 2;
+            this.searchJanTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchJanTbox_KeyPress);
             // 
             // itemsUpdateBtn
             // 
@@ -385,6 +388,7 @@
             this.purchasePriceTbox.Name = "purchasePriceTbox";
             this.purchasePriceTbox.Size = new System.Drawing.Size(284, 36);
             this.purchasePriceTbox.TabIndex = 8;
+            this.purchasePriceTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.purchasePriceTbox_KeyPress);
             // 
             // Items
             // 
