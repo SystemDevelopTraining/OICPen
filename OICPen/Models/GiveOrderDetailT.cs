@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OICPen.Models
 {
-    public class GiveOrderDetail
+    public class GiveOrderDetailT
     {
         [Key]
         public int Id { get; set; } // 注文明細ID
@@ -15,8 +15,8 @@ namespace OICPen.Models
         public uint Quantity { get; set; } // 数量
 
         [ForeignKey("GiveOrderId")]
-        public virtual GiveOrder GiveOrder { get; set; }
+        public virtual GiveOrderT GiveOrder { get; set; }
         [ForeignKey("ItemId")]
-        public virtual Item Item { get; set; }
+        public virtual ItemT Item { get; set; }
     }
 }

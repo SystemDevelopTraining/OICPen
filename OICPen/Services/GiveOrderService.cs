@@ -21,7 +21,7 @@ namespace OICPen.Services
          [引数] g: 追加する発注情報
          [返り値] 追加した発注情報
          ---------------------------------------------------------------*/
-        public Models.GiveOrder AddGiveOrderst(Models.GiveOrder g)
+        public GiveOrderT AddGiveOrderst(Models.GiveOrderT g)
         {
             var giveOrder = context.GiveOrders.Add(g);
             context.SaveChanges();
@@ -34,7 +34,7 @@ namespace OICPen.Services
          [引数] なし
          [返り値] すべての発注情報
          ---------------------------------------------------------------*/
-        public List<Models.GiveOrder> GetGiveOrders()
+        public List<Models.GiveOrderT> GetGiveOrders()
         {
             var giveOrders = from c in context.GiveOrders
                         orderby c.Id
@@ -49,7 +49,7 @@ namespace OICPen.Services
          [返り値] すべての発注情報
          ---------------------------------------------------------------*/
 
-        public void InComining(Models.GiveOrder g)
+        public void InComining(Models.GiveOrderT g)
         {
             var giveOrder = context.GiveOrders.Single(x => x.Id == g.Id);
             giveOrder.CompleteDate = DateTime.Now;
