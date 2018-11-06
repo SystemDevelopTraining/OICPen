@@ -55,12 +55,25 @@
             this.searchIdMaskdTbox = new System.Windows.Forms.MaskedTextBox();
             this.phoneNumberMaskedTbox = new System.Windows.Forms.MaskedTextBox();
             this.postalCodeMaskedTbox = new System.Windows.Forms.MaskedTextBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.furigana = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // clientsDgv
             // 
             this.clientsDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clientsDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.name,
+            this.furigana,
+            this.phoneNumber,
+            this.postalCode,
+            this.address});
             this.clientsDgv.Location = new System.Drawing.Point(12, 21);
             this.clientsDgv.Name = "clientsDgv";
             this.clientsDgv.RowTemplate.Height = 21;
@@ -339,6 +352,36 @@
             this.postalCodeMaskedTbox.TabIndex = 36;
             this.postalCodeMaskedTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.postalCodeMaskedTbox_KeyPress);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // name
+            // 
+            this.name.HeaderText = "名前";
+            this.name.Name = "name";
+            // 
+            // furigana
+            // 
+            this.furigana.HeaderText = "ふりがな";
+            this.furigana.Name = "furigana";
+            // 
+            // phoneNumber
+            // 
+            this.phoneNumber.HeaderText = "電話番号";
+            this.phoneNumber.Name = "phoneNumber";
+            // 
+            // postalCode
+            // 
+            this.postalCode.HeaderText = "郵便番号";
+            this.postalCode.Name = "postalCode";
+            // 
+            // address
+            // 
+            this.address.HeaderText = "住所";
+            this.address.Name = "address";
+            // 
             // Clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -411,5 +454,11 @@
         private System.Windows.Forms.MaskedTextBox searchIdMaskdTbox;
         private System.Windows.Forms.MaskedTextBox phoneNumberMaskedTbox;
         private System.Windows.Forms.MaskedTextBox postalCodeMaskedTbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn furigana;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn postalCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn address;
     }
 }
