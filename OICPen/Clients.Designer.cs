@@ -52,9 +52,9 @@
             this.idDispLbl = new System.Windows.Forms.Label();
             this.regAndUpdSubtTtleLbl = new System.Windows.Forms.Label();
             this.searchClientSubTitleLbl = new System.Windows.Forms.Label();
-            this.searchIdMaskdTbox = new System.Windows.Forms.MaskedTextBox();
             this.phoneNumberMaskedTbox = new System.Windows.Forms.MaskedTextBox();
             this.postalCodeMaskedTbox = new System.Windows.Forms.MaskedTextBox();
+            this.searchIdTbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             this.clientsDgv.Name = "clientsDgv";
             this.clientsDgv.RowTemplate.Height = 21;
             this.clientsDgv.Size = new System.Drawing.Size(900, 949);
-            this.clientsDgv.TabIndex = 0;
+            this.clientsDgv.TabIndex = 5;
             // 
             // registBtn
             // 
@@ -74,7 +74,7 @@
             this.registBtn.Location = new System.Drawing.Point(1099, 840);
             this.registBtn.Name = "registBtn";
             this.registBtn.Size = new System.Drawing.Size(186, 58);
-            this.registBtn.TabIndex = 2;
+            this.registBtn.TabIndex = 11;
             this.registBtn.Text = "新規登録";
             this.registBtn.UseVisualStyleBackColor = true;
             this.registBtn.Click += new System.EventHandler(this.registBtn_Click);
@@ -98,7 +98,7 @@
             this.clearBtn.Location = new System.Drawing.Point(1323, 342);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(186, 58);
-            this.clearBtn.TabIndex = 5;
+            this.clearBtn.TabIndex = 0;
             this.clearBtn.Text = "条件クリア";
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
@@ -120,7 +120,7 @@
             this.nameTbox.MaxLength = 30;
             this.nameTbox.Name = "nameTbox";
             this.nameTbox.Size = new System.Drawing.Size(404, 40);
-            this.nameTbox.TabIndex = 7;
+            this.nameTbox.TabIndex = 6;
             // 
             // nameLbl
             // 
@@ -152,7 +152,7 @@
             this.updateBtn.Location = new System.Drawing.Point(1317, 840);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(186, 58);
-            this.updateBtn.TabIndex = 15;
+            this.updateBtn.TabIndex = 12;
             this.updateBtn.Text = "更新";
             this.updateBtn.UseVisualStyleBackColor = true;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
@@ -186,7 +186,7 @@
             this.addressTbox.Name = "addressTbox";
             this.addressTbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.addressTbox.Size = new System.Drawing.Size(404, 80);
-            this.addressTbox.TabIndex = 17;
+            this.addressTbox.TabIndex = 10;
             // 
             // postalCodeLbl
             // 
@@ -216,7 +216,7 @@
             this.huriganaTbox.MaxLength = 30;
             this.huriganaTbox.Name = "huriganaTbox";
             this.huriganaTbox.Size = new System.Drawing.Size(404, 40);
-            this.huriganaTbox.TabIndex = 24;
+            this.huriganaTbox.TabIndex = 7;
             // 
             // huriganaLbl
             // 
@@ -235,7 +235,7 @@
             this.searchHuriganaTbox.MaxLength = 30;
             this.searchHuriganaTbox.Name = "searchHuriganaTbox";
             this.searchHuriganaTbox.Size = new System.Drawing.Size(404, 40);
-            this.searchHuriganaTbox.TabIndex = 30;
+            this.searchHuriganaTbox.TabIndex = 3;
             // 
             // searchHuriganaLbl
             // 
@@ -254,7 +254,7 @@
             this.searchNameTbox.MaxLength = 30;
             this.searchNameTbox.Name = "searchNameTbox";
             this.searchNameTbox.Size = new System.Drawing.Size(404, 40);
-            this.searchNameTbox.TabIndex = 28;
+            this.searchNameTbox.TabIndex = 1;
             // 
             // searchNameLbl
             // 
@@ -306,18 +306,6 @@
             this.searchClientSubTitleLbl.TabIndex = 33;
             this.searchClientSubTitleLbl.Text = "会員検索";
             // 
-            // searchIdMaskdTbox
-            // 
-            this.searchIdMaskdTbox.Font = new System.Drawing.Font("HGP創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.searchIdMaskdTbox.Location = new System.Drawing.Point(1105, 240);
-            this.searchIdMaskdTbox.Mask = "999999";
-            this.searchIdMaskdTbox.Name = "searchIdMaskdTbox";
-            this.searchIdMaskdTbox.PromptChar = '‐';
-            this.searchIdMaskdTbox.ResetOnSpace = false;
-            this.searchIdMaskdTbox.Size = new System.Drawing.Size(108, 36);
-            this.searchIdMaskdTbox.TabIndex = 29;
-            this.searchIdMaskdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchIdMaskdTbox_KeyPress);
-            // 
             // phoneNumberMaskedTbox
             // 
             this.phoneNumberMaskedTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
@@ -325,7 +313,8 @@
             this.phoneNumberMaskedTbox.Mask = "9990-9990-0000";
             this.phoneNumberMaskedTbox.Name = "phoneNumberMaskedTbox";
             this.phoneNumberMaskedTbox.Size = new System.Drawing.Size(295, 40);
-            this.phoneNumberMaskedTbox.TabIndex = 35;
+            this.phoneNumberMaskedTbox.TabIndex = 8;
+            this.phoneNumberMaskedTbox.Click += new System.EventHandler(this.phoneNumberMaskedTbox_Click);
             this.phoneNumberMaskedTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberMaskedTbox_KeyPress);
             // 
             // postalCodeMaskedTbox
@@ -336,8 +325,19 @@
             this.postalCodeMaskedTbox.Mask = "000-0000";
             this.postalCodeMaskedTbox.Name = "postalCodeMaskedTbox";
             this.postalCodeMaskedTbox.Size = new System.Drawing.Size(192, 40);
-            this.postalCodeMaskedTbox.TabIndex = 36;
+            this.postalCodeMaskedTbox.TabIndex = 9;
+            this.postalCodeMaskedTbox.Click += new System.EventHandler(this.postalCodeMaskedTbox_Click);
             this.postalCodeMaskedTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.postalCodeMaskedTbox_KeyPress);
+            // 
+            // searchIdTbox
+            // 
+            this.searchIdTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.searchIdTbox.Location = new System.Drawing.Point(1105, 237);
+            this.searchIdTbox.MaxLength = 6;
+            this.searchIdTbox.Name = "searchIdTbox";
+            this.searchIdTbox.Size = new System.Drawing.Size(108, 40);
+            this.searchIdTbox.TabIndex = 2;
+            this.searchIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchIdTbox_KeyPress);
             // 
             // Clients
             // 
@@ -348,12 +348,12 @@
             this.ControlBox = false;
             this.Controls.Add(this.postalCodeMaskedTbox);
             this.Controls.Add(this.phoneNumberMaskedTbox);
-            this.Controls.Add(this.searchIdMaskdTbox);
             this.Controls.Add(this.searchClientSubTitleLbl);
             this.Controls.Add(this.regAndUpdSubtTtleLbl);
             this.Controls.Add(this.idDispLbl);
             this.Controls.Add(this.searchHuriganaTbox);
             this.Controls.Add(this.searchHuriganaLbl);
+            this.Controls.Add(this.searchIdTbox);
             this.Controls.Add(this.searchNameTbox);
             this.Controls.Add(this.searchNameLbl);
             this.Controls.Add(this.searchIdLbl);
@@ -408,8 +408,8 @@
         private System.Windows.Forms.Label idDispLbl;
         private System.Windows.Forms.Label regAndUpdSubtTtleLbl;
         private System.Windows.Forms.Label searchClientSubTitleLbl;
-        private System.Windows.Forms.MaskedTextBox searchIdMaskdTbox;
         private System.Windows.Forms.MaskedTextBox phoneNumberMaskedTbox;
         private System.Windows.Forms.MaskedTextBox postalCodeMaskedTbox;
+        private System.Windows.Forms.TextBox searchIdTbox;
     }
 }

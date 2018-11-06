@@ -22,15 +22,15 @@ namespace OICPen
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            searchIdMaskdTbox.Text = "";
+            searchIdTbox.Text = "";
             searchNameTbox.Text = "";
             searchHuriganaTbox.Text = "";
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            uint i=0;
-            string[] search=new string[] { searchNameTbox.Text,searchIdMaskdTbox.Text,searchHuriganaTbox.Text };
+            uint i=0; 
+            string[] search=new string[] { searchNameTbox.Text,searchIdTbox.Text,searchHuriganaTbox.Text };
             var ckecks = new Func<string, string>[] { (x) => "", (x) => "", HiraganaCheek };
             search.Zip(ckecks,(item,check)=> {
                 if (NullCheek(item))
@@ -123,20 +123,32 @@ namespace OICPen
         private void phoneNumberMaskedTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == ' ')
-                e.KeyChar=(char)0;
+                e.KeyChar = (char)0;
+            Utility.maskedTboxStart(phoneNumberMaskedTbox);
+
         }
 
         private void postalCodeMaskedTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == ' ')
                 e.KeyChar = (char)0;
+          
         }
 
-        private void searchIdMaskdTbox_KeyPress(object sender, KeyPressEventArgs e)
+  
+        private void searchIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == ' ')
-                e.KeyChar = (char)0;
+            Utility.textBoxDigitCheck(searchIdTbox,e);
         }
-        
+
+        private void phoneNumberMaskedTbox_Click(object sender, EventArgs e)
+        {
+            phoneNumberMaskedTbox.SelectionStart = 0;
+        }
+
+        private void postalCodeMaskedTbox_Click(object sender, EventArgs e)
+        {
+            postalCodeMaskedTbox.SelectionStart = 0;
+        }
     }
 }
