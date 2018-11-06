@@ -42,8 +42,6 @@
             this.safetyStockLbl = new System.Windows.Forms.Label();
             this.furiganaLbl = new System.Windows.Forms.Label();
             this.priceLbl = new System.Windows.Forms.Label();
-            this.janTbox = new System.Windows.Forms.TextBox();
-            this.priceTbox = new System.Windows.Forms.TextBox();
             this.noteTbox = new System.Windows.Forms.TextBox();
             this.safetyStockTbox = new System.Windows.Forms.TextBox();
             this.furiganaTbox = new System.Windows.Forms.TextBox();
@@ -59,6 +57,9 @@
             this.searchJanMaskedTbox = new System.Windows.Forms.MaskedTextBox();
             this.purchasePriceMaskedTbox = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.priceTbox = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.itemDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,6 +116,7 @@
             this.itemDgv.RowTemplate.Height = 21;
             this.itemDgv.Size = new System.Drawing.Size(890, 949);
             this.itemDgv.TabIndex = 5;
+            this.itemDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemDgv_CellContentClick);
             // 
             // searchBtn
             // 
@@ -227,24 +229,6 @@
             this.priceLbl.TabIndex = 16;
             this.priceLbl.Text = "販売価格：";
             // 
-            // janTbox
-            // 
-            this.janTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.janTbox.Location = new System.Drawing.Point(1163, 632);
-            this.janTbox.MaxLength = 13;
-            this.janTbox.Name = "janTbox";
-            this.janTbox.Size = new System.Drawing.Size(284, 36);
-            this.janTbox.TabIndex = 10;
-            // 
-            // priceTbox
-            // 
-            this.priceTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.priceTbox.Location = new System.Drawing.Point(1163, 589);
-            this.priceTbox.MaxLength = 6;
-            this.priceTbox.Name = "priceTbox";
-            this.priceTbox.Size = new System.Drawing.Size(284, 36);
-            this.priceTbox.TabIndex = 9;
-            // 
             // noteTbox
             // 
             this.noteTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
@@ -268,11 +252,13 @@
             // furiganaTbox
             // 
             this.furiganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.furiganaTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.furiganaTbox.Location = new System.Drawing.Point(1163, 506);
             this.furiganaTbox.MaxLength = 30;
             this.furiganaTbox.Name = "furiganaTbox";
             this.furiganaTbox.Size = new System.Drawing.Size(284, 36);
             this.furiganaTbox.TabIndex = 7;
+            this.furiganaTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.furiganaTbox_KeyPress);
             // 
             // searchItemNameLbl
             // 
@@ -372,6 +358,7 @@
             this.searchItemIdMaskedTbox.TabIndex = 26;
             this.searchItemIdMaskedTbox.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.searchItemIdMaskedTbox.Click += new System.EventHandler(this.searchItemIdMaskedTbox_Click);
+            this.searchItemIdMaskedTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchItemIdMaskedTbox_KeyPress);
             // 
             // searchJanMaskedTbox
             // 
@@ -388,6 +375,7 @@
             // purchasePriceMaskedTbox
             // 
             this.purchasePriceMaskedTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.purchasePriceMaskedTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.purchasePriceMaskedTbox.Location = new System.Drawing.Point(1198, 548);
             this.purchasePriceMaskedTbox.Mask = "999999";
             this.purchasePriceMaskedTbox.Name = "purchasePriceMaskedTbox";
@@ -396,6 +384,8 @@
             this.purchasePriceMaskedTbox.TabIndex = 28;
             this.purchasePriceMaskedTbox.Tag = "";
             this.purchasePriceMaskedTbox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.purchasePriceMaskedTbox_MaskInputRejected);
+            this.purchasePriceMaskedTbox.Click += new System.EventHandler(this.purchasePriceMaskedTbox_Click);
+            this.purchasePriceMaskedTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.purchasePriceMaskedTbox_KeyPress);
             // 
             // label1
             // 
@@ -409,12 +399,52 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "\\";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(1164, 592);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 29);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "\\";
+            // 
+            // priceTbox
+            // 
+            this.priceTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.priceTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.priceTbox.Location = new System.Drawing.Point(1198, 589);
+            this.priceTbox.Mask = "999999";
+            this.priceTbox.Name = "priceTbox";
+            this.priceTbox.PromptChar = ' ';
+            this.priceTbox.Size = new System.Drawing.Size(113, 36);
+            this.priceTbox.TabIndex = 31;
+            this.priceTbox.Tag = "";
+            this.priceTbox.Click += new System.EventHandler(this.priceTbox_Click);
+            this.priceTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.priceTbox_KeyPress);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.maskedTextBox1.Location = new System.Drawing.Point(1163, 628);
+            this.maskedTextBox1.Mask = "9999999999999";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.PromptChar = ' ';
+            this.maskedTextBox1.ShortcutsEnabled = false;
+            this.maskedTextBox1.Size = new System.Drawing.Size(198, 36);
+            this.maskedTextBox1.TabIndex = 32;
+            // 
             // Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.priceTbox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.purchasePriceMaskedTbox);
             this.Controls.Add(this.searchJanMaskedTbox);
@@ -429,9 +459,7 @@
             this.Controls.Add(this.furiganaTbox);
             this.Controls.Add(this.safetyStockTbox);
             this.Controls.Add(this.noteTbox);
-            this.Controls.Add(this.priceTbox);
             this.Controls.Add(this.purchasePriceLbl);
-            this.Controls.Add(this.janTbox);
             this.Controls.Add(this.priceLbl);
             this.Controls.Add(this.furiganaLbl);
             this.Controls.Add(this.safetyStockLbl);
@@ -472,8 +500,6 @@
         private System.Windows.Forms.Label safetyStockLbl;
         private System.Windows.Forms.Label furiganaLbl;
         private System.Windows.Forms.Label priceLbl;
-        private System.Windows.Forms.TextBox janTbox;
-        private System.Windows.Forms.TextBox priceTbox;
         private System.Windows.Forms.TextBox noteTbox;
         private System.Windows.Forms.TextBox safetyStockTbox;
         private System.Windows.Forms.TextBox furiganaTbox;
@@ -489,5 +515,8 @@
         private System.Windows.Forms.MaskedTextBox searchJanMaskedTbox;
         private System.Windows.Forms.MaskedTextBox purchasePriceMaskedTbox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox priceTbox;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
