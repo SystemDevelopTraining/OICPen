@@ -105,5 +105,24 @@ namespace OICPen
             MessageBox.Show("郵便番号が正しく記入されてません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
+
+        private void phoneNumberMaskedTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+                e.KeyChar=(char)0;
+        }
+
+        private void postalCodeMaskedTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+                e.KeyChar = (char)0;
+        }
+
+        private void searchIdMaskdTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+                e.KeyChar = (char)0;
+        }
+        
     }
 }
