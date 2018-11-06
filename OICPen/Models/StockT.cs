@@ -6,13 +6,11 @@ namespace OICPen.Models
 {
     public class StockT
     {
-        [Key, Column(Order = 2)]
+        [Key]
         public DateTime Date { get; set; } // 年月
-        [ForeignKey("Items")]
-        [Key,Column(Order = 1)]
-        public int ItemID { get; set; }　// 商品ID
+        public int ItemTID { get; set; }　// 商品ID
         public uint Quantity { get; set; } // 在庫数
 
-        public virtual Items Items { get; set; }
+        public virtual ItemT ItemT { get; set; }
     }
 }

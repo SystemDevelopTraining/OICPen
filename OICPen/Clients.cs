@@ -50,7 +50,7 @@ namespace OICPen
 
         private void registBtn_Click(object sender, EventArgs e)
         {
-            var client = new Models.Client();
+            var client = new Models.ClientT();
             client.Name = nameTbox.Text;
             client.Hurigana = huriganaTbox.Text;
             client.PhoneNum = phoneNumberMaskedTbox.Text;

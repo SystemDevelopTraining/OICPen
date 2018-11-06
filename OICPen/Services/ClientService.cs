@@ -25,7 +25,7 @@ namespace OICPen.Services
         public List<ClientT> GetClients()
         {
             var clients = from c in context.Clients
-                        orderby c.Id
+                        orderby c.ClientTID
                         select c;
 
             return clients.ToList();
@@ -51,7 +51,7 @@ namespace OICPen.Services
          ---------------------------------------------------------------*/
         public ClientT UpdateItem(ClientT c)
         {
-            var client = context.Clients.Single(x => x.Id == c.Id);
+            var client = context.Clients.Single(x => x.ClientTID == c.ClientTID);
             client.Name = c.Name;
             client.Hurigana = c.Hurigana;
             client.Address = c.Address;

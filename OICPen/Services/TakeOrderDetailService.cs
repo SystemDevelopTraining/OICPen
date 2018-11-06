@@ -26,7 +26,7 @@ namespace OICPen.Services
          ---------------------------------------------------------------*/
         public void AddTakeOrderDetail(ItemT item, int quantity, Models.TakeOrderT order)
         {
-            var orderDetails = new TakeOrderDetailT { ItemId = item.Id, Quantity = (uint)quantity, TakeOrderId = order.Id };
+            var orderDetails = new TakeOrderDetailT { ItemTID = item.ItemTID, Quantity = (uint)quantity, TakeOrderTID = order.TakeOrderTID };
             context.SaveChanges();
         }
     }

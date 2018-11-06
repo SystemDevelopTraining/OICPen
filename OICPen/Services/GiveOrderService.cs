@@ -37,7 +37,7 @@ namespace OICPen.Services
         public List<Models.GiveOrderT> GetGiveOrders()
         {
             var giveOrders = from c in context.GiveOrders
-                        orderby c.Id
+                        orderby c.GiveOrderTID
                         select c;
 
             return giveOrders.ToList();
@@ -51,7 +51,7 @@ namespace OICPen.Services
 
         public void InComining(Models.GiveOrderT g)
         {
-            var giveOrder = context.GiveOrders.Single(x => x.Id == g.Id);
+            var giveOrder = context.GiveOrders.Single(x => x.GiveOrderTID == g.GiveOrderTID);
             giveOrder.CompleteDate = DateTime.Now;
         }
     }

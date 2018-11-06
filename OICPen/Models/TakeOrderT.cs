@@ -7,15 +7,12 @@ namespace OICPen.Models
 {
     public class TakeOrderT
     {
-        [Key]
-        public int Id { get; set; } //注文ID
-        [Required]
+        public int TakeOrderTID { get; set; } //注文ID
         public DateTime TakeOrdDate { get; set; } // 注文日
         public DateTime? ShipDate { get; set; } // 出庫日
-        [Required]
-        public int ClientId { get; set; } // 会員ID
+        public int ClientTID { get; set; } // 会員ID
 
-        [ForeignKey("ClientId")]
-        public virtual ClientT Client { get; set; }
+        
+        public virtual ClientT ClientT { get; set; }
     }
 }
