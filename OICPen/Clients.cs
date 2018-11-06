@@ -16,7 +16,7 @@ namespace OICPen
         public Clients()
         {
             InitializeComponent();
-            searchIdMaskdTbox.PromptChar = ' ';
+//            searchIdMaskdTbox.PromptChar = ' ';
         }
 
 
@@ -29,7 +29,22 @@ namespace OICPen
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            HiraganaCheek(searchHuriganaTbox.Text);
+            uint i=0;
+            string[] search=new string[] { searchNameTbox.Text,searchIdMaskdTbox.Text,searchHuriganaTbox.Text };
+            var ckecks = new Func<string, string>[] { (x) => "", (x) => "", HiraganaCheek };
+            search.Zip(ckecks,(item,check)=> {
+                if (NullCheek(item))
+                {
+                    i++;
+                    string erroMessage = check(item);
+                    if (erroMessage != "")
+                        MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                return 0;
+            }).ToArray();
+            if (i != 1) {
+                MessageBox.Show("検索項目が１つではありません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; }
         }
 
         private void registBtn_Click(object sender, EventArgs e)
@@ -55,18 +70,18 @@ namespace OICPen
             }
         }
 
-        private bool HiraganaCheek(string text){
+        private string HiraganaCheek(string text){
             //ひらがなチェック
             if (System.Text.RegularExpressions.Regex.IsMatch(text, @"^\p{IsHiragana}+$"))
             {
                 //すべてがひらがなの場合
-                return true;
+                return "";
             }
             else
             {
                 //ひらがな以外の文字が入っている場合
-                MessageBox.Show("ふりがなにはひらがなのみを入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+//                MessageBox.Show("ふりがなにはひらがなのみを入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "ふりがなにはひらがなのみを入力してください";
             }
         }
 
@@ -77,7 +92,6 @@ namespace OICPen
                 return true;
             }
 
-            MessageBox.Show("すべてに記入されていません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
 
@@ -105,5 +119,24 @@ namespace OICPen
             MessageBox.Show("郵便番号が正しく記入されてません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
+
+        private void phoneNumberMaskedTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+                e.KeyChar=(char)0;
+        }
+
+        private void postalCodeMaskedTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+                e.KeyChar = (char)0;
+        }
+
+        private void searchIdMaskdTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+                e.KeyChar = (char)0;
+        }
+        
     }
 }

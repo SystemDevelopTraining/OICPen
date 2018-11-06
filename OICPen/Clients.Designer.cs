@@ -316,6 +316,7 @@
             this.searchIdMaskdTbox.ResetOnSpace = false;
             this.searchIdMaskdTbox.Size = new System.Drawing.Size(108, 36);
             this.searchIdMaskdTbox.TabIndex = 29;
+            this.searchIdMaskdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchIdMaskdTbox_KeyPress);
             // 
             // phoneNumberMaskedTbox
             // 
@@ -325,15 +326,18 @@
             this.phoneNumberMaskedTbox.Name = "phoneNumberMaskedTbox";
             this.phoneNumberMaskedTbox.Size = new System.Drawing.Size(295, 40);
             this.phoneNumberMaskedTbox.TabIndex = 35;
+            this.phoneNumberMaskedTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberMaskedTbox_KeyPress);
             // 
             // postalCodeMaskedTbox
             // 
             this.postalCodeMaskedTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.postalCodeMaskedTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.postalCodeMaskedTbox.Location = new System.Drawing.Point(1099, 684);
             this.postalCodeMaskedTbox.Mask = "000-0000";
             this.postalCodeMaskedTbox.Name = "postalCodeMaskedTbox";
             this.postalCodeMaskedTbox.Size = new System.Drawing.Size(192, 40);
             this.postalCodeMaskedTbox.TabIndex = 36;
+            this.postalCodeMaskedTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.postalCodeMaskedTbox_KeyPress);
             // 
             // Clients
             // 
