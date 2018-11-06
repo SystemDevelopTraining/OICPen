@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OICPen.Models
 {
-    public class Stock
+    public class StockT
     {
         [Key, Column(Order = 2)]
         public DateTime Date { get; set; } // 年月

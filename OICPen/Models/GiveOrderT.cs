@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OICPen.Models
 {
-    public class GiveOrder
+    public class GiveOrderT
     {
         [Key]
         public int Id { get; set; } // 発注ID
@@ -15,6 +15,6 @@ namespace OICPen.Models
         public int StaffId { get; set; } // 社員ID
 
         [ForeignKey("StaffId")]
-        public virtual Staff Staff { get; set; }
+        public virtual StaffT Staff { get; set; }
     }
 }

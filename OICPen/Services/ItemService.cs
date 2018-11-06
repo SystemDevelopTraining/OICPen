@@ -20,7 +20,7 @@ namespace OICPen.Services
          [引数] なし
          [返り値] すべての商品情報
          ---------------------------------------------------------------*/
-        public List<Item> GetAllItems()
+        public List<ItemT> GetAllItems()
         {
             var items = from i in context.Items
                         orderby i.Id
@@ -34,7 +34,7 @@ namespace OICPen.Services
          [引数] なし
          [返り値] 削除されていない商品情報
          ---------------------------------------------------------------*/
-        public List<Item> GetItems()
+        public List<ItemT> GetItems()
         {
             var items = from i in context.Items
                         orderby i.Id
@@ -49,7 +49,7 @@ namespace OICPen.Services
          [引数] i: 追加したい商品情報
          [返り値] 追加した商品情報
          ---------------------------------------------------------------*/
-        public Item AddItem(Item i)
+        public ItemT AddItem(ItemT i)
         {
             var item = context.Items.Add(i);
             context.SaveChanges();
@@ -62,7 +62,7 @@ namespace OICPen.Services
          [引数] i: 更新したい商品情報
          [返り値] 更新した商品情報
          ---------------------------------------------------------------*/
-        public Item UpdateItem(Item i)
+        public ItemT UpdateItem(ItemT i)
         {
             var item = context.Items.Single(x => x.Id == i.Id);
             item.Name = i.Name;

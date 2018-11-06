@@ -13,10 +13,11 @@ namespace OICPen
 {
     public partial class Clients : Form
     {
+        private Services.ClientService servis=  new Services.ClientService(new Models.OICPenDbContext());
+
         public Clients()
         {
             InitializeComponent();
-//            searchIdMaskdTbox.PromptChar = ' ';
         }
 
 
@@ -49,13 +50,20 @@ namespace OICPen
 
         private void registBtn_Click(object sender, EventArgs e)
         {
-                       if (NullCheek(nameTbox.Text)
+            var client = new Models.Client();
+            client.Name = nameTbox.Text;
+            client.Hurigana = huriganaTbox.Text;
+            client.PhoneNum = phoneNumberMaskedTbox.Text;
+            client.PostNum = phoneNumberMaskedTbox.Text;
+            client.Address = addressTbox.Text;
+            servis.AddClient(client);
+ /*                      if (NullCheek(nameTbox.Text)
                             &&PhoneNumberCheek(phoneNumberMaskedTbox.Text)
                             && PostalCodeCheek(postalCodeMaskedTbox.Text)
                             &&NullCheek(addressTbox.Text))
                         {
                             HiraganaCheek(huriganaTbox.Text);
-                        }
+                        }*/
 //           MessageBox.Show(phoneNumberMaskedTbox.Text, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 

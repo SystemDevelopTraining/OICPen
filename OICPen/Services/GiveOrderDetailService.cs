@@ -7,27 +7,28 @@ using System.Threading.Tasks;
 
 namespace OICPen.Services
 {
-    public class TakeOrderDetailService
+    class GiveOrderDetailService
     {
         private OICPenDbContext context;
 
-        public TakeOrderDetailService(OICPenDbContext context)
+        public GiveOrderDetailService(OICPenDbContext context)
         {
             this.context = context;
         }
 
 
         /*---------------------------------------------------------------
-         [役割] 注文明細の登録
+         [役割] 発注明細の登録
          [引数] item: 登録する商品
                 quantity: 数量
                 order: 登録したい注文
          [返り値] なし
          ---------------------------------------------------------------*/
-        public void AddTakeOrderDetail(ItemT item, int quantity, Models.TakeOrderT order)
+        public void AddTakeOrderDetail(ItemT item, int quantity, Models.GiveOrderT order)
         {
-            var orderDetails = new TakeOrderDetailT { ItemId = item.Id, Quantity = (uint)quantity, TakeOrderId = order.Id };
+            var orderDetails = new GiveOrderDetailT { Itemid = item.Id, Quantity = (uint)quantity, GiveOrderId = order.Id };
             context.SaveChanges();
         }
+
     }
 }
