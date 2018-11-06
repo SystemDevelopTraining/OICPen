@@ -9,7 +9,7 @@ namespace OICPen.Models
         {
             AutomaticMigrationsEnabled = true;
             AutomaticMigrationDataLossAllowed = true;
-            ContextKey = "TestEntity.Models.OICPenDbContext";
+            ContextKey = "OICPen.Models.OICPenDbContext";
         }
     }
 }
