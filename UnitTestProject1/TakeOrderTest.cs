@@ -44,8 +44,6 @@ namespace UnitTestProject1
             mockSet.Verify(m => m.Add(It.IsAny<TakeOrder>()), Times.Exactly(1));
             mockContext.Verify(m => m.SaveChanges(), Times.Exactly(1));
 
-            service.AppendTakeOrderDetails(1, 2, service.AddTakeOrder(new TakeOrder { ClientId = 2, TakeOrdDate = DateTime.Now }));
-
         }
     }
 }
