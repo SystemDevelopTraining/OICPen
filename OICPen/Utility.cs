@@ -18,7 +18,7 @@ namespace OICPen
         }
 
         //textBoxに半角数字しか入らないようにする
-        public static void textBoxCheck(TextBox x,KeyPressEventArgs e)
+        public static void textBoxDigitCheck(TextBox x,KeyPressEventArgs e)
         {
             if (!Regex.IsMatch(e.KeyChar.ToString(), "[0-9]") && !char.IsControl(e.KeyChar))
             {
