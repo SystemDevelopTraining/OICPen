@@ -93,6 +93,7 @@
             this.incomingTbox.Name = "incomingTbox";
             this.incomingTbox.Size = new System.Drawing.Size(224, 36);
             this.incomingTbox.TabIndex = 3;
+            this.incomingTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.incomingTbox_KeyPress);
             // 
             // searchBtn
             // 
@@ -103,6 +104,7 @@
             this.searchBtn.TabIndex = 4;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // registerBtn
             // 
