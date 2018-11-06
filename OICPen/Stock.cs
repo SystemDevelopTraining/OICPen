@@ -17,14 +17,18 @@ namespace OICPen
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void itemsCodeTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            Utility.textBoxDigitCheck(itemsCodeTbox,e);
         }
 
-        private void itemsNameTbox_TextChanged(object sender, EventArgs e)
+        private void searchBtn_Click(object sender, EventArgs e)
         {
+            if (itemsCodeTbox.Text == "" && itemsNameTbox.Text == "")
+            {
+                MessageBox.Show("検索内容を入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
         }
     }
 }
