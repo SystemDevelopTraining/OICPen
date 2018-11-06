@@ -4,7 +4,7 @@
     public class OICPenDbContext : DbContext
     {
         public OICPenDbContext()
-            : base("name = OICDbContext")
+            : base("name = OICPenDbContext")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<OICPenDbContext, Configuration>());
         }
