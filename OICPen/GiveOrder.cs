@@ -17,24 +17,12 @@ namespace OICPen
             InitializeComponent();
         }
 
-        private void GiveOrder_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        //数量チェックが通ったあとの処理
-        private void quanitity()
-        {
-            MessageBox.Show(quantityMaskedTbox.Text, "GOOD", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            quantityMaskedTbox.Text = null;
-        }
-
         //数量チェック
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            if (quantityMaskedTbox.Text != "")
+            if (quantityTbox.Text != "")
             {
-                if (int.Parse(quantityMaskedTbox.Text) >= 1000)
+                if (int.Parse(quantityTbox.Text) >= 1000)
                 {
                     DialogResult result = MessageBox.Show("1000個以上の発注になりますがよろしいですか？",
                         "質問",
@@ -44,24 +32,33 @@ namespace OICPen
 
                     if (result == DialogResult.No)
                     {
-                        quantityMaskedTbox.Focus();
+                        quantityTbox.Focus();
                         return;
                     }
                 }
-                quanitity();
+                quantityTbox.Text = null;
             }
             else
-                MessageBox.Show("数量を入力して下さい。","エラー",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("数量を入力して下さい。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void quantityMaskedTbox_Click(object sender, EventArgs e)
+        private void itemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.maskedTboxStart(quantityMaskedTbox);
+            Utility.textBoxDigitCheck(itemIdTbox, e);
         }
 
-        private void itemIdMaskedTbox_Click(object sender, EventArgs e)
+        private void quantityTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.maskedTboxStart(itemIdMaskedTbox);
+            Utility.textBoxDigitCheck(quantityTbox,e);
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            if (itemNameTbox.Text == "" || itemIdTbox.Text == "")
+            {
+                MessageBox.Show("検索内容を入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }
