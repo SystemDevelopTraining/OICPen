@@ -23,7 +23,7 @@ namespace OICPen.Services
         public List<ItemT> GetAllItems()
         {
             var items = from i in context.Items
-                        orderby i.Id
+                        orderby i.ItemTID
                         select i;
 
             return items.ToList();
@@ -37,7 +37,7 @@ namespace OICPen.Services
         public List<ItemT> GetItems()
         {
             var items = from i in context.Items
-                        orderby i.Id
+                        orderby i.ItemTID
                         where i.IsDeleted == false
                         select i;
 
@@ -64,7 +64,7 @@ namespace OICPen.Services
          ---------------------------------------------------------------*/
         public ItemT UpdateItem(ItemT i)
         {
-            var item = context.Items.Single(x => x.Id == i.Id);
+            var item = context.Items.Single(x => x.ItemTID == i.ItemTID);
             item.Name = i.Name;
             item.Hurigana = i.Hurigana;
             item.JAN = i.JAN;

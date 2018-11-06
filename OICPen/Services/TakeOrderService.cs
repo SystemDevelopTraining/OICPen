@@ -25,7 +25,7 @@ namespace OICPen.Services
         public List<TakeOrderT> GetAllTakeOrders()
         {
             var query = from c in context.TakeOrders
-                        orderby c.Id
+                        orderby c.TakeOrderTID
                         select c;
 
             return query.ToList();
@@ -51,7 +51,7 @@ namespace OICPen.Services
          ---------------------------------------------------------------*/
         public void Shiping(Models.TakeOrderT t)
         {
-            var takeOrder = context.TakeOrders.Single(x => x.Id == t.Id);
+            var takeOrder = context.TakeOrders.Single(x => x.TakeOrderTID == t.TakeOrderTID);
             takeOrder.ShipDate = DateTime.Now;
         }
     }

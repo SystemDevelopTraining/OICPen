@@ -16,8 +16,8 @@ namespace UnitTestProject1
         {
             var data = new List<TakeOrderDetailT>
             {
-                new TakeOrderDetailT { ItemId = 2, Quantity = 1, TakeOrderId = 1},
-                new TakeOrderDetailT {ItemId = 3, Quantity = 3, TakeOrderId = 1 }
+                new TakeOrderDetailT { ItemTID = 2, Quantity = 1, TakeOrderTID = 1},
+                new TakeOrderDetailT {ItemTID = 3, Quantity = 3, TakeOrderTID = 1 }
             }.AsQueryable();
 
 
@@ -33,7 +33,7 @@ namespace UnitTestProject1
 
             var service = new OICPen.Services.TakeOrderDetailService(mockContext.Object);
 
-            service.AddTakeOrderDetails(2, 3, new TakeOrderT { Id = 1, ClientId = 4, TakeOrdDate = DateTime.Now });
+            service.AddTakeOrderDetails(2, 3, new TakeOrderT { TakeOrderTID = 1, ClientTID = 4, TakeOrdDate = DateTime.Now });
 
 
         }

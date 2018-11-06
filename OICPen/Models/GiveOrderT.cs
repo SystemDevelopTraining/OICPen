@@ -6,15 +6,11 @@ namespace OICPen.Models
 {
     public class GiveOrderT
     {
-        [Key]
-        public int Id { get; set; } // 発注ID
-        [Required]
+        public int GiveOrderTID { get; set; } // 発注ID
         public DateTime GiveOrdDate { get; set; } //発注日
         public DateTime? CompleteDate { get; set; } //入庫日
-        [Required]
-        public int StaffId { get; set; } // 社員ID
+        public int StaffTID { get; set; } // 社員ID
 
-        [ForeignKey("StaffId")]
-        public virtual StaffT Staff { get; set; }
+        public virtual StaffT StaffT { get; set; }
     }
 }

@@ -92,6 +92,7 @@
             this.idTbox.Name = "idTbox";
             this.idTbox.Size = new System.Drawing.Size(320, 33);
             this.idTbox.TabIndex = 1;
+            this.idTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.idTbox_KeyPress);
             // 
             // searchNameLbl
             // 
@@ -122,7 +123,6 @@
             this.searchNameTbox.Name = "searchNameTbox";
             this.searchNameTbox.Size = new System.Drawing.Size(320, 33);
             this.searchNameTbox.TabIndex = 2;
-            this.searchNameTbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // fixBtn
             // 
@@ -143,6 +143,7 @@
             this.searchBtn.TabIndex = 3;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // deleteBtn
             // 

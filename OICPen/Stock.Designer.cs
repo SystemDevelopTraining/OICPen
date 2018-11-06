@@ -86,11 +86,12 @@
             // itemsCodeTbox
             // 
             this.itemsCodeTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.itemsCodeTbox.Location = new System.Drawing.Point(1165, 226);
+            this.itemsCodeTbox.Location = new System.Drawing.Point(1165, 228);
+            this.itemsCodeTbox.MaxLength = 6;
             this.itemsCodeTbox.Name = "itemsCodeTbox";
             this.itemsCodeTbox.Size = new System.Drawing.Size(218, 36);
-            this.itemsCodeTbox.MaxLength = 6;
             this.itemsCodeTbox.TabIndex = 1;
+            this.itemsCodeTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.itemsCodeTbox_KeyPress);
             // 
             // itemsNameTbox
             // 
@@ -100,7 +101,6 @@
             this.itemsNameTbox.Name = "itemsNameTbox";
             this.itemsNameTbox.Size = new System.Drawing.Size(358, 36);
             this.itemsNameTbox.TabIndex = 2;
-            this.itemsNameTbox.TextChanged += new System.EventHandler(this.itemsNameTbox_TextChanged);
             // 
             // searchBtn
             // 
@@ -111,6 +111,7 @@
             this.searchBtn.TabIndex = 3;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // stockDangerViewBtn
             // 
@@ -131,7 +132,6 @@
             this.stockViewBtn.TabIndex = 4;
             this.stockViewBtn.Text = "在庫状況一覧表示";
             this.stockViewBtn.UseVisualStyleBackColor = true;
-            this.stockViewBtn.Click += new System.EventHandler(this.button2_Click);
             // 
             // separatorLbl
             // 
