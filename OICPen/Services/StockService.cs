@@ -20,5 +20,6 @@ namespace OICPen.Services
         {
             var stock = context.Stocks.Add(s);
         }
+      
     }
 }

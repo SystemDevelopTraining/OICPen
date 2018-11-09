@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace OICPen
 {
     public partial class Stock : Form
-    {
+    {        private Services.StockService servis = new Services.StockService(new Models.OICPenDbContext());
+        
         public Stock()
         {
             InitializeComponent();
@@ -29,6 +30,11 @@ namespace OICPen
                 MessageBox.Show("検索内容を入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void stockDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
