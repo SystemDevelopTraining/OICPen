@@ -11,14 +11,14 @@ namespace OICPen
     //MaskedTextboxをクリックした際カーソルが先頭に行くようになる、文字が入っている場合はクリックした場所から
     static class Utility
     {
-        public static void maskedTboxStart(MaskedTextBox x)
+        public static void MaskedTboxStart(MaskedTextBox x)
         {
             if (x.Text == "")
                 x.SelectionStart = 0;
         }
 
         //textBoxに半角数字しか入らないようにする
-        public static void textBoxDigitCheck(TextBox x,KeyPressEventArgs e)
+        public static void TextBoxDigitCheck(TextBox x,KeyPressEventArgs e)
         {
             if (!Regex.IsMatch(e.KeyChar.ToString(), "[0-9]") && !char.IsControl(e.KeyChar))
             {
@@ -27,7 +27,7 @@ namespace OICPen
         }
 
         //textBoxが空か判断する
-        public static bool textIsEmpty(string x)
+        public static bool TextIsEmpty(string x)
         {
            if(x == "")
             {
@@ -36,6 +36,23 @@ namespace OICPen
             }
            return false;
 
+        }
+
+        
+        public static string HiraganaCheck(string text)
+        {
+            //ひらがなチェック
+            if (System.Text.RegularExpressions.Regex.IsMatch(text, @"^\p{IsHiragana}+$"))
+            {
+                //すべてがひらがなの場合
+                return "";
+            }
+            else
+            {
+                //ひらがな以外の文字が入っている場合
+                //                MessageBox.Show("ふりがなにはひらがなのみを入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "ふりがなにはひらがなのみを入力してください";
+            }
         }
     }
 

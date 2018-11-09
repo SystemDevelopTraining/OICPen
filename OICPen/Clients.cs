@@ -132,7 +132,7 @@ namespace OICPen
         {
             if (e.KeyChar == ' ')
                 e.KeyChar = (char)0;
-            Utility.maskedTboxStart(phoneNumberMaskedTbox);
+            Utility.MaskedTboxStart(phoneNumberMaskedTbox);
 
         }
 
@@ -146,7 +146,7 @@ namespace OICPen
   
         private void searchIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(searchIdTbox,e);
+            Utility.TextBoxDigitCheck(searchIdTbox,e);
         }
 
         private void phoneNumberMaskedTbox_Click(object sender, EventArgs e)

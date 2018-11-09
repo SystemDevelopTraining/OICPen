@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using OICPen.Services;
 
 namespace OICPen
 {
@@ -21,32 +22,32 @@ namespace OICPen
        
         private void searchItemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(searchItemIdTbox,e);
+            Utility.TextBoxDigitCheck(searchItemIdTbox,e);
         }
 
         private void searchJanTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(searchJanTbox, e);
+            Utility.TextBoxDigitCheck(searchJanTbox, e);
         }
 
         private void purchasePriceTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(purchasePriceTbox, e);
+            Utility.TextBoxDigitCheck(purchasePriceTbox, e);
         }
 
         private void priceTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(priceTbox, e);
+            Utility.TextBoxDigitCheck(priceTbox, e);
         }
 
         private void janTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(janTbox, e);
+            Utility.TextBoxDigitCheck(janTbox, e);
         }
 
         private void safetyStockTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(safetyStockTbox, e);
+            Utility.TextBoxDigitCheck(safetyStockTbox, e);
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -57,7 +58,7 @@ namespace OICPen
                 //IDでの検索
                 () =>
                 {
-                   
+
                 },
                 //名前での検索
                 () =>
@@ -99,20 +100,6 @@ namespace OICPen
             Item.Name = itemNameTbox.Text;
         }
 
-        private string HiraganaCheck(string text)
-        {
-            //ひらがなチェック
-            if (System.Text.RegularExpressions.Regex.IsMatch(text, @"^\p{IsHiragana}+$"))
-            {
-                //すべてがひらがなの場合
-                return "";
-            }
-            else
-            {
-                //ひらがな以外の文字が入っている場合
-                //                MessageBox.Show("ふりがなにはひらがなのみを入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return "ふりがなにはひらがなのみを入力してください";
-            }
-        }
+        
     }
 }

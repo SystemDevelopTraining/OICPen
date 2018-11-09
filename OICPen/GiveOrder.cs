@@ -44,12 +44,12 @@ namespace OICPen
 
         private void itemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(itemIdTbox, e);
+            Utility.TextBoxDigitCheck(itemIdTbox, e);
         }
 
         private void quantityTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(quantityTbox,e);
+            Utility.TextBoxDigitCheck(quantityTbox,e);
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
