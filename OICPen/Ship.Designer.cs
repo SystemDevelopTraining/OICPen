@@ -34,12 +34,21 @@
             this.shipProcessingBtn = new System.Windows.Forms.Button();
             this.shipCheckBtn = new System.Windows.Forms.Button();
             this.shipFixBtn = new System.Windows.Forms.Button();
+            this.ClientTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.takeOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.takeOderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shipDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.shipDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // shipDgv
             // 
             this.shipDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.shipDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ClientTID,
+            this.takeOrderID,
+            this.takeOderDate,
+            this.shipDate});
             this.shipDgv.Location = new System.Drawing.Point(12, 21);
             this.shipDgv.Name = "shipDgv";
             this.shipDgv.RowTemplate.Height = 21;
@@ -65,6 +74,7 @@
             this.shippedCheckBtn.TabIndex = 1;
             this.shippedCheckBtn.Text = "出庫済一覧";
             this.shippedCheckBtn.UseVisualStyleBackColor = true;
+            this.shippedCheckBtn.Click += new System.EventHandler(this.shippedCheckBtn_Click);
             // 
             // shipProcessingBtn
             // 
@@ -75,6 +85,7 @@
             this.shipProcessingBtn.TabIndex = 3;
             this.shipProcessingBtn.Text = "出庫処理実行";
             this.shipProcessingBtn.UseVisualStyleBackColor = true;
+            this.shipProcessingBtn.Click += new System.EventHandler(this.shipProcessingBtn_Click);
             // 
             // shipCheckBtn
             // 
@@ -85,6 +96,7 @@
             this.shipCheckBtn.TabIndex = 2;
             this.shipCheckBtn.Text = "未出庫一覧";
             this.shipCheckBtn.UseVisualStyleBackColor = true;
+            this.shipCheckBtn.Click += new System.EventHandler(this.shipCheckBtn_Click);
             // 
             // shipFixBtn
             // 
@@ -95,6 +107,31 @@
             this.shipFixBtn.TabIndex = 4;
             this.shipFixBtn.Text = "出庫処理取消";
             this.shipFixBtn.UseVisualStyleBackColor = true;
+            this.shipFixBtn.Click += new System.EventHandler(this.shipFixBtn_Click);
+            // 
+            // ClientTID
+            // 
+            this.ClientTID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ClientTID.HeaderText = "会員ID";
+            this.ClientTID.Name = "ClientTID";
+            // 
+            // takeOrderID
+            // 
+            this.takeOrderID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.takeOrderID.HeaderText = "注文ID";
+            this.takeOrderID.Name = "takeOrderID";
+            // 
+            // takeOderDate
+            // 
+            this.takeOderDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.takeOderDate.HeaderText = "注文日";
+            this.takeOderDate.Name = "takeOderDate";
+            // 
+            // shipDate
+            // 
+            this.shipDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.shipDate.HeaderText = "出庫日";
+            this.shipDate.Name = "shipDate";
             // 
             // Ship
             // 
@@ -125,5 +162,9 @@
         private System.Windows.Forms.Button shipProcessingBtn;
         private System.Windows.Forms.Button shipCheckBtn;
         private System.Windows.Forms.Button shipFixBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClientTID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn takeOrderID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn takeOderDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shipDate;
     }
 }
