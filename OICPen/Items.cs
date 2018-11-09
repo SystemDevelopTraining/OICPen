@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using OICPen.Services;
 
 namespace OICPen
 {
@@ -21,42 +22,84 @@ namespace OICPen
        
         private void searchItemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(searchItemIdTbox,e);
+            Utility.TextBoxDigitCheck(searchItemIdTbox,e);
         }
 
         private void searchJanTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(searchJanTbox, e);
+            Utility.TextBoxDigitCheck(searchJanTbox, e);
         }
 
         private void purchasePriceTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(purchasePriceTbox, e);
+            Utility.TextBoxDigitCheck(purchasePriceTbox, e);
         }
 
         private void priceTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(priceTbox, e);
+            Utility.TextBoxDigitCheck(priceTbox, e);
         }
 
         private void janTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(janTbox, e);
+            Utility.TextBoxDigitCheck(janTbox, e);
         }
 
         private void safetyStockTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(safetyStockTbox, e);
+            Utility.TextBoxDigitCheck(safetyStockTbox, e);
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            if (searchItemIdTbox.Text == "" && searchItemNameTbox.Text == "" && searchJanTbox.Text == "")
+            var items = new string[] { searchItemIdTbox.Text, searchItemNameTbox.Text, searchJanTbox.Text };
+            var processes = new Action[]
             {
-                MessageBox.Show("検索内容を入力してください。", "エラー",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                //IDでの検索
+                () =>
+                {
 
+                },
+                //名前での検索
+                () =>
+                {
+                    
+                },
+                //JANコードでの検索
+                () =>
+                {
+                    
+                }
+
+            };
+
+            uint itemCount = 0;
+            uint currentIndex = 0;
+            for(uint i = 0; i < items.Length; i++)
+            {
+                if (items[i] != "")
+                {
+                    i++;
+                    currentIndex = i;
+                }
             }
-           
+
+            if (itemCount != 1)
+            {
+                MessageBox.Show("検索項目が一つではありません", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }else
+            {
+                processes[currentIndex]();
+            }
+
         }
+
+        private void registBtn_Click(object sender, EventArgs e)
+        {
+            Models.ItemT Item = new Models.ItemT();
+            Item.Name = itemNameTbox.Text;
+        }
+
+        
     }
 }
