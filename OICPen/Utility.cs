@@ -25,7 +25,18 @@ namespace OICPen
                 e.Handled = true;
             }
         }
-    }
 
+        //textBoxが空か判断する
+        public static bool textIsEmpty(string x)
+        {
+           if(x == "")
+            {
+                return true;
+
+            }
+           return false;
+
+        }
+    }
 
 }
