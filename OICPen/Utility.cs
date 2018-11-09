@@ -38,19 +38,15 @@ namespace OICPen
 
         }
 
-        
+        //ひらがなかどうか判断する
         public static string HiraganaCheck(string text)
         {
-            //ひらがなチェック
             if (System.Text.RegularExpressions.Regex.IsMatch(text, @"^\p{IsHiragana}+$"))
             {
-                //すべてがひらがなの場合
                 return "";
             }
             else
             {
-                //ひらがな以外の文字が入っている場合
-                //                MessageBox.Show("ふりがなにはひらがなのみを入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "ふりがなにはひらがなのみを入力してください";
             }
         }
