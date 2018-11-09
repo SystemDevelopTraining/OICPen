@@ -103,6 +103,7 @@
             this.registBtn.TabIndex = 13;
             this.registBtn.Text = "商品登録";
             this.registBtn.UseVisualStyleBackColor = true;
+            this.registBtn.Click += new System.EventHandler(this.registBtn_Click);
             // 
             // itemDgv
             // 

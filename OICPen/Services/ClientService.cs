@@ -25,8 +25,8 @@ namespace OICPen.Services
         public List<ClientT> GetClients()
         {
             var clients = from c in context.Clients
-                        orderby c.ClientTID
-                        select c;
+                          orderby c.ClientTID
+                          select c;
 
             return clients.ToList();
         }
@@ -62,6 +62,37 @@ namespace OICPen.Services
 
             return client;
 
+        }
+        /*---------------------------------------------------------------
+         [役割] IDから会員情報を検索
+         [引数] id: 会員情報のID
+         [返り値] IDと一致する会員情報
+         ---------------------------------------------------------------*/
+        public ClientT FindByID(int id)
+        {
+            var client = context.Clients.Single(x =>  x.ClientTID == id);
+            return client;
+        }
+
+         /*---------------------------------------------------------------
+         [役割] 名前から会員情報を検索
+         [引数] id: 会員情報のID
+         [返り値] 名前と一致する会員情報
+         ---------------------------------------------------------------*/
+        public List<ClientT> FindByName(string name)
+        {
+            var clients = context.Clients.Where(x => x.Name.Contains(name) );
+            return clients.ToList();
+        }
+        /*---------------------------------------------------------------
+         [役割] ふりがなから会員情報を検索
+         [引数] id: 会員情報のID
+         [返り値] ふりがなと一致する会員情報
+         ---------------------------------------------------------------*/
+        public List<ClientT> FindByHurigana(string hurigana)
+        {
+            var clients = context.Clients.Where(x => x.Hurigana.Contains(hurigana));
+            return clients.ToList();
         }
 
     }

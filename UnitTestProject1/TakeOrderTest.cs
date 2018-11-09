@@ -18,7 +18,8 @@ namespace UnitTestProject1
             var data = new List<TakeOrderT>
             {
                 new TakeOrderT {TakeOrdDate = DateTime.Now, ClientTID = 1},
-                new TakeOrderT {TakeOrdDate = DateTime.Now, ClientTID = 2}
+                new TakeOrderT {TakeOrdDate = DateTime.Now, ClientTID = 2},
+                new TakeOrderT {TakeOrdDate = DateTime.Now, ClientTID = 3,ShipDate=DateTime.Now},
             }.AsQueryable();
 
 
@@ -35,10 +36,16 @@ namespace UnitTestProject1
             var service = new OICPen.Services.TakeOrderService(mockContext.Object);
             var takeOrders = service.GetAllTakeOrders();
 
-            Assert.AreEqual(2, takeOrders.Count);
+            Assert.AreEqual(3, takeOrders.Count);
             Assert.AreEqual(0, takeOrders[0].TakeOrderTID);
             Assert.AreEqual(1, takeOrders[0].ClientTID);
             Assert.AreEqual(null, takeOrders[0].ShipDate);
+
+            var shipedTakeOrders = service.GetShipedTakeOrders();
+            Assert.AreEqual(shipedTakeOrders.Count, 1);
+
+            var noShipedTakeOrders = service.GetNoShipedTakeOrders();
+            Assert.AreEqual(noShipedTakeOrders.Count, 2);
 
             service.AddTakeOrder(new TakeOrderT { ClientTID = 1, TakeOrdDate = DateTime.Now });
             mockSet.Verify(m => m.Add(It.IsAny<TakeOrderT>()), Times.Exactly(1));

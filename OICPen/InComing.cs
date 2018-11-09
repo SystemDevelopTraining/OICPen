@@ -19,7 +19,7 @@ namespace OICPen
 
         private void incomingTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.textBoxDigitCheck(incomingTbox,e);
+            Utility.TextBoxDigitCheck(incomingTbox,e);
         }
 
         private void searchBtn_Click(object sender, EventArgs e)

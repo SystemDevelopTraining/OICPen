@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.clientsDgv = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.furigana = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.registBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
@@ -55,12 +61,6 @@
             this.searchClientSubTitleLbl = new System.Windows.Forms.Label();
             this.phoneNumberMaskedTbox = new System.Windows.Forms.MaskedTextBox();
             this.postalCodeMaskedTbox = new System.Windows.Forms.MaskedTextBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.furigana = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.postalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,6 +79,36 @@
             this.clientsDgv.RowTemplate.Height = 21;
             this.clientsDgv.Size = new System.Drawing.Size(900, 949);
             this.clientsDgv.TabIndex = 5;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // name
+            // 
+            this.name.HeaderText = "名前";
+            this.name.Name = "name";
+            // 
+            // furigana
+            // 
+            this.furigana.HeaderText = "ふりがな";
+            this.furigana.Name = "furigana";
+            // 
+            // phoneNumber
+            // 
+            this.phoneNumber.HeaderText = "電話番号";
+            this.phoneNumber.Name = "phoneNumber";
+            // 
+            // postalCode
+            // 
+            this.postalCode.HeaderText = "郵便番号";
+            this.postalCode.Name = "postalCode";
+            // 
+            // address
+            // 
+            this.address.HeaderText = "住所";
+            this.address.Name = "address";
             // 
             // registBtn
             // 
@@ -269,6 +299,16 @@
             this.searchNameTbox.Size = new System.Drawing.Size(404, 40);
             this.searchNameTbox.TabIndex = 1;
             // 
+            // searchIdTbox
+            // 
+            this.searchIdTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.searchIdTbox.Location = new System.Drawing.Point(1105, 237);
+            this.searchIdTbox.MaxLength = 6;
+            this.searchIdTbox.Name = "searchIdTbox";
+            this.searchIdTbox.Size = new System.Drawing.Size(108, 40);
+            this.searchIdTbox.TabIndex = 2;
+            this.searchIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchIdTbox_KeyPress);
+            // 
             // searchNameLbl
             // 
             this.searchNameLbl.AutoSize = true;
@@ -342,46 +382,6 @@
             this.postalCodeMaskedTbox.Click += new System.EventHandler(this.postalCodeMaskedTbox_Click);
             this.postalCodeMaskedTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.postalCodeMaskedTbox_KeyPress);
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // name
-            // 
-            this.name.HeaderText = "名前";
-            this.name.Name = "name";
-            // 
-            // furigana
-            // 
-            this.furigana.HeaderText = "ふりがな";
-            this.furigana.Name = "furigana";
-            // 
-            // phoneNumber
-            // 
-            this.phoneNumber.HeaderText = "電話番号";
-            this.phoneNumber.Name = "phoneNumber";
-            // 
-            // postalCode
-            // 
-            this.postalCode.HeaderText = "郵便番号";
-            this.postalCode.Name = "postalCode";
-            // 
-            // address
-            // 
-            this.address.HeaderText = "住所";
-            this.address.Name = "address";
-            // 
-            // searchIdTbox
-            // 
-            this.searchIdTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
-            this.searchIdTbox.Location = new System.Drawing.Point(1105, 237);
-            this.searchIdTbox.MaxLength = 6;
-            this.searchIdTbox.Name = "searchIdTbox";
-            this.searchIdTbox.Size = new System.Drawing.Size(108, 40);
-            this.searchIdTbox.TabIndex = 2;
-            this.searchIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchIdTbox_KeyPress);
-            // 
             // Clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -419,6 +419,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Clients";
             this.Text = "Clients";
+            this.Shown += new System.EventHandler(this.Clients_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.clientsDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
