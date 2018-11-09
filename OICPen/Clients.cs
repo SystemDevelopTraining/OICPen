@@ -34,7 +34,7 @@ namespace OICPen
             string[] search=new string[] { searchNameTbox.Text,searchIdTbox.Text,searchHuriganaTbox.Text };
             var checks = new Func<string, string>[] { (x) => "", (x) => "", HiraganaCheck };
             search.Zip(checks,(item,check)=> {
-                if (NullCheck(item))
+                if (IsNotEmpty(item))
                 {
                     i++;
                     string erroMessage = check(item);
@@ -69,10 +69,10 @@ namespace OICPen
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            if (NullCheck(nameTbox.Text)
+            if (IsNotEmpty(nameTbox.Text)
                  && PhoneNumberCheck(phoneNumberMaskedTbox.Text)
                  && PostalCodeCheck(postalCodeMaskedTbox.Text)
-                 && NullCheck(addressTbox.Text))
+                 && IsNotEmpty(addressTbox.Text))
             {
                 HiraganaCheck(huriganaTbox.Text);
             }
@@ -89,7 +89,7 @@ namespace OICPen
             }
         }
 
-        private bool NullCheck(string text)
+        private bool IsNotEmpty(string text)
         {
             if (text != "")
             {
