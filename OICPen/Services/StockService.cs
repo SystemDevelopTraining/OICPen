@@ -40,5 +40,17 @@ namespace OICPen.Services
             context.SaveChanges();
             return stock;
         }
+
+        /*---------------------------------------------------------------
+        [役割] 最新の月の在庫情報一覧を取得する
+        [引数] なし
+        [返り値] 最新の月の在庫情報一覧
+        ---------------------------------------------------------------*/
+        public List<StockT> GetNowMonthStocks()
+        {
+            var nowStocks = (from i in context.Stocks
+                          group i by i.Date).OrderByDescending(x => x.Key).First();
+            return nowStocks.ToList();
+        }
     }
 }
