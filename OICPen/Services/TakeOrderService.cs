@@ -40,7 +40,22 @@ namespace OICPen.Services
         {
             var query = from c in context.TakeOrders
                         orderby c.TakeOrderTID
-                        where c.ShipDate==null
+                        where c.ShipDate!=null
+                        select c;
+
+            return query.ToList();
+        }
+
+        /*---------------------------------------------------------------
+        [役割] 未出庫の注文情報をTakeOrder型のListにして返す
+        [引数] なし
+        [返り値] 出庫済みの注文情報
+        ---------------------------------------------------------------*/
+        public List<TakeOrderT> GetNoShipedTakeOrders()
+        {
+            var query = from c in context.TakeOrders
+                        orderby c.TakeOrderTID
+                        where c.ShipDate == null
                         select c;
 
             return query.ToList();
