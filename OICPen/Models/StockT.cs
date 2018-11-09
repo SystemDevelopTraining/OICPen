@@ -7,7 +7,9 @@ namespace OICPen.Models
     public class StockT
     {
         [Key]
-        public DateTime Date { get; set; } // 年月
+        [Required]
+        [MaxLength(6), MinLength(6)]
+        public string Date { get; set; } // 年月
         public int ItemTID { get; set; }　// 商品ID
         public uint Quantity { get; set; } // 在庫数
 
