@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -12,5 +13,7 @@ namespace OICPen.Models
         public int StaffTID { get; set; } // 社員ID
 
         public virtual StaffT StaffT { get; set; }
+
+        public virtual ICollection<GiveOrderDetailT> GiveOrderDetailTs { get; set; }
     }
 }
