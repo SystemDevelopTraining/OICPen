@@ -38,9 +38,10 @@
             this.stockDangerViewBtn = new System.Windows.Forms.Button();
             this.stockViewBtn = new System.Windows.Forms.Button();
             this.separatorLbl = new System.Windows.Forms.Label();
-            this.商品ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.商品名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.現在在庫数 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.stockDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,16 +61,16 @@
             this.stockDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.stockDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stockDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.商品ID,
-            this.商品名,
-            this.現在在庫数});
+            this.Date,
+            this.ItemTID,
+            this.ItemT,
+            this.Quantity});
             this.stockDgv.Location = new System.Drawing.Point(12, 21);
             this.stockDgv.Name = "stockDgv";
             this.stockDgv.RowTemplate.Height = 21;
             this.stockDgv.Size = new System.Drawing.Size(800, 949);
             this.stockDgv.TabIndex = 6;
             this.stockDgv.TabStop = false;
-            this.stockDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockDgv_CellContentClick);
             // 
             // itemsCodeLbl
             // 
@@ -150,25 +151,29 @@
             this.separatorLbl.TabIndex = 0;
             this.separatorLbl.Text = "label6";
             // 
-            // 商品ID
+            // Date
             // 
-            this.商品ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.商品ID.HeaderText = "商品ID";
-            this.商品ID.Name = "商品ID";
-            this.商品ID.ReadOnly = true;
-            this.商品ID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Date.HeaderText = "日付";
+            this.Date.Name = "Date";
             // 
-            // 商品名
+            // ItemTID
             // 
-            this.商品名.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.商品名.HeaderText = "商品名";
-            this.商品名.Name = "商品名";
+            this.ItemTID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemTID.HeaderText = "商品ID";
+            this.ItemTID.Name = "ItemTID";
             // 
-            // 現在在庫数
+            // ItemT
             // 
-            this.現在在庫数.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.現在在庫数.HeaderText = "現在在庫数";
-            this.現在在庫数.Name = "現在在庫数";
+            this.ItemT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemT.HeaderText = "商品名";
+            this.ItemT.Name = "ItemT";
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.HeaderText = "現在在庫数";
+            this.Quantity.Name = "Quantity";
             // 
             // Stock
             // 
@@ -189,6 +194,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Stock";
             this.Text = "Stock";
+            this.Load += new System.EventHandler(this.Stock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stockDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,8 +213,9 @@
         private System.Windows.Forms.Button stockDangerViewBtn;
         private System.Windows.Forms.Button stockViewBtn;
         private System.Windows.Forms.Label separatorLbl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 商品ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 商品名;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 現在在庫数;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemTID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
     }
 }
