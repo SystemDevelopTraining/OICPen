@@ -31,8 +31,28 @@ namespace OICPen
                 MessageBox.Show("検索内容を入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-       
+            else
+                
+            {
+                stockDgv.Rows.Clear();
+                foreach (var stock in servis.GetAllStocks())
+                {
+                  
+                    if (itemsCodeTbox.Text == stock.ItemTID.ToString() || itemsNameTbox.Text==stock.ItemT.Name)
+                    {
+                        
+                        stockDgv.Rows.Add(stock.Date, stock.ItemTID, stock.ItemT.Name, stock.Quantity);
+                    }
 
+
+
+
+                }
+
+
+
+
+            }
         }
 
         private void Stock_Load(object sender, EventArgs e)
