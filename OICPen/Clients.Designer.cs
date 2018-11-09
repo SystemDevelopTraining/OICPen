@@ -47,6 +47,7 @@
             this.searchHuriganaTbox = new System.Windows.Forms.TextBox();
             this.searchHuriganaLbl = new System.Windows.Forms.Label();
             this.searchNameTbox = new System.Windows.Forms.TextBox();
+            this.searchIdTbox = new System.Windows.Forms.TextBox();
             this.searchNameLbl = new System.Windows.Forms.Label();
             this.searchIdLbl = new System.Windows.Forms.Label();
             this.idDispLbl = new System.Windows.Forms.Label();
