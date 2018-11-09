@@ -32,9 +32,9 @@ namespace OICPen
         {
             uint i=0; 
             string[] search=new string[] { searchNameTbox.Text,searchIdTbox.Text,searchHuriganaTbox.Text };
-            var ckecks = new Func<string, string>[] { (x) => "", (x) => "", HiraganaCheek };
-            search.Zip(ckecks,(item,check)=> {
-                if (NullCheek(item))
+            var checks = new Func<string, string>[] { (x) => "", (x) => "", HiraganaCheck };
+            search.Zip(checks,(item,check)=> {
+                if (NullCheck(item))
                 {
                     i++;
                     string erroMessage = check(item);
@@ -69,31 +69,27 @@ namespace OICPen
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            if (NullCheek(nameTbox.Text)
-                 && PhoneNumberCheek(phoneNumberMaskedTbox.Text)
-                 && PostalCodeCheek(postalCodeMaskedTbox.Text)
-                 && NullCheek(addressTbox.Text))
+            if (NullCheck(nameTbox.Text)
+                 && PhoneNumberCheck(phoneNumberMaskedTbox.Text)
+                 && PostalCodeCheck(postalCodeMaskedTbox.Text)
+                 && NullCheck(addressTbox.Text))
             {
-                HiraganaCheek(huriganaTbox.Text);
+                HiraganaCheck(huriganaTbox.Text);
             }
         }
 
-        private string HiraganaCheek(string text){
-            //ひらがなチェック
+        private string HiraganaCheck(string text){
             if (System.Text.RegularExpressions.Regex.IsMatch(text, @"^\p{IsHiragana}+$"))
             {
-                //すべてがひらがなの場合
                 return "";
             }
             else
             {
-                //ひらがな以外の文字が入っている場合
-//                MessageBox.Show("ふりがなにはひらがなのみを入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "ふりがなにはひらがなのみを入力してください";
             }
         }
 
-        private bool NullCheek(string text)
+        private bool NullCheck(string text)
         {
             if (text != "")
             {
@@ -103,7 +99,7 @@ namespace OICPen
             return false;
         }
 
-        private bool PhoneNumberCheek(string text)
+        private bool PhoneNumberCheck(string text)
         {
             if (Regex.IsMatch(text, @"^\d+-\d+-\d+$"))
             {
@@ -116,7 +112,7 @@ namespace OICPen
         }
 
 
-        private bool PostalCodeCheek(string text)
+        private bool PostalCodeCheck(string text)
         {
             if (Regex.IsMatch(text, @"^\d+-\d+$"))
             {
@@ -158,5 +154,22 @@ namespace OICPen
         {
             postalCodeMaskedTbox.SelectionStart = 0;
         }
+
+        private void Clients_Shown(object sender, EventArgs e)
+        {
+            DataShow();
+        }
+
+        private void DataShow()
+        {
+            clientsDgv.Rows.Clear();
+            var dgv = clientsDgv;
+            var clients = servis.GetClients();
+            foreach (var x in clients)
+            {
+                dgv.Rows.Add(x.ClientTID, x.Name, x.Hurigana, x.Address, x.PostNum, x.PhoneNum);
+            }
+        }
+
     }
 }
