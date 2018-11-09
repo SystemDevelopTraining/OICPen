@@ -30,22 +30,27 @@ namespace OICPen
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            uint i=0; 
+            uint i=0,index=0;
+            string erroMessage="";
             string[] search=new string[] { searchNameTbox.Text,searchIdTbox.Text,searchHuriganaTbox.Text };
-            var checks = new Func<string, string>[] { (x) => "", (x) => "", HiraganaCheck };
+            var checks = new Func<string, string>[] { (x) => "", (x) => "", Utility.HiraganaCheck };
             search.Zip(checks,(item,check)=> {
-                if (IsNotEmpty(item))
+                if (!Utility.TextIsEmpty(item))
                 {
                     i++;
-                    string erroMessage = check(item);
-                    if (erroMessage != "")
-                        MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    var msg = check(item);
+                    erroMessage += msg == "" ? msg : msg + "\r\n";
                 }
                 return 0;
             }).ToArray();
-            if (i != 1) {
-                MessageBox.Show("検索項目が１つではありません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; }
+            if (i != 1)
+                erroMessage+="検索項目が１つではありません";
+            if (erroMessage != "")
+            {
+                MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
         }
 
         private void registBtn_Click(object sender, EventArgs e)
@@ -57,47 +62,29 @@ namespace OICPen
             client.PostNum = phoneNumberMaskedTbox.Text;
             client.Address = addressTbox.Text;
             servis.AddClient(client);
- /*                      if (NullCheek(nameTbox.Text)
-                            &&PhoneNumberCheek(phoneNumberMaskedTbox.Text)
-                            && PostalCodeCheek(postalCodeMaskedTbox.Text)
-                            &&NullCheek(addressTbox.Text))
+/*                       if (!Utility.TextIsEmpty(nameTbox.Text)
+                            && PhoneNumberCheck(phoneNumberMaskedTbox.Text)
+                            && PostalCodeCheck(postalCodeMaskedTbox.Text)
+                            &&!Utility.TextIsEmpty(addressTbox.Text))
                         {
-                            HiraganaCheek(huriganaTbox.Text);
+                            Utility.HiraganaCheck(huriganaTbox.Text);
                         }*/
 //           MessageBox.Show(phoneNumberMaskedTbox.Text, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            if (IsNotEmpty(nameTbox.Text)
+            if (!Utility.TextIsEmpty(nameTbox.Text)
                  && PhoneNumberCheck(phoneNumberMaskedTbox.Text)
                  && PostalCodeCheck(postalCodeMaskedTbox.Text)
-                 && IsNotEmpty(addressTbox.Text))
+                 && !Utility.TextIsEmpty(addressTbox.Text))
             {
-                HiraganaCheck(huriganaTbox.Text);
+                Utility.HiraganaCheck(huriganaTbox.Text);
             }
         }
 
-        private string HiraganaCheck(string text){
-            if (System.Text.RegularExpressions.Regex.IsMatch(text, @"^\p{IsHiragana}+$"))
-            {
-                return "";
-            }
-            else
-            {
-                return "ふりがなにはひらがなのみを入力してください";
-            }
-        }
 
-        private bool IsNotEmpty(string text)
-        {
-            if (text != "")
-            {
-                return true;
-            }
 
-            return false;
-        }
 
         private bool PhoneNumberCheck(string text)
         {
