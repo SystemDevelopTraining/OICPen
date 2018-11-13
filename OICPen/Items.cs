@@ -14,6 +14,9 @@ namespace OICPen
 {
     public partial class Items : Form
     {
+
+        private Services.ItemService service=new Services.ItemService(new Models.OICPenDbContext());
+
         public Items()
         {
             InitializeComponent();
@@ -49,6 +52,14 @@ namespace OICPen
         {
             Utility.TextBoxDigitCheck(safetyStockTbox, e);
         }
+
+        void SetDataGridView(List<Models.ItemT> items)
+        {
+            itemDgv.Rows.Clear();
+            items.ForEach(item => {
+                itemDgv.Rows.Add(item.Name, item.JAN, item.Price, item.PurchasePrice, item.SafetyStock, item.Hurigana, item.RegistDate, item.Note, item.IsDeleted);
+            });
+        } 
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
@@ -96,10 +107,23 @@ namespace OICPen
 
         private void registBtn_Click(object sender, EventArgs e)
         {
-            Models.ItemT Item = new Models.ItemT();
-            Item.Name = itemNameTbox.Text;
+            Models.ItemT item = new Models.ItemT();
+            item.Name = itemNameTbox.Text;
+            item.JAN = janTbox.Text;
+            item.Price = uint.Parse(priceTbox.Text);
+            item.PurchasePrice = uint.Parse(purchasePriceTbox.Text);
+            item.SafetyStock = uint.Parse(safetyStockTbox.Text);
+            item.Hurigana = furiganaTbox.Text;
+            item.RegistDate = DateTime.Now;
+            item.Note = noteTbox.Text;
+            item.IsDeleted = false;
+            service.AddItem(item);
+            SetDataGridView(service.GetAllItems());
         }
 
-        
+        private void itemsUpdateBtn_Click(object sender, EventArgs e)
+        {
+            SetDataGridView(service.GetAllItems());
+        }
     }
 }
