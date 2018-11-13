@@ -59,7 +59,6 @@ namespace OICPen
             }
             
             SetDataGridView(servis.GetShipedTakeOrders());
-
         }
 
 
