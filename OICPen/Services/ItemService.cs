@@ -76,6 +76,18 @@ namespace OICPen.Services
             return item;
             
         }
+         /*---------------------------------------------------------------
+         [役割] 商品を削除する
+         [引数] i: 削除する商品ID
+         [返り値] 削除した商品情報
+         ---------------------------------------------------------------*/
+        public ItemT DeleteItem(int id)
+        {
+            var item = context.Items.Single(x => x.ItemTID == id);
+            item.IsDeleted = true;
+            context.SaveChanges();
+            return item;
+        }
         /*---------------------------------------------------------------
          [役割] 名前で商品を検索
          [引数] i: 商品名
@@ -83,7 +95,7 @@ namespace OICPen.Services
          ---------------------------------------------------------------*/
         public List<ItemT> FindByName(string name)
         {
-            var items = context.Items.Where(x=> x.Name.Contains(name));
+            var items = context.Items.Where(x=> x.Name.Contains(name) && x.IsDeleted == false);
             return items.ToList();
         }
         /*---------------------------------------------------------------
@@ -93,7 +105,7 @@ namespace OICPen.Services
          ---------------------------------------------------------------*/
         public ItemT FindByID(int id)
         {
-            var item = context.Items.Single(x => x.ItemTID == id);
+            var item = context.Items.Single(x => x.ItemTID == id && x.IsDeleted == false);
             return item;
         }
         /*---------------------------------------------------------------
@@ -103,7 +115,8 @@ namespace OICPen.Services
          ---------------------------------------------------------------*/
         public ItemT FindByJAN(string jan)
         {
-            var item = context.Items.Single(x => x.JAN== jan);
+            var item = context.Items
+                .Single(x => x.JAN== jan&&x.IsDeleted==false);
             return item;
         }
     }

@@ -67,8 +67,7 @@ namespace OICPen
                     item.JAN,
                     item.SafetyStock,
                     item.Note,
-                    item.RegistDate,
-                    item.IsDeleted);
+                    item.RegistDate);
             });
         } 
 
@@ -151,7 +150,6 @@ namespace OICPen
             item.SafetyStock = uint.Parse(cells[6].Value.ToString());
             item.Note = cells[7].Value.ToString();
             item.RegistDate = (DateTime)cells[8].Value;
-            item.IsDeleted = (bool)cells[9].Value;
             return item;
         }
 
@@ -161,13 +159,13 @@ namespace OICPen
             var item = TextboxToItemT();
             item.IsDeleted = false;
             service.AddItem(item);
-            SetDataGridView(service.GetAllItems());
+            SetDataGridView(service.GetItems());
         }
 
         /*商品一覧更新*/
         private void itemsUpdateBtn_Click(object sender, EventArgs e)
         {
-            SetDataGridView(service.GetAllItems());
+            SetDataGridView(service.GetItems());
         }
 
         /*行選択*/
@@ -191,10 +189,18 @@ namespace OICPen
             if (dgvItem == null) return;
             var item = TextboxToItemT();
             item.ItemTID = dgvItem.ItemTID;
-            item.IsDeleted = dgvItem.IsDeleted;
             item.RegistDate = dgvItem.RegistDate;
             service.UpdateItem(item);
-            SetDataGridView(service.GetAllItems());
+            SetDataGridView(service.GetItems());
+        }
+
+        /*商品の削除*/
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            var dgvItem = DgvToItemT();
+            if (dgvItem == null) return;
+            service.DeleteItem(dgvItem.ItemTID);
+            SetDataGridView(service.GetItems());
         }
     }
 }
