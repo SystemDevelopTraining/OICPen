@@ -23,16 +23,13 @@ namespace OICPen
         //出庫済一覧表示
         private void shippedCheckBtn_Click(object sender, EventArgs e)
         {
-            shipDgv.Rows.Clear();
-            ShipCheck(servis.GetShipedTakeOrders());
-
+            SetDataGridView(servis.GetShipedTakeOrders());
         }     
         //　未出庫一覧表示
         private void shipCheckBtn_Click(object sender, EventArgs e)
         {
-            shipDgv.Rows.Clear();
-
-            ShipCheck(servis.GetNoShipedTakeOrders());
+            
+            SetDataGridView(servis.GetNoShipedTakeOrders());
          }
 
         
@@ -46,8 +43,8 @@ namespace OICPen
                 servis.Shiping((int)cells[1].Value);
        
             }
-            shipDgv.Rows.Clear();
-            ShipCheck(servis.GetNoShipedTakeOrders());
+            
+            SetDataGridView(servis.GetNoShipedTakeOrders());
 
         }
         private void shipFixBtn_Click(object sender, EventArgs e)
@@ -60,15 +57,16 @@ namespace OICPen
                 servis.ClearShiping((int)cells[1].Value);
 
             }
-            shipDgv.Rows.Clear();
-            ShipCheck(servis.GetShipedTakeOrders());
+            
+            SetDataGridView(servis.GetShipedTakeOrders());
 
         }
 
 
         //出庫済み、未出庫の処理をする。
-        public void ShipCheck (List<Models.TakeOrderT> loadShip ) 
+        public void SetDataGridView (List<Models.TakeOrderT> loadShip ) 
         {
+            shipDgv.Rows.Clear();
 
             foreach (var orders in loadShip)
             {
