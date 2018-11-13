@@ -22,7 +22,7 @@ namespace OICPen
             InitializeComponent();
         }
 
-       
+       /*バリエーションチェック*/
         private void searchItemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utility.TextBoxDigitCheck(searchItemIdTbox,e);
@@ -53,11 +53,22 @@ namespace OICPen
             Utility.TextBoxDigitCheck(safetyStockTbox, e);
         }
 
+        /*データグリッドビューセット*/
         void SetDataGridView(List<Models.ItemT> items)
         {
             itemDgv.Rows.Clear();
             items.ForEach(item => {
-                itemDgv.Rows.Add(item.Name, item.JAN, item.Price, item.PurchasePrice, item.SafetyStock, item.Hurigana, item.RegistDate, item.Note, item.IsDeleted);
+                itemDgv.Rows.Add(
+                    item.ItemTID,
+                    item.Name,
+                    item.Hurigana,
+                    item.PurchasePrice,
+                    item.Price,
+                    item.JAN,
+                    item.SafetyStock,
+                    item.Note,
+                    item.RegistDate,
+                    item.IsDeleted);
             });
         } 
 
@@ -69,7 +80,6 @@ namespace OICPen
                 //IDでの検索
                 () =>
                 {
-
                 },
                 //名前での検索
                 () =>
@@ -104,10 +114,10 @@ namespace OICPen
             }
 
         }
-
-        private void registBtn_Click(object sender, EventArgs e)
+        /*テキストボックスからItemTを生成する*/
+        Models.ItemT TextboxToItemT()
         {
-            Models.ItemT item = new Models.ItemT();
+            var item = new Models.ItemT();
             item.Name = itemNameTbox.Text;
             item.JAN = janTbox.Text;
             item.Price = uint.Parse(priceTbox.Text);
@@ -116,13 +126,67 @@ namespace OICPen
             item.Hurigana = furiganaTbox.Text;
             item.RegistDate = DateTime.Now;
             item.Note = noteTbox.Text;
+            return item;
+        }
+
+        /*選択中の行からItemTを生成する*/
+        Models.ItemT DgvToItemT()
+        {
+            var item = new Models.ItemT();
+            if (itemDgv.SelectedRows.Count == 0) return null;
+            var cells = itemDgv.SelectedRows[0].Cells;
+            item.ItemTID = int.Parse(cells[0].Value.ToString());
+            item.Name = cells[1].Value.ToString();
+            item.Hurigana = cells[2].Value.ToString();
+            item.PurchasePrice = uint.Parse(cells[3].Value.ToString());
+            item.Price = uint.Parse(cells[4].Value.ToString());
+            item.JAN = cells[5].Value.ToString();
+            item.SafetyStock = uint.Parse(cells[6].Value.ToString());
+            item.Note = cells[7].Value.ToString();
+            item.RegistDate = (DateTime)cells[8].Value;
+            item.IsDeleted = (bool)cells[9].Value;
+            return item;
+        }
+
+        /*商品登録*/
+        private void registBtn_Click(object sender, EventArgs e)
+        {
+            var item = TextboxToItemT();
             item.IsDeleted = false;
             service.AddItem(item);
             SetDataGridView(service.GetAllItems());
         }
 
+        /*商品一覧更新*/
         private void itemsUpdateBtn_Click(object sender, EventArgs e)
         {
+            SetDataGridView(service.GetAllItems());
+        }
+
+        /*行選択*/
+        private void itemDgv_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            var item = DgvToItemT();
+            if (item==null) return; 
+            itemNameTbox.Text = item.Name;
+            furiganaTbox.Text = item.Hurigana;
+            purchasePriceTbox.Text = item.PurchasePrice.ToString();
+            priceTbox.Text = item.Price.ToString();
+            janTbox.Text = item.JAN;
+            safetyStockTbox.Text = item.SafetyStock.ToString();
+            noteTbox.Text = item.Note;
+        }
+
+        /*商品更新*/
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            var dgvItem = DgvToItemT();
+            if (dgvItem == null) return;
+            var item = TextboxToItemT();
+            item.ItemTID = dgvItem.ItemTID;
+            item.IsDeleted = dgvItem.IsDeleted;
+            item.RegistDate = dgvItem.RegistDate;
+            service.UpdateItem(item);
             SetDataGridView(service.GetAllItems());
         }
     }

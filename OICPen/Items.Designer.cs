@@ -58,14 +58,15 @@
             this.itemRegistLbl = new System.Windows.Forms.Label();
             this.purchasePriceLbl = new System.Windows.Forms.Label();
             this.purchasePriceTbox = new System.Windows.Forms.TextBox();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.janCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.janCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.itemDgv)).BeginInit();
             this.SuspendLayout();
@@ -92,6 +93,7 @@
             this.updateBtn.TabIndex = 14;
             this.updateBtn.Text = "更新";
             this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // deleteBtn
             // 
@@ -116,22 +118,28 @@
             // 
             // itemDgv
             // 
+            this.itemDgv.AllowUserToAddRows = false;
             this.itemDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.itemDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column8,
             this.productName,
-            this.janCode,
-            this.Column1,
-            this.Column2,
-            this.Column3,
             this.Column4,
-            this.Column5,
+            this.Column2,
+            this.Column1,
+            this.janCode,
+            this.Column3,
             this.Column6,
+            this.Column5,
             this.Column7});
             this.itemDgv.Location = new System.Drawing.Point(12, 21);
+            this.itemDgv.MultiSelect = false;
             this.itemDgv.Name = "itemDgv";
+            this.itemDgv.ReadOnly = true;
             this.itemDgv.RowTemplate.Height = 21;
+            this.itemDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.itemDgv.Size = new System.Drawing.Size(890, 949);
             this.itemDgv.TabIndex = 5;
+            this.itemDgv.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemDgv_RowEnter);
             // 
             // searchBtn
             // 
@@ -411,35 +419,17 @@
             this.purchasePriceTbox.TabIndex = 8;
             this.purchasePriceTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.purchasePriceTbox_KeyPress);
             // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "ID";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
             // productName
             // 
             this.productName.HeaderText = "商品名";
             this.productName.Name = "productName";
             this.productName.ReadOnly = true;
-            // 
-            // janCode
-            // 
-            this.janCode.HeaderText = "JAN";
-            this.janCode.Name = "janCode";
-            this.janCode.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "販売価格";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "仕入れ価格";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "安全在庫数";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
@@ -447,17 +437,41 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // Column5
+            // Column2
             // 
-            this.Column5.HeaderText = "登録日";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.Column2.HeaderText = "仕入れ価格";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "販売価格";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // janCode
+            // 
+            this.janCode.HeaderText = "JAN";
+            this.janCode.Name = "janCode";
+            this.janCode.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "安全在庫数";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "備考";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "登録日";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column7
             // 
@@ -543,14 +557,15 @@
         private System.Windows.Forms.Label itemRegistLbl;
         private System.Windows.Forms.Label purchasePriceLbl;
         private System.Windows.Forms.TextBox purchasePriceTbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn productName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn janCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn janCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }
