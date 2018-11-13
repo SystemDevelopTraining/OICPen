@@ -51,6 +51,9 @@
             this.confirmBtn = new System.Windows.Forms.Button();
             this.completeOrdersTitleLbl = new System.Windows.Forms.Label();
             this.delBtn = new System.Windows.Forms.Button();
+            this.clientLbl = new System.Windows.Forms.Label();
+            this.clientnameLbl = new System.Windows.Forms.Label();
+            this.phonenoLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.completeOrdersDgv)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +86,6 @@
             this.separatorLbl.Name = "separatorLbl";
             this.separatorLbl.Size = new System.Drawing.Size(1438, 10);
             this.separatorLbl.TabIndex = 8;
-            this.separatorLbl.Click += new System.EventHandler(this.separatorLbl_Click);
             // 
             // receptionLbl
             // 
@@ -143,7 +145,6 @@
             this.completeBtn.TabIndex = 11;
             this.completeBtn.Text = "完了";
             this.completeBtn.UseVisualStyleBackColor = true;
-            this.completeBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // clearBtn
             // 
@@ -173,6 +174,7 @@
             this.clientsIdCheckBtn.TabIndex = 13;
             this.clientsIdCheckBtn.Text = "確認";
             this.clientsIdCheckBtn.UseVisualStyleBackColor = true;
+            this.clientsIdCheckBtn.Click += new System.EventHandler(this.clientsIdCheckBtn_Click);
             // 
             // itemNameLbl
             // 
@@ -197,7 +199,7 @@
             // 
             this.clientsIdViewLbl.AutoSize = true;
             this.clientsIdViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsIdViewLbl.Location = new System.Drawing.Point(96, 327);
+            this.clientsIdViewLbl.Location = new System.Drawing.Point(95, 373);
             this.clientsIdViewLbl.Name = "clientsIdViewLbl";
             this.clientsIdViewLbl.Size = new System.Drawing.Size(223, 29);
             this.clientsIdViewLbl.TabIndex = 17;
@@ -207,7 +209,7 @@
             // 
             this.clientsNameViewLbl.AutoSize = true;
             this.clientsNameViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsNameViewLbl.Location = new System.Drawing.Point(324, 327);
+            this.clientsNameViewLbl.Location = new System.Drawing.Point(324, 373);
             this.clientsNameViewLbl.Name = "clientsNameViewLbl";
             this.clientsNameViewLbl.Size = new System.Drawing.Size(223, 29);
             this.clientsNameViewLbl.TabIndex = 18;
@@ -245,7 +247,7 @@
             // 
             this.clientsPhoneNoViewLbl.AutoSize = true;
             this.clientsPhoneNoViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsPhoneNoViewLbl.Location = new System.Drawing.Point(558, 327);
+            this.clientsPhoneNoViewLbl.Location = new System.Drawing.Point(553, 373);
             this.clientsPhoneNoViewLbl.Name = "clientsPhoneNoViewLbl";
             this.clientsPhoneNoViewLbl.Size = new System.Drawing.Size(163, 29);
             this.clientsPhoneNoViewLbl.TabIndex = 22;
@@ -282,12 +284,45 @@
             this.delBtn.Text = "削除";
             this.delBtn.UseVisualStyleBackColor = true;
             // 
+            // clientLbl
+            // 
+            this.clientLbl.AutoSize = true;
+            this.clientLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.clientLbl.Location = new System.Drawing.Point(154, 325);
+            this.clientLbl.Name = "clientLbl";
+            this.clientLbl.Size = new System.Drawing.Size(101, 29);
+            this.clientLbl.TabIndex = 26;
+            this.clientLbl.Text = "会員ID";
+            // 
+            // clientnameLbl
+            // 
+            this.clientnameLbl.AutoSize = true;
+            this.clientnameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.clientnameLbl.Location = new System.Drawing.Point(388, 325);
+            this.clientnameLbl.Name = "clientnameLbl";
+            this.clientnameLbl.Size = new System.Drawing.Size(100, 29);
+            this.clientnameLbl.TabIndex = 27;
+            this.clientnameLbl.Text = "会員名";
+            // 
+            // phonenoLbl
+            // 
+            this.phonenoLbl.AutoSize = true;
+            this.phonenoLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.phonenoLbl.Location = new System.Drawing.Point(571, 325);
+            this.phonenoLbl.Name = "phonenoLbl";
+            this.phonenoLbl.Size = new System.Drawing.Size(129, 29);
+            this.phonenoLbl.TabIndex = 28;
+            this.phonenoLbl.Text = "電話番号";
+            // 
             // TakeOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
+            this.Controls.Add(this.phonenoLbl);
+            this.Controls.Add(this.clientnameLbl);
+            this.Controls.Add(this.clientLbl);
             this.Controls.Add(this.delBtn);
             this.Controls.Add(this.completeOrdersTitleLbl);
             this.Controls.Add(this.confirmBtn);
@@ -314,7 +349,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TakeOrder";
             this.Text = "TakeOrder";
-            this.Load += new System.EventHandler(this.TakeOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.completeOrdersDgv)).EndInit();
             this.ResumeLayout(false);
@@ -347,5 +381,8 @@
         private System.Windows.Forms.Button confirmBtn;
         private System.Windows.Forms.Label completeOrdersTitleLbl;
         private System.Windows.Forms.Button delBtn;
+        private System.Windows.Forms.Label clientLbl;
+        private System.Windows.Forms.Label clientnameLbl;
+        private System.Windows.Forms.Label phonenoLbl;
     }
 }
