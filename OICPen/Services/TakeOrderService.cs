@@ -79,10 +79,23 @@ namespace OICPen.Services
          [引数] t: 出庫する注文情報
          [返り値] なし
          ---------------------------------------------------------------*/
-        public void Shiping(Models.TakeOrderT t)
+        public void Shiping(int id)
         {
-            var takeOrder = context.TakeOrders.Single(x => x.TakeOrderTID == t.TakeOrderTID);
+            var takeOrder = context.TakeOrders.Single(x => x.TakeOrderTID == id);
             takeOrder.ShipDate = DateTime.Now;
+            context.SaveChanges();
+        }
+
+        /*---------------------------------------------------------------
+         [役割] 受け取った注文情報の出庫日時を削除する
+         [引数] t: 出庫する注文情報
+         [返り値] なし
+         ---------------------------------------------------------------*/
+        public void ClearShiping(int id)
+        {
+            var takeOrder = context.TakeOrders.Single(x => x.TakeOrderTID == id);
+            takeOrder.ShipDate = null;
+            context.SaveChanges();
         }
     }
 }

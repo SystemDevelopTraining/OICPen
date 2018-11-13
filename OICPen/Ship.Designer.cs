@@ -43,6 +43,8 @@
             // 
             // shipDgv
             // 
+            this.shipDgv.AllowUserToAddRows = false;
+            this.shipDgv.AllowUserToDeleteRows = false;
             this.shipDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.shipDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ClientTID,
@@ -50,8 +52,11 @@
             this.takeOderDate,
             this.shipDate});
             this.shipDgv.Location = new System.Drawing.Point(12, 21);
+            this.shipDgv.MultiSelect = false;
             this.shipDgv.Name = "shipDgv";
+            this.shipDgv.ReadOnly = true;
             this.shipDgv.RowTemplate.Height = 21;
+            this.shipDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.shipDgv.Size = new System.Drawing.Size(1310, 949);
             this.shipDgv.TabIndex = 0;
             // 
@@ -114,24 +119,28 @@
             this.ClientTID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ClientTID.HeaderText = "会員ID";
             this.ClientTID.Name = "ClientTID";
+            this.ClientTID.ReadOnly = true;
             // 
             // takeOrderID
             // 
             this.takeOrderID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.takeOrderID.HeaderText = "注文ID";
             this.takeOrderID.Name = "takeOrderID";
+            this.takeOrderID.ReadOnly = true;
             // 
             // takeOderDate
             // 
             this.takeOderDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.takeOderDate.HeaderText = "注文日";
             this.takeOderDate.Name = "takeOderDate";
+            this.takeOderDate.ReadOnly = true;
             // 
             // shipDate
             // 
             this.shipDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.shipDate.HeaderText = "出庫日";
             this.shipDate.Name = "shipDate";
+            this.shipDate.ReadOnly = true;
             // 
             // Ship
             // 
