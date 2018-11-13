@@ -75,22 +75,22 @@ namespace OICPen
         private void searchBtn_Click(object sender, EventArgs e)
         {
             var items = new string[] { searchItemIdTbox.Text, searchItemNameTbox.Text, searchJanTbox.Text };
-            var processes = new Action[]
+            var processes = new Func<List<Models.ItemT>>[]
             {
                 //IDでの検索
                 () =>
-                {
-                },
+                    new List<Models.ItemT>(
+                        new Models.ItemT[] { service.FindByID(int.Parse(searchItemIdTbox.Text)) }
+                    ),
                 //名前での検索
                 () =>
-                {
-                    
-                },
+                    service.FindByName(searchItemNameTbox.Text)
+                ,
                 //JANコードでの検索
                 () =>
-                {
-                    
-                }
+                   new List<Models.ItemT>(
+                        new Models.ItemT[] { service.FindByJAN(searchJanTbox.Text) }
+                    )
 
             };
 
@@ -100,7 +100,7 @@ namespace OICPen
             {
                 if (items[i] != "")
                 {
-                    i++;
+                    itemCount++;
                     currentIndex = i;
                 }
             }
@@ -110,7 +110,14 @@ namespace OICPen
                 MessageBox.Show("検索項目が一つではありません", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }else
             {
-                processes[currentIndex]();
+                try
+                {
+                    SetDataGridView(processes[currentIndex]());
+                }
+                catch
+                {
+
+                }
             }
 
         }
