@@ -27,6 +27,7 @@ namespace OICPen
             searchIdTbox.Text = "";
             searchNameTbox.Text = "";
             searchHuriganaTbox.Text = "";
+            DataShow();
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -198,13 +199,29 @@ namespace OICPen
 
         private ClientT TextToClient()
         {
-            var client = new Models.ClientT();
+            var client = new ClientT();
+            client.ClientTID = int.Parse(idDispLbl.Text);
             client.Name = nameTbox.Text;
             client.Hurigana = huriganaTbox.Text;
             client.PhoneNum = phoneNumberMaskedTbox.Text;
-            client.PostNum = phoneNumberMaskedTbox.Text;
+            client.PostNum = postalCodeMaskedTbox.Text;
             client.Address = addressTbox.Text;
             return client;
         }
+
+        private void clientsDgv_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            var client = new ClientT();
+            if (clientsDgv.SelectedRows.Count == 0) return;
+            var cells = clientsDgv.SelectedRows[0].Cells;
+            idDispLbl.Text = cells[0].Value.ToString();
+            nameTbox.Text = cells[1].Value.ToString();
+            huriganaTbox.Text = cells[2].Value.ToString();
+            phoneNumberMaskedTbox.Text = cells[5].Value.ToString();
+            postalCodeMaskedTbox.Text = cells[4].Value.ToString();
+            addressTbox.Text = cells[3].Value.ToString();
+        }
+
+
     }
 }

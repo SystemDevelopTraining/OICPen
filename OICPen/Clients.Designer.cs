@@ -66,6 +66,8 @@
             // 
             // clientsDgv
             // 
+            this.clientsDgv.AllowUserToAddRows = false;
+            this.clientsDgv.AllowUserToDeleteRows = false;
             this.clientsDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientsDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -75,40 +77,50 @@
             this.postalCode,
             this.address});
             this.clientsDgv.Location = new System.Drawing.Point(12, 21);
+            this.clientsDgv.MultiSelect = false;
             this.clientsDgv.Name = "clientsDgv";
+            this.clientsDgv.ReadOnly = true;
             this.clientsDgv.RowTemplate.Height = 21;
+            this.clientsDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.clientsDgv.Size = new System.Drawing.Size(900, 949);
             this.clientsDgv.TabIndex = 5;
+            this.clientsDgv.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.clientsDgv_RowEnter);
             // 
             // ID
             // 
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // name
             // 
             this.name.HeaderText = "名前";
             this.name.Name = "name";
+            this.name.ReadOnly = true;
             // 
             // furigana
             // 
             this.furigana.HeaderText = "ふりがな";
             this.furigana.Name = "furigana";
+            this.furigana.ReadOnly = true;
             // 
             // phoneNumber
             // 
             this.phoneNumber.HeaderText = "電話番号";
             this.phoneNumber.Name = "phoneNumber";
+            this.phoneNumber.ReadOnly = true;
             // 
             // postalCode
             // 
             this.postalCode.HeaderText = "郵便番号";
             this.postalCode.Name = "postalCode";
+            this.postalCode.ReadOnly = true;
             // 
             // address
             // 
             this.address.HeaderText = "住所";
             this.address.Name = "address";
+            this.address.ReadOnly = true;
             // 
             // registBtn
             // 
