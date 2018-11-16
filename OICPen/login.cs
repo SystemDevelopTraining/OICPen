@@ -36,6 +36,8 @@ namespace OICPen
                 if (staff.Password == staffPassTbox.Text)
                 {
                     frame.SetUser(staff);
+                    StaffIdTbox.Text = null;
+                    staffPassTbox.Text = null;
                     return;
                 }
                 MessageBox.Show("パスワードが違います", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -34,6 +34,19 @@ namespace OICPen
             foreach(var btn in btnList)
             {
                 btn.Enabled = flag;
+                if (flag == false)
+                {
+                    btn.BackColor = System.Drawing.SystemColors.Control;
+                    logoutBtn.Enabled = false;
+                    logoutBtn.BackColor = System.Drawing.SystemColors.Control;
+                }
+                else
+                {
+                    btn.BackColor = Color.Black;
+                    logoutBtn.Enabled = true;
+                    logoutBtn.BackColor = Color.Black;
+
+                }
             }
         }
 
