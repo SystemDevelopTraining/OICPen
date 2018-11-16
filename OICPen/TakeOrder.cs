@@ -143,6 +143,30 @@ namespace OICPen
             return item;
         }
 
+        private void delBtn_Click(object sender, EventArgs e)
+        {
+            if (this.completeOrdersDgv.SelectedRows.Count > 0)
+            {
+              completeOrdersDgv.Rows.RemoveAt(this.completeOrdersDgv.SelectedRows[0].Index);
+            }
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            completeOrdersDgv.Rows.Clear();
+        }
+
+        private void completeBtn_Click(object sender, EventArgs e)
+        {
+          
+            for (int i = 0; i < this.Controls.Count; i++)
+            {
+                this.Controls[i].ResetText();
+            }
+
+
+            MessageBox.Show("MISSION COMPLETE", "COMPLETE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
 
