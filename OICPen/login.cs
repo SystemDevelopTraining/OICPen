@@ -12,9 +12,10 @@ namespace OICPen
 {
     public partial class login : Form
     {
-    
-    private Frame frame;
-    public login(Frame frm)
+
+        private Frame frame;
+        Services.StaffService service = new Services.StaffService(new Models.OICPenDbContext());
+        public login(Frame frm)
         {
             InitializeComponent();
             frame = frm;
@@ -26,15 +27,23 @@ namespace OICPen
 
         }
 
-        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        private void loginBtn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            frame.SetUserName("Leo");
+            try
+            {
+                int staffId = int.Parse(StaffIdTbox.Text);
+                var staff = service.FindByID(staffId);
+                if (staff.Password == staffPassTbox.Text)
+                {
+                    frame.SetUser(staff);
+                    return;
+                }
+                MessageBox.Show("パスワードが違います", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch
+            {
+                MessageBox.Show("該当する社員が存在しません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -12,9 +12,13 @@ namespace OICPen
 {
     public partial class Frame : Form
     {
-        public void SetUserName(string userName)
+
+        Models.StaffT loginStaff;
+
+        public void SetUser(Models.StaffT staff)
         {
-            staffsNameLbl.Text = userName;
+            staffsNameLbl.Text = staff.Name;
+            loginStaff = staff;
         }
         public Frame()
         {
