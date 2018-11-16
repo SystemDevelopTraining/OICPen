@@ -19,6 +19,7 @@ namespace OICPen
         public Items()
         {
             InitializeComponent();
+            SetDataGridView(service.GetItems());
         }
 
        /*バリエーションチェック*/
@@ -119,6 +120,10 @@ namespace OICPen
             }
 
         }
+
+
+
+
         /*テキストボックスからItemTを生成する*/
         Models.ItemT TextboxToItemT()
         {
@@ -155,16 +160,32 @@ namespace OICPen
         /*商品登録*/
         private void registBtn_Click(object sender, EventArgs e)
         {
-            var item = TextboxToItemT();
-            item.IsDeleted = false;
-            service.AddItem(item);
-            SetDataGridView(service.GetItems());
+            string erroMessage = "";
+            if (!Utility.TextIsEmpty(itemNameTbox.Text)
+                && !Utility.TextIsEmpty(purchasePriceTbox.Text)
+                && !Utility.TextIsEmpty(priceTbox.Text)
+                && !Utility.TextIsEmpty(janTbox.Text)
+                && !Utility.TextIsEmpty(safetyStockTbox.Text))
+            {
+                if ((erroMessage = Utility.HiraganaCheck(furiganaTbox.Text)) == "")
+                {
+                    service.AddItem(TextboxToItemT());
+                    SetDataGridView(service.GetItems());
+                }
+
+            }
+            else
+            {
+                erroMessage += "設定されていない項目があります";
+            }
+            if (erroMessage != "") MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         /*商品一覧更新*/
         private void itemsUpdateBtn_Click(object sender, EventArgs e)
         {
             SetDataGridView(service.GetItems());
+
         }
 
         /*行選択*/
@@ -186,11 +207,30 @@ namespace OICPen
         {
             var dgvItem = DgvToItemT();
             if (dgvItem == null) return;
-            var item = TextboxToItemT();
-            item.ItemTID = dgvItem.ItemTID;
-            item.RegistDate = dgvItem.RegistDate;
-            service.UpdateItem(item);
-            SetDataGridView(service.GetItems());
+            
+            string erroMessage = "";
+            if (!Utility.TextIsEmpty(itemNameTbox.Text)
+                && !Utility.TextIsEmpty(furiganaTbox.Text)
+                && !Utility.TextIsEmpty(purchasePriceTbox.Text)
+                && !Utility.TextIsEmpty(priceTbox.Text)
+                && !Utility.TextIsEmpty(janTbox.Text)
+                && !Utility.TextIsEmpty(safetyStockTbox.Text))
+            {
+                if ((erroMessage = Utility.HiraganaCheck(furiganaTbox.Text)) == "")
+                {
+                    var item = TextboxToItemT();
+                    item.ItemTID = dgvItem.ItemTID;
+                    item.RegistDate = dgvItem.RegistDate;
+                    service.UpdateItem(item);
+                    SetDataGridView(service.GetItems());
+                }
+
+            }
+            else
+            {
+                erroMessage += "設定されていない項目があります";
+            }
+            if (erroMessage != "") MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         /*商品の削除*/
