@@ -152,6 +152,7 @@
             this.completeBtn.TabIndex = 11;
             this.completeBtn.Text = "完了";
             this.completeBtn.UseVisualStyleBackColor = true;
+            this.completeBtn.Click += new System.EventHandler(this.completeBtn_Click);
             // 
             // clearBtn
             // 
@@ -162,6 +163,7 @@
             this.clearBtn.TabIndex = 12;
             this.clearBtn.Text = "クリア";
             this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // clientsIdTbox
             // 
@@ -232,6 +234,7 @@
             this.quantity});
             this.itemsViewDgv.Location = new System.Drawing.Point(129, 686);
             this.itemsViewDgv.Name = "itemsViewDgv";
+            this.itemsViewDgv.ReadOnly = true;
             this.itemsViewDgv.RowTemplate.Height = 21;
             this.itemsViewDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.itemsViewDgv.Size = new System.Drawing.Size(378, 261);
@@ -276,6 +279,7 @@
             this.completeOrdersDgv.Location = new System.Drawing.Point(766, 354);
             this.completeOrdersDgv.Name = "completeOrdersDgv";
             this.completeOrdersDgv.RowTemplate.Height = 21;
+            this.completeOrdersDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.completeOrdersDgv.Size = new System.Drawing.Size(535, 593);
             this.completeOrdersDgv.TabIndex = 20;
             // 
@@ -341,6 +345,7 @@
             this.delBtn.TabIndex = 25;
             this.delBtn.Text = "削除";
             this.delBtn.UseVisualStyleBackColor = true;
+            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
             // 
             // clientLbl
             // 
