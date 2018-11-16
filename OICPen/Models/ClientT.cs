@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace OICPen.Models
 {
@@ -20,6 +21,8 @@ namespace OICPen.Models
         [Required]
         [MaxLength(13)]
         public string PhoneNum { get; set; } // 連絡先
+
+        public virtual ICollection<ItemT> TakeOrderDetailTs { get; set; }
 
     }
 }
