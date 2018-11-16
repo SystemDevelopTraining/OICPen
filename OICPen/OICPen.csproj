@@ -118,6 +118,7 @@
     <Compile Include="Services\GiveOrderDetailService.cs" />
     <Compile Include="Services\GiveOrderService.cs" />
     <Compile Include="Services\ItemService.cs" />
+    <Compile Include="Services\StaffService.cs" />
     <Compile Include="Services\StockService.cs" />
     <Compile Include="Services\TakeOrderDetailService.cs" />
     <Compile Include="Services\TakeOrderService.cs" />
