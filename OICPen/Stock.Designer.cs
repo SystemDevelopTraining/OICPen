@@ -30,6 +30,10 @@
         {
             this.stockTitleLbl = new System.Windows.Forms.Label();
             this.stockDgv = new System.Windows.Forms.DataGridView();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemsCodeLbl = new System.Windows.Forms.Label();
             this.itemsNameLbl = new System.Windows.Forms.Label();
             this.itemsCodeTbox = new System.Windows.Forms.TextBox();
@@ -38,10 +42,6 @@
             this.stockDangerViewBtn = new System.Windows.Forms.Button();
             this.stockViewBtn = new System.Windows.Forms.Button();
             this.separatorLbl = new System.Windows.Forms.Label();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.stockDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +58,10 @@
             // 
             // stockDgv
             // 
+            this.stockDgv.AllowUserToAddRows = false;
+            this.stockDgv.AllowUserToDeleteRows = false;
+            this.stockDgv.AllowUserToResizeColumns = false;
+            this.stockDgv.AllowUserToResizeRows = false;
             this.stockDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.stockDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stockDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -67,10 +71,39 @@
             this.Quantity});
             this.stockDgv.Location = new System.Drawing.Point(12, 21);
             this.stockDgv.Name = "stockDgv";
+            this.stockDgv.ReadOnly = true;
             this.stockDgv.RowTemplate.Height = 21;
             this.stockDgv.Size = new System.Drawing.Size(800, 949);
             this.stockDgv.TabIndex = 6;
             this.stockDgv.TabStop = false;
+            // 
+            // Date
+            // 
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Date.HeaderText = "日付";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // ItemTID
+            // 
+            this.ItemTID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemTID.HeaderText = "商品ID";
+            this.ItemTID.Name = "ItemTID";
+            this.ItemTID.ReadOnly = true;
+            // 
+            // ItemT
+            // 
+            this.ItemT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemT.HeaderText = "商品名";
+            this.ItemT.Name = "ItemT";
+            this.ItemT.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.HeaderText = "現在在庫数";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
             // 
             // itemsCodeLbl
             // 
@@ -131,6 +164,7 @@
             this.stockDangerViewBtn.TabIndex = 5;
             this.stockDangerViewBtn.Text = "安全在庫数以下一覧";
             this.stockDangerViewBtn.UseVisualStyleBackColor = true;
+            this.stockDangerViewBtn.Click += new System.EventHandler(this.stockDangerViewBtn_Click);
             // 
             // stockViewBtn
             // 
@@ -141,6 +175,7 @@
             this.stockViewBtn.TabIndex = 4;
             this.stockViewBtn.Text = "在庫状況一覧表示";
             this.stockViewBtn.UseVisualStyleBackColor = true;
+            this.stockViewBtn.Click += new System.EventHandler(this.stockViewBtn_Click);
             // 
             // separatorLbl
             // 
@@ -150,30 +185,6 @@
             this.separatorLbl.Size = new System.Drawing.Size(643, 5);
             this.separatorLbl.TabIndex = 0;
             this.separatorLbl.Text = "label6";
-            // 
-            // Date
-            // 
-            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Date.HeaderText = "日付";
-            this.Date.Name = "Date";
-            // 
-            // ItemTID
-            // 
-            this.ItemTID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ItemTID.HeaderText = "商品ID";
-            this.ItemTID.Name = "ItemTID";
-            // 
-            // ItemT
-            // 
-            this.ItemT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ItemT.HeaderText = "商品名";
-            this.ItemT.Name = "ItemT";
-            // 
-            // Quantity
-            // 
-            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Quantity.HeaderText = "現在在庫数";
-            this.Quantity.Name = "Quantity";
             // 
             // Stock
             // 

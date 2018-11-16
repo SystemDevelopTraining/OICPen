@@ -23,40 +23,58 @@ namespace OICPen
         //出庫済一覧表示
         private void shippedCheckBtn_Click(object sender, EventArgs e)
         {
-            shipDgv.Rows.Clear();
-            foreach (var orders in servis.GetAllTakeOrders())
-            {
-                if (orders.ShipDate != null)
-                {
-                    shipDgv.Rows.Add(orders.TakeOrderTID, orders.TakeOrdDate, orders.ShipDate, orders.ClientTID);
-                }
-
-            }
-        }
-
-        private void shipProcessingBtn_Click(object sender, EventArgs e)
-        {
-            
-
-    }
-       
+            SetDataGridView(servis.GetShipedTakeOrders());
+        }     
         //　未出庫一覧表示
         private void shipCheckBtn_Click(object sender, EventArgs e)
         {
-            shipDgv.Rows.Clear();
             
-            foreach (var orders in servis.GetAllTakeOrders())
+            SetDataGridView(servis.GetNoShipedTakeOrders());
+         }
+
+        
+        private void shipProcessingBtn_Click(object sender, EventArgs e)
+        {
+            
+            if (shipDgv.SelectedRows.Count == 0) return;
+            var cells = shipDgv.SelectedRows[0].Cells;
+            if (cells[3].Value == null)
             {
-                if (orders.ShipDate == null)
+                servis.Shiping((int)cells[1].Value);
+       
+            }
+            
+            SetDataGridView(servis.GetNoShipedTakeOrders());
+
+        }
+        private void shipFixBtn_Click(object sender, EventArgs e)
+        {
+            
+            if (shipDgv.SelectedRows.Count == 0) return;
+            var cells = shipDgv.SelectedRows[0].Cells;
+            if (cells[3].Value != null)
+            {
+                servis.ClearShiping((int)cells[1].Value);
+
+            }
+            
+            SetDataGridView(servis.GetShipedTakeOrders());
+        }
+
+
+        //出庫済み、未出庫の処理をする。
+        public void SetDataGridView (List<Models.TakeOrderT> loadShip ) 
+        {
+            shipDgv.Rows.Clear();
+
+            foreach (var orders in loadShip)
+            {
                 {
-                    shipDgv.Rows.Add(orders.ClientTID, orders.TakeOrdDate, orders.ShipDate, orders.TakeOrderTID);
+                    shipDgv.Rows.Add(orders.ClientTID, orders.TakeOrderTID, orders.TakeOrdDate, orders.ShipDate);
                 }
             }
         }
 
-        private void shipFixBtn_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

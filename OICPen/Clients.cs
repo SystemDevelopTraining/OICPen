@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OICPen.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,23 +27,24 @@ namespace OICPen
             searchIdTbox.Text = "";
             searchNameTbox.Text = "";
             searchHuriganaTbox.Text = "";
+            DataShow();
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            uint i=0,index=0;
-            string erroMessage="";
+            uint i=0,currentIndex=0;
+            string erroMessage ="";
             string[] search=new string[] { searchNameTbox.Text,searchIdTbox.Text,searchHuriganaTbox.Text };
             var checks = new Func<string, string>[] { (x) => "", (x) => "", Utility.HiraganaCheck };
-            search.Zip(checks,(item,check)=> {
-                if (!Utility.TextIsEmpty(item))
+            for (uint ii = 0; ii < search.Count(); ii++) {
+                if (!Utility.TextIsEmpty(search[ii]))
                 {
                     i++;
-                    var msg = check(item);
+                    currentIndex = ii;
+                    var msg = checks[ii](search[ii]);
                     erroMessage += msg == "" ? msg : msg + "\r\n";
                 }
-                return 0;
-            }).ToArray();
+            };
             if (i != 1)
                 erroMessage+="検索項目が１つではありません";
             if (erroMessage != "")
@@ -50,37 +52,64 @@ namespace OICPen
                 MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+            var clients = servis.GetClients();
+            switch (currentIndex)
+            {
+                case 0:
+                    clients= servis.FindByName(searchNameTbox.Text);
+                    break;
+                case 1:
+                    clients=new List<ClientT>(new ClientT[] { servis.FindByID(int.Parse(searchIdTbox.Text)) });
+                    break;
+                case 2:
+                    clients= servis.FindByName(searchHuriganaTbox.Text);
+                    break;
+            }
+            DataShow(clients);
         }
 
         private void registBtn_Click(object sender, EventArgs e)
         {
-            var client = new Models.ClientT();
-            client.Name = nameTbox.Text;
-            client.Hurigana = huriganaTbox.Text;
-            client.PhoneNum = phoneNumberMaskedTbox.Text;
-            client.PostNum = phoneNumberMaskedTbox.Text;
-            client.Address = addressTbox.Text;
-            servis.AddClient(client);
-/*                       if (!Utility.TextIsEmpty(nameTbox.Text)
-                            && PhoneNumberCheck(phoneNumberMaskedTbox.Text)
-                            && PostalCodeCheck(postalCodeMaskedTbox.Text)
-                            &&!Utility.TextIsEmpty(addressTbox.Text))
-                        {
-                            Utility.HiraganaCheck(huriganaTbox.Text);
-                        }*/
-//           MessageBox.Show(phoneNumberMaskedTbox.Text, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            string erroMessage = "";
+/*            var checks = new Func<string,bool>[] {Utility.TextIsEmpty,
+                 PhoneNumberCheck,
+                 PostalCodeCheck,
+                Utility.TextIsEmpty};*/
+            if (!Utility.TextIsEmpty(nameTbox.Text)
+                && PhoneNumberCheck(phoneNumberMaskedTbox.Text)
+                && PostalCodeCheck(postalCodeMaskedTbox.Text)
+                &&!Utility.TextIsEmpty(addressTbox.Text))
+            {
+                 if((erroMessage = Utility.HiraganaCheck(huriganaTbox.Text)) == "")
+                {
+                    servis.AddClient(TextToClient());
+                }
+                else
+                {
+                    MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            DataShow();
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
+            string erroMessage = "";
             if (!Utility.TextIsEmpty(nameTbox.Text)
-                 && PhoneNumberCheck(phoneNumberMaskedTbox.Text)
-                 && PostalCodeCheck(postalCodeMaskedTbox.Text)
-                 && !Utility.TextIsEmpty(addressTbox.Text))
+                && PhoneNumberCheck(phoneNumberMaskedTbox.Text)
+                && PostalCodeCheck(postalCodeMaskedTbox.Text)
+                && !Utility.TextIsEmpty(addressTbox.Text))
             {
-                Utility.HiraganaCheck(huriganaTbox.Text);
+                if ((erroMessage = Utility.HiraganaCheck(huriganaTbox.Text)) == "")
+                {
+                    servis.UpdateItem(TextToClient());
+                }
+                else
+                {
+                    MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+            DataShow();
         }
 
 
@@ -157,6 +186,42 @@ namespace OICPen
                 dgv.Rows.Add(x.ClientTID, x.Name, x.Hurigana, x.Address, x.PostNum, x.PhoneNum);
             }
         }
+
+        private void DataShow(List<ClientT> clients)
+        {
+            clientsDgv.Rows.Clear();
+            var dgv = clientsDgv;
+            foreach (var x in clients)
+            {
+                dgv.Rows.Add(x.ClientTID, x.Name, x.Hurigana, x.Address, x.PostNum, x.PhoneNum);
+            }
+        }
+
+        private ClientT TextToClient()
+        {
+            var client = new ClientT();
+            client.ClientTID = int.Parse(idDispLbl.Text);
+            client.Name = nameTbox.Text;
+            client.Hurigana = huriganaTbox.Text;
+            client.PhoneNum = phoneNumberMaskedTbox.Text;
+            client.PostNum = postalCodeMaskedTbox.Text;
+            client.Address = addressTbox.Text;
+            return client;
+        }
+
+        private void clientsDgv_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            var client = new ClientT();
+            if (clientsDgv.SelectedRows.Count == 0) return;
+            var cells = clientsDgv.SelectedRows[0].Cells;
+            idDispLbl.Text = cells[0].Value.ToString();
+            nameTbox.Text = cells[1].Value.ToString();
+            huriganaTbox.Text = cells[2].Value.ToString();
+            phoneNumberMaskedTbox.Text = cells[5].Value.ToString();
+            postalCodeMaskedTbox.Text = cells[4].Value.ToString();
+            addressTbox.Text = cells[3].Value.ToString();
+        }
+
 
     }
 }
