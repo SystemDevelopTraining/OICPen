@@ -130,9 +130,9 @@ namespace OICPen
             var item = new Models.ItemT();
             item.Name = itemNameTbox.Text;
             item.JAN = janTbox.Text;
-            item.Price = uint.Parse(priceTbox.Text);
-            item.PurchasePrice = uint.Parse(purchasePriceTbox.Text);
-            item.SafetyStock = uint.Parse(safetyStockTbox.Text);
+            item.Price = int.Parse(priceTbox.Text);
+            item.PurchasePrice = int.Parse(purchasePriceTbox.Text);
+            item.SafetyStock = int.Parse(safetyStockTbox.Text);
             item.Hurigana = furiganaTbox.Text;
             item.RegistDate = DateTime.Now;
             item.Note = noteTbox.Text;
@@ -148,10 +148,10 @@ namespace OICPen
             item.ItemTID = int.Parse(cells[0].Value.ToString());
             item.Name = cells[1].Value.ToString();
             item.Hurigana = cells[2].Value.ToString();
-            item.PurchasePrice = uint.Parse(cells[3].Value.ToString());
-            item.Price = uint.Parse(cells[4].Value.ToString());
+            item.PurchasePrice = int.Parse(cells[3].Value.ToString());
+            item.Price = int.Parse(cells[4].Value.ToString());
             item.JAN = cells[5].Value.ToString();
-            item.SafetyStock = uint.Parse(cells[6].Value.ToString());
+            item.SafetyStock = int.Parse(cells[6].Value.ToString());
             item.Note = cells[7].Value.ToString();
             item.RegistDate = (DateTime)cells[8].Value;
             return item;

@@ -5,9 +5,16 @@ namespace OICPen.Models
     public class StaffT
     {
         public int StaffTID { get; set; } // 社員ID
+        [Required]
+        [MaxLength(15)]
         public string Name { get; set; } // 社員名
+        [Required]
+        [MaxLength(50)]
         public string Hurigana { get; set; } // ふりがな
+        [Required]
+        [MaxLength(20)]
         public string Password { get; set; } // パスワード
+        [Required]
         public Permission Permission { get; set; } // 権限
     }
 
