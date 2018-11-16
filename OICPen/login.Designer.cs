@@ -1,6 +1,6 @@
 ﻿namespace OICPen
 {
-    partial class login
+    partial class Login
     {
         /// <summary>
         /// 必要なデザイナー変数です。

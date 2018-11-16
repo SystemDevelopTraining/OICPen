@@ -15,6 +15,7 @@ namespace OICPen
 
         Models.StaffT loginStaff;
         Button[] btnList;
+        Login login;
 
         public void SetUser(Models.StaffT staff)
         {
@@ -43,7 +44,7 @@ namespace OICPen
 
             label1.Text = DateTime.Now.ToString("yyyy/MM/dd(ddd) HH:mm");
 
-            var login =new login(this);
+            login =new Login(this);
             ChangeForm(login);
             btnList=new Button[] {
                 takeorderBtn,salesBtn,shipBtn,incomingBtn,giveorderBtn,stockBtn,itemsBtn,clientsBtn,staffsBtn
@@ -92,6 +93,7 @@ namespace OICPen
             BtnSetEnable(false);
             staffsNameLbl.Text = "";
             loginStaff = null;
+            ChangeForm(login);
         }
     }
 }

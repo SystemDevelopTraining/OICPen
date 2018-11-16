@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace OICPen
 {
-    public partial class login : Form
+    public partial class Login : Form
     {
 
         private Frame frame;
         Services.StaffService service = new Services.StaffService(new Models.OICPenDbContext());
-        public login(Frame frm)
+        public Login(Frame frm)
         {
             InitializeComponent();
             frame = frm;
