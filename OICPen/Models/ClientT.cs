@@ -22,7 +22,7 @@ namespace OICPen.Models
         [MaxLength(13)]
         public string PhoneNum { get; set; } // 連絡先
 
-        public virtual ICollection<TakeOrder> TakeOrders { get; set; }
+        public virtual ICollection<TakeOrderT> TakeOrderTs { get; set; }
 
     }
 }
