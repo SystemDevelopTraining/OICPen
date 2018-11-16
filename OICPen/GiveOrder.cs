@@ -12,9 +12,20 @@ namespace OICPen
 {
     public partial class GiveOrder : Form
     {
+       // private Services.StockService stockServis = new Services.StockService(new Models.OICPenDbContext());
+        private Services.ItemService itemServis = new Services.ItemService(new Models.OICPenDbContext());
+
         public GiveOrder()
         {
             InitializeComponent();
+        }
+
+        private void GiveOrder_Load(object sender, EventArgs e)
+        {
+            foreach (var item in itemServis.GetAllItems())
+            {
+                itemsViewDgv.Rows.Add(item.ItemTID,item.Name,"0");//在庫表示未完成
+            }
         }
 
         //数量チェック
@@ -60,5 +71,7 @@ namespace OICPen
 
             }
         }
+
+      
     }
 }

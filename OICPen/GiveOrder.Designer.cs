@@ -45,6 +45,9 @@
             this.clearBtn = new System.Windows.Forms.Button();
             this.itemIdTbox = new System.Windows.Forms.TextBox();
             this.quantityTbox = new System.Windows.Forms.TextBox();
+            this.itemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.giveOrderListDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
             this.SuspendLayout();
@@ -112,11 +115,20 @@
             // 
             // itemsViewDgv
             // 
+            this.itemsViewDgv.AllowUserToAddRows = false;
+            this.itemsViewDgv.AllowUserToDeleteRows = false;
             this.itemsViewDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.itemsViewDgv.Location = new System.Drawing.Point(157, 534);
+            this.itemsViewDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.itemID,
+            this.itemName,
+            this.quantity});
+            this.itemsViewDgv.Location = new System.Drawing.Point(30, 534);
+            this.itemsViewDgv.MultiSelect = false;
             this.itemsViewDgv.Name = "itemsViewDgv";
+            this.itemsViewDgv.ReadOnly = true;
             this.itemsViewDgv.RowTemplate.Height = 21;
-            this.itemsViewDgv.Size = new System.Drawing.Size(378, 351);
+            this.itemsViewDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.itemsViewDgv.Size = new System.Drawing.Size(573, 374);
             this.itemsViewDgv.TabIndex = 4;
             // 
             // allClearBtn
@@ -217,6 +229,27 @@
             this.quantityTbox.TabIndex = 5;
             this.quantityTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.quantityTbox_KeyPress);
             // 
+            // itemID
+            // 
+            this.itemID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemID.HeaderText = "商品ID";
+            this.itemID.Name = "itemID";
+            this.itemID.ReadOnly = true;
+            // 
+            // itemName
+            // 
+            this.itemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemName.HeaderText = "商品名";
+            this.itemName.Name = "itemName";
+            this.itemName.ReadOnly = true;
+            // 
+            // quantity
+            // 
+            this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantity.HeaderText = "在庫数";
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
+            // 
             // GiveOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -242,6 +275,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GiveOrder";
             this.Text = "GiveOrder";
+            this.Load += new System.EventHandler(this.GiveOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.giveOrderListDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).EndInit();
             this.ResumeLayout(false);
@@ -268,5 +302,8 @@
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.TextBox itemIdTbox;
         private System.Windows.Forms.TextBox quantityTbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
     }
 }

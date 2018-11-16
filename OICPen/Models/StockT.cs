@@ -15,7 +15,7 @@ namespace OICPen.Models
         [Column(Order = 2)]
         [Required]
         public int ItemTID { get; set; }　// 商品ID
-        public uint Quantity { get; set; } // 在庫数
+        public int Quantity { get; set; } // 在庫数
 
         public virtual ItemT ItemT { get; set; }
     }
