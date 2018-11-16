@@ -45,8 +45,14 @@
             this.clientsIdViewLbl = new System.Windows.Forms.Label();
             this.clientsNameViewLbl = new System.Windows.Forms.Label();
             this.itemsViewDgv = new System.Windows.Forms.DataGridView();
+            this.itemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchBtn = new System.Windows.Forms.Button();
             this.completeOrdersDgv = new System.Windows.Forms.DataGridView();
+            this.ItemID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientsPhoneNoViewLbl = new System.Windows.Forms.Label();
             this.confirmBtn = new System.Windows.Forms.Button();
             this.completeOrdersTitleLbl = new System.Windows.Forms.Label();
@@ -73,7 +79,7 @@
             // 
             this.clientsIdLbl.AutoSize = true;
             this.clientsIdLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsIdLbl.Location = new System.Drawing.Point(506, 163);
+            this.clientsIdLbl.Location = new System.Drawing.Point(561, 163);
             this.clientsIdLbl.Name = "clientsIdLbl";
             this.clientsIdLbl.Size = new System.Drawing.Size(159, 29);
             this.clientsIdLbl.TabIndex = 6;
@@ -114,14 +120,15 @@
             this.itemIdTbox.Location = new System.Drawing.Point(260, 525);
             this.itemIdTbox.MaxLength = 6;
             this.itemIdTbox.Name = "itemIdTbox";
-            this.itemIdTbox.Size = new System.Drawing.Size(218, 36);
+            this.itemIdTbox.Size = new System.Drawing.Size(97, 36);
             this.itemIdTbox.TabIndex = 7;
+            this.itemIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.itemIdTbox_KeyPress);
             // 
             // countsLbl
             // 
             this.countsLbl.AutoSize = true;
             this.countsLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.countsLbl.Location = new System.Drawing.Point(594, 752);
+            this.countsLbl.Location = new System.Drawing.Point(611, 752);
             this.countsLbl.Name = "countsLbl";
             this.countsLbl.Size = new System.Drawing.Size(71, 29);
             this.countsLbl.TabIndex = 6;
@@ -159,16 +166,17 @@
             // clientsIdTbox
             // 
             this.clientsIdTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsIdTbox.Location = new System.Drawing.Point(680, 161);
+            this.clientsIdTbox.Location = new System.Drawing.Point(726, 161);
             this.clientsIdTbox.MaxLength = 6;
             this.clientsIdTbox.Name = "clientsIdTbox";
-            this.clientsIdTbox.Size = new System.Drawing.Size(218, 36);
+            this.clientsIdTbox.Size = new System.Drawing.Size(97, 36);
             this.clientsIdTbox.TabIndex = 7;
+            this.clientsIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.clientsIdTbox_KeyPress);
             // 
             // clientsIdCheckBtn
             // 
             this.clientsIdCheckBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsIdCheckBtn.Location = new System.Drawing.Point(934, 151);
+            this.clientsIdCheckBtn.Location = new System.Drawing.Point(844, 151);
             this.clientsIdCheckBtn.Name = "clientsIdCheckBtn";
             this.clientsIdCheckBtn.Size = new System.Drawing.Size(104, 54);
             this.clientsIdCheckBtn.TabIndex = 13;
@@ -218,11 +226,34 @@
             // itemsViewDgv
             // 
             this.itemsViewDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.itemsViewDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.itemID,
+            this.itemName,
+            this.quantity});
             this.itemsViewDgv.Location = new System.Drawing.Point(129, 686);
             this.itemsViewDgv.Name = "itemsViewDgv";
             this.itemsViewDgv.RowTemplate.Height = 21;
+            this.itemsViewDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.itemsViewDgv.Size = new System.Drawing.Size(378, 261);
             this.itemsViewDgv.TabIndex = 14;
+            // 
+            // itemID
+            // 
+            this.itemID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemID.HeaderText = "商品ID";
+            this.itemID.Name = "itemID";
+            // 
+            // itemName
+            // 
+            this.itemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemName.HeaderText = "商品名";
+            this.itemName.Name = "itemName";
+            // 
+            // quantity
+            // 
+            this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantity.HeaderText = "在庫数";
+            this.quantity.Name = "quantity";
             // 
             // searchBtn
             // 
@@ -233,15 +264,41 @@
             this.searchBtn.TabIndex = 19;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // completeOrdersDgv
             // 
             this.completeOrdersDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.completeOrdersDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemID2,
+            this.ItemName2,
+            this.quantity2});
             this.completeOrdersDgv.Location = new System.Drawing.Point(766, 354);
             this.completeOrdersDgv.Name = "completeOrdersDgv";
             this.completeOrdersDgv.RowTemplate.Height = 21;
             this.completeOrdersDgv.Size = new System.Drawing.Size(535, 593);
             this.completeOrdersDgv.TabIndex = 20;
+            // 
+            // ItemID2
+            // 
+            this.ItemID2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemID2.HeaderText = "商品ID";
+            this.ItemID2.Name = "ItemID2";
+            this.ItemID2.ReadOnly = true;
+            // 
+            // ItemName2
+            // 
+            this.ItemName2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemName2.HeaderText = "商品名";
+            this.ItemName2.Name = "ItemName2";
+            this.ItemName2.ReadOnly = true;
+            // 
+            // quantity2
+            // 
+            this.quantity2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantity2.HeaderText = "数量";
+            this.quantity2.Name = "quantity2";
+            this.quantity2.ReadOnly = true;
             // 
             // clientsPhoneNoViewLbl
             // 
@@ -262,6 +319,7 @@
             this.confirmBtn.TabIndex = 23;
             this.confirmBtn.Text = "確定";
             this.confirmBtn.UseVisualStyleBackColor = true;
+            this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             // 
             // completeOrdersTitleLbl
             // 
@@ -349,6 +407,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TakeOrder";
             this.Text = "TakeOrder";
+            this.Load += new System.EventHandler(this.TakeOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.completeOrdersDgv)).EndInit();
             this.ResumeLayout(false);
@@ -384,5 +443,11 @@
         private System.Windows.Forms.Label clientLbl;
         private System.Windows.Forms.Label clientnameLbl;
         private System.Windows.Forms.Label phonenoLbl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemID2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity2;
     }
 }
