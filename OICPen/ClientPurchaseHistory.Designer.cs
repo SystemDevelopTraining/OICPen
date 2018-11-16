@@ -79,6 +79,7 @@
             this.Controls.Add(this.PurchaseHistoryDgv);
             this.Name = "ClientPurchaseHistory";
             this.Text = "MemberPurchaseHistory";
+            this.Load += new System.EventHandler(this.ClientPurchaseHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseHistoryDgv)).EndInit();
             this.ResumeLayout(false);
 

@@ -20,5 +20,14 @@ namespace OICPen
             client = this.client;
         }
 
+        private void ClientPurchaseHistory_Load(object sender, EventArgs e)
+        {
+            var dgv = PurchaseHistoryDgv;
+            foreach (var x in client.TakeOrderTs)
+            {
+
+                dgv.Rows.Add(x.TakeOrderTID,x.TakeOrdDate,x.ShipDate);
+            }
+        }
     }
 }
