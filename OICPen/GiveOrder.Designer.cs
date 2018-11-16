@@ -35,6 +35,9 @@
             this.searchBtn = new System.Windows.Forms.Button();
             this.itemNameTbox = new System.Windows.Forms.TextBox();
             this.itemsViewDgv = new System.Windows.Forms.DataGridView();
+            this.itemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.allClearBtn = new System.Windows.Forms.Button();
             this.completeBtn = new System.Windows.Forms.Button();
             this.quantityLbl = new System.Windows.Forms.Label();
@@ -45,9 +48,10 @@
             this.clearBtn = new System.Windows.Forms.Button();
             this.itemIdTbox = new System.Windows.Forms.TextBox();
             this.quantityTbox = new System.Windows.Forms.TextBox();
-            this.itemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.allItemBtn = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.giveOrderListDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
             this.SuspendLayout();
@@ -86,10 +90,20 @@
             // 
             // giveOrderListDgv
             // 
+            this.giveOrderListDgv.AllowUserToAddRows = false;
+            this.giveOrderListDgv.AllowUserToDeleteRows = false;
+            this.giveOrderListDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.giveOrderListDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.giveOrderListDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.name2,
+            this.orderQuantity});
             this.giveOrderListDgv.Location = new System.Drawing.Point(789, 241);
+            this.giveOrderListDgv.MultiSelect = false;
             this.giveOrderListDgv.Name = "giveOrderListDgv";
+            this.giveOrderListDgv.ReadOnly = true;
             this.giveOrderListDgv.RowTemplate.Height = 21;
+            this.giveOrderListDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.giveOrderListDgv.Size = new System.Drawing.Size(535, 593);
             this.giveOrderListDgv.TabIndex = 7;
             // 
@@ -130,6 +144,27 @@
             this.itemsViewDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.itemsViewDgv.Size = new System.Drawing.Size(573, 374);
             this.itemsViewDgv.TabIndex = 4;
+            // 
+            // itemID
+            // 
+            this.itemID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemID.HeaderText = "商品ID";
+            this.itemID.Name = "itemID";
+            this.itemID.ReadOnly = true;
+            // 
+            // itemName
+            // 
+            this.itemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemName.HeaderText = "商品名";
+            this.itemName.Name = "itemName";
+            this.itemName.ReadOnly = true;
+            // 
+            // quantity
+            // 
+            this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantity.HeaderText = "在庫数";
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
             // 
             // allClearBtn
             // 
@@ -229,26 +264,37 @@
             this.quantityTbox.TabIndex = 5;
             this.quantityTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.quantityTbox_KeyPress);
             // 
-            // itemID
+            // allItemBtn
             // 
-            this.itemID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.itemID.HeaderText = "商品ID";
-            this.itemID.Name = "itemID";
-            this.itemID.ReadOnly = true;
+            this.allItemBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.allItemBtn.Location = new System.Drawing.Point(609, 854);
+            this.allItemBtn.Name = "allItemBtn";
+            this.allItemBtn.Size = new System.Drawing.Size(176, 54);
+            this.allItemBtn.TabIndex = 0;
+            this.allItemBtn.Text = "全商品一覧";
+            this.allItemBtn.UseVisualStyleBackColor = true;
+            this.allItemBtn.Click += new System.EventHandler(this.allItemBtn_Click);
             // 
-            // itemName
+            // ID
             // 
-            this.itemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.itemName.HeaderText = "商品名";
-            this.itemName.Name = "itemName";
-            this.itemName.ReadOnly = true;
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID.HeaderText = "商品ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
-            // quantity
+            // name2
             // 
-            this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.quantity.HeaderText = "在庫数";
-            this.quantity.Name = "quantity";
-            this.quantity.ReadOnly = true;
+            this.name2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name2.HeaderText = "商品名";
+            this.name2.Name = "name2";
+            this.name2.ReadOnly = true;
+            // 
+            // orderQuantity
+            // 
+            this.orderQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.orderQuantity.HeaderText = "発注数";
+            this.orderQuantity.Name = "orderQuantity";
+            this.orderQuantity.ReadOnly = true;
             // 
             // GiveOrder
             // 
@@ -256,6 +302,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
+            this.Controls.Add(this.allItemBtn);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.searchResultLbl);
             this.Controls.Add(this.itemNameLbl);
@@ -305,5 +352,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn itemID;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.Button allItemBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderQuantity;
     }
 }
