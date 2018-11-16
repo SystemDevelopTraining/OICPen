@@ -12,28 +12,47 @@ namespace OICPen
 {
     public partial class Frame : Form
     {
-        public void SetUserName(string userName)
+
+        Models.StaffT loginStaff;
+        Button[] btnList;
+        Login login;
+
+        public void SetUser(Models.StaffT staff)
         {
-            staffsNameLbl.Text = userName;
+            staffsNameLbl.Text = staff.Name;
+            loginStaff = staff;
+            BtnSetEnable(true);
         }
         public Frame()
         {
             InitializeComponent();
         }
 
+        //ボタンの有効化、無効化
+        void BtnSetEnable(bool flag)
+        {
+            foreach(var btn in btnList)
+            {
+                btn.Enabled = flag;
+            }
+        }
+
         private void Frame_Shown(object sender, EventArgs e)
         {
 
+            staffsNameLbl.Text = "";
+
             label1.Text = DateTime.Now.ToString("yyyy/MM/dd(ddd) HH:mm");
 
-            var login =new login(this);
+            login =new Login(this);
             ChangeForm(login);
-            var btnList=new Button[] {
-                takeorderBtn,salesBtn,shipBtn,incomingBtn,giveorderBtn,stockBtn,itemsBtn,clientsBtn,staffsBtn,logoutBtn
+            btnList=new Button[] {
+                takeorderBtn,salesBtn,shipBtn,incomingBtn,giveorderBtn,stockBtn,itemsBtn,clientsBtn,staffsBtn
             };
+            BtnSetEnable(false);
             var formList = new Form[] {
                 new TakeOrder(),new Sales(),new Ship(),new InComing(),
-                new GiveOrder(),new Stock(),new Items(),new Clients(),new Staffs(),login
+                new GiveOrder(),new Stock(),new Items(),new Clients(),new Staffs()
             };
             btnList.Zip(formList,(btn,form)=>{
                 btn.Click += (_,__) => ChangeForm(form);
@@ -44,6 +63,7 @@ namespace OICPen
         private void ChangeForm(Form f)
         {
             f.TopLevel = false;
+            splitContainer2.Panel2.Controls.Clear();
             splitContainer2.Panel2.Controls.Add(f);
             f.Dock = DockStyle.Fill;
             f.Show();
@@ -64,6 +84,16 @@ namespace OICPen
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToString("yyyy/MM/dd(ddd) HH:mm");
+        }
+
+
+        //ログアウトボタンが押された時の処理
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            BtnSetEnable(false);
+            staffsNameLbl.Text = "";
+            loginStaff = null;
+            ChangeForm(login);
         }
     }
 }
