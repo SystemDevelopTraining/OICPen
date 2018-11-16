@@ -13,14 +13,15 @@ namespace OICPen
 {
     public partial class Items : Form
     {
-        private Services.ItemService service = new Services.ItemService(new Models.OICPenDbContext());
+
+        private Services.ItemService service=new Services.ItemService(new Models.OICPenDbContext());
 
         public Items()
         {
             InitializeComponent();
         }
 
-       
+       /*バリエーションチェック*/
         private void searchItemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utility.TextBoxDigitCheck(searchItemIdTbox,e);
@@ -51,26 +52,43 @@ namespace OICPen
             Utility.TextBoxDigitCheck(safetyStockTbox, e);
         }
 
+        /*データグリッドビューセット*/
+        void SetDataGridView(List<Models.ItemT> items)
+        {
+            itemDgv.Rows.Clear();
+            items.ForEach(item => {
+                itemDgv.Rows.Add(
+                    item.ItemTID,
+                    item.Name,
+                    item.Hurigana,
+                    item.PurchasePrice,
+                    item.Price,
+                    item.JAN,
+                    item.SafetyStock,
+                    item.Note,
+                    item.RegistDate);
+            });
+        } 
+
         private void searchBtn_Click(object sender, EventArgs e)
         {
             var items = new string[] { searchItemIdTbox.Text, searchItemNameTbox.Text, searchJanTbox.Text };
-            var processes = new Action[]
+            var processes = new Func<List<Models.ItemT>>[]
             {
                 //IDでの検索
                 () =>
-                {
-                    itemDgv.Rows.Add(service.FindByID(int.Parse(searchItemIdTbox.Text)));
-                },
+                    new List<Models.ItemT>(
+                        new Models.ItemT[] { service.FindByID(int.Parse(searchItemIdTbox.Text)) }
+                    ),
                 //名前での検索
                 () =>
-                {
-                    itemDgv.Rows.Add(service.FindByName(searchItemNameTbox.Text));
-                },
+                    service.FindByName(searchItemNameTbox.Text)
+                ,
                 //JANコードでの検索
                 () =>
-                {
-                    itemDgv.Rows.Add(service.FindByJAN(searchJanTbox.Text));
-                }
+                   new List<Models.ItemT>(
+                        new Models.ItemT[] { service.FindByJAN(searchJanTbox.Text) }
+                    )
 
             };
 
@@ -80,7 +98,7 @@ namespace OICPen
             {
                 if (items[i] != "")
                 {
-                    i++;
+                    itemCount++;
                     currentIndex = i;
                 }
             }
@@ -90,34 +108,98 @@ namespace OICPen
                 MessageBox.Show("検索項目が一つではありません", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }else
             {
-                processes[currentIndex]();
+                try
+                {
+                    SetDataGridView(processes[currentIndex]());
+                }
+                catch
+                {
+
+                }
             }
 
         }
+        /*テキストボックスからItemTを生成する*/
+        Models.ItemT TextboxToItemT()
+        {
+            var item = new Models.ItemT();
+            item.Name = itemNameTbox.Text;
+            item.JAN = janTbox.Text;
+            item.Price = uint.Parse(priceTbox.Text);
+            item.PurchasePrice = uint.Parse(purchasePriceTbox.Text);
+            item.SafetyStock = uint.Parse(safetyStockTbox.Text);
+            item.Hurigana = furiganaTbox.Text;
+            item.RegistDate = DateTime.Now;
+            item.Note = noteTbox.Text;
+            return item;
+        }
 
+        /*選択中の行からItemTを生成する*/
+        Models.ItemT DgvToItemT()
+        {
+            var item = new Models.ItemT();
+            if (itemDgv.SelectedRows.Count == 0) return null;
+            var cells = itemDgv.SelectedRows[0].Cells;
+            item.ItemTID = int.Parse(cells[0].Value.ToString());
+            item.Name = cells[1].Value.ToString();
+            item.Hurigana = cells[2].Value.ToString();
+            item.PurchasePrice = uint.Parse(cells[3].Value.ToString());
+            item.Price = uint.Parse(cells[4].Value.ToString());
+            item.JAN = cells[5].Value.ToString();
+            item.SafetyStock = uint.Parse(cells[6].Value.ToString());
+            item.Note = cells[7].Value.ToString();
+            item.RegistDate = (DateTime)cells[8].Value;
+            return item;
+        }
+
+        /*商品登録*/
         private void registBtn_Click(object sender, EventArgs e)
         {
-            Models.ItemT item = new Models.ItemT();
-            item.Name = "お芋";
-            item.Hurigana = "おいも";
-            item.JAN = "111111111111";
-            item.PurchasePrice = 1000;
-            item.Price = 1080;
+            var item = TextboxToItemT();
             item.IsDeleted = false;
-            item.SafetyStock = 70;
-            item.RegistDate = DateTime.Now;
-            item.Note = "おいしい";
-
-
             service.AddItem(item);
-            itemDgv.Rows.Add(service.GetItems());
+            SetDataGridView(service.GetItems());
         }
 
-        private void ShowDgv(List<Models.ItemT>)
+        /*商品一覧更新*/
+        private void itemsUpdateBtn_Click(object sender, EventArgs e)
         {
-            //Todo
+            SetDataGridView(service.GetItems());
         }
 
-        
+        /*行選択*/
+        private void itemDgv_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            var item = DgvToItemT();
+            if (item==null) return; 
+            itemNameTbox.Text = item.Name;
+            furiganaTbox.Text = item.Hurigana;
+            purchasePriceTbox.Text = item.PurchasePrice.ToString();
+            priceTbox.Text = item.Price.ToString();
+            janTbox.Text = item.JAN;
+            safetyStockTbox.Text = item.SafetyStock.ToString();
+            noteTbox.Text = item.Note;
+        }
+
+        /*商品更新*/
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            var dgvItem = DgvToItemT();
+            if (dgvItem == null) return;
+            var item = TextboxToItemT();
+            item.ItemTID = dgvItem.ItemTID;
+            item.RegistDate = dgvItem.RegistDate;
+            service.UpdateItem(item);
+            SetDataGridView(service.GetItems());
+        }
+
+        /*商品の削除*/
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            var dgvItem = DgvToItemT();
+            if (dgvItem == null) return;
+            service.DeleteItem(dgvItem.ItemTID);
+            SetDataGridView(service.GetItems());
+        }
     }
 }

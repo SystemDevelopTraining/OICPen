@@ -76,36 +76,47 @@ namespace OICPen.Services
             return item;
             
         }
-
-        /*---------------------------------------------------------------
-         [役割] IDから会員情報を検索
-         [引数] id: 会員情報のID
-         [返り値] IDと一致する会員情報
+         /*---------------------------------------------------------------
+         [役割] 商品を削除する
+         [引数] i: 削除する商品ID
+         [返り値] 削除した商品情報
          ---------------------------------------------------------------*/
-        public ItemT FindByID(int id)
+        public ItemT DeleteItem(int id)
         {
             var item = context.Items.Single(x => x.ItemTID == id);
+            item.IsDeleted = true;
+            context.SaveChanges();
             return item;
         }
-
         /*---------------------------------------------------------------
-        [役割] 名前から会員情報を検索
-        [引数] id: 会員情報のID
-        [返り値] 名前と一致する会員情報
-        ---------------------------------------------------------------*/
+         [役割] 名前で商品を検索
+         [引数] i: 商品名
+         [返り値] 一致する商品情報一覧
+         ---------------------------------------------------------------*/
         public List<ItemT> FindByName(string name)
         {
-            var items = context.Items.Where(x => x.Name.Contains(name));
+            var items = context.Items.Where(x=> x.Name.Contains(name) && x.IsDeleted == false);
             return items.ToList();
         }
         /*---------------------------------------------------------------
-         [役割] ふりがなから会員情報を検索
-         [引数] id: 会員情報のID
-         [返り値] ふりがなと一致する会員情報
+         [役割] IDで商品を検索
+         [引数] i: 更新したい商品情報
+         [返り値] 更新した商品情報
+         ---------------------------------------------------------------*/
+        public ItemT FindByID(int id)
+        {
+            var item = context.Items.Single(x => x.ItemTID == id && x.IsDeleted == false);
+            return item;
+        }
+        /*---------------------------------------------------------------
+         [役割] JANで商品を検索
+         [引数] i: JAN
+         [返り値] JANと一致する商品
          ---------------------------------------------------------------*/
         public ItemT FindByJAN(string jan)
         {
-            var item = context.Items.Single(x => x.JAN == jan);
+            var item = context.Items
+                .Single(x => x.JAN== jan&&x.IsDeleted==false);
             return item;
         }
     }

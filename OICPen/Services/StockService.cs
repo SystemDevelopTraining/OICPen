@@ -40,5 +40,43 @@ namespace OICPen.Services
             context.SaveChanges();
             return stock;
         }
+
+        /*---------------------------------------------------------------
+        [役割] 最新の月の在庫情報一覧を取得する
+        [引数] なし
+        [返り値] 最新の月の在庫情報一覧
+        ---------------------------------------------------------------*/
+        public List<StockT> GetNowMonthStocks()
+        {
+            var nowStocks = (from i in context.Stocks
+                          group i by i.Date).OrderByDescending(x => x.Key).First();
+            return nowStocks.ToList();
+        }
+
+        /*---------------------------------------------------------------
+        [役割] 商品IDから該当する在庫情報の一番新しいものを返す
+        [引数] 商品ID
+        [返り値] 商品IDに該当する一番新しい在庫情報
+        ---------------------------------------------------------------*/
+        public StockT NowFindByItemID(int id)
+        {
+            var nowStock = (from i in context.Stocks
+                             group i by i.Date).OrderByDescending(x => x.Key).First()
+                             .Single(x=>x.ItemTID==id);
+            return nowStock;
+        }
+
+        /*---------------------------------------------------------------
+        [役割] 商品名から該当する在庫情報の一番新しいもの一覧を返す
+        [引数] 商品名
+        [返り値] 商品名に該当する一番新しい在庫情報一覧
+        ---------------------------------------------------------------*/
+        public List<StockT> NowFindByName(string itemName)
+        {
+            var nowStocks = (from i in context.Stocks
+                             group i by i.Date).OrderByDescending(x => x.Key).First()
+                             .Where(x=>x.ItemT.Name.Contains(itemName) );
+            return nowStocks.ToList();
+        }
     }
 }
