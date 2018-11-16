@@ -232,7 +232,19 @@ namespace OICPen
 
         private void histroryViewBtn_Click(object sender, EventArgs e)
         {
-            
+            int idNumber = 0;
+            if (int.TryParse(idDispLbl.Text, out idNumber))
+            {
+                var client = TextToClient();
+                client.ClientTID = int.Parse(idNumber.ToString());
+                var f = new ClientPurchaseHistory(client);
+                f.Show(this);
+            }
+            else
+            {
+                MessageBox.Show("会員を選択しないままの表示はできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

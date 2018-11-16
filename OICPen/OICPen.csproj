@@ -92,6 +92,12 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientPurchaseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientPurchaseHistory.Designer.cs">
+      <DependentUpon>ClientPurchaseHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ClientT.cs" />
     <Compile Include="Models\Configration.cs" />
     <Compile Include="Models\GiveOrderT.cs" />
@@ -148,6 +154,9 @@
       <DependentUpon>TakeOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="ClientPurchaseHistory.resx">
+      <DependentUpon>ClientPurchaseHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clients.resx">
       <DependentUpon>Clients.cs</DependentUpon>
     </EmbeddedResource>
