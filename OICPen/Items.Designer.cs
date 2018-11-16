@@ -33,15 +33,6 @@
             this.deleteBtn = new System.Windows.Forms.Button();
             this.registBtn = new System.Windows.Forms.Button();
             this.itemDgv = new System.Windows.Forms.DataGridView();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.janCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchBtn = new System.Windows.Forms.Button();
             this.itemNameTbox = new System.Windows.Forms.TextBox();
             this.itemNameLbl = new System.Windows.Forms.Label();
@@ -67,6 +58,15 @@
             this.itemRegistLbl = new System.Windows.Forms.Label();
             this.purchasePriceLbl = new System.Windows.Forms.Label();
             this.purchasePriceTbox = new System.Windows.Forms.TextBox();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.janCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.itemDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,63 +136,9 @@
             this.itemDgv.ReadOnly = true;
             this.itemDgv.RowTemplate.Height = 21;
             this.itemDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.itemDgv.Size = new System.Drawing.Size(890, 949);
+            this.itemDgv.Size = new System.Drawing.Size(920, 949);
             this.itemDgv.TabIndex = 5;
             this.itemDgv.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemDgv_RowEnter);
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "ID";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // productName
-            // 
-            this.productName.HeaderText = "商品名";
-            this.productName.Name = "productName";
-            this.productName.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "ふりがな";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "仕入れ価格";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "販売価格";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // janCode
-            // 
-            this.janCode.HeaderText = "JAN";
-            this.janCode.Name = "janCode";
-            this.janCode.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "安全在庫数";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "備考";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "登録日";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // searchBtn
             // 
@@ -471,6 +417,69 @@
             this.purchasePriceTbox.Size = new System.Drawing.Size(284, 36);
             this.purchasePriceTbox.TabIndex = 8;
             this.purchasePriceTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.purchasePriceTbox_KeyPress);
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.HeaderText = "ID";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // productName
+            // 
+            this.productName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.productName.HeaderText = "商品名";
+            this.productName.Name = "productName";
+            this.productName.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "ふりがな";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "仕入れ価格";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "販売価格";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // janCode
+            // 
+            this.janCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.janCode.HeaderText = "JAN";
+            this.janCode.Name = "janCode";
+            this.janCode.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "安全在庫数";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "備考";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "登録日";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Items
             // 

@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.clientsDgv = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.furigana = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.postalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.registBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
@@ -61,6 +55,12 @@
             this.searchClientSubTitleLbl = new System.Windows.Forms.Label();
             this.phoneNumberMaskedTbox = new System.Windows.Forms.MaskedTextBox();
             this.postalCodeMaskedTbox = new System.Windows.Forms.MaskedTextBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.furigana = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,42 +85,6 @@
             this.clientsDgv.Size = new System.Drawing.Size(900, 949);
             this.clientsDgv.TabIndex = 5;
             this.clientsDgv.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.clientsDgv_RowEnter);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "名前";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // furigana
-            // 
-            this.furigana.HeaderText = "ふりがな";
-            this.furigana.Name = "furigana";
-            this.furigana.ReadOnly = true;
-            // 
-            // phoneNumber
-            // 
-            this.phoneNumber.HeaderText = "電話番号";
-            this.phoneNumber.Name = "phoneNumber";
-            this.phoneNumber.ReadOnly = true;
-            // 
-            // postalCode
-            // 
-            this.postalCode.HeaderText = "郵便番号";
-            this.postalCode.Name = "postalCode";
-            this.postalCode.ReadOnly = true;
-            // 
-            // address
-            // 
-            this.address.HeaderText = "住所";
-            this.address.Name = "address";
-            this.address.ReadOnly = true;
             // 
             // registBtn
             // 
@@ -395,6 +359,48 @@
             this.postalCodeMaskedTbox.Click += new System.EventHandler(this.postalCodeMaskedTbox_Click);
             this.postalCodeMaskedTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.postalCodeMaskedTbox_KeyPress);
             // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.HeaderText = "名前";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // furigana
+            // 
+            this.furigana.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.furigana.HeaderText = "ふりがな";
+            this.furigana.Name = "furigana";
+            this.furigana.ReadOnly = true;
+            // 
+            // phoneNumber
+            // 
+            this.phoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.phoneNumber.HeaderText = "電話番号";
+            this.phoneNumber.Name = "phoneNumber";
+            this.phoneNumber.ReadOnly = true;
+            // 
+            // postalCode
+            // 
+            this.postalCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.postalCode.HeaderText = "郵便番号";
+            this.postalCode.Name = "postalCode";
+            this.postalCode.ReadOnly = true;
+            // 
+            // address
+            // 
+            this.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.address.HeaderText = "住所";
+            this.address.Name = "address";
+            this.address.ReadOnly = true;
+            // 
             // Clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -467,12 +473,12 @@
         private System.Windows.Forms.Label searchClientSubTitleLbl;
         private System.Windows.Forms.MaskedTextBox phoneNumberMaskedTbox;
         private System.Windows.Forms.MaskedTextBox postalCodeMaskedTbox;
+        private System.Windows.Forms.TextBox searchIdTbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn furigana;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn postalCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private System.Windows.Forms.TextBox searchIdTbox;
     }
 }
