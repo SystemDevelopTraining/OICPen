@@ -58,6 +58,13 @@
             this.itemRegistLbl = new System.Windows.Forms.Label();
             this.purchasePriceLbl = new System.Windows.Forms.Label();
             this.purchasePriceTbox = new System.Windows.Forms.TextBox();
+            this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RegistDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SafetyStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PurchasePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.itemDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,6 +115,14 @@
             // itemDgv
             // 
             this.itemDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.itemDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemID,
+            this.ItemName,
+            this.PurchasePrice,
+            this.Price,
+            this.SafetyStock,
+            this.RegistDate,
+            this.Note});
             this.itemDgv.Location = new System.Drawing.Point(12, 21);
             this.itemDgv.Name = "itemDgv";
             this.itemDgv.RowTemplate.Height = 21;
@@ -391,6 +406,41 @@
             this.purchasePriceTbox.TabIndex = 8;
             this.purchasePriceTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.purchasePriceTbox_KeyPress);
             // 
+            // Note
+            // 
+            this.Note.HeaderText = "Note";
+            this.Note.Name = "Note";
+            // 
+            // RegistDate
+            // 
+            this.RegistDate.HeaderText = "登録日";
+            this.RegistDate.Name = "RegistDate";
+            // 
+            // SafetyStock
+            // 
+            this.SafetyStock.HeaderText = "安全在庫数";
+            this.SafetyStock.Name = "SafetyStock";
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "販売価格";
+            this.Price.Name = "Price";
+            // 
+            // PurchasePrice
+            // 
+            this.PurchasePrice.HeaderText = "仕入れ価格";
+            this.PurchasePrice.Name = "PurchasePrice";
+            // 
+            // ItemName
+            // 
+            this.ItemName.HeaderText = "商品名";
+            this.ItemName.Name = "ItemName";
+            // 
+            // ItemID
+            // 
+            this.ItemID.HeaderText = "ID";
+            this.ItemID.Name = "ItemID";
+            // 
             // Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -469,5 +519,12 @@
         private System.Windows.Forms.Label itemRegistLbl;
         private System.Windows.Forms.Label purchasePriceLbl;
         private System.Windows.Forms.TextBox purchasePriceTbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PurchasePrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SafetyStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RegistDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Note;
     }
 }

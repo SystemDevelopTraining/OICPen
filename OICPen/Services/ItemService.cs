@@ -76,5 +76,37 @@ namespace OICPen.Services
             return item;
             
         }
+
+        /*---------------------------------------------------------------
+         [役割] IDから会員情報を検索
+         [引数] id: 会員情報のID
+         [返り値] IDと一致する会員情報
+         ---------------------------------------------------------------*/
+        public ItemT FindByID(int id)
+        {
+            var item = context.Items.Single(x => x.ItemTID == id);
+            return item;
+        }
+
+        /*---------------------------------------------------------------
+        [役割] 名前から会員情報を検索
+        [引数] id: 会員情報のID
+        [返り値] 名前と一致する会員情報
+        ---------------------------------------------------------------*/
+        public List<ItemT> FindByName(string name)
+        {
+            var items = context.Items.Where(x => x.Name.Contains(name));
+            return items.ToList();
+        }
+        /*---------------------------------------------------------------
+         [役割] ふりがなから会員情報を検索
+         [引数] id: 会員情報のID
+         [返り値] ふりがなと一致する会員情報
+         ---------------------------------------------------------------*/
+        public ItemT FindByJAN(string jan)
+        {
+            var item = context.Items.Single(x => x.JAN == jan);
+            return item;
+        }
     }
 }
