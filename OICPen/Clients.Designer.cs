@@ -263,6 +263,7 @@
             this.histroryViewBtn.TabIndex = 22;
             this.histroryViewBtn.Text = "購入履歴";
             this.histroryViewBtn.UseVisualStyleBackColor = true;
+            this.histroryViewBtn.Click += new System.EventHandler(this.histroryViewBtn_Click);
             // 
             // huriganaTbox
             // 

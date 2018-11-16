@@ -102,7 +102,16 @@ namespace OICPen
             {
                 if ((erroMessage = Utility.HiraganaCheck(huriganaTbox.Text)) == "")
                 {
-                    servis.UpdateItem(TextToClient());
+                    int idNumber = 0;
+                    if (int.TryParse(idDispLbl.Text, out idNumber)) {
+                        var client = TextToClient();
+                        client.ClientTID = int.Parse(idNumber.ToString());
+                        servis.UpdateItem(client);
+                    }
+                    else
+                    {
+                        MessageBox.Show("会員を選択しないままの更新はできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
@@ -200,7 +209,6 @@ namespace OICPen
         private ClientT TextToClient()
         {
             var client = new ClientT();
-            client.ClientTID = int.Parse(idDispLbl.Text);
             client.Name = nameTbox.Text;
             client.Hurigana = huriganaTbox.Text;
             client.PhoneNum = phoneNumberMaskedTbox.Text;
@@ -222,6 +230,9 @@ namespace OICPen
             addressTbox.Text = cells[3].Value.ToString();
         }
 
-
+        private void histroryViewBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
