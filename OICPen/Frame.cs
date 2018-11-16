@@ -44,6 +44,7 @@ namespace OICPen
         private void ChangeForm(Form f)
         {
             f.TopLevel = false;
+            splitContainer2.Panel2.Controls.Clear();
             splitContainer2.Panel2.Controls.Add(f);
             f.Dock = DockStyle.Fill;
             f.Show();
