@@ -14,30 +14,44 @@ namespace OICPen
     {
 
         Models.StaffT loginStaff;
+        Button[] btnList;
 
         public void SetUser(Models.StaffT staff)
         {
             staffsNameLbl.Text = staff.Name;
             loginStaff = staff;
+            BtnSetEnable(true);
         }
         public Frame()
         {
             InitializeComponent();
         }
 
+        //ボタンの有効化、無効化
+        void BtnSetEnable(bool flag)
+        {
+            foreach(var btn in btnList)
+            {
+                btn.Enabled = flag;
+            }
+        }
+
         private void Frame_Shown(object sender, EventArgs e)
         {
+
+            staffsNameLbl.Text = "";
 
             label1.Text = DateTime.Now.ToString("yyyy/MM/dd(ddd) HH:mm");
 
             var login =new login(this);
             ChangeForm(login);
-            var btnList=new Button[] {
-                takeorderBtn,salesBtn,shipBtn,incomingBtn,giveorderBtn,stockBtn,itemsBtn,clientsBtn,staffsBtn,logoutBtn
+            btnList=new Button[] {
+                takeorderBtn,salesBtn,shipBtn,incomingBtn,giveorderBtn,stockBtn,itemsBtn,clientsBtn,staffsBtn
             };
+            BtnSetEnable(false);
             var formList = new Form[] {
                 new TakeOrder(),new Sales(),new Ship(),new InComing(),
-                new GiveOrder(),new Stock(),new Items(),new Clients(),new Staffs(),login
+                new GiveOrder(),new Stock(),new Items(),new Clients(),new Staffs()
             };
             btnList.Zip(formList,(btn,form)=>{
                 btn.Click += (_,__) => ChangeForm(form);
@@ -69,6 +83,15 @@ namespace OICPen
         private void timer1_Tick(object sender, EventArgs e)
         {
             label1.Text = DateTime.Now.ToString("yyyy/MM/dd(ddd) HH:mm");
+        }
+
+
+        //ログアウトボタンが押された時の処理
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            BtnSetEnable(false);
+            staffsNameLbl.Text = "";
+            loginStaff = null;
         }
     }
 }
