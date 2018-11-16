@@ -11,7 +11,7 @@ namespace OICPen.Models
         [MaxLength(6), MinLength(6)]
         public string Date { get; set; } // 年月
         public int ItemTID { get; set; }　// 商品ID
-        public uint Quantity { get; set; } // 在庫数
+        public int Quantity { get; set; } // 在庫数
 
         public virtual ItemT ItemT { get; set; }
     }
