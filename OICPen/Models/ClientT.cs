@@ -19,7 +19,7 @@ namespace OICPen.Models
         [MaxLength(8)]
         public string PostNum { get; set; } // 郵便番号
         [Required]
-        [MaxLength(13)]
+        [MaxLength(14)]
         public string PhoneNum { get; set; } // 連絡先
 
         public virtual ICollection<TakeOrderT> TakeOrderTs { get; set; }
