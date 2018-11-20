@@ -87,20 +87,8 @@ namespace OICPen
         private void Staffs_Load(object sender, EventArgs e)
         {
             idTbox.Focus();
-            
-            permissionCbox item;
 
-            item = new MyComboBoxItem("001", "リンゴ");
-            comboFruit.Items.Add(item);
-
-            item = new MyComboBoxItem("002", "みかん");
-            comboFruit.Items.Add(item);
-
-            item = new MyComboBoxItem("003", "メロン");
-            comboFruit.Items.Add(item);
-
-            item = new MyComboBoxItem("004", "ぶどう");
-            comboFruit.Items.Add(item);
+            DataShow();
         }
 
         private void registerBtn_Click(object sender, EventArgs e)
@@ -112,6 +100,8 @@ namespace OICPen
                 && !Utility.TextIsEmpty(registerNamePhoneticTbox.Text)
                 && !Utility.TextIsEmpty(passwordLbl.Text)
                 && !Utility.TextIsEmpty(password2Tbox.Text)
+                && passwordTbox != password2Tbox
+                && !Utility.TextIsEmpty(permissionCbox.Text)
                 )
             {
                 if ((errorMessage = Utility.HiraganaCheck(registerNamePhoneticTbox.Text)) == "")
@@ -123,16 +113,43 @@ namespace OICPen
                     MessageBox.Show(errorMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-           // DataShow();
+            DataShow();
         }
+
+        private void DataShow()
+        {
+            staffsDgv.Rows.Clear();
+            var dgv = staffsDgv;
+            var staffs = Servis.GetAllItems();
+            foreach (var x in staffs)
+            {
+                dgv.Rows.Add(x.StaffTID, x.Name, x.Hurigana, x.Permission);
+            }
+        }
+
         private StaffT TextToStaff()
         {
             var staff = new StaffT();
             staff.Name = registerNameTbox.Text;
             staff.Hurigana = registerNamePhoneticTbox.Text;
             staff.Password = passwordTbox.Text;
-            staff.Permission = Permission.God;
-            return staff;
+            staff.Permission = Permission.ClientControl;
+                return staff;
+        }
+
+        private void staffsDgv_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            var client = new StaffT();
+            if (staffsDgv.SelectedRows.Count == 0) return;
+            var cells = staffsDgv.SelectedRows[0].Cells;
+            idDispLbl.Text = cells[0].Value.ToString();
+            registerNameTbox.Text = cells[1].Value.ToString();
+            registerNamePhoneticTbox.Text = cells[2].Value.ToString();
+            //passwordTbox.Text = Servis.FindByID(int.Parse(idDispLbl.Text));
+
+            //Dgvの権限を日本語で表示する。
+            //Dgvからパスワードを登録・更新テキストボックスに表示する？
+
         }
     }
 }
