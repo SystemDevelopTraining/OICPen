@@ -71,10 +71,20 @@ namespace OICPen
         {
             if (incomingDgv.SelectedRows.Count != 0)
             {
-                service.CancelInComming(service.SearchByGiveOrderId(int.Parse(incomingDgv.SelectedRows[0].Cells[0].Value.ToString())));
-                setDataGridView(service.GetNotYetInComing());
+                if (incomingDgv.SelectedRows[0].Cells[2].Value != null)
+                {
+                    if (MessageBox.Show("入庫を取り消しますか？", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) {
+                        service.CancelInComming(service.SearchByGiveOrderId(int.Parse(incomingDgv.SelectedRows[0].Cells[0].Value.ToString())));
+                        setDataGridView(service.GetNotYetInComing());
+                        MessageBox.Show("入庫を取り消しました", "完了", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                }else
+                {
+                    MessageBox.Show("未入庫の発注です", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-            }else
+            }
+            else
             {
                 MessageBox.Show("発注が選択されていません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -84,7 +94,7 @@ namespace OICPen
         {
             if (incomingDgv.SelectedRows.Count != 0)
             {
-                if (incomingDgv.SelectedRows[0].Cells[2].Value != null)
+                if (incomingDgv.SelectedRows[0].Cells[2].Value == null)
                 {
                     service.InComining(service.SearchByGiveOrderId(int.Parse(incomingDgv.SelectedRows[0].Cells[0].Value.ToString())));
                     setDataGridView(service.GetNotYetInComing());
