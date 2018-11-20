@@ -45,7 +45,6 @@ namespace OICPen
                     btn.BackColor = Color.Black;
                     logoutBtn.Enabled = true;
                     logoutBtn.BackColor = Color.Black;
-
                 }
             }
         }
@@ -106,6 +105,8 @@ namespace OICPen
             BtnSetEnable(false);
             staffsNameLbl.Text = "";
             loginStaff = null;
+            login.Dispose();
+            login = new Login(this);
             ChangeForm(login);
         }
     }
