@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OICPen.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -81,6 +82,57 @@ namespace OICPen
                 }
             }
 
+        }
+
+        private void Staffs_Load(object sender, EventArgs e)
+        {
+            idTbox.Focus();
+            
+            permissionCbox item;
+
+            item = new MyComboBoxItem("001", "リンゴ");
+            comboFruit.Items.Add(item);
+
+            item = new MyComboBoxItem("002", "みかん");
+            comboFruit.Items.Add(item);
+
+            item = new MyComboBoxItem("003", "メロン");
+            comboFruit.Items.Add(item);
+
+            item = new MyComboBoxItem("004", "ぶどう");
+            comboFruit.Items.Add(item);
+        }
+
+        private void registerBtn_Click(object sender, EventArgs e)
+        {
+            string errorMessage = "";
+            if (
+                !Utility.TextIsEmpty(registerNameTbox.Text)
+                && !Utility.TextIsEmpty(registerNameTbox.Text)
+                && !Utility.TextIsEmpty(registerNamePhoneticTbox.Text)
+                && !Utility.TextIsEmpty(passwordLbl.Text)
+                && !Utility.TextIsEmpty(password2Tbox.Text)
+                )
+            {
+                if ((errorMessage = Utility.HiraganaCheck(registerNamePhoneticTbox.Text)) == "")
+                {
+                    Servis.AddStaff(TextToStaff());
+                }
+                else
+                {
+                    MessageBox.Show(errorMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+           // DataShow();
+        }
+        private StaffT TextToStaff()
+        {
+            var staff = new StaffT();
+            staff.Name = registerNameTbox.Text;
+            staff.Hurigana = registerNamePhoneticTbox.Text;
+            staff.Password = passwordTbox.Text;
+            staff.Permission = Permission.God;
+            return staff;
         }
     }
 }

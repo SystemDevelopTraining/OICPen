@@ -75,6 +75,7 @@
             this.staffsDgv.Name = "staffsDgv";
             this.staffsDgv.ReadOnly = true;
             this.staffsDgv.RowTemplate.Height = 21;
+            this.staffsDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.staffsDgv.Size = new System.Drawing.Size(774, 949);
             this.staffsDgv.TabIndex = 5;
             // 
@@ -87,6 +88,7 @@
             this.registerBtn.TabIndex = 11;
             this.registerBtn.Text = "登録";
             this.registerBtn.UseVisualStyleBackColor = true;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // titleLbl
             // 
@@ -173,7 +175,7 @@
             // registerNameTbox
             // 
             this.registerNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.registerNameTbox.Location = new System.Drawing.Point(1180, 562);
+            this.registerNameTbox.Location = new System.Drawing.Point(1180, 486);
             this.registerNameTbox.MaxLength = 15;
             this.registerNameTbox.Multiline = true;
             this.registerNameTbox.Name = "registerNameTbox";
@@ -184,7 +186,7 @@
             // 
             this.registerNameLbl.AutoSize = true;
             this.registerNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.registerNameLbl.Location = new System.Drawing.Point(999, 562);
+            this.registerNameLbl.Location = new System.Drawing.Point(999, 486);
             this.registerNameLbl.Name = "registerNameLbl";
             this.registerNameLbl.Size = new System.Drawing.Size(136, 33);
             this.registerNameLbl.TabIndex = 0;
@@ -194,7 +196,7 @@
             // 
             this.passwordLbl.AutoSize = true;
             this.passwordLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.passwordLbl.Location = new System.Drawing.Point(943, 623);
+            this.passwordLbl.Location = new System.Drawing.Point(943, 618);
             this.passwordLbl.Name = "passwordLbl";
             this.passwordLbl.Size = new System.Drawing.Size(192, 33);
             this.passwordLbl.TabIndex = 0;
@@ -203,7 +205,7 @@
             // passwordTbox
             // 
             this.passwordTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.passwordTbox.Location = new System.Drawing.Point(1180, 623);
+            this.passwordTbox.Location = new System.Drawing.Point(1180, 618);
             this.passwordTbox.MaxLength = 20;
             this.passwordTbox.Multiline = true;
             this.passwordTbox.Name = "passwordTbox";
@@ -292,7 +294,7 @@
             // 
             this.registerNamePhoneticLbl.AutoSize = true;
             this.registerNamePhoneticLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.registerNamePhoneticLbl.Location = new System.Drawing.Point(976, 503);
+            this.registerNamePhoneticLbl.Location = new System.Drawing.Point(977, 552);
             this.registerNamePhoneticLbl.Name = "registerNamePhoneticLbl";
             this.registerNamePhoneticLbl.Size = new System.Drawing.Size(159, 33);
             this.registerNamePhoneticLbl.TabIndex = 0;
@@ -301,7 +303,7 @@
             // registerNamePhoneticTbox
             // 
             this.registerNamePhoneticTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.registerNamePhoneticTbox.Location = new System.Drawing.Point(1180, 503);
+            this.registerNamePhoneticTbox.Location = new System.Drawing.Point(1181, 552);
             this.registerNamePhoneticTbox.MaxLength = 30;
             this.registerNamePhoneticTbox.Multiline = true;
             this.registerNamePhoneticTbox.Name = "registerNamePhoneticTbox";
@@ -391,6 +393,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Staffs";
             this.Text = "Staffs";
+            this.Load += new System.EventHandler(this.Staffs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.staffsDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
