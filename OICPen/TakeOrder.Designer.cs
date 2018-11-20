@@ -245,18 +245,21 @@
             this.itemID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.itemID.HeaderText = "商品ID";
             this.itemID.Name = "itemID";
+            this.itemID.ReadOnly = true;
             // 
             // itemName
             // 
             this.itemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.itemName.HeaderText = "商品名";
             this.itemName.Name = "itemName";
+            this.itemName.ReadOnly = true;
             // 
             // quantity
             // 
             this.quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.quantity.HeaderText = "在庫数";
             this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
             // 
             // searchBtn
             // 
@@ -271,6 +274,7 @@
             // 
             // completeOrdersDgv
             // 
+            this.completeOrdersDgv.AllowUserToAddRows = false;
             this.completeOrdersDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.completeOrdersDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemID2,

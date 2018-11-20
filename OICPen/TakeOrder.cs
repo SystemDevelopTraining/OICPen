@@ -17,7 +17,7 @@ namespace OICPen
         private Services.TakeOrderService servis = new Services.TakeOrderService(new Models.OICPenDbContext());
         private Services.ClientService clientservis = new Services.ClientService(new Models.OICPenDbContext());
         private Services.ItemService itemservis = new Services.ItemService(new Models.OICPenDbContext());
-
+        private Services.TakeOrderDetailService takeorderdetailservice = new Services.TakeOrderDetailService(new Models.OICPenDbContext());
         public StaffT Staff
         {
 
@@ -175,7 +175,7 @@ namespace OICPen
 
             };
           
-            servis.AddTakeOrder(g);           //完了したら入力されたTextとDGVの内容を消すため
+            var takeOrderId=servis.AddTakeOrder(g).TakeOrderTID;           //完了したら入力されたTextとDGVの内容を消すため
             var Controls = new Control[] { clientsIdViewLbl, clientsNameViewLbl, clientsPhoneNoViewLbl,itemNameTbox,itemIdTbox,countsTbox,clientsIdTbox };
             foreach (var i in Controls)
             {
@@ -183,6 +183,25 @@ namespace OICPen
             }
             itemsViewDgv.Rows.Clear();
             SetDataGridView(itemservis.GetAllItems());
+
+            foreach (DataGridViewRow row in completeOrdersDgv.Rows)
+            {
+                var itemId = int.Parse(row.Cells[0].Value.ToString());
+                var itemName = row.Cells[1].Value;
+                var quantity = int.Parse(row.Cells[2].Value.ToString());
+
+                var a = new Models.TakeOrderDetailT
+                {
+                    TakeOrderTID = takeOrderId,
+                    ItemTID = itemId,
+                    Quantity = quantity,
+                };
+                takeorderdetailservice.AddTakeOrderDetail(a);
+                
+                
+            }
+          
+
 
             
            MessageBox.Show("注文が承りました", "COMPLETE", MessageBoxButtons.OK, MessageBoxIcon.Information);
