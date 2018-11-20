@@ -32,24 +32,27 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.clientPurchhaseHistoryMoreDetail = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseHistoryDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // PurchaseHistoryDgv
             // 
+            this.PurchaseHistoryDgv.AllowUserToAddRows = false;
+            this.PurchaseHistoryDgv.AllowUserToDeleteRows = false;
             this.PurchaseHistoryDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PurchaseHistoryDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column3,
             this.Column4,
-            this.Column2});
+            this.clientPurchhaseHistoryMoreDetail});
             this.PurchaseHistoryDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PurchaseHistoryDgv.Location = new System.Drawing.Point(0, 0);
             this.PurchaseHistoryDgv.Name = "PurchaseHistoryDgv";
             this.PurchaseHistoryDgv.RowTemplate.Height = 21;
-            this.PurchaseHistoryDgv.Size = new System.Drawing.Size(471, 315);
+            this.PurchaseHistoryDgv.Size = new System.Drawing.Size(478, 316);
             this.PurchaseHistoryDgv.TabIndex = 0;
+            this.PurchaseHistoryDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PurchaseHistoryDgv_CellContentClick);
             // 
             // Column1
             // 
@@ -66,16 +69,17 @@
             this.Column4.HeaderText = "出庫日";
             this.Column4.Name = "Column4";
             // 
-            // Column2
+            // clientPurchhaseHistoryMoreDetail
             // 
-            this.Column2.HeaderText = "詳細";
-            this.Column2.Name = "Column2";
+            this.clientPurchhaseHistoryMoreDetail.HeaderText = "詳細";
+            this.clientPurchhaseHistoryMoreDetail.Name = "clientPurchhaseHistoryMoreDetail";
+            this.clientPurchhaseHistoryMoreDetail.Text = "詳細へ";
             // 
             // ClientPurchaseHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 315);
+            this.ClientSize = new System.Drawing.Size(478, 316);
             this.Controls.Add(this.PurchaseHistoryDgv);
             this.Name = "ClientPurchaseHistory";
             this.Text = "MemberPurchaseHistory";
@@ -91,6 +95,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewButtonColumn Column2;
+        private System.Windows.Forms.DataGridViewButtonColumn clientPurchhaseHistoryMoreDetail;
     }
 }

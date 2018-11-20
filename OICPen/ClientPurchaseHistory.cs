@@ -17,16 +17,28 @@ namespace OICPen
         public ClientPurchaseHistory(Models.ClientT client)
         {
             InitializeComponent();
-            client = this.client;
+            this.client=client;
         }
 
         private void ClientPurchaseHistory_Load(object sender, EventArgs e)
         {
             var dgv = PurchaseHistoryDgv;
+            if (client.TakeOrderTs == null)
+                return;
             foreach (var x in client.TakeOrderTs)
             {
-
                 dgv.Rows.Add(x.TakeOrderTID,x.TakeOrdDate,x.ShipDate);
+            }
+        }
+
+        private void PurchaseHistoryDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            //"Button"列ならば、ボタンがクリックされた
+            if (dgv.Columns[e.ColumnIndex].Name == "clientPurchhaseHistoryMoreDetail"&& e.RowIndex!=-1)
+            {
+                MessageBox.Show(e.RowIndex.ToString() +
+                    "行のボタンがクリックされました。");
             }
         }
     }

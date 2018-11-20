@@ -235,9 +235,7 @@ namespace OICPen
             int idNumber = 0;
             if (int.TryParse(idDispLbl.Text, out idNumber))
             {
-                var client = TextToClient();
-                client.ClientTID = int.Parse(idNumber.ToString());
-                var f = new ClientPurchaseHistory(client);
+                var f = new ClientPurchaseHistory(servis.FindByID(int.Parse(idNumber.ToString())));
                 f.Show(this);
             }
             else
