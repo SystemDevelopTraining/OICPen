@@ -42,17 +42,5 @@ namespace OICPen.Services
 
             return giveOrders.ToList();
         }
-
-        /*---------------------------------------------------------------
-         [役割] すべての発注情報をGiveOrder型のListにして返す
-         [引数] なし
-         [返り値] すべての発注情報
-         ---------------------------------------------------------------*/
-
-        public void InComining(Models.GiveOrderT g)
-        {
-            var giveOrder = context.GiveOrders.Single(x => x.GiveOrderTID == g.GiveOrderTID);
-            giveOrder.CompleteDate = DateTime.Now;
-        }
     }
 }

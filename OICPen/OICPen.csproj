@@ -123,6 +123,7 @@
     <Compile Include="Services\ClientService.cs" />
     <Compile Include="Services\GiveOrderDetailService.cs" />
     <Compile Include="Services\GiveOrderService.cs" />
+    <Compile Include="Services\InComingService.cs" />
     <Compile Include="Services\ItemService.cs" />
     <Compile Include="Services\StaffService.cs" />
     <Compile Include="Services\StockService.cs" />

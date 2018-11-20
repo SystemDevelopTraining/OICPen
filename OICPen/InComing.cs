@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OICPen.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,23 +13,90 @@ namespace OICPen
 {
     public partial class InComing : Form
     {
+        private Services.InComingService service = new Services.InComingService(new Models.OICPenDbContext());
+
         public InComing()
         {
             InitializeComponent();
+            setDataGridView(service.GetNotYetInComing());
+        }
+
+        private void setDataGridView(List<GiveOrderT> orders)
+        {
+            incomingDgv.Rows.Clear();
+            orders.ForEach(order =>
+                incomingDgv.Rows.Add(
+                    order.GiveOrderTID,
+                    order.GiveOrdDate,
+                    order.CompleteDate,
+                    order.StaffT
+                    )
+                );
+        }
+
+        private void setDataGridView(GiveOrderT order)
+        {
+            incomingDgv.Rows.Add(order.GiveOrderTID, order.GiveOrdDate, order.CompleteDate, order.StaffT);
         }
 
         private void incomingTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.TextBoxDigitCheck(incomingTbox,e);
+            Utility.TextBoxDigitCheck(incomingTbox, e);
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
 
-            if (incomingTbox.Text == "")
+            if (Utility.TextIsEmpty(incomingTbox.Text))
             {
                 MessageBox.Show("検索内容を入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }else
+            {
+                setDataGridView(service.SearchByGiveOrderId(int.Parse(incomingTbox.Text)));
+            }
+        }
+
+        private void giveOrderedCheckBtn_Click(object sender, EventArgs e)
+        {
+            setDataGridView(service.GetAlreadyInComming());
+        }
+
+        private void giveOrderCheckBtn_Click(object sender, EventArgs e)
+        {
+            setDataGridView(service.GetNotYetInComing());
+        }
+
+        private void fixBtn_Click(object sender, EventArgs e)
+        {
+            if (incomingDgv.SelectedRows.Count != 0)
+            {
+                service.CancelInComming(service.SearchByGiveOrderId(int.Parse(incomingDgv.SelectedRows[0].Cells[0].Value.ToString())));
+                setDataGridView(service.GetNotYetInComing());
+
+            }else
+            {
+                MessageBox.Show("発注が選択されていません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void registerBtn_Click(object sender, EventArgs e)
+        {
+            if (incomingDgv.SelectedRows.Count != 0)
+            {
+                if (incomingDgv.SelectedRows[0].Cells[2].Value != null)
+                {
+                    service.InComining(service.SearchByGiveOrderId(int.Parse(incomingDgv.SelectedRows[0].Cells[0].Value.ToString())));
+                    setDataGridView(service.GetNotYetInComing());
+                    MessageBox.Show("入庫しました", "完了", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("入庫済みです", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }else
+            {
+                MessageBox.Show("発注が選択されていません", "完了", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
     }
