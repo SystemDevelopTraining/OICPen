@@ -7,14 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OICPen.Models;
 
 namespace OICPen
 {
     public partial class TakeOrder : Form
     {
+        private Models.StaffT staff;
         private Services.TakeOrderService servis = new Services.TakeOrderService(new Models.OICPenDbContext());
         private Services.ClientService clientservis = new Services.ClientService(new Models.OICPenDbContext());
         private Services.ItemService itemservis = new Services.ItemService(new Models.OICPenDbContext());
+        private Services.TakeOrderDetailService takeorderdetailservice = new Services.TakeOrderDetailService(new Models.OICPenDbContext());
+        public StaffT Staff
+        {
+
+            set
+            {
+                staff = value;
+            }
+        }
+
         //private Services.TakeOrderDetailService takeOrderService = new Services.TakeOrderDetailService(new Models.OICPenDbContext());
         public TakeOrder()
         {
@@ -159,11 +171,11 @@ namespace OICPen
                 
                 TakeOrdDate = DateTime.Now,// 注文日
                 ClientTID = int.Parse(clientsIdViewLbl.Text),// 会員ID
-                StaffTID = 3,  //社員ID
+                StaffTID = staff.StaffTID,  //社員ID
 
             };
           
-            servis.AddTakeOrder(g);           //完了したら入力されたTextとDGVの内容を消すため
+            var takeOrderId=servis.AddTakeOrder(g).TakeOrderTID;           //完了したら入力されたTextとDGVの内容を消すため
             var Controls = new Control[] { clientsIdViewLbl, clientsNameViewLbl, clientsPhoneNoViewLbl,itemNameTbox,itemIdTbox,countsTbox,clientsIdTbox };
             foreach (var i in Controls)
             {
@@ -171,6 +183,25 @@ namespace OICPen
             }
             itemsViewDgv.Rows.Clear();
             SetDataGridView(itemservis.GetAllItems());
+
+            foreach (DataGridViewRow row in completeOrdersDgv.Rows)
+            {
+                var itemId = int.Parse(row.Cells[0].Value.ToString());
+                var itemName = row.Cells[1].Value;
+                var quantity = int.Parse(row.Cells[2].Value.ToString());
+
+                var a = new Models.TakeOrderDetailT
+                {
+                    TakeOrderTID = takeOrderId,
+                    ItemTID = itemId,
+                    Quantity = quantity,
+                };
+                takeorderdetailservice.AddTakeOrderDetail(a);
+                
+                
+            }
+          
+
 
             
            MessageBox.Show("注文が承りました", "COMPLETE", MessageBoxButtons.OK, MessageBoxIcon.Information);

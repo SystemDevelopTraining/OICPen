@@ -29,5 +29,11 @@ namespace OICPen.Services
             var orderDetails = new TakeOrderDetailT { ItemTID = item.ItemTID, Quantity = (int)quantity, TakeOrderTID = order.TakeOrderTID };
             context.SaveChanges();
         }
+
+        public void AddTakeOrderDetail( Models.TakeOrderDetailT orderDetail)
+        {
+            context.TakeOrderDetails.Add(orderDetail);
+            context.SaveChanges();
+        }
     }
 }
