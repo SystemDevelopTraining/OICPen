@@ -105,10 +105,8 @@ namespace OICPen
             BtnSetEnable(false);
             staffsNameLbl.Text = "";
             loginStaff = null;
-            login = new Login(this);
             login.Dispose();
             login = new Login(this);
-            login.Show();
             ChangeForm(login);
         }
     }
