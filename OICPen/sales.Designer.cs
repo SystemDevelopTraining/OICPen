@@ -159,6 +159,5 @@
         private System.Windows.Forms.DateTimePicker salesStartDtp;
         private System.Windows.Forms.Label salesAndLbl;
         private System.Windows.Forms.Label salesBetweenLbl;
-        private System.Windows.Forms.Button rankBtn;
     }
 }

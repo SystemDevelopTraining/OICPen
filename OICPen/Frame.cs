@@ -16,12 +16,15 @@ namespace OICPen
         Models.StaffT loginStaff;
         Button[] btnList;
         Login login;
+        TakeOrder takeOrder= new TakeOrder();
 
         public void SetUser(Models.StaffT staff)
         {
             staffsNameLbl.Text = staff.Name;
             loginStaff = staff;
             BtnSetEnable(true);
+            takeOrder.Staff=staff;
+            
         }
         public Frame()
         {
@@ -34,6 +37,18 @@ namespace OICPen
             foreach(var btn in btnList)
             {
                 btn.Enabled = flag;
+                if (flag == false)
+                {
+                    btn.BackColor = System.Drawing.SystemColors.Control;
+                    logoutBtn.Enabled = false;
+                    logoutBtn.BackColor = System.Drawing.SystemColors.Control;
+                }
+                else
+                {
+                    btn.BackColor = Color.Black;
+                    logoutBtn.Enabled = true;
+                    logoutBtn.BackColor = Color.Black;
+                }
             }
         }
 
@@ -51,7 +66,7 @@ namespace OICPen
             };
             BtnSetEnable(false);
             var formList = new Form[] {
-                new TakeOrder(),new Sales(),new Ship(),new InComing(),
+                takeOrder,new Sales(),new Ship(),new InComing(),
                 new GiveOrder(),new Stock(),new Items(),new Clients(),new Staffs()
             };
             btnList.Zip(formList,(btn,form)=>{
@@ -93,6 +108,8 @@ namespace OICPen
             BtnSetEnable(false);
             staffsNameLbl.Text = "";
             loginStaff = null;
+            login.Dispose();
+            login = new Login(this);
             ChangeForm(login);
         }
     }

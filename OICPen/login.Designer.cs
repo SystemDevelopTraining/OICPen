@@ -36,7 +36,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -52,7 +51,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.StaffIdTbox.BackColor = System.Drawing.Color.White;
             this.StaffIdTbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.StaffIdTbox.Font = new System.Drawing.Font("Segoe Marker", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffIdTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StaffIdTbox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.StaffIdTbox.Location = new System.Drawing.Point(155, 357);
             this.StaffIdTbox.Name = "StaffIdTbox";
@@ -68,7 +67,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.staffPassTbox.BackColor = System.Drawing.Color.White;
             this.staffPassTbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.staffPassTbox.Font = new System.Drawing.Font("Segoe Marker", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staffPassTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.staffPassTbox.Location = new System.Drawing.Point(155, 553);
             this.staffPassTbox.Name = "staffPassTbox";
             this.staffPassTbox.PasswordChar = '*';
@@ -111,7 +110,6 @@
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.StaffIdTbox);
             this.splitContainer1.Panel2.Controls.Add(this.loginBtn);
             this.splitContainer1.Panel2.Controls.Add(this.staffPassTbox);
@@ -163,19 +161,7 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "社員ID";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-R", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(11, 718);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(483, 27);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "{{パスワードやIDが間違えたら通知する}}";
-            // 
-            // login
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 11F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -185,7 +171,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("ＭＳ 明朝", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "login";
+            this.Name = "Login";
             this.Text = "ログイン画面";
             this.Load += new System.EventHandler(this.login_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -205,7 +191,6 @@
         private System.Windows.Forms.TextBox staffPassTbox;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
