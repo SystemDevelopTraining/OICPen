@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientPurchhaseHistoryMoreDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientPurchhaseHistoryMoreDetail.Designer.cs">
+      <DependentUpon>ClientPurchhaseHistoryMoreDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clients.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <Compile Include="Utility.cs" />
     <EmbeddedResource Include="ClientPurchaseHistory.resx">
       <DependentUpon>ClientPurchaseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientPurchhaseHistoryMoreDetail.resx">
+      <DependentUpon>ClientPurchhaseHistoryMoreDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clients.resx">
       <DependentUpon>Clients.cs</DependentUpon>

@@ -50,7 +50,7 @@
             this.PurchaseHistoryDgv.Location = new System.Drawing.Point(0, 0);
             this.PurchaseHistoryDgv.Name = "PurchaseHistoryDgv";
             this.PurchaseHistoryDgv.RowTemplate.Height = 21;
-            this.PurchaseHistoryDgv.Size = new System.Drawing.Size(471, 315);
+            this.PurchaseHistoryDgv.Size = new System.Drawing.Size(478, 316);
             this.PurchaseHistoryDgv.TabIndex = 0;
             this.PurchaseHistoryDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PurchaseHistoryDgv_CellContentClick);
             // 
@@ -79,7 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 315);
+            this.ClientSize = new System.Drawing.Size(478, 316);
             this.Controls.Add(this.PurchaseHistoryDgv);
             this.Name = "ClientPurchaseHistory";
             this.Text = "MemberPurchaseHistory";
