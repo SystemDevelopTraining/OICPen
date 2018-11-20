@@ -15,7 +15,7 @@ namespace OICPen
         private Services.TakeOrderService servis = new Services.TakeOrderService(new Models.OICPenDbContext());
         private Services.ClientService clientservis = new Services.ClientService(new Models.OICPenDbContext());
         private Services.ItemService itemservis = new Services.ItemService(new Models.OICPenDbContext());
-        private Services.TakeOrderDetailService takeOrderService = new Services.TakeOrderDetailService(new Models.OICPenDbContext());
+        //private Services.TakeOrderDetailService takeOrderService = new Services.TakeOrderDetailService(new Models.OICPenDbContext());
         public TakeOrder()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace OICPen
 
         private void clientsIdCheckBtn_Click(object sender, EventArgs e)
         {
-            bool found = false;
+            bool found = false;//clientが確認できなかったらMessageBoxを表示するのに利用される。
             foreach (var client in clientservis.GetClients())
             {
                 if (clientsIdTbox.Text == client.ClientTID.ToString())
@@ -50,6 +50,7 @@ namespace OICPen
         {
             Utility.TextBoxDigitCheck(itemIdTbox, e);
         }
+        
         void SetDataGridView(List<Models.ItemT> items)
         {
 
@@ -118,19 +119,6 @@ namespace OICPen
             }
         }
 
-        void SetDataGridView2(List<Models.ItemT> items)
-        {
-
-            itemsViewDgv.Rows.Clear();
-            items.ForEach(item =>
-            {
-                itemsViewDgv.Rows.Add(
-                    item.ItemTID,
-                    item.Name
-
-                   );
-            });
-        }
         private void confirmBtn_Click(object sender, EventArgs e)
         {
             completeOrdersDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, countsTbox.Text);
@@ -145,10 +133,19 @@ namespace OICPen
 
         private void delBtn_Click(object sender, EventArgs e)
         {
-            if (this.completeOrdersDgv.SelectedRows.Count > 0)
+            DialogResult m = MessageBox.Show("Are you sure? This will delete all your data", "Attention!", MessageBoxButtons.YesNo);
+            if (m ==DialogResult.No)
             {
-              completeOrdersDgv.Rows.RemoveAt(this.completeOrdersDgv.SelectedRows[0].Index);
+                
             }
+            else
+            {
+                if (this.completeOrdersDgv.SelectedRows.Count > 0)
+                {
+                    completeOrdersDgv.Rows.RemoveAt(this.completeOrdersDgv.SelectedRows[0].Index);
+                }
+            }
+            
         }
 
         private void clearBtn_Click(object sender, EventArgs e)
@@ -158,14 +155,27 @@ namespace OICPen
 
         private void completeBtn_Click(object sender, EventArgs e)
         {
+            var g=new Models.TakeOrderT {
+                
+                TakeOrdDate = DateTime.Now,// 注文日
+                ClientTID = int.Parse(clientsIdViewLbl.Text),// 会員ID
+                StaffTID = 3,  //社員ID
+
+            };
           
-            for (int i = 0; i < this.Controls.Count; i++)
+            servis.AddTakeOrder(g);           //完了したら入力されたTextとDGVの内容を消すため
+            var Controls = new Control[] { clientsIdViewLbl, clientsNameViewLbl, clientsPhoneNoViewLbl,itemNameTbox,itemIdTbox,countsTbox,clientsIdTbox };
+            foreach (var i in Controls)
             {
-                this.Controls[i].ResetText();
+                i.ResetText();
             }
+            itemsViewDgv.Rows.Clear();
+            SetDataGridView(itemservis.GetAllItems());
 
-
-            MessageBox.Show("MISSION COMPLETE", "COMPLETE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+           MessageBox.Show("注文が承りました", "COMPLETE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+          
+            completeOrdersDgv.Rows.Clear();
         }
     }
 }
