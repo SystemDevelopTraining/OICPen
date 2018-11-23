@@ -54,7 +54,11 @@ namespace OICPen
             }else
             {
                 incomingDgv.Rows.Clear();
-                setDataGridView(service.SearchByGiveOrderId(int.Parse(incomingTbox.Text)));
+                try
+                {
+                    setDataGridView(service.SearchByGiveOrderId(int.Parse(incomingTbox.Text)));
+                }
+                catch { }
             }
         }
 
