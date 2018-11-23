@@ -107,6 +107,10 @@ namespace OICPen
                 if ((errorMessage = Utility.HiraganaCheck(registerNamePhoneticTbox.Text)) == "")
                 {
                     Servis.AddStaff(TextToStaff());
+                    registerNameTbox.Text = "";
+                    registerNamePhoneticTbox.Text = "";
+                    passwordTbox.Text = "";
+                    password2Tbox.Text ="";
                 }
                 else
                 {
@@ -120,7 +124,7 @@ namespace OICPen
         {
             staffsDgv.Rows.Clear();
             var dgv = staffsDgv;
-            var staffs = Servis.GetAllItems();
+            var staffs = Servis.GetAllStaffs();
             foreach (var x in staffs)
             {
                 dgv.Rows.Add(x.StaffTID, x.Name, x.Hurigana, x.Permission);
@@ -133,23 +137,50 @@ namespace OICPen
             staff.Name = registerNameTbox.Text;
             staff.Hurigana = registerNamePhoneticTbox.Text;
             staff.Password = passwordTbox.Text;
-            staff.Permission = Permission.ClientControl;
+            staff.Permission = (Permission)permissionCbox.SelectedIndex;
                 return staff;
         }
 
         private void staffsDgv_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            var client = new StaffT();
+            
             if (staffsDgv.SelectedRows.Count == 0) return;
             var cells = staffsDgv.SelectedRows[0].Cells;
+            int id = int.Parse(cells[0].Value.ToString());
             idDispLbl.Text = cells[0].Value.ToString();
-            registerNameTbox.Text = cells[1].Value.ToString();
-            registerNamePhoneticTbox.Text = cells[2].Value.ToString();
-            //passwordTbox.Text = Servis.FindByID(int.Parse(idDispLbl.Text));
+            var staff = Servis.FindByID(id);
+            registerNameTbox.Text = staff.Name;
+            registerNamePhoneticTbox.Text = staff.Hurigana;
+            
 
             //Dgvの権限を日本語で表示する。
             //Dgvからパスワードを登録・更新テキストボックスに表示する？
 
+        }
+
+        private void fixBtn_Click(object sender, EventArgs e)
+        {
+            if (idDispLbl.Text == "")
+            {
+                MessageBox.Show("社畜を選択しないままの更新はできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int id = int.Parse(idDispLbl.Text);
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            if (idDispLbl.Text == "")
+            {
+                MessageBox.Show("社畜を選択しないままの削除はできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            int id = int.Parse(idDispLbl.Text);
+            Servis.DeleteStaff(id);
+            DataShow();
+            idDispLbl.Text = "";
+            registerNameTbox.Text = "";
+            registerNamePhoneticTbox.Text = "";
         }
     }
 }

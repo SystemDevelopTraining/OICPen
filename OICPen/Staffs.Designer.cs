@@ -181,6 +181,7 @@
             this.fixBtn.TabIndex = 12;
             this.fixBtn.Text = "修正";
             this.fixBtn.UseVisualStyleBackColor = true;
+            this.fixBtn.Click += new System.EventHandler(this.fixBtn_Click);
             // 
             // searchBtn
             // 
@@ -202,6 +203,7 @@
             this.deleteBtn.TabIndex = 13;
             this.deleteBtn.Text = "削除";
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // registerNameTbox
             // 
