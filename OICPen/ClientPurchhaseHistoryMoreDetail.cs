@@ -26,7 +26,7 @@ namespace OICPen
                 return;
             foreach (var x in ID.TakeOrderDetailTs)
             {
-                dgv.Rows.Add(x.TakeOrderDetailTID,x.ItemT.Name,x.ItemTID, x.Quantity);
+                dgv.Rows.Add(x.TakeOrderDetailTID,x.ItemTID,x.ItemT.Name, x.Quantity);
             }
         }
     }
