@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.incomingTitleLbl = new System.Windows.Forms.Label();
             this.incomingDgv = new System.Windows.Forms.DataGridView();
+            this.GiveOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiveOrdDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CompleteDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giveOrderedCheckBtn = new System.Windows.Forms.Button();
             this.giveOrderLbl = new System.Windows.Forms.Label();
             this.incomingTbox = new System.Windows.Forms.TextBox();
@@ -57,13 +61,51 @@
             // 
             // incomingDgv
             // 
+            this.incomingDgv.AllowUserToAddRows = false;
+            this.incomingDgv.AllowUserToDeleteRows = false;
+            this.incomingDgv.AllowUserToResizeColumns = false;
+            this.incomingDgv.AllowUserToResizeRows = false;
             this.incomingDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.incomingDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.incomingDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.incomingDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GiveOrderID,
+            this.GiveOrdDate,
+            this.CompleteDate,
+            this.StaffTID});
+            this.incomingDgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.incomingDgv.Location = new System.Drawing.Point(12, 21);
+            this.incomingDgv.MultiSelect = false;
             this.incomingDgv.Name = "incomingDgv";
+            this.incomingDgv.ReadOnly = true;
             this.incomingDgv.RowTemplate.Height = 21;
+            this.incomingDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.incomingDgv.Size = new System.Drawing.Size(1310, 949);
             this.incomingDgv.TabIndex = 0;
+            // 
+            // GiveOrderID
+            // 
+            this.GiveOrderID.HeaderText = "ID";
+            this.GiveOrderID.Name = "GiveOrderID";
+            this.GiveOrderID.ReadOnly = true;
+            // 
+            // GiveOrdDate
+            // 
+            this.GiveOrdDate.HeaderText = "発注日";
+            this.GiveOrdDate.Name = "GiveOrdDate";
+            this.GiveOrdDate.ReadOnly = true;
+            // 
+            // CompleteDate
+            // 
+            this.CompleteDate.HeaderText = "入庫日";
+            this.CompleteDate.Name = "CompleteDate";
+            this.CompleteDate.ReadOnly = true;
+            // 
+            // StaffTID
+            // 
+            this.StaffTID.HeaderText = "担当社員";
+            this.StaffTID.Name = "StaffTID";
+            this.StaffTID.ReadOnly = true;
             // 
             // giveOrderedCheckBtn
             // 
@@ -74,6 +116,7 @@
             this.giveOrderedCheckBtn.TabIndex = 1;
             this.giveOrderedCheckBtn.Text = "入庫済一覧";
             this.giveOrderedCheckBtn.UseVisualStyleBackColor = true;
+            this.giveOrderedCheckBtn.Click += new System.EventHandler(this.giveOrderedCheckBtn_Click);
             // 
             // giveOrderLbl
             // 
@@ -115,6 +158,7 @@
             this.registerBtn.TabIndex = 6;
             this.registerBtn.Text = "入庫完了";
             this.registerBtn.UseVisualStyleBackColor = true;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // fixBtn
             // 
@@ -125,6 +169,7 @@
             this.fixBtn.TabIndex = 5;
             this.fixBtn.Text = "入庫取り消し";
             this.fixBtn.UseVisualStyleBackColor = true;
+            this.fixBtn.Click += new System.EventHandler(this.fixBtn_Click);
             // 
             // giveOrderCheckBtn
             // 
@@ -135,6 +180,7 @@
             this.giveOrderCheckBtn.TabIndex = 2;
             this.giveOrderCheckBtn.Text = "未入庫一覧";
             this.giveOrderCheckBtn.UseVisualStyleBackColor = true;
+            this.giveOrderCheckBtn.Click += new System.EventHandler(this.giveOrderCheckBtn_Click);
             // 
             // InComing
             // 
@@ -173,5 +219,9 @@
         private System.Windows.Forms.Button fixBtn;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button giveOrderCheckBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiveOrderID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiveOrdDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CompleteDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StaffTID;
     }
 }
