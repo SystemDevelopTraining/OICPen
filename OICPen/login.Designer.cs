@@ -74,6 +74,7 @@
             this.staffPassTbox.Size = new System.Drawing.Size(196, 35);
             this.staffPassTbox.TabIndex = 2;
             this.staffPassTbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.staffPassTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.staffPassTbox_KeyPress);
             // 
             // loginBtn
             // 
@@ -173,7 +174,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.Text = "ログイン画面";
-            this.Load += new System.EventHandler(this.login_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
