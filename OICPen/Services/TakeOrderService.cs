@@ -97,5 +97,11 @@ namespace OICPen.Services
             takeOrder.ShipDate = null;
             context.SaveChanges();
         }
+
+        public TakeOrderT FindByID(int id)
+        {
+            return context.TakeOrders.Single(x => x.TakeOrderTID == id);
+        }
+
     }
 }
