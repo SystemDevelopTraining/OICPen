@@ -61,7 +61,7 @@ namespace OICPen
             label1.Text = DateTime.Now.ToString("yyyy/MM/dd(ddd) HH:mm");
 
             login =new Login(this);
-            ChangeForm(login,null);
+            ChangeForm(login);
             btnList=new Button[] {
                 takeorderBtn,salesBtn,shipBtn,incomingBtn,giveorderBtn,stockBtn,itemsBtn,clientsBtn,staffsBtn
             };
@@ -76,7 +76,7 @@ namespace OICPen
             }).ToArray();
         }
 
-        private void ChangeForm(Form f,Button btn)
+        private void ChangeForm(Form f,Button btn = null)
         {
             f.TopLevel = false;
             splitContainer2.Panel2.Controls.Clear();
@@ -123,7 +123,7 @@ namespace OICPen
             loginStaff = null;
             login.Dispose();
             login = new Login(this);
-            ChangeForm(login,null);
+            ChangeForm(login);
         }
     }
 }
