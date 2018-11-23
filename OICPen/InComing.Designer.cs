@@ -61,18 +61,25 @@
             // 
             // incomingDgv
             // 
+            this.incomingDgv.AllowUserToAddRows = false;
+            this.incomingDgv.AllowUserToDeleteRows = false;
+            this.incomingDgv.AllowUserToResizeColumns = false;
+            this.incomingDgv.AllowUserToResizeRows = false;
             this.incomingDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.incomingDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.incomingDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.incomingDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GiveOrderID,
             this.GiveOrdDate,
             this.CompleteDate,
             this.StaffTID});
+            this.incomingDgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.incomingDgv.Location = new System.Drawing.Point(12, 21);
             this.incomingDgv.MultiSelect = false;
             this.incomingDgv.Name = "incomingDgv";
             this.incomingDgv.ReadOnly = true;
             this.incomingDgv.RowTemplate.Height = 21;
+            this.incomingDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.incomingDgv.Size = new System.Drawing.Size(1310, 949);
             this.incomingDgv.TabIndex = 0;
             // 
@@ -86,16 +93,19 @@
             // 
             this.GiveOrdDate.HeaderText = "発注日";
             this.GiveOrdDate.Name = "GiveOrdDate";
+            this.GiveOrdDate.ReadOnly = true;
             // 
             // CompleteDate
             // 
             this.CompleteDate.HeaderText = "入庫日";
             this.CompleteDate.Name = "CompleteDate";
+            this.CompleteDate.ReadOnly = true;
             // 
             // StaffTID
             // 
             this.StaffTID.HeaderText = "担当社員";
             this.StaffTID.Name = "StaffTID";
+            this.StaffTID.ReadOnly = true;
             // 
             // giveOrderedCheckBtn
             // 
