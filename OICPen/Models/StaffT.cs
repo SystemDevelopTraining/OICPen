@@ -21,15 +21,15 @@ namespace OICPen.Models
     public enum Permission
     {
         //マスター権限。(特権管理者)
-        God = 4,
+        God = 0,
         //客管理権限。(客管理者)
-        ClientControl =3,
+        ClientControl =1,
         //社員管理権限。(社員管理者)
         StaffControl =2,
         //商品管理権限。(商品管理者)
-        ProductControl = 1,
+        ProductControl = 3,
         //仕入れ管理権限。(入庫管理者)
-        PurchasingControl = 0
+        PurchasingControl = 4
     }
 
 }

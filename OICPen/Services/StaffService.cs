@@ -21,7 +21,7 @@ namespace OICPen.Services
         [引数] なし
         [返り値] すべての社畜情報
         ---------------------------------------------------------------*/
-        public List<StaffT> GetAllItems()
+        public List<StaffT> GetAllStaffs()
         {
             var staffs = from i in context.Staffs
                         orderby i.StaffTID
@@ -64,7 +64,7 @@ namespace OICPen.Services
         [引数] i: 削除する社畜ID
         [返り値] 削除した社畜情報
         ---------------------------------------------------------------*/
-        public StaffT DeleteItem(int id)
+        public StaffT DeleteStaff(int id)
         {
             var staff = context.Staffs.Single(x => x.StaffTID == id);
             context.Staffs.Remove(staff);
