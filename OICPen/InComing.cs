@@ -29,7 +29,7 @@ namespace OICPen
                     order.GiveOrderTID,
                     order.GiveOrdDate,
                     order.CompleteDate,
-                    order.StaffT
+                    order.StaffT.Name
                     )
                 );
         }
