@@ -41,7 +41,8 @@ namespace OICPen.Services
         //発注IDで検索
         public GiveOrderT SearchByGiveOrderId(int id)
         {
-            return context.GiveOrders.Single(x => x.GiveOrderTID == id) ;
+            var order = context.GiveOrders.Single(x => x.GiveOrderTID == id);
+            return order;
         }
 
         //入庫日を設定する
