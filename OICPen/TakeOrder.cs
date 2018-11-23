@@ -49,6 +49,13 @@ namespace OICPen
             if (found == false)
             {
                 MessageBox.Show("入力されたIDは存在しません。もう一度確認の上入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }else
+            {
+                var Controls = new Control[] { itemsViewDgv,completeOrdersDgv,itemNameTbox,itemIdTbox,searchBtn,countsTbox,confirmBtn,allItemBtn,itemsViewDgv,completeOrdersDgv };
+                foreach (var i in Controls)
+                {
+                    i.Enabled = true;
+                }
             }
 
         }
@@ -125,15 +132,42 @@ namespace OICPen
 
         private void TakeOrder_Load(object sender, EventArgs e)
         {
-            foreach (var item in itemservis.GetAllItems())
-            {
-                itemsViewDgv.Rows.Add(item.ItemTID, item.Name, "0");//在庫数表示未完成
-            }
+            SetDataGridView(itemservis.GetAllItems());
         }
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            completeOrdersDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, countsTbox.Text);
+            if (countsTbox.Text != "" && int.Parse(countsTbox.Text) != 0)
+            {
+                //    if (int.Parse(countsTbox.Text)>0)
+                //    {
+                if (int.Parse(countsTbox.Text) >= 1000)
+                {
+                    DialogResult m = MessageBox.Show("1000個以上の注文になりますがよろしいですか?", "注意", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning,MessageBoxDefaultButton.Button2);
+                    if (m == DialogResult.Cancel)
+                    {
+                        countsTbox.Focus();
+                        return;
+                    }
+                }
+                         
+                  
+                        completeOrdersDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value,int.Parse( countsTbox.Text));
+                        countsTbox.Clear();
+                        delBtn.Enabled = true;
+                        clearBtn.Enabled = true;
+                        completeBtn.Enabled = true;
+
+             
+                   
+                }
+                else
+                {
+                    MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
+                }
+            
+           
+
         }
 
         Models.ItemT TextboxToItemT()
@@ -145,7 +179,7 @@ namespace OICPen
 
         private void delBtn_Click(object sender, EventArgs e)
         {
-            DialogResult m = MessageBox.Show("Are you sure? This will delete all your data", "Attention!", MessageBoxButtons.YesNo);
+            DialogResult m = MessageBox.Show("消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo,MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
             if (m ==DialogResult.No)
             {
                 
@@ -162,7 +196,15 @@ namespace OICPen
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            completeOrdersDgv.Rows.Clear();
+            DialogResult m = MessageBox.Show("全部消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo);
+            if (m == DialogResult.No)
+            {
+
+            }
+            else
+            {
+                 completeOrdersDgv.Rows.Clear();
+            }
         }
 
         private void completeBtn_Click(object sender, EventArgs e)
@@ -198,15 +240,76 @@ namespace OICPen
                 };
                 takeorderdetailservice.AddTakeOrderDetail(a);
                 
-                
+                                          
             }
           
 
 
             
-           MessageBox.Show("注文が承りました", "COMPLETE", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           MessageBox.Show("注文が承りました", "終了", MessageBoxButtons.OK, MessageBoxIcon.Information);
           
             completeOrdersDgv.Rows.Clear();
+            var Controls2 = new Control[] { itemsViewDgv, completeOrdersDgv, itemNameTbox, itemIdTbox, searchBtn, countsTbox, confirmBtn, allItemBtn,completeBtn,clearBtn,delBtn };
+            foreach (var i in Controls2)
+            {
+                i.Enabled = false ;
+            }
+
+        }
+
+        private void allItemBtn_Click(object sender, EventArgs e)
+        {
+            itemsViewDgv.Rows.Clear();
+            SetDataGridView(itemservis.GetAllItems());
+            itemIdTbox.Clear();
+            itemNameTbox.Clear();
+        }
+
+        private void countsTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          
+            Utility.TextBoxDigitCheck(countsTbox, e);
+         
+        }
+
+        private void clientsIdTbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+               clientsIdCheckBtn.PerformClick();
+            }
+        }
+
+        private void itemNameTbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+               searchBtn.PerformClick();
+            }
+        }
+
+        private void itemIdTbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+               searchBtn.PerformClick();
+            }
+        }
+
+        private void confirmBtn_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                clientsIdCheckBtn.PerformClick();
+            }
+        }
+
+        private void countsTbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                confirmBtn.PerformClick();
+            }
         }
     }
 }

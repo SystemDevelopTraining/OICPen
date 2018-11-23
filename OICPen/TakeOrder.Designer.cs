@@ -60,6 +60,7 @@
             this.clientLbl = new System.Windows.Forms.Label();
             this.clientnameLbl = new System.Windows.Forms.Label();
             this.phonenoLbl = new System.Windows.Forms.Label();
+            this.allItemBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.completeOrdersDgv)).BeginInit();
             this.SuspendLayout();
@@ -116,19 +117,21 @@
             // 
             // itemIdTbox
             // 
+            this.itemIdTbox.Enabled = false;
             this.itemIdTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemIdTbox.Location = new System.Drawing.Point(260, 525);
             this.itemIdTbox.MaxLength = 6;
             this.itemIdTbox.Name = "itemIdTbox";
             this.itemIdTbox.Size = new System.Drawing.Size(97, 36);
             this.itemIdTbox.TabIndex = 7;
+            this.itemIdTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.itemIdTbox_KeyDown);
             this.itemIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.itemIdTbox_KeyPress);
             // 
             // countsLbl
             // 
             this.countsLbl.AutoSize = true;
             this.countsLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.countsLbl.Location = new System.Drawing.Point(611, 752);
+            this.countsLbl.Location = new System.Drawing.Point(594, 686);
             this.countsLbl.Name = "countsLbl";
             this.countsLbl.Size = new System.Drawing.Size(71, 29);
             this.countsLbl.TabIndex = 6;
@@ -136,15 +139,19 @@
             // 
             // countsTbox
             // 
+            this.countsTbox.Enabled = false;
             this.countsTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.countsTbox.Location = new System.Drawing.Point(599, 806);
+            this.countsTbox.Location = new System.Drawing.Point(581, 727);
             this.countsTbox.MaxLength = 6;
             this.countsTbox.Name = "countsTbox";
-            this.countsTbox.Size = new System.Drawing.Size(83, 36);
+            this.countsTbox.Size = new System.Drawing.Size(101, 36);
             this.countsTbox.TabIndex = 7;
+            this.countsTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.countsTbox_KeyDown);
+            this.countsTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.countsTbox_KeyPress);
             // 
             // completeBtn
             // 
+            this.completeBtn.Enabled = false;
             this.completeBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.completeBtn.Location = new System.Drawing.Point(1365, 727);
             this.completeBtn.Name = "completeBtn";
@@ -156,6 +163,7 @@
             // 
             // clearBtn
             // 
+            this.clearBtn.Enabled = false;
             this.clearBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.clearBtn.Location = new System.Drawing.Point(1365, 616);
             this.clearBtn.Name = "clearBtn";
@@ -173,6 +181,7 @@
             this.clientsIdTbox.Name = "clientsIdTbox";
             this.clientsIdTbox.Size = new System.Drawing.Size(97, 36);
             this.clientsIdTbox.TabIndex = 7;
+            this.clientsIdTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.clientsIdTbox_KeyDown);
             this.clientsIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.clientsIdTbox_KeyPress);
             // 
             // clientsIdCheckBtn
@@ -198,12 +207,14 @@
             // 
             // itemNameTbox
             // 
+            this.itemNameTbox.Enabled = false;
             this.itemNameTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemNameTbox.Location = new System.Drawing.Point(260, 455);
             this.itemNameTbox.MaxLength = 50;
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(218, 36);
             this.itemNameTbox.TabIndex = 16;
+            this.itemNameTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.itemNameTbox_KeyDown);
             // 
             // clientsIdViewLbl
             // 
@@ -211,9 +222,8 @@
             this.clientsIdViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.clientsIdViewLbl.Location = new System.Drawing.Point(95, 373);
             this.clientsIdViewLbl.Name = "clientsIdViewLbl";
-            this.clientsIdViewLbl.Size = new System.Drawing.Size(223, 29);
+            this.clientsIdViewLbl.Size = new System.Drawing.Size(0, 29);
             this.clientsIdViewLbl.TabIndex = 17;
-            this.clientsIdViewLbl.Text = "{会員IDが表示}";
             // 
             // clientsNameViewLbl
             // 
@@ -221,17 +231,18 @@
             this.clientsNameViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.clientsNameViewLbl.Location = new System.Drawing.Point(324, 373);
             this.clientsNameViewLbl.Name = "clientsNameViewLbl";
-            this.clientsNameViewLbl.Size = new System.Drawing.Size(223, 29);
+            this.clientsNameViewLbl.Size = new System.Drawing.Size(0, 29);
             this.clientsNameViewLbl.TabIndex = 18;
-            this.clientsNameViewLbl.Text = "{会員名が表示}";
             // 
             // itemsViewDgv
             // 
+            this.itemsViewDgv.AllowUserToAddRows = false;
             this.itemsViewDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.itemsViewDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.itemID,
             this.itemName,
             this.quantity});
+            this.itemsViewDgv.Enabled = false;
             this.itemsViewDgv.Location = new System.Drawing.Point(129, 686);
             this.itemsViewDgv.Name = "itemsViewDgv";
             this.itemsViewDgv.ReadOnly = true;
@@ -263,6 +274,7 @@
             // 
             // searchBtn
             // 
+            this.searchBtn.Enabled = false;
             this.searchBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.searchBtn.Location = new System.Drawing.Point(260, 597);
             this.searchBtn.Name = "searchBtn";
@@ -280,6 +292,7 @@
             this.ItemID2,
             this.ItemName2,
             this.quantity2});
+            this.completeOrdersDgv.Enabled = false;
             this.completeOrdersDgv.Location = new System.Drawing.Point(766, 354);
             this.completeOrdersDgv.Name = "completeOrdersDgv";
             this.completeOrdersDgv.RowTemplate.Height = 21;
@@ -314,20 +327,21 @@
             this.clientsPhoneNoViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.clientsPhoneNoViewLbl.Location = new System.Drawing.Point(553, 373);
             this.clientsPhoneNoViewLbl.Name = "clientsPhoneNoViewLbl";
-            this.clientsPhoneNoViewLbl.Size = new System.Drawing.Size(163, 29);
+            this.clientsPhoneNoViewLbl.Size = new System.Drawing.Size(0, 29);
             this.clientsPhoneNoViewLbl.TabIndex = 22;
-            this.clientsPhoneNoViewLbl.Text = "{電話番号}";
             // 
             // confirmBtn
             // 
+            this.confirmBtn.Enabled = false;
             this.confirmBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.confirmBtn.Location = new System.Drawing.Point(599, 865);
+            this.confirmBtn.Location = new System.Drawing.Point(582, 769);
             this.confirmBtn.Name = "confirmBtn";
-            this.confirmBtn.Size = new System.Drawing.Size(83, 54);
+            this.confirmBtn.Size = new System.Drawing.Size(100, 55);
             this.confirmBtn.TabIndex = 23;
             this.confirmBtn.Text = "確定";
             this.confirmBtn.UseVisualStyleBackColor = true;
             this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
+            this.confirmBtn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.confirmBtn_KeyDown);
             // 
             // completeOrdersTitleLbl
             // 
@@ -342,6 +356,7 @@
             // 
             // delBtn
             // 
+            this.delBtn.Enabled = false;
             this.delBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.delBtn.Location = new System.Drawing.Point(1365, 507);
             this.delBtn.Name = "delBtn";
@@ -381,12 +396,25 @@
             this.phonenoLbl.TabIndex = 28;
             this.phonenoLbl.Text = "電話番号";
             // 
+            // allItemBtn
+            // 
+            this.allItemBtn.Enabled = false;
+            this.allItemBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.allItemBtn.Location = new System.Drawing.Point(544, 893);
+            this.allItemBtn.Name = "allItemBtn";
+            this.allItemBtn.Size = new System.Drawing.Size(176, 54);
+            this.allItemBtn.TabIndex = 29;
+            this.allItemBtn.Text = "全商品一覧";
+            this.allItemBtn.UseVisualStyleBackColor = true;
+            this.allItemBtn.Click += new System.EventHandler(this.allItemBtn_Click);
+            // 
             // TakeOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
+            this.Controls.Add(this.allItemBtn);
             this.Controls.Add(this.phonenoLbl);
             this.Controls.Add(this.clientnameLbl);
             this.Controls.Add(this.clientLbl);
@@ -458,5 +486,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemID2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName2;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity2;
+        private System.Windows.Forms.Button allItemBtn;
     }
 }
