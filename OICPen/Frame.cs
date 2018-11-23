@@ -40,9 +40,9 @@ namespace OICPen
                 btn.Enabled = flag;
                 if (flag == false)
                 {
-                    btn.BackColor = System.Drawing.SystemColors.Control;
+                    btn.BackColor = Color.Green;
                     logoutBtn.Enabled = false;
-                    logoutBtn.BackColor = System.Drawing.SystemColors.Control;
+                    logoutBtn.BackColor = Color.Green;
                 }
                 else
                 {
@@ -93,7 +93,7 @@ namespace OICPen
                     beforeBtn.BackColor = Color.Black;
                 }
                 btn.Enabled = false;
-                btn.BackColor = System.Drawing.SystemColors.Control;
+                btn.BackColor = Color.Green;
                 beforeBtn = btn;
             }
         }
