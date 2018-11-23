@@ -12,15 +12,19 @@ namespace OICPen
 {
     public partial class GiveOrder : Form
     {
-       // private Services.StockService stockServis = new Services.StockService(new Models.OICPenDbContext());
+        // private Services.StockService stockServis = new Services.StockService(new Models.OICPenDbContext());
+        private Services.StaffService staffServis = new Services.StaffService(new Models.OICPenDbContext());
         private Services.ItemService itemServis = new Services.ItemService(new Models.OICPenDbContext());
         private Services.GiveOrderService orderServis  = new Services.GiveOrderService(new Models.OICPenDbContext());
+        private Services.GiveOrderDetailService orderDetailServis = new Services.GiveOrderDetailService(new Models.OICPenDbContext());
         private Models.StaffT staff;
-
         public GiveOrder()
         {
             InitializeComponent();
         }
+
+       
+     
 
         private void GiveOrder_Load(object sender, EventArgs e)
         {
@@ -31,15 +35,13 @@ namespace OICPen
         //数量チェック
         private void confirmBtn_Click(object sender, EventArgs e)
         {       
-            if (quantityTbox.Text != "")
+            if (quantityTbox.Text != "" && int.Parse(quantityTbox.Text) !=0)
             {
+               
                 if (int.Parse(quantityTbox.Text) >= 1000)
                 {
-                    DialogResult result = MessageBox.Show("1000個以上の発注になりますがよろしいですか？",
-                        "警告",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Exclamation,
-                        MessageBoxDefaultButton.Button2);
+                    DialogResult result = MessageBox.Show("1000個以上の発注になりますがよろしいですか？","警告",
+                                          MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation,MessageBoxDefaultButton.Button2);
 
                     if (result == DialogResult.No)
                     {
@@ -49,12 +51,13 @@ namespace OICPen
                     }
                 }
                         //検索結果DataGridViewのitemから発注リストDataGridViewに表示される
-                        giveOrderListDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, quantityTbox.Text);
+                        giveOrderListDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value,int.Parse(quantityTbox.Text));
 
                 quantityTbox.Text = null;
             }
             else
                 MessageBox.Show("数量を入力して下さい。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    quantityTbox.Text = null;
         }
 
         private void itemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
@@ -137,6 +140,7 @@ namespace OICPen
 
         private void allClearBtn_Click(object sender, EventArgs e)
         {
+            if (giveOrderListDgv.SelectedRows.Count == 0) return;
             DialogResult result = MessageBox.Show("発注リストを削除します", "警告", MessageBoxButtons.YesNo,
                                  MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
 
@@ -146,12 +150,40 @@ namespace OICPen
 
         private void completeBtn_Click(object sender, EventArgs e)
         {
-            var addGiverOrderItem = new Models.GiveOrderT();
+            if (giveOrderListDgv.SelectedRows.Count == 0) return;
+
+            var addGiverOrderItem = new Models.GiveOrderT
             {
-                addGiverOrderItem.GiveOrdDate = DateTime.Now;
-                addGiverOrderItem.StaffTID = 1;
+                GiveOrdDate = DateTime.Now,//発注日
+                StaffTID = 1,//社員ID(未完成)
             };
-            orderServis.AddGiveOrderst(addGiverOrderItem);
+
+            var giveOrderId = orderServis.AddGiveOrderst(addGiverOrderItem).GiveOrderTID;
+            var Controls = new Control[] { itemIdTbox,itemNameTbox,quantityTbox };
+            foreach(var value in Controls)
+            {
+                value.ResetText();
+            }
+            itemsViewDgv.Rows.Clear();
+           SetDataGridView(itemServis.GetAllItems());
+
+            foreach(DataGridViewRow row in giveOrderListDgv.Rows)
+            {
+                var itemId = Convert.ToInt32(row.Cells[0].Value.ToString());
+                var itemName = row.Cells[1].Value;
+                var quantity = Convert.ToInt32(row.Cells[2].Value.ToString());
+
+                var addGiveOrder = new Models.GiveOrderDetailT
+                {
+                    GiveOrderTID = giveOrderId,
+                    ItemTID = itemId,
+                    Quantity = quantity,
+                };
+                orderDetailServis.AddGiveOrderDetail(addGiveOrder);
+
+            }
+
+            //orderServis.AddGiveOrderst(addGiverOrderItem);
 
             MessageBox.Show("発注完了しました。","警告");
             giveOrderListDgv.Rows.Clear();
