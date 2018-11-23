@@ -31,22 +31,26 @@
             this.MoreDetailDgv = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.MoreDetailDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // MoreDetailDgv
             // 
+            this.MoreDetailDgv.AllowUserToAddRows = false;
+            this.MoreDetailDgv.AllowUserToDeleteRows = false;
             this.MoreDetailDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MoreDetailDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
+            this.Column4,
             this.Column3});
             this.MoreDetailDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MoreDetailDgv.Location = new System.Drawing.Point(0, 0);
             this.MoreDetailDgv.Name = "MoreDetailDgv";
             this.MoreDetailDgv.RowTemplate.Height = 21;
-            this.MoreDetailDgv.Size = new System.Drawing.Size(352, 295);
+            this.MoreDetailDgv.Size = new System.Drawing.Size(448, 304);
             this.MoreDetailDgv.TabIndex = 0;
             // 
             // Column1
@@ -59,6 +63,11 @@
             this.Column2.HeaderText = "商品ID";
             this.Column2.Name = "Column2";
             // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "商品名";
+            this.Column4.Name = "Column4";
+            // 
             // Column3
             // 
             this.Column3.HeaderText = "数量";
@@ -68,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 295);
+            this.ClientSize = new System.Drawing.Size(448, 304);
             this.Controls.Add(this.MoreDetailDgv);
             this.Name = "ClientPurchhaseHistoryMoreDetail";
             this.Text = "ClientPurchhaseHistoryMoreDetail";
@@ -83,6 +92,7 @@
         private System.Windows.Forms.DataGridView MoreDetailDgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

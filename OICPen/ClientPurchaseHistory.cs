@@ -13,6 +13,7 @@ namespace OICPen
     public partial class ClientPurchaseHistory : Form
     {
         Models.ClientT client;
+        private Services.TakeOrderService servis = new Services.TakeOrderService(new Models.OICPenDbContext());
 
         public ClientPurchaseHistory(Models.ClientT client)
         {
@@ -37,8 +38,8 @@ namespace OICPen
             //"Button"列ならば、ボタンがクリックされた
             if (dgv.Columns[e.ColumnIndex].Name == "clientPurchhaseHistoryMoreDetail"&& e.RowIndex!=-1)
             {
-                MessageBox.Show(e.RowIndex.ToString() +
-                    "行のボタンがクリックされました。");
+                var f = new ClientPurchhaseHistoryMoreDetail(servis.FindByID(int.Parse(dgv.Rows[e.RowIndex].Cells[0].Value.ToString())));
+                f.Show();
             }
         }
     }
