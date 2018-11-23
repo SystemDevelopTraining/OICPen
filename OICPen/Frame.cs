@@ -17,6 +17,7 @@ namespace OICPen
         Button[] btnList;
         Login login;
         TakeOrder takeOrder= new TakeOrder();
+        Button beforeBtn = new Button();
 
         public void SetUser(Models.StaffT staff)
         {
@@ -70,12 +71,12 @@ namespace OICPen
                 new GiveOrder(),new Stock(),new Items(),new Clients(),new Staffs()
             };
             btnList.Zip(formList,(btn,form)=>{
-                btn.Click += (_,__) => ChangeForm(form);
+                btn.Click += (_,__) => ChangeForm(form,btn);
                 return 0;
             }).ToArray();
         }
 
-        private void ChangeForm(Form f)
+        private void ChangeForm(Form f,Button btn = null)
         {
             f.TopLevel = false;
             splitContainer2.Panel2.Controls.Clear();
@@ -83,6 +84,18 @@ namespace OICPen
             f.Dock = DockStyle.Fill;
             f.Show();
             f.BringToFront();
+
+            //開いているフレームのボタンをdisableに
+            if(btn != null){
+                if(beforeBtn != null)
+                {
+                    beforeBtn.Enabled = true;
+                    beforeBtn.BackColor = Color.Black;
+                }
+                btn.Enabled = false;
+                btn.BackColor = System.Drawing.SystemColors.Control;
+                beforeBtn = btn;
+            }
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
