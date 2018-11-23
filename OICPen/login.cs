@@ -22,12 +22,7 @@ namespace OICPen
 
         }
 
-        private void login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void loginBtn_Click(object sender, EventArgs e)
+        void login()
         {
             try
             {
@@ -49,6 +44,20 @@ namespace OICPen
             {
                 MessageBox.Show("該当する社員が存在しません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            login();
+        }
+
+        private void staffPassTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                login();
+            }
+            
         }
     }
 }
