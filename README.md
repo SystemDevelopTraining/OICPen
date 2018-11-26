@@ -1,0 +1,7 @@
+# OICPen
+
+WHATZ THIS YOU GUYS DOING??
+死ぬほど愛しているよ。MUAAAAAh
+LOVE YOU FURUTANI><>>>>>>>
+君が可愛くて美味しい.
+MUAHHHHHHHHH
