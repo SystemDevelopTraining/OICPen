@@ -30,6 +30,13 @@ namespace OICPen
             BtnSetEnable(true);
             takeOrder.Staff = staff;
             giveOrder.Staff = staff;
+            if(staff.Permission != Models.Permission.God)
+            {
+                if (staff.Permission != Models.Permission.ClientControl)
+                    BtnSetDisableColor(clientsBtn);
+                if (staff.Permission != Models.Permission.ProductControl)
+                    BtnSetDisableColor(itemsBtn);
+            }
             items.Staff = staff;
             clients.Staff = staff;
         }
@@ -41,6 +48,20 @@ namespace OICPen
             clients = new Clients(dbcontext);
             InitializeComponent();
         }
+        
+        //ボタンをEnableにし、色も変更する
+        void BtnSetEnableColor(Button b)
+        {
+            b.Enabled = true;
+            b.BackColor = Color.Black;
+        }
+
+        //ボタンをDisableにし、色も変更する
+        void BtnSetDisableColor(Button b)
+        {
+            b.Enabled = false;
+            b.BackColor = Color.Green;
+        }
 
         //ボタンの有効化、無効化
         void BtnSetEnable(bool flag)
@@ -50,15 +71,13 @@ namespace OICPen
                 btn.Enabled = flag;
                 if (flag == false)
                 {
-                    btn.BackColor = Color.Green;
-                    logoutBtn.Enabled = false;
-                    logoutBtn.BackColor = Color.Green;
+                    BtnSetDisableColor(btn);
+                    BtnSetDisableColor(logoutBtn);
                 }
                 else
                 {
-                    btn.BackColor = Color.Black;
-                    logoutBtn.Enabled = true;
-                    logoutBtn.BackColor = Color.Black;
+                    BtnSetEnableColor(btn);
+                    BtnSetEnableColor(logoutBtn);
                 }
             }
         }
@@ -102,8 +121,7 @@ namespace OICPen
                     beforeBtn.Enabled = true;
                     beforeBtn.BackColor = Color.Black;
                 }
-                btn.Enabled = false;
-                btn.BackColor = Color.Red;
+                BtnSetDisableColor(btn);
                 beforeBtn = btn;
             }
         }
