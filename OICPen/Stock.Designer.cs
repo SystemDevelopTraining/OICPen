@@ -30,10 +30,6 @@
         {
             this.stockTitleLbl = new System.Windows.Forms.Label();
             this.stockDgv = new System.Windows.Forms.DataGridView();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemsCodeLbl = new System.Windows.Forms.Label();
             this.itemsNameLbl = new System.Windows.Forms.Label();
             this.itemsCodeTbox = new System.Windows.Forms.TextBox();
@@ -42,6 +38,9 @@
             this.stockDangerViewBtn = new System.Windows.Forms.Button();
             this.stockViewBtn = new System.Windows.Forms.Button();
             this.separatorLbl = new System.Windows.Forms.Label();
+            this.ItemTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.stockDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +64,6 @@
             this.stockDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.stockDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stockDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Date,
             this.ItemTID,
             this.ItemT,
             this.Quantity});
@@ -76,34 +74,6 @@
             this.stockDgv.Size = new System.Drawing.Size(800, 949);
             this.stockDgv.TabIndex = 6;
             this.stockDgv.TabStop = false;
-            // 
-            // Date
-            // 
-            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Date.HeaderText = "日付";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // ItemTID
-            // 
-            this.ItemTID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ItemTID.HeaderText = "商品ID";
-            this.ItemTID.Name = "ItemTID";
-            this.ItemTID.ReadOnly = true;
-            // 
-            // ItemT
-            // 
-            this.ItemT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ItemT.HeaderText = "商品名";
-            this.ItemT.Name = "ItemT";
-            this.ItemT.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Quantity.HeaderText = "現在在庫数";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
             // 
             // itemsCodeLbl
             // 
@@ -186,6 +156,27 @@
             this.separatorLbl.TabIndex = 0;
             this.separatorLbl.Text = "label6";
             // 
+            // ItemTID
+            // 
+            this.ItemTID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemTID.HeaderText = "商品ID";
+            this.ItemTID.Name = "ItemTID";
+            this.ItemTID.ReadOnly = true;
+            // 
+            // ItemT
+            // 
+            this.ItemT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemT.HeaderText = "商品名";
+            this.ItemT.Name = "ItemT";
+            this.ItemT.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.HeaderText = "現在在庫数";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -224,7 +215,6 @@
         private System.Windows.Forms.Button stockDangerViewBtn;
         private System.Windows.Forms.Button stockViewBtn;
         private System.Windows.Forms.Label separatorLbl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemTID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
