@@ -152,6 +152,7 @@ namespace OICPen
             var staff = Servis.FindByID(id);
             registerNameTbox.Text = staff.Name;
             registerNamePhoneticTbox.Text = staff.Hurigana;
+            permissionCbox.SelectedIndex = (int)cells[3].Value;
             
 
             //Dgvの権限を日本語で表示する。
@@ -167,6 +168,14 @@ namespace OICPen
                 return;
             }
             int id = int.Parse(idDispLbl.Text);
+            var staff = TextToStaff();
+            
+            var staff2=Servis.FindByID(id);
+            staff2.Name = staff.Name;
+            staff2.Hurigana = staff.Hurigana;
+            staff2.Permission = staff.Permission;
+            Servis.UpdateStaff(staff2);
+            DataShow();
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
