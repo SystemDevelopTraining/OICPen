@@ -23,7 +23,25 @@ namespace OICPen
             SetDataGridView(service.GetItems());
         }
 
-       /*バリエーションチェック*/
+        public Models.StaffT Staff
+        {
+            set
+            {
+                if(value.Permission != Models.Permission.ProductControl && value.Permission != Models.Permission.God)
+                {
+                    registBtn.Enabled = false;
+                    updateBtn.Enabled = false;
+                    deleteBtn.Enabled = false;
+                }else
+                {
+                    registBtn.Enabled = true;
+                    updateBtn.Enabled = true;
+                    deleteBtn.Enabled = true;
+                }
+            }
+        }
+
+        /*バリエーションチェック*/
         private void searchItemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utility.TextBoxDigitCheck(searchItemIdTbox,e);
