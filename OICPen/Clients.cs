@@ -188,6 +188,7 @@ namespace OICPen
         private void Clients_Shown(object sender, EventArgs e)
         {
             DataShow();
+            
         }
 
         private void DataShow()
@@ -249,5 +250,19 @@ namespace OICPen
             }
 
         }
+        public StaffT Staff
+        {
+
+            set
+            {
+                if (value.Permission != Permission.God
+                    && value.Permission != Permission.ClientControl)
+                {
+                    registBtn.Enabled = false;
+                    updateBtn.Enabled = false;
+                }
+            }
+        }
+
     }
 }
