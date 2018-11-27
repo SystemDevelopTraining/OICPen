@@ -261,6 +261,11 @@ namespace OICPen
                     registBtn.Enabled = false;
                     updateBtn.Enabled = false;
                 }
+                else
+                {
+                    registBtn.Enabled = true;
+                    updateBtn.Enabled = true;
+                }
             }
         }
 
