@@ -39,6 +39,17 @@ namespace OICPen
 
         private void clientsIdCheckBtn_Click(object sender, EventArgs e)
         {
+            if(completeOrdersDgv.Rows.Count!=0)
+            {
+               
+                DialogResult m=MessageBox.Show("会員IDは変更しますが注文もクリアしますか？", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning,MessageBoxDefaultButton.Button3);
+
+                if (m == DialogResult.Cancel)
+                    return;
+                else if (m == DialogResult.Yes)
+                    completeOrdersDgv.Rows.Clear();
+            }
+                 
             bool found = false;//clientが確認できなかったらMessageBoxを表示するのに利用される。
             foreach (var client in clientservis.GetClients())
             {
@@ -77,7 +88,6 @@ namespace OICPen
 
         void SetDataGridView(List<Models.ItemT> items)
         {
-
             itemsViewDgv.Rows.Clear();
             items.ForEach(item =>
             {
@@ -100,11 +110,9 @@ namespace OICPen
                 ,
                 //IDでの検索
                 () =>
-
                     new List<Models.ItemT>(
                         new Models.ItemT[] { itemservis.FindByID(int.Parse(itemIdTbox.Text)) }
-                    )
-                    ,
+                    )                    
             };
 
             uint itemCount = 0;
@@ -162,18 +170,12 @@ namespace OICPen
                 delBtn.Enabled = true;
                 clearBtn.Enabled = true;
                 completeBtn.Enabled = true;
-
-
-
             }
             else
             {
                 MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
             }
-
-
-
-        }
+       }
 
         Models.ItemT TextboxToItemT()
         {
@@ -204,13 +206,9 @@ namespace OICPen
         {
             if (completeOrdersDgv.SelectedRows.Count == 0) return;
             DialogResult m = MessageBox.Show("全部消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo);
-            if (m == DialogResult.No)
+            if (m == DialogResult.Yes)
             {
-
-            }
-            else
-            {
-                completeOrdersDgv.Rows.Clear();
+                completeOrdersDgv.Rows.Clear();        
             }
         }
 
@@ -246,12 +244,7 @@ namespace OICPen
                     Quantity = quantity,
                 };
                 takeorderdetailservice.AddTakeOrderDetail(a);
-
-
             }
-
-
-
 
             MessageBox.Show("注文が承りました", "終了", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
