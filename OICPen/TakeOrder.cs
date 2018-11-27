@@ -39,6 +39,25 @@ namespace OICPen
 
         private void clientsIdCheckBtn_Click(object sender, EventArgs e)
         {
+            if(completeOrdersDgv.Rows.Count!=0)
+            {
+               
+                DialogResult m=MessageBox.Show("会員IDは変更しますが注文もクリアしますか？", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                if (m == DialogResult.No)
+                {
+                   
+                }
+                else if (m == DialogResult.Yes)
+
+                {
+                    completeOrdersDgv.Rows.Clear();
+                }else
+                {
+                    return;
+                }
+            }
+                 
             bool found = false;//clientが確認できなかったらMessageBoxを表示するのに利用される。
             foreach (var client in clientservis.GetClients())
             {
