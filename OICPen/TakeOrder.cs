@@ -184,8 +184,9 @@ namespace OICPen
 
         private void delBtn_Click(object sender, EventArgs e)
         {
-            DialogResult m = MessageBox.Show("消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-            if (m == DialogResult.No)
+            if (completeOrdersDgv.SelectedRows.Count == 0) return;
+            DialogResult m = MessageBox.Show("消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo,MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if (m ==DialogResult.No)
             {
 
             }
@@ -201,6 +202,7 @@ namespace OICPen
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
+            if (completeOrdersDgv.SelectedRows.Count == 0) return;
             DialogResult m = MessageBox.Show("全部消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo);
             if (m == DialogResult.No)
             {
@@ -214,9 +216,8 @@ namespace OICPen
 
         private void completeBtn_Click(object sender, EventArgs e)
         {
-            var g = new Models.TakeOrderT
-            {
-
+            if (completeOrdersDgv.SelectedRows.Count == 0) return;
+            var g=new Models.TakeOrderT {
                 TakeOrdDate = DateTime.Now,// 注文日
                 ClientTID = int.Parse(clientsIdViewLbl.Text),// 会員ID
                 StaffTID = staff.StaffTID,  //社員ID

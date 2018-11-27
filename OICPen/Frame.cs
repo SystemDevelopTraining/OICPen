@@ -97,7 +97,7 @@ namespace OICPen
                     beforeBtn.BackColor = Color.Black;
                 }
                 btn.Enabled = false;
-                btn.BackColor = Color.Green;
+                btn.BackColor = Color.Red;
                 beforeBtn = btn;
             }
         }
