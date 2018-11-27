@@ -17,6 +17,7 @@ namespace OICPen
         Models.StaffT loginStaff;
         Button[] btnList;
         Login login;
+        GiveOrder giveOrder;
         TakeOrder takeOrder;
         Button beforeBtn = new Button();
 
@@ -26,11 +27,12 @@ namespace OICPen
             loginStaff = staff;
             BtnSetEnable(true);
             takeOrder.Staff = staff;
-
+            giveOrder.Staff = staff;
         }
         public Frame()
         {
             takeOrder = new TakeOrder(dbcontext);
+            giveOrder = new GiveOrder(dbcontext);
             InitializeComponent();
         }
 
@@ -70,7 +72,7 @@ namespace OICPen
             BtnSetEnable(false);
             var formList = new Form[] {
                 takeOrder,new Sales(),new Ship(dbcontext),new InComing(dbcontext),
-                new GiveOrder(dbcontext),new Stock(dbcontext),new Items(dbcontext),new Clients(dbcontext),new Staffs(dbcontext)
+                giveOrder,new Stock(dbcontext),new Items(dbcontext),new Clients(dbcontext),new Staffs(dbcontext)
             };
             btnList.Zip(formList,(btn,form)=>{
                 btn.Click += (_,__) => ChangeForm(form,btn);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OICPen.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,6 @@ namespace OICPen
 {
     public partial class GiveOrder : Form
     {
-        // private Services.StockService stockServis = new Services.StockService(new Models.OICPenDbContext());
         private Services.StaffService staffServis ;
         private Services.ItemService itemServis ;
         private Services.GiveOrderService orderServis ;
@@ -26,8 +26,14 @@ namespace OICPen
             orderDetailServis = new Services.GiveOrderDetailService(dbcontext);
             InitializeComponent();
         }
-
-       
+       public StaffT Staff
+        {
+            set
+            {
+                staff = value;
+            }
+        }
+     
      
 
         private void GiveOrder_Load(object sender, EventArgs e)
@@ -159,7 +165,8 @@ namespace OICPen
             var addGiverOrderItem = new Models.GiveOrderT
             {
                 GiveOrdDate = DateTime.Now,//発注日
-                StaffTID = 1,//社員ID(未完成)
+                StaffTID = staff.StaffTID,//社員ID
+               
             };
 
             var giveOrderId = orderServis.AddGiveOrderst(addGiverOrderItem).GiveOrderTID;
