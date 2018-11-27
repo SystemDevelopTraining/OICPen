@@ -14,10 +14,11 @@ namespace OICPen
     public partial class Items : Form
     {
 
-        private Services.ItemService service=new Services.ItemService(new Models.OICPenDbContext());
+        private Services.ItemService service;
 
-        public Items()
+        public Items(Models.OICPenDbContext dbcontext)
         {
+            service = new Services.ItemService(dbcontext);
             InitializeComponent();
             SetDataGridView(service.GetItems());
         }

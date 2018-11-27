@@ -14,10 +14,10 @@ namespace OICPen
     public partial class TakeOrder : Form
     {
         private Models.StaffT staff;
-        private Services.TakeOrderService servis = new Services.TakeOrderService(new Models.OICPenDbContext());
-        private Services.ClientService clientservis = new Services.ClientService(new Models.OICPenDbContext());
-        private Services.ItemService itemservis = new Services.ItemService(new Models.OICPenDbContext());
-        private Services.TakeOrderDetailService takeorderdetailservice = new Services.TakeOrderDetailService(new Models.OICPenDbContext());
+        private Services.TakeOrderService servis;
+        private Services.ClientService clientservis;
+        private Services.ItemService itemservis;
+        private Services.TakeOrderDetailService takeorderdetailservice;
         public StaffT Staff
         {
 
@@ -28,8 +28,12 @@ namespace OICPen
         }
 
         //private Services.TakeOrderDetailService takeOrderService = new Services.TakeOrderDetailService(new Models.OICPenDbContext());
-        public TakeOrder()
+        public TakeOrder(OICPenDbContext dbcontext)
         {
+            servis = new Services.TakeOrderService(dbcontext);
+            clientservis = new Services.ClientService(dbcontext);
+            itemservis = new Services.ItemService(dbcontext);
+            takeorderdetailservice = new Services.TakeOrderDetailService(dbcontext);
             InitializeComponent();
         }
 
@@ -49,9 +53,10 @@ namespace OICPen
             if (found == false)
             {
                 MessageBox.Show("入力されたIDは存在しません。もう一度確認の上入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }else
+            }
+            else
             {
-                var Controls = new Control[] { itemsViewDgv,completeOrdersDgv,itemNameTbox,itemIdTbox,searchBtn,countsTbox,confirmBtn,allItemBtn,itemsViewDgv,completeOrdersDgv };
+                var Controls = new Control[] { itemsViewDgv, completeOrdersDgv, itemNameTbox, itemIdTbox, searchBtn, countsTbox, confirmBtn, allItemBtn, itemsViewDgv, completeOrdersDgv };
                 foreach (var i in Controls)
                 {
                     i.Enabled = true;
@@ -69,7 +74,7 @@ namespace OICPen
         {
             Utility.TextBoxDigitCheck(itemIdTbox, e);
         }
-        
+
         void SetDataGridView(List<Models.ItemT> items)
         {
 
@@ -143,30 +148,30 @@ namespace OICPen
                 //    {
                 if (int.Parse(countsTbox.Text) >= 1000)
                 {
-                    DialogResult m = MessageBox.Show("1000個以上の注文になりますがよろしいですか?", "注意", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning,MessageBoxDefaultButton.Button2);
+                    DialogResult m = MessageBox.Show("1000個以上の注文になりますがよろしいですか?", "注意", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
                     if (m == DialogResult.Cancel)
                     {
                         countsTbox.Focus();
                         return;
                     }
                 }
-                         
-                  
-                        completeOrdersDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value,int.Parse( countsTbox.Text));
-                        countsTbox.Clear();
-                        delBtn.Enabled = true;
-                        clearBtn.Enabled = true;
-                        completeBtn.Enabled = true;
 
-             
-                   
-                }
-                else
-                {
-                    MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
-                }
-            
-           
+
+                completeOrdersDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, int.Parse(countsTbox.Text));
+                countsTbox.Clear();
+                delBtn.Enabled = true;
+                clearBtn.Enabled = true;
+                completeBtn.Enabled = true;
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
+            }
+
+
 
         }
 
@@ -183,7 +188,7 @@ namespace OICPen
             DialogResult m = MessageBox.Show("消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo,MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
             if (m ==DialogResult.No)
             {
-                
+
             }
             else
             {
@@ -192,7 +197,7 @@ namespace OICPen
                     completeOrdersDgv.Rows.RemoveAt(this.completeOrdersDgv.SelectedRows[0].Index);
                 }
             }
-            
+
         }
 
         private void clearBtn_Click(object sender, EventArgs e)
@@ -205,7 +210,7 @@ namespace OICPen
             }
             else
             {
-                 completeOrdersDgv.Rows.Clear();
+                completeOrdersDgv.Rows.Clear();
             }
         }
 
@@ -213,15 +218,14 @@ namespace OICPen
         {
             if (completeOrdersDgv.SelectedRows.Count == 0) return;
             var g=new Models.TakeOrderT {
-                
                 TakeOrdDate = DateTime.Now,// 注文日
                 ClientTID = int.Parse(clientsIdViewLbl.Text),// 会員ID
                 StaffTID = staff.StaffTID,  //社員ID
 
             };
-          
-            var takeOrderId=servis.AddTakeOrder(g).TakeOrderTID;           //完了したら入力されたTextとDGVの内容を消すため
-            var Controls = new Control[] { clientsIdViewLbl, clientsNameViewLbl, clientsPhoneNoViewLbl,itemNameTbox,itemIdTbox,countsTbox,clientsIdTbox };
+
+            var takeOrderId = servis.AddTakeOrder(g).TakeOrderTID;           //完了したら入力されたTextとDGVの内容を消すため
+            var Controls = new Control[] { clientsIdViewLbl, clientsNameViewLbl, clientsPhoneNoViewLbl, itemNameTbox, itemIdTbox, countsTbox, clientsIdTbox };
             foreach (var i in Controls)
             {
                 i.ResetText();
@@ -242,20 +246,20 @@ namespace OICPen
                     Quantity = quantity,
                 };
                 takeorderdetailservice.AddTakeOrderDetail(a);
-                
-                                          
+
+
             }
-          
 
 
-            
-           MessageBox.Show("注文が承りました", "終了", MessageBoxButtons.OK, MessageBoxIcon.Information);
-          
+
+
+            MessageBox.Show("注文が承りました", "終了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             completeOrdersDgv.Rows.Clear();
-            var Controls2 = new Control[] { itemsViewDgv, completeOrdersDgv, itemNameTbox, itemIdTbox, searchBtn, countsTbox, confirmBtn, allItemBtn,completeBtn,clearBtn,delBtn };
+            var Controls2 = new Control[] { itemsViewDgv, completeOrdersDgv, itemNameTbox, itemIdTbox, searchBtn, countsTbox, confirmBtn, allItemBtn, completeBtn, clearBtn, delBtn };
             foreach (var i in Controls2)
             {
-                i.Enabled = false ;
+                i.Enabled = false;
             }
 
         }
@@ -270,16 +274,16 @@ namespace OICPen
 
         private void countsTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-          
+
             Utility.TextBoxDigitCheck(countsTbox, e);
-         
+
         }
 
         private void clientsIdTbox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-               clientsIdCheckBtn.PerformClick();
+                clientsIdCheckBtn.PerformClick();
             }
         }
 
@@ -287,7 +291,7 @@ namespace OICPen
         {
             if (e.KeyCode == Keys.Enter)
             {
-               searchBtn.PerformClick();
+                searchBtn.PerformClick();
             }
         }
 
@@ -295,7 +299,7 @@ namespace OICPen
         {
             if (e.KeyCode == Keys.Enter)
             {
-               searchBtn.PerformClick();
+                searchBtn.PerformClick();
             }
         }
 

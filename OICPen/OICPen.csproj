@@ -117,7 +117,6 @@
       <DependentUpon>LogOut.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\StaffT.cs" />
-    <Compile Include="Models\StockT.cs" />
     <Compile Include="Models\TakeOrderT.cs" />
     <Compile Include="Models\TakeOrderDetailT.cs" />
     <Compile Include="Sales.cs">
@@ -132,7 +131,6 @@
     <Compile Include="Services\InComingService.cs" />
     <Compile Include="Services\ItemService.cs" />
     <Compile Include="Services\StaffService.cs" />
-    <Compile Include="Services\StockService.cs" />
     <Compile Include="Services\TakeOrderDetailService.cs" />
     <Compile Include="Services\TakeOrderService.cs" />
     <Compile Include="Ship.cs">
