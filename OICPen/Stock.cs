@@ -14,11 +14,12 @@ namespace OICPen
 {
     public partial class Stock : Form
     {
-        private Services.StockService servis = new Services.StockService(new Models.OICPenDbContext());
+        private Services.ItemService service ;
 
-        public Stock()
+        public Stock(Models.OICPenDbContext dbcontext)
         {
             InitializeComponent();
+            service = new Services.ItemService(dbcontext);
         }
 
         private void itemsCodeTbox_KeyPress(object sender, KeyPressEventArgs e)
@@ -31,9 +32,10 @@ namespace OICPen
 
             uint i = 0;
             string errorMessage = "";
-            string[] search = new string[] { itemsCodeTbox.Text, itemsNameTbox.Text};
-            var checks = new Func<string, string>[] { (x) => "", (x) => ""};
-            search.Zip(checks, (item, check) => {
+            string[] search = new string[] { itemsCodeTbox.Text, itemsNameTbox.Text };
+            var checks = new Func<string, string>[] { (x) => "", (x) => "" };
+            search.Zip(checks, (item, check) =>
+            {
                 if (!Utility.TextIsEmpty(item))
                 {
                     i++;
@@ -54,22 +56,28 @@ namespace OICPen
                 stockDgv.Rows.Clear();
                 try
                 {
-                    var stockid = servis.NowFindByItemID(int.Parse(itemsCodeTbox.Text));
-                    stockDgv.Rows.Add(stockid.Date,stockid.ItemTID,stockid.ItemT.Name,stockid.Quantity);
+                    var stock = service.FindByID(int.Parse(itemsCodeTbox.Text));
+                    stockDgv.Rows.Add(stock.ItemTID, stock.Name, service.NowStock(stock));
                 }
                 catch
                 {
-                  
+
                 }
             }
             else
             {
                 stockDgv.Rows.Clear();
-
-                var stocks = servis.NowFindByName(itemsNameTbox.Text);
-                foreach (var stock in stocks)
+                try
                 {
-                    stockDgv.Rows.Add(stock.Date, stock.ItemTID, stock.ItemT.Name, stock.Quantity);
+                    var items = service.FindByName(itemsNameTbox.Text);
+                    foreach (var item in items)
+                    {
+                        stockDgv.Rows.Add(item.ItemTID, item.Name, service.NowStock(item));
+
+                    }
+                }
+                catch
+                {
 
                 }
             }
@@ -78,29 +86,36 @@ namespace OICPen
 
         private void Stock_Load(object sender, EventArgs e)
         {
-            foreach (var stock in servis.GetAllStocks())
+            stockDgv.Rows.Clear();
+            foreach (var item in service.GetAllItems())
             {
-                stockDgv.Rows.Add(stock.Date, stock.ItemTID, stock.ItemT.Name, stock.Quantity);
+                stockDgv.Rows.Add(item.ItemTID, item.Name, service.NowStock(item));
 
             }
         }
 
         private void stockViewBtn_Click(object sender, EventArgs e)
         {
-            foreach (var stock in servis.GetAllStocks())
+            stockDgv.Rows.Clear();
+            foreach (var item in service.GetAllItems())
             {
-                stockDgv.Rows.Add(stock.Date, stock.ItemTID, stock.ItemT.Name, stock.Quantity);
+                stockDgv.Rows.Add(item.ItemTID, item.Name, service.NowStock(item));
 
             }
         }
 
         private void stockDangerViewBtn_Click(object sender, EventArgs e)
         {
-
+            stockDgv.Rows.Clear();
+            foreach (var item in service.GetAllItems())
+            {
+                if (service.NowStock(item) < item.SafetyStock)
+                {
+                    stockDgv.Rows.Add(item.ItemTID, item.Name, service.NowStock(item));
+                }
+            }
         }
     }
-
-    
 }
 
            

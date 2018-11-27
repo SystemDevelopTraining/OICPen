@@ -13,14 +13,17 @@ namespace OICPen
 {
     public partial class GiveOrder : Form
     {
+        private Services.StaffService staffServis ;
+        private Services.ItemService itemServis ;
+        private Services.GiveOrderService orderServis ;
+        private Services.GiveOrderDetailService orderDetailServis ;
         private Models.StaffT staff;
-        // private Services.StockService stockServis = new Services.StockService(new Models.OICPenDbContext());
-        private Services.StaffService staffServis = new Services.StaffService(new Models.OICPenDbContext());
-        private Services.ItemService itemServis = new Services.ItemService(new Models.OICPenDbContext());
-        private Services.GiveOrderService orderServis  = new Services.GiveOrderService(new Models.OICPenDbContext());
-        private Services.GiveOrderDetailService orderDetailServis = new Services.GiveOrderDetailService(new Models.OICPenDbContext());
-        public GiveOrder()
+        public GiveOrder(Models.OICPenDbContext dbcontext)
         {
+            staffServis = new Services.StaffService(dbcontext);
+            itemServis = new Services.ItemService(dbcontext);
+            orderServis = new Services.GiveOrderService(dbcontext);
+            orderDetailServis = new Services.GiveOrderDetailService(dbcontext);
             InitializeComponent();
         }
        public StaffT Staff

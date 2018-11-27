@@ -12,11 +12,12 @@ namespace OICPen
 {
     public partial class Ship : Form
     {
-        private Services.TakeOrderService servis = new Services.TakeOrderService(new Models.OICPenDbContext());
+        private Services.TakeOrderService servis;
 
 
-        public Ship()
+        public Ship(Models.OICPenDbContext dbcontext)
         {
+            servis = new Services.TakeOrderService(dbcontext);
             InitializeComponent();
         }
 

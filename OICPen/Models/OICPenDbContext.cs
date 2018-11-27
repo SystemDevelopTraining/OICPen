@@ -14,7 +14,6 @@
         public virtual DbSet<TakeOrderT> TakeOrders { get; set; }
         public virtual DbSet<TakeOrderDetailT> TakeOrderDetails { get; set; }
         public virtual DbSet<ItemT> Items { get; set; }
-        public virtual DbSet<StockT> Stocks { get; set; }
         public virtual DbSet<StaffT> Staffs { get; set; }
 
     }

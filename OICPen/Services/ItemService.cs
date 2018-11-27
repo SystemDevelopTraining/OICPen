@@ -119,5 +119,17 @@ namespace OICPen.Services
                 .Single(x => x.JAN== jan&&x.IsDeleted==false);
             return item;
         }
+
+        /*---------------------------------------------------------------
+         [役割] 商品に対応した在庫数を返す
+         [引数] id: itemID
+         [返り値] 在庫数
+         ---------------------------------------------------------------*/
+         public int NowStock(ItemT item)
+        {
+            var giveOrders = context.GiveOrderDetails.Where(x => x.ItemTID == item.ItemTID && x.GiveOrderT.CompleteDate != null).ToList();
+            var takeOrders = context.TakeOrderDetails.Where(x => x.ItemTID == item.ItemTID).ToList();
+            return giveOrders.Aggregate(0,(acc,x) => acc + x.Quantity) - takeOrders.Aggregate(0, (acc, x) => acc + x.Quantity);
+        }
     }
 }
