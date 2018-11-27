@@ -22,7 +22,6 @@ namespace OICPen
             InitializeComponent();
         }
 
-
         private void clearBtn_Click(object sender, EventArgs e)
         {
             searchIdTbox.Text = "";
@@ -53,7 +52,7 @@ namespace OICPen
                 MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            var clients = servis.GetClients();
+            List<ClientT> clients = null;
             switch (currentIndex)
             {
                 case 0:
@@ -64,10 +63,10 @@ namespace OICPen
                     {
                         clients = new List<ClientT>(new ClientT[] { servis.FindByID(int.Parse(searchIdTbox.Text)) });
                     }
-                    catch { return; }
+                    catch { DataShow(new List<ClientT>()); return; }
                     break;
                 case 2:
-                    clients = servis.FindByName(searchHuriganaTbox.Text);
+                    clients = servis.FindByHurigana(searchHuriganaTbox.Text);
                     break;
             }
             DataShow(clients);
@@ -126,9 +125,6 @@ namespace OICPen
             DataShow();
         }
 
-
-
-
         private bool PhoneNumberCheck(string text)
         {
             if (Regex.IsMatch(text, @"^\d+-\d+-\d+$"))
@@ -140,7 +136,6 @@ namespace OICPen
             MessageBox.Show("電話番号が正しく記入されてません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
-
 
         private bool PostalCodeCheck(string text)
         {
@@ -168,7 +163,6 @@ namespace OICPen
                 e.KeyChar = (char)0;
           
         }
-
   
         private void searchIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -198,7 +192,7 @@ namespace OICPen
             var clients = servis.GetClients();
             foreach (var x in clients)
             {
-                dgv.Rows.Add(x.ClientTID, x.Name, x.Hurigana, x.Address, x.PostNum, x.PhoneNum);
+                dgv.Rows.Add(x.ClientTID, x.Name, x.Hurigana,  x.PhoneNum,x.PostNum, x.Address);
             }
         }
 
@@ -208,7 +202,7 @@ namespace OICPen
             var dgv = clientsDgv;
             foreach (var x in clients)
             {
-                dgv.Rows.Add(x.ClientTID, x.Name, x.Hurigana, x.Address, x.PostNum, x.PhoneNum);
+                dgv.Rows.Add(x.ClientTID, x.Name, x.Hurigana,  x.PhoneNum,x.PostNum,x.Address );
             }
         }
 
@@ -231,9 +225,9 @@ namespace OICPen
             idDispLbl.Text = cells[0].Value.ToString();
             nameTbox.Text = cells[1].Value.ToString();
             huriganaTbox.Text = cells[2].Value.ToString();
-            phoneNumberMaskedTbox.Text = cells[5].Value.ToString();
+            phoneNumberMaskedTbox.Text = cells[3].Value.ToString();
             postalCodeMaskedTbox.Text = cells[4].Value.ToString();
-            addressTbox.Text = cells[3].Value.ToString();
+            addressTbox.Text = cells[5].Value.ToString();
         }
 
         private void histroryViewBtn_Click(object sender, EventArgs e)
@@ -250,6 +244,7 @@ namespace OICPen
             }
 
         }
+
         public StaffT Staff
         {
 
