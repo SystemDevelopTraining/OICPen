@@ -14,10 +14,11 @@ namespace OICPen
 {
     public partial class Clients : Form
     {
-        private Services.ClientService servis=  new Services.ClientService(new Models.OICPenDbContext());
+        private Services.ClientService servis;
 
-        public Clients()
+        public Clients(Models.OICPenDbContext dbcontext)
         {
+            servis = new Services.ClientService(dbcontext);
             InitializeComponent();
         }
 

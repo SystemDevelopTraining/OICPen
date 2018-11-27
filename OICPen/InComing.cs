@@ -13,11 +13,12 @@ namespace OICPen
 {
     public partial class InComing : Form
     {
-        private Services.InComingService service = new Services.InComingService(new Models.OICPenDbContext());
+        private Services.InComingService service;
 
-        public InComing()
+        public InComing(Models.OICPenDbContext dbcontext)
         {
             InitializeComponent();
+            service = new Services.InComingService(dbcontext);
             setDataGridView(service.GetNotYetInComing());
         }
 
