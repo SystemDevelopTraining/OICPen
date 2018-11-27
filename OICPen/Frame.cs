@@ -19,6 +19,7 @@ namespace OICPen
         Login login;
         GiveOrder giveOrder;
         TakeOrder takeOrder;
+        Clients clients;
         Button beforeBtn = new Button();
         Items items;
 
@@ -30,12 +31,14 @@ namespace OICPen
             takeOrder.Staff = staff;
             giveOrder.Staff = staff;
             items.Staff = staff;
+            clients.Staff = staff;
         }
         public Frame()
         {
             takeOrder = new TakeOrder(dbcontext);
             giveOrder = new GiveOrder(dbcontext);
             items = new Items(dbcontext);
+            clients = new Clients(dbcontext);
             InitializeComponent();
         }
 
@@ -75,7 +78,7 @@ namespace OICPen
             BtnSetEnable(false);
             var formList = new Form[] {
                 takeOrder,new Sales(),new Ship(dbcontext),new InComing(dbcontext),
-                giveOrder,new Stock(dbcontext), items,new Clients(dbcontext),new Staffs(dbcontext)
+                giveOrder,new Stock(dbcontext), items,clients,new Staffs(dbcontext)
             };
             btnList.Zip(formList,(btn,form)=>{
                 btn.Click += (_,__) => ChangeForm(form,btn);
