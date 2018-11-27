@@ -14,11 +14,12 @@ namespace OICPen
 {
     public partial class Stock : Form
     {
-        private Services.ItemService service = new Services.ItemService(new Models.OICPenDbContext());
+        private Services.StockService servis ;
 
-        public Stock()
+        public Stock(Models.OICPenDbContext dbcontext)
         {
             InitializeComponent();
+            servis = new Services.StockService(dbcontext);
         }
 
         private void itemsCodeTbox_KeyPress(object sender, KeyPressEventArgs e)

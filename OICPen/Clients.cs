@@ -14,10 +14,11 @@ namespace OICPen
 {
     public partial class Clients : Form
     {
-        private Services.ClientService servis=  new Services.ClientService(new Models.OICPenDbContext());
+        private Services.ClientService servis;
 
-        public Clients()
+        public Clients(Models.OICPenDbContext dbcontext)
         {
+            servis = new Services.ClientService(dbcontext);
             InitializeComponent();
         }
 
@@ -56,13 +57,17 @@ namespace OICPen
             switch (currentIndex)
             {
                 case 0:
-                    clients= servis.FindByName(searchNameTbox.Text);
+                    clients = servis.FindByName(searchNameTbox.Text);
                     break;
                 case 1:
-                    clients=new List<ClientT>(new ClientT[] { servis.FindByID(int.Parse(searchIdTbox.Text)) });
+                    try
+                    {
+                        clients = new List<ClientT>(new ClientT[] { servis.FindByID(int.Parse(searchIdTbox.Text)) });
+                    }
+                    catch { return; }
                     break;
                 case 2:
-                    clients= servis.FindByName(searchHuriganaTbox.Text);
+                    clients = servis.FindByName(searchHuriganaTbox.Text);
                     break;
             }
             DataShow(clients);

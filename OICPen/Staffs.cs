@@ -13,10 +13,11 @@ namespace OICPen
 {
     public partial class Staffs : Form
     {
-        private Services.StaffService Servis = new Services.StaffService(new Models.OICPenDbContext());
+        private Services.StaffService Servis ;
 
-        public Staffs()
+        public Staffs(Models.OICPenDbContext dbcontext)
         {
+            Servis = new Services.StaffService(dbcontext);
             InitializeComponent();
         }
 
