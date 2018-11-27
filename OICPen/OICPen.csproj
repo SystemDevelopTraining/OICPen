@@ -117,7 +117,6 @@
       <DependentUpon>LogOut.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\StaffT.cs" />
-    <Compile Include="Models\StockT_Old.cs" />
     <Compile Include="Models\TakeOrderT.cs" />
     <Compile Include="Models\TakeOrderDetailT.cs" />
     <Compile Include="Sales.cs">
@@ -126,7 +125,6 @@
     <Compile Include="Sales.Designer.cs">
       <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Services\StockService.cs" />
     <Compile Include="Services\ClientService.cs" />
     <Compile Include="Services\GiveOrderDetailService.cs" />
     <Compile Include="Services\GiveOrderService.cs" />
