@@ -33,9 +33,9 @@ namespace OICPen
             if(staff.Permission != Models.Permission.God)
             {
                 if (staff.Permission != Models.Permission.ClientControl)
-                    BtnSetDisableColor(clientsBtn);
+                    BtnSetDisableColor(takeorderBtn);
                 if (staff.Permission != Models.Permission.ProductControl)
-                    BtnSetDisableColor(itemsBtn);
+                    BtnSetDisableColor(giveorderBtn);
             }
             items.Staff = staff;
             clients.Staff = staff;
