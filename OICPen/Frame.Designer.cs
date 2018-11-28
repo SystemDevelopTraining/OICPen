@@ -401,6 +401,7 @@
             this.nowLoginLbl.TabIndex = 1;
             this.nowLoginLbl.Text = "ログイン中";
             this.nowLoginLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nowLoginLbl.Visible = false;
             // 
             // warningLbl
             // 
@@ -416,12 +417,15 @@
             // staffsNameLbl
             // 
             this.staffsNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.staffsNameLbl.Location = new System.Drawing.Point(3, 2);
+            this.staffsNameLbl.Location = new System.Drawing.Point(4, -4);
             this.staffsNameLbl.Name = "staffsNameLbl";
-            this.staffsNameLbl.Size = new System.Drawing.Size(135, 31);
+            this.staffsNameLbl.Size = new System.Drawing.Size(141, 39);
             this.staffsNameLbl.TabIndex = 0;
-            this.staffsNameLbl.Text = "古谷";
             this.staffsNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Frame
             // 

@@ -12,14 +12,13 @@ namespace OICPen
 {
     public partial class Login : Form
     {
-
         private Frame frame;
         Services.StaffService service = new Services.StaffService(new Models.OICPenDbContext());
+
         public Login(Frame frm)
         {
             InitializeComponent();
             frame = frm;
-
         }
 
         void login()
@@ -31,14 +30,14 @@ namespace OICPen
                 if (staff.Password == staffPassTbox.Text)
                 {
                     frame.SetUser(staff);
-                    StaffIdTbox.Text = null;
-                    staffPassTbox.Text = null;
                     staffPassTbox.Enabled = false;
                     StaffIdTbox.Enabled = false;
                     loginBtn.Enabled = false;
                     return;
                 }
                 MessageBox.Show("パスワードが違います", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                staffPassTbox.Focus();
+                staffPassTbox.SelectAll();
             }
             catch
             {
@@ -57,7 +56,11 @@ namespace OICPen
             {
                 login();
             }
-            
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            StaffIdTbox.Focus();
         }
     }
 }
