@@ -25,6 +25,7 @@ namespace OICPen
 
         public void SetUser(Models.StaffT staff)
         {
+            nowLoginLbl.Visible = true;
             staffsNameLbl.Text = staff.Name;
             loginStaff = staff;
             BtnSetEnable(true);
@@ -47,16 +48,17 @@ namespace OICPen
             items = new Items(dbcontext);
             clients = new Clients(dbcontext);
             InitializeComponent();
+            timer1.Start();
         }
         
-        //ボタンをEnableにし、色も変更する
+        //ボタンをEnableにし、色を変更する
         void BtnSetEnableColor(Button b)
         {
             b.Enabled = true;
             b.BackColor = Color.Black;
         }
 
-        //ボタンをDisableにし、色も変更する
+        //ボタンをDisableにし、色を変更する
         void BtnSetDisableColor(Button b)
         {
             b.Enabled = false;
@@ -146,6 +148,7 @@ namespace OICPen
         //ログアウトボタンが押された時の処理
         private void logoutBtn_Click(object sender, EventArgs e)
         {
+            nowLoginLbl.Visible = false;
             BtnSetEnable(false);
             staffsNameLbl.Text = "";
             loginStaff = null;
@@ -153,5 +156,6 @@ namespace OICPen
             login = new Login(this);
             ChangeForm(login);
         }
+
     }
 }
