@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.takeOrdersTitleLbl = new System.Windows.Forms.Label();
+            this.titleLbl = new System.Windows.Forms.Label();
             this.clientsIdLbl = new System.Windows.Forms.Label();
             this.separatorLbl = new System.Windows.Forms.Label();
             this.receptionLbl = new System.Windows.Forms.Label();
@@ -57,24 +57,24 @@
             this.confirmBtn = new System.Windows.Forms.Button();
             this.completeOrdersTitleLbl = new System.Windows.Forms.Label();
             this.delBtn = new System.Windows.Forms.Button();
-            this.clientLbl = new System.Windows.Forms.Label();
-            this.clientnameLbl = new System.Windows.Forms.Label();
-            this.phonenoLbl = new System.Windows.Forms.Label();
+            this.clientIdLbl = new System.Windows.Forms.Label();
+            this.clientNameLbl = new System.Windows.Forms.Label();
+            this.phoneNoLbl = new System.Windows.Forms.Label();
             this.allItemBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.completeOrdersDgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // takeOrdersTitleLbl
+            // titleLbl
             // 
-            this.takeOrdersTitleLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.takeOrdersTitleLbl.AutoSize = true;
-            this.takeOrdersTitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.takeOrdersTitleLbl.Location = new System.Drawing.Point(1373, 19);
-            this.takeOrdersTitleLbl.Name = "takeOrdersTitleLbl";
-            this.takeOrdersTitleLbl.Size = new System.Drawing.Size(212, 48);
-            this.takeOrdersTitleLbl.TabIndex = 1;
-            this.takeOrdersTitleLbl.Text = "注文管理";
+            this.titleLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.titleLbl.AutoSize = true;
+            this.titleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.titleLbl.Location = new System.Drawing.Point(1373, 19);
+            this.titleLbl.Name = "titleLbl";
+            this.titleLbl.Size = new System.Drawing.Size(212, 48);
+            this.titleLbl.TabIndex = 1;
+            this.titleLbl.Text = "注文管理";
             // 
             // clientsIdLbl
             // 
@@ -366,35 +366,35 @@
             this.delBtn.UseVisualStyleBackColor = true;
             this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
             // 
-            // clientLbl
+            // clientIdLbl
             // 
-            this.clientLbl.AutoSize = true;
-            this.clientLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientLbl.Location = new System.Drawing.Point(154, 325);
-            this.clientLbl.Name = "clientLbl";
-            this.clientLbl.Size = new System.Drawing.Size(101, 29);
-            this.clientLbl.TabIndex = 26;
-            this.clientLbl.Text = "会員ID";
+            this.clientIdLbl.AutoSize = true;
+            this.clientIdLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.clientIdLbl.Location = new System.Drawing.Point(154, 325);
+            this.clientIdLbl.Name = "clientIdLbl";
+            this.clientIdLbl.Size = new System.Drawing.Size(101, 29);
+            this.clientIdLbl.TabIndex = 26;
+            this.clientIdLbl.Text = "会員ID";
             // 
-            // clientnameLbl
+            // clientNameLbl
             // 
-            this.clientnameLbl.AutoSize = true;
-            this.clientnameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientnameLbl.Location = new System.Drawing.Point(388, 325);
-            this.clientnameLbl.Name = "clientnameLbl";
-            this.clientnameLbl.Size = new System.Drawing.Size(100, 29);
-            this.clientnameLbl.TabIndex = 27;
-            this.clientnameLbl.Text = "会員名";
+            this.clientNameLbl.AutoSize = true;
+            this.clientNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.clientNameLbl.Location = new System.Drawing.Point(388, 325);
+            this.clientNameLbl.Name = "clientNameLbl";
+            this.clientNameLbl.Size = new System.Drawing.Size(100, 29);
+            this.clientNameLbl.TabIndex = 27;
+            this.clientNameLbl.Text = "会員名";
             // 
-            // phonenoLbl
+            // phoneNoLbl
             // 
-            this.phonenoLbl.AutoSize = true;
-            this.phonenoLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.phonenoLbl.Location = new System.Drawing.Point(571, 325);
-            this.phonenoLbl.Name = "phonenoLbl";
-            this.phonenoLbl.Size = new System.Drawing.Size(129, 29);
-            this.phonenoLbl.TabIndex = 28;
-            this.phonenoLbl.Text = "電話番号";
+            this.phoneNoLbl.AutoSize = true;
+            this.phoneNoLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.phoneNoLbl.Location = new System.Drawing.Point(571, 325);
+            this.phoneNoLbl.Name = "phoneNoLbl";
+            this.phoneNoLbl.Size = new System.Drawing.Size(129, 29);
+            this.phoneNoLbl.TabIndex = 28;
+            this.phoneNoLbl.Text = "電話番号";
             // 
             // allItemBtn
             // 
@@ -415,9 +415,9 @@
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
             this.Controls.Add(this.allItemBtn);
-            this.Controls.Add(this.phonenoLbl);
-            this.Controls.Add(this.clientnameLbl);
-            this.Controls.Add(this.clientLbl);
+            this.Controls.Add(this.phoneNoLbl);
+            this.Controls.Add(this.clientNameLbl);
+            this.Controls.Add(this.clientIdLbl);
             this.Controls.Add(this.delBtn);
             this.Controls.Add(this.completeOrdersTitleLbl);
             this.Controls.Add(this.confirmBtn);
@@ -440,7 +440,7 @@
             this.Controls.Add(this.countsLbl);
             this.Controls.Add(this.itemIdLbl);
             this.Controls.Add(this.clientsIdLbl);
-            this.Controls.Add(this.takeOrdersTitleLbl);
+            this.Controls.Add(this.titleLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TakeOrder";
             this.Text = "TakeOrder";
@@ -454,7 +454,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label takeOrdersTitleLbl;
+        private System.Windows.Forms.Label titleLbl;
         private System.Windows.Forms.Label clientsIdLbl;
         private System.Windows.Forms.Label separatorLbl;
         private System.Windows.Forms.Label receptionLbl;
@@ -477,9 +477,9 @@
         private System.Windows.Forms.Button confirmBtn;
         private System.Windows.Forms.Label completeOrdersTitleLbl;
         private System.Windows.Forms.Button delBtn;
-        private System.Windows.Forms.Label clientLbl;
-        private System.Windows.Forms.Label clientnameLbl;
-        private System.Windows.Forms.Label phonenoLbl;
+        private System.Windows.Forms.Label clientIdLbl;
+        private System.Windows.Forms.Label clientNameLbl;
+        private System.Windows.Forms.Label phoneNoLbl;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemID;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
