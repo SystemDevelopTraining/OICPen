@@ -110,8 +110,8 @@ namespace OICPen
         private void ChangeForm(Form f,Button btn = null)
         {
             f.TopLevel = false;
-            splitContainer2.Panel2.Controls.Clear();
-            splitContainer2.Panel2.Controls.Add(f);
+            frameScon.Panel2.Controls.Clear();
+            frameScon.Panel2.Controls.Add(f);
             f.Dock = DockStyle.Fill;
             f.Show();
             f.BringToFront();

@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.stockTitleLbl = new System.Windows.Forms.Label();
+            this.titleLbl = new System.Windows.Forms.Label();
             this.stockDgv = new System.Windows.Forms.DataGridView();
+            this.ItemTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemsCodeLbl = new System.Windows.Forms.Label();
             this.itemsNameLbl = new System.Windows.Forms.Label();
             this.itemsCodeTbox = new System.Windows.Forms.TextBox();
@@ -38,22 +41,19 @@
             this.stockDangerViewBtn = new System.Windows.Forms.Button();
             this.stockViewBtn = new System.Windows.Forms.Button();
             this.separatorLbl = new System.Windows.Forms.Label();
-            this.ItemTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.stockDgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // stockTitleLbl
+            // titleLbl
             // 
-            this.stockTitleLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.stockTitleLbl.AutoSize = true;
-            this.stockTitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.stockTitleLbl.Location = new System.Drawing.Point(1373, 19);
-            this.stockTitleLbl.Name = "stockTitleLbl";
-            this.stockTitleLbl.Size = new System.Drawing.Size(212, 48);
-            this.stockTitleLbl.TabIndex = 0;
-            this.stockTitleLbl.Text = "在庫管理";
+            this.titleLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.titleLbl.AutoSize = true;
+            this.titleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.titleLbl.Location = new System.Drawing.Point(1373, 19);
+            this.titleLbl.Name = "titleLbl";
+            this.titleLbl.Size = new System.Drawing.Size(212, 48);
+            this.titleLbl.TabIndex = 0;
+            this.titleLbl.Text = "在庫管理";
             // 
             // stockDgv
             // 
@@ -74,6 +74,27 @@
             this.stockDgv.Size = new System.Drawing.Size(800, 949);
             this.stockDgv.TabIndex = 6;
             this.stockDgv.TabStop = false;
+            // 
+            // ItemTID
+            // 
+            this.ItemTID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemTID.HeaderText = "商品ID";
+            this.ItemTID.Name = "ItemTID";
+            this.ItemTID.ReadOnly = true;
+            // 
+            // ItemT
+            // 
+            this.ItemT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemT.HeaderText = "商品名";
+            this.ItemT.Name = "ItemT";
+            this.ItemT.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.HeaderText = "現在在庫数";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
             // 
             // itemsCodeLbl
             // 
@@ -156,27 +177,6 @@
             this.separatorLbl.TabIndex = 0;
             this.separatorLbl.Text = "label6";
             // 
-            // ItemTID
-            // 
-            this.ItemTID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ItemTID.HeaderText = "商品ID";
-            this.ItemTID.Name = "ItemTID";
-            this.ItemTID.ReadOnly = true;
-            // 
-            // ItemT
-            // 
-            this.ItemT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ItemT.HeaderText = "商品名";
-            this.ItemT.Name = "ItemT";
-            this.ItemT.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Quantity.HeaderText = "現在在庫数";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -192,7 +192,7 @@
             this.Controls.Add(this.itemsNameLbl);
             this.Controls.Add(this.itemsCodeLbl);
             this.Controls.Add(this.stockDgv);
-            this.Controls.Add(this.stockTitleLbl);
+            this.Controls.Add(this.titleLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Stock";
             this.Text = "Stock";
@@ -205,7 +205,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label stockTitleLbl;
+        private System.Windows.Forms.Label titleLbl;
         private System.Windows.Forms.DataGridView stockDgv;
         private System.Windows.Forms.Label itemsCodeLbl;
         private System.Windows.Forms.Label itemsNameLbl;

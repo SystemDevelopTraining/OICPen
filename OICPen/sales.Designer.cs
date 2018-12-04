@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DateTimePicker salesEndDtp;
-            this.salesLbl = new System.Windows.Forms.Label();
+            this.titleLbl = new System.Windows.Forms.Label();
             this.salesDisplayBtn = new System.Windows.Forms.Button();
             this.salesDgv = new System.Windows.Forms.DataGridView();
             this.salesSortBtn = new System.Windows.Forms.Button();
@@ -52,18 +52,18 @@
             salesEndDtp.TabIndex = 4;
             salesEndDtp.Tag = "";
             // 
-            // salesLbl
+            // titleLbl
             // 
-            this.salesLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.salesLbl.AutoSize = true;
-            this.salesLbl.BackColor = System.Drawing.Color.Transparent;
-            this.salesLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.salesLbl.ForeColor = System.Drawing.Color.Black;
-            this.salesLbl.Location = new System.Drawing.Point(1373, 19);
-            this.salesLbl.Name = "salesLbl";
-            this.salesLbl.Size = new System.Drawing.Size(212, 48);
-            this.salesLbl.TabIndex = 0;
-            this.salesLbl.Text = "売上管理";
+            this.titleLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.titleLbl.AutoSize = true;
+            this.titleLbl.BackColor = System.Drawing.Color.Transparent;
+            this.titleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.titleLbl.ForeColor = System.Drawing.Color.Black;
+            this.titleLbl.Location = new System.Drawing.Point(1373, 19);
+            this.titleLbl.Name = "titleLbl";
+            this.titleLbl.Size = new System.Drawing.Size(212, 48);
+            this.titleLbl.TabIndex = 0;
+            this.titleLbl.Text = "売上管理";
             // 
             // salesDisplayBtn
             // 
@@ -139,7 +139,7 @@
             this.Controls.Add(this.salesDgv);
             this.Controls.Add(this.salesSortBtn);
             this.Controls.Add(this.salesDisplayBtn);
-            this.Controls.Add(this.salesLbl);
+            this.Controls.Add(this.titleLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Sales";
             this.Text = "sales";
@@ -152,7 +152,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label salesLbl;
+        private System.Windows.Forms.Label titleLbl;
         private System.Windows.Forms.Button salesDisplayBtn;
         private System.Windows.Forms.DataGridView salesDgv;
         private System.Windows.Forms.Button salesSortBtn;

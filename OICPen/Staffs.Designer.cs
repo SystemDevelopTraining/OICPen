@@ -209,7 +209,7 @@
             // 
             this.registerNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.registerNameTbox.Location = new System.Drawing.Point(1180, 542);
-            this.registerNameTbox.MaxLength = 15;
+            this.registerNameTbox.MaxLength = 30;
             this.registerNameTbox.Multiline = true;
             this.registerNameTbox.Name = "registerNameTbox";
             this.registerNameTbox.Size = new System.Drawing.Size(320, 33);

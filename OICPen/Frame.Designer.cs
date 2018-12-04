@@ -34,7 +34,7 @@
             this.logoPbox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.systemNameLbl = new System.Windows.Forms.Label();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.frameScon = new System.Windows.Forms.SplitContainer();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.staffsBtn = new System.Windows.Forms.Button();
@@ -56,9 +56,9 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.frameScon)).BeginInit();
+            this.frameScon.Panel1.SuspendLayout();
+            this.frameScon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -84,7 +84,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Panel2.Controls.Add(this.frameScon);
             this.splitContainer1.Size = new System.Drawing.Size(1937, 1064);
             this.splitContainer1.SplitterDistance = 63;
             this.splitContainer1.SplitterWidth = 1;
@@ -139,36 +139,36 @@
             this.systemNameLbl.Text = "在庫管理システム";
             this.systemNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // splitContainer2
+            // frameScon
             // 
-            this.splitContainer2.BackColor = System.Drawing.SystemColors.Control;
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
+            this.frameScon.BackColor = System.Drawing.SystemColors.Control;
+            this.frameScon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.frameScon.Location = new System.Drawing.Point(0, 0);
+            this.frameScon.Name = "frameScon";
             // 
-            // splitContainer2.Panel1
+            // frameScon.Panel1
             // 
-            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Black;
-            this.splitContainer2.Panel1.Controls.Add(this.logoutBtn);
-            this.splitContainer2.Panel1.Controls.Add(this.exitBtn);
-            this.splitContainer2.Panel1.Controls.Add(this.staffsBtn);
-            this.splitContainer2.Panel1.Controls.Add(this.clientsBtn);
-            this.splitContainer2.Panel1.Controls.Add(this.itemsBtn);
-            this.splitContainer2.Panel1.Controls.Add(this.stockBtn);
-            this.splitContainer2.Panel1.Controls.Add(this.takeorderBtn);
-            this.splitContainer2.Panel1.Controls.Add(this.giveorderBtn);
-            this.splitContainer2.Panel1.Controls.Add(this.incomingBtn);
-            this.splitContainer2.Panel1.Controls.Add(this.shipBtn);
-            this.splitContainer2.Panel1.Controls.Add(this.salesBtn);
+            this.frameScon.Panel1.BackColor = System.Drawing.Color.Black;
+            this.frameScon.Panel1.Controls.Add(this.logoutBtn);
+            this.frameScon.Panel1.Controls.Add(this.exitBtn);
+            this.frameScon.Panel1.Controls.Add(this.staffsBtn);
+            this.frameScon.Panel1.Controls.Add(this.clientsBtn);
+            this.frameScon.Panel1.Controls.Add(this.itemsBtn);
+            this.frameScon.Panel1.Controls.Add(this.stockBtn);
+            this.frameScon.Panel1.Controls.Add(this.takeorderBtn);
+            this.frameScon.Panel1.Controls.Add(this.giveorderBtn);
+            this.frameScon.Panel1.Controls.Add(this.incomingBtn);
+            this.frameScon.Panel1.Controls.Add(this.shipBtn);
+            this.frameScon.Panel1.Controls.Add(this.salesBtn);
             // 
-            // splitContainer2.Panel2
+            // frameScon.Panel2
             // 
-            this.splitContainer2.Panel2.BackColor = System.Drawing.Color.PeachPuff;
-            this.splitContainer2.Panel2.ForeColor = System.Drawing.Color.Black;
-            this.splitContainer2.Size = new System.Drawing.Size(1937, 1000);
-            this.splitContainer2.SplitterDistance = 309;
-            this.splitContainer2.SplitterWidth = 1;
-            this.splitContainer2.TabIndex = 0;
+            this.frameScon.Panel2.BackColor = System.Drawing.Color.PeachPuff;
+            this.frameScon.Panel2.ForeColor = System.Drawing.Color.Black;
+            this.frameScon.Size = new System.Drawing.Size(1937, 1000);
+            this.frameScon.SplitterDistance = 309;
+            this.frameScon.SplitterWidth = 1;
+            this.frameScon.TabIndex = 0;
             // 
             // logoutBtn
             // 
@@ -181,7 +181,7 @@
             this.logoutBtn.Location = new System.Drawing.Point(-3, 837);
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.Size = new System.Drawing.Size(309, 70);
-            this.logoutBtn.TabIndex = 6;
+            this.logoutBtn.TabIndex = 10;
             this.logoutBtn.Text = "　ログアウト";
             this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -200,7 +200,7 @@
             this.exitBtn.Location = new System.Drawing.Point(0, 930);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(309, 70);
-            this.exitBtn.TabIndex = 0;
+            this.exitBtn.TabIndex = 11;
             this.exitBtn.Text = "　終了　";
             this.exitBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -219,7 +219,7 @@
             this.staffsBtn.Location = new System.Drawing.Point(0, 714);
             this.staffsBtn.Name = "staffsBtn";
             this.staffsBtn.Size = new System.Drawing.Size(309, 90);
-            this.staffsBtn.TabIndex = 0;
+            this.staffsBtn.TabIndex = 9;
             this.staffsBtn.Text = "　社員管理";
             this.staffsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.staffsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -237,7 +237,7 @@
             this.clientsBtn.Location = new System.Drawing.Point(0, 624);
             this.clientsBtn.Name = "clientsBtn";
             this.clientsBtn.Size = new System.Drawing.Size(309, 90);
-            this.clientsBtn.TabIndex = 0;
+            this.clientsBtn.TabIndex = 8;
             this.clientsBtn.Text = "　会員管理";
             this.clientsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.clientsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -255,7 +255,7 @@
             this.itemsBtn.Location = new System.Drawing.Point(0, 534);
             this.itemsBtn.Name = "itemsBtn";
             this.itemsBtn.Size = new System.Drawing.Size(309, 90);
-            this.itemsBtn.TabIndex = 0;
+            this.itemsBtn.TabIndex = 7;
             this.itemsBtn.Text = "　商品管理";
             this.itemsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.itemsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -273,7 +273,7 @@
             this.stockBtn.Location = new System.Drawing.Point(0, 444);
             this.stockBtn.Name = "stockBtn";
             this.stockBtn.Size = new System.Drawing.Size(309, 90);
-            this.stockBtn.TabIndex = 0;
+            this.stockBtn.TabIndex = 6;
             this.stockBtn.Text = "　在庫管理";
             this.stockBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.stockBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -291,7 +291,7 @@
             this.takeorderBtn.Location = new System.Drawing.Point(0, 354);
             this.takeorderBtn.Name = "takeorderBtn";
             this.takeorderBtn.Size = new System.Drawing.Size(309, 90);
-            this.takeorderBtn.TabIndex = 0;
+            this.takeorderBtn.TabIndex = 5;
             this.takeorderBtn.Text = "　注文管理";
             this.takeorderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.takeorderBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -309,7 +309,7 @@
             this.giveorderBtn.Location = new System.Drawing.Point(0, 264);
             this.giveorderBtn.Name = "giveorderBtn";
             this.giveorderBtn.Size = new System.Drawing.Size(309, 90);
-            this.giveorderBtn.TabIndex = 0;
+            this.giveorderBtn.TabIndex = 4;
             this.giveorderBtn.Text = "　発注管理";
             this.giveorderBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.giveorderBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -327,7 +327,7 @@
             this.incomingBtn.Location = new System.Drawing.Point(0, 174);
             this.incomingBtn.Name = "incomingBtn";
             this.incomingBtn.Size = new System.Drawing.Size(309, 90);
-            this.incomingBtn.TabIndex = 0;
+            this.incomingBtn.TabIndex = 3;
             this.incomingBtn.Text = "　入庫管理";
             this.incomingBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.incomingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -345,7 +345,7 @@
             this.shipBtn.Location = new System.Drawing.Point(0, 84);
             this.shipBtn.Name = "shipBtn";
             this.shipBtn.Size = new System.Drawing.Size(309, 90);
-            this.shipBtn.TabIndex = 0;
+            this.shipBtn.TabIndex = 2;
             this.shipBtn.Text = "　出庫管理　";
             this.shipBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.shipBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -363,7 +363,7 @@
             this.salesBtn.Location = new System.Drawing.Point(0, 0);
             this.salesBtn.Name = "salesBtn";
             this.salesBtn.Size = new System.Drawing.Size(309, 84);
-            this.salesBtn.TabIndex = 0;
+            this.salesBtn.TabIndex = 1;
             this.salesBtn.Text = "　売上管理　";
             this.salesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.salesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -421,6 +421,7 @@
             this.staffsNameLbl.Name = "staffsNameLbl";
             this.staffsNameLbl.Size = new System.Drawing.Size(141, 39);
             this.staffsNameLbl.TabIndex = 0;
+            this.staffsNameLbl.Text = "社員名";
             this.staffsNameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // timer1
@@ -445,9 +446,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoPbox)).EndInit();
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
+            this.frameScon.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.frameScon)).EndInit();
+            this.frameScon.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
@@ -459,7 +460,7 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.SplitContainer frameScon;
         private System.Windows.Forms.Button shipBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button staffsBtn;

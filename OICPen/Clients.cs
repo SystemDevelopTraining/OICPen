@@ -80,8 +80,8 @@ namespace OICPen
                  PostalCodeCheck,
                 Utility.TextIsEmpty};*/
             if (!Utility.TextIsEmpty(nameTbox.Text)
-                && PhoneNumberCheck(phoneNumberMaskedTbox.Text)
-                && PostalCodeCheck(postalCodeMaskedTbox.Text)
+                && PhoneNumberCheck(phoneNumberMTbox.Text)
+                && PostalCodeCheck(postalCodeMTbox.Text)
                 &&!Utility.TextIsEmpty(addressTbox.Text))
             {
                  if((erroMessage = Utility.HiraganaCheck(huriganaTbox.Text)) == "")
@@ -100,8 +100,8 @@ namespace OICPen
         {
             string erroMessage = "";
             if (!Utility.TextIsEmpty(nameTbox.Text)
-                && PhoneNumberCheck(phoneNumberMaskedTbox.Text)
-                && PostalCodeCheck(postalCodeMaskedTbox.Text)
+                && PhoneNumberCheck(phoneNumberMTbox.Text)
+                && PostalCodeCheck(postalCodeMTbox.Text)
                 && !Utility.TextIsEmpty(addressTbox.Text))
             {
                 if ((erroMessage = Utility.HiraganaCheck(huriganaTbox.Text)) == "")
@@ -153,7 +153,7 @@ namespace OICPen
         {
             if (e.KeyChar == ' ')
                 e.KeyChar = (char)0;
-            Utility.MaskedTboxStart(phoneNumberMaskedTbox);
+            Utility.MaskedTboxStart(phoneNumberMTbox);
 
         }
 
@@ -171,12 +171,12 @@ namespace OICPen
 
         private void phoneNumberMaskedTbox_Click(object sender, EventArgs e)
         {
-            phoneNumberMaskedTbox.SelectionStart = 0;
+            phoneNumberMTbox.SelectionStart = 0;
         }
 
         private void postalCodeMaskedTbox_Click(object sender, EventArgs e)
         {
-            postalCodeMaskedTbox.SelectionStart = 0;
+            postalCodeMTbox.SelectionStart = 0;
         }
 
         private void Clients_Shown(object sender, EventArgs e)
@@ -211,8 +211,8 @@ namespace OICPen
             var client = new ClientT();
             client.Name = nameTbox.Text;
             client.Hurigana = huriganaTbox.Text;
-            client.PhoneNum = phoneNumberMaskedTbox.Text;
-            client.PostNum = postalCodeMaskedTbox.Text;
+            client.PhoneNum = phoneNumberMTbox.Text;
+            client.PostNum = postalCodeMTbox.Text;
             client.Address = addressTbox.Text;
             return client;
         }
@@ -225,8 +225,8 @@ namespace OICPen
             idDispLbl.Text = cells[0].Value.ToString();
             nameTbox.Text = cells[1].Value.ToString();
             huriganaTbox.Text = cells[2].Value.ToString();
-            phoneNumberMaskedTbox.Text = cells[3].Value.ToString();
-            postalCodeMaskedTbox.Text = cells[4].Value.ToString();
+            phoneNumberMTbox.Text = cells[3].Value.ToString();
+            postalCodeMTbox.Text = cells[4].Value.ToString();
             addressTbox.Text = cells[5].Value.ToString();
         }
 
