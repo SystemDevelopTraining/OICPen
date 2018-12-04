@@ -59,8 +59,8 @@
             this.idDispLbl = new System.Windows.Forms.Label();
             this.regAndUpdSubtTtleLbl = new System.Windows.Forms.Label();
             this.searchClientSubTitleLbl = new System.Windows.Forms.Label();
-            this.phoneNumberMaskedTbox = new System.Windows.Forms.MaskedTextBox();
             this.postalCodeMaskedTbox = new System.Windows.Forms.MaskedTextBox();
+            this.phoneNumberTbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -326,7 +326,6 @@
             this.searchIdTbox.Name = "searchIdTbox";
             this.searchIdTbox.Size = new System.Drawing.Size(108, 40);
             this.searchIdTbox.TabIndex = 2;
-            this.searchIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchIdTbox_KeyPress);
             // 
             // searchNameLbl
             // 
@@ -378,17 +377,6 @@
             this.searchClientSubTitleLbl.TabIndex = 33;
             this.searchClientSubTitleLbl.Text = "会員検索";
             // 
-            // phoneNumberMaskedTbox
-            // 
-            this.phoneNumberMaskedTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
-            this.phoneNumberMaskedTbox.Location = new System.Drawing.Point(1099, 637);
-            this.phoneNumberMaskedTbox.Mask = "9990-9990-0000";
-            this.phoneNumberMaskedTbox.Name = "phoneNumberMaskedTbox";
-            this.phoneNumberMaskedTbox.Size = new System.Drawing.Size(295, 40);
-            this.phoneNumberMaskedTbox.TabIndex = 8;
-            this.phoneNumberMaskedTbox.Click += new System.EventHandler(this.phoneNumberMaskedTbox_Click);
-            this.phoneNumberMaskedTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberMaskedTbox_KeyPress);
-            // 
             // postalCodeMaskedTbox
             // 
             this.postalCodeMaskedTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
@@ -401,6 +389,16 @@
             this.postalCodeMaskedTbox.Click += new System.EventHandler(this.postalCodeMaskedTbox_Click);
             this.postalCodeMaskedTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.postalCodeMaskedTbox_KeyPress);
             // 
+            // phoneNumberTbox
+            // 
+            this.phoneNumberTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.phoneNumberTbox.Location = new System.Drawing.Point(1099, 641);
+            this.phoneNumberTbox.MaxLength = 14;
+            this.phoneNumberTbox.Name = "phoneNumberTbox";
+            this.phoneNumberTbox.Size = new System.Drawing.Size(404, 40);
+            this.phoneNumberTbox.TabIndex = 34;
+            this.phoneNumberTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberTbox_KeyPress);
+            // 
             // Clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -408,8 +406,8 @@
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
             this.ControlBox = false;
+            this.Controls.Add(this.phoneNumberTbox);
             this.Controls.Add(this.postalCodeMaskedTbox);
-            this.Controls.Add(this.phoneNumberMaskedTbox);
             this.Controls.Add(this.searchClientSubTitleLbl);
             this.Controls.Add(this.regAndUpdSubtTtleLbl);
             this.Controls.Add(this.idDispLbl);
@@ -471,7 +469,6 @@
         private System.Windows.Forms.Label idDispLbl;
         private System.Windows.Forms.Label regAndUpdSubtTtleLbl;
         private System.Windows.Forms.Label searchClientSubTitleLbl;
-        private System.Windows.Forms.MaskedTextBox phoneNumberMaskedTbox;
         private System.Windows.Forms.MaskedTextBox postalCodeMaskedTbox;
         private System.Windows.Forms.TextBox searchIdTbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
@@ -480,5 +477,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn postalCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
+        private System.Windows.Forms.TextBox phoneNumberTbox;
     }
 }
