@@ -80,8 +80,8 @@ namespace OICPen
                  PostalCodeCheck,
                 Utility.TextIsEmpty};*/
             if (!Utility.TextIsEmpty(nameTbox.Text)
-                && PhoneNumberCheck(phoneNumberMTbox.Text)
-                && PostalCodeCheck(postalCodeMTbox.Text)
+                && PhoneNumberCheck(phoneNumberTbox.Text)
+                && PostalCodeCheck(postalCodeMaskedTbox.Text)
                 &&!Utility.TextIsEmpty(addressTbox.Text))
             {
                  if((erroMessage = Utility.HiraganaCheck(huriganaTbox.Text)) == "")
@@ -100,8 +100,8 @@ namespace OICPen
         {
             string erroMessage = "";
             if (!Utility.TextIsEmpty(nameTbox.Text)
-                && PhoneNumberCheck(phoneNumberMTbox.Text)
-                && PostalCodeCheck(postalCodeMTbox.Text)
+                && PhoneNumberCheck(phoneNumberTbox.Text)
+                && PostalCodeCheck(postalCodeMaskedTbox.Text)
                 && !Utility.TextIsEmpty(addressTbox.Text))
             {
                 if ((erroMessage = Utility.HiraganaCheck(huriganaTbox.Text)) == "")
@@ -148,30 +148,21 @@ namespace OICPen
             MessageBox.Show("郵便番号が正しく記入されてません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
-
+        /*
         private void phoneNumberMaskedTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == ' ')
-                e.KeyChar = (char)0;
-            Utility.MaskedTboxStart(phoneNumberMTbox);
-
         }
-
+        */
         private void postalCodeMaskedTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == ' ')
                 e.KeyChar = (char)0;
           
         }
-  
+
         private void searchIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utility.TextBoxDigitCheck(searchIdTbox,e);
-        }
-
-        private void phoneNumberMaskedTbox_Click(object sender, EventArgs e)
-        {
-            phoneNumberMTbox.SelectionStart = 0;
         }
 
         private void postalCodeMaskedTbox_Click(object sender, EventArgs e)
@@ -182,7 +173,6 @@ namespace OICPen
         private void Clients_Shown(object sender, EventArgs e)
         {
             DataShow();
-            
         }
 
         private void DataShow()
@@ -211,8 +201,8 @@ namespace OICPen
             var client = new ClientT();
             client.Name = nameTbox.Text;
             client.Hurigana = huriganaTbox.Text;
-            client.PhoneNum = phoneNumberMTbox.Text;
-            client.PostNum = postalCodeMTbox.Text;
+            client.PhoneNum = phoneNumberMaskedTbox.Text;
+            client.PostNum = postalCodeMaskedTbox.Text;
             client.Address = addressTbox.Text;
             return client;
         }
@@ -225,8 +215,8 @@ namespace OICPen
             idDispLbl.Text = cells[0].Value.ToString();
             nameTbox.Text = cells[1].Value.ToString();
             huriganaTbox.Text = cells[2].Value.ToString();
-            phoneNumberMTbox.Text = cells[3].Value.ToString();
-            postalCodeMTbox.Text = cells[4].Value.ToString();
+            phoneNumberTbox.Text = cells[3].Value.ToString();
+            postalCodeMaskedTbox.Text = cells[4].Value.ToString();
             addressTbox.Text = cells[5].Value.ToString();
         }
 
@@ -247,7 +237,6 @@ namespace OICPen
 
         public StaffT Staff
         {
-
             set
             {
                 if (value.Permission != Permission.God
@@ -264,5 +253,12 @@ namespace OICPen
             }
         }
 
+        private void phoneNumberTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+                e.KeyChar = (char)0;
+            if (phoneNumberTbox.Text == "")
+                phoneNumberTbox.SelectionStart = 0;
+        }
     }
 }

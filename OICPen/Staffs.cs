@@ -28,7 +28,7 @@ namespace OICPen
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            var staffs = new string[] { searchNameTbox.Text, idTbox.Text,searchHuriganaTbox.Text };
+            var staffs = new string[] { searchNameTbox.Text, idTbox.Text,searchFuriganaTbox.Text };
             var processes = new Func<List<Models.StaffT>>[]
             {
 
@@ -43,7 +43,7 @@ namespace OICPen
                     ),
 
                 () =>
-                   Servis.FindByHurigana(searchHuriganaTbox.Text)
+                   Servis.FindByHurigana(searchFuriganaTbox.Text)
             };
 
 

@@ -20,7 +20,6 @@ namespace OICPen
         private Services.TakeOrderDetailService takeorderdetailservice;
         public StaffT Staff
         {
-
             set
             {
                 staff = value;
@@ -50,7 +49,7 @@ namespace OICPen
                     completeOrdersDgv.Rows.Clear();
             }
                  
-            bool found = false;//clientが確認できなかったらMessageBoxを表示するのに利用される。
+            bool found = false; //clientが確認できなかったらMessageBoxを表示するのに利用される。
             foreach (var client in clientservis.GetClients())
             {
                 if (clientsIdTbox.Text == client.ClientTID.ToString())

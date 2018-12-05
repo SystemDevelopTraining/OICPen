@@ -59,8 +59,8 @@
             this.idDispLbl = new System.Windows.Forms.Label();
             this.regAndUpdSubtTtleLbl = new System.Windows.Forms.Label();
             this.searchClientSubTitleLbl = new System.Windows.Forms.Label();
-            this.phoneNumberMTbox = new System.Windows.Forms.MaskedTextBox();
-            this.postalCodeMTbox = new System.Windows.Forms.MaskedTextBox();
+            this.postalCodeMaskedTbox = new System.Windows.Forms.MaskedTextBox();
+            this.phoneNumberTbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -327,7 +327,6 @@
             this.searchIdTbox.Name = "searchIdTbox";
             this.searchIdTbox.Size = new System.Drawing.Size(108, 40);
             this.searchIdTbox.TabIndex = 2;
-            this.searchIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchIdTbox_KeyPress);
             // 
             // searchNameLbl
             // 

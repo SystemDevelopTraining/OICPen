@@ -80,7 +80,7 @@
             // 
             this.clientsIdLbl.AutoSize = true;
             this.clientsIdLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsIdLbl.Location = new System.Drawing.Point(561, 163);
+            this.clientsIdLbl.Location = new System.Drawing.Point(561, 122);
             this.clientsIdLbl.Name = "clientsIdLbl";
             this.clientsIdLbl.Size = new System.Drawing.Size(159, 29);
             this.clientsIdLbl.TabIndex = 6;
@@ -89,9 +89,9 @@
             // separatorLbl
             // 
             this.separatorLbl.BackColor = System.Drawing.Color.Black;
-            this.separatorLbl.Location = new System.Drawing.Point(109, 234);
+            this.separatorLbl.Location = new System.Drawing.Point(109, 186);
             this.separatorLbl.Name = "separatorLbl";
-            this.separatorLbl.Size = new System.Drawing.Size(1438, 10);
+            this.separatorLbl.Size = new System.Drawing.Size(1438, 5);
             this.separatorLbl.TabIndex = 8;
             // 
             // receptionLbl
@@ -99,7 +99,7 @@
             this.receptionLbl.AutoSize = true;
             this.receptionLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.receptionLbl.ForeColor = System.Drawing.Color.Red;
-            this.receptionLbl.Location = new System.Drawing.Point(388, 262);
+            this.receptionLbl.Location = new System.Drawing.Point(388, 210);
             this.receptionLbl.Name = "receptionLbl";
             this.receptionLbl.Size = new System.Drawing.Size(129, 29);
             this.receptionLbl.TabIndex = 10;
@@ -109,7 +109,7 @@
             // 
             this.itemIdLbl.AutoSize = true;
             this.itemIdLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.itemIdLbl.Location = new System.Drawing.Point(96, 525);
+            this.itemIdLbl.Location = new System.Drawing.Point(96, 454);
             this.itemIdLbl.Name = "itemIdLbl";
             this.itemIdLbl.Size = new System.Drawing.Size(159, 29);
             this.itemIdLbl.TabIndex = 6;
@@ -119,10 +119,10 @@
             // 
             this.itemIdTbox.Enabled = false;
             this.itemIdTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.itemIdTbox.Location = new System.Drawing.Point(260, 525);
+            this.itemIdTbox.Location = new System.Drawing.Point(260, 454);
             this.itemIdTbox.MaxLength = 6;
             this.itemIdTbox.Name = "itemIdTbox";
-            this.itemIdTbox.Size = new System.Drawing.Size(97, 36);
+            this.itemIdTbox.Size = new System.Drawing.Size(104, 36);
             this.itemIdTbox.TabIndex = 7;
             this.itemIdTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.itemIdTbox_KeyDown);
             this.itemIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.itemIdTbox_KeyPress);
@@ -131,7 +131,7 @@
             // 
             this.countsLbl.AutoSize = true;
             this.countsLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.countsLbl.Location = new System.Drawing.Point(594, 686);
+            this.countsLbl.Location = new System.Drawing.Point(594, 634);
             this.countsLbl.Name = "countsLbl";
             this.countsLbl.Size = new System.Drawing.Size(71, 29);
             this.countsLbl.TabIndex = 6;
@@ -141,7 +141,7 @@
             // 
             this.countsTbox.Enabled = false;
             this.countsTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.countsTbox.Location = new System.Drawing.Point(581, 727);
+            this.countsTbox.Location = new System.Drawing.Point(581, 675);
             this.countsTbox.MaxLength = 6;
             this.countsTbox.Name = "countsTbox";
             this.countsTbox.Size = new System.Drawing.Size(101, 36);
@@ -153,7 +153,7 @@
             // 
             this.completeBtn.Enabled = false;
             this.completeBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.completeBtn.Location = new System.Drawing.Point(1365, 727);
+            this.completeBtn.Location = new System.Drawing.Point(1365, 675);
             this.completeBtn.Name = "completeBtn";
             this.completeBtn.Size = new System.Drawing.Size(125, 54);
             this.completeBtn.TabIndex = 11;
@@ -165,7 +165,7 @@
             // 
             this.clearBtn.Enabled = false;
             this.clearBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clearBtn.Location = new System.Drawing.Point(1365, 616);
+            this.clearBtn.Location = new System.Drawing.Point(1365, 564);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(125, 54);
             this.clearBtn.TabIndex = 12;
@@ -176,7 +176,7 @@
             // clientsIdTbox
             // 
             this.clientsIdTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsIdTbox.Location = new System.Drawing.Point(726, 161);
+            this.clientsIdTbox.Location = new System.Drawing.Point(733, 120);
             this.clientsIdTbox.MaxLength = 6;
             this.clientsIdTbox.Name = "clientsIdTbox";
             this.clientsIdTbox.Size = new System.Drawing.Size(97, 36);
@@ -187,7 +187,7 @@
             // clientsIdCheckBtn
             // 
             this.clientsIdCheckBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsIdCheckBtn.Location = new System.Drawing.Point(844, 151);
+            this.clientsIdCheckBtn.Location = new System.Drawing.Point(843, 110);
             this.clientsIdCheckBtn.Name = "clientsIdCheckBtn";
             this.clientsIdCheckBtn.Size = new System.Drawing.Size(104, 54);
             this.clientsIdCheckBtn.TabIndex = 13;
@@ -199,7 +199,7 @@
             // 
             this.itemNameLbl.AutoSize = true;
             this.itemNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.itemNameLbl.Location = new System.Drawing.Point(96, 455);
+            this.itemNameLbl.Location = new System.Drawing.Point(96, 384);
             this.itemNameLbl.Name = "itemNameLbl";
             this.itemNameLbl.Size = new System.Drawing.Size(158, 29);
             this.itemNameLbl.TabIndex = 15;
@@ -209,7 +209,7 @@
             // 
             this.itemNameTbox.Enabled = false;
             this.itemNameTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.itemNameTbox.Location = new System.Drawing.Point(260, 455);
+            this.itemNameTbox.Location = new System.Drawing.Point(260, 384);
             this.itemNameTbox.MaxLength = 50;
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(218, 36);
@@ -218,21 +218,21 @@
             // 
             // clientsIdViewLbl
             // 
-            this.clientsIdViewLbl.AutoSize = true;
             this.clientsIdViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsIdViewLbl.Location = new System.Drawing.Point(95, 373);
+            this.clientsIdViewLbl.Location = new System.Drawing.Point(106, 321);
             this.clientsIdViewLbl.Name = "clientsIdViewLbl";
-            this.clientsIdViewLbl.Size = new System.Drawing.Size(0, 29);
+            this.clientsIdViewLbl.Size = new System.Drawing.Size(138, 29);
             this.clientsIdViewLbl.TabIndex = 17;
+            this.clientsIdViewLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // clientsNameViewLbl
             // 
-            this.clientsNameViewLbl.AutoSize = true;
             this.clientsNameViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsNameViewLbl.Location = new System.Drawing.Point(324, 373);
+            this.clientsNameViewLbl.Location = new System.Drawing.Point(282, 321);
             this.clientsNameViewLbl.Name = "clientsNameViewLbl";
-            this.clientsNameViewLbl.Size = new System.Drawing.Size(0, 29);
+            this.clientsNameViewLbl.Size = new System.Drawing.Size(223, 29);
             this.clientsNameViewLbl.TabIndex = 18;
+            this.clientsNameViewLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // itemsViewDgv
             // 
@@ -243,12 +243,12 @@
             this.itemName,
             this.quantity});
             this.itemsViewDgv.Enabled = false;
-            this.itemsViewDgv.Location = new System.Drawing.Point(129, 686);
+            this.itemsViewDgv.Location = new System.Drawing.Point(30, 634);
             this.itemsViewDgv.Name = "itemsViewDgv";
             this.itemsViewDgv.ReadOnly = true;
             this.itemsViewDgv.RowTemplate.Height = 21;
             this.itemsViewDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.itemsViewDgv.Size = new System.Drawing.Size(378, 261);
+            this.itemsViewDgv.Size = new System.Drawing.Size(487, 313);
             this.itemsViewDgv.TabIndex = 14;
             // 
             // itemID
@@ -276,7 +276,7 @@
             // 
             this.searchBtn.Enabled = false;
             this.searchBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.searchBtn.Location = new System.Drawing.Point(260, 597);
+            this.searchBtn.Location = new System.Drawing.Point(300, 517);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(104, 54);
             this.searchBtn.TabIndex = 19;
@@ -293,7 +293,7 @@
             this.ItemName2,
             this.quantity2});
             this.completeOrdersDgv.Enabled = false;
-            this.completeOrdersDgv.Location = new System.Drawing.Point(766, 354);
+            this.completeOrdersDgv.Location = new System.Drawing.Point(789, 316);
             this.completeOrdersDgv.Name = "completeOrdersDgv";
             this.completeOrdersDgv.RowTemplate.Height = 21;
             this.completeOrdersDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -323,18 +323,18 @@
             // 
             // clientsPhoneNoViewLbl
             // 
-            this.clientsPhoneNoViewLbl.AutoSize = true;
             this.clientsPhoneNoViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsPhoneNoViewLbl.Location = new System.Drawing.Point(553, 373);
+            this.clientsPhoneNoViewLbl.Location = new System.Drawing.Point(517, 373);
             this.clientsPhoneNoViewLbl.Name = "clientsPhoneNoViewLbl";
-            this.clientsPhoneNoViewLbl.Size = new System.Drawing.Size(0, 29);
+            this.clientsPhoneNoViewLbl.Size = new System.Drawing.Size(234, 29);
             this.clientsPhoneNoViewLbl.TabIndex = 22;
+            this.clientsPhoneNoViewLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // confirmBtn
             // 
             this.confirmBtn.Enabled = false;
             this.confirmBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.confirmBtn.Location = new System.Drawing.Point(582, 769);
+            this.confirmBtn.Location = new System.Drawing.Point(582, 717);
             this.confirmBtn.Name = "confirmBtn";
             this.confirmBtn.Size = new System.Drawing.Size(100, 55);
             this.confirmBtn.TabIndex = 23;
@@ -348,7 +348,7 @@
             this.completeOrdersTitleLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.completeOrdersTitleLbl.AutoSize = true;
             this.completeOrdersTitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.completeOrdersTitleLbl.Location = new System.Drawing.Point(926, 284);
+            this.completeOrdersTitleLbl.Location = new System.Drawing.Point(926, 232);
             this.completeOrdersTitleLbl.Name = "completeOrdersTitleLbl";
             this.completeOrdersTitleLbl.Size = new System.Drawing.Size(260, 48);
             this.completeOrdersTitleLbl.TabIndex = 24;
@@ -358,7 +358,7 @@
             // 
             this.delBtn.Enabled = false;
             this.delBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.delBtn.Location = new System.Drawing.Point(1365, 507);
+            this.delBtn.Location = new System.Drawing.Point(1365, 455);
             this.delBtn.Name = "delBtn";
             this.delBtn.Size = new System.Drawing.Size(125, 54);
             this.delBtn.TabIndex = 25;
@@ -400,7 +400,7 @@
             // 
             this.allItemBtn.Enabled = false;
             this.allItemBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.allItemBtn.Location = new System.Drawing.Point(544, 893);
+            this.allItemBtn.Location = new System.Drawing.Point(544, 841);
             this.allItemBtn.Name = "allItemBtn";
             this.allItemBtn.Size = new System.Drawing.Size(176, 54);
             this.allItemBtn.TabIndex = 29;

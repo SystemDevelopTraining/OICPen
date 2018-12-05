@@ -55,8 +55,8 @@
             this.permissionCbox = new System.Windows.Forms.ComboBox();
             this.registerNamePhoneticLbl = new System.Windows.Forms.Label();
             this.registerNamePhoneticTbox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.searchHuriganaTbox = new System.Windows.Forms.TextBox();
+            this.furiganaLbl = new System.Windows.Forms.Label();
+            this.searchFuriganaTbox = new System.Windows.Forms.TextBox();
             this.registerIdLbl = new System.Windows.Forms.Label();
             this.idDispLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.staffsDgv)).BeginInit();
@@ -116,7 +116,7 @@
             this.registerBtn.Location = new System.Drawing.Point(1023, 874);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(125, 60);
-            this.registerBtn.TabIndex = 11;
+            this.registerBtn.TabIndex = 10;
             this.registerBtn.Text = "登録";
             this.registerBtn.UseVisualStyleBackColor = true;
             this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
@@ -178,7 +178,7 @@
             this.fixBtn.Location = new System.Drawing.Point(1190, 874);
             this.fixBtn.Name = "fixBtn";
             this.fixBtn.Size = new System.Drawing.Size(125, 60);
-            this.fixBtn.TabIndex = 12;
+            this.fixBtn.TabIndex = 11;
             this.fixBtn.Text = "修正";
             this.fixBtn.UseVisualStyleBackColor = true;
             this.fixBtn.Click += new System.EventHandler(this.fixBtn_Click);
@@ -200,7 +200,7 @@
             this.deleteBtn.Location = new System.Drawing.Point(1358, 874);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(125, 60);
-            this.deleteBtn.TabIndex = 13;
+            this.deleteBtn.TabIndex = 12;
             this.deleteBtn.Text = "削除";
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
@@ -213,7 +213,7 @@
             this.registerNameTbox.Multiline = true;
             this.registerNameTbox.Name = "registerNameTbox";
             this.registerNameTbox.Size = new System.Drawing.Size(320, 33);
-            this.registerNameTbox.TabIndex = 7;
+            this.registerNameTbox.TabIndex = 5;
             // 
             // registerNameLbl
             // 
@@ -244,7 +244,7 @@
             this.passwordTbox.Name = "passwordTbox";
             this.passwordTbox.PasswordChar = '*';
             this.passwordTbox.Size = new System.Drawing.Size(320, 33);
-            this.passwordTbox.TabIndex = 8;
+            this.passwordTbox.TabIndex = 7;
             // 
             // password2Tbox
             // 
@@ -255,7 +255,7 @@
             this.password2Tbox.Name = "password2Tbox";
             this.password2Tbox.PasswordChar = '*';
             this.password2Tbox.Size = new System.Drawing.Size(320, 33);
-            this.password2Tbox.TabIndex = 9;
+            this.password2Tbox.TabIndex = 8;
             // 
             // password2Lbl
             // 
@@ -321,7 +321,7 @@
             this.permissionCbox.MaxDropDownItems = 4;
             this.permissionCbox.Name = "permissionCbox";
             this.permissionCbox.Size = new System.Drawing.Size(176, 37);
-            this.permissionCbox.TabIndex = 10;
+            this.permissionCbox.TabIndex = 9;
             // 
             // registerNamePhoneticLbl
             // 
@@ -343,26 +343,26 @@
             this.registerNamePhoneticTbox.Size = new System.Drawing.Size(320, 33);
             this.registerNamePhoneticTbox.TabIndex = 6;
             // 
-            // label1
+            // furiganaLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(976, 281);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 33);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "ふりがな:";
+            this.furiganaLbl.AutoSize = true;
+            this.furiganaLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.furiganaLbl.Location = new System.Drawing.Point(976, 281);
+            this.furiganaLbl.Name = "furiganaLbl";
+            this.furiganaLbl.Size = new System.Drawing.Size(159, 33);
+            this.furiganaLbl.TabIndex = 12;
+            this.furiganaLbl.Text = "ふりがな:";
             // 
-            // searchHuriganaTbox
+            // searchFuriganaTbox
             // 
-            this.searchHuriganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.searchHuriganaTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
-            this.searchHuriganaTbox.Location = new System.Drawing.Point(1180, 281);
-            this.searchHuriganaTbox.MaxLength = 30;
-            this.searchHuriganaTbox.Multiline = true;
-            this.searchHuriganaTbox.Name = "searchHuriganaTbox";
-            this.searchHuriganaTbox.Size = new System.Drawing.Size(320, 33);
-            this.searchHuriganaTbox.TabIndex = 3;
+            this.searchFuriganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.searchFuriganaTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.searchFuriganaTbox.Location = new System.Drawing.Point(1180, 281);
+            this.searchFuriganaTbox.MaxLength = 30;
+            this.searchFuriganaTbox.Multiline = true;
+            this.searchFuriganaTbox.Name = "searchFuriganaTbox";
+            this.searchFuriganaTbox.Size = new System.Drawing.Size(320, 33);
+            this.searchFuriganaTbox.TabIndex = 3;
             // 
             // registerIdLbl
             // 
@@ -391,8 +391,8 @@
             this.ClientSize = new System.Drawing.Size(1610, 982);
             this.Controls.Add(this.idDispLbl);
             this.Controls.Add(this.registerIdLbl);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.searchHuriganaTbox);
+            this.Controls.Add(this.furiganaLbl);
+            this.Controls.Add(this.searchFuriganaTbox);
             this.Controls.Add(this.registerNamePhoneticTbox);
             this.Controls.Add(this.registerNamePhoneticLbl);
             this.Controls.Add(this.permissionCbox);
@@ -455,8 +455,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn staffName;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffHurigana;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffPermission;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox searchHuriganaTbox;
+        private System.Windows.Forms.Label furiganaLbl;
+        private System.Windows.Forms.TextBox searchFuriganaTbox;
         private System.Windows.Forms.Label registerIdLbl;
         private System.Windows.Forms.Label idDispLbl;
     }
