@@ -59,7 +59,7 @@
             this.idDispLbl = new System.Windows.Forms.Label();
             this.regAndUpdSubtTtleLbl = new System.Windows.Forms.Label();
             this.searchClientSubTitleLbl = new System.Windows.Forms.Label();
-            this.postalCodeMaskedTbox = new System.Windows.Forms.MaskedTextBox();
+            this.postalCodeMTbox = new System.Windows.Forms.MaskedTextBox();
             this.phoneNumberTbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.clientsDgv)).BeginInit();
             this.SuspendLayout();
@@ -379,15 +379,11 @@
             // 
             // phoneNumberMTbox
             // 
-            this.phoneNumberMTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
-            this.phoneNumberMTbox.Location = new System.Drawing.Point(1099, 637);
-            this.phoneNumberMTbox.Mask = "9990-9990-0000";
-            this.phoneNumberMTbox.Name = "phoneNumberMTbox";
-            this.phoneNumberMTbox.PromptChar = ' ';
-            this.phoneNumberMTbox.Size = new System.Drawing.Size(295, 40);
-            this.phoneNumberMTbox.TabIndex = 8;
-            this.phoneNumberMTbox.Click += new System.EventHandler(this.phoneNumberMaskedTbox_Click);
-            this.phoneNumberMTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberMaskedTbox_KeyPress);
+            this.phoneNumberTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.phoneNumberTbox.Location = new System.Drawing.Point(1099, 637);
+            this.phoneNumberTbox.Name = "phoneNumberMTbox";
+            this.phoneNumberTbox.Size = new System.Drawing.Size(295, 40);
+            this.phoneNumberTbox.TabIndex = 8;
             // 
             // postalCodeMTbox
             // 
@@ -410,7 +406,7 @@
             this.ClientSize = new System.Drawing.Size(1610, 982);
             this.ControlBox = false;
             this.Controls.Add(this.postalCodeMTbox);
-            this.Controls.Add(this.phoneNumberMTbox);
+            this.Controls.Add(this.phoneNumberTbox);
             this.Controls.Add(this.searchClientSubTitleLbl);
             this.Controls.Add(this.regAndUpdSubtTtleLbl);
             this.Controls.Add(this.idDispLbl);
@@ -472,7 +468,7 @@
         private System.Windows.Forms.Label idDispLbl;
         private System.Windows.Forms.Label regAndUpdSubtTtleLbl;
         private System.Windows.Forms.Label searchClientSubTitleLbl;
-        private System.Windows.Forms.MaskedTextBox phoneNumberMTbox;
+        private System.Windows.Forms.TextBox phoneNumberTbox;
         private System.Windows.Forms.MaskedTextBox postalCodeMTbox;
         private System.Windows.Forms.TextBox searchIdTbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
