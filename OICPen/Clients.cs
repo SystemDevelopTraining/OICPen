@@ -167,7 +167,7 @@ namespace OICPen
 
         private void postalCodeMaskedTbox_Click(object sender, EventArgs e)
         {
-            postalCodeMaskedTbox.SelectionStart = 0;
+            postalCodeMTbox.SelectionStart = 0;
         }
 
         private void Clients_Shown(object sender, EventArgs e)
@@ -201,7 +201,7 @@ namespace OICPen
             var client = new ClientT();
             client.Name = nameTbox.Text;
             client.Hurigana = huriganaTbox.Text;
-            client.PhoneNum = phoneNumberTbox.Text;
+            client.PhoneNum = phoneNumberMaskedTbox.Text;
             client.PostNum = postalCodeMaskedTbox.Text;
             client.Address = addressTbox.Text;
             return client;
