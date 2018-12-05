@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.incomingTitleLbl = new System.Windows.Forms.Label();
+            this.titleLbl = new System.Windows.Forms.Label();
             this.incomingDgv = new System.Windows.Forms.DataGridView();
             this.GiveOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiveOrdDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,17 +47,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // incomingTitleLbl
+            // titleLbl
             // 
-            this.incomingTitleLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.incomingTitleLbl.AutoSize = true;
-            this.incomingTitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.incomingTitleLbl.ForeColor = System.Drawing.Color.Black;
-            this.incomingTitleLbl.Location = new System.Drawing.Point(1373, 19);
-            this.incomingTitleLbl.Name = "incomingTitleLbl";
-            this.incomingTitleLbl.Size = new System.Drawing.Size(212, 48);
-            this.incomingTitleLbl.TabIndex = 0;
-            this.incomingTitleLbl.Text = "入庫管理";
+            this.titleLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.titleLbl.AutoSize = true;
+            this.titleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.titleLbl.ForeColor = System.Drawing.Color.Black;
+            this.titleLbl.Location = new System.Drawing.Point(1373, 19);
+            this.titleLbl.Name = "titleLbl";
+            this.titleLbl.Size = new System.Drawing.Size(212, 48);
+            this.titleLbl.TabIndex = 0;
+            this.titleLbl.Text = "入庫管理";
             // 
             // incomingDgv
             // 
@@ -196,7 +196,7 @@
             this.Controls.Add(this.giveOrderedCheckBtn);
             this.Controls.Add(this.incomingDgv);
             this.Controls.Add(this.giveOrderLbl);
-            this.Controls.Add(this.incomingTitleLbl);
+            this.Controls.Add(this.titleLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InComing";
             this.Text = "InComing";
@@ -209,7 +209,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label incomingTitleLbl;
+        private System.Windows.Forms.Label titleLbl;
         private System.Windows.Forms.DataGridView incomingDgv;
         private System.Windows.Forms.Button giveOrderedCheckBtn;
         private System.Windows.Forms.Label giveOrderLbl;

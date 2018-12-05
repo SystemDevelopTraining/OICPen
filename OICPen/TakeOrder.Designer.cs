@@ -324,7 +324,7 @@
             // clientsPhoneNoViewLbl
             // 
             this.clientsPhoneNoViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsPhoneNoViewLbl.Location = new System.Drawing.Point(507, 321);
+            this.clientsPhoneNoViewLbl.Location = new System.Drawing.Point(517, 373);
             this.clientsPhoneNoViewLbl.Name = "clientsPhoneNoViewLbl";
             this.clientsPhoneNoViewLbl.Size = new System.Drawing.Size(234, 29);
             this.clientsPhoneNoViewLbl.TabIndex = 22;

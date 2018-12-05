@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.giveOrderTitleLbl = new System.Windows.Forms.Label();
+            this.titleLbl = new System.Windows.Forms.Label();
             this.giveOrderListLbl = new System.Windows.Forms.Label();
             this.confirmBtn = new System.Windows.Forms.Button();
             this.giveOrderListDgv = new System.Windows.Forms.DataGridView();
@@ -56,15 +56,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // giveOrderTitleLbl
+            // titleLbl
             // 
-            this.giveOrderTitleLbl.AutoSize = true;
-            this.giveOrderTitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.giveOrderTitleLbl.Location = new System.Drawing.Point(1374, 19);
-            this.giveOrderTitleLbl.Name = "giveOrderTitleLbl";
-            this.giveOrderTitleLbl.Size = new System.Drawing.Size(212, 48);
-            this.giveOrderTitleLbl.TabIndex = 0;
-            this.giveOrderTitleLbl.Text = "発注管理";
+            this.titleLbl.AutoSize = true;
+            this.titleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.titleLbl.Location = new System.Drawing.Point(1374, 19);
+            this.titleLbl.Name = "titleLbl";
+            this.titleLbl.Size = new System.Drawing.Size(212, 48);
+            this.titleLbl.TabIndex = 0;
+            this.titleLbl.Text = "発注管理";
             // 
             // giveOrderListLbl
             // 
@@ -83,7 +83,7 @@
             this.confirmBtn.Location = new System.Drawing.Point(629, 613);
             this.confirmBtn.Name = "confirmBtn";
             this.confirmBtn.Size = new System.Drawing.Size(83, 54);
-            this.confirmBtn.TabIndex = 6;
+            this.confirmBtn.TabIndex = 5;
             this.confirmBtn.Text = "確定";
             this.confirmBtn.UseVisualStyleBackColor = true;
             this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
@@ -105,7 +105,7 @@
             this.giveOrderListDgv.RowTemplate.Height = 21;
             this.giveOrderListDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.giveOrderListDgv.Size = new System.Drawing.Size(535, 593);
-            this.giveOrderListDgv.TabIndex = 7;
+            this.giveOrderListDgv.TabIndex = 6;
             // 
             // ID
             // 
@@ -143,7 +143,7 @@
             // 
             this.itemNameTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemNameTbox.Location = new System.Drawing.Point(286, 228);
-            this.itemNameTbox.MaxLength = 50;
+            this.itemNameTbox.MaxLength = 30;
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(218, 36);
             this.itemNameTbox.TabIndex = 1;
@@ -164,7 +164,7 @@
             this.itemsViewDgv.RowTemplate.Height = 21;
             this.itemsViewDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.itemsViewDgv.Size = new System.Drawing.Size(573, 374);
-            this.itemsViewDgv.TabIndex = 4;
+            this.itemsViewDgv.TabIndex = 0;
             // 
             // itemID
             // 
@@ -193,7 +193,7 @@
             this.allClearBtn.Location = new System.Drawing.Point(1388, 534);
             this.allClearBtn.Name = "allClearBtn";
             this.allClearBtn.Size = new System.Drawing.Size(138, 54);
-            this.allClearBtn.TabIndex = 0;
+            this.allClearBtn.TabIndex = 8;
             this.allClearBtn.Text = "クリア";
             this.allClearBtn.UseVisualStyleBackColor = true;
             this.allClearBtn.Click += new System.EventHandler(this.allClearBtn_Click);
@@ -204,7 +204,7 @@
             this.completeBtn.Location = new System.Drawing.Point(1388, 639);
             this.completeBtn.Name = "completeBtn";
             this.completeBtn.Size = new System.Drawing.Size(138, 54);
-            this.completeBtn.TabIndex = 0;
+            this.completeBtn.TabIndex = 9;
             this.completeBtn.Text = "完了";
             this.completeBtn.UseVisualStyleBackColor = true;
             this.completeBtn.Click += new System.EventHandler(this.completeBtn_Click);
@@ -263,7 +263,7 @@
             this.clearBtn.Location = new System.Drawing.Point(1388, 432);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(138, 54);
-            this.clearBtn.TabIndex = 0;
+            this.clearBtn.TabIndex = 7;
             this.clearBtn.Text = "削除";
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
@@ -285,7 +285,7 @@
             this.quantityTbox.MaxLength = 6;
             this.quantityTbox.Name = "quantityTbox";
             this.quantityTbox.Size = new System.Drawing.Size(108, 36);
-            this.quantityTbox.TabIndex = 5;
+            this.quantityTbox.TabIndex = 4;
             this.quantityTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.quantityTbox_KeyPress);
             // 
             // allItemBtn
@@ -321,7 +321,7 @@
             this.Controls.Add(this.allClearBtn);
             this.Controls.Add(this.completeBtn);
             this.Controls.Add(this.quantityLbl);
-            this.Controls.Add(this.giveOrderTitleLbl);
+            this.Controls.Add(this.titleLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GiveOrder";
             this.Text = "GiveOrder";
@@ -335,7 +335,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label giveOrderTitleLbl;
+        private System.Windows.Forms.Label titleLbl;
         private System.Windows.Forms.Label giveOrderListLbl;
         private System.Windows.Forms.Button confirmBtn;
         private System.Windows.Forms.DataGridView giveOrderListDgv;
