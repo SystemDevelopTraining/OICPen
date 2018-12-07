@@ -1,12 +1,6 @@
 ﻿using OICPen.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OICPen
@@ -14,6 +8,26 @@ namespace OICPen
     public partial class Staffs : Form
     {
         private Services.StaffService Servis ;
+
+        public StaffT Staff
+        {
+            set
+            {
+                if (value.Permission != Permission.God
+                   && value.Permission != Permission.StaffControl)
+                {
+                    registerBtn.Enabled = false;
+                    fixBtn.Enabled = false;
+                    deleteBtn.Enabled = false;
+                }
+                else
+                {
+                    registerBtn.Enabled = true;
+                    fixBtn.Enabled = true;
+                    deleteBtn.Enabled = true;
+                }
+            }
+        }
 
         public Staffs(Models.OICPenDbContext dbcontext)
         {
@@ -88,7 +102,6 @@ namespace OICPen
         private void Staffs_Load(object sender, EventArgs e)
         {
             idTbox.Focus();
-
             DataShow();
         }
 
