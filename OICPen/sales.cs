@@ -19,6 +19,7 @@ namespace OICPen
 
         private void sales_Load(object sender, EventArgs e)
         {
+            salesDisplayBtn.Focus();
 
         }
     }

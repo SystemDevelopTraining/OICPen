@@ -53,8 +53,8 @@
             this.permissionLbl = new System.Windows.Forms.Label();
             this.searchTitleLbl = new System.Windows.Forms.Label();
             this.permissionCbox = new System.Windows.Forms.ComboBox();
-            this.registerNamePhoneticLbl = new System.Windows.Forms.Label();
-            this.registerNamePhoneticTbox = new System.Windows.Forms.TextBox();
+            this.registerFuriganaLbl = new System.Windows.Forms.Label();
+            this.registerFuriganaTbox = new System.Windows.Forms.TextBox();
             this.furiganaLbl = new System.Windows.Forms.Label();
             this.searchFuriganaTbox = new System.Windows.Forms.TextBox();
             this.registerIdLbl = new System.Windows.Forms.Label();
@@ -79,7 +79,8 @@
             this.staffsDgv.RowTemplate.Height = 21;
             this.staffsDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.staffsDgv.Size = new System.Drawing.Size(774, 949);
-            this.staffsDgv.TabIndex = 5;
+            this.staffsDgv.TabIndex = 0;
+            this.staffsDgv.TabStop = false;
             this.staffsDgv.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffsDgv_RowEnter);
             // 
             // staffId
@@ -323,25 +324,25 @@
             this.permissionCbox.Size = new System.Drawing.Size(176, 37);
             this.permissionCbox.TabIndex = 9;
             // 
-            // registerNamePhoneticLbl
+            // registerFuriganaLbl
             // 
-            this.registerNamePhoneticLbl.AutoSize = true;
-            this.registerNamePhoneticLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.registerNamePhoneticLbl.Location = new System.Drawing.Point(977, 608);
-            this.registerNamePhoneticLbl.Name = "registerNamePhoneticLbl";
-            this.registerNamePhoneticLbl.Size = new System.Drawing.Size(159, 33);
-            this.registerNamePhoneticLbl.TabIndex = 0;
-            this.registerNamePhoneticLbl.Text = "ふりがな:";
+            this.registerFuriganaLbl.AutoSize = true;
+            this.registerFuriganaLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.registerFuriganaLbl.Location = new System.Drawing.Point(977, 608);
+            this.registerFuriganaLbl.Name = "registerFuriganaLbl";
+            this.registerFuriganaLbl.Size = new System.Drawing.Size(159, 33);
+            this.registerFuriganaLbl.TabIndex = 0;
+            this.registerFuriganaLbl.Text = "ふりがな:";
             // 
-            // registerNamePhoneticTbox
+            // registerFuriganaTbox
             // 
-            this.registerNamePhoneticTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.registerNamePhoneticTbox.Location = new System.Drawing.Point(1181, 608);
-            this.registerNamePhoneticTbox.MaxLength = 30;
-            this.registerNamePhoneticTbox.Multiline = true;
-            this.registerNamePhoneticTbox.Name = "registerNamePhoneticTbox";
-            this.registerNamePhoneticTbox.Size = new System.Drawing.Size(320, 33);
-            this.registerNamePhoneticTbox.TabIndex = 6;
+            this.registerFuriganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.registerFuriganaTbox.Location = new System.Drawing.Point(1181, 608);
+            this.registerFuriganaTbox.MaxLength = 30;
+            this.registerFuriganaTbox.Multiline = true;
+            this.registerFuriganaTbox.Name = "registerFuriganaTbox";
+            this.registerFuriganaTbox.Size = new System.Drawing.Size(320, 33);
+            this.registerFuriganaTbox.TabIndex = 6;
             // 
             // furiganaLbl
             // 
@@ -393,8 +394,8 @@
             this.Controls.Add(this.registerIdLbl);
             this.Controls.Add(this.furiganaLbl);
             this.Controls.Add(this.searchFuriganaTbox);
-            this.Controls.Add(this.registerNamePhoneticTbox);
-            this.Controls.Add(this.registerNamePhoneticLbl);
+            this.Controls.Add(this.registerFuriganaTbox);
+            this.Controls.Add(this.registerFuriganaLbl);
             this.Controls.Add(this.permissionCbox);
             this.Controls.Add(this.searchTitleLbl);
             this.Controls.Add(this.registerTitleLbl);
@@ -449,8 +450,8 @@
         private System.Windows.Forms.Label permissionLbl;
         private System.Windows.Forms.Label searchTitleLbl;
         private System.Windows.Forms.ComboBox permissionCbox;
-        private System.Windows.Forms.Label registerNamePhoneticLbl;
-        private System.Windows.Forms.TextBox registerNamePhoneticTbox;
+        private System.Windows.Forms.Label registerFuriganaLbl;
+        private System.Windows.Forms.TextBox registerFuriganaTbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffId;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffName;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffHurigana;

@@ -260,5 +260,10 @@ namespace OICPen
             if (phoneNumberTbox.Text == "")
                 phoneNumberTbox.SelectionStart = 0;
         }
+
+        private void Clients_Load(object sender, EventArgs e)
+        {
+            searchNameTbox.Focus();
+        }
     }
 }

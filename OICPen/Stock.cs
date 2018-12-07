@@ -86,6 +86,7 @@ namespace OICPen
 
         private void Stock_Load(object sender, EventArgs e)
         {
+            itemsCodeTbox.Focus();
             stockDgv.Rows.Clear();
             foreach (var item in service.GetAllItems())
             {
