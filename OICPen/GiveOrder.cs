@@ -32,53 +32,42 @@ namespace OICPen
             {
                 staff = value;
             }
-        }
-     
-     
+        }     
 
         private void GiveOrder_Load(object sender, EventArgs e)
         {
             itemNameTbox.Focus();
             SetDataGridView(itemServis.GetAllItems());
-            //else
-            //{
-            //    clearBtn.Enabled = true;
-            //    allClearBtn.Enabled = true;
-            //    completeBtn.Enabled = true;
-            //}
-
         }
        
         //数量チェック
         private void confirmBtn_Click(object sender, EventArgs e)
-        {       
-            if (quantityTbox.Text != "" && int.Parse(quantityTbox.Text) !=0)
+        {
+            if (quantityTbox.Text != "" && int.Parse(quantityTbox.Text) != 0)
             {
-               
+
                 if (int.Parse(quantityTbox.Text) >= 1000)
                 {
-                    DialogResult result = MessageBox.Show("1000個以上の発注になりますがよろしいですか？","警告",
-                                          MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation,MessageBoxDefaultButton.Button2);
-
+                    DialogResult result = MessageBox.Show("1000個以上の発注になりますがよろしいですか？", "警告",
+                                          MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
                     if (result == DialogResult.No)
                     {
-                        
                         quantityTbox.Focus();
                         return;
                     }
                 }
-                        //検索結果DataGridViewのitemから発注リストDataGridViewに表示される
-                        giveOrderListDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value,int.Parse(quantityTbox.Text));
-
+                //検索結果DataGridViewのitemから発注リストDataGridViewに表示される
+                giveOrderListDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, int.Parse(quantityTbox.Text));
                 quantityTbox.Text = null;
                 clearBtn.Enabled = true;
                 allClearBtn.Enabled = true;
                 completeBtn.Enabled = true;
             }
-
             else
+            {
                 MessageBox.Show("数量を入力して下さい。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    quantityTbox.Text = null;
+                quantityTbox.Text = null;
+            }
         }
 
         private void itemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
@@ -141,7 +130,6 @@ namespace OICPen
 
                 }
             }
-
         }
 
 
@@ -161,8 +149,7 @@ namespace OICPen
                     allClearBtn.Enabled = false;
                     completeBtn.Enabled = false;
                 }
-            }
-       
+            }       
         }
 
         private void allClearBtn_Click(object sender, EventArgs e)
@@ -172,10 +159,12 @@ namespace OICPen
                                  MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
 
             if (result == DialogResult.Yes)
+            {
                 giveOrderListDgv.Rows.Clear();
-            clearBtn.Enabled = false;
-            allClearBtn.Enabled = false;
-            completeBtn.Enabled = false;
+                clearBtn.Enabled = false;
+                allClearBtn.Enabled = false;
+                completeBtn.Enabled = false;
+            }               
         }
 
         private void completeBtn_Click(object sender, EventArgs e)
@@ -196,7 +185,7 @@ namespace OICPen
                 value.ResetText();
             }
             itemsViewDgv.Rows.Clear();
-           SetDataGridView(itemServis.GetAllItems());
+            SetDataGridView(itemServis.GetAllItems());
 
             foreach(DataGridViewRow row in giveOrderListDgv.Rows)
             {
@@ -213,20 +202,13 @@ namespace OICPen
                 orderDetailServis.AddGiveOrderDetail(addGiveOrder);
 
             }
-
-            //orderServis.AddGiveOrderst(addGiverOrderItem);
-
+          
             MessageBox.Show("発注完了しました。","警告");
             giveOrderListDgv.Rows.Clear();
             clearBtn.Enabled = false;
             allClearBtn.Enabled = false;
             completeBtn.Enabled = false;
-
         }
-
-
-
-
 
         /*データグリッドビューセット*/
         void SetDataGridView(List<Models.ItemT> items)
@@ -239,7 +221,6 @@ namespace OICPen
                     item.Name,
                     "0");//在庫表示未完成
             });
-
         }
     }
 }
