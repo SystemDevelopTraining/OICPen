@@ -20,6 +20,7 @@ namespace OICPen
         GiveOrder giveOrder;
         TakeOrder takeOrder;
         Clients clients;
+        Staffs staffs;
         Button beforeBtn = new Button();
         Items items;
 
@@ -31,15 +32,17 @@ namespace OICPen
             BtnSetEnable(true);
             takeOrder.Staff = staff;
             giveOrder.Staff = staff;
-            if(staff.Permission != Models.Permission.God)
+            items.Staff = staff;
+            clients.Staff = staff;
+            staffs.Staff = staff;
+            if (staff.Permission != Models.Permission.God)
             {
                 if (staff.Permission != Models.Permission.ClientControl)
                     BtnSetDisableColor(takeorderBtn);
                 if (staff.Permission != Models.Permission.ProductControl)
                     BtnSetDisableColor(giveorderBtn);
             }
-            items.Staff = staff;
-            clients.Staff = staff;
+
         }
         public Frame()
         {
@@ -47,6 +50,7 @@ namespace OICPen
             giveOrder = new GiveOrder(dbcontext);
             items = new Items(dbcontext);
             clients = new Clients(dbcontext);
+            staffs = new Staffs(dbcontext);
             InitializeComponent();
             timer1.Start();
         }
@@ -99,7 +103,7 @@ namespace OICPen
             BtnSetEnable(false);
             var formList = new Form[] {
                 takeOrder,new Sales(),new Ship(dbcontext),new InComing(dbcontext),
-                giveOrder,new Stock(dbcontext), items,clients,new Staffs(dbcontext)
+                giveOrder,new Stock(dbcontext), items,clients,staffs
             };
             btnList.Zip(formList,(btn,form)=>{
                 btn.Click += (_,__) => ChangeForm(form,btn);
