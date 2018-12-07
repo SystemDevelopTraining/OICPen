@@ -38,8 +38,15 @@ namespace OICPen
 
         private void GiveOrder_Load(object sender, EventArgs e)
         {
+            itemNameTbox.Focus();
             SetDataGridView(itemServis.GetAllItems());
-            
+            //else
+            //{
+            //    clearBtn.Enabled = true;
+            //    allClearBtn.Enabled = true;
+            //    completeBtn.Enabled = true;
+            //}
+
         }
        
         //数量チェック
@@ -64,7 +71,11 @@ namespace OICPen
                         giveOrderListDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value,int.Parse(quantityTbox.Text));
 
                 quantityTbox.Text = null;
+                clearBtn.Enabled = true;
+                allClearBtn.Enabled = true;
+                completeBtn.Enabled = true;
             }
+
             else
                 MessageBox.Show("数量を入力して下さい。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     quantityTbox.Text = null;
@@ -144,6 +155,12 @@ namespace OICPen
             if (result == DialogResult.Yes)
             {
                 giveOrderListDgv.Rows.RemoveAt(giveOrderListDgv.SelectedRows[0].Index);
+                if (giveOrderListDgv.SelectedRows.Count == 0)
+                {
+                    clearBtn.Enabled = false;
+                    allClearBtn.Enabled = false;
+                    completeBtn.Enabled = false;
+                }
             }
        
         }
@@ -156,6 +173,9 @@ namespace OICPen
 
             if (result == DialogResult.Yes)
                 giveOrderListDgv.Rows.Clear();
+            clearBtn.Enabled = false;
+            allClearBtn.Enabled = false;
+            completeBtn.Enabled = false;
         }
 
         private void completeBtn_Click(object sender, EventArgs e)
@@ -198,6 +218,9 @@ namespace OICPen
 
             MessageBox.Show("発注完了しました。","警告");
             giveOrderListDgv.Rows.Clear();
+            clearBtn.Enabled = false;
+            allClearBtn.Enabled = false;
+            completeBtn.Enabled = false;
 
         }
 

@@ -79,7 +79,8 @@
             this.staffsDgv.RowTemplate.Height = 21;
             this.staffsDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.staffsDgv.Size = new System.Drawing.Size(774, 949);
-            this.staffsDgv.TabIndex = 5;
+            this.staffsDgv.TabIndex = 0;
+            this.staffsDgv.TabStop = false;
             this.staffsDgv.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffsDgv_RowEnter);
             // 
             // staffId

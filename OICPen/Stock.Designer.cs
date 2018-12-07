@@ -72,7 +72,7 @@
             this.stockDgv.ReadOnly = true;
             this.stockDgv.RowTemplate.Height = 21;
             this.stockDgv.Size = new System.Drawing.Size(800, 949);
-            this.stockDgv.TabIndex = 6;
+            this.stockDgv.TabIndex = 0;
             this.stockDgv.TabStop = false;
             // 
             // ItemTID

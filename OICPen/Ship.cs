@@ -76,6 +76,9 @@ namespace OICPen
             }
         }
 
-
+        private void Ship_Load(object sender, EventArgs e)
+        {
+            shippedCheckBtn.Focus();
+        }
     }
 }

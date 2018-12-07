@@ -377,14 +377,6 @@
             this.searchClientSubTitleLbl.TabIndex = 33;
             this.searchClientSubTitleLbl.Text = "会員検索";
             // 
-            // phoneNumberMTbox
-            // 
-            this.phoneNumberTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
-            this.phoneNumberTbox.Location = new System.Drawing.Point(1099, 637);
-            this.phoneNumberTbox.Name = "phoneNumberMTbox";
-            this.phoneNumberTbox.Size = new System.Drawing.Size(295, 40);
-            this.phoneNumberTbox.TabIndex = 8;
-            // 
             // postalCodeMTbox
             // 
             this.postalCodeMTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
@@ -397,6 +389,14 @@
             this.postalCodeMTbox.TabIndex = 9;
             this.postalCodeMTbox.Click += new System.EventHandler(this.postalCodeMaskedTbox_Click);
             this.postalCodeMTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.postalCodeMaskedTbox_KeyPress);
+            // 
+            // phoneNumberTbox
+            // 
+            this.phoneNumberTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.phoneNumberTbox.Location = new System.Drawing.Point(1099, 637);
+            this.phoneNumberTbox.Name = "phoneNumberTbox";
+            this.phoneNumberTbox.Size = new System.Drawing.Size(295, 40);
+            this.phoneNumberTbox.TabIndex = 8;
             // 
             // Clients
             // 
@@ -435,6 +435,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Clients";
             this.Text = "Clients";
+            this.Load += new System.EventHandler(this.Clients_Load);
             this.Shown += new System.EventHandler(this.Clients_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.clientsDgv)).EndInit();
             this.ResumeLayout(false);

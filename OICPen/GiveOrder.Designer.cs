@@ -105,7 +105,8 @@
             this.giveOrderListDgv.RowTemplate.Height = 21;
             this.giveOrderListDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.giveOrderListDgv.Size = new System.Drawing.Size(535, 593);
-            this.giveOrderListDgv.TabIndex = 6;
+            this.giveOrderListDgv.TabIndex = 0;
+            this.giveOrderListDgv.TabStop = false;
             // 
             // ID
             // 
@@ -165,6 +166,7 @@
             this.itemsViewDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.itemsViewDgv.Size = new System.Drawing.Size(573, 374);
             this.itemsViewDgv.TabIndex = 0;
+            this.itemsViewDgv.TabStop = false;
             // 
             // itemID
             // 
@@ -189,6 +191,7 @@
             // 
             // allClearBtn
             // 
+            this.allClearBtn.Enabled = false;
             this.allClearBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.allClearBtn.Location = new System.Drawing.Point(1388, 534);
             this.allClearBtn.Name = "allClearBtn";
@@ -200,6 +203,7 @@
             // 
             // completeBtn
             // 
+            this.completeBtn.Enabled = false;
             this.completeBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.completeBtn.Location = new System.Drawing.Point(1388, 639);
             this.completeBtn.Name = "completeBtn";
@@ -259,6 +263,7 @@
             // 
             // clearBtn
             // 
+            this.clearBtn.Enabled = false;
             this.clearBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.clearBtn.Location = new System.Drawing.Point(1388, 432);
             this.clearBtn.Name = "clearBtn";
@@ -294,7 +299,7 @@
             this.allItemBtn.Location = new System.Drawing.Point(609, 854);
             this.allItemBtn.Name = "allItemBtn";
             this.allItemBtn.Size = new System.Drawing.Size(176, 54);
-            this.allItemBtn.TabIndex = 0;
+            this.allItemBtn.TabIndex = 6;
             this.allItemBtn.Text = "全商品一覧";
             this.allItemBtn.UseVisualStyleBackColor = true;
             this.allItemBtn.Click += new System.EventHandler(this.allItemBtn_Click);

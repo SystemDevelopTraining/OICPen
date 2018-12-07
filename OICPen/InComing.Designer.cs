@@ -82,6 +82,7 @@
             this.incomingDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.incomingDgv.Size = new System.Drawing.Size(1310, 949);
             this.incomingDgv.TabIndex = 0;
+            this.incomingDgv.TabStop = false;
             // 
             // GiveOrderID
             // 
@@ -200,6 +201,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InComing";
             this.Text = "InComing";
+            this.Load += new System.EventHandler(this.InComing_Load);
             ((System.ComponentModel.ISupportInitialize)(this.incomingDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);

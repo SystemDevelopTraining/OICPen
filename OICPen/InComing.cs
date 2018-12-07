@@ -115,5 +115,10 @@ namespace OICPen
                 MessageBox.Show("発注が選択されていません", "完了", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
+
+        private void InComing_Load(object sender, EventArgs e)
+        {
+            giveOrderedCheckBtn.Focus();
+        }
     }
 }

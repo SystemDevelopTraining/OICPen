@@ -85,6 +85,7 @@
             this.salesDgv.RowTemplate.Height = 21;
             this.salesDgv.Size = new System.Drawing.Size(1310, 949);
             this.salesDgv.TabIndex = 0;
+            this.salesDgv.TabStop = false;
             // 
             // salesSortBtn
             // 

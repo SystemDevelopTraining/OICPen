@@ -197,6 +197,12 @@ namespace OICPen
                 {
                     completeOrdersDgv.Rows.RemoveAt(this.completeOrdersDgv.SelectedRows[0].Index);
                 }
+                if (completeOrdersDgv.SelectedRows.Count == 0)
+                {
+                    delBtn.Enabled = false;
+                    clearBtn.Enabled = false;
+                    completeBtn.Enabled = false;
+                }
             }
 
         }
@@ -204,10 +210,14 @@ namespace OICPen
         private void clearBtn_Click(object sender, EventArgs e)
         {
             if (completeOrdersDgv.SelectedRows.Count == 0) return;
-            DialogResult m = MessageBox.Show("全部消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo);
+            DialogResult m = MessageBox.Show("全部消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo,MessageBoxIcon.Warning,MessageBoxDefaultButton.Button2);
             if (m == DialogResult.Yes)
             {
-                completeOrdersDgv.Rows.Clear();        
+                completeOrdersDgv.Rows.Clear();
+                delBtn.Enabled = false;
+                clearBtn.Enabled = false;
+                completeBtn.Enabled = false;
+
             }
         }
 
@@ -253,6 +263,9 @@ namespace OICPen
             {
                 i.Enabled = false;
             }
+            delBtn.Enabled = false;
+            clearBtn.Enabled = false;
+            completeBtn.Enabled = false;
 
         }
 

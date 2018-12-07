@@ -59,6 +59,7 @@
             this.shipDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.shipDgv.Size = new System.Drawing.Size(1310, 949);
             this.shipDgv.TabIndex = 0;
+            this.shipDgv.TabStop = false;
             // 
             // ClientTID
             // 
@@ -157,6 +158,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ship";
             this.Text = "Ship";
+            this.Load += new System.EventHandler(this.Ship_Load);
             ((System.ComponentModel.ISupportInitialize)(this.shipDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
