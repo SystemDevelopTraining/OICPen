@@ -33,6 +33,15 @@
             this.deleteBtn = new System.Windows.Forms.Button();
             this.registBtn = new System.Windows.Forms.Button();
             this.itemDgv = new System.Windows.Forms.DataGridView();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.janCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchBtn = new System.Windows.Forms.Button();
             this.itemNameTbox = new System.Windows.Forms.TextBox();
             this.itemNameLbl = new System.Windows.Forms.Label();
@@ -58,15 +67,6 @@
             this.itemRegistLbl = new System.Windows.Forms.Label();
             this.purchasePriceLbl = new System.Windows.Forms.Label();
             this.purchasePriceTbox = new System.Windows.Forms.TextBox();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.janCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.itemDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,7 +89,7 @@
             this.updateBtn.Location = new System.Drawing.Point(1163, 900);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(186, 58);
-            this.updateBtn.TabIndex = 14;
+            this.updateBtn.TabIndex = 13;
             this.updateBtn.Text = "更新";
             this.updateBtn.UseVisualStyleBackColor = true;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
@@ -100,7 +100,7 @@
             this.deleteBtn.Location = new System.Drawing.Point(1355, 900);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(186, 58);
-            this.deleteBtn.TabIndex = 15;
+            this.deleteBtn.TabIndex = 14;
             this.deleteBtn.Text = "削除";
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
@@ -111,7 +111,7 @@
             this.registBtn.Location = new System.Drawing.Point(971, 900);
             this.registBtn.Name = "registBtn";
             this.registBtn.Size = new System.Drawing.Size(186, 58);
-            this.registBtn.TabIndex = 13;
+            this.registBtn.TabIndex = 12;
             this.registBtn.Text = "商品登録";
             this.registBtn.UseVisualStyleBackColor = true;
             this.registBtn.Click += new System.EventHandler(this.registBtn_Click);
@@ -137,8 +137,72 @@
             this.itemDgv.RowTemplate.Height = 21;
             this.itemDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.itemDgv.Size = new System.Drawing.Size(920, 949);
-            this.itemDgv.TabIndex = 5;
+            this.itemDgv.TabIndex = 0;
+            this.itemDgv.TabStop = false;
             this.itemDgv.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemDgv_RowEnter);
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.HeaderText = "ID";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // productName
+            // 
+            this.productName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.productName.HeaderText = "商品名";
+            this.productName.Name = "productName";
+            this.productName.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "ふりがな";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "仕入れ価格";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "販売価格";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // janCode
+            // 
+            this.janCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.janCode.HeaderText = "JAN";
+            this.janCode.Name = "janCode";
+            this.janCode.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "安全在庫数";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "備考";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "登録日";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // searchBtn
             // 
@@ -158,7 +222,7 @@
             this.itemNameTbox.MaxLength = 50;
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(284, 36);
-            this.itemNameTbox.TabIndex = 6;
+            this.itemNameTbox.TabIndex = 5;
             // 
             // itemNameLbl
             // 
@@ -268,7 +332,7 @@
             this.janTbox.MaxLength = 13;
             this.janTbox.Name = "janTbox";
             this.janTbox.Size = new System.Drawing.Size(284, 36);
-            this.janTbox.TabIndex = 10;
+            this.janTbox.TabIndex = 9;
             this.janTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.janTbox_KeyPress);
             // 
             // priceTbox
@@ -278,7 +342,7 @@
             this.priceTbox.MaxLength = 6;
             this.priceTbox.Name = "priceTbox";
             this.priceTbox.Size = new System.Drawing.Size(284, 36);
-            this.priceTbox.TabIndex = 9;
+            this.priceTbox.TabIndex = 8;
             this.priceTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.priceTbox_KeyPress);
             // 
             // noteTbox
@@ -290,7 +354,7 @@
             this.noteTbox.Name = "noteTbox";
             this.noteTbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.noteTbox.Size = new System.Drawing.Size(284, 155);
-            this.noteTbox.TabIndex = 12;
+            this.noteTbox.TabIndex = 11;
             // 
             // safetyStockTbox
             // 
@@ -299,7 +363,7 @@
             this.safetyStockTbox.MaxLength = 6;
             this.safetyStockTbox.Name = "safetyStockTbox";
             this.safetyStockTbox.Size = new System.Drawing.Size(284, 36);
-            this.safetyStockTbox.TabIndex = 11;
+            this.safetyStockTbox.TabIndex = 10;
             this.safetyStockTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.safetyStockTbox_KeyPress);
             // 
             // furiganaTbox
@@ -309,7 +373,7 @@
             this.furiganaTbox.MaxLength = 30;
             this.furiganaTbox.Name = "furiganaTbox";
             this.furiganaTbox.Size = new System.Drawing.Size(284, 36);
-            this.furiganaTbox.TabIndex = 7;
+            this.furiganaTbox.TabIndex = 6;
             // 
             // searchItemNameLbl
             // 
@@ -362,7 +426,8 @@
             this.itemsUpdateBtn.Location = new System.Drawing.Point(938, 21);
             this.itemsUpdateBtn.Name = "itemsUpdateBtn";
             this.itemsUpdateBtn.Size = new System.Drawing.Size(240, 58);
-            this.itemsUpdateBtn.TabIndex = 16;
+            this.itemsUpdateBtn.TabIndex = 0;
+            this.itemsUpdateBtn.TabStop = false;
             this.itemsUpdateBtn.Text = "商品一覧更新";
             this.itemsUpdateBtn.UseVisualStyleBackColor = true;
             this.itemsUpdateBtn.Click += new System.EventHandler(this.itemsUpdateBtn_Click);
@@ -415,71 +480,8 @@
             this.purchasePriceTbox.MaxLength = 6;
             this.purchasePriceTbox.Name = "purchasePriceTbox";
             this.purchasePriceTbox.Size = new System.Drawing.Size(284, 36);
-            this.purchasePriceTbox.TabIndex = 8;
+            this.purchasePriceTbox.TabIndex = 7;
             this.purchasePriceTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.purchasePriceTbox_KeyPress);
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column8.HeaderText = "ID";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // productName
-            // 
-            this.productName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.productName.HeaderText = "商品名";
-            this.productName.Name = "productName";
-            this.productName.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "ふりがな";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "仕入れ価格";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "販売価格";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // janCode
-            // 
-            this.janCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.janCode.HeaderText = "JAN";
-            this.janCode.Name = "janCode";
-            this.janCode.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "安全在庫数";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "備考";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "登録日";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // Items
             // 

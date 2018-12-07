@@ -123,7 +123,7 @@
             this.itemIdTbox.MaxLength = 6;
             this.itemIdTbox.Name = "itemIdTbox";
             this.itemIdTbox.Size = new System.Drawing.Size(104, 36);
-            this.itemIdTbox.TabIndex = 7;
+            this.itemIdTbox.TabIndex = 4;
             this.itemIdTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.itemIdTbox_KeyDown);
             this.itemIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.itemIdTbox_KeyPress);
             // 
@@ -145,7 +145,7 @@
             this.countsTbox.MaxLength = 6;
             this.countsTbox.Name = "countsTbox";
             this.countsTbox.Size = new System.Drawing.Size(101, 36);
-            this.countsTbox.TabIndex = 7;
+            this.countsTbox.TabIndex = 6;
             this.countsTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.countsTbox_KeyDown);
             this.countsTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.countsTbox_KeyPress);
             // 
@@ -168,7 +168,7 @@
             this.clearBtn.Location = new System.Drawing.Point(1365, 564);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(125, 54);
-            this.clearBtn.TabIndex = 12;
+            this.clearBtn.TabIndex = 10;
             this.clearBtn.Text = "クリア";
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
@@ -180,7 +180,7 @@
             this.clientsIdTbox.MaxLength = 6;
             this.clientsIdTbox.Name = "clientsIdTbox";
             this.clientsIdTbox.Size = new System.Drawing.Size(97, 36);
-            this.clientsIdTbox.TabIndex = 7;
+            this.clientsIdTbox.TabIndex = 1;
             this.clientsIdTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.clientsIdTbox_KeyDown);
             this.clientsIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.clientsIdTbox_KeyPress);
             // 
@@ -190,7 +190,7 @@
             this.clientsIdCheckBtn.Location = new System.Drawing.Point(843, 110);
             this.clientsIdCheckBtn.Name = "clientsIdCheckBtn";
             this.clientsIdCheckBtn.Size = new System.Drawing.Size(104, 54);
-            this.clientsIdCheckBtn.TabIndex = 13;
+            this.clientsIdCheckBtn.TabIndex = 2;
             this.clientsIdCheckBtn.Text = "確認";
             this.clientsIdCheckBtn.UseVisualStyleBackColor = true;
             this.clientsIdCheckBtn.Click += new System.EventHandler(this.clientsIdCheckBtn_Click);
@@ -213,7 +213,7 @@
             this.itemNameTbox.MaxLength = 50;
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(218, 36);
-            this.itemNameTbox.TabIndex = 16;
+            this.itemNameTbox.TabIndex = 3;
             this.itemNameTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.itemNameTbox_KeyDown);
             // 
             // clientsIdViewLbl
@@ -249,7 +249,8 @@
             this.itemsViewDgv.RowTemplate.Height = 21;
             this.itemsViewDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.itemsViewDgv.Size = new System.Drawing.Size(487, 313);
-            this.itemsViewDgv.TabIndex = 14;
+            this.itemsViewDgv.TabIndex = 0;
+            this.itemsViewDgv.TabStop = false;
             // 
             // itemID
             // 
@@ -279,7 +280,7 @@
             this.searchBtn.Location = new System.Drawing.Point(300, 517);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(104, 54);
-            this.searchBtn.TabIndex = 19;
+            this.searchBtn.TabIndex = 5;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
@@ -298,7 +299,8 @@
             this.completeOrdersDgv.RowTemplate.Height = 21;
             this.completeOrdersDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.completeOrdersDgv.Size = new System.Drawing.Size(535, 593);
-            this.completeOrdersDgv.TabIndex = 20;
+            this.completeOrdersDgv.TabIndex = 0;
+            this.completeOrdersDgv.TabStop = false;
             // 
             // ItemID2
             // 
@@ -324,7 +326,7 @@
             // clientsPhoneNoViewLbl
             // 
             this.clientsPhoneNoViewLbl.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientsPhoneNoViewLbl.Location = new System.Drawing.Point(517, 373);
+            this.clientsPhoneNoViewLbl.Location = new System.Drawing.Point(511, 321);
             this.clientsPhoneNoViewLbl.Name = "clientsPhoneNoViewLbl";
             this.clientsPhoneNoViewLbl.Size = new System.Drawing.Size(234, 29);
             this.clientsPhoneNoViewLbl.TabIndex = 22;
@@ -337,7 +339,7 @@
             this.confirmBtn.Location = new System.Drawing.Point(582, 717);
             this.confirmBtn.Name = "confirmBtn";
             this.confirmBtn.Size = new System.Drawing.Size(100, 55);
-            this.confirmBtn.TabIndex = 23;
+            this.confirmBtn.TabIndex = 7;
             this.confirmBtn.Text = "確定";
             this.confirmBtn.UseVisualStyleBackColor = true;
             this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
@@ -358,10 +360,10 @@
             // 
             this.delBtn.Enabled = false;
             this.delBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.delBtn.Location = new System.Drawing.Point(1365, 455);
+            this.delBtn.Location = new System.Drawing.Point(1365, 454);
             this.delBtn.Name = "delBtn";
             this.delBtn.Size = new System.Drawing.Size(125, 54);
-            this.delBtn.TabIndex = 25;
+            this.delBtn.TabIndex = 9;
             this.delBtn.Text = "削除";
             this.delBtn.UseVisualStyleBackColor = true;
             this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
@@ -370,7 +372,7 @@
             // 
             this.clientIdLbl.AutoSize = true;
             this.clientIdLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientIdLbl.Location = new System.Drawing.Point(154, 325);
+            this.clientIdLbl.Location = new System.Drawing.Point(159, 251);
             this.clientIdLbl.Name = "clientIdLbl";
             this.clientIdLbl.Size = new System.Drawing.Size(101, 29);
             this.clientIdLbl.TabIndex = 26;
@@ -380,7 +382,7 @@
             // 
             this.clientNameLbl.AutoSize = true;
             this.clientNameLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.clientNameLbl.Location = new System.Drawing.Point(388, 325);
+            this.clientNameLbl.Location = new System.Drawing.Point(393, 251);
             this.clientNameLbl.Name = "clientNameLbl";
             this.clientNameLbl.Size = new System.Drawing.Size(100, 29);
             this.clientNameLbl.TabIndex = 27;
@@ -390,7 +392,7 @@
             // 
             this.phoneNoLbl.AutoSize = true;
             this.phoneNoLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.phoneNoLbl.Location = new System.Drawing.Point(571, 325);
+            this.phoneNoLbl.Location = new System.Drawing.Point(576, 251);
             this.phoneNoLbl.Name = "phoneNoLbl";
             this.phoneNoLbl.Size = new System.Drawing.Size(129, 29);
             this.phoneNoLbl.TabIndex = 28;
@@ -403,7 +405,7 @@
             this.allItemBtn.Location = new System.Drawing.Point(544, 841);
             this.allItemBtn.Name = "allItemBtn";
             this.allItemBtn.Size = new System.Drawing.Size(176, 54);
-            this.allItemBtn.TabIndex = 29;
+            this.allItemBtn.TabIndex = 8;
             this.allItemBtn.Text = "全商品一覧";
             this.allItemBtn.UseVisualStyleBackColor = true;
             this.allItemBtn.Click += new System.EventHandler(this.allItemBtn_Click);
