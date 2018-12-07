@@ -98,18 +98,18 @@ namespace OICPen
             if (
                 !Utility.TextIsEmpty(registerNameTbox.Text)
                 && !Utility.TextIsEmpty(registerNameTbox.Text)
-                && !Utility.TextIsEmpty(furiganaRegTbox.Text)
+                && !Utility.TextIsEmpty(registerFuriganaTbox.Text)
                 && !Utility.TextIsEmpty(passwordLbl.Text)
                 && !Utility.TextIsEmpty(password2Tbox.Text)
                 && passwordTbox != password2Tbox
                 && !Utility.TextIsEmpty(permissionCbox.Text)
                 )
             {
-                if ((errorMessage = Utility.HiraganaCheck(furiganaRegTbox.Text)) == "")
+                if ((errorMessage = Utility.HiraganaCheck(registerFuriganaTbox.Text)) == "")
                 {
                     Servis.AddStaff(TextToStaff());
                     registerNameTbox.Text = "";
-                    furiganaRegTbox.Text = "";
+                    registerFuriganaTbox.Text = "";
                     passwordTbox.Text = "";
                     password2Tbox.Text ="";
                 }
@@ -136,7 +136,7 @@ namespace OICPen
         {
             var staff = new StaffT();
             staff.Name = registerNameTbox.Text;
-            staff.Hurigana = furiganaRegTbox.Text;
+            staff.Hurigana = registerFuriganaTbox.Text;
             staff.Password = passwordTbox.Text;
             staff.Permission = (Permission)permissionCbox.SelectedIndex;
                 return staff;
@@ -151,7 +151,7 @@ namespace OICPen
             idDispLbl.Text = cells[0].Value.ToString();
             var staff = Servis.FindByID(id);
             registerNameTbox.Text = staff.Name;
-            furiganaRegTbox.Text = staff.Hurigana;
+            registerFuriganaTbox.Text = staff.Hurigana;
             permissionCbox.SelectedIndex = (int)cells[3].Value;
             
 
@@ -190,7 +190,7 @@ namespace OICPen
             DataShow();
             idDispLbl.Text = "";
             registerNameTbox.Text = "";
-            furiganaRegTbox.Text = "";
+            registerFuriganaTbox.Text = "";
         }
     }
 }

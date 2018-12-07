@@ -72,7 +72,6 @@ namespace OICPen
                     i.Enabled = true;
                 }
             }
-
         }
 
         private void clientsIdTbox_KeyPress(object sender, KeyPressEventArgs e)
@@ -151,8 +150,6 @@ namespace OICPen
         {
             if (countsTbox.Text != "" && int.Parse(countsTbox.Text) != 0)
             {
-                //    if (int.Parse(countsTbox.Text)>0)
-                //    {
                 if (int.Parse(countsTbox.Text) >= 1000)
                 {
                     DialogResult m = MessageBox.Show("1000個以上の注文になりますがよろしいですか?", "注意", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
@@ -162,8 +159,6 @@ namespace OICPen
                         return;
                     }
                 }
-
-
                 completeOrdersDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, int.Parse(countsTbox.Text));
                 countsTbox.Clear();
                 delBtn.Enabled = true;
@@ -187,11 +182,7 @@ namespace OICPen
         {
             if (completeOrdersDgv.SelectedRows.Count == 0) return;
             DialogResult m = MessageBox.Show("消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo,MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-            if (m ==DialogResult.No)
-            {
-
-            }
-            else
+            if (m ==DialogResult.Yes)
             {
                 if (this.completeOrdersDgv.SelectedRows.Count > 0)
                 {
@@ -204,7 +195,6 @@ namespace OICPen
                     completeBtn.Enabled = false;
                 }
             }
-
         }
 
         private void clearBtn_Click(object sender, EventArgs e)
@@ -217,18 +207,17 @@ namespace OICPen
                 delBtn.Enabled = false;
                 clearBtn.Enabled = false;
                 completeBtn.Enabled = false;
-
             }
         }
 
         private void completeBtn_Click(object sender, EventArgs e)
         {
             if (completeOrdersDgv.SelectedRows.Count == 0) return;
-            var g=new Models.TakeOrderT {
+            var g = new Models.TakeOrderT
+            {
                 TakeOrdDate = DateTime.Now,// 注文日
                 ClientTID = int.Parse(clientsIdViewLbl.Text),// 会員ID
                 StaffTID = staff.StaffTID,  //社員ID
-
             };
 
             var takeOrderId = servis.AddTakeOrder(g).TakeOrderTID;           //完了したら入力されたTextとDGVの内容を消すため
@@ -266,7 +255,6 @@ namespace OICPen
             delBtn.Enabled = false;
             clearBtn.Enabled = false;
             completeBtn.Enabled = false;
-
         }
 
         private void allItemBtn_Click(object sender, EventArgs e)
