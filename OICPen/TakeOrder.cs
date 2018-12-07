@@ -144,6 +144,7 @@ namespace OICPen
 
         private void TakeOrder_Load(object sender, EventArgs e)
         {
+            clientsIdTbox.Focus();
             SetDataGridView(itemservis.GetAllItems());
         }
 
