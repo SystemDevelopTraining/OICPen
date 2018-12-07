@@ -53,8 +53,8 @@
             this.permissionLbl = new System.Windows.Forms.Label();
             this.searchTitleLbl = new System.Windows.Forms.Label();
             this.permissionCbox = new System.Windows.Forms.ComboBox();
-            this.registerNamePhoneticLbl = new System.Windows.Forms.Label();
-            this.registerNamePhoneticTbox = new System.Windows.Forms.TextBox();
+            this.furiganaRegLbl = new System.Windows.Forms.Label();
+            this.furiganaRegTbox = new System.Windows.Forms.TextBox();
             this.furiganaLbl = new System.Windows.Forms.Label();
             this.searchFuriganaTbox = new System.Windows.Forms.TextBox();
             this.registerIdLbl = new System.Windows.Forms.Label();
@@ -323,25 +323,25 @@
             this.permissionCbox.Size = new System.Drawing.Size(176, 37);
             this.permissionCbox.TabIndex = 9;
             // 
-            // registerNamePhoneticLbl
+            // furiganaRegLbl
             // 
-            this.registerNamePhoneticLbl.AutoSize = true;
-            this.registerNamePhoneticLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.registerNamePhoneticLbl.Location = new System.Drawing.Point(977, 608);
-            this.registerNamePhoneticLbl.Name = "registerNamePhoneticLbl";
-            this.registerNamePhoneticLbl.Size = new System.Drawing.Size(159, 33);
-            this.registerNamePhoneticLbl.TabIndex = 0;
-            this.registerNamePhoneticLbl.Text = "ふりがな:";
+            this.furiganaRegLbl.AutoSize = true;
+            this.furiganaRegLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 NP-B", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.furiganaRegLbl.Location = new System.Drawing.Point(977, 608);
+            this.furiganaRegLbl.Name = "furiganaRegLbl";
+            this.furiganaRegLbl.Size = new System.Drawing.Size(159, 33);
+            this.furiganaRegLbl.TabIndex = 0;
+            this.furiganaRegLbl.Text = "ふりがな:";
             // 
-            // registerNamePhoneticTbox
+            // furiganaRegTbox
             // 
-            this.registerNamePhoneticTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.registerNamePhoneticTbox.Location = new System.Drawing.Point(1181, 608);
-            this.registerNamePhoneticTbox.MaxLength = 30;
-            this.registerNamePhoneticTbox.Multiline = true;
-            this.registerNamePhoneticTbox.Name = "registerNamePhoneticTbox";
-            this.registerNamePhoneticTbox.Size = new System.Drawing.Size(320, 33);
-            this.registerNamePhoneticTbox.TabIndex = 6;
+            this.furiganaRegTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.furiganaRegTbox.Location = new System.Drawing.Point(1181, 608);
+            this.furiganaRegTbox.MaxLength = 30;
+            this.furiganaRegTbox.Multiline = true;
+            this.furiganaRegTbox.Name = "furiganaRegTbox";
+            this.furiganaRegTbox.Size = new System.Drawing.Size(320, 33);
+            this.furiganaRegTbox.TabIndex = 6;
             // 
             // furiganaLbl
             // 
@@ -393,8 +393,8 @@
             this.Controls.Add(this.registerIdLbl);
             this.Controls.Add(this.furiganaLbl);
             this.Controls.Add(this.searchFuriganaTbox);
-            this.Controls.Add(this.registerNamePhoneticTbox);
-            this.Controls.Add(this.registerNamePhoneticLbl);
+            this.Controls.Add(this.furiganaRegTbox);
+            this.Controls.Add(this.furiganaRegLbl);
             this.Controls.Add(this.permissionCbox);
             this.Controls.Add(this.searchTitleLbl);
             this.Controls.Add(this.registerTitleLbl);
@@ -449,8 +449,8 @@
         private System.Windows.Forms.Label permissionLbl;
         private System.Windows.Forms.Label searchTitleLbl;
         private System.Windows.Forms.ComboBox permissionCbox;
-        private System.Windows.Forms.Label registerNamePhoneticLbl;
-        private System.Windows.Forms.TextBox registerNamePhoneticTbox;
+        private System.Windows.Forms.Label furiganaRegLbl;
+        private System.Windows.Forms.TextBox furiganaRegTbox;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffId;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffName;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffHurigana;
