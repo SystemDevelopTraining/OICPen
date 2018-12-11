@@ -50,7 +50,7 @@
             this.GiveOrderDetailDgv.Name = "GiveOrderDetailDgv";
             this.GiveOrderDetailDgv.RowHeadersVisible = false;
             this.GiveOrderDetailDgv.RowTemplate.Height = 21;
-            this.GiveOrderDetailDgv.Size = new System.Drawing.Size(454, 292);
+            this.GiveOrderDetailDgv.Size = new System.Drawing.Size(403, 292);
             this.GiveOrderDetailDgv.TabIndex = 0;
             // 
             // TakeOrderDetailTId
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 316);
+            this.ClientSize = new System.Drawing.Size(428, 316);
             this.Controls.Add(this.GiveOrderDetailDgv);
             this.Name = "GiveOrderDetail";
             this.Text = "GiveOrderDetail";

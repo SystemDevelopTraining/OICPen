@@ -142,12 +142,7 @@ namespace OICPen
             giveOrderedCheckBtn.Focus();
         }
 
-        private void incomingDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void va(object sender, DataGridViewCellEventArgs e)
+        private void CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
             if(dgv.Columns[e.ColumnIndex].Name == "Details" && e.ColumnIndex != -1)
