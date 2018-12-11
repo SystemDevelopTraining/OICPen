@@ -17,7 +17,23 @@ namespace OICPen
         private Services.GiveOrderService GiveOrderService;
 
 
-        
+        public StaffT Staff
+        {
+            set
+            {
+                if (value.Permission != Permission.God
+                   && value.Permission != Permission.PurchasingControl)
+                {
+                    registerBtn.Enabled = false;
+                    fixBtn.Enabled = false;
+                }
+                else
+                {
+                    registerBtn.Enabled = true;
+                    fixBtn.Enabled = true;
+                }
+            }
+        }
 
         public InComing(Models.OICPenDbContext dbcontext)
         {
@@ -126,30 +142,7 @@ namespace OICPen
             giveOrderedCheckBtn.Focus();
         }
 
-        public StaffT Staff
-        {
-            set
-            {
-                if (value.Permission != Permission.God
-                    && value.Permission != Permission.PurchasingControl)
-                {
-                    fixBtn.Enabled = false;
-                    registerBtn.Enabled = false;
-                }
-                else
-                {
-                    fixBtn.Enabled = true;
-                    registerBtn.Enabled = true;
-                }
-            }
-        }
-
-        private void incomingDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void va(object sender, DataGridViewCellEventArgs e)
+        private void CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
             if(dgv.Columns[e.ColumnIndex].Name == "Details" && e.ColumnIndex != -1)
