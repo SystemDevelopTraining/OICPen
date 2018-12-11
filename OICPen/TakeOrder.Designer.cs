@@ -233,9 +233,8 @@
             this.clientsNameViewLbl.ForeColor = System.Drawing.Color.Green;
             this.clientsNameViewLbl.Location = new System.Drawing.Point(648, 204);
             this.clientsNameViewLbl.Name = "clientsNameViewLbl";
-            this.clientsNameViewLbl.Size = new System.Drawing.Size(913, 29);
+            this.clientsNameViewLbl.Size = new System.Drawing.Size(0, 29);
             this.clientsNameViewLbl.TabIndex = 18;
-            this.clientsNameViewLbl.Text = "ああああああああああああああああああああああああああああああ";
             this.clientsNameViewLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // itemsViewDgv
@@ -334,9 +333,8 @@
             this.clientsPhoneNoViewLbl.ForeColor = System.Drawing.Color.Green;
             this.clientsPhoneNoViewLbl.Location = new System.Drawing.Point(647, 240);
             this.clientsPhoneNoViewLbl.Name = "clientsPhoneNoViewLbl";
-            this.clientsPhoneNoViewLbl.Size = new System.Drawing.Size(249, 35);
+            this.clientsPhoneNoViewLbl.Size = new System.Drawing.Size(0, 35);
             this.clientsPhoneNoViewLbl.TabIndex = 22;
-            this.clientsPhoneNoViewLbl.Text = "080-1231-1234";
             this.clientsPhoneNoViewLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // confirmBtn
