@@ -8,10 +8,10 @@ namespace OICPen.Models
     {
         public int ClientTID { get; set; } // 会員ID
         [Required]
-        [MaxLength(15)]
-        public string Name { get; set; } // 会員名]
-        [Required]
         [MaxLength(30)]
+        public string Name { get; set; } // 会員名
+        [Required]
+        [MaxLength(50)]
         public string Hurigana { get; set; } // ふりがな
         [Required]
         [MaxLength(50)]
