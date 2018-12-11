@@ -37,7 +37,7 @@ namespace OICPen
             clients.Staff = staff;
             staffs.Staff = staff;
             inComing.Staff = staff;
-            
+
             if (staff.Permission != Models.Permission.God)
             {
                 if (staff.Permission != Models.Permission.ClientControl)

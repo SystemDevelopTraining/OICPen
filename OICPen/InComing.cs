@@ -142,6 +142,24 @@ namespace OICPen
             giveOrderedCheckBtn.Focus();
         }
 
+        public StaffT Staff
+        {
+            set
+            {
+                if (value.Permission != Permission.God
+                    && value.Permission != Permission.PurchasingControl)
+                {
+                    fixBtn.Enabled = false;
+                    registerBtn.Enabled = false;
+                }
+                else
+                {
+                    fixBtn.Enabled = true;
+                    registerBtn.Enabled = true;
+                }
+            }
+        }
+
         private void incomingDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
