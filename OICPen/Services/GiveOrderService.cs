@@ -42,5 +42,10 @@ namespace OICPen.Services
 
             return giveOrders.ToList();
         }
+
+        public GiveOrderT FindByID(int id)
+        {
+            return context.GiveOrders.Single(x => x.GiveOrderTID == id);
+        }
     }
 }
