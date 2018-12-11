@@ -17,23 +17,7 @@ namespace OICPen
         private Services.GiveOrderService GiveOrderService;
 
 
-        public StaffT Staff
-        {
-            set
-            {
-                if (value.Permission != Permission.God
-                   && value.Permission != Permission.PurchasingControl)
-                {
-                    registerBtn.Enabled = false;
-                    fixBtn.Enabled = false;
-                }
-                else
-                {
-                    registerBtn.Enabled = true;
-                    fixBtn.Enabled = true;
-                }
-            }
-        }
+        
 
         public InComing(Models.OICPenDbContext dbcontext)
         {
