@@ -219,7 +219,7 @@
             // 
             this.itemNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.itemNameTbox.Location = new System.Drawing.Point(1163, 464);
-            this.itemNameTbox.MaxLength = 50;
+            this.itemNameTbox.MaxLength = 30;
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(284, 36);
             this.itemNameTbox.TabIndex = 5;
@@ -370,7 +370,7 @@
             // 
             this.furiganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.furiganaTbox.Location = new System.Drawing.Point(1163, 506);
-            this.furiganaTbox.MaxLength = 30;
+            this.furiganaTbox.MaxLength = 50;
             this.furiganaTbox.Name = "furiganaTbox";
             this.furiganaTbox.Size = new System.Drawing.Size(284, 36);
             this.furiganaTbox.TabIndex = 6;
@@ -405,7 +405,7 @@
             // 
             this.searchItemNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.searchItemNameTbox.Location = new System.Drawing.Point(1163, 237);
-            this.searchItemNameTbox.MaxLength = 50;
+            this.searchItemNameTbox.MaxLength = 30;
             this.searchItemNameTbox.Name = "searchItemNameTbox";
             this.searchItemNameTbox.Size = new System.Drawing.Size(284, 36);
             this.searchItemNameTbox.TabIndex = 3;
