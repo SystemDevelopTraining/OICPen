@@ -23,6 +23,7 @@ namespace OICPen
         Staffs staffs;
         Button beforeBtn = new Button();
         Items items;
+        InComing inComing;
 
         public void SetUser(Models.StaffT staff)
         {
@@ -35,6 +36,7 @@ namespace OICPen
             items.Staff = staff;
             clients.Staff = staff;
             staffs.Staff = staff;
+            inComing.Staff = staff;
             if (staff.Permission != Models.Permission.God)
             {
                 if (staff.Permission != Models.Permission.ClientControl)
@@ -51,6 +53,7 @@ namespace OICPen
             items = new Items(dbcontext);
             clients = new Clients(dbcontext);
             staffs = new Staffs(dbcontext);
+            inComing = new InComing(dbcontext);
             InitializeComponent();
             timer1.Start();
         }
@@ -102,7 +105,7 @@ namespace OICPen
             };
             BtnSetEnable(false);
             var formList = new Form[] {
-                takeOrder,new Sales(),new Ship(dbcontext),new InComing(dbcontext),
+                takeOrder,new Sales(),new Ship(dbcontext),inComing,
                 giveOrder,new Stock(dbcontext), items,clients,staffs
             };
             btnList.Zip(formList,(btn,form)=>{
