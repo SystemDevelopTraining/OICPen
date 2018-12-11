@@ -112,7 +112,7 @@
             // 
             // shipProcessingBtn
             // 
-            this.shipProcessingBtn.Font = new System.Drawing.Font("HGS創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.shipProcessingBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.shipProcessingBtn.Location = new System.Drawing.Point(1369, 368);
             this.shipProcessingBtn.Name = "shipProcessingBtn";
             this.shipProcessingBtn.Size = new System.Drawing.Size(224, 58);
@@ -134,7 +134,7 @@
             // 
             // shipFixBtn
             // 
-            this.shipFixBtn.Font = new System.Drawing.Font("HGS創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.shipFixBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.shipFixBtn.Location = new System.Drawing.Point(1374, 490);
             this.shipFixBtn.Name = "shipFixBtn";
             this.shipFixBtn.Size = new System.Drawing.Size(224, 58);

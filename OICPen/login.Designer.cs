@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.StaffIdTbox = new System.Windows.Forms.TextBox();
+            this.staffIdTbox = new System.Windows.Forms.TextBox();
             this.staffPassTbox = new System.Windows.Forms.TextBox();
             this.loginBtn = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.staffPassLbl = new System.Windows.Forms.Label();
+            this.staffIdLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -44,21 +44,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // StaffIdTbox
+            // staffIdTbox
             // 
-            this.StaffIdTbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.staffIdTbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.StaffIdTbox.BackColor = System.Drawing.Color.White;
-            this.StaffIdTbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.StaffIdTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StaffIdTbox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.StaffIdTbox.Location = new System.Drawing.Point(155, 357);
-            this.StaffIdTbox.Name = "StaffIdTbox";
-            this.StaffIdTbox.Size = new System.Drawing.Size(196, 35);
-            this.StaffIdTbox.TabIndex = 1;
-            this.StaffIdTbox.Tag = "";
-            this.StaffIdTbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.staffIdTbox.BackColor = System.Drawing.Color.White;
+            this.staffIdTbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.staffIdTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.staffIdTbox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.staffIdTbox.Location = new System.Drawing.Point(155, 357);
+            this.staffIdTbox.MaxLength = 6;
+            this.staffIdTbox.Name = "staffIdTbox";
+            this.staffIdTbox.Size = new System.Drawing.Size(196, 36);
+            this.staffIdTbox.TabIndex = 1;
+            this.staffIdTbox.Tag = "";
+            this.staffIdTbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // staffPassTbox
             // 
@@ -67,11 +68,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.staffPassTbox.BackColor = System.Drawing.Color.White;
             this.staffPassTbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.staffPassTbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staffPassTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.staffPassTbox.Location = new System.Drawing.Point(155, 553);
+            this.staffPassTbox.MaxLength = 20;
             this.staffPassTbox.Name = "staffPassTbox";
             this.staffPassTbox.PasswordChar = '*';
-            this.staffPassTbox.Size = new System.Drawing.Size(196, 35);
+            this.staffPassTbox.Size = new System.Drawing.Size(196, 36);
             this.staffPassTbox.TabIndex = 2;
             this.staffPassTbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.staffPassTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.staffPassTbox_KeyPress);
@@ -109,9 +111,9 @@
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
             this.splitContainer1.Panel2.BackgroundImage = global::OICPen.Properties.Resources.Login_Screen_Background_Wood_51;
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.splitContainer1.Panel2.Controls.Add(this.label3);
-            this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Panel2.Controls.Add(this.StaffIdTbox);
+            this.splitContainer1.Panel2.Controls.Add(this.staffPassLbl);
+            this.splitContainer1.Panel2.Controls.Add(this.staffIdLbl);
+            this.splitContainer1.Panel2.Controls.Add(this.staffIdTbox);
             this.splitContainer1.Panel2.Controls.Add(this.loginBtn);
             this.splitContainer1.Panel2.Controls.Add(this.staffPassTbox);
             this.splitContainer1.Size = new System.Drawing.Size(1610, 982);
@@ -138,29 +140,29 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
+            // staffPassLbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Location = new System.Drawing.Point(161, 489);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(190, 35);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "パスワード";
+            this.staffPassLbl.AutoSize = true;
+            this.staffPassLbl.BackColor = System.Drawing.Color.Transparent;
+            this.staffPassLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.staffPassLbl.ForeColor = System.Drawing.Color.Snow;
+            this.staffPassLbl.Location = new System.Drawing.Point(161, 489);
+            this.staffPassLbl.Name = "staffPassLbl";
+            this.staffPassLbl.Size = new System.Drawing.Size(190, 35);
+            this.staffPassLbl.TabIndex = 12;
+            this.staffPassLbl.Text = "パスワード";
             // 
-            // label2
+            // staffIdLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(180, 298);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 35);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "社員ID";
+            this.staffIdLbl.AutoSize = true;
+            this.staffIdLbl.BackColor = System.Drawing.Color.Transparent;
+            this.staffIdLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.staffIdLbl.ForeColor = System.Drawing.Color.Snow;
+            this.staffIdLbl.Location = new System.Drawing.Point(180, 298);
+            this.staffIdLbl.Name = "staffIdLbl";
+            this.staffIdLbl.Size = new System.Drawing.Size(121, 35);
+            this.staffIdLbl.TabIndex = 11;
+            this.staffIdLbl.Text = "社員ID";
             // 
             // Login
             // 
@@ -188,13 +190,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox StaffIdTbox;
+        private System.Windows.Forms.TextBox staffIdTbox;
         private System.Windows.Forms.TextBox staffPassTbox;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label staffPassLbl;
+        private System.Windows.Forms.Label staffIdLbl;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
