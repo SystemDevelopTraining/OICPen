@@ -25,13 +25,13 @@ namespace OICPen
         {
             try
             {
-                int staffId = int.Parse(StaffIdTbox.Text);
+                int staffId = int.Parse(staffIdTbox.Text);
                 var staff = service.FindByID(staffId);
                 if (staff.Password == staffPassTbox.Text)
                 {
                     frame.SetUser(staff);
                     staffPassTbox.Enabled = false;
-                    StaffIdTbox.Enabled = false;
+                    staffIdTbox.Enabled = false;
                     loginBtn.Enabled = false;
                     return;
                 }
@@ -60,7 +60,7 @@ namespace OICPen
 
         private void Login_Load(object sender, EventArgs e)
         {
-            StaffIdTbox.Focus();
+            staffIdTbox.Focus();
         }
     }
 }
