@@ -118,7 +118,7 @@
             // itemIdTbox
             // 
             this.itemIdTbox.Enabled = false;
-            this.itemIdTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.itemIdTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemIdTbox.Location = new System.Drawing.Point(260, 511);
             this.itemIdTbox.MaxLength = 6;
             this.itemIdTbox.Name = "itemIdTbox";
@@ -140,7 +140,7 @@
             // countsTbox
             // 
             this.countsTbox.Enabled = false;
-            this.countsTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.countsTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.countsTbox.Location = new System.Drawing.Point(581, 675);
             this.countsTbox.MaxLength = 6;
             this.countsTbox.Name = "countsTbox";
@@ -208,9 +208,9 @@
             // itemNameTbox
             // 
             this.itemNameTbox.Enabled = false;
-            this.itemNameTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.itemNameTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.itemNameTbox.Location = new System.Drawing.Point(260, 454);
-            this.itemNameTbox.MaxLength = 50;
+            this.itemNameTbox.MaxLength = 30;
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(218, 36);
             this.itemNameTbox.TabIndex = 3;
