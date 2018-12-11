@@ -37,7 +37,7 @@ namespace OICPen
         private void GiveOrder_Load(object sender, EventArgs e)
         {
             itemNameTbox.Focus();
-            SetDataGridView(itemServis.GetAllItems());
+            SetDataGridView(itemServis.GetItems());
         }
        
         //数量チェック
@@ -84,7 +84,7 @@ namespace OICPen
 
         private void allItemBtn_Click(object sender, EventArgs e)
         {
-            SetDataGridView(itemServis.GetAllItems());
+            SetDataGridView(itemServis.GetItems());
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -123,6 +123,7 @@ namespace OICPen
             {
                 try
                 {
+                    itemsViewDgv.Rows.Clear();
                     SetDataGridView(processes[currentIndex]());
                 }
                 catch
