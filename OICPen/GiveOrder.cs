@@ -91,9 +91,7 @@ namespace OICPen
             var items = new string[] { itemNameTbox.Text, itemIdTbox.Text};
             var processes = new Func<List<Models.ItemT>>[]
             {
-                 //ふりがなでの検索
-                () =>
-                    itemServis.FindByFurigana(itemNameTbox.Text),
+
                  //名前での検索
                 () =>
                     itemServis.FindByName(itemNameTbox.Text),
