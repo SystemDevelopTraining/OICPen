@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.titleLbl = new System.Windows.Forms.Label();
             this.incomingDgv = new System.Windows.Forms.DataGridView();
-            this.GiveOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiveOrdDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CompleteDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StaffTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giveOrderedCheckBtn = new System.Windows.Forms.Button();
             this.giveOrderLbl = new System.Windows.Forms.Label();
             this.incomingTbox = new System.Windows.Forms.TextBox();
@@ -43,6 +39,11 @@
             this.fixBtn = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.giveOrderCheckBtn = new System.Windows.Forms.Button();
+            this.GiveOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiveOrdDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CompleteDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.incomingDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +73,8 @@
             this.GiveOrderID,
             this.GiveOrdDate,
             this.CompleteDate,
-            this.StaffTID});
+            this.StaffTID,
+            this.Details});
             this.incomingDgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.incomingDgv.Location = new System.Drawing.Point(12, 21);
             this.incomingDgv.MultiSelect = false;
@@ -83,30 +85,7 @@
             this.incomingDgv.Size = new System.Drawing.Size(1310, 949);
             this.incomingDgv.TabIndex = 0;
             this.incomingDgv.TabStop = false;
-            // 
-            // GiveOrderID
-            // 
-            this.GiveOrderID.HeaderText = "ID";
-            this.GiveOrderID.Name = "GiveOrderID";
-            this.GiveOrderID.ReadOnly = true;
-            // 
-            // GiveOrdDate
-            // 
-            this.GiveOrdDate.HeaderText = "発注日";
-            this.GiveOrdDate.Name = "GiveOrdDate";
-            this.GiveOrdDate.ReadOnly = true;
-            // 
-            // CompleteDate
-            // 
-            this.CompleteDate.HeaderText = "入庫日";
-            this.CompleteDate.Name = "CompleteDate";
-            this.CompleteDate.ReadOnly = true;
-            // 
-            // StaffTID
-            // 
-            this.StaffTID.HeaderText = "担当社員";
-            this.StaffTID.Name = "StaffTID";
-            this.StaffTID.ReadOnly = true;
+            this.incomingDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.va);
             // 
             // giveOrderedCheckBtn
             // 
@@ -183,6 +162,36 @@
             this.giveOrderCheckBtn.UseVisualStyleBackColor = true;
             this.giveOrderCheckBtn.Click += new System.EventHandler(this.giveOrderCheckBtn_Click);
             // 
+            // GiveOrderID
+            // 
+            this.GiveOrderID.HeaderText = "ID";
+            this.GiveOrderID.Name = "GiveOrderID";
+            this.GiveOrderID.ReadOnly = true;
+            // 
+            // GiveOrdDate
+            // 
+            this.GiveOrdDate.HeaderText = "発注日";
+            this.GiveOrdDate.Name = "GiveOrdDate";
+            this.GiveOrdDate.ReadOnly = true;
+            // 
+            // CompleteDate
+            // 
+            this.CompleteDate.HeaderText = "入庫日";
+            this.CompleteDate.Name = "CompleteDate";
+            this.CompleteDate.ReadOnly = true;
+            // 
+            // StaffTID
+            // 
+            this.StaffTID.HeaderText = "担当社員";
+            this.StaffTID.Name = "StaffTID";
+            this.StaffTID.ReadOnly = true;
+            // 
+            // Details
+            // 
+            this.Details.HeaderText = "詳細";
+            this.Details.Name = "Details";
+            this.Details.ReadOnly = true;
+            // 
             // InComing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -225,5 +234,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GiveOrdDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn CompleteDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffTID;
+        private System.Windows.Forms.DataGridViewButtonColumn Details;
     }
 }
