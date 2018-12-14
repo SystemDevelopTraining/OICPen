@@ -26,7 +26,6 @@ namespace OICPen
             }
         }
 
-        //private Services.TakeOrderDetailService takeOrderService = new Services.TakeOrderDetailService(new Models.OICPenDbContext());
         public TakeOrder(OICPenDbContext dbcontext)
         {
             servis = new Services.TakeOrderService(dbcontext);
@@ -42,7 +41,6 @@ namespace OICPen
             {
                
                 DialogResult m=MessageBox.Show("会員IDは変更しますが注文もクリアしますか？", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning,MessageBoxDefaultButton.Button3);
-
                 if (m == DialogResult.Cancel)
                     return;
                 else if (m == DialogResult.Yes)
@@ -78,7 +76,6 @@ namespace OICPen
         {
             Utility.TextBoxDigitCheck(clientsIdTbox, e);
         }
-
         private void itemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utility.TextBoxDigitCheck(itemIdTbox, e);
@@ -161,6 +158,7 @@ namespace OICPen
         {
             if (countsTbox.Text != "" && int.Parse(countsTbox.Text) != 0)
             {
+                //数量が1000個超えたら確認為メッセージを表示する機能
                 if (int.Parse(countsTbox.Text) >= 1000)
                 {
                     DialogResult m = MessageBox.Show("1000個以上の注文になりますがよろしいですか?", "注意", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
@@ -170,6 +168,7 @@ namespace OICPen
                         return;
                     }
                 }
+                //data grid view に重複する商品IDあったら、新しい追加ではなく数量だけ変える機能
                 DataGridViewRow duplicate_row = null;
                 try
                 {
@@ -187,23 +186,22 @@ namespace OICPen
                         }
                         else
                         {
-                    DialogResult a=MessageBox.Show("同じ商品がもうすでに追加されています。数量の入れ替えだけであればNoを、数量を足して入れ替えりたいならばYesを押してください", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    DialogResult a=MessageBox.Show("同じ商品がもうすでに追加されています。数量の入れ替えだけであればNoを、数量を足して入れ替えりたいならばYesを押してください", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information,MessageBoxDefaultButton.Button3);
                     if (a == DialogResult.Yes)
-                    {
-                       //Int32.Parse(duplicate_row.Cells[2].Value) +=int.Parse(countsTbox.Text);
-                    }else if (a == DialogResult.No){
+                    {                     
+                        duplicate_row.Cells[2].Value = int.Parse(countsTbox.Text)+ int.Parse(duplicate_row.Cells[2].Value.ToString());
+                    }
+                    else if (a == DialogResult.No){
                         duplicate_row.Cells[2].Value = int.Parse(countsTbox.Text);
                         countsTbox.ResetText();
                     }
-                }
-              
+                }              
             }
             else
             {
                 MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
        }
-
         Models.ItemT TextboxToItemT()
         {
             var item = new Models.ItemT();
