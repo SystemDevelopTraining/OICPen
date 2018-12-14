@@ -34,7 +34,7 @@ namespace UnitTestProject1
             var service = new OICPen.Services.TakeOrderDetailService(mockContext.Object);
             var item = new ItemT { Name = "aa", ItemTID=1,Hurigana="",JAN="",PurchasePrice=1,Price=1,SafetyStock=50,RegistDate= DateTime.Now,IsDeleted=false};
 
-            service.AddTakeOrderDetail(item, 3, new TakeOrderT { TakeOrderTID = 1, ClientTID = 4, TakeOrdDate = DateTime.Now });
+            service.AddTakeOrderDetail(item, 3, new TakeOrderT { TakeOrderTID = 1, ClientTID = 4, TakeOrderDate = DateTime.Now });
 
 
         }

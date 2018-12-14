@@ -49,7 +49,7 @@ namespace OICPen
             orders.ForEach(order =>
                 incomingDgv.Rows.Add(
                     order.GiveOrderTID,
-                    order.GiveOrdDate,
+                    order.GiveOrderDate,
                     order.CompleteDate,
                     order.StaffT.Name
                     )
@@ -58,7 +58,7 @@ namespace OICPen
 
         private void setDataGridView(GiveOrderT order)
         {
-            incomingDgv.Rows.Add(order.GiveOrderTID, order.GiveOrdDate, order.CompleteDate, order.StaffT);
+            incomingDgv.Rows.Add(order.GiveOrderTID, order.GiveOrderDate, order.CompleteDate, order.StaffT);
         }
 
         private void incomingTbox_KeyPress(object sender, KeyPressEventArgs e)

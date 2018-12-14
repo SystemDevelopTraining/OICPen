@@ -10,7 +10,7 @@ namespace OICPen.Models
     {
         public int TakeOrderTID { get; set; } //注文ID
         [Required]
-        public DateTime TakeOrdDate { get; set; } // 注文日
+        public DateTime TakeOrderDate { get; set; } // 注文日
         public DateTime? ShipDate { get; set; } // 出庫日
         [Required]
         public int ClientTID { get; set; } // 会員ID

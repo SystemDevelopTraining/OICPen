@@ -20,7 +20,7 @@ namespace OICPen.Services
         public List<GiveOrderT> GetNotYetInComing()
         {
             var orders = from i in context.GiveOrders
-                         orderby i.GiveOrdDate
+                         orderby i.GiveOrderDate
                          where i.CompleteDate == null
                          select i;
 
