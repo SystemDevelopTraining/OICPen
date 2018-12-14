@@ -220,13 +220,14 @@ namespace OICPen
             addressTbox.Text = cells[5].Value.ToString();
         }
 
-        private void histroryViewBtn_Click(object sender, EventArgs e)
+        private void historyViewBtn_Click(object sender, EventArgs e)
         {
             int idNumber = 0;
             if (int.TryParse(idDispLbl.Text, out idNumber))
             {
                 var f = new ClientPurchaseHistory(servis.FindByID(int.Parse(idNumber.ToString())));
-                f.Show(this);
+                f.ShowDialog();
+
             }
             else
             {
