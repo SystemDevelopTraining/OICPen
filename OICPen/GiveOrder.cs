@@ -37,36 +37,38 @@ namespace OICPen
         private void GiveOrder_Load(object sender, EventArgs e)
         {
             itemNameTbox.Focus();
-            SetDataGridView(itemServis.GetAllItems());
+            SetDataGridView(itemServis.GetItems());
         }
        
         //数量チェック
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            if (quantityTbox.Text != "" && int.Parse(quantityTbox.Text) != 0)
+            if (itemsViewDgv.SelectedRows.Count > 0)
             {
-
-                if (int.Parse(quantityTbox.Text) >= 1000)
+                if (quantityTbox.Text != "" && int.Parse(quantityTbox.Text) != 0)
                 {
-                    DialogResult result = MessageBox.Show("1000個以上の発注になりますがよろしいですか？", "警告",
-                                          MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
-                    if (result == DialogResult.No)
+                    if (int.Parse(quantityTbox.Text) >= 1000)
                     {
-                        quantityTbox.Focus();
-                        return;
+                        DialogResult result = MessageBox.Show("1000個以上の発注になりますがよろしいですか？", "警告",
+                                              MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+                        if (result == DialogResult.No)
+                        {
+                            quantityTbox.Focus();
+                            return;
+                        }
                     }
+                    //検索結果DataGridViewのitemから発注リストDataGridViewに表示される
+                    giveOrderListDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, int.Parse(quantityTbox.Text));
+                    quantityTbox.Text = null;
+                    clearBtn.Enabled = true;
+                    allClearBtn.Enabled = true;
+                    completeBtn.Enabled = true;
                 }
-                //検索結果DataGridViewのitemから発注リストDataGridViewに表示される
-                giveOrderListDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, int.Parse(quantityTbox.Text));
-                quantityTbox.Text = null;
-                clearBtn.Enabled = true;
-                allClearBtn.Enabled = true;
-                completeBtn.Enabled = true;
-            }
-            else
-            {
-                MessageBox.Show("数量を入力して下さい。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                quantityTbox.Text = null;
+                else
+                {
+                    MessageBox.Show("数量を入力して下さい。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    quantityTbox.Text = null;
+                }
             }
         }
 
@@ -82,16 +84,14 @@ namespace OICPen
 
         private void allItemBtn_Click(object sender, EventArgs e)
         {
-            SetDataGridView(itemServis.GetAllItems());
+            SetDataGridView(itemServis.GetItems());
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-
             var items = new string[] { itemNameTbox.Text, itemIdTbox.Text};
             var processes = new Func<List<Models.ItemT>>[]
             {
-
                  //名前での検索
                 () =>
                     itemServis.FindByName(itemNameTbox.Text),
@@ -123,6 +123,7 @@ namespace OICPen
             {
                 try
                 {
+                    itemsViewDgv.Rows.Clear();
                     SetDataGridView(processes[currentIndex]());
                 }
                 catch
@@ -143,11 +144,9 @@ namespace OICPen
             if (result == DialogResult.Yes)
             {
                 giveOrderListDgv.Rows.RemoveAt(giveOrderListDgv.SelectedRows[0].Index);
-                if (giveOrderListDgv.SelectedRows.Count == 0)
+                if (itemsViewDgv.SelectedRows.Count != 0)
                 {
-                    clearBtn.Enabled = false;
-                    allClearBtn.Enabled = false;
-                    completeBtn.Enabled = false;
+                    confirmBtn.Enabled = true;
                 }
             }       
         }

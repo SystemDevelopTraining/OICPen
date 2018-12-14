@@ -35,6 +35,7 @@
             this.GiveOrdDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CompleteDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
             this.giveOrderedCheckBtn = new System.Windows.Forms.Button();
             this.giveOrderLbl = new System.Windows.Forms.Label();
             this.incomingTbox = new System.Windows.Forms.TextBox();
@@ -72,7 +73,8 @@
             this.GiveOrderID,
             this.GiveOrdDate,
             this.CompleteDate,
-            this.StaffTID});
+            this.StaffTID,
+            this.Details});
             this.incomingDgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.incomingDgv.Location = new System.Drawing.Point(12, 21);
             this.incomingDgv.MultiSelect = false;
@@ -83,6 +85,7 @@
             this.incomingDgv.Size = new System.Drawing.Size(1310, 949);
             this.incomingDgv.TabIndex = 0;
             this.incomingDgv.TabStop = false;
+            this.incomingDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellContentClick);
             // 
             // GiveOrderID
             // 
@@ -107,6 +110,12 @@
             this.StaffTID.HeaderText = "担当社員";
             this.StaffTID.Name = "StaffTID";
             this.StaffTID.ReadOnly = true;
+            // 
+            // Details
+            // 
+            this.Details.HeaderText = "詳細";
+            this.Details.Name = "Details";
+            this.Details.ReadOnly = true;
             // 
             // giveOrderedCheckBtn
             // 
@@ -225,5 +234,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GiveOrdDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn CompleteDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn StaffTID;
+        private System.Windows.Forms.DataGridViewButtonColumn Details;
     }
 }

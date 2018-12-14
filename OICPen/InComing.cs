@@ -14,11 +14,32 @@ namespace OICPen
     public partial class InComing : Form
     {
         private Services.InComingService service;
+        private Services.GiveOrderService GiveOrderService;
+
+
+        public StaffT Staff
+        {
+            set
+            {
+                if (value.Permission != Permission.God
+                   && value.Permission != Permission.PurchasingControl)
+                {
+                    registerBtn.Enabled = false;
+                    fixBtn.Enabled = false;
+                }
+                else
+                {
+                    registerBtn.Enabled = true;
+                    fixBtn.Enabled = true;
+                }
+            }
+        }
 
         public InComing(Models.OICPenDbContext dbcontext)
         {
             InitializeComponent();
             service = new Services.InComingService(dbcontext);
+            GiveOrderService = new Services.GiveOrderService(dbcontext);
             setDataGridView(service.GetNotYetInComing());
         }
 
@@ -119,6 +140,16 @@ namespace OICPen
         private void InComing_Load(object sender, EventArgs e)
         {
             giveOrderedCheckBtn.Focus();
+        }
+
+        private void CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if(dgv.Columns[e.ColumnIndex].Name == "Details" && e.ColumnIndex != -1)
+            {
+                var f = new GiveOrderDetail(GiveOrderService.FindByID(int.Parse(dgv.Rows[e.RowIndex].Cells[0].Value.ToString())));
+                    f.Show();
+            }
         }
     }
 }
