@@ -274,6 +274,8 @@ namespace OICPen
             SetDataGridView(itemservis.GetAllItems());
             itemIdTbox.Clear();
             itemNameTbox.Clear();
+            countsTbox.Enabled = true;
+            confirmBtn.Enabled = true;
         }
 
         private void countsTbox_KeyPress(object sender, KeyPressEventArgs e)
