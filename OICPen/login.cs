@@ -23,11 +23,18 @@ namespace OICPen
 
         void login()
         {
+            Models.StaffT staff;
             try
             {
                 int staffId = int.Parse(staffIdTbox.Text);
-                var staff = service.FindByID(staffId);
-                if (staff.Password == staffPassTbox.Text)
+                staff = service.FindByID(staffId);
+            }
+            catch
+            {
+                MessageBox.Show("該当する社員が存在しません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (staff.Password == staffPassTbox.Text)
                 {
                     frame.SetUser(staff);
                     staffPassTbox.Enabled = false;
@@ -38,11 +45,8 @@ namespace OICPen
                 MessageBox.Show("パスワードが違います", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 staffPassTbox.Focus();
                 staffPassTbox.SelectAll();
-            }
-            catch
-            {
-                MessageBox.Show("該当する社員が存在しません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
+           
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
