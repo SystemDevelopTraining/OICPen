@@ -38,9 +38,8 @@ namespace OICPen
 
         private void clientsIdCheckBtn_Click(object sender, EventArgs e)
         {
-            if(completeOrdersDgv.Rows.Count!=0)
-            {
-               
+            if(completeOrdersDgv.Rows.Count!=0 && clientsIdViewLbl.Text!=clientsIdTbox.Text)
+            {               
                 DialogResult m=MessageBox.Show("会員IDは変更しますが注文もクリアしますか？", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning,MessageBoxDefaultButton.Button3);
 
                 if (m == DialogResult.Cancel)
@@ -154,7 +153,8 @@ namespace OICPen
         private void TakeOrder_Load(object sender, EventArgs e)
         {
             clientsIdTbox.Focus();
-            SetDataGridView(itemservis.GetAllItems());    
+            SetDataGridView(itemservis.GetAllItems());
+            completeOrdersDgv.Columns[2].ReadOnly = false;
         }
 
         private void confirmBtn_Click(object sender, EventArgs e)
