@@ -51,6 +51,11 @@
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchBtn = new System.Windows.Forms.Button();
             this.completeOrdersDgv = new System.Windows.Forms.DataGridView();
+            this.ItemID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientsPhoneNoViewLbl = new System.Windows.Forms.Label();
             this.confirmBtn = new System.Windows.Forms.Button();
             this.completeOrdersTitleLbl = new System.Windows.Forms.Label();
@@ -60,11 +65,6 @@
             this.phoneNoLbl = new System.Windows.Forms.Label();
             this.allItemBtn = new System.Windows.Forms.Button();
             this.totalPriceLbl = new System.Windows.Forms.Label();
-            this.ItemID2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ItemName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.completeOrdersDgv)).BeginInit();
             this.SuspendLayout();
@@ -318,6 +318,39 @@
             this.completeOrdersDgv.TabIndex = 0;
             this.completeOrdersDgv.TabStop = false;
             // 
+            // ItemID2
+            // 
+            this.ItemID2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemID2.HeaderText = "商品ID";
+            this.ItemID2.Name = "ItemID2";
+            this.ItemID2.ReadOnly = true;
+            // 
+            // ItemName2
+            // 
+            this.ItemName2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemName2.HeaderText = "商品名";
+            this.ItemName2.Name = "ItemName2";
+            this.ItemName2.ReadOnly = true;
+            // 
+            // quantity2
+            // 
+            this.quantity2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantity2.HeaderText = "数量";
+            this.quantity2.Name = "quantity2";
+            this.quantity2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "価格";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "合計";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
             // clientsPhoneNoViewLbl
             // 
             this.clientsPhoneNoViewLbl.AutoSize = true;
@@ -412,42 +445,9 @@
             this.totalPriceLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.totalPriceLbl.Location = new System.Drawing.Point(1331, 376);
             this.totalPriceLbl.Name = "totalPriceLbl";
-            this.totalPriceLbl.Size = new System.Drawing.Size(100, 29);
+            this.totalPriceLbl.Size = new System.Drawing.Size(86, 29);
             this.totalPriceLbl.TabIndex = 29;
-            this.totalPriceLbl.Text = "合計：";
-            // 
-            // ItemID2
-            // 
-            this.ItemID2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ItemID2.HeaderText = "商品ID";
-            this.ItemID2.Name = "ItemID2";
-            this.ItemID2.ReadOnly = true;
-            // 
-            // ItemName2
-            // 
-            this.ItemName2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ItemName2.HeaderText = "商品名";
-            this.ItemName2.Name = "ItemName2";
-            this.ItemName2.ReadOnly = true;
-            // 
-            // quantity2
-            // 
-            this.quantity2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.quantity2.HeaderText = "数量";
-            this.quantity2.Name = "quantity2";
-            this.quantity2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "価格";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "合計";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.totalPriceLbl.Text = "合計:";
             // 
             // TakeOrder
             // 
