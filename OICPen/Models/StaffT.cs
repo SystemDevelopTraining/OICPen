@@ -6,7 +6,7 @@ namespace OICPen.Models
     {
         public int StaffTID { get; set; } // 社員ID
         [Required]
-        [MaxLength(15)]
+        [MaxLength(30)]
         public string Name { get; set; } // 社員名
         [Required]
         [MaxLength(50)]

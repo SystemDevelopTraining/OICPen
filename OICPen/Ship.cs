@@ -96,7 +96,7 @@ namespace OICPen
             foreach (var orders in loadShip)
             {
                 {
-                    shipDgv.Rows.Add(orders.ClientTID, orders.TakeOrderTID, orders.TakeOrdDate, orders.ShipDate);
+                    shipDgv.Rows.Add(orders.ClientTID, orders.TakeOrderTID, orders.TakeOrderDate, orders.ShipDate);
                 }
             }
         }

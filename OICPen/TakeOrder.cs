@@ -216,7 +216,7 @@ namespace OICPen
             if (completeOrdersDgv.SelectedRows.Count == 0) return;
             var g = new Models.TakeOrderT
             {
-                TakeOrdDate = DateTime.Now,// 注文日
+                TakeOrderDate = DateTime.Now,// 注文日
                 ClientTID = int.Parse(clientsIdViewLbl.Text),// 会員ID
                 StaffTID = staff.StaffTID,  //社員ID
             };

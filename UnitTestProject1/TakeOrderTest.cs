@@ -17,9 +17,9 @@ namespace UnitTestProject1
 
             var data = new List<TakeOrderT>
             {
-                new TakeOrderT {TakeOrdDate = DateTime.Now, ClientTID = 1},
-                new TakeOrderT {TakeOrdDate = DateTime.Now, ClientTID = 2},
-                new TakeOrderT {TakeOrdDate = DateTime.Now, ClientTID = 3,ShipDate=DateTime.Now},
+                new TakeOrderT {TakeOrderDate = DateTime.Now, ClientTID = 1},
+                new TakeOrderT {TakeOrderDate = DateTime.Now, ClientTID = 2},
+                new TakeOrderT {TakeOrderDate = DateTime.Now, ClientTID = 3,ShipDate=DateTime.Now},
             }.AsQueryable();
 
 
@@ -47,7 +47,7 @@ namespace UnitTestProject1
             var noShipedTakeOrders = service.GetNoShipedTakeOrders();
             Assert.AreEqual(noShipedTakeOrders.Count, 2);
 
-            service.AddTakeOrder(new TakeOrderT { ClientTID = 1, TakeOrdDate = DateTime.Now });
+            service.AddTakeOrder(new TakeOrderT { ClientTID = 1, TakeOrderDate = DateTime.Now });
             mockSet.Verify(m => m.Add(It.IsAny<TakeOrderT>()), Times.Exactly(1));
             mockContext.Verify(m => m.SaveChanges(), Times.Exactly(1));
 
