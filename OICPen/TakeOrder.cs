@@ -35,7 +35,7 @@ namespace OICPen
             itemservis = new Services.ItemService(dbcontext);
             takeorderdetailservice = new Services.TakeOrderDetailService(dbcontext);
             InitializeComponent();
-        }
+         }
 
         private void CompleteOrdersDgvClear()
         {
@@ -45,10 +45,9 @@ namespace OICPen
 
         private void clientsIdCheckBtn_Click(object sender, EventArgs e)
         {
-            if (completeOrdersDgv.Rows.Count != 0)
-            {
-
-                DialogResult m = MessageBox.Show("会員IDは変更しますが注文もクリアしますか？", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button3);
+            if(completeOrdersDgv.Rows.Count!=0 && clientsIdViewLbl.Text!=clientsIdTbox.Text)
+            {               
+                DialogResult m=MessageBox.Show("会員IDは変更しますが注文もクリアしますか？", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning,MessageBoxDefaultButton.Button3);
 
                 if (m == DialogResult.Cancel)
                     return;
@@ -73,7 +72,7 @@ namespace OICPen
             }
             else
             {
-                var Controls = new Control[] { itemsViewDgv, completeOrdersDgv, itemNameTbox, itemIdTbox, searchBtn, countsTbox, confirmBtn, allItemBtn, itemsViewDgv, completeOrdersDgv };
+                var Controls = new Control[] { itemsViewDgv, completeOrdersDgv, itemNameTbox, itemIdTbox, searchBtn,allItemBtn,countsTbox,confirmBtn, itemsViewDgv, completeOrdersDgv };
                 foreach (var i in Controls)
                 {
                     i.Enabled = true;
@@ -140,19 +139,30 @@ namespace OICPen
             {
                 try
                 {
+                    itemsViewDgv.Rows.Clear();
                     SetDataGridView(processes[currentIndex]());
                 }
                 catch
-                {
+                {                  
                 }
             }
-
+            if (itemsViewDgv.Rows.Count != 0)
+            {
+                countsTbox.Enabled = true;
+                confirmBtn.Enabled = true;
+            }
+            else
+            {
+                countsTbox.Enabled = false;
+                confirmBtn.Enabled = false;
+            }
         }
 
         private void TakeOrder_Load(object sender, EventArgs e)
         {
             clientsIdTbox.Focus();
             SetDataGridView(itemservis.GetAllItems());
+            completeOrdersDgv.Columns[2].ReadOnly = false;
         }
 
         //注文明細の合計金額設定
@@ -212,7 +222,7 @@ namespace OICPen
             }
             else
             {
-                MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
+                MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
        }
 
@@ -298,6 +308,8 @@ namespace OICPen
             SetDataGridView(itemservis.GetAllItems());
             itemIdTbox.Clear();
             itemNameTbox.Clear();
+            countsTbox.Enabled = true;
+            confirmBtn.Enabled = true;
         }
 
         private void countsTbox_KeyPress(object sender, KeyPressEventArgs e)
@@ -345,7 +357,7 @@ namespace OICPen
             {
                 confirmBtn.PerformClick();
             }
-        }
+        }     
     }
 }
 
