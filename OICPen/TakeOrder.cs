@@ -39,7 +39,8 @@ namespace OICPen
         private void clientsIdCheckBtn_Click(object sender, EventArgs e)
         {
             if(completeOrdersDgv.Rows.Count!=0 && clientsIdViewLbl.Text!=clientsIdTbox.Text)
-            {               
+            {
+               
                 DialogResult m=MessageBox.Show("会員IDは変更しますが注文もクリアしますか？", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning,MessageBoxDefaultButton.Button3);
 
                 if (m == DialogResult.Cancel)
@@ -154,7 +155,6 @@ namespace OICPen
         {
             clientsIdTbox.Focus();
             SetDataGridView(itemservis.GetAllItems());
-            completeOrdersDgv.Columns[2].ReadOnly = false;
         }
 
         private void confirmBtn_Click(object sender, EventArgs e)
@@ -170,11 +170,33 @@ namespace OICPen
                         return;
                     }
                 }
-                completeOrdersDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, int.Parse(countsTbox.Text));
-                countsTbox.Clear();
-                delBtn.Enabled = true;
-                clearBtn.Enabled = true;
-                completeBtn.Enabled = true;
+                DataGridViewRow duplicate_row = null;
+                try
+                {
+                    duplicate_row=completeOrdersDgv.Rows.Cast<DataGridViewRow>().Single(row => row.Cells[0].Value == itemsViewDgv.SelectedRows[0].Cells[0].Value);
+                }
+                catch { }
+                        if (duplicate_row==null)
+                        {
+                            completeOrdersDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, int.Parse(countsTbox.Text));
+                            countsTbox.Clear();
+                            delBtn.Enabled = true;
+                            clearBtn.Enabled = true;
+                            completeBtn.Enabled = true;
+                            countsTbox.ResetText();
+                        }
+                        else
+                        {
+                    DialogResult a=MessageBox.Show("同じ商品がもうすでに追加されています。数量の入れ替えだけであればNoを、数量を足して入れ替えりたいならばYesを押してください", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (a == DialogResult.Yes)
+                    {
+                       //Int32.Parse(duplicate_row.Cells[2].Value) +=int.Parse(countsTbox.Text);
+                    }else if (a == DialogResult.No){
+                        duplicate_row.Cells[2].Value = int.Parse(countsTbox.Text);
+                        countsTbox.ResetText();
+                    }
+                }
+              
             }
             else
             {
@@ -323,9 +345,10 @@ namespace OICPen
             {
                 confirmBtn.PerformClick();
             }
-        }     
+        }
     }
-}
+    }
+
 
   
  
