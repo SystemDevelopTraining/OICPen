@@ -34,7 +34,7 @@ namespace OICPen
             itemservis = new Services.ItemService(dbcontext);
             takeorderdetailservice = new Services.TakeOrderDetailService(dbcontext);
             InitializeComponent();
-        }
+         }
 
         private void clientsIdCheckBtn_Click(object sender, EventArgs e)
         {
@@ -66,7 +66,7 @@ namespace OICPen
             }
             else
             {
-                var Controls = new Control[] { itemsViewDgv, completeOrdersDgv, itemNameTbox, itemIdTbox, searchBtn, countsTbox, confirmBtn, allItemBtn, itemsViewDgv, completeOrdersDgv };
+                var Controls = new Control[] { itemsViewDgv, completeOrdersDgv, itemNameTbox, itemIdTbox, searchBtn,allItemBtn,countsTbox,confirmBtn, itemsViewDgv, completeOrdersDgv };
                 foreach (var i in Controls)
                 {
                     i.Enabled = true;
@@ -132,19 +132,29 @@ namespace OICPen
             {
                 try
                 {
+                    itemsViewDgv.Rows.Clear();
                     SetDataGridView(processes[currentIndex]());
                 }
                 catch
-                {
+                {                  
                 }
             }
-
+            if (itemsViewDgv.Rows.Count != 0)
+            {
+                countsTbox.Enabled = true;
+                confirmBtn.Enabled = true;
+            }
+            else
+            {
+                countsTbox.Enabled = false;
+                confirmBtn.Enabled = false;
+            }
         }
 
         private void TakeOrder_Load(object sender, EventArgs e)
         {
             clientsIdTbox.Focus();
-            SetDataGridView(itemservis.GetAllItems());
+            SetDataGridView(itemservis.GetAllItems());    
         }
 
         private void confirmBtn_Click(object sender, EventArgs e)
@@ -168,7 +178,7 @@ namespace OICPen
             }
             else
             {
-                MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
+                MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
        }
 
@@ -311,7 +321,7 @@ namespace OICPen
             {
                 confirmBtn.PerformClick();
             }
-        }
+        }     
     }
 }
 
