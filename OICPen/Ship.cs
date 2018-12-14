@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OICPen.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,12 +14,37 @@ namespace OICPen
     public partial class Ship : Form
     {
         private Services.TakeOrderService servis;
-
-
         public Ship(Models.OICPenDbContext dbcontext)
         {
             servis = new Services.TakeOrderService(dbcontext);
             InitializeComponent();
+        }
+        public StaffT Staff
+        {
+            set
+            {
+                var staff = value;
+
+                if (staff.Permission != Permission.God
+                    && staff.Permission != Permission.ProductControl)
+                {
+                    shipProcessingBtn.Enabled = false;
+                    shipFixBtn.Enabled = false;
+                }
+                else
+                {
+                    shipProcessingBtn.Enabled = true;
+                    shipFixBtn.Enabled = true;
+                }
+
+            }
+        }
+
+        private void Ship_Load(object sender, EventArgs e)
+        {
+            shippedCheckBtn.Focus();
+            
+           
         }
 
         //出庫済一覧表示
@@ -35,8 +61,7 @@ namespace OICPen
 
         
         private void shipProcessingBtn_Click(object sender, EventArgs e)
-        {
-            
+        { 
             if (shipDgv.SelectedRows.Count == 0) return;
             var cells = shipDgv.SelectedRows[0].Cells;
             if (cells[3].Value == null)
@@ -76,9 +101,6 @@ namespace OICPen
             }
         }
 
-        private void Ship_Load(object sender, EventArgs e)
-        {
-            shippedCheckBtn.Focus();
-        }
+     
     }
 }
