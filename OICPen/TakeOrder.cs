@@ -170,7 +170,8 @@ namespace OICPen
                 }
                 else
                 {
-                    MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
+                    MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    countsTbox.Focus();
                 }
             }
        }
