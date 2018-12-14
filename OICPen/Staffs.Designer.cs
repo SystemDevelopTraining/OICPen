@@ -137,9 +137,8 @@
             this.idTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.idTbox.Location = new System.Drawing.Point(1180, 152);
             this.idTbox.MaxLength = 6;
-            this.idTbox.Multiline = true;
             this.idTbox.Name = "idTbox";
-            this.idTbox.Size = new System.Drawing.Size(320, 33);
+            this.idTbox.Size = new System.Drawing.Size(320, 36);
             this.idTbox.TabIndex = 1;
             this.idTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.idTbox_KeyPress);
             // 
@@ -168,9 +167,8 @@
             this.searchNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.searchNameTbox.Location = new System.Drawing.Point(1180, 220);
             this.searchNameTbox.MaxLength = 15;
-            this.searchNameTbox.Multiline = true;
             this.searchNameTbox.Name = "searchNameTbox";
-            this.searchNameTbox.Size = new System.Drawing.Size(320, 33);
+            this.searchNameTbox.Size = new System.Drawing.Size(320, 36);
             this.searchNameTbox.TabIndex = 2;
             // 
             // fixBtn
@@ -211,9 +209,8 @@
             this.registerNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.registerNameTbox.Location = new System.Drawing.Point(1180, 542);
             this.registerNameTbox.MaxLength = 15;
-            this.registerNameTbox.Multiline = true;
             this.registerNameTbox.Name = "registerNameTbox";
-            this.registerNameTbox.Size = new System.Drawing.Size(320, 33);
+            this.registerNameTbox.Size = new System.Drawing.Size(320, 36);
             this.registerNameTbox.TabIndex = 5;
             // 
             // registerNameLbl
@@ -241,10 +238,9 @@
             this.passwordTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.passwordTbox.Location = new System.Drawing.Point(1180, 674);
             this.passwordTbox.MaxLength = 20;
-            this.passwordTbox.Multiline = true;
             this.passwordTbox.Name = "passwordTbox";
             this.passwordTbox.PasswordChar = '*';
-            this.passwordTbox.Size = new System.Drawing.Size(320, 33);
+            this.passwordTbox.Size = new System.Drawing.Size(320, 36);
             this.passwordTbox.TabIndex = 7;
             // 
             // password2Tbox
@@ -252,10 +248,9 @@
             this.password2Tbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.password2Tbox.Location = new System.Drawing.Point(1180, 740);
             this.password2Tbox.MaxLength = 20;
-            this.password2Tbox.Multiline = true;
             this.password2Tbox.Name = "password2Tbox";
             this.password2Tbox.PasswordChar = '*';
-            this.password2Tbox.Size = new System.Drawing.Size(320, 33);
+            this.password2Tbox.Size = new System.Drawing.Size(320, 36);
             this.password2Tbox.TabIndex = 8;
             // 
             // password2Lbl
@@ -339,9 +334,8 @@
             this.registerFuriganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.registerFuriganaTbox.Location = new System.Drawing.Point(1181, 608);
             this.registerFuriganaTbox.MaxLength = 50;
-            this.registerFuriganaTbox.Multiline = true;
             this.registerFuriganaTbox.Name = "registerFuriganaTbox";
-            this.registerFuriganaTbox.Size = new System.Drawing.Size(320, 33);
+            this.registerFuriganaTbox.Size = new System.Drawing.Size(320, 36);
             this.registerFuriganaTbox.TabIndex = 6;
             // 
             // furiganaLbl
@@ -360,9 +354,8 @@
             this.searchFuriganaTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.searchFuriganaTbox.Location = new System.Drawing.Point(1180, 281);
             this.searchFuriganaTbox.MaxLength = 50;
-            this.searchFuriganaTbox.Multiline = true;
             this.searchFuriganaTbox.Name = "searchFuriganaTbox";
-            this.searchFuriganaTbox.Size = new System.Drawing.Size(320, 33);
+            this.searchFuriganaTbox.Size = new System.Drawing.Size(320, 36);
             this.searchFuriganaTbox.TabIndex = 3;
             // 
             // registerIdLbl
