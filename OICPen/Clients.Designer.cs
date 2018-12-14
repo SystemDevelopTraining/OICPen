@@ -270,7 +270,7 @@
             this.historyViewBtn.TabIndex = 13;
             this.historyViewBtn.Text = "購入履歴";
             this.historyViewBtn.UseVisualStyleBackColor = true;
-            this.historyViewBtn.Click += new System.EventHandler(this.histroryViewBtn_Click);
+            this.historyViewBtn.Click += new System.EventHandler(this.historyViewBtn_Click);
             // 
             // huriganaTbox
             // 
