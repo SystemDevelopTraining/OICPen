@@ -149,26 +149,29 @@ namespace OICPen
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            if (countsTbox.Text != "" && int.Parse(countsTbox.Text) != 0)
+            if (itemsViewDgv.SelectedRows.Count > 0)
             {
-                if (int.Parse(countsTbox.Text) >= 1000)
+                if (countsTbox.Text != "" && int.Parse(countsTbox.Text) != 0)
                 {
-                    DialogResult m = MessageBox.Show("1000個以上の注文になりますがよろしいですか?", "注意", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-                    if (m == DialogResult.Cancel)
+                    if (int.Parse(countsTbox.Text) >= 1000)
                     {
-                        countsTbox.Focus();
-                        return;
+                        DialogResult m = MessageBox.Show("1000個以上の注文になりますがよろしいですか?", "注意", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                        if (m == DialogResult.Cancel)
+                        {
+                            countsTbox.Focus();
+                            return;
+                        }
                     }
+                    completeOrdersDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, int.Parse(countsTbox.Text));
+                    countsTbox.Clear();
+                    delBtn.Enabled = true;
+                    clearBtn.Enabled = true;
+                    completeBtn.Enabled = true;
                 }
-                completeOrdersDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, int.Parse(countsTbox.Text));
-                countsTbox.Clear();
-                delBtn.Enabled = true;
-                clearBtn.Enabled = true;
-                completeBtn.Enabled = true;
-            }
-            else
-            {
-                MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
+                else
+                {
+                    MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OKCancel, MessageBoxIcon.Stop);
+                }
             }
        }
 
