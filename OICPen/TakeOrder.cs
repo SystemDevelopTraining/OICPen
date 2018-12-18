@@ -44,9 +44,14 @@ namespace OICPen
 
         private void clientsIdCheckBtn_Click(object sender, EventArgs e)
         {
+            if (clientsIdTbox.Text == "")
+            {
+                MessageBox.Show("会員IDを入力してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (completeOrdersDgv.Rows.Count != 0 && clientsIdViewLbl.Text != clientsIdTbox.Text)
             {
-
                 DialogResult m = MessageBox.Show("会員IDは変更しますが注文もクリアしますか？", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button3);
                 if (m == DialogResult.Cancel)
                     return;
@@ -131,7 +136,7 @@ namespace OICPen
 
             if (itemCount != 1)
             {
-                MessageBox.Show("検索項目が一つではありません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("検索項目が一つではありません。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -159,7 +164,7 @@ namespace OICPen
         private void TakeOrder_Load(object sender, EventArgs e)
         {
             clientsIdTbox.Focus();
-            SetDataGridView(itemservis.GetAllItems());
+            SetDataGridView(itemservis.GetItems());
         }
 
         //注文明細の合計金額設定
@@ -237,7 +242,7 @@ namespace OICPen
             }
             else
             {
-                MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("数量を確認してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         Models.ItemT TextboxToItemT()
@@ -250,7 +255,7 @@ namespace OICPen
         private void delBtn_Click(object sender, EventArgs e)
         {
             if (completeOrdersDgv.SelectedRows.Count == 0) return;
-            DialogResult m = MessageBox.Show("消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            DialogResult m = MessageBox.Show("削除しますがよろしいですか？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
             if (m == DialogResult.Yes)
             {
                 if (this.completeOrdersDgv.SelectedRows.Count > 0)
@@ -270,7 +275,7 @@ namespace OICPen
         private void clearBtn_Click(object sender, EventArgs e)
         {
             if (completeOrdersDgv.SelectedRows.Count == 0) return;
-            DialogResult m = MessageBox.Show("全部消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            DialogResult m = MessageBox.Show("全部消去しますがよろしいですか？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
             if (m == DialogResult.Yes)
             {
                 CompleteOrdersDgvClear();
@@ -297,13 +302,13 @@ namespace OICPen
                 i.ResetText();
 
             itemsViewDgv.Rows.Clear();
-            SetDataGridView(itemservis.GetAllItems());
+            SetDataGridView(itemservis.GetItems());
 
             
             foreach (var x in GetTakeOrderDetailTFromDgv(takeOrderId))
                 takeorderdetailservice.AddTakeOrderDetail(x);
 
-            MessageBox.Show("注文が承りました", "終了", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("注文を受け付けました。", "注文", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             CompleteOrdersDgvClear();
 
@@ -319,7 +324,7 @@ namespace OICPen
         private void allItemBtn_Click(object sender, EventArgs e)
         {
             itemsViewDgv.Rows.Clear();
-            SetDataGridView(itemservis.GetAllItems());
+            SetDataGridView(itemservis.GetItems());
             itemIdTbox.Clear();
             itemNameTbox.Clear();
             countsTbox.Enabled = true;

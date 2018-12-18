@@ -50,7 +50,7 @@ namespace OICPen
                     if (int.Parse(quantityTbox.Text) >= 1000)
                     {
                         DialogResult result = MessageBox.Show("1000個以上の発注になりますがよろしいですか？", "警告",
-                                              MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+                                              MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
                         if (result == DialogResult.No)
                         {
                             quantityTbox.Focus();
@@ -139,7 +139,7 @@ namespace OICPen
 
             if (itemCount != 1)
             {
-                MessageBox.Show("検索項目が一つではありません", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("検索項目が一つではありません。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -160,8 +160,7 @@ namespace OICPen
         {
            if (giveOrderListDgv.SelectedRows.Count == 0) return;
             
-            DialogResult result = MessageBox.Show("選択された行を削除します","警告",MessageBoxButtons.YesNo,
-                                  MessageBoxIcon.Exclamation,MessageBoxDefaultButton.Button2);
+            DialogResult result = MessageBox.Show("削除しますがよろしいですか？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
 
             if (result == DialogResult.Yes)
             {
@@ -176,8 +175,7 @@ namespace OICPen
         private void allClearBtn_Click(object sender, EventArgs e)
         {
             if (giveOrderListDgv.SelectedRows.Count == 0) return;
-            DialogResult result = MessageBox.Show("発注リストを削除します", "警告", MessageBoxButtons.YesNo,
-                                 MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+            DialogResult result = MessageBox.Show("全部消去しますがよろしいですか？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2));
 
             if (result == DialogResult.Yes)
             {
@@ -221,10 +219,9 @@ namespace OICPen
                     Quantity = quantity,
                 };
                 orderDetailServis.AddGiveOrderDetail(addGiveOrder);
-
             }
           
-            MessageBox.Show("発注完了しました。","警告");
+            MessageBox.Show("発注完了しました。","発注");
             giveOrderListDgv.Rows.Clear();
             clearBtn.Enabled = false;
             allClearBtn.Enabled = false;
