@@ -14,6 +14,8 @@ namespace OICPen
     public partial class Ship : Form
     {
         private Services.TakeOrderService servis;
+        private StaffT staff;
+
         public Ship(Models.OICPenDbContext dbcontext)
         {
             servis = new Services.TakeOrderService(dbcontext);
@@ -23,21 +25,17 @@ namespace OICPen
         {
             set
             {
-                var staff = value;
+                staff = value;
 
-                if (staff.Permission != Permission.God
-                    && staff.Permission != Permission.ProductControl)
-                {
-                    shipProcessingBtn.Enabled = false;
-                    shipFixBtn.Enabled = false;
-                }
-                else
-                {
-                    shipProcessingBtn.Enabled = true;
-                    shipFixBtn.Enabled = true;
-                }
-
+                shipProcessingBtn.Enabled = false;
+                shipFixBtn.Enabled = false;
             }
+        }
+
+        private bool PermissionOk()
+        {
+            return staff.Permission == Permission.God
+                   || staff.Permission == Permission.ProductControl;
         }
 
         private void Ship_Load(object sender, EventArgs e)
@@ -50,18 +48,29 @@ namespace OICPen
         //出庫済一覧表示
         private void shippedCheckBtn_Click(object sender, EventArgs e)
         {
+            if (PermissionOk())
+            {
+                shipProcessingBtn.Enabled = false;
+                shipFixBtn.Enabled = true;
+            }
             SetDataGridView(servis.GetShipedTakeOrders());
         }     
         //　未出庫一覧表示
         private void shipCheckBtn_Click(object sender, EventArgs e)
         {
-            
+            if (PermissionOk())
+            {
+                shipProcessingBtn.Enabled = true;
+                shipFixBtn.Enabled = false;
+            }
+
             SetDataGridView(servis.GetNoShipedTakeOrders());
          }
 
         
         private void shipProcessingBtn_Click(object sender, EventArgs e)
-        { 
+        {
+
             if (shipDgv.SelectedRows.Count == 0) return;
             var cells = shipDgv.SelectedRows[0].Cells;
             if (cells[3].Value == null)
@@ -96,7 +105,7 @@ namespace OICPen
             foreach (var orders in loadShip)
             {
                 {
-                    shipDgv.Rows.Add(orders.ClientTID, orders.TakeOrderTID, orders.TakeOrdDate, orders.ShipDate);
+                    shipDgv.Rows.Add(orders.ClientTID, orders.TakeOrderTID, orders.TakeOrderDate, orders.ShipDate);
                 }
             }
         }

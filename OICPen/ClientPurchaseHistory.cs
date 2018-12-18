@@ -28,7 +28,7 @@ namespace OICPen
                 return;
             foreach (var x in client.TakeOrderTs)
             {
-                dgv.Rows.Add(x.TakeOrderTID,x.TakeOrdDate,x.ShipDate);
+                dgv.Rows.Add(x.TakeOrderTID,x.TakeOrderDate,x.ShipDate);
             }
         }
 
@@ -39,7 +39,7 @@ namespace OICPen
             if (dgv.Columns[e.ColumnIndex].Name == "clientPurchhaseHistoryMoreDetail"&& e.RowIndex!=-1)
             {
                 var f = new ClientPurchhaseHistoryMoreDetail(servis.FindByID(int.Parse(dgv.Rows[e.RowIndex].Cells[0].Value.ToString())));
-                f.Show();
+                f.ShowDialog();
             }
         }
     }

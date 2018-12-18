@@ -47,7 +47,7 @@
             this.addressLbl = new System.Windows.Forms.Label();
             this.addressTbox = new System.Windows.Forms.TextBox();
             this.postalCodeLbl = new System.Windows.Forms.Label();
-            this.histroryViewBtn = new System.Windows.Forms.Button();
+            this.historyViewBtn = new System.Windows.Forms.Button();
             this.huriganaTbox = new System.Windows.Forms.TextBox();
             this.huriganaLbl = new System.Windows.Forms.Label();
             this.searchHuriganaTbox = new System.Windows.Forms.TextBox();
@@ -260,17 +260,17 @@
             this.postalCodeLbl.TabIndex = 18;
             this.postalCodeLbl.Text = "郵便番号:";
             // 
-            // histroryViewBtn
+            // historyViewBtn
             // 
-            this.histroryViewBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.histroryViewBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.histroryViewBtn.Location = new System.Drawing.Point(1317, 912);
-            this.histroryViewBtn.Name = "histroryViewBtn";
-            this.histroryViewBtn.Size = new System.Drawing.Size(186, 58);
-            this.histroryViewBtn.TabIndex = 13;
-            this.histroryViewBtn.Text = "購入履歴";
-            this.histroryViewBtn.UseVisualStyleBackColor = true;
-            this.histroryViewBtn.Click += new System.EventHandler(this.histroryViewBtn_Click);
+            this.historyViewBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.historyViewBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.historyViewBtn.Location = new System.Drawing.Point(1317, 912);
+            this.historyViewBtn.Name = "historyViewBtn";
+            this.historyViewBtn.Size = new System.Drawing.Size(186, 58);
+            this.historyViewBtn.TabIndex = 13;
+            this.historyViewBtn.Text = "購入履歴";
+            this.historyViewBtn.UseVisualStyleBackColor = true;
+            this.historyViewBtn.Click += new System.EventHandler(this.historyViewBtn_Click);
             // 
             // huriganaTbox
             // 
@@ -418,7 +418,7 @@
             this.Controls.Add(this.searchIdLbl);
             this.Controls.Add(this.huriganaTbox);
             this.Controls.Add(this.huriganaLbl);
-            this.Controls.Add(this.histroryViewBtn);
+            this.Controls.Add(this.historyViewBtn);
             this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.phoneNumberLbl);
             this.Controls.Add(this.addressLbl);
@@ -458,7 +458,7 @@
         private System.Windows.Forms.Label addressLbl;
         private System.Windows.Forms.TextBox addressTbox;
         private System.Windows.Forms.Label postalCodeLbl;
-        private System.Windows.Forms.Button histroryViewBtn;
+        private System.Windows.Forms.Button historyViewBtn;
         private System.Windows.Forms.TextBox huriganaTbox;
         private System.Windows.Forms.Label huriganaLbl;
         private System.Windows.Forms.TextBox searchHuriganaTbox;

@@ -15,24 +15,22 @@ namespace OICPen
     {
         private Services.InComingService service;
         private Services.GiveOrderService GiveOrderService;
-
+        private StaffT staff;
 
         public StaffT Staff
         {
             set
             {
-                if (value.Permission != Permission.God
-                   && value.Permission != Permission.PurchasingControl)
-                {
-                    registerBtn.Enabled = false;
-                    fixBtn.Enabled = false;
-                }
-                else
-                {
-                    registerBtn.Enabled = true;
-                    fixBtn.Enabled = true;
-                }
+                staff = value;
+                registerBtn.Enabled = false;
+                fixBtn.Enabled = false;
             }
+        }
+
+        private bool PermissionOk()
+        {
+            return staff.Permission == Permission.God
+                   || staff.Permission == Permission.PurchasingControl;
         }
 
         public InComing(Models.OICPenDbContext dbcontext)
@@ -40,25 +38,27 @@ namespace OICPen
             InitializeComponent();
             service = new Services.InComingService(dbcontext);
             GiveOrderService = new Services.GiveOrderService(dbcontext);
-            setDataGridView(service.GetNotYetInComing());
+            SetDataGridView(service.GetNotYetInComing());
+            registerBtn.Enabled = false;
+            fixBtn.Enabled = false;
         }
 
-        private void setDataGridView(List<GiveOrderT> orders)
+        private void SetDataGridView(List<GiveOrderT> orders)
         {
             incomingDgv.Rows.Clear();
             orders.ForEach(order =>
                 incomingDgv.Rows.Add(
                     order.GiveOrderTID,
-                    order.GiveOrdDate,
+                    order.GiveOrderDate,
                     order.CompleteDate,
                     order.StaffT.Name
                     )
                 );
         }
 
-        private void setDataGridView(GiveOrderT order)
+        private void SetDataGridView(GiveOrderT order)
         {
-            incomingDgv.Rows.Add(order.GiveOrderTID, order.GiveOrdDate, order.CompleteDate, order.StaffT);
+            incomingDgv.Rows.Add(order.GiveOrderTID, order.GiveOrderDate, order.CompleteDate, order.StaffT);
         }
 
         private void incomingTbox_KeyPress(object sender, KeyPressEventArgs e)
@@ -78,7 +78,7 @@ namespace OICPen
                 incomingDgv.Rows.Clear();
                 try
                 {
-                    setDataGridView(service.SearchByGiveOrderId(int.Parse(incomingTbox.Text)));
+                    SetDataGridView(service.SearchByGiveOrderId(int.Parse(incomingTbox.Text)));
                 }
                 catch { }
             }
@@ -86,12 +86,22 @@ namespace OICPen
 
         private void giveOrderedCheckBtn_Click(object sender, EventArgs e)
         {
-            setDataGridView(service.GetAlreadyInComming());
+            if (PermissionOk())
+            {
+                registerBtn.Enabled = false;
+                fixBtn.Enabled = true;
+            }
+            SetDataGridView(service.GetAlreadyInComming());
         }
 
         private void giveOrderCheckBtn_Click(object sender, EventArgs e)
         {
-            setDataGridView(service.GetNotYetInComing());
+            if (PermissionOk())
+            {
+                registerBtn.Enabled = true;
+                fixBtn.Enabled = false;
+            }
+            SetDataGridView(service.GetNotYetInComing());
         }
 
         private void fixBtn_Click(object sender, EventArgs e)
@@ -102,7 +112,7 @@ namespace OICPen
                 {
                     if (MessageBox.Show("入庫を取り消しますか？", "確認", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) {
                         service.CancelInComming(service.SearchByGiveOrderId(int.Parse(incomingDgv.SelectedRows[0].Cells[0].Value.ToString())));
-                        setDataGridView(service.GetNotYetInComing());
+                        SetDataGridView(service.GetNotYetInComing());
                         MessageBox.Show("入庫を取り消しました", "完了", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
                 }else
@@ -124,7 +134,7 @@ namespace OICPen
                 if (incomingDgv.SelectedRows[0].Cells[2].Value == null)
                 {
                     service.InComining(service.SearchByGiveOrderId(int.Parse(incomingDgv.SelectedRows[0].Cells[0].Value.ToString())));
-                    setDataGridView(service.GetNotYetInComing());
+                    SetDataGridView(service.GetNotYetInComing());
                     MessageBox.Show("入庫しました", "完了", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
                 else
@@ -148,7 +158,7 @@ namespace OICPen
             if(dgv.Columns[e.ColumnIndex].Name == "Details" && e.ColumnIndex != -1)
             {
                 var f = new GiveOrderDetail(GiveOrderService.FindByID(int.Parse(dgv.Rows[e.RowIndex].Cells[0].Value.ToString())));
-                    f.Show();
+                    f.ShowDialog();
             }
         }
     }

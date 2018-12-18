@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OICPen.Models;
+using System.Collections;
 
 namespace OICPen
 {
@@ -35,6 +36,12 @@ namespace OICPen
             InitializeComponent();
         }
 
+        private void CompleteOrdersDgvClear()
+        {
+            completeOrdersDgv.Rows.Clear();
+            ComputeTotalPrice();
+        }
+
         private void clientsIdCheckBtn_Click(object sender, EventArgs e)
         {
             if (completeOrdersDgv.Rows.Count != 0 && clientsIdViewLbl.Text != clientsIdTbox.Text)
@@ -44,7 +51,7 @@ namespace OICPen
                 if (m == DialogResult.Cancel)
                     return;
                 else if (m == DialogResult.Yes)
-                    completeOrdersDgv.Rows.Clear();
+                    CompleteOrdersDgvClear();
             }
 
             bool found = false; //clientが確認できなかったらMessageBoxを表示するのに利用される。
@@ -89,7 +96,8 @@ namespace OICPen
                 itemsViewDgv.Rows.Add(
                     item.ItemTID,
                     item.Name,
-                    item.SafetyStock
+                    item.SafetyStock,
+                    item.Price
                     );
             });
         }
@@ -154,6 +162,34 @@ namespace OICPen
             SetDataGridView(itemservis.GetAllItems());
         }
 
+        //注文明細の合計金額設定
+        private void ComputeTotalPrice()
+        {
+            var value =
+                completeOrdersDgv.Rows.Cast<DataGridViewRow>()
+                .Aggregate(0, (acc, row) => acc + int.Parse(row.Cells[4].Value.ToString())
+            );
+            totalPriceLbl.Text = "合計:"+value+ "円";
+        }
+
+        //DGVから注文明細一覧に注文IDを付与して取得する
+        private TakeOrderDetailT[] GetTakeOrderDetailTFromDgv(int takeOrderId = 0)
+        {
+            return completeOrdersDgv.Rows.Cast<DataGridViewRow>().Select(row =>
+            {
+                var itemId = int.Parse(row.Cells[0].Value.ToString());
+                var itemName = row.Cells[1].Value;
+                var quantity = int.Parse(row.Cells[2].Value.ToString());
+
+                return new TakeOrderDetailT
+                {
+                    TakeOrderTID = takeOrderId,
+                    ItemTID = itemId,
+                    Quantity = quantity,
+                };
+            }).ToArray();
+        }
+
         private void confirmBtn_Click(object sender, EventArgs e)
         {
             if (countsTbox.Text != "" && int.Parse(countsTbox.Text) != 0)
@@ -197,6 +233,7 @@ namespace OICPen
                         countsTbox.ResetText();
                     }
                 }
+                ComputeTotalPrice();
             }
             else
             {
@@ -219,6 +256,7 @@ namespace OICPen
                 if (this.completeOrdersDgv.SelectedRows.Count > 0)
                 {
                     completeOrdersDgv.Rows.RemoveAt(this.completeOrdersDgv.SelectedRows[0].Index);
+                    ComputeTotalPrice();
                 }
                 if (completeOrdersDgv.SelectedRows.Count == 0)
                 {
@@ -235,7 +273,7 @@ namespace OICPen
             DialogResult m = MessageBox.Show("全部消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
             if (m == DialogResult.Yes)
             {
-                completeOrdersDgv.Rows.Clear();
+                CompleteOrdersDgvClear();
                 delBtn.Enabled = false;
                 clearBtn.Enabled = false;
                 completeBtn.Enabled = false;
@@ -247,43 +285,32 @@ namespace OICPen
             if (completeOrdersDgv.SelectedRows.Count == 0) return;
             var g = new Models.TakeOrderT
             {
-                TakeOrdDate = DateTime.Now,// 注文日
+                TakeOrderDate = DateTime.Now,// 注文日
                 ClientTID = int.Parse(clientsIdViewLbl.Text),// 会員ID
                 StaffTID = staff.StaffTID,  //社員ID
             };
 
             var takeOrderId = servis.AddTakeOrder(g).TakeOrderTID;           //完了したら入力されたTextとDGVの内容を消すため
             var Controls = new Control[] { clientsIdViewLbl, clientsNameViewLbl, clientsPhoneNoViewLbl, itemNameTbox, itemIdTbox, countsTbox, clientsIdTbox };
+
             foreach (var i in Controls)
-            {
                 i.ResetText();
-            }
+
             itemsViewDgv.Rows.Clear();
             SetDataGridView(itemservis.GetAllItems());
 
-            foreach (DataGridViewRow row in completeOrdersDgv.Rows)
-            {
-                var itemId = int.Parse(row.Cells[0].Value.ToString());
-                var itemName = row.Cells[1].Value;
-                var quantity = int.Parse(row.Cells[2].Value.ToString());
-
-                var a = new Models.TakeOrderDetailT
-                {
-                    TakeOrderTID = takeOrderId,
-                    ItemTID = itemId,
-                    Quantity = quantity,
-                };
-                takeorderdetailservice.AddTakeOrderDetail(a);
-            }
+            
+            foreach (var x in GetTakeOrderDetailTFromDgv(takeOrderId))
+                takeorderdetailservice.AddTakeOrderDetail(x);
 
             MessageBox.Show("注文が承りました", "終了", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            completeOrdersDgv.Rows.Clear();
+            CompleteOrdersDgvClear();
+
             var Controls2 = new Control[] { itemsViewDgv, completeOrdersDgv, itemNameTbox, itemIdTbox, searchBtn, countsTbox, confirmBtn, allItemBtn, completeBtn, clearBtn, delBtn };
             foreach (var i in Controls2)
-            {
                 i.Enabled = false;
-            }
+
             delBtn.Enabled = false;
             clearBtn.Enabled = false;
             completeBtn.Enabled = false;

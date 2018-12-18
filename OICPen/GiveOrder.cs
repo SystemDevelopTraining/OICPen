@@ -172,7 +172,7 @@ namespace OICPen
 
             var addGiverOrderItem = new Models.GiveOrderT
             {
-                GiveOrdDate = DateTime.Now,//発注日
+                GiveOrderDate = DateTime.Now,//発注日
                 StaffTID = staff.StaffTID,//社員ID
                
             };

@@ -16,8 +16,8 @@ namespace UnitTestProject1
         {
             var data = new List<GiveOrderT>
             {
-                new GiveOrderT {GiveOrdDate = DateTime.Now, StaffTID = 1},
-                new GiveOrderT {GiveOrdDate = DateTime.Now, StaffTID = 2}
+                new GiveOrderT {GiveOrderDate = DateTime.Now, StaffTID = 1},
+                new GiveOrderT {GiveOrderDate = DateTime.Now, StaffTID = 2}
             }.AsQueryable();
 
 
