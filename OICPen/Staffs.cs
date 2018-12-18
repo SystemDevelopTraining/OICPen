@@ -227,7 +227,7 @@ namespace OICPen
             int id = int.Parse(idDispLbl.Text);
             if (id == staff.StaffTID)
             {
-                MessageBox.Show("自分自身を修正することはできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("自分自身を削除することはできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             Servis.DeleteStaff(id);
