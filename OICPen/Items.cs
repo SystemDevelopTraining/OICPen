@@ -255,10 +255,14 @@ namespace OICPen
         /*商品の削除*/
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            var dgvItem = DgvToItemT();
-            if (dgvItem == null) return;
-            service.DeleteItem(dgvItem.ItemTID);
-            SetDataGridView(service.GetItems());
+            DialogResult m = MessageBox.Show("削除してもよろしいですか。", "注意", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (m == DialogResult.OK)
+            {
+                var dgvItem = DgvToItemT();
+                if (dgvItem == null) return;
+                service.DeleteItem(dgvItem.ItemTID);
+                SetDataGridView(service.GetItems());
+            }
         }
     }
 }
