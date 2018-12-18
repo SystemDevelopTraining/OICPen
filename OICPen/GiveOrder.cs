@@ -57,12 +57,34 @@ namespace OICPen
                             return;
                         }
                     }
+
                     //検索結果DataGridViewのitemから発注リストDataGridViewに表示される
-                    giveOrderListDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, int.Parse(quantityTbox.Text));
-                    quantityTbox.Text = null;
-                    clearBtn.Enabled = true;
-                    allClearBtn.Enabled = true;
-                    completeBtn.Enabled = true;
+                    //data grid view に重複する商品IDあったら、新しい追加ではなく数量だけ変える機能
+                    DataGridViewRow duplicate_row = null;
+                    try
+                    {
+                        duplicate_row = giveOrderListDgv.Rows.Cast<DataGridViewRow>().Single(row => row.Cells[0].Value == itemsViewDgv.SelectedRows[0].Cells[0].Value);
+                    }
+                    catch { }
+                    var counts = int.Parse(quantityTbox.Text);
+                    if (duplicate_row == null)
+                    {
+                          giveOrderListDgv.Rows.Add(
+                            itemsViewDgv.SelectedRows[0].Cells[0].Value,
+                            itemsViewDgv.SelectedRows[0].Cells[1].Value,
+                            counts
+                        );
+                        quantityTbox.Clear();
+                        allClearBtn.Enabled = true;
+                        clearBtn.Enabled = true;
+                        completeBtn.Enabled = true;
+                        quantityTbox.ResetText();
+                    }
+                    else
+                    {
+                       quantityTbox.ResetText();
+                        duplicate_row.Cells[2].Value = counts;
+                    }                   
                 }
                 else
                 {
