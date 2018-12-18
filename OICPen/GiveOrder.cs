@@ -175,7 +175,7 @@ namespace OICPen
         private void allClearBtn_Click(object sender, EventArgs e)
         {
             if (giveOrderListDgv.SelectedRows.Count == 0) return;
-            DialogResult result = MessageBox.Show("全部消去しますがよろしいですか？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2));
+            DialogResult result = MessageBox.Show("全部消去しますがよろしいですか？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
 
             if (result == DialogResult.Yes)
             {
