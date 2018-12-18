@@ -211,9 +211,16 @@ namespace OICPen
                     duplicate_row = completeOrdersDgv.Rows.Cast<DataGridViewRow>().Single(row => row.Cells[0].Value == itemsViewDgv.SelectedRows[0].Cells[0].Value);
                 }
                 catch { }
+                var counts = int.Parse(countsTbox.Text);
                 if (duplicate_row == null)
                 {
-                    completeOrdersDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, int.Parse(countsTbox.Text));
+                    completeOrdersDgv.Rows.Add(
+                        itemsViewDgv.SelectedRows[0].Cells[0].Value,
+                        itemsViewDgv.SelectedRows[0].Cells[1].Value,
+                        counts,
+                        itemsViewDgv.SelectedRows[0].Cells[3].Value,
+                        int.Parse(itemsViewDgv.SelectedRows[0].Cells[3].Value.ToString()) * counts
+                    );
                     countsTbox.Clear();
                     delBtn.Enabled = true;
                     clearBtn.Enabled = true;
@@ -222,16 +229,9 @@ namespace OICPen
                 }
                 else
                 {
-                    DialogResult a = MessageBox.Show("同じ商品がもうすでに追加されています。数量の入れ替えだけであればNoを、数量を足して入れ替えりたいならばYesを押してください", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information, MessageBoxDefaultButton.Button3);
-                    if (a == DialogResult.Yes)
-                    {
-                        duplicate_row.Cells[2].Value = int.Parse(countsTbox.Text) + int.Parse(duplicate_row.Cells[2].Value.ToString());
-                    }
-                    else if (a == DialogResult.No)
-                    {
-                        duplicate_row.Cells[2].Value = int.Parse(countsTbox.Text);
-                        countsTbox.ResetText();
-                    }
+                    countsTbox.ResetText();
+                    duplicate_row.Cells[2].Value = counts;
+                    duplicate_row.Cells[4].Value = int.Parse(duplicate_row.Cells[3].Value.ToString()) * counts;
                 }
                 ComputeTotalPrice();
             }
