@@ -7,12 +7,14 @@ namespace OICPen
 {
     public partial class Staffs : Form
     {
-        private Services.StaffService Servis ;
+        private Services.StaffService Servis;
+        private StaffT staff;
 
         public StaffT Staff
         {
             set
             {
+                staff = value;
                 if (value.Permission != Permission.God
                    && value.Permission != Permission.StaffControl)
                 {
@@ -37,12 +39,12 @@ namespace OICPen
 
         private void idTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.TextBoxDigitCheck(idTbox,e);
+            Utility.TextBoxDigitCheck(idTbox, e);
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            var staffs = new string[] { searchNameTbox.Text, idTbox.Text,searchFuriganaTbox.Text };
+            var staffs = new string[] { searchNameTbox.Text, idTbox.Text, searchFuriganaTbox.Text };
             var processes = new Func<List<Models.StaffT>>[]
             {
 
@@ -91,10 +93,7 @@ namespace OICPen
                             );
                     });
                 }
-                catch
-                {
-
-                }
+                catch { }
             }
 
         }
@@ -105,6 +104,7 @@ namespace OICPen
             DataShow();
         }
 
+        //社員の登録
         private void registerBtn_Click(object sender, EventArgs e)
         {
             string errorMessage = "";
@@ -124,7 +124,7 @@ namespace OICPen
                     registerNameTbox.Text = "";
                     registerFuriganaTbox.Text = "";
                     passwordTbox.Text = "";
-                    password2Tbox.Text ="";
+                    password2Tbox.Text = "";
                 }
                 else
                 {
@@ -152,12 +152,12 @@ namespace OICPen
             staff.Hurigana = registerFuriganaTbox.Text;
             staff.Password = passwordTbox.Text;
             staff.Permission = (Permission)permissionCbox.SelectedIndex;
-                return staff;
+            return staff;
         }
 
         private void staffsDgv_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             if (staffsDgv.SelectedRows.Count == 0) return;
             var cells = staffsDgv.SelectedRows[0].Cells;
             int id = int.Parse(cells[0].Value.ToString());
@@ -166,13 +166,14 @@ namespace OICPen
             registerNameTbox.Text = staff.Name;
             registerFuriganaTbox.Text = staff.Hurigana;
             permissionCbox.SelectedIndex = (int)cells[3].Value;
-            
+
 
             //Dgvの権限を日本語で表示する。
             //Dgvからパスワードを登録・更新テキストボックスに表示する？
 
         }
 
+        //社員の修正
         private void fixBtn_Click(object sender, EventArgs e)
         {
             if (idDispLbl.Text == "")
@@ -181,16 +182,22 @@ namespace OICPen
                 return;
             }
             int id = int.Parse(idDispLbl.Text);
-            var staff = TextToStaff();
-            
-            var staff2=Servis.FindByID(id);
-            staff2.Name = staff.Name;
-            staff2.Hurigana = staff.Hurigana;
-            staff2.Permission = staff.Permission;
-            Servis.UpdateStaff(staff2);
+            if (id == staff.StaffTID)
+            {
+                MessageBox.Show("自分自身を修正することはできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            var afterStaff = TextToStaff();
+
+            var beforeStaff = Servis.FindByID(id);
+            beforeStaff.Name = afterStaff.Name;
+            beforeStaff.Hurigana = afterStaff.Hurigana;
+            beforeStaff.Permission = afterStaff.Permission;
+            Servis.UpdateStaff(beforeStaff);
             DataShow();
         }
 
+        //社員の削除
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             if (idDispLbl.Text == "")
@@ -199,6 +206,11 @@ namespace OICPen
                 return;
             }
             int id = int.Parse(idDispLbl.Text);
+            if (id == staff.StaffTID)
+            {
+                MessageBox.Show("自分自身を修正することはできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             Servis.DeleteStaff(id);
             DataShow();
             idDispLbl.Text = "";
