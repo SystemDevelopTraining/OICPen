@@ -27,7 +27,6 @@ namespace OICPen
             }
         }
 
-        //private Services.TakeOrderDetailService takeOrderService = new Services.TakeOrderDetailService(new Models.OICPenDbContext());
         public TakeOrder(OICPenDbContext dbcontext)
         {
             servis = new Services.TakeOrderService(dbcontext);
@@ -35,7 +34,7 @@ namespace OICPen
             itemservis = new Services.ItemService(dbcontext);
             takeorderdetailservice = new Services.TakeOrderDetailService(dbcontext);
             InitializeComponent();
-         }
+        }
 
         private void CompleteOrdersDgvClear()
         {
@@ -45,10 +44,10 @@ namespace OICPen
 
         private void clientsIdCheckBtn_Click(object sender, EventArgs e)
         {
-            if(completeOrdersDgv.Rows.Count!=0 && clientsIdViewLbl.Text!=clientsIdTbox.Text)
-            {               
-                DialogResult m=MessageBox.Show("会員IDは変更しますが注文もクリアしますか？", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning,MessageBoxDefaultButton.Button3);
+            if (completeOrdersDgv.Rows.Count != 0 && clientsIdViewLbl.Text != clientsIdTbox.Text)
+            {
 
+                DialogResult m = MessageBox.Show("会員IDは変更しますが注文もクリアしますか？", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button3);
                 if (m == DialogResult.Cancel)
                     return;
                 else if (m == DialogResult.Yes)
@@ -72,7 +71,7 @@ namespace OICPen
             }
             else
             {
-                var Controls = new Control[] { itemsViewDgv, completeOrdersDgv, itemNameTbox, itemIdTbox, searchBtn,allItemBtn,countsTbox,confirmBtn, itemsViewDgv, completeOrdersDgv };
+                var Controls = new Control[] { itemsViewDgv, completeOrdersDgv, itemNameTbox, itemIdTbox, searchBtn, allItemBtn, countsTbox, confirmBtn, itemsViewDgv, completeOrdersDgv };
                 foreach (var i in Controls)
                 {
                     i.Enabled = true;
@@ -84,7 +83,6 @@ namespace OICPen
         {
             Utility.TextBoxDigitCheck(clientsIdTbox, e);
         }
-
         private void itemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utility.TextBoxDigitCheck(itemIdTbox, e);
@@ -143,7 +141,7 @@ namespace OICPen
                     SetDataGridView(processes[currentIndex]());
                 }
                 catch
-                {                  
+                {
                 }
             }
             if (itemsViewDgv.Rows.Count != 0)
@@ -162,7 +160,6 @@ namespace OICPen
         {
             clientsIdTbox.Focus();
             SetDataGridView(itemservis.GetAllItems());
-            completeOrdersDgv.Columns[2].ReadOnly = false;
         }
 
         //注文明細の合計金額設定
@@ -197,6 +194,7 @@ namespace OICPen
         {
             if (countsTbox.Text != "" && int.Parse(countsTbox.Text) != 0)
             {
+                //数量が1000個超えたら確認為メッセージを表示する機能
                 if (int.Parse(countsTbox.Text) >= 1000)
                 {
                     DialogResult m = MessageBox.Show("1000個以上の注文になりますがよろしいですか?", "注意", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
@@ -206,26 +204,42 @@ namespace OICPen
                         return;
                     }
                 }
-                var counts=int.Parse(countsTbox.Text);
-                completeOrdersDgv.Rows.Add(
-                    itemsViewDgv.SelectedRows[0].Cells[0].Value,
-                    itemsViewDgv.SelectedRows[0].Cells[1].Value,
-                    counts,
-                    itemsViewDgv.SelectedRows[0].Cells[3].Value,
-                    int.Parse(itemsViewDgv.SelectedRows[0].Cells[3].Value.ToString())*counts);
+                //data grid view に重複する商品IDあったら、新しい追加ではなく数量だけ変える機能
+                DataGridViewRow duplicate_row = null;
+                try
+                {
+                    duplicate_row = completeOrdersDgv.Rows.Cast<DataGridViewRow>().Single(row => row.Cells[0].Value == itemsViewDgv.SelectedRows[0].Cells[0].Value);
+                }
+                catch { }
+                if (duplicate_row == null)
+                {
+                    completeOrdersDgv.Rows.Add(itemsViewDgv.SelectedRows[0].Cells[0].Value, itemsViewDgv.SelectedRows[0].Cells[1].Value, int.Parse(countsTbox.Text));
+                    countsTbox.Clear();
+                    delBtn.Enabled = true;
+                    clearBtn.Enabled = true;
+                    completeBtn.Enabled = true;
+                    countsTbox.ResetText();
+                }
+                else
+                {
+                    DialogResult a = MessageBox.Show("同じ商品がもうすでに追加されています。数量の入れ替えだけであればNoを、数量を足して入れ替えりたいならばYesを押してください", "注意", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information, MessageBoxDefaultButton.Button3);
+                    if (a == DialogResult.Yes)
+                    {
+                        duplicate_row.Cells[2].Value = int.Parse(countsTbox.Text) + int.Parse(duplicate_row.Cells[2].Value.ToString());
+                    }
+                    else if (a == DialogResult.No)
+                    {
+                        duplicate_row.Cells[2].Value = int.Parse(countsTbox.Text);
+                        countsTbox.ResetText();
+                    }
+                }
                 ComputeTotalPrice();
-
-                countsTbox.Clear();
-                delBtn.Enabled = true;
-                clearBtn.Enabled = true;
-                completeBtn.Enabled = true;
             }
             else
             {
                 MessageBox.Show("数量をもう一度確認のうえ入力してください！", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
-       }
-
+        }
         Models.ItemT TextboxToItemT()
         {
             var item = new Models.ItemT();
@@ -236,8 +250,8 @@ namespace OICPen
         private void delBtn_Click(object sender, EventArgs e)
         {
             if (completeOrdersDgv.SelectedRows.Count == 0) return;
-            DialogResult m = MessageBox.Show("消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo,MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-            if (m ==DialogResult.Yes)
+            DialogResult m = MessageBox.Show("消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if (m == DialogResult.Yes)
             {
                 if (this.completeOrdersDgv.SelectedRows.Count > 0)
                 {
@@ -256,7 +270,7 @@ namespace OICPen
         private void clearBtn_Click(object sender, EventArgs e)
         {
             if (completeOrdersDgv.SelectedRows.Count == 0) return;
-            DialogResult m = MessageBox.Show("全部消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo,MessageBoxIcon.Warning,MessageBoxDefaultButton.Button2);
+            DialogResult m = MessageBox.Show("全部消去されてしまいますが、よろしいですか？", "注意!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
             if (m == DialogResult.Yes)
             {
                 CompleteOrdersDgvClear();
@@ -357,9 +371,10 @@ namespace OICPen
             {
                 confirmBtn.PerformClick();
             }
-        }     
+        }
     }
 }
+
 
   
  
