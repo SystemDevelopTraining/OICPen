@@ -159,7 +159,7 @@ namespace OICPen
         private void TakeOrder_Load(object sender, EventArgs e)
         {
             clientsIdTbox.Focus();
-            SetDataGridView(itemservis.GetAllItems());
+            SetDataGridView(itemservis.GetItems());
         }
 
         //注文明細の合計金額設定
@@ -297,7 +297,7 @@ namespace OICPen
                 i.ResetText();
 
             itemsViewDgv.Rows.Clear();
-            SetDataGridView(itemservis.GetAllItems());
+            SetDataGridView(itemservis.GetItems());
 
             
             foreach (var x in GetTakeOrderDetailTFromDgv(takeOrderId))
@@ -319,7 +319,7 @@ namespace OICPen
         private void allItemBtn_Click(object sender, EventArgs e)
         {
             itemsViewDgv.Rows.Clear();
-            SetDataGridView(itemservis.GetAllItems());
+            SetDataGridView(itemservis.GetItems());
             itemIdTbox.Clear();
             itemNameTbox.Clear();
             countsTbox.Enabled = true;
