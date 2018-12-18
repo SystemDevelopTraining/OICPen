@@ -114,17 +114,25 @@ namespace OICPen
                 && !Utility.TextIsEmpty(registerFuriganaTbox.Text)
                 && !Utility.TextIsEmpty(passwordLbl.Text)
                 && !Utility.TextIsEmpty(password2Tbox.Text)
-                && passwordTbox != password2Tbox
                 && !Utility.TextIsEmpty(permissionCbox.Text)
                 )
             {
+                if ( passwordTbox.Text != password2Tbox.Text)
+                {
+                    MessageBox.Show("パスワードが一致しません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    passwordTbox.Clear();
+                    password2Tbox.Clear();
+                    return;
+                }
+
                 if ((errorMessage = Utility.HiraganaCheck(registerFuriganaTbox.Text)) == "")
                 {
                     Servis.AddStaff(TextToStaff());
                     registerNameTbox.Text = "";
                     registerFuriganaTbox.Text = "";
                     passwordTbox.Text = "";
-                    password2Tbox.Text = "";
+                    password2Tbox.Text ="";
+                    MessageBox.Show("登録しました", "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -178,7 +186,7 @@ namespace OICPen
         {
             if (idDispLbl.Text == "")
             {
-                MessageBox.Show("社畜を選択しないままの更新はできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("社員を選択しないままの更新はできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             int id = int.Parse(idDispLbl.Text);
@@ -195,6 +203,10 @@ namespace OICPen
             beforeStaff.Permission = afterStaff.Permission;
             Servis.UpdateStaff(beforeStaff);
             DataShow();
+            registerNameTbox.Clear();
+            registerFuriganaTbox.Clear();
+            passwordTbox.Clear();
+            password2Tbox.Clear();
         }
 
         //社員の削除
@@ -202,7 +214,14 @@ namespace OICPen
         {
             if (idDispLbl.Text == "")
             {
-                MessageBox.Show("社畜を選択しないままの削除はできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("社員を選択しないままの削除はできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if(passwordTbox.Text != password2Tbox.Text)
+            {
+                MessageBox.Show("パスワードが一致しません。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                passwordTbox.Clear();
+                password2Tbox.Clear();
                 return;
             }
             int id = int.Parse(idDispLbl.Text);
