@@ -49,6 +49,7 @@
             this.PurchaseHistoryDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PurchaseHistoryDgv.Location = new System.Drawing.Point(0, 0);
             this.PurchaseHistoryDgv.Name = "PurchaseHistoryDgv";
+            this.PurchaseHistoryDgv.ReadOnly = true;
             this.PurchaseHistoryDgv.RowTemplate.Height = 21;
             this.PurchaseHistoryDgv.Size = new System.Drawing.Size(478, 316);
             this.PurchaseHistoryDgv.TabIndex = 0;
@@ -58,21 +59,25 @@
             // 
             this.Column1.HeaderText = "注文ID";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "注文日";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "出庫日";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // clientPurchhaseHistoryMoreDetail
             // 
             this.clientPurchhaseHistoryMoreDetail.HeaderText = "詳細";
             this.clientPurchhaseHistoryMoreDetail.Name = "clientPurchhaseHistoryMoreDetail";
+            this.clientPurchhaseHistoryMoreDetail.ReadOnly = true;
             this.clientPurchhaseHistoryMoreDetail.Text = "詳細へ";
             // 
             // ClientPurchaseHistory

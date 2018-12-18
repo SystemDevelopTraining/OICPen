@@ -49,6 +49,7 @@
             this.MoreDetailDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MoreDetailDgv.Location = new System.Drawing.Point(0, 0);
             this.MoreDetailDgv.Name = "MoreDetailDgv";
+            this.MoreDetailDgv.ReadOnly = true;
             this.MoreDetailDgv.RowTemplate.Height = 21;
             this.MoreDetailDgv.Size = new System.Drawing.Size(448, 304);
             this.MoreDetailDgv.TabIndex = 0;
@@ -57,21 +58,25 @@
             // 
             this.Column1.HeaderText = "注文詳細ID";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "商品ID";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "商品名";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "数量";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // ClientPurchhaseHistoryMoreDetail
             // 
