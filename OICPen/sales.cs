@@ -13,16 +13,7 @@ namespace OICPen
 {
     public partial class Sales : Form
     {
-        private Models.StaffT staff;
         private Services.ItemService service;
-
-        public StaffT Staff
-        {
-            set
-            {
-                staff = value;
-            }
-        }
 
         public Sales(OICPenDbContext dbcontext)
         {
