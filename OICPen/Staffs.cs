@@ -89,6 +89,7 @@ namespace OICPen
                         if ((erroMessage = Utility.HiraganaCheck(searchFuriganaTbox.Text)) != "")
                         {
                             MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
                         }
                     }
                     staffsDgv.Rows.Clear();
