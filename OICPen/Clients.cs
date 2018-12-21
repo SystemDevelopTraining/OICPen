@@ -75,30 +75,10 @@ namespace OICPen
         private void registBtn_Click(object sender, EventArgs e)
         {
             string erroMessage = "";
-/*            var checks = new Func<string,bool>[] {Utility.TextIsEmpty,
-                 PhoneNumberCheck,
-                 PostalCodeCheck,
-                Utility.TextIsEmpty};*/
-            if (!Utility.TextIsEmpty(nameTbox.Text)
-                && PhoneNumberCheck(phoneNumberTbox.Text)
-                && PostalCodeCheck(postalCodeMTbox.Text)
-                &&!Utility.TextIsEmpty(addressTbox.Text))
-            {
-                 if((erroMessage = Utility.HiraganaCheck(huriganaTbox.Text)) == "")
-                {
-                    servis.AddClient(TextToClient());
-                }
-                else
-                {
-                    MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            DataShow();
-        }
-
-        private void updateBtn_Click(object sender, EventArgs e)
-        {
-            string erroMessage = "";
+            /*            var checks = new Func<string,bool>[] {Utility.TextIsEmpty,
+                             PhoneNumberCheck,
+                             PostalCodeCheck,
+                            Utility.TextIsEmpty};*/
             if (!Utility.TextIsEmpty(nameTbox.Text)
                 && PhoneNumberCheck(phoneNumberTbox.Text)
                 && PostalCodeCheck(postalCodeMTbox.Text)
@@ -106,11 +86,41 @@ namespace OICPen
             {
                 if ((erroMessage = Utility.HiraganaCheck(huriganaTbox.Text)) == "")
                 {
+                    servis.AddClient(TextToClient());
+                    DataShow();
+                }
+                else
+                {
+                    MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                //  DataShow();
+                MessageBox.Show("入力されていない項目があります。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            string erroMessage = "";
+            if (   !Utility.TextIsEmpty(nameTbox.Text)
+                && PhoneNumberCheck(phoneNumberTbox.Text)
+                && PostalCodeCheck(postalCodeMTbox.Text)
+                && !Utility.TextIsEmpty(addressTbox.Text))
+            {
+
+                if ((erroMessage = Utility.HiraganaCheck(huriganaTbox.Text)) == "")
+                {
                     int idNumber = 0;
-                    if (int.TryParse(idDispLbl.Text, out idNumber)) {
+                    if (int.TryParse(idDispLbl.Text, out idNumber))      
+                    {
                         var client = TextToClient();
                         client.ClientTID = int.Parse(idNumber.ToString());
                         servis.UpdateItem(client);
+
+                        DataShow();
                     }
                     else
                     {
@@ -122,7 +132,12 @@ namespace OICPen
                     MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            DataShow();
+            else
+            {
+                
+                MessageBox.Show("入力されていない項目があります。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private bool PhoneNumberCheck(string text)
@@ -265,6 +280,11 @@ namespace OICPen
         private void Clients_Load(object sender, EventArgs e)
         {
             searchNameTbox.Focus();
+        }
+
+        private void searchIdTbox_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Utility.TextBoxDigitCheck(searchIdTbox,e);
         }
     }
 }

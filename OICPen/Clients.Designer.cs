@@ -276,7 +276,7 @@
             // 
             this.huriganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
             this.huriganaTbox.Location = new System.Drawing.Point(1099, 592);
-            this.huriganaTbox.MaxLength = 30;
+            this.huriganaTbox.MaxLength = 50;
             this.huriganaTbox.Name = "huriganaTbox";
             this.huriganaTbox.Size = new System.Drawing.Size(404, 40);
             this.huriganaTbox.TabIndex = 7;
@@ -295,7 +295,7 @@
             // 
             this.searchHuriganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
             this.searchHuriganaTbox.Location = new System.Drawing.Point(1105, 283);
-            this.searchHuriganaTbox.MaxLength = 30;
+            this.searchHuriganaTbox.MaxLength = 50;
             this.searchHuriganaTbox.Name = "searchHuriganaTbox";
             this.searchHuriganaTbox.Size = new System.Drawing.Size(404, 40);
             this.searchHuriganaTbox.TabIndex = 3;
@@ -327,6 +327,7 @@
             this.searchIdTbox.Name = "searchIdTbox";
             this.searchIdTbox.Size = new System.Drawing.Size(108, 40);
             this.searchIdTbox.TabIndex = 2;
+            this.searchIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchIdTbox_KeyPress_1);
             // 
             // searchNameLbl
             // 
@@ -394,6 +395,7 @@
             // 
             this.phoneNumberTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
             this.phoneNumberTbox.Location = new System.Drawing.Point(1099, 637);
+            this.phoneNumberTbox.MaxLength = 15;
             this.phoneNumberTbox.Name = "phoneNumberTbox";
             this.phoneNumberTbox.Size = new System.Drawing.Size(295, 40);
             this.phoneNumberTbox.TabIndex = 8;
