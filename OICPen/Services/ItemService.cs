@@ -69,6 +69,7 @@ namespace OICPen.Services
             item.Hurigana = i.Hurigana;
             item.JAN = i.JAN;
             item.PurchasePrice = i.PurchasePrice;
+            item.Price = i.Price;
             item.SafetyStock = i.SafetyStock;
             item.Note = i.Note;
             context.SaveChanges();
