@@ -266,5 +266,15 @@ namespace OICPen
             registerFuriganaTbox.Text = "";
             permissionCbox.SelectedIndex = -1;
         }
+
+        private void searchFuriganaTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaCheckKeyPress(searchFuriganaTbox, e);
+        }
+
+        private void registerFuriganaTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaCheckKeyPress(registerFuriganaTbox, e);
+        }
     }
 }

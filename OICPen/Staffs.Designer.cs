@@ -332,11 +332,13 @@
             // registerFuriganaTbox
             // 
             this.registerFuriganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.registerFuriganaTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.registerFuriganaTbox.Location = new System.Drawing.Point(1181, 608);
             this.registerFuriganaTbox.MaxLength = 50;
             this.registerFuriganaTbox.Name = "registerFuriganaTbox";
             this.registerFuriganaTbox.Size = new System.Drawing.Size(320, 36);
             this.registerFuriganaTbox.TabIndex = 6;
+            this.registerFuriganaTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.registerFuriganaTbox_KeyPress);
             // 
             // furiganaLbl
             // 
@@ -357,6 +359,7 @@
             this.searchFuriganaTbox.Name = "searchFuriganaTbox";
             this.searchFuriganaTbox.Size = new System.Drawing.Size(320, 36);
             this.searchFuriganaTbox.TabIndex = 3;
+            this.searchFuriganaTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchFuriganaTbox_KeyPress);
             // 
             // registerIdLbl
             // 

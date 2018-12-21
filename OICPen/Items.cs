@@ -263,6 +263,11 @@ namespace OICPen
                 TextboxDelete();
             }
         }
+        
+        private void furiganaTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaCheckKeyPress(furiganaTbox, e);
+        }
 
         /*テキストボックスを削除する*/
         private void TextboxDelete()
