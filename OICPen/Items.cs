@@ -256,5 +256,10 @@ namespace OICPen
                 SetDataGridView(service.GetItems());
             }
         }
+
+        private void furiganaTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaCheckKeyPress(furiganaTbox, e);
+        }
     }
 }
