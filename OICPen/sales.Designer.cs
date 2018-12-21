@@ -32,14 +32,14 @@
             this.titleLbl = new System.Windows.Forms.Label();
             this.salesDisplayBtn = new System.Windows.Forms.Button();
             this.salesDgv = new System.Windows.Forms.DataGridView();
-            this.salesSortBtn = new System.Windows.Forms.Button();
-            this.salesStartDtp = new System.Windows.Forms.DateTimePicker();
-            this.salesAndLbl = new System.Windows.Forms.Label();
-            this.salesBetweenLbl = new System.Windows.Forms.Label();
             this.itemId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesSortBtn = new System.Windows.Forms.Button();
+            this.salesStartDtp = new System.Windows.Forms.DateTimePicker();
+            this.salesAndLbl = new System.Windows.Forms.Label();
+            this.salesBetweenLbl = new System.Windows.Forms.Label();
             salesEndDtp = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.salesDgv)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +97,34 @@
             this.salesDgv.TabIndex = 0;
             this.salesDgv.TabStop = false;
             // 
+            // itemId
+            // 
+            this.itemId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemId.HeaderText = "商品ID";
+            this.itemId.Name = "itemId";
+            this.itemId.ReadOnly = true;
+            // 
+            // itemName
+            // 
+            this.itemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemName.HeaderText = "商品名";
+            this.itemName.Name = "itemName";
+            this.itemName.ReadOnly = true;
+            // 
+            // itemSales
+            // 
+            this.itemSales.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemSales.HeaderText = "売上";
+            this.itemSales.Name = "itemSales";
+            this.itemSales.ReadOnly = true;
+            // 
+            // gain
+            // 
+            this.gain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gain.HeaderText = "利益";
+            this.gain.Name = "gain";
+            this.gain.ReadOnly = true;
+            // 
             // salesSortBtn
             // 
             this.salesSortBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -136,34 +164,6 @@
             this.salesBetweenLbl.Size = new System.Drawing.Size(147, 33);
             this.salesBetweenLbl.TabIndex = 0;
             this.salesBetweenLbl.Text = "指定期間";
-            // 
-            // itemId
-            // 
-            this.itemId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.itemId.HeaderText = "商品ID";
-            this.itemId.Name = "itemId";
-            this.itemId.ReadOnly = true;
-            // 
-            // itemName
-            // 
-            this.itemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.itemName.HeaderText = "商品名";
-            this.itemName.Name = "itemName";
-            this.itemName.ReadOnly = true;
-            // 
-            // itemSales
-            // 
-            this.itemSales.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.itemSales.HeaderText = "売上";
-            this.itemSales.Name = "itemSales";
-            this.itemSales.ReadOnly = true;
-            // 
-            // gain
-            // 
-            this.gain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.gain.HeaderText = "利益";
-            this.gain.Name = "gain";
-            this.gain.ReadOnly = true;
             // 
             // Sales
             // 
