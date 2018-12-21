@@ -55,11 +55,16 @@ namespace OICPen
         private void purchasePriceTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utility.TextBoxDigitCheck(purchasePriceTbox, e);
+            if (Regex.IsMatch(purchasePriceTbox.Text, @"^0+"))
+                purchasePriceTbox.Text = "";
+
         }
 
         private void priceTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utility.TextBoxDigitCheck(priceTbox, e);
+            if (Regex.IsMatch(priceTbox.Text, @"^0+"))
+                priceTbox.Text="";
         }
 
         private void janTbox_KeyPress(object sender, KeyPressEventArgs e)
@@ -97,7 +102,7 @@ namespace OICPen
             {
                 //IDでの検索
                 () =>
-                    new List<Models.ItemT>(
+            new List<Models.ItemT>(
                         new Models.ItemT[] { service.FindByID(int.Parse(searchItemIdTbox.Text)) }
                     ),
                 //名前での検索
@@ -134,7 +139,7 @@ namespace OICPen
                 }
                 catch
                 {
-
+                    SetDataGridView(new List<Models.ItemT>());
                 }
             }
         }
@@ -186,6 +191,7 @@ namespace OICPen
                 {
                     service.AddItem(TextboxToItemT());
                     SetDataGridView(service.GetItems());
+                    TextboxDelete();
                 }
             }
             else
@@ -254,7 +260,20 @@ namespace OICPen
                 if (dgvItem == null) return;
                 service.DeleteItem(dgvItem.ItemTID);
                 SetDataGridView(service.GetItems());
+                TextboxDelete();
             }
+        }
+
+        /*テキストボックスを削除する*/
+        private void TextboxDelete()
+        {
+            itemNameTbox.Text="";
+            janTbox.Text="";
+            priceTbox.Text="";
+            purchasePriceTbox.Text="";
+            safetyStockTbox.Text="";
+            furiganaTbox.Text="";
+            noteTbox.Text="";
         }
     }
 }

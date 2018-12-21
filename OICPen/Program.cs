@@ -16,7 +16,11 @@ namespace OICPen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frame());
+            var dbContext= new Models.OICPenDbContext();
+            var staffServices = new Services.StaffService(dbContext);
+            if (staffServices.GetAllStaffs().Count() == 0)
+                staffServices.AddStaff(new Models.StaffT {Name="root",Hurigana="ルート",Password="root",Permission=Models.Permission.God });
+            Application.Run(new Frame(dbContext));
         }
     }
 }
