@@ -268,6 +268,7 @@ namespace OICPen
         {
             Utility.HiraganaCheckKeyPress(furiganaTbox, e);
         }
+
         /*テキストボックスを削除する*/
         private void TextboxDelete()
         {

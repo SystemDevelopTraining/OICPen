@@ -177,7 +177,7 @@ namespace OICPen
             var staffs = Servis.GetAllStaffs();
             foreach (var x in staffs)
             {
-                dgv.Rows.Add(x.StaffTID, x.Name, x.Hurigana, x.Permission);
+                dgv.Rows.Add(x.StaffTID, x.Name, x.Hurigana,permissionCbox.Items[(int)x.Permission]);
             }
         }
 
@@ -200,7 +200,7 @@ namespace OICPen
             var staff = Servis.FindByID(id);
             registerNameTbox.Text = staff.Name;
             registerFuriganaTbox.Text = staff.Hurigana;
-            permissionCbox.SelectedIndex = (int)cells[3].Value;
+            permissionCbox.SelectedIndex = permissionCbox.Items.IndexOf(cells[3].Value);
             //Dgvの権限を日本語で表示する。
             //Dgvからパスワードを登録・更新テキストボックスに表示する？
         }
