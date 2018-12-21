@@ -158,7 +158,8 @@ namespace OICPen
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-           if (giveOrderListDgv.SelectedRows.Count == 0) return;
+            if (giveOrderListDgv.SelectedRows.Count == 0)
+                return;
             
             DialogResult result = MessageBox.Show("削除しますがよろしいですか？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
 
@@ -169,7 +170,13 @@ namespace OICPen
                 {
                     confirmBtn.Enabled = true;
                 }
-            }       
+            }
+            if (giveOrderListDgv.SelectedRows.Count == 0)
+            {
+                clearBtn.Enabled = false;
+                allClearBtn.Enabled = false;
+                completeBtn.Enabled = false;
+            } 
         }
 
         private void allClearBtn_Click(object sender, EventArgs e)
@@ -190,42 +197,46 @@ namespace OICPen
         {
             if (giveOrderListDgv.SelectedRows.Count == 0) return;
 
-            var addGiverOrderItem = new Models.GiveOrderT
+            DialogResult result = MessageBox.Show("発注してもよろしいですか？", "発注",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+            if (result == DialogResult.Yes)
             {
-                GiveOrderDate = DateTime.Now,//発注日
-                StaffTID = staff.StaffTID,//社員ID
-               
-            };
-
-            var giveOrderId = orderServis.AddGiveOrderst(addGiverOrderItem).GiveOrderTID;
-            var Controls = new Control[] { itemIdTbox,itemNameTbox,quantityTbox };
-            foreach(var value in Controls)
-            {
-                value.ResetText();
-            }
-            itemsViewDgv.Rows.Clear();
-            SetDataGridView(itemServis.GetAllItems());
-
-            foreach(DataGridViewRow row in giveOrderListDgv.Rows)
-            {
-                var itemId = Convert.ToInt32(row.Cells[0].Value.ToString());
-                var itemName = row.Cells[1].Value;
-                var quantity = Convert.ToInt32(row.Cells[2].Value.ToString());
-
-                var addGiveOrder = new Models.GiveOrderDetailT
+                var addGiverOrderItem = new Models.GiveOrderT
                 {
-                    GiveOrderTID = giveOrderId,
-                    ItemTID = itemId,
-                    Quantity = quantity,
+                    GiveOrderDate = DateTime.Now,//発注日
+                    StaffTID = staff.StaffTID,//社員ID
+
                 };
-                orderDetailServis.AddGiveOrderDetail(addGiveOrder);
+
+                var giveOrderId = orderServis.AddGiveOrderst(addGiverOrderItem).GiveOrderTID;
+                var Controls = new Control[] { itemIdTbox, itemNameTbox, quantityTbox };
+                foreach (var value in Controls)
+                {
+                    value.ResetText();
+                }
+                itemsViewDgv.Rows.Clear();
+                SetDataGridView(itemServis.GetItems());
+
+                foreach (DataGridViewRow row in giveOrderListDgv.Rows)
+                {
+                    var itemId = Convert.ToInt32(row.Cells[0].Value.ToString());
+                    var itemName = row.Cells[1].Value;
+                    var quantity = Convert.ToInt32(row.Cells[2].Value.ToString());
+
+                    var addGiveOrder = new Models.GiveOrderDetailT
+                    {
+                        GiveOrderTID = giveOrderId,
+                        ItemTID = itemId,
+                        Quantity = quantity,
+                    };
+                    orderDetailServis.AddGiveOrderDetail(addGiveOrder);
+                }
+
+                MessageBox.Show("発注完了しました。", "発注");
+                giveOrderListDgv.Rows.Clear();
+                clearBtn.Enabled = false;
+                allClearBtn.Enabled = false;
+                completeBtn.Enabled = false;
             }
-          
-            MessageBox.Show("発注完了しました。","発注");
-            giveOrderListDgv.Rows.Clear();
-            clearBtn.Enabled = false;
-            allClearBtn.Enabled = false;
-            completeBtn.Enabled = false;
         }
 
         /*データグリッドビューセット*/
