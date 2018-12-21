@@ -50,6 +50,14 @@ namespace OICPen
                 return "ふりがなにはひらがなのみを入力してください";
             }
         }
+
+        public static void HiraganaCheckKeyPress(TextBox x,KeyPressEventArgs e)
+        {
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), @"^\p{IsHiragana}+$") && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 
 }

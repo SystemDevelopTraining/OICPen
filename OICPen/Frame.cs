@@ -12,7 +12,7 @@ namespace OICPen
 {
     public partial class Frame : Form
     {
-        Models.OICPenDbContext dbcontext = new Models.OICPenDbContext();
+        Models.OICPenDbContext dbcontext;
 
         Models.StaffT loginStaff;
         Button[] btnList;
@@ -48,8 +48,9 @@ namespace OICPen
             }
 
         }
-        public Frame()
+        public Frame(Models.OICPenDbContext dbcontext)
         {
+            this.dbcontext = dbcontext;
             ship = new Ship(dbcontext);
             takeOrder = new TakeOrder(dbcontext);
             giveOrder = new GiveOrder(dbcontext);
