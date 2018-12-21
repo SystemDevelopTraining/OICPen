@@ -25,7 +25,7 @@ namespace OICPen.Services
         {
             var staffs = from i in context.Staffs
                         orderby i.StaffTID
-                        select i;
+                         select i;
 
             return staffs.ToList();
         }

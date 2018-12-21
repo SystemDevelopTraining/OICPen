@@ -51,8 +51,8 @@ namespace OICPen
                  //名前での検索
                 () =>
                     Servis.FindByName(searchNameTbox.Text),
-                
-                //IDでの検索
+
+               // IDでの検索
                 () =>
                     new List<Models.StaffT>(
                         new Models.StaffT[] { Servis.FindByID(int.Parse(idTbox.Text)) }
@@ -61,8 +61,6 @@ namespace OICPen
                 () =>
                    Servis.FindByHurigana(searchFuriganaTbox.Text)
             };
-
-
             uint itemCount = 0;
             uint currentIndex = 0;
             for (uint i = 0; i < staffs.Length; i++)
@@ -73,15 +71,27 @@ namespace OICPen
                     currentIndex = i;
                 }
             }
-
-            if (itemCount != 1)
+            if (itemCount > 1)
             {
-                MessageBox.Show("検索項目が一つではありません", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("検索項目が一つではありません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (itemCount == 0)
+            {
+                SetDataGridView(Servis.GetAllStaffs());
             }
             else
             {
                 try
                 {
+                    string erroMessage = "";
+                    if (currentIndex == 2)
+                    {
+                        if ((erroMessage = Utility.HiraganaCheck(searchFuriganaTbox.Text)) != "")
+                        {
+                            MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
                     staffsDgv.Rows.Clear();
                     (processes[currentIndex]()).ForEach(stf =>
                     {
@@ -96,6 +106,20 @@ namespace OICPen
                 catch { }
             }
 
+        }
+
+        private void SetDataGridView(List<Models.StaffT> staffs)
+        {
+            staffsDgv.Rows.Clear();
+            staffs.ForEach(staff =>
+            {
+                staffsDgv.Rows.Add(
+                    staff.StaffTID,
+                    staff.Name,
+                    staff.Hurigana,
+                    staff.Permission
+                    );
+            });
         }
 
         private void Staffs_Load(object sender, EventArgs e)
@@ -117,7 +141,7 @@ namespace OICPen
                 && !Utility.TextIsEmpty(permissionCbox.Text)
                 )
             {
-                if ( passwordTbox.Text != password2Tbox.Text)
+                if (passwordTbox.Text != password2Tbox.Text)
                 {
                     MessageBox.Show("パスワードが一致しません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     passwordTbox.Clear();
@@ -131,13 +155,17 @@ namespace OICPen
                     registerNameTbox.Text = "";
                     registerFuriganaTbox.Text = "";
                     passwordTbox.Text = "";
-                    password2Tbox.Text ="";
+                    password2Tbox.Text = "";
                     MessageBox.Show("登録しました", "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     MessageBox.Show(errorMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            else
+            {
+                MessageBox.Show("全項目を入力しないといけません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             DataShow();
         }
@@ -165,7 +193,6 @@ namespace OICPen
 
         private void staffsDgv_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-
             if (staffsDgv.SelectedRows.Count == 0) return;
             var cells = staffsDgv.SelectedRows[0].Cells;
             int id = int.Parse(cells[0].Value.ToString());
@@ -174,11 +201,8 @@ namespace OICPen
             registerNameTbox.Text = staff.Name;
             registerFuriganaTbox.Text = staff.Hurigana;
             permissionCbox.SelectedIndex = (int)cells[3].Value;
-
-
             //Dgvの権限を日本語で表示する。
             //Dgvからパスワードを登録・更新テキストボックスに表示する？
-
         }
 
         //社員の修正
@@ -189,6 +213,25 @@ namespace OICPen
                 MessageBox.Show("社員を選択しないままの更新はできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            uint checkAllEntered = 0;
+            var staffs= new string[] { registerNameTbox.Text, registerFuriganaTbox.Text, passwordTbox.Text, password2Tbox.Text };
+            for (uint i = 0; i < staffs.Length; i++)
+            {
+                if (staffs[i] != "")
+                {
+                    checkAllEntered++;
+                }
+            }
+            if (checkAllEntered != 4){
+                MessageBox.Show("全項目を入力しないといけません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string erroMessage = "";
+            if ((erroMessage = Utility.HiraganaCheck(registerFuriganaTbox.Text)) != "")
+            {
+                MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int id = int.Parse(idDispLbl.Text);
             if (id == staff.StaffTID)
             {
@@ -196,7 +239,6 @@ namespace OICPen
                 return;
             }
             var afterStaff = TextToStaff();
-
             var beforeStaff = Servis.FindByID(id);
             beforeStaff.Name = afterStaff.Name;
             beforeStaff.Hurigana = afterStaff.Hurigana;
@@ -217,13 +259,6 @@ namespace OICPen
                 MessageBox.Show("社員を選択しないままの削除はできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if(passwordTbox.Text != password2Tbox.Text)
-            {
-                MessageBox.Show("パスワードが一致しません。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                passwordTbox.Clear();
-                password2Tbox.Clear();
-                return;
-            }
             int id = int.Parse(idDispLbl.Text);
             if (id == staff.StaffTID)
             {
@@ -235,6 +270,7 @@ namespace OICPen
             idDispLbl.Text = "";
             registerNameTbox.Text = "";
             registerFuriganaTbox.Text = "";
+            permissionCbox.SelectedIndex = -1;
         }
 
         private void searchFuriganaTbox_KeyPress(object sender, KeyPressEventArgs e)
