@@ -89,6 +89,7 @@ namespace OICPen
                         if ((erroMessage = Utility.HiraganaCheck(searchFuriganaTbox.Text)) != "")
                         {
                             MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
                         }
                     }
                     staffsDgv.Rows.Clear();
@@ -212,20 +213,14 @@ namespace OICPen
                 MessageBox.Show("社員を選択しないままの更新はできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            uint checkAllEntered = 0;
             var staffs= new string[] { registerNameTbox.Text, registerFuriganaTbox.Text, passwordTbox.Text, password2Tbox.Text };
-            for (uint i = 0; i < staffs.Length; i++)
+        
+            string erroMessage = "";
+            if(registerNameTbox.Text==""|| registerFuriganaTbox.Text== "")
             {
-                if (staffs[i] != "")
-                {
-                    checkAllEntered++;
-                }
-            }
-            if (checkAllEntered != 4){
-                MessageBox.Show("全項目を入力しないといけません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("修正するのに社員名とフリガナは入れないといけません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            string erroMessage = "";
             if ((erroMessage = Utility.HiraganaCheck(registerFuriganaTbox.Text)) != "")
             {
                 MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
