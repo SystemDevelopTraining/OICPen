@@ -173,7 +173,6 @@
             // logoutBtn
             // 
             this.logoutBtn.BackColor = System.Drawing.Color.Black;
-            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.logoutBtn.ForeColor = System.Drawing.Color.White;
@@ -191,7 +190,6 @@
             // exitBtn
             // 
             this.exitBtn.BackColor = System.Drawing.Color.Black;
-            this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exitBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -210,7 +208,6 @@
             // staffsBtn
             // 
             this.staffsBtn.BackColor = System.Drawing.Color.Black;
-            this.staffsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.staffsBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.staffsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.staffsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -228,7 +225,6 @@
             // clientsBtn
             // 
             this.clientsBtn.BackColor = System.Drawing.Color.Black;
-            this.clientsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clientsBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.clientsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clientsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -246,7 +242,6 @@
             // itemsBtn
             // 
             this.itemsBtn.BackColor = System.Drawing.Color.Black;
-            this.itemsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.itemsBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.itemsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.itemsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -264,7 +259,6 @@
             // stockBtn
             // 
             this.stockBtn.BackColor = System.Drawing.Color.Black;
-            this.stockBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stockBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.stockBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.stockBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -282,7 +276,6 @@
             // takeorderBtn
             // 
             this.takeorderBtn.BackColor = System.Drawing.Color.Black;
-            this.takeorderBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.takeorderBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.takeorderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.takeorderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -300,7 +293,6 @@
             // giveorderBtn
             // 
             this.giveorderBtn.BackColor = System.Drawing.Color.Black;
-            this.giveorderBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.giveorderBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.giveorderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.giveorderBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -318,7 +310,6 @@
             // incomingBtn
             // 
             this.incomingBtn.BackColor = System.Drawing.Color.Black;
-            this.incomingBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.incomingBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.incomingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.incomingBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -336,7 +327,6 @@
             // shipBtn
             // 
             this.shipBtn.BackColor = System.Drawing.Color.Black;
-            this.shipBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.shipBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.shipBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.shipBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -354,7 +344,6 @@
             // salesBtn
             // 
             this.salesBtn.BackColor = System.Drawing.Color.Black;
-            this.salesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.salesBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.salesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.salesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
