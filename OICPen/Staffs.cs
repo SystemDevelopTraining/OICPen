@@ -215,17 +215,7 @@ namespace OICPen
             }
             uint checkAllEntered = 0;
             var staffs= new string[] { registerNameTbox.Text, registerFuriganaTbox.Text, passwordTbox.Text, password2Tbox.Text };
-            for (uint i = 0; i < staffs.Length; i++)
-            {
-                if (staffs[i] != "")
-                {
-                    checkAllEntered++;
-                }
-            }
-            if (checkAllEntered != 4){
-                MessageBox.Show("全項目を入力しないといけません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        
             string erroMessage = "";
             if ((erroMessage = Utility.HiraganaCheck(registerFuriganaTbox.Text)) != "")
             {
