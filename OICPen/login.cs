@@ -42,11 +42,10 @@ namespace OICPen
                     loginBtn.Enabled = false;
                     return;
                 }
-                MessageBox.Show("パスワードが違います", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                staffPassTbox.Focus();
-                staffPassTbox.SelectAll();
-            
-           
+
+            MessageBox.Show("パスワードが違います", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            staffPassTbox.Focus();
+            staffPassTbox.SelectAll();       
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
