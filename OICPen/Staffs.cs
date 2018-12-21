@@ -213,10 +213,14 @@ namespace OICPen
                 MessageBox.Show("社員を選択しないままの更新はできません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            uint checkAllEntered = 0;
             var staffs= new string[] { registerNameTbox.Text, registerFuriganaTbox.Text, passwordTbox.Text, password2Tbox.Text };
         
             string erroMessage = "";
+            if(registerNameTbox.Text==""|| registerFuriganaTbox.Text== "")
+            {
+                MessageBox.Show("修正するのに社員名とフリガナは入れないといけません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if ((erroMessage = Utility.HiraganaCheck(registerFuriganaTbox.Text)) != "")
             {
                 MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
