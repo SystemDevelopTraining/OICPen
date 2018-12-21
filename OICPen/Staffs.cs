@@ -84,40 +84,23 @@ namespace OICPen
                 try
                 {
                     string erroMessage = "";
-                    switch (currentIndex)
+                    if (currentIndex == 2)
                     {
-                        case 2:
-                            if ((erroMessage = Utility.HiraganaCheck(searchFuriganaTbox.Text)) == "")
-                            {
-                                staffsDgv.Rows.Clear();
-                                (processes[currentIndex]()).ForEach(stf =>
-                                {
-                                    staffsDgv.Rows.Add(
-                                        stf.StaffTID,
-                                        stf.Name,
-                                        stf.Hurigana,
-                                        stf.Permission
-                                        );
-                                });
-                            }
-                            else
-                            {
-                                MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            break;
-                        default:
-                            staffsDgv.Rows.Clear();
-                            (processes[currentIndex]()).ForEach(stf =>
-                            {
-                                staffsDgv.Rows.Add(
-                                    stf.StaffTID,
-                                    stf.Name,
-                                    stf.Hurigana,
-                                    stf.Permission
-                                    );
-                            });
-                            break;
-                    }              
+                        if ((erroMessage = Utility.HiraganaCheck(searchFuriganaTbox.Text)) != "")
+                        {
+                            MessageBox.Show(erroMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    staffsDgv.Rows.Clear();
+                    (processes[currentIndex]()).ForEach(stf =>
+                    {
+                        staffsDgv.Rows.Add(
+                            stf.StaffTID,
+                            stf.Name,
+                            stf.Hurigana,
+                            stf.Permission
+                            );
+                    });
                 }
                 catch { }
             }
@@ -179,13 +162,7 @@ namespace OICPen
                     MessageBox.Show(errorMessage, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else if (
-               Utility.TextIsEmpty(registerNameTbox.Text)
-               || Utility.TextIsEmpty(registerNameTbox.Text)
-               || Utility.TextIsEmpty(registerFuriganaTbox.Text)
-               || Utility.TextIsEmpty(passwordLbl.Text)
-               || Utility.TextIsEmpty(password2Tbox.Text)
-               || Utility.TextIsEmpty(permissionCbox.Text))
+            else
             {
                 MessageBox.Show("全項目を入力しないといけません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -215,7 +192,6 @@ namespace OICPen
 
         private void staffsDgv_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-
             if (staffsDgv.SelectedRows.Count == 0) return;
             var cells = staffsDgv.SelectedRows[0].Cells;
             int id = int.Parse(cells[0].Value.ToString());
@@ -224,11 +200,8 @@ namespace OICPen
             registerNameTbox.Text = staff.Name;
             registerFuriganaTbox.Text = staff.Hurigana;
             permissionCbox.SelectedIndex = (int)cells[3].Value;
-
-
             //Dgvの権限を日本語で表示する。
             //Dgvからパスワードを登録・更新テキストボックスに表示する？
-
         }
 
         //社員の修正
@@ -265,7 +238,6 @@ namespace OICPen
                 return;
             }
             var afterStaff = TextToStaff();
-
             var beforeStaff = Servis.FindByID(id);
             beforeStaff.Name = afterStaff.Name;
             beforeStaff.Hurigana = afterStaff.Hurigana;
