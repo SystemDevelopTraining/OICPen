@@ -66,5 +66,10 @@ namespace OICPen
         {
             staffIdTbox.Focus();
         }
+
+        private void staffIdTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.TextBoxDigitCheck(staffIdTbox, e);
+        }
     }
 }

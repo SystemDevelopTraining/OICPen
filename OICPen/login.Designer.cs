@@ -60,6 +60,7 @@
             this.staffIdTbox.TabIndex = 1;
             this.staffIdTbox.Tag = "";
             this.staffIdTbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.staffIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.staffIdTbox_KeyPress);
             // 
             // staffPassTbox
             // 
