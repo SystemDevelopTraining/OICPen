@@ -36,6 +36,10 @@
             this.salesStartDtp = new System.Windows.Forms.DateTimePicker();
             this.salesAndLbl = new System.Windows.Forms.Label();
             this.salesBetweenLbl = new System.Windows.Forms.Label();
+            this.itemId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gain = new System.Windows.Forms.DataGridViewTextBoxColumn();
             salesEndDtp = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.salesDgv)).BeginInit();
             this.SuspendLayout();
@@ -75,11 +79,17 @@
             this.salesDisplayBtn.TabIndex = 1;
             this.salesDisplayBtn.Text = "売上表示";
             this.salesDisplayBtn.UseVisualStyleBackColor = true;
+            this.salesDisplayBtn.Click += new System.EventHandler(this.salesDisplayBtn_Click);
             // 
             // salesDgv
             // 
             this.salesDgv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.salesDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.salesDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.itemId,
+            this.itemName,
+            this.itemSales,
+            this.gain});
             this.salesDgv.Location = new System.Drawing.Point(12, 21);
             this.salesDgv.Name = "salesDgv";
             this.salesDgv.RowTemplate.Height = 21;
@@ -127,6 +137,34 @@
             this.salesBetweenLbl.TabIndex = 0;
             this.salesBetweenLbl.Text = "指定期間";
             // 
+            // itemId
+            // 
+            this.itemId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemId.HeaderText = "商品ID";
+            this.itemId.Name = "itemId";
+            this.itemId.ReadOnly = true;
+            // 
+            // itemName
+            // 
+            this.itemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemName.HeaderText = "商品名";
+            this.itemName.Name = "itemName";
+            this.itemName.ReadOnly = true;
+            // 
+            // itemSales
+            // 
+            this.itemSales.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemSales.HeaderText = "売上";
+            this.itemSales.Name = "itemSales";
+            this.itemSales.ReadOnly = true;
+            // 
+            // gain
+            // 
+            this.gain.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gain.HeaderText = "利益";
+            this.gain.Name = "gain";
+            this.gain.ReadOnly = true;
+            // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -160,5 +198,9 @@
         private System.Windows.Forms.DateTimePicker salesStartDtp;
         private System.Windows.Forms.Label salesAndLbl;
         private System.Windows.Forms.Label salesBetweenLbl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemSales;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gain;
     }
 }
