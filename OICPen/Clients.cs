@@ -266,5 +266,20 @@ namespace OICPen
         {
             searchNameTbox.Focus();
         }
+
+        private void searchIdTbox_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Utility.TextBoxDigitCheck(searchIdTbox, e);
+        }
+
+        private void huriganaTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaCheckKeyPress(huriganaTbox, e);
+        }
+
+        private void searchHuriganaTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaCheckKeyPress(searchHuriganaTbox, e);
+        }
     }
 }
