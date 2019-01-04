@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DateTimePicker salesEndDtp;
+            this.salesEndDtp = new System.Windows.Forms.DateTimePicker();
             this.titleLbl = new System.Windows.Forms.Label();
             this.salesDisplayBtn = new System.Windows.Forms.Button();
             this.salesDgv = new System.Windows.Forms.DataGridView();
@@ -40,21 +40,20 @@
             this.salesStartDtp = new System.Windows.Forms.DateTimePicker();
             this.salesAndLbl = new System.Windows.Forms.Label();
             this.salesBetweenLbl = new System.Windows.Forms.Label();
-            salesEndDtp = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.salesDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // salesEndDtp
             // 
-            salesEndDtp.AllowDrop = true;
-            salesEndDtp.CustomFormat = "";
-            salesEndDtp.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            salesEndDtp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            salesEndDtp.Location = new System.Drawing.Point(1357, 838);
-            salesEndDtp.Name = "salesEndDtp";
-            salesEndDtp.Size = new System.Drawing.Size(228, 36);
-            salesEndDtp.TabIndex = 4;
-            salesEndDtp.Tag = "";
+            this.salesEndDtp.AllowDrop = true;
+            this.salesEndDtp.CustomFormat = "";
+            this.salesEndDtp.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.salesEndDtp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.salesEndDtp.Location = new System.Drawing.Point(1357, 838);
+            this.salesEndDtp.Name = "salesEndDtp";
+            this.salesEndDtp.Size = new System.Drawing.Size(228, 36);
+            this.salesEndDtp.TabIndex = 4;
+            this.salesEndDtp.Tag = "";
             // 
             // titleLbl
             // 
@@ -173,7 +172,7 @@
             this.ClientSize = new System.Drawing.Size(1610, 982);
             this.Controls.Add(this.salesBetweenLbl);
             this.Controls.Add(this.salesAndLbl);
-            this.Controls.Add(salesEndDtp);
+            this.Controls.Add(this.salesEndDtp);
             this.Controls.Add(this.salesStartDtp);
             this.Controls.Add(this.salesDgv);
             this.Controls.Add(this.salesSortBtn);
@@ -202,5 +201,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemSales;
         private System.Windows.Forms.DataGridViewTextBoxColumn gain;
+        private System.Windows.Forms.DateTimePicker salesEndDtp;
     }
 }
