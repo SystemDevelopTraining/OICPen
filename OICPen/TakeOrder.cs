@@ -1,24 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using OICPen.Models;
-using System.Collections;
 
 namespace OICPen
 {
     public partial class TakeOrder : Form
     {
-        private Models.StaffT staff;
-        private Services.TakeOrderService servis;
-        private Services.ClientService clientservis;
-        private Services.ItemService itemservis;
-        private Services.TakeOrderDetailService takeorderdetailservice;
+        private StaffT staff;
+        private Services.TakeOrderService takeOrderService;
+        private Services.ClientService clientService;
+        private Services.ItemService itemService;
+        private Services.TakeOrderDetailService takeOrderDetailService;
         public StaffT Staff
         {
             set
@@ -29,10 +24,10 @@ namespace OICPen
 
         public TakeOrder(OICPenDbContext dbcontext)
         {
-            servis = new Services.TakeOrderService(dbcontext);
-            clientservis = new Services.ClientService(dbcontext);
-            itemservis = new Services.ItemService(dbcontext);
-            takeorderdetailservice = new Services.TakeOrderDetailService(dbcontext);
+            takeOrderService = new Services.TakeOrderService(dbcontext);
+            clientService = new Services.ClientService(dbcontext);
+            itemService = new Services.ItemService(dbcontext);
+            takeOrderDetailService = new Services.TakeOrderDetailService(dbcontext);
             InitializeComponent();
         }
 
@@ -60,7 +55,7 @@ namespace OICPen
             }
 
             bool found = false; //clientが確認できなかったらMessageBoxを表示するのに利用される。
-            foreach (var client in clientservis.GetClients())
+            foreach (var client in clientService.GetClients())
             {
                 if (clientsIdTbox.Text == client.ClientTID.ToString())
                 {
@@ -93,7 +88,7 @@ namespace OICPen
             Utility.TextBoxDigitCheck(itemIdTbox, e);
         }
 
-        void SetDataGridView(List<Models.ItemT> items)
+        void SetDataGridView(List<ItemT> items)
         {
             itemsViewDgv.Rows.Clear();
             items.ForEach(item =>
@@ -101,7 +96,7 @@ namespace OICPen
                 itemsViewDgv.Rows.Add(
                     item.ItemTID,
                     item.Name,
-                    item.SafetyStock,
+                    itemService.NowStock(item),
                     item.Price
                     );
             });
@@ -110,16 +105,16 @@ namespace OICPen
         private void searchBtn_Click(object sender, EventArgs e)
         {
             var items = new string[] { itemNameTbox.Text, itemIdTbox.Text };
-            var processes = new Func<List<Models.ItemT>>[]
+            var processes = new Func<List<ItemT>>[]
             {
                  //名前での検索
                 () =>
-                   itemservis.FindByName(itemNameTbox.Text)
+                   itemService.FindByName(itemNameTbox.Text)
                 ,
                 //IDでの検索
                 () =>
-                    new List<Models.ItemT>(
-                        new Models.ItemT[] { itemservis.FindByID(int.Parse(itemIdTbox.Text)) }
+                    new List<ItemT>(
+                        new ItemT[] { itemService.FindByID(int.Parse(itemIdTbox.Text)) }
                     )
             };
 
@@ -164,7 +159,7 @@ namespace OICPen
         private void TakeOrder_Load(object sender, EventArgs e)
         {
             clientsIdTbox.Focus();
-            SetDataGridView(itemservis.GetItems());
+            SetDataGridView(itemService.GetItems());
         }
 
         //注文明細の合計金額設定
@@ -245,9 +240,9 @@ namespace OICPen
                 MessageBox.Show("数量を確認してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        Models.ItemT TextboxToItemT()
+        ItemT TextboxToItemT()
         {
-            var item = new Models.ItemT();
+            var item = new ItemT();
             item.Name = itemNameTbox.Text;
             return item;
         }
@@ -258,9 +253,9 @@ namespace OICPen
             DialogResult m = MessageBox.Show("削除しますがよろしいですか？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
             if (m == DialogResult.Yes)
             {
-                if (this.completeOrdersDgv.SelectedRows.Count > 0)
+                if (completeOrdersDgv.SelectedRows.Count > 0)
                 {
-                    completeOrdersDgv.Rows.RemoveAt(this.completeOrdersDgv.SelectedRows[0].Index);
+                    completeOrdersDgv.Rows.RemoveAt(completeOrdersDgv.SelectedRows[0].Index);
                     ComputeTotalPrice();
                 }
                 if (completeOrdersDgv.SelectedRows.Count == 0)
@@ -288,25 +283,25 @@ namespace OICPen
         private void completeBtn_Click(object sender, EventArgs e)
         {
             if (completeOrdersDgv.SelectedRows.Count == 0) return;
-            var g = new Models.TakeOrderT
+            var g = new TakeOrderT
             {
                 TakeOrderDate = DateTime.Now,// 注文日
                 ClientTID = int.Parse(clientsIdViewLbl.Text),// 会員ID
                 StaffTID = staff.StaffTID,  //社員ID
             };
 
-            var takeOrderId = servis.AddTakeOrder(g).TakeOrderTID;           //完了したら入力されたTextとDGVの内容を消すため
+            var takeOrderId = takeOrderService.AddTakeOrder(g).TakeOrderTID;           //完了したら入力されたTextとDGVの内容を消すため
             var Controls = new Control[] { clientsIdViewLbl, clientsNameViewLbl, clientsPhoneNoViewLbl, itemNameTbox, itemIdTbox, countsTbox, clientsIdTbox };
 
             foreach (var i in Controls)
                 i.ResetText();
 
             itemsViewDgv.Rows.Clear();
-            SetDataGridView(itemservis.GetItems());
+            SetDataGridView(itemService.GetItems());
 
             
             foreach (var x in GetTakeOrderDetailTFromDgv(takeOrderId))
-                takeorderdetailservice.AddTakeOrderDetail(x);
+                takeOrderDetailService.AddTakeOrderDetail(x);
 
             MessageBox.Show("注文を受け付けました。", "注文", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -324,7 +319,7 @@ namespace OICPen
         private void allItemBtn_Click(object sender, EventArgs e)
         {
             itemsViewDgv.Rows.Clear();
-            SetDataGridView(itemservis.GetItems());
+            SetDataGridView(itemService.GetItems());
             itemIdTbox.Clear();
             itemNameTbox.Clear();
             countsTbox.Enabled = true;
