@@ -1,12 +1,7 @@
 ﻿using OICPen.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace OICPen
@@ -29,27 +24,29 @@ namespace OICPen
         }
 
         //データグリッドビューに売り上げ一覧を表示する
-        void SetDataGridView(List<Models.ItemT> items)
+        void SetDataGridView(List<ItemT> items)
         {
+            var startDate = salesStartDtp.Value;
+            var endDate = salesEndDtp.Value;
+            startDate = new DateTime(startDate.Year, startDate.Month, startDate.Day, 0, 0, 0);
+            endDate = new DateTime(endDate.Year, endDate.Month, endDate.Day, 23, 59, 59);
             salesDgv.Rows.Clear();
             items.ForEach(item =>
             {
-                int takeorderAllQuantity = 0;
-                int giveOrderAllQuantity = 0;
-                foreach (var takeorderdetail in item.TakeOrderDetailTs)
-                {
-                    takeorderAllQuantity += takeorderdetail.Quantity;
-                }
-                foreach (var giveorderderdetail in item.GiveOrderDetailTs)
-                {
-                    giveOrderAllQuantity += giveorderderdetail.Quantity;
-                }
+                int takeorderAllQuantity = item.TakeOrderDetailTs == null ? 0 :
+                    item.TakeOrderDetailTs
+                        .Where(x => x.TakeOrderT.TakeOrderDate >= startDate && x.TakeOrderT.TakeOrderDate <= endDate)
+                        .Sum(x => x.Quantity);
+                int giveOrderAllQuantity = item.GiveOrderDetailTs == null ? 0 :
+                    item.GiveOrderDetailTs
+                        .Where(x => x.GiveOrderT.GiveOrderDate >= startDate && x.GiveOrderT.GiveOrderDate <= endDate)
+                        .Sum(x => x.Quantity);
 
                 salesDgv.Rows.Add(
                     item.ItemTID,
                     item.Name,
-                    item.Price*takeorderAllQuantity,
-                    item.Price*takeorderAllQuantity - item.PurchasePrice*giveOrderAllQuantity
+                    item.Price * takeorderAllQuantity,
+                    item.Price * takeorderAllQuantity - item.PurchasePrice * giveOrderAllQuantity
                     );
             });
         }

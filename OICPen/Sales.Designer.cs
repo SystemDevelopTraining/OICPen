@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DateTimePicker salesEndDtp;
+            this.salesEndDtp = new System.Windows.Forms.DateTimePicker();
             this.titleLbl = new System.Windows.Forms.Label();
             this.salesDisplayBtn = new System.Windows.Forms.Button();
             this.salesDgv = new System.Windows.Forms.DataGridView();
@@ -36,25 +36,23 @@
             this.itemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemSales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salesSortBtn = new System.Windows.Forms.Button();
             this.salesStartDtp = new System.Windows.Forms.DateTimePicker();
             this.salesAndLbl = new System.Windows.Forms.Label();
             this.salesBetweenLbl = new System.Windows.Forms.Label();
-            salesEndDtp = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.salesDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // salesEndDtp
             // 
-            salesEndDtp.AllowDrop = true;
-            salesEndDtp.CustomFormat = "";
-            salesEndDtp.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            salesEndDtp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            salesEndDtp.Location = new System.Drawing.Point(1357, 838);
-            salesEndDtp.Name = "salesEndDtp";
-            salesEndDtp.Size = new System.Drawing.Size(228, 36);
-            salesEndDtp.TabIndex = 4;
-            salesEndDtp.Tag = "";
+            this.salesEndDtp.AllowDrop = true;
+            this.salesEndDtp.CustomFormat = "";
+            this.salesEndDtp.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.salesEndDtp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.salesEndDtp.Location = new System.Drawing.Point(1357, 838);
+            this.salesEndDtp.Name = "salesEndDtp";
+            this.salesEndDtp.Size = new System.Drawing.Size(228, 36);
+            this.salesEndDtp.TabIndex = 4;
+            this.salesEndDtp.Tag = "";
             // 
             // titleLbl
             // 
@@ -125,17 +123,6 @@
             this.gain.Name = "gain";
             this.gain.ReadOnly = true;
             // 
-            // salesSortBtn
-            // 
-            this.salesSortBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.salesSortBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.salesSortBtn.Location = new System.Drawing.Point(1384, 251);
-            this.salesSortBtn.Name = "salesSortBtn";
-            this.salesSortBtn.Size = new System.Drawing.Size(186, 83);
-            this.salesSortBtn.TabIndex = 2;
-            this.salesSortBtn.Text = "昇順/降順\r\n切り替え";
-            this.salesSortBtn.UseVisualStyleBackColor = true;
-            // 
             // salesStartDtp
             // 
             this.salesStartDtp.CustomFormat = "";
@@ -173,10 +160,9 @@
             this.ClientSize = new System.Drawing.Size(1610, 982);
             this.Controls.Add(this.salesBetweenLbl);
             this.Controls.Add(this.salesAndLbl);
-            this.Controls.Add(salesEndDtp);
+            this.Controls.Add(this.salesEndDtp);
             this.Controls.Add(this.salesStartDtp);
             this.Controls.Add(this.salesDgv);
-            this.Controls.Add(this.salesSortBtn);
             this.Controls.Add(this.salesDisplayBtn);
             this.Controls.Add(this.titleLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -194,7 +180,6 @@
         private System.Windows.Forms.Label titleLbl;
         private System.Windows.Forms.Button salesDisplayBtn;
         private System.Windows.Forms.DataGridView salesDgv;
-        private System.Windows.Forms.Button salesSortBtn;
         private System.Windows.Forms.DateTimePicker salesStartDtp;
         private System.Windows.Forms.Label salesAndLbl;
         private System.Windows.Forms.Label salesBetweenLbl;
@@ -202,5 +187,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn itemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemSales;
         private System.Windows.Forms.DataGridViewTextBoxColumn gain;
+        private System.Windows.Forms.DateTimePicker salesEndDtp;
     }
 }
