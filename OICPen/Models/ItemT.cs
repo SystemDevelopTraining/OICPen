@@ -33,5 +33,8 @@ namespace OICPen.Models
         public bool IsDeleted { get; set; } //削除フラグ
         [MaxLength(30)]
         public string Note { get; set; } //備考
+        public virtual ICollection<TakeOrderDetailT> TakeOrderDetailTs { get; set; }
+        public virtual ICollection<GiveOrderDetailT> GiveOrderDetailTs { get; set; }
+
     }
 }

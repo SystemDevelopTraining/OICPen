@@ -25,6 +25,8 @@ namespace OICPen
         Items items;
         Ship ship;
         InComing inComing;
+        Sales sales;
+
         public void SetUser(Models.StaffT staff)
         {
             nowLoginLbl.Visible = true;
@@ -58,6 +60,7 @@ namespace OICPen
             clients = new Clients(dbcontext);
             staffs = new Staffs(dbcontext);
             inComing = new InComing(dbcontext);
+            sales = new Sales(dbcontext);
             InitializeComponent();
             timer1.Start();
         }
@@ -109,7 +112,7 @@ namespace OICPen
             };
             BtnSetEnable(false);
             var formList = new Form[] {
-                takeOrder,new Sales(),ship,inComing,
+                takeOrder,new Sales(dbcontext),ship,inComing,
                 giveOrder,new Stock(dbcontext), items,clients,staffs
             };
             btnList.Zip(formList,(btn,form)=>{
