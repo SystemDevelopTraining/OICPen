@@ -41,7 +41,7 @@ namespace OICPen
         //ひらがなかどうか判断する
         public static string HiraganaCheck(string text)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(text, @"^\p{IsHiragana}+$"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(text, @"^[\p{IsHiragana}\u30FC]+$"))
             {
                 return "";
             }
@@ -53,7 +53,7 @@ namespace OICPen
 
         public static void HiraganaCheckKeyPress(TextBox x,KeyPressEventArgs e)
         {
-            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), @"^\p{IsHiragana}+$") && !char.IsControl(e.KeyChar))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), @"^[\p{IsHiragana}\u30FC]+$") && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
