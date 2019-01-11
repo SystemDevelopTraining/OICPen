@@ -81,6 +81,7 @@
             // 
             // salesDgv
             // 
+            this.salesDgv.AllowUserToAddRows = false;
             this.salesDgv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.salesDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.salesDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
