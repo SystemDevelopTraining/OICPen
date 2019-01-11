@@ -7,7 +7,7 @@ using OICPen.Models;
 
 namespace OICPen
 {
-    public partial class TakeOrder : Form
+    public partial class TakeOrder : Form,MyForm
     {
         private StaffT staff;
         private Services.TakeOrderService takeOrderService;

@@ -142,6 +142,7 @@
     <Compile Include="Services\StaffService.cs" />
     <Compile Include="Services\TakeOrderDetailService.cs" />
     <Compile Include="Services\TakeOrderService.cs" />
+    <Compile Include="MyForm.cs" />
     <Compile Include="Ship.cs">
       <SubType>Form</SubType>
     </Compile>
