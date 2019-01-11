@@ -51,30 +51,34 @@
             this.PurchaseHistoryDgv.Name = "PurchaseHistoryDgv";
             this.PurchaseHistoryDgv.ReadOnly = true;
             this.PurchaseHistoryDgv.RowTemplate.Height = 21;
-            this.PurchaseHistoryDgv.Size = new System.Drawing.Size(478, 316);
+            this.PurchaseHistoryDgv.Size = new System.Drawing.Size(553, 375);
             this.PurchaseHistoryDgv.TabIndex = 0;
             this.PurchaseHistoryDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PurchaseHistoryDgv_CellContentClick);
             // 
             // Column1
             // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.HeaderText = "注文ID";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column3
             // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.HeaderText = "注文日";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.HeaderText = "出庫日";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // clientPurchhaseHistoryMoreDetail
             // 
+            this.clientPurchhaseHistoryMoreDetail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.clientPurchhaseHistoryMoreDetail.HeaderText = "詳細";
             this.clientPurchhaseHistoryMoreDetail.Name = "clientPurchhaseHistoryMoreDetail";
             this.clientPurchhaseHistoryMoreDetail.ReadOnly = true;
@@ -84,8 +88,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 316);
+            this.ClientSize = new System.Drawing.Size(553, 375);
             this.Controls.Add(this.PurchaseHistoryDgv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MinimizeBox = false;
             this.Name = "ClientPurchaseHistory";
             this.Text = "MemberPurchaseHistory";
             this.Load += new System.EventHandler(this.ClientPurchaseHistory_Load);
