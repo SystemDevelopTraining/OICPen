@@ -1,17 +1,13 @@
 ﻿using OICPen.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OICPen
 {
-    public partial class GiveOrder : Form
+    public partial class GiveOrder : Form,MyForm
     {
         private Services.StaffService staffServis ;
         private Services.ItemService itemServis ;
