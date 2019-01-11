@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.shipDgv = new System.Windows.Forms.DataGridView();
-            this.ClientTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.takeOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.takeOderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shipDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleLbl = new System.Windows.Forms.Label();
             this.shippedCheckBtn = new System.Windows.Forms.Button();
             this.shipProcessingBtn = new System.Windows.Forms.Button();
             this.shipCheckBtn = new System.Windows.Forms.Button();
             this.shipFixBtn = new System.Windows.Forms.Button();
+            this.ClientTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.takeOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.takeOderDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shipDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.shipDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@
             this.ClientTID,
             this.takeOrderID,
             this.takeOderDate,
-            this.shipDate});
+            this.shipDate,
+            this.Details});
             this.shipDgv.Location = new System.Drawing.Point(12, 21);
             this.shipDgv.MultiSelect = false;
             this.shipDgv.Name = "shipDgv";
@@ -60,34 +62,7 @@
             this.shipDgv.Size = new System.Drawing.Size(1310, 949);
             this.shipDgv.TabIndex = 0;
             this.shipDgv.TabStop = false;
-            // 
-            // ClientTID
-            // 
-            this.ClientTID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ClientTID.HeaderText = "会員ID";
-            this.ClientTID.Name = "ClientTID";
-            this.ClientTID.ReadOnly = true;
-            // 
-            // takeOrderID
-            // 
-            this.takeOrderID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.takeOrderID.HeaderText = "注文ID";
-            this.takeOrderID.Name = "takeOrderID";
-            this.takeOrderID.ReadOnly = true;
-            // 
-            // takeOderDate
-            // 
-            this.takeOderDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.takeOderDate.HeaderText = "注文日";
-            this.takeOderDate.Name = "takeOderDate";
-            this.takeOderDate.ReadOnly = true;
-            // 
-            // shipDate
-            // 
-            this.shipDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.shipDate.HeaderText = "出庫日";
-            this.shipDate.Name = "shipDate";
-            this.shipDate.ReadOnly = true;
+            this.shipDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.shipDgv_CellContentClick);
             // 
             // titleLbl
             // 
@@ -143,6 +118,40 @@
             this.shipFixBtn.UseVisualStyleBackColor = true;
             this.shipFixBtn.Click += new System.EventHandler(this.shipFixBtn_Click);
             // 
+            // ClientTID
+            // 
+            this.ClientTID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ClientTID.HeaderText = "会員ID";
+            this.ClientTID.Name = "ClientTID";
+            this.ClientTID.ReadOnly = true;
+            // 
+            // takeOrderID
+            // 
+            this.takeOrderID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.takeOrderID.HeaderText = "注文ID";
+            this.takeOrderID.Name = "takeOrderID";
+            this.takeOrderID.ReadOnly = true;
+            // 
+            // takeOderDate
+            // 
+            this.takeOderDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.takeOderDate.HeaderText = "注文日";
+            this.takeOderDate.Name = "takeOderDate";
+            this.takeOderDate.ReadOnly = true;
+            // 
+            // shipDate
+            // 
+            this.shipDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.shipDate.HeaderText = "出庫日";
+            this.shipDate.Name = "shipDate";
+            this.shipDate.ReadOnly = true;
+            // 
+            // Details
+            // 
+            this.Details.HeaderText = "詳細";
+            this.Details.Name = "Details";
+            this.Details.ReadOnly = true;
+            // 
             // Ship
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -177,5 +186,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn takeOrderID;
         private System.Windows.Forms.DataGridViewTextBoxColumn takeOderDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn shipDate;
+        private System.Windows.Forms.DataGridViewButtonColumn Details;
     }
 }

@@ -110,6 +110,14 @@ namespace OICPen
             }
         }
 
-     
+        private void shipDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.Columns[e.ColumnIndex].Name == "Details" && e.ColumnIndex != -1)
+            {
+                var f = new    TakeOrderDetail(servis.FindByID((int.Parse(dgv.Rows[e.RowIndex].Cells[1].Value.ToString()))));
+                f.ShowDialog();
+            }
+        }
     }
 }
