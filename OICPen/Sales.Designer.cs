@@ -51,7 +51,7 @@
             this.salesEndDtp.Location = new System.Drawing.Point(1357, 838);
             this.salesEndDtp.Name = "salesEndDtp";
             this.salesEndDtp.Size = new System.Drawing.Size(228, 36);
-            this.salesEndDtp.TabIndex = 4;
+            this.salesEndDtp.TabIndex = 3;
             this.salesEndDtp.Tag = "";
             // 
             // titleLbl
@@ -130,7 +130,7 @@
             this.salesStartDtp.Location = new System.Drawing.Point(1357, 740);
             this.salesStartDtp.Name = "salesStartDtp";
             this.salesStartDtp.Size = new System.Drawing.Size(228, 36);
-            this.salesStartDtp.TabIndex = 3;
+            this.salesStartDtp.TabIndex = 2;
             // 
             // salesAndLbl
             // 
