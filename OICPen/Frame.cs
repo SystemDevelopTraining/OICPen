@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace OICPen
 {
@@ -67,10 +68,19 @@ namespace OICPen
 
         public Frame(Models.OICPenDbContext dbcontext)
         {
+            Thread t = new Thread(new ThreadStart(SplashStart));
+            t.Start();
+            Thread.Sleep(5000);
+
             this.dbcontext = dbcontext;
             CreateFrames();
             InitializeComponent();
-            timer1.Start();
+            t.Abort();
+        }
+
+        public void SplashStart()
+        {
+            Application.Run(new Splash());
         }
         
         //ボタンをEnableにし、色を変更する
