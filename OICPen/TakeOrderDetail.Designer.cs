@@ -50,7 +50,7 @@
             this.TakeOrderDetailDgv.Location = new System.Drawing.Point(0, 0);
             this.TakeOrderDetailDgv.Name = "TakeOrderDetailDgv";
             this.TakeOrderDetailDgv.RowTemplate.Height = 21;
-            this.TakeOrderDetailDgv.Size = new System.Drawing.Size(443, 357);
+            this.TakeOrderDetailDgv.Size = new System.Drawing.Size(550, 444);
             this.TakeOrderDetailDgv.TabIndex = 0;
             // 
             // Column1
@@ -65,6 +65,7 @@
             // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.HeaderText = "商品名";
             this.Column4.Name = "Column4";
             // 
@@ -72,15 +73,17 @@
             // 
             this.Column3.HeaderText = "数量";
             this.Column3.Name = "Column3";
+            this.Column3.Width = 75;
             // 
             // TakeOrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 357);
+            this.ClientSize = new System.Drawing.Size(550, 444);
             this.Controls.Add(this.TakeOrderDetailDgv);
+            this.MinimizeBox = false;
             this.Name = "TakeOrderDetail";
-            this.Text = "TakeOrderDetail";
+            this.Text = "注文詳細";
             this.Load += new System.EventHandler(this.TakeOrderDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TakeOrderDetailDgv)).EndInit();
             this.ResumeLayout(false);

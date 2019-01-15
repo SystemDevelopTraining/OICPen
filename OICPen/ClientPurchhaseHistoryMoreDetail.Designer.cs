@@ -51,12 +51,11 @@
             this.MoreDetailDgv.Name = "MoreDetailDgv";
             this.MoreDetailDgv.ReadOnly = true;
             this.MoreDetailDgv.RowTemplate.Height = 21;
-            this.MoreDetailDgv.Size = new System.Drawing.Size(806, 375);
+            this.MoreDetailDgv.Size = new System.Drawing.Size(900, 375);
             this.MoreDetailDgv.TabIndex = 0;
             // 
             // Column1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.FillWeight = 10.1523F;
             this.Column1.HeaderText = "注文詳細ID";
             this.Column1.Name = "Column1";
@@ -64,7 +63,6 @@
             // 
             // Column2
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column2.FillWeight = 10.1523F;
             this.Column2.HeaderText = "商品ID";
             this.Column2.Name = "Column2";
@@ -72,25 +70,25 @@
             // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.FillWeight = 369.5431F;
             this.Column4.HeaderText = "商品名";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 200;
             // 
             // Column3
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.FillWeight = 10.15228F;
             this.Column3.HeaderText = "数量";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 75;
             // 
             // ClientPurchhaseHistoryMoreDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 375);
+            this.ClientSize = new System.Drawing.Size(900, 375);
             this.Controls.Add(this.MoreDetailDgv);
             this.MinimizeBox = false;
             this.Name = "ClientPurchhaseHistoryMoreDetail";

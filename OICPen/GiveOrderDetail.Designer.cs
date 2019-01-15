@@ -51,26 +51,25 @@
             this.GiveOrderDetailDgv.Name = "GiveOrderDetailDgv";
             this.GiveOrderDetailDgv.RowHeadersVisible = false;
             this.GiveOrderDetailDgv.RowTemplate.Height = 21;
-            this.GiveOrderDetailDgv.Size = new System.Drawing.Size(658, 354);
+            this.GiveOrderDetailDgv.Size = new System.Drawing.Size(635, 354);
             this.GiveOrderDetailDgv.TabIndex = 0;
             // 
             // TakeOrderDetailTId
             // 
-            this.TakeOrderDetailTId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TakeOrderDetailTId.HeaderText = "発注詳細ID";
             this.TakeOrderDetailTId.Name = "TakeOrderDetailTId";
             // 
             // ItemID
             // 
-            this.ItemID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ItemID.HeaderText = "商品ID";
             this.ItemID.Name = "ItemID";
+            this.ItemID.Width = 190;
             // 
             // ItemName
             // 
+            this.ItemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ItemName.HeaderText = "商品名";
             this.ItemName.Name = "ItemName";
-            this.ItemName.Width = 200;
             // 
             // quantity
             // 
@@ -82,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(658, 354);
+            this.ClientSize = new System.Drawing.Size(635, 354);
             this.Controls.Add(this.GiveOrderDetailDgv);
             this.MinimizeBox = false;
             this.Name = "GiveOrderDetail";

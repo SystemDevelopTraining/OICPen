@@ -57,7 +57,6 @@
             // 
             // Column1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.HeaderText = "注文ID";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
