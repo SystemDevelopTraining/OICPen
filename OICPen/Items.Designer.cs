@@ -487,6 +487,7 @@
             // 
             // Items
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
@@ -525,6 +526,8 @@
             this.Location = new System.Drawing.Point(1546, 19);
             this.Name = "Items";
             this.Text = "Items";
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Items_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Items_DragEnter);
             ((System.ComponentModel.ISupportInitialize)(this.itemDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
