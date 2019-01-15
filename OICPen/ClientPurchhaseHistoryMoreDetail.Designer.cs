@@ -95,7 +95,7 @@
             this.MinimizeBox = false;
             this.Name = "ClientPurchhaseHistoryMoreDetail";
             this.ShowIcon = false;
-            this.Text = "ClientPurchhaseHistoryMoreDetail";
+            this.Text = "購入履歴の詳細";
             this.Load += new System.EventHandler(this.ClientPurchhaseHistoryMoreDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MoreDetailDgv)).EndInit();
             this.ResumeLayout(false);
