@@ -434,6 +434,16 @@ namespace OICPen.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap fc3ec593_dffc_411c_8717_21f97af10a681 {
+            get {
+                object obj = ResourceManager.GetObject("fc3ec593-dffc-411c-8717-21f97af10a681", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap gahag_0055923193_1 {
             get {
                 object obj = ResourceManager.GetObject("gahag-0055923193-1", resourceCulture);
@@ -964,6 +974,16 @@ namespace OICPen.Properties {
         internal static System.Drawing.Bitmap set_of_stationery_pictures_csp394599811 {
             get {
                 object obj = ResourceManager.GetObject("set-of-stationery-pictures_csp394599811", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap splash {
+            get {
+                object obj = ResourceManager.GetObject("splash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

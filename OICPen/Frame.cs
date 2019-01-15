@@ -7,47 +7,159 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace OICPen
 {
     public partial class Frame : Form
     {
-        public void SetUserName(string userName)
+        Models.OICPenDbContext dbcontext;
+
+        Models.StaffT loginStaff;
+        Button[] btnList;
+        Button beforeBtn = new Button();
+
+        Login login;
+
+        MyForm[] forms;
+       
+
+        public void SetUser(Models.StaffT staff)
         {
-            staffsNameLbl.Text = userName;
+            nowLoginLbl.Visible = true;
+            staffsNameLbl.Text = staff.Name;
+            loginStaff = staff;
+            BtnSetEnable(true);
+            foreach (var form in forms)
+                form.Staff = staff;
+            
+            if (staff.Permission != Models.Permission.God)
+            {
+                if (staff.Permission != Models.Permission.ClientControl)
+                    BtnSetDisableColor(takeorderBtn);
+                if (staff.Permission != Models.Permission.ProductControl)
+                    BtnSetDisableColor(giveorderBtn);
+            }
+
         }
-        public Frame()
+
+        //各フォームの生成
+        void CreateFrames()
         {
+            forms = new MyForm[] {
+                new TakeOrder(dbcontext),
+                new Sales(dbcontext),
+                new Ship(dbcontext),
+                new InComing(dbcontext),
+                new GiveOrder(dbcontext),
+                new Stock(dbcontext),
+                new Items(dbcontext),
+                new Clients(dbcontext),
+                new Staffs(dbcontext)
+            };
+        }
+
+        //各フォームの削除
+        void DisposeFrames()
+        {
+            foreach (var form in forms)
+                form.Dispose();
+        }
+
+        public Frame(Models.OICPenDbContext dbcontext)
+        {
+            Thread t = new Thread(new ThreadStart(SplashStart));
+            t.Start();
+            Thread.Sleep(5000);
+
+            this.dbcontext = dbcontext;
+            CreateFrames();
             InitializeComponent();
+            t.Abort();
+        }
+
+        public void SplashStart()
+        {
+            Application.Run(new Splash());
+        }
+        
+        //ボタンをEnableにし、色を変更する
+        void BtnSetEnableColor(Button b)
+        {
+            b.Enabled = true;
+            b.BackColor = Color.Black;
+        }
+
+        //ボタンをDisableにし、色を変更する
+        void BtnSetDisableColor(Button b)
+        {
+            b.Enabled = false;
+            b.BackColor = Color.Green;
+        }
+
+        //ボタンの有効化、無効化
+        void BtnSetEnable(bool flag)
+        {
+            foreach(var btn in btnList)
+            {
+                btn.Enabled = flag;
+                if (flag == false)
+                {
+                    BtnSetDisableColor(btn);
+                    BtnSetDisableColor(logoutBtn);
+                }
+                else
+                {
+                    BtnSetEnableColor(btn);
+                    BtnSetEnableColor(logoutBtn);
+                }
+            }
         }
 
         private void Frame_Shown(object sender, EventArgs e)
         {
 
+            staffsNameLbl.Text = "";
+
             label1.Text = DateTime.Now.ToString("yyyy/MM/dd(ddd) HH:mm");
 
-            var login =new login(this);
+            login =new Login(this);
             ChangeForm(login);
-            var btnList=new Button[] {
-                takeorderBtn,salesBtn,shipBtn,incomingBtn,giveorderBtn,stockBtn,itemsBtn,clientsBtn,staffsBtn,logoutBtn
+            btnList=new Button[] {
+                takeorderBtn,salesBtn,shipBtn,incomingBtn,giveorderBtn,stockBtn,itemsBtn,clientsBtn,staffsBtn
             };
-            var formList = new Form[] {
-                new TakeOrder(),new Sales(),new Ship(),new InComing(),
-                new GiveOrder(),new Stock(),new Items(),new Clients(),new Staffs(),login
-            };
-            btnList.Zip(formList,(btn,form)=>{
-                btn.Click += (_,__) => ChangeForm(form);
-                return 0;
-            }).ToArray();
+            BtnSetEnable(false);
+            for (var i = 0; i < btnList.Length; i++)
+            {
+                var ii = i;
+                btnList[i].Click += (_, __) => ChangeForm(forms[ii], btnList[ii]);
+            }
         }
 
-        private void ChangeForm(Form f)
+        private void ChangeForm(MyForm myf, Button btn = null)
+        {
+            ChangeForm((Form)myf,btn);
+        }
+
+        private void ChangeForm(Form f,Button btn = null)
         {
             f.TopLevel = false;
-            splitContainer2.Panel2.Controls.Add(f);
+            frameScon.Panel2.Controls.Clear();
+            frameScon.Panel2.Controls.Add(f);
             f.Dock = DockStyle.Fill;
             f.Show();
             f.BringToFront();
+
+            //開いているフレームのボタンをdisableに
+            if(btn != null){
+                if(beforeBtn != null)
+                {
+                    beforeBtn.Enabled = true;
+                    beforeBtn.BackColor = Color.Black;
+                }
+                BtnSetDisableColor(btn);
+                beforeBtn = btn;
+            }
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
@@ -65,5 +177,21 @@ namespace OICPen
         {
             label1.Text = DateTime.Now.ToString("yyyy/MM/dd(ddd) HH:mm");
         }
+
+
+        //ログアウトボタンが押された時の処理
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            nowLoginLbl.Visible = false;
+            BtnSetEnable(false);
+            staffsNameLbl.Text = "";
+            loginStaff = null;
+            login.Dispose();
+            login = new Login(this);
+            DisposeFrames();
+            CreateFrames();
+            ChangeForm(login);
+        }
+
     }
 }

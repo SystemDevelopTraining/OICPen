@@ -14,25 +14,25 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            var data = new List<GiveOrder>
+            var data = new List<GiveOrderT>
             {
-                new GiveOrder {GiveOrdDate = DateTime.Now, StaffId = 1},
-                new GiveOrder {GiveOrdDate = DateTime.Now, StaffId = 2}
+                new GiveOrderT {GiveOrderDate = DateTime.Now, StaffTID = 1},
+                new GiveOrderT {GiveOrderDate = DateTime.Now, StaffTID = 2}
             }.AsQueryable();
 
 
 
-            var mockSet = new Mock<DbSet<GiveOrder>>();
-            mockSet.As<IQueryable<GiveOrder>>().Setup(m => m.Provider).Returns(data.Provider);
-            mockSet.As<IQueryable<GiveOrder>>().Setup(m => m.Expression).Returns(data.Expression);
-            mockSet.As<IQueryable<GiveOrder>>().Setup(m => m.ElementType).Returns(data.ElementType);
-            mockSet.As<IQueryable<GiveOrder>>().Setup(m => m.GetEnumerator()).Returns(data.GetEnumerator());
+            var mockSet = new Mock<DbSet<GiveOrderT>>();
+            mockSet.As<IQueryable<GiveOrderT>>().Setup(m => m.Provider).Returns(data.Provider);
+            mockSet.As<IQueryable<GiveOrderT>>().Setup(m => m.Expression).Returns(data.Expression);
+            mockSet.As<IQueryable<GiveOrderT>>().Setup(m => m.ElementType).Returns(data.ElementType);
+            mockSet.As<IQueryable<GiveOrderT>>().Setup(m => m.GetEnumerator()).Returns(data.GetEnumerator());
 
             var mockContext = new Mock<OICPenDbContext>();
             mockContext.Setup(c => c.GiveOrders).Returns(mockSet.Object);
 
-            var service = new GiveOrderService(mockContext.Object);
-            var takeOrders = service.GetAllGiveOrders();
+            var service = new OICPen.Services.GiveOrderService(mockContext.Object);
+            var giveOrders = service.GetGiveOrders();
         }
     }
 }

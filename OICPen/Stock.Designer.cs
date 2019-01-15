@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.stockTitleLbl = new System.Windows.Forms.Label();
+            this.titleLbl = new System.Windows.Forms.Label();
             this.stockDgv = new System.Windows.Forms.DataGridView();
+            this.ItemTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemsCodeLbl = new System.Windows.Forms.Label();
             this.itemsNameLbl = new System.Windows.Forms.Label();
             this.itemsCodeTbox = new System.Windows.Forms.TextBox();
@@ -41,27 +44,57 @@
             ((System.ComponentModel.ISupportInitialize)(this.stockDgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // stockTitleLbl
+            // titleLbl
             // 
-            this.stockTitleLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.stockTitleLbl.AutoSize = true;
-            this.stockTitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.stockTitleLbl.Location = new System.Drawing.Point(1373, 19);
-            this.stockTitleLbl.Name = "stockTitleLbl";
-            this.stockTitleLbl.Size = new System.Drawing.Size(212, 48);
-            this.stockTitleLbl.TabIndex = 0;
-            this.stockTitleLbl.Text = "在庫管理";
+            this.titleLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.titleLbl.AutoSize = true;
+            this.titleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.titleLbl.Location = new System.Drawing.Point(1373, 19);
+            this.titleLbl.Name = "titleLbl";
+            this.titleLbl.Size = new System.Drawing.Size(212, 48);
+            this.titleLbl.TabIndex = 0;
+            this.titleLbl.Text = "在庫管理";
             // 
             // stockDgv
             // 
+            this.stockDgv.AllowUserToAddRows = false;
+            this.stockDgv.AllowUserToDeleteRows = false;
+            this.stockDgv.AllowUserToResizeColumns = false;
+            this.stockDgv.AllowUserToResizeRows = false;
             this.stockDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.stockDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stockDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemTID,
+            this.ItemT,
+            this.Quantity});
             this.stockDgv.Location = new System.Drawing.Point(12, 21);
             this.stockDgv.Name = "stockDgv";
+            this.stockDgv.ReadOnly = true;
             this.stockDgv.RowTemplate.Height = 21;
             this.stockDgv.Size = new System.Drawing.Size(800, 949);
-            this.stockDgv.TabIndex = 6;
+            this.stockDgv.TabIndex = 0;
             this.stockDgv.TabStop = false;
+            // 
+            // ItemTID
+            // 
+            this.ItemTID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemTID.HeaderText = "商品ID";
+            this.ItemTID.Name = "ItemTID";
+            this.ItemTID.ReadOnly = true;
+            // 
+            // ItemT
+            // 
+            this.ItemT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ItemT.HeaderText = "商品名";
+            this.ItemT.Name = "ItemT";
+            this.ItemT.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.HeaderText = "現在在庫数";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
             // 
             // itemsCodeLbl
             // 
@@ -86,11 +119,12 @@
             // itemsCodeTbox
             // 
             this.itemsCodeTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.itemsCodeTbox.Location = new System.Drawing.Point(1165, 226);
+            this.itemsCodeTbox.Location = new System.Drawing.Point(1165, 228);
+            this.itemsCodeTbox.MaxLength = 6;
             this.itemsCodeTbox.Name = "itemsCodeTbox";
             this.itemsCodeTbox.Size = new System.Drawing.Size(218, 36);
-            this.itemsCodeTbox.MaxLength = 6;
             this.itemsCodeTbox.TabIndex = 1;
+            this.itemsCodeTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.itemsCodeTbox_KeyPress);
             // 
             // itemsNameTbox
             // 
@@ -100,7 +134,6 @@
             this.itemsNameTbox.Name = "itemsNameTbox";
             this.itemsNameTbox.Size = new System.Drawing.Size(358, 36);
             this.itemsNameTbox.TabIndex = 2;
-            this.itemsNameTbox.TextChanged += new System.EventHandler(this.itemsNameTbox_TextChanged);
             // 
             // searchBtn
             // 
@@ -111,6 +144,7 @@
             this.searchBtn.TabIndex = 3;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // stockDangerViewBtn
             // 
@@ -121,6 +155,7 @@
             this.stockDangerViewBtn.TabIndex = 5;
             this.stockDangerViewBtn.Text = "安全在庫数以下一覧";
             this.stockDangerViewBtn.UseVisualStyleBackColor = true;
+            this.stockDangerViewBtn.Click += new System.EventHandler(this.stockDangerViewBtn_Click);
             // 
             // stockViewBtn
             // 
@@ -131,7 +166,7 @@
             this.stockViewBtn.TabIndex = 4;
             this.stockViewBtn.Text = "在庫状況一覧表示";
             this.stockViewBtn.UseVisualStyleBackColor = true;
-            this.stockViewBtn.Click += new System.EventHandler(this.button2_Click);
+            this.stockViewBtn.Click += new System.EventHandler(this.stockViewBtn_Click);
             // 
             // separatorLbl
             // 
@@ -157,10 +192,11 @@
             this.Controls.Add(this.itemsNameLbl);
             this.Controls.Add(this.itemsCodeLbl);
             this.Controls.Add(this.stockDgv);
-            this.Controls.Add(this.stockTitleLbl);
+            this.Controls.Add(this.titleLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Stock";
             this.Text = "Stock";
+            this.Load += new System.EventHandler(this.Stock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stockDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -169,7 +205,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label stockTitleLbl;
+        private System.Windows.Forms.Label titleLbl;
         private System.Windows.Forms.DataGridView stockDgv;
         private System.Windows.Forms.Label itemsCodeLbl;
         private System.Windows.Forms.Label itemsNameLbl;
@@ -179,5 +215,8 @@
         private System.Windows.Forms.Button stockDangerViewBtn;
         private System.Windows.Forms.Button stockViewBtn;
         private System.Windows.Forms.Label separatorLbl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemTID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
     }
 }

@@ -33,33 +33,40 @@
             this.deleteBtn = new System.Windows.Forms.Button();
             this.registBtn = new System.Windows.Forms.Button();
             this.itemDgv = new System.Windows.Forms.DataGridView();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.janCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchBtn = new System.Windows.Forms.Button();
             this.itemNameTbox = new System.Windows.Forms.TextBox();
             this.itemNameLbl = new System.Windows.Forms.Label();
             this.searchItemIdLbl = new System.Windows.Forms.Label();
+            this.searchItemIdTbox = new System.Windows.Forms.TextBox();
             this.janLbl = new System.Windows.Forms.Label();
             this.noteLbl = new System.Windows.Forms.Label();
             this.safetyStockLbl = new System.Windows.Forms.Label();
             this.furiganaLbl = new System.Windows.Forms.Label();
             this.priceLbl = new System.Windows.Forms.Label();
+            this.janTbox = new System.Windows.Forms.TextBox();
+            this.priceTbox = new System.Windows.Forms.TextBox();
             this.noteTbox = new System.Windows.Forms.TextBox();
             this.safetyStockTbox = new System.Windows.Forms.TextBox();
             this.furiganaTbox = new System.Windows.Forms.TextBox();
             this.searchItemNameLbl = new System.Windows.Forms.Label();
             this.searchJanLbl = new System.Windows.Forms.Label();
             this.searchItemNameTbox = new System.Windows.Forms.TextBox();
+            this.searchJanTbox = new System.Windows.Forms.TextBox();
             this.itemsUpdateBtn = new System.Windows.Forms.Button();
             this.separatorLbl = new System.Windows.Forms.Label();
             this.searchItemLbl = new System.Windows.Forms.Label();
             this.itemRegistLbl = new System.Windows.Forms.Label();
             this.purchasePriceLbl = new System.Windows.Forms.Label();
-            this.searchItemIdMaskedTbox = new System.Windows.Forms.MaskedTextBox();
-            this.searchJanMaskedTbox = new System.Windows.Forms.MaskedTextBox();
-            this.purchasePriceMaskedTbox = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.priceTbox = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.purchasePriceTbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.itemDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +89,7 @@
             this.updateBtn.Location = new System.Drawing.Point(1163, 900);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(186, 58);
-            this.updateBtn.TabIndex = 14;
+            this.updateBtn.TabIndex = 13;
             this.updateBtn.Text = "更新";
             this.updateBtn.UseVisualStyleBackColor = true;
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
@@ -93,9 +100,10 @@
             this.deleteBtn.Location = new System.Drawing.Point(1355, 900);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(186, 58);
-            this.deleteBtn.TabIndex = 15;
+            this.deleteBtn.TabIndex = 14;
             this.deleteBtn.Text = "削除";
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // registBtn
             // 
@@ -103,25 +111,103 @@
             this.registBtn.Location = new System.Drawing.Point(971, 900);
             this.registBtn.Name = "registBtn";
             this.registBtn.Size = new System.Drawing.Size(186, 58);
-            this.registBtn.TabIndex = 13;
+            this.registBtn.TabIndex = 12;
             this.registBtn.Text = "商品登録";
             this.registBtn.UseVisualStyleBackColor = true;
             this.registBtn.Click += new System.EventHandler(this.registBtn_Click);
             // 
             // itemDgv
             // 
+            this.itemDgv.AllowUserToAddRows = false;
             this.itemDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.itemDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column8,
+            this.productName,
+            this.Column4,
+            this.Column2,
+            this.Column1,
+            this.janCode,
+            this.Column3,
+            this.Column6,
+            this.Column5});
             this.itemDgv.Location = new System.Drawing.Point(12, 21);
+            this.itemDgv.MultiSelect = false;
             this.itemDgv.Name = "itemDgv";
+            this.itemDgv.ReadOnly = true;
             this.itemDgv.RowTemplate.Height = 21;
-            this.itemDgv.Size = new System.Drawing.Size(890, 949);
-            this.itemDgv.TabIndex = 5;
-            this.itemDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemDgv_CellContentClick);
+            this.itemDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.itemDgv.Size = new System.Drawing.Size(920, 949);
+            this.itemDgv.TabIndex = 0;
+            this.itemDgv.TabStop = false;
+            this.itemDgv.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemDgv_RowEnter);
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.HeaderText = "ID";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // productName
+            // 
+            this.productName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.productName.HeaderText = "商品名";
+            this.productName.Name = "productName";
+            this.productName.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "ふりがな";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "仕入れ価格";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "販売価格";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // janCode
+            // 
+            this.janCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.janCode.HeaderText = "JAN";
+            this.janCode.Name = "janCode";
+            this.janCode.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "安全在庫数";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "備考";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "登録日";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // searchBtn
             // 
             this.searchBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.searchBtn.Location = new System.Drawing.Point(1204, 289);
+            this.searchBtn.Location = new System.Drawing.Point(1204, 294);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(158, 56);
             this.searchBtn.TabIndex = 4;
@@ -133,10 +219,10 @@
             // 
             this.itemNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.itemNameTbox.Location = new System.Drawing.Point(1163, 464);
-            this.itemNameTbox.MaxLength = 50;
+            this.itemNameTbox.MaxLength = 30;
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(284, 36);
-            this.itemNameTbox.TabIndex = 6;
+            this.itemNameTbox.TabIndex = 5;
             // 
             // itemNameLbl
             // 
@@ -163,6 +249,16 @@
             this.searchItemIdLbl.Size = new System.Drawing.Size(148, 33);
             this.searchItemIdLbl.TabIndex = 9;
             this.searchItemIdLbl.Text = "商品ID：";
+            // 
+            // searchItemIdTbox
+            // 
+            this.searchItemIdTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.searchItemIdTbox.Location = new System.Drawing.Point(1163, 153);
+            this.searchItemIdTbox.MaxLength = 6;
+            this.searchItemIdTbox.Name = "searchItemIdTbox";
+            this.searchItemIdTbox.Size = new System.Drawing.Size(284, 36);
+            this.searchItemIdTbox.TabIndex = 1;
+            this.searchItemIdTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchItemIdTbox_KeyPress);
             // 
             // janLbl
             // 
@@ -229,6 +325,26 @@
             this.priceLbl.TabIndex = 16;
             this.priceLbl.Text = "販売価格：";
             // 
+            // janTbox
+            // 
+            this.janTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.janTbox.Location = new System.Drawing.Point(1163, 632);
+            this.janTbox.MaxLength = 13;
+            this.janTbox.Name = "janTbox";
+            this.janTbox.Size = new System.Drawing.Size(284, 36);
+            this.janTbox.TabIndex = 9;
+            this.janTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.janTbox_KeyPress);
+            // 
+            // priceTbox
+            // 
+            this.priceTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.priceTbox.Location = new System.Drawing.Point(1163, 589);
+            this.priceTbox.MaxLength = 6;
+            this.priceTbox.Name = "priceTbox";
+            this.priceTbox.Size = new System.Drawing.Size(284, 36);
+            this.priceTbox.TabIndex = 8;
+            this.priceTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.priceTbox_KeyPress);
+            // 
             // noteTbox
             // 
             this.noteTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
@@ -238,7 +354,7 @@
             this.noteTbox.Name = "noteTbox";
             this.noteTbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.noteTbox.Size = new System.Drawing.Size(284, 155);
-            this.noteTbox.TabIndex = 12;
+            this.noteTbox.TabIndex = 11;
             // 
             // safetyStockTbox
             // 
@@ -247,17 +363,18 @@
             this.safetyStockTbox.MaxLength = 6;
             this.safetyStockTbox.Name = "safetyStockTbox";
             this.safetyStockTbox.Size = new System.Drawing.Size(284, 36);
-            this.safetyStockTbox.TabIndex = 11;
+            this.safetyStockTbox.TabIndex = 10;
+            this.safetyStockTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.safetyStockTbox_KeyPress);
             // 
             // furiganaTbox
             // 
             this.furiganaTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.furiganaTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.furiganaTbox.Location = new System.Drawing.Point(1163, 506);
-            this.furiganaTbox.MaxLength = 30;
+            this.furiganaTbox.MaxLength = 50;
             this.furiganaTbox.Name = "furiganaTbox";
             this.furiganaTbox.Size = new System.Drawing.Size(284, 36);
-            this.furiganaTbox.TabIndex = 7;
+            this.furiganaTbox.TabIndex = 6;
             this.furiganaTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.furiganaTbox_KeyPress);
             // 
             // searchItemNameLbl
@@ -290,10 +407,20 @@
             // 
             this.searchItemNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
             this.searchItemNameTbox.Location = new System.Drawing.Point(1163, 237);
-            this.searchItemNameTbox.MaxLength = 50;
+            this.searchItemNameTbox.MaxLength = 30;
             this.searchItemNameTbox.Name = "searchItemNameTbox";
             this.searchItemNameTbox.Size = new System.Drawing.Size(284, 36);
             this.searchItemNameTbox.TabIndex = 3;
+            // 
+            // searchJanTbox
+            // 
+            this.searchJanTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.searchJanTbox.Location = new System.Drawing.Point(1163, 195);
+            this.searchJanTbox.MaxLength = 13;
+            this.searchJanTbox.Name = "searchJanTbox";
+            this.searchJanTbox.Size = new System.Drawing.Size(284, 36);
+            this.searchJanTbox.TabIndex = 2;
+            this.searchJanTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchJanTbox_KeyPress);
             // 
             // itemsUpdateBtn
             // 
@@ -301,9 +428,11 @@
             this.itemsUpdateBtn.Location = new System.Drawing.Point(938, 21);
             this.itemsUpdateBtn.Name = "itemsUpdateBtn";
             this.itemsUpdateBtn.Size = new System.Drawing.Size(240, 58);
-            this.itemsUpdateBtn.TabIndex = 16;
+            this.itemsUpdateBtn.TabIndex = 0;
+            this.itemsUpdateBtn.TabStop = false;
             this.itemsUpdateBtn.Text = "商品一覧更新";
             this.itemsUpdateBtn.UseVisualStyleBackColor = true;
+            this.itemsUpdateBtn.Click += new System.EventHandler(this.itemsUpdateBtn_Click);
             // 
             // separatorLbl
             // 
@@ -346,125 +475,44 @@
             this.purchasePriceLbl.TabIndex = 16;
             this.purchasePriceLbl.Text = "仕入価格：";
             // 
-            // searchItemIdMaskedTbox
+            // purchasePriceTbox
             // 
-            this.searchItemIdMaskedTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.searchItemIdMaskedTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.searchItemIdMaskedTbox.Location = new System.Drawing.Point(1164, 152);
-            this.searchItemIdMaskedTbox.Mask = "999999";
-            this.searchItemIdMaskedTbox.Name = "searchItemIdMaskedTbox";
-            this.searchItemIdMaskedTbox.PromptChar = ' ';
-            this.searchItemIdMaskedTbox.Size = new System.Drawing.Size(99, 36);
-            this.searchItemIdMaskedTbox.TabIndex = 26;
-            this.searchItemIdMaskedTbox.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.searchItemIdMaskedTbox.Click += new System.EventHandler(this.searchItemIdMaskedTbox_Click);
-            this.searchItemIdMaskedTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchItemIdMaskedTbox_KeyPress);
-            // 
-            // searchJanMaskedTbox
-            // 
-            this.searchJanMaskedTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.searchJanMaskedTbox.Location = new System.Drawing.Point(1164, 195);
-            this.searchJanMaskedTbox.Mask = "9999999999999";
-            this.searchJanMaskedTbox.Name = "searchJanMaskedTbox";
-            this.searchJanMaskedTbox.PromptChar = ' ';
-            this.searchJanMaskedTbox.ShortcutsEnabled = false;
-            this.searchJanMaskedTbox.Size = new System.Drawing.Size(198, 36);
-            this.searchJanMaskedTbox.TabIndex = 27;
-            this.searchJanMaskedTbox.Click += new System.EventHandler(this.searchJanMaskedTbox_Click);
-            // 
-            // purchasePriceMaskedTbox
-            // 
-            this.purchasePriceMaskedTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.purchasePriceMaskedTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.purchasePriceMaskedTbox.Location = new System.Drawing.Point(1198, 548);
-            this.purchasePriceMaskedTbox.Mask = "999999";
-            this.purchasePriceMaskedTbox.Name = "purchasePriceMaskedTbox";
-            this.purchasePriceMaskedTbox.PromptChar = ' ';
-            this.purchasePriceMaskedTbox.Size = new System.Drawing.Size(113, 36);
-            this.purchasePriceMaskedTbox.TabIndex = 28;
-            this.purchasePriceMaskedTbox.Tag = "";
-            this.purchasePriceMaskedTbox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.purchasePriceMaskedTbox_MaskInputRejected);
-            this.purchasePriceMaskedTbox.Click += new System.EventHandler(this.purchasePriceMaskedTbox_Click);
-            this.purchasePriceMaskedTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.purchasePriceMaskedTbox_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(1164, 551);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 29);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "\\";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(1164, 592);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 29);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "\\";
-            // 
-            // priceTbox
-            // 
-            this.priceTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.priceTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.priceTbox.Location = new System.Drawing.Point(1198, 589);
-            this.priceTbox.Mask = "999999";
-            this.priceTbox.Name = "priceTbox";
-            this.priceTbox.PromptChar = ' ';
-            this.priceTbox.Size = new System.Drawing.Size(113, 36);
-            this.priceTbox.TabIndex = 31;
-            this.priceTbox.Tag = "";
-            this.priceTbox.Click += new System.EventHandler(this.priceTbox_Click);
-            this.priceTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.priceTbox_KeyPress);
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(1163, 628);
-            this.maskedTextBox1.Mask = "9999999999999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.PromptChar = ' ';
-            this.maskedTextBox1.ShortcutsEnabled = false;
-            this.maskedTextBox1.Size = new System.Drawing.Size(198, 36);
-            this.maskedTextBox1.TabIndex = 32;
+            this.purchasePriceTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.purchasePriceTbox.Location = new System.Drawing.Point(1163, 548);
+            this.purchasePriceTbox.MaxLength = 6;
+            this.purchasePriceTbox.Name = "purchasePriceTbox";
+            this.purchasePriceTbox.Size = new System.Drawing.Size(284, 36);
+            this.purchasePriceTbox.TabIndex = 7;
+            this.purchasePriceTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.purchasePriceTbox_KeyPress);
             // 
             // Items
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.priceTbox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.purchasePriceMaskedTbox);
-            this.Controls.Add(this.searchJanMaskedTbox);
-            this.Controls.Add(this.searchItemIdMaskedTbox);
             this.Controls.Add(this.itemRegistLbl);
             this.Controls.Add(this.searchItemLbl);
             this.Controls.Add(this.separatorLbl);
             this.Controls.Add(this.itemsUpdateBtn);
+            this.Controls.Add(this.searchJanTbox);
             this.Controls.Add(this.searchItemNameTbox);
             this.Controls.Add(this.searchJanLbl);
             this.Controls.Add(this.searchItemNameLbl);
             this.Controls.Add(this.furiganaTbox);
             this.Controls.Add(this.safetyStockTbox);
             this.Controls.Add(this.noteTbox);
+            this.Controls.Add(this.purchasePriceTbox);
+            this.Controls.Add(this.priceTbox);
             this.Controls.Add(this.purchasePriceLbl);
+            this.Controls.Add(this.janTbox);
             this.Controls.Add(this.priceLbl);
             this.Controls.Add(this.furiganaLbl);
             this.Controls.Add(this.safetyStockLbl);
             this.Controls.Add(this.noteLbl);
             this.Controls.Add(this.janLbl);
+            this.Controls.Add(this.searchItemIdTbox);
             this.Controls.Add(this.searchItemIdLbl);
             this.Controls.Add(this.itemNameLbl);
             this.Controls.Add(this.itemNameTbox);
@@ -478,6 +526,8 @@
             this.Location = new System.Drawing.Point(1546, 19);
             this.Name = "Items";
             this.Text = "Items";
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Items_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Items_DragEnter);
             ((System.ComponentModel.ISupportInitialize)(this.itemDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -495,28 +545,35 @@
         private System.Windows.Forms.TextBox itemNameTbox;
         private System.Windows.Forms.Label itemNameLbl;
         private System.Windows.Forms.Label searchItemIdLbl;
+        private System.Windows.Forms.TextBox searchItemIdTbox;
         private System.Windows.Forms.Label janLbl;
         private System.Windows.Forms.Label noteLbl;
         private System.Windows.Forms.Label safetyStockLbl;
         private System.Windows.Forms.Label furiganaLbl;
         private System.Windows.Forms.Label priceLbl;
+        private System.Windows.Forms.TextBox janTbox;
+        private System.Windows.Forms.TextBox priceTbox;
         private System.Windows.Forms.TextBox noteTbox;
         private System.Windows.Forms.TextBox safetyStockTbox;
         private System.Windows.Forms.TextBox furiganaTbox;
         private System.Windows.Forms.Label searchItemNameLbl;
         private System.Windows.Forms.Label searchJanLbl;
         private System.Windows.Forms.TextBox searchItemNameTbox;
+        private System.Windows.Forms.TextBox searchJanTbox;
         private System.Windows.Forms.Button itemsUpdateBtn;
         private System.Windows.Forms.Label separatorLbl;
         private System.Windows.Forms.Label searchItemLbl;
         private System.Windows.Forms.Label itemRegistLbl;
         private System.Windows.Forms.Label purchasePriceLbl;
-        private System.Windows.Forms.MaskedTextBox searchItemIdMaskedTbox;
-        private System.Windows.Forms.MaskedTextBox searchJanMaskedTbox;
-        private System.Windows.Forms.MaskedTextBox purchasePriceMaskedTbox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox priceTbox;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TextBox purchasePriceTbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn janCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

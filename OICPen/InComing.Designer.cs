@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.incomingTitleLbl = new System.Windows.Forms.Label();
+            this.titleLbl = new System.Windows.Forms.Label();
             this.incomingDgv = new System.Windows.Forms.DataGridView();
             this.giveOrderedCheckBtn = new System.Windows.Forms.Button();
             this.giveOrderLbl = new System.Windows.Forms.Label();
@@ -39,31 +39,53 @@
             this.fixBtn = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.giveOrderCheckBtn = new System.Windows.Forms.Button();
+            this.GiveOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiveOrdDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CompleteDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.incomingDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // incomingTitleLbl
+            // titleLbl
             // 
-            this.incomingTitleLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.incomingTitleLbl.AutoSize = true;
-            this.incomingTitleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.incomingTitleLbl.ForeColor = System.Drawing.Color.Black;
-            this.incomingTitleLbl.Location = new System.Drawing.Point(1373, 19);
-            this.incomingTitleLbl.Name = "incomingTitleLbl";
-            this.incomingTitleLbl.Size = new System.Drawing.Size(212, 48);
-            this.incomingTitleLbl.TabIndex = 0;
-            this.incomingTitleLbl.Text = "入庫管理";
+            this.titleLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.titleLbl.AutoSize = true;
+            this.titleLbl.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.titleLbl.ForeColor = System.Drawing.Color.Black;
+            this.titleLbl.Location = new System.Drawing.Point(1373, 19);
+            this.titleLbl.Name = "titleLbl";
+            this.titleLbl.Size = new System.Drawing.Size(212, 48);
+            this.titleLbl.TabIndex = 0;
+            this.titleLbl.Text = "入庫管理";
             // 
             // incomingDgv
             // 
+            this.incomingDgv.AllowUserToAddRows = false;
+            this.incomingDgv.AllowUserToDeleteRows = false;
+            this.incomingDgv.AllowUserToResizeColumns = false;
+            this.incomingDgv.AllowUserToResizeRows = false;
             this.incomingDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.incomingDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.incomingDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.incomingDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GiveOrderID,
+            this.GiveOrdDate,
+            this.CompleteDate,
+            this.StaffTID,
+            this.Details});
+            this.incomingDgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.incomingDgv.Location = new System.Drawing.Point(12, 21);
+            this.incomingDgv.MultiSelect = false;
             this.incomingDgv.Name = "incomingDgv";
+            this.incomingDgv.ReadOnly = true;
             this.incomingDgv.RowTemplate.Height = 21;
+            this.incomingDgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.incomingDgv.Size = new System.Drawing.Size(1310, 949);
             this.incomingDgv.TabIndex = 0;
+            this.incomingDgv.TabStop = false;
+            this.incomingDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellContentClick);
             // 
             // giveOrderedCheckBtn
             // 
@@ -74,6 +96,7 @@
             this.giveOrderedCheckBtn.TabIndex = 1;
             this.giveOrderedCheckBtn.Text = "入庫済一覧";
             this.giveOrderedCheckBtn.UseVisualStyleBackColor = true;
+            this.giveOrderedCheckBtn.Click += new System.EventHandler(this.giveOrderedCheckBtn_Click);
             // 
             // giveOrderLbl
             // 
@@ -93,6 +116,7 @@
             this.incomingTbox.Name = "incomingTbox";
             this.incomingTbox.Size = new System.Drawing.Size(224, 36);
             this.incomingTbox.TabIndex = 3;
+            this.incomingTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.incomingTbox_KeyPress);
             // 
             // searchBtn
             // 
@@ -103,6 +127,7 @@
             this.searchBtn.TabIndex = 4;
             this.searchBtn.Text = "検索";
             this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // registerBtn
             // 
@@ -113,6 +138,7 @@
             this.registerBtn.TabIndex = 6;
             this.registerBtn.Text = "入庫完了";
             this.registerBtn.UseVisualStyleBackColor = true;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // fixBtn
             // 
@@ -123,6 +149,7 @@
             this.fixBtn.TabIndex = 5;
             this.fixBtn.Text = "入庫取り消し";
             this.fixBtn.UseVisualStyleBackColor = true;
+            this.fixBtn.Click += new System.EventHandler(this.fixBtn_Click);
             // 
             // giveOrderCheckBtn
             // 
@@ -133,6 +160,37 @@
             this.giveOrderCheckBtn.TabIndex = 2;
             this.giveOrderCheckBtn.Text = "未入庫一覧";
             this.giveOrderCheckBtn.UseVisualStyleBackColor = true;
+            this.giveOrderCheckBtn.Click += new System.EventHandler(this.giveOrderCheckBtn_Click);
+            // 
+            // GiveOrderID
+            // 
+            this.GiveOrderID.HeaderText = "発注ID";
+            this.GiveOrderID.Name = "GiveOrderID";
+            this.GiveOrderID.ReadOnly = true;
+            // 
+            // GiveOrdDate
+            // 
+            this.GiveOrdDate.HeaderText = "発注日";
+            this.GiveOrdDate.Name = "GiveOrdDate";
+            this.GiveOrdDate.ReadOnly = true;
+            // 
+            // CompleteDate
+            // 
+            this.CompleteDate.HeaderText = "入庫日";
+            this.CompleteDate.Name = "CompleteDate";
+            this.CompleteDate.ReadOnly = true;
+            // 
+            // StaffTID
+            // 
+            this.StaffTID.HeaderText = "担当社員";
+            this.StaffTID.Name = "StaffTID";
+            this.StaffTID.ReadOnly = true;
+            // 
+            // Details
+            // 
+            this.Details.HeaderText = "詳細";
+            this.Details.Name = "Details";
+            this.Details.ReadOnly = true;
             // 
             // InComing
             // 
@@ -148,10 +206,11 @@
             this.Controls.Add(this.giveOrderedCheckBtn);
             this.Controls.Add(this.incomingDgv);
             this.Controls.Add(this.giveOrderLbl);
-            this.Controls.Add(this.incomingTitleLbl);
+            this.Controls.Add(this.titleLbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InComing";
             this.Text = "InComing";
+            this.Load += new System.EventHandler(this.InComing_Load);
             ((System.ComponentModel.ISupportInitialize)(this.incomingDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -161,7 +220,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label incomingTitleLbl;
+        private System.Windows.Forms.Label titleLbl;
         private System.Windows.Forms.DataGridView incomingDgv;
         private System.Windows.Forms.Button giveOrderedCheckBtn;
         private System.Windows.Forms.Label giveOrderLbl;
@@ -171,5 +230,10 @@
         private System.Windows.Forms.Button fixBtn;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button giveOrderCheckBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiveOrderID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiveOrdDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CompleteDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StaffTID;
+        private System.Windows.Forms.DataGridViewButtonColumn Details;
     }
 }

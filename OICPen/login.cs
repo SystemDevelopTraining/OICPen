@@ -10,31 +10,65 @@ using System.Windows.Forms;
 
 namespace OICPen
 {
-    public partial class login : Form
+    public partial class Login : Form
     {
-    
-    private Frame frame;
-    public login(Frame frm)
+        private Frame frame;
+        Services.StaffService service = new Services.StaffService(new Models.OICPenDbContext());
+
+        public Login(Frame frm)
         {
             InitializeComponent();
             frame = frm;
-
         }
 
-        private void login_Load(object sender, EventArgs e)
+        void login()
         {
+            Models.StaffT staff;
+            try
+            {
+                int staffId = int.Parse(staffIdTbox.Text);
+                staff = service.FindByID(staffId);
+            }
+            catch
+            {
+                MessageBox.Show("該当する社員が存在しません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (staff.Password == staffPassTbox.Text)
+                {
+                    frame.SetUser(staff);
+                    staffPassTbox.Enabled = false;
+                    staffIdTbox.Enabled = false;
+                    loginBtn.Enabled = false;
+                    return;
+                }
 
+            MessageBox.Show("パスワードが違います", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            staffPassTbox.Focus();
+            staffPassTbox.SelectAll();       
         }
 
-        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        private void loginBtn_Click(object sender, EventArgs e)
         {
-
+            login();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void staffPassTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                login();
+            }
+        }
 
-            frame.SetUserName("Leo");
+        private void Login_Load(object sender, EventArgs e)
+        {
+            staffIdTbox.Focus();
+        }
+
+        private void staffIdTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.TextBoxDigitCheck(staffIdTbox, e);
         }
     }
 }

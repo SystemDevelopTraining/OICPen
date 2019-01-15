@@ -8,26 +8,33 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OICPen.Models
 {
-    public class Item
+    public class ItemT
     {
-        [Key]
-        public int Id { get; set; } //商品ID
+ 
+        public int ItemTID { get; set; } //商品ID
         [Required]
+        [MaxLength(30)]
         public string Name { get; set; } //名前
         [Required]
+        [MaxLength(50)]
         public string Hurigana { get; set; } //ふりがな
         [Required]
+        [MaxLength(13)]
         public string JAN { get; set; } //JANコード
         [Required]
-        public uint PurchasePrice { get; set; } //仕入れ価格
+        public int PurchasePrice { get; set; } //仕入れ価格
         [Required]
-        public uint Price { get; set; } //販売価格
+        public int Price { get; set; } //販売価格
         [Required]
-        public uint SaftyStock { get; set; } //安全在庫数
+        public int SafetyStock { get; set; } //安全在庫数
         [Required]
         public DateTime RegistDate { get; set; } //登録日
         [Required]
         public bool IsDeleted { get; set; } //削除フラグ
-        public string note { get; set; } //備考
+        [MaxLength(30)]
+        public string Note { get; set; } //備考
+        public virtual ICollection<TakeOrderDetailT> TakeOrderDetailTs { get; set; }
+        public virtual ICollection<GiveOrderDetailT> GiveOrderDetailTs { get; set; }
+
     }
 }

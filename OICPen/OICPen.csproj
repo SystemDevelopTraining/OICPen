@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pen.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -56,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientPurchhaseHistoryMoreDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientPurchhaseHistoryMoreDetail.Designer.cs">
+      <DependentUpon>ClientPurchhaseHistoryMoreDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clients.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +83,12 @@
     <Compile Include="GiveOrder.Designer.cs">
       <DependentUpon>GiveOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="GiveOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiveOrderDetail.Designer.cs">
+      <DependentUpon>GiveOrderDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="InComing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,17 +101,23 @@
     <Compile Include="Items.Designer.cs">
       <DependentUpon>Items.cs</DependentUpon>
     </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Client.cs" />
+    <Compile Include="ClientPurchaseHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientPurchaseHistory.Designer.cs">
+      <DependentUpon>ClientPurchaseHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClientT.cs" />
     <Compile Include="Models\Configration.cs" />
-    <Compile Include="Models\GiveOrder.cs" />
-    <Compile Include="Models\GiveOrderDetail.cs" />
-    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\GiveOrderT.cs" />
+    <Compile Include="Models\GiveOrderDetailT.cs" />
+    <Compile Include="Models\ItemT.cs" />
     <Compile Include="Models\OICPenDbContext.cs" />
     <Compile Include="LogOut.cs">
       <SubType>Form</SubType>
@@ -104,10 +125,9 @@
     <Compile Include="LogOut.Designer.cs">
       <DependentUpon>LogOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Staff.cs" />
-    <Compile Include="Models\Stock.cs" />
-    <Compile Include="Models\TakeOrder.cs" />
-    <Compile Include="Models\TakeOrderDetail.cs" />
+    <Compile Include="Models\StaffT.cs" />
+    <Compile Include="Models\TakeOrderT.cs" />
+    <Compile Include="Models\TakeOrderDetailT.cs" />
     <Compile Include="Sales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +135,14 @@
       <DependentUpon>Sales.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\ClientService.cs" />
+    <Compile Include="Services\GiveOrderDetailService.cs" />
+    <Compile Include="Services\GiveOrderService.cs" />
+    <Compile Include="Services\InComingService.cs" />
+    <Compile Include="Services\ItemService.cs" />
+    <Compile Include="Services\StaffService.cs" />
+    <Compile Include="Services\TakeOrderDetailService.cs" />
+    <Compile Include="Services\TakeOrderService.cs" />
+    <Compile Include="MyForm.cs" />
     <Compile Include="Ship.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +151,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Staffs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +175,19 @@
     <Compile Include="TakeOrder.Designer.cs">
       <DependentUpon>TakeOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="TakeOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeOrderDetail.Designer.cs">
+      <DependentUpon>TakeOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="ClientPurchaseHistory.resx">
+      <DependentUpon>ClientPurchaseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientPurchhaseHistoryMoreDetail.resx">
+      <DependentUpon>ClientPurchhaseHistoryMoreDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clients.resx">
       <DependentUpon>Clients.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,14 +197,17 @@
     <EmbeddedResource Include="GiveOrder.resx">
       <DependentUpon>GiveOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GiveOrderDetail.resx">
+      <DependentUpon>GiveOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InComing.resx">
       <DependentUpon>InComing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Items.resx">
       <DependentUpon>Items.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,6 +222,9 @@
     <EmbeddedResource Include="Sales.resx">
       <DependentUpon>Sales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Staffs.resx">
       <DependentUpon>Staffs.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TakeOrder.resx">
       <DependentUpon>TakeOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeOrderDetail.resx">
+      <DependentUpon>TakeOrderDetail.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <EmbeddedResource Include="Ship.resx">
@@ -479,6 +535,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\colored-pencils91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="if_1_1668045.ico" />
+    <Content Include="pen.ico" />
+    <Content Include="pencil-case.ico" />
+    <None Include="Resources\fc3ec593-dffc-411c-8717-21f97af10a681.png" />
+    <None Include="Resources\splash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

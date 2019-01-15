@@ -15,36 +15,41 @@ namespace UnitTestProject1
         public void TestMethod1()
         {
 
-            var data= new List<TakeOrder>
+            var data = new List<TakeOrderT>
             {
-                new TakeOrder {TakeOrdDate = DateTime.Now, ClientId = 1},
-                new TakeOrder {TakeOrdDate = DateTime.Now, ClientId = 2}
+                new TakeOrderT {TakeOrderDate = DateTime.Now, ClientTID = 1},
+                new TakeOrderT {TakeOrderDate = DateTime.Now, ClientTID = 2},
+                new TakeOrderT {TakeOrderDate = DateTime.Now, ClientTID = 3,ShipDate=DateTime.Now},
             }.AsQueryable();
 
-            
 
-            var mockSet = new Mock<DbSet<TakeOrder>>();
-            mockSet.As<IQueryable<TakeOrder>>().Setup(m => m.Provider).Returns(data.Provider);
-            mockSet.As<IQueryable<TakeOrder>>().Setup(m => m.Expression).Returns(data.Expression);
-            mockSet.As<IQueryable<TakeOrder>>().Setup(m => m.ElementType).Returns(data.ElementType);
-            mockSet.As<IQueryable<TakeOrder>>().Setup(m => m.GetEnumerator()).Returns(data.GetEnumerator());
+
+            var mockSet = new Mock<DbSet<TakeOrderT>>();
+            mockSet.As<IQueryable<TakeOrderT>>().Setup(m => m.Provider).Returns(data.Provider);
+            mockSet.As<IQueryable<TakeOrderT>>().Setup(m => m.Expression).Returns(data.Expression);
+            mockSet.As<IQueryable<TakeOrderT>>().Setup(m => m.ElementType).Returns(data.ElementType);
+            mockSet.As<IQueryable<TakeOrderT>>().Setup(m => m.GetEnumerator()).Returns(data.GetEnumerator());
 
             var mockContext = new Mock<OICPenDbContext>();
             mockContext.Setup(c => c.TakeOrders).Returns(mockSet.Object);
 
-            var service = new TakeOrderService(mockContext.Object);
+            var service = new OICPen.Services.TakeOrderService(mockContext.Object);
             var takeOrders = service.GetAllTakeOrders();
 
-            Assert.AreEqual(2, takeOrders.Count);
-            Assert.AreEqual(0, takeOrders[0].Id);
-            Assert.AreEqual(1, takeOrders[0].ClientId);
+            Assert.AreEqual(3, takeOrders.Count);
+            Assert.AreEqual(0, takeOrders[0].TakeOrderTID);
+            Assert.AreEqual(1, takeOrders[0].ClientTID);
             Assert.AreEqual(null, takeOrders[0].ShipDate);
 
-            service.AddTakeOrder(3);
+            var shipedTakeOrders = service.GetShipedTakeOrders();
+            Assert.AreEqual(shipedTakeOrders.Count, 1);
 
-            service.AddTakeOrder(4);
-            mockSet.Verify(m => m.Add(It.IsAny<TakeOrder>()), Times.Exactly(2));
-            mockContext.Verify(m => m.SaveChanges(), Times.Exactly(2));
+            var noShipedTakeOrders = service.GetNoShipedTakeOrders();
+            Assert.AreEqual(noShipedTakeOrders.Count, 2);
+
+            service.AddTakeOrder(new TakeOrderT { ClientTID = 1, TakeOrderDate = DateTime.Now });
+            mockSet.Verify(m => m.Add(It.IsAny<TakeOrderT>()), Times.Exactly(1));
+            mockContext.Verify(m => m.SaveChanges(), Times.Exactly(1));
 
         }
     }
