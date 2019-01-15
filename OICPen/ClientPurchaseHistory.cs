@@ -28,7 +28,7 @@ namespace OICPen
                 return;
             foreach (var x in client.TakeOrderTs)
             {
-                dgv.Rows.Add(x.TakeOrderTID,x.TakeOrderDate,x.ShipDate);
+                dgv.Rows.Add(x.TakeOrderTID,x.TakeOrderDate,x.ShipDate,x.StaffT.Name);
             }
         }
 
