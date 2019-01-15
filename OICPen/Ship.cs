@@ -69,7 +69,7 @@ namespace OICPen
             var cells = shipDgv.SelectedRows[0].Cells;
             if (cells[3].Value == null)
             {
-                servis.Shiping((int)cells[1].Value);
+                servis.Shiping((int)cells[0].Value);
        
             }
             
@@ -83,7 +83,7 @@ namespace OICPen
             var cells = shipDgv.SelectedRows[0].Cells;
             if (cells[3].Value != null)
             {
-                servis.ClearShiping((int)cells[1].Value);
+                servis.ClearShiping((int)cells[0].Value);
 
             }
             
@@ -92,16 +92,12 @@ namespace OICPen
 
 
         //出庫済み、未出庫の処理をする。
-        public void SetDataGridView (List<Models.TakeOrderT> loadShip ) 
+        public void SetDataGridView(List<Models.TakeOrderT> loadShip)
         {
             shipDgv.Rows.Clear();
 
             foreach (var orders in loadShip)
-            {
-                {
-                    shipDgv.Rows.Add(orders.ClientTID, orders.TakeOrderTID, orders.TakeOrderDate, orders.ShipDate);
-                }
-            }
+                shipDgv.Rows.Add(orders.TakeOrderTID, orders.ClientTID, orders.TakeOrderDate, orders.ShipDate,orders.StaffT.Name);
         }
 
         private void shipDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -109,7 +105,7 @@ namespace OICPen
             DataGridView dgv = (DataGridView)sender;
             if (dgv.Columns[e.ColumnIndex].Name == "Details" && e.ColumnIndex != -1)
             {
-                var f = new    TakeOrderDetail(servis.FindByID((int.Parse(dgv.Rows[e.RowIndex].Cells[1].Value.ToString()))));
+                var f = new    TakeOrderDetail(servis.FindByID((int.Parse(dgv.Rows[e.RowIndex].Cells[0].Value.ToString()))));
                 f.ShowDialog();
             }
         }

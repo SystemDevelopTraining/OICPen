@@ -32,6 +32,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientPurchhaseHistoryMoreDetail = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseHistoryDgv)).BeginInit();
             this.SuspendLayout();
@@ -45,13 +46,14 @@
             this.Column1,
             this.Column3,
             this.Column4,
+            this.StaffName,
             this.clientPurchhaseHistoryMoreDetail});
             this.PurchaseHistoryDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PurchaseHistoryDgv.Location = new System.Drawing.Point(0, 0);
             this.PurchaseHistoryDgv.Name = "PurchaseHistoryDgv";
             this.PurchaseHistoryDgv.ReadOnly = true;
             this.PurchaseHistoryDgv.RowTemplate.Height = 21;
-            this.PurchaseHistoryDgv.Size = new System.Drawing.Size(440, 375);
+            this.PurchaseHistoryDgv.Size = new System.Drawing.Size(630, 416);
             this.PurchaseHistoryDgv.TabIndex = 0;
             this.PurchaseHistoryDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PurchaseHistoryDgv_CellContentClick);
             // 
@@ -75,6 +77,12 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // StaffName
+            // 
+            this.StaffName.HeaderText = "担当社員";
+            this.StaffName.Name = "StaffName";
+            this.StaffName.ReadOnly = true;
+            // 
             // clientPurchhaseHistoryMoreDetail
             // 
             this.clientPurchhaseHistoryMoreDetail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -87,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 375);
+            this.ClientSize = new System.Drawing.Size(630, 416);
             this.Controls.Add(this.PurchaseHistoryDgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MinimizeBox = false;
@@ -105,6 +113,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StaffName;
         private System.Windows.Forms.DataGridViewButtonColumn clientPurchhaseHistoryMoreDetail;
     }
 }
