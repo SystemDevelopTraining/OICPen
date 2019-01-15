@@ -45,12 +45,13 @@
             this.ItemID,
             this.ItemName,
             this.quantity});
+            this.GiveOrderDetailDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GiveOrderDetailDgv.Enabled = false;
-            this.GiveOrderDetailDgv.Location = new System.Drawing.Point(12, 12);
+            this.GiveOrderDetailDgv.Location = new System.Drawing.Point(0, 0);
             this.GiveOrderDetailDgv.Name = "GiveOrderDetailDgv";
             this.GiveOrderDetailDgv.RowHeadersVisible = false;
             this.GiveOrderDetailDgv.RowTemplate.Height = 21;
-            this.GiveOrderDetailDgv.Size = new System.Drawing.Size(403, 292);
+            this.GiveOrderDetailDgv.Size = new System.Drawing.Size(635, 354);
             this.GiveOrderDetailDgv.TabIndex = 0;
             // 
             // TakeOrderDetailTId
@@ -62,9 +63,11 @@
             // 
             this.ItemID.HeaderText = "商品ID";
             this.ItemID.Name = "ItemID";
+            this.ItemID.Width = 190;
             // 
             // ItemName
             // 
+            this.ItemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ItemName.HeaderText = "商品名";
             this.ItemName.Name = "ItemName";
             // 
@@ -72,15 +75,17 @@
             // 
             this.quantity.HeaderText = "数量";
             this.quantity.Name = "quantity";
+            this.quantity.Width = 75;
             // 
             // GiveOrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 316);
+            this.ClientSize = new System.Drawing.Size(635, 354);
             this.Controls.Add(this.GiveOrderDetailDgv);
+            this.MinimizeBox = false;
             this.Name = "GiveOrderDetail";
-            this.Text = "GiveOrderDetail";
+            this.Text = "発注詳細";
             this.Load += new System.EventHandler(this.GiveOrderDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GiveOrderDetailDgv)).EndInit();
             this.ResumeLayout(false);

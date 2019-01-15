@@ -51,13 +51,12 @@
             this.PurchaseHistoryDgv.Name = "PurchaseHistoryDgv";
             this.PurchaseHistoryDgv.ReadOnly = true;
             this.PurchaseHistoryDgv.RowTemplate.Height = 21;
-            this.PurchaseHistoryDgv.Size = new System.Drawing.Size(553, 375);
+            this.PurchaseHistoryDgv.Size = new System.Drawing.Size(440, 375);
             this.PurchaseHistoryDgv.TabIndex = 0;
             this.PurchaseHistoryDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PurchaseHistoryDgv_CellContentClick);
             // 
             // Column1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column1.HeaderText = "注文ID";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -88,12 +87,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 375);
+            this.ClientSize = new System.Drawing.Size(440, 375);
             this.Controls.Add(this.PurchaseHistoryDgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MinimizeBox = false;
             this.Name = "ClientPurchaseHistory";
-            this.Text = "MemberPurchaseHistory";
+            this.Text = "購入履歴";
             this.Load += new System.EventHandler(this.ClientPurchaseHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PurchaseHistoryDgv)).EndInit();
             this.ResumeLayout(false);
