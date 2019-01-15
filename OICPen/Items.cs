@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Text;
+using System.IO;
 
 namespace OICPen
 {
@@ -273,6 +275,40 @@ namespace OICPen
             safetyStockTbox.Text="";
             furiganaTbox.Text="";
             noteTbox.Text="";
+        }
+
+        private void Items_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.All;
+        }
+
+        private void Items_DragDrop(object sender, DragEventArgs e)
+        {
+            // ファイルが渡されていなければ、何もしない
+            if (!e.Data.GetDataPresent(DataFormats.FileDrop)) return;
+
+            // 渡されたファイルに対して処理を行う
+            foreach (var filePath in (string[])e.Data.GetData(DataFormats.FileDrop))
+            {
+                var readText = Encoding.GetEncoding("shift_jis").GetString(File.ReadAllBytes(filePath));
+                var rows=readText.Split(new char[] { '\n' });
+                foreach (var row in rows)
+                {
+                    var columns = row.Split(new char[] { ',' });
+                    service.AddItem( new Models.ItemT
+                    {
+                        Name = columns[0],
+                        JAN = columns[1],
+                        Price = int.Parse(columns[2]),
+                        PurchasePrice = int.Parse(columns[3]),
+                        SafetyStock = int.Parse(columns[4]),
+                        Hurigana = columns[5],
+                        RegistDate = DateTime.Now,
+                        Note = columns[6],
+                        IsDeleted = false
+                    });
+                }
+            }
         }
     }
 }
