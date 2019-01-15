@@ -16,16 +16,12 @@ namespace OICPen
 
         Models.StaffT loginStaff;
         Button[] btnList;
-        Login login;
-        GiveOrder giveOrder;
-        TakeOrder takeOrder;
-        Clients clients;
-        Staffs staffs;
         Button beforeBtn = new Button();
-        Items items;
-        Ship ship;
-        InComing inComing;
-        Sales sales;
+
+        Login login;
+
+        MyForm[] forms;
+       
 
         public void SetUser(Models.StaffT staff)
         {
@@ -33,13 +29,8 @@ namespace OICPen
             staffsNameLbl.Text = staff.Name;
             loginStaff = staff;
             BtnSetEnable(true);
-            takeOrder.Staff = staff;
-            giveOrder.Staff = staff;
-            items.Staff = staff;
-            clients.Staff = staff;
-            staffs.Staff = staff;
-            ship.Staff = staff;
-            inComing.Staff = staff;
+            foreach (var form in forms)
+                form.Staff = staff;
             
             if (staff.Permission != Models.Permission.God)
             {
@@ -50,17 +41,34 @@ namespace OICPen
             }
 
         }
+
+        //各フォームの生成
+        void CreateFrames()
+        {
+            forms = new MyForm[] {
+                new TakeOrder(dbcontext),
+                new Sales(dbcontext),
+                new Ship(dbcontext),
+                new InComing(dbcontext),
+                new GiveOrder(dbcontext),
+                new Stock(dbcontext),
+                new Items(dbcontext),
+                new Clients(dbcontext),
+                new Staffs(dbcontext)
+            };
+        }
+
+        //各フォームの削除
+        void DisposeFrames()
+        {
+            foreach (var form in forms)
+                form.Dispose();
+        }
+
         public Frame(Models.OICPenDbContext dbcontext)
         {
             this.dbcontext = dbcontext;
-            ship = new Ship(dbcontext);
-            takeOrder = new TakeOrder(dbcontext);
-            giveOrder = new GiveOrder(dbcontext);
-            items = new Items(dbcontext);
-            clients = new Clients(dbcontext);
-            staffs = new Staffs(dbcontext);
-            inComing = new InComing(dbcontext);
-            sales = new Sales(dbcontext);
+            CreateFrames();
             InitializeComponent();
             timer1.Start();
         }
@@ -111,14 +119,16 @@ namespace OICPen
                 takeorderBtn,salesBtn,shipBtn,incomingBtn,giveorderBtn,stockBtn,itemsBtn,clientsBtn,staffsBtn
             };
             BtnSetEnable(false);
-            var formList = new Form[] {
-                takeOrder,new Sales(dbcontext),ship,inComing,
-                giveOrder,new Stock(dbcontext), items,clients,staffs
-            };
-            btnList.Zip(formList,(btn,form)=>{
-                btn.Click += (_,__) => ChangeForm(form,btn);
-                return 0;
-            }).ToArray();
+            for (var i = 0; i < btnList.Length; i++)
+            {
+                var ii = i;
+                btnList[i].Click += (_, __) => ChangeForm(forms[ii], btnList[ii]);
+            }
+        }
+
+        private void ChangeForm(MyForm myf, Button btn = null)
+        {
+            ChangeForm((Form)myf,btn);
         }
 
         private void ChangeForm(Form f,Button btn = null)
@@ -168,6 +178,8 @@ namespace OICPen
             loginStaff = null;
             login.Dispose();
             login = new Login(this);
+            DisposeFrames();
+            CreateFrames();
             ChangeForm(login);
         }
 

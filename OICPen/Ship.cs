@@ -1,17 +1,11 @@
 ﻿using OICPen.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OICPen
 {
-    public partial class Ship : Form
+    public partial class Ship : Form,MyForm
     {
         private Services.TakeOrderService servis;
         private StaffT staff;
@@ -110,6 +104,14 @@ namespace OICPen
             }
         }
 
-     
+        private void shipDgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.Columns[e.ColumnIndex].Name == "Details" && e.ColumnIndex != -1)
+            {
+                var f = new    TakeOrderDetail(servis.FindByID((int.Parse(dgv.Rows[e.RowIndex].Cells[1].Value.ToString()))));
+                f.ShowDialog();
+            }
+        }
     }
 }

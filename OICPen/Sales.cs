@@ -6,9 +6,11 @@ using System.Windows.Forms;
 
 namespace OICPen
 {
-    public partial class Sales : Form
+    public partial class Sales : Form,MyForm
     {
         private Services.ItemService service;
+
+        public Models.StaffT Staff { set { } }
 
         public Sales(OICPenDbContext dbcontext)
         {

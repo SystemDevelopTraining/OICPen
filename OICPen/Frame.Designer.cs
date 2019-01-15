@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frame));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.teamNameLbl = new System.Windows.Forms.Label();
             this.logoPbox = new System.Windows.Forms.PictureBox();
@@ -424,8 +425,9 @@
             this.ClientSize = new System.Drawing.Size(1937, 1100);
             this.Controls.Add(this.splitContainer3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frame";
-            this.Text = "Frame";
+            this.Text = "在庫管理システム";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frame_FormClosing);
             this.Shown += new System.EventHandler(this.Frame_Shown);

@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace OICPen
 {
-    public partial class Staffs : Form
+    public partial class Staffs : Form,MyForm
     {
         private Services.StaffService Servis;
         private StaffT staff;

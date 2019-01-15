@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.Entity;
 
 
 namespace OICPen
 {
-    public partial class Stock : Form
+    public partial class Stock : Form,MyForm
     {
         private Services.ItemService service ;
+
+        public Models.StaffT Staff { set { } }
 
         public Stock(Models.OICPenDbContext dbcontext)
         {
