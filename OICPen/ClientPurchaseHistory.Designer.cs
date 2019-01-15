@@ -51,7 +51,7 @@
             this.PurchaseHistoryDgv.Name = "PurchaseHistoryDgv";
             this.PurchaseHistoryDgv.ReadOnly = true;
             this.PurchaseHistoryDgv.RowTemplate.Height = 21;
-            this.PurchaseHistoryDgv.Size = new System.Drawing.Size(553, 375);
+            this.PurchaseHistoryDgv.Size = new System.Drawing.Size(463, 375);
             this.PurchaseHistoryDgv.TabIndex = 0;
             this.PurchaseHistoryDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PurchaseHistoryDgv_CellContentClick);
             // 
@@ -88,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 375);
+            this.ClientSize = new System.Drawing.Size(463, 375);
             this.Controls.Add(this.PurchaseHistoryDgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MinimizeBox = false;

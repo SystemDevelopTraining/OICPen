@@ -51,7 +51,7 @@
             this.MoreDetailDgv.Name = "MoreDetailDgv";
             this.MoreDetailDgv.ReadOnly = true;
             this.MoreDetailDgv.RowTemplate.Height = 21;
-            this.MoreDetailDgv.Size = new System.Drawing.Size(553, 375);
+            this.MoreDetailDgv.Size = new System.Drawing.Size(806, 375);
             this.MoreDetailDgv.TabIndex = 0;
             // 
             // Column1
@@ -90,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 375);
+            this.ClientSize = new System.Drawing.Size(806, 375);
             this.Controls.Add(this.MoreDetailDgv);
             this.MinimizeBox = false;
             this.Name = "ClientPurchhaseHistoryMoreDetail";
