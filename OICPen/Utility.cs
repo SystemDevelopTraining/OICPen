@@ -58,6 +58,34 @@ namespace OICPen
                 e.Handled = true;
             }
         }
+
+        public static string Hash(string s)
+        {
+            //文字列をbyte型配列に変換する
+            byte[] data = System.Text.Encoding.UTF8.GetBytes(s);
+
+            //MD5CryptoServiceProviderオブジェクトを作成
+            var md5 = new System.Security.Cryptography.MD5CryptoServiceProvider();
+
+            //ハッシュ値を計算する
+            byte[] bs = md5.ComputeHash(data);
+
+            //リソースを解放する
+            md5.Clear();
+
+            //byte型配列を16進数の文字列に変換
+            System.Text.StringBuilder result = new System.Text.StringBuilder();
+            foreach (byte b in bs)
+            {
+                result.Append(b.ToString("x2"));
+            }
+            //ここの部分は次のようにもできる
+            //string result = BitConverter.ToString(bs).ToLower().Replace("-","");
+
+            //結果を表示
+            return result.ToString();
+        }
+
     }
 
 }
