@@ -12,7 +12,7 @@ namespace OICPen.Models
         [MaxLength(50)]
         public string Hurigana { get; set; } // ふりがな
         [Required]
-        [MaxLength(20)]
+        [MaxLength(32)]
         public string Password { get; set; } // パスワード
         [Required]
         public Permission Permission { get; set; } // 権限
