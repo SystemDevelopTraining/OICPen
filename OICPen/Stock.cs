@@ -16,12 +16,6 @@ namespace OICPen
             InitializeComponent();
             service = new Services.ItemService(dbcontext);
         }
-
-        private void itemsCodeTbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Utility.TextBoxDigitCheck(itemsCodeTbox,e);
-        }
-
         private void searchBtn_Click(object sender, EventArgs e)
         {
 
@@ -111,6 +105,15 @@ namespace OICPen
                 }
             }
         }
+        private void itemsCodeTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AlphaMode(itemsCodeTbox,e);
+            Utility.TextBoxDigitCheck(itemsCodeTbox, e);
+        }
+
+        private void itemsNameTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaMode(itemsNameTbox,e);        }
     }
 }
 

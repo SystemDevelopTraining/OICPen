@@ -89,17 +89,6 @@ namespace OICPen
                 }
             }
         }
-
-        private void itemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Utility.TextBoxDigitCheck(itemIdTbox, e);
-        }
-
-        private void quantityTbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Utility.TextBoxDigitCheck(quantityTbox,e);
-        }
-
         private void allItemBtn_Click(object sender, EventArgs e)
         {
             SetDataGridView(itemServis.GetItems());
@@ -247,5 +236,22 @@ namespace OICPen
                     "0");//在庫表示未完成
             });
         }
+
+        private void itemNameTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaMode(itemNameTbox,e);
+        }
+        private void itemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AlphaMode(itemIdTbox,e);
+            Utility.TextBoxDigitCheck(itemIdTbox, e);
+        }
+
+        private void quantityTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AlphaMode(quantityTbox,e);
+            Utility.TextBoxDigitCheck(quantityTbox, e);
+        }
+
     }
 }

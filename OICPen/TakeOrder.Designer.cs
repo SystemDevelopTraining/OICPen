@@ -123,6 +123,7 @@
             // 
             this.itemIdTbox.Enabled = false;
             this.itemIdTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.itemIdTbox.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.itemIdTbox.Location = new System.Drawing.Point(260, 511);
             this.itemIdTbox.MaxLength = 6;
             this.itemIdTbox.Name = "itemIdTbox";
@@ -145,6 +146,7 @@
             // 
             this.countsTbox.Enabled = false;
             this.countsTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.countsTbox.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.countsTbox.Location = new System.Drawing.Point(581, 675);
             this.countsTbox.MaxLength = 6;
             this.countsTbox.Name = "countsTbox";
@@ -180,6 +182,7 @@
             // clientsIdTbox
             // 
             this.clientsIdTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.clientsIdTbox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.clientsIdTbox.Location = new System.Drawing.Point(239, 196);
             this.clientsIdTbox.MaxLength = 6;
             this.clientsIdTbox.Name = "clientsIdTbox";
@@ -213,12 +216,14 @@
             // 
             this.itemNameTbox.Enabled = false;
             this.itemNameTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.itemNameTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.itemNameTbox.Location = new System.Drawing.Point(260, 454);
             this.itemNameTbox.MaxLength = 30;
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(218, 36);
             this.itemNameTbox.TabIndex = 3;
             this.itemNameTbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.itemNameTbox_KeyDown);
+            this.itemNameTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.itemNameTbox_KeyPress);
             // 
             // clientsIdViewLbl
             // 

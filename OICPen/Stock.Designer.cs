@@ -134,6 +134,7 @@
             this.itemsNameTbox.Name = "itemsNameTbox";
             this.itemsNameTbox.Size = new System.Drawing.Size(358, 36);
             this.itemsNameTbox.TabIndex = 2;
+            this.itemsNameTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.itemsNameTbox_KeyPress);
             // 
             // searchBtn
             // 

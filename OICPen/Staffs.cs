@@ -37,11 +37,6 @@ namespace OICPen
             InitializeComponent();
         }
 
-        private void idTbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Utility.TextBoxDigitCheck(idTbox, e);
-        }
-
         private void searchBtn_Click(object sender, EventArgs e)
         {
             var staffs = new string[] { searchNameTbox.Text, idTbox.Text, searchFuriganaTbox.Text };
@@ -266,15 +261,42 @@ namespace OICPen
             registerFuriganaTbox.Text = "";
             permissionCbox.SelectedIndex = -1;
         }
+        private void idTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AlphaMode(idTbox,e);
+            Utility.TextBoxDigitCheck(idTbox, e);
+        }
 
         private void searchFuriganaTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Utility.HiraganaMode(searchFuriganaTbox,e);
             Utility.HiraganaCheckKeyPress(searchFuriganaTbox, e);
         }
 
         private void registerFuriganaTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Utility.HiraganaMode(registerFuriganaTbox,e);
             Utility.HiraganaCheckKeyPress(registerFuriganaTbox, e);
+        }
+
+        private void searchNameTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaMode(searchNameTbox,e);
+        }
+
+        private void registerNameTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaMode(registerNameTbox,e);
+        }
+
+        private void passwordTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AlphaMode(passwordTbox,e);
+        }
+
+        private void password2Tbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AlphaMode(password2Tbox,e);
         }
     }
 }

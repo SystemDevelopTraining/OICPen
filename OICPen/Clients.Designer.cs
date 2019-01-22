@@ -183,6 +183,7 @@
             this.nameTbox.Name = "nameTbox";
             this.nameTbox.Size = new System.Drawing.Size(404, 40);
             this.nameTbox.TabIndex = 6;
+            this.nameTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nameTbox_KeyPress);
             // 
             // nameLbl
             // 
@@ -249,6 +250,7 @@
             this.addressTbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.addressTbox.Size = new System.Drawing.Size(404, 80);
             this.addressTbox.TabIndex = 10;
+            this.addressTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.addressTbox_KeyPress);
             // 
             // postalCodeLbl
             // 
@@ -322,6 +324,7 @@
             this.searchNameTbox.Name = "searchNameTbox";
             this.searchNameTbox.Size = new System.Drawing.Size(404, 40);
             this.searchNameTbox.TabIndex = 1;
+            this.searchNameTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchNameTbox_KeyPress);
             // 
             // searchIdTbox
             // 
@@ -403,6 +406,7 @@
             this.phoneNumberTbox.Name = "phoneNumberTbox";
             this.phoneNumberTbox.Size = new System.Drawing.Size(295, 40);
             this.phoneNumberTbox.TabIndex = 8;
+            this.phoneNumberTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberTbox_KeyPress_1);
             // 
             // Clients
             // 

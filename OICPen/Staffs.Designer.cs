@@ -170,6 +170,7 @@
             this.searchNameTbox.Name = "searchNameTbox";
             this.searchNameTbox.Size = new System.Drawing.Size(320, 36);
             this.searchNameTbox.TabIndex = 2;
+            this.searchNameTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchNameTbox_KeyPress);
             // 
             // fixBtn
             // 
@@ -212,6 +213,7 @@
             this.registerNameTbox.Name = "registerNameTbox";
             this.registerNameTbox.Size = new System.Drawing.Size(320, 36);
             this.registerNameTbox.TabIndex = 5;
+            this.registerNameTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.registerNameTbox_KeyPress);
             // 
             // registerNameLbl
             // 
@@ -242,6 +244,7 @@
             this.passwordTbox.PasswordChar = '*';
             this.passwordTbox.Size = new System.Drawing.Size(320, 36);
             this.passwordTbox.TabIndex = 7;
+            this.passwordTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passwordTbox_KeyPress);
             // 
             // password2Tbox
             // 
@@ -252,6 +255,7 @@
             this.password2Tbox.PasswordChar = '*';
             this.password2Tbox.Size = new System.Drawing.Size(320, 36);
             this.password2Tbox.TabIndex = 8;
+            this.password2Tbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.password2Tbox_KeyPress);
             // 
             // password2Lbl
             // 

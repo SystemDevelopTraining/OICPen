@@ -79,15 +79,6 @@ namespace OICPen
             }
         }
 
-        private void clientsIdTbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Utility.TextBoxDigitCheck(clientsIdTbox, e);
-        }
-        private void itemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Utility.TextBoxDigitCheck(itemIdTbox, e);
-        }
-
         void SetDataGridView(List<ItemT> items)
         {
             itemsViewDgv.Rows.Clear();
@@ -325,10 +316,20 @@ namespace OICPen
             countsTbox.Enabled = true;
             confirmBtn.Enabled = true;
         }
+        private void clientsIdTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AlphaMode(clientsIdTbox,e);
+            Utility.TextBoxDigitCheck(clientsIdTbox, e);
+        }
+        private void itemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AlphaMode(itemIdTbox, e);
+            Utility.TextBoxDigitCheck(itemIdTbox, e);
+        }
 
         private void countsTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            Utility.AlphaMode(countsTbox, e);
             Utility.TextBoxDigitCheck(countsTbox, e);
 
         }
@@ -371,6 +372,11 @@ namespace OICPen
             {
                 confirmBtn.PerformClick();
             }
+        }
+
+        private void itemNameTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaMode(itemNameTbox, e);
         }
     }
 }

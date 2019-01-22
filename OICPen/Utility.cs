@@ -58,6 +58,17 @@ namespace OICPen
                 e.Handled = true;
             }
         }
+
+
+        public static void AlphaMode(TextBox x,KeyPressEventArgs e)
+        {
+            x.ImeMode = ImeMode.Alpha;
+        }
+        public static void HiraganaMode(TextBox x, KeyPressEventArgs e)
+        {
+            x.ImeMode = ImeMode.Hiragana;
+        }
+
     }
 
 }

@@ -40,16 +40,19 @@ namespace OICPen
         /*バリエーションチェック*/
         private void searchItemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Utility.AlphaMode(searchItemIdTbox,e);
             Utility.TextBoxDigitCheck(searchItemIdTbox,e);
         }
 
         private void searchJanTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Utility.AlphaMode(searchJanTbox,e);
             Utility.TextBoxDigitCheck(searchJanTbox, e);
         }
 
         private void purchasePriceTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Utility.AlphaMode(purchasePriceTbox,e);
             Utility.TextBoxDigitCheck(purchasePriceTbox, e);
             if (Regex.IsMatch(purchasePriceTbox.Text, @"^0+"))
                 purchasePriceTbox.Text = "";
@@ -58,6 +61,7 @@ namespace OICPen
 
         private void priceTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Utility.AlphaMode(priceTbox,e);
             Utility.TextBoxDigitCheck(priceTbox, e);
             if (Regex.IsMatch(priceTbox.Text, @"^0+"))
                 priceTbox.Text="";
@@ -65,12 +69,33 @@ namespace OICPen
 
         private void janTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Utility.AlphaMode(janTbox,e);
             Utility.TextBoxDigitCheck(janTbox, e);
         }
 
         private void safetyStockTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Utility.AlphaMode(safetyStockTbox,e);
             Utility.TextBoxDigitCheck(safetyStockTbox, e);
+        }
+        private void searchItemNameTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaMode(searchItemNameTbox, e);
+        }
+
+        private void itemNameTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaMode(itemNameTbox,e);
+        }
+
+        private void noteTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaMode(noteTbox,e);
+        }
+        private void furiganaTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaMode(furiganaTbox,e);
+            Utility.HiraganaCheckKeyPress(furiganaTbox, e);
         }
 
         /*データグリッドビューセット*/
@@ -260,11 +285,6 @@ namespace OICPen
             }
         }
         
-        private void furiganaTbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Utility.HiraganaCheckKeyPress(furiganaTbox, e);
-        }
-
         /*テキストボックスを削除する*/
         private void TextboxDelete()
         {
@@ -310,5 +330,7 @@ namespace OICPen
                 }
             }
         }
+
+      
     }
 }

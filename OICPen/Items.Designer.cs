@@ -223,6 +223,7 @@
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(284, 36);
             this.itemNameTbox.TabIndex = 5;
+            this.itemNameTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.itemNameTbox_KeyPress);
             // 
             // itemNameLbl
             // 
@@ -355,6 +356,7 @@
             this.noteTbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.noteTbox.Size = new System.Drawing.Size(284, 155);
             this.noteTbox.TabIndex = 11;
+            this.noteTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.noteTbox_KeyPress);
             // 
             // safetyStockTbox
             // 
@@ -411,6 +413,7 @@
             this.searchItemNameTbox.Name = "searchItemNameTbox";
             this.searchItemNameTbox.Size = new System.Drawing.Size(284, 36);
             this.searchItemNameTbox.TabIndex = 3;
+            this.searchItemNameTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchItemNameTbox_KeyPress);
             // 
             // searchJanTbox
             // 

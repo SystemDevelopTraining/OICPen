@@ -158,23 +158,8 @@ namespace OICPen
             MessageBox.Show("郵便番号が正しく記入されてません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
-        /*
-        private void phoneNumberMaskedTbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        }
-        */
-        private void postalCodeMaskedTbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == ' ')
-                e.KeyChar = (char)0;
-          
-        }
-
-        private void searchIdTbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Utility.TextBoxDigitCheck(searchIdTbox,e);
-        }
-
+     
+       
         private void postalCodeMaskedTbox_Click(object sender, EventArgs e)
         {
             postalCodeMTbox.SelectionStart = 0;
@@ -276,20 +261,53 @@ namespace OICPen
         {
             searchNameTbox.Focus();
         }
+        private void postalCodeMaskedTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+                e.KeyChar = (char)0;
+        }
+
+        private void searchIdTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AlphaMode(searchIdTbox,e);
+            Utility.TextBoxDigitCheck(searchIdTbox, e);
+        }
 
         private void searchIdTbox_KeyPress_1(object sender, KeyPressEventArgs e)
         {
+            Utility.AlphaMode(searchIdTbox,e);
             Utility.TextBoxDigitCheck(searchIdTbox, e);
         }
 
         private void huriganaTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Utility.HiraganaMode(huriganaTbox,e);
             Utility.HiraganaCheckKeyPress(huriganaTbox, e);
         }
 
         private void searchHuriganaTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            Utility.HiraganaMode(searchHuriganaTbox,e);
             Utility.HiraganaCheckKeyPress(searchHuriganaTbox, e);
         }
+
+        private void searchNameTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaMode(searchNameTbox, e);
+        }
+
+        private void nameTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaMode(nameTbox,e);
+        }
+
+        private void phoneNumberTbox_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Utility.AlphaMode(phoneNumberTbox,e);
+        }
+
+        private void addressTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.HiraganaMode(addressTbox,e);        }
     }
 }

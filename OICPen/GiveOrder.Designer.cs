@@ -148,6 +148,7 @@
             this.itemNameTbox.Name = "itemNameTbox";
             this.itemNameTbox.Size = new System.Drawing.Size(218, 36);
             this.itemNameTbox.TabIndex = 1;
+            this.itemNameTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.itemNameTbox_KeyPress);
             // 
             // itemsViewDgv
             // 
