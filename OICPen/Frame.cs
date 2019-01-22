@@ -58,6 +58,8 @@ namespace OICPen
                 new Clients(dbcontext),
                 new Staffs(dbcontext)
             };
+            foreach(var x in forms)
+                ((Form)x).Enabled = false;
         }
 
         //各フォームの削除
@@ -170,8 +172,11 @@ namespace OICPen
         private void ChangeForm(Form f,Button btn = null)
         {
             f.TopLevel = false;
+            if(frameScon.Panel2.Controls.Count>0)
+            frameScon.Panel2.Controls[0].Enabled = false;
             frameScon.Panel2.Controls.Clear();
             frameScon.Panel2.Controls.Add(f);
+            f.Enabled = true;
             f.Dock = DockStyle.Fill;
             f.Show();
             f.BringToFront();
