@@ -24,16 +24,17 @@ namespace OICPen.Services
                 order: 登録したい注文
          [返り値] なし
          ---------------------------------------------------------------*/
-        public void AddTakeOrderDetail(ItemT item, int quantity, Models.TakeOrderT order)
+        public void AddTakeOrderDetail(ItemT item, int quantity, int TakeOrderTID)
         {
-            var orderDetails = new TakeOrderDetailT { ItemTID = item.ItemTID, Quantity = (int)quantity, TakeOrderTID = order.TakeOrderTID };
+            var orderDetails = new TakeOrderDetailT { ItemTID = item.ItemTID, Quantity = (int)quantity, TakeOrderTID = TakeOrderTID, TakeOrderPrice = item.Price };
+            context.TakeOrderDetails.Add(orderDetails);
             context.SaveChanges();
         }
 
         public void AddTakeOrderDetail( Models.TakeOrderDetailT orderDetail)
         {
-            context.TakeOrderDetails.Add(orderDetail);
-            context.SaveChanges();
+            var item = context.Items.Single(x => x.ItemTID == orderDetail.ItemTID && x.IsDeleted == false);
+            AddTakeOrderDetail(item, orderDetail.Quantity, orderDetail.TakeOrderTID);
         }
     }
 }
