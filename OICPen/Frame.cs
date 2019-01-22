@@ -139,11 +139,10 @@ namespace OICPen
             string fileName = @"warning.txt";
             if (System.IO.File.Exists(fileName))
             {
-                MessageBox.Show("'" + fileName + "'は存在します。");
+                
             }
             else
             {
-                MessageBox.Show("'" + fileName + "'が存在しません。");
                 StreamWriter sw = File.CreateText("warning.txt");
             sw.WriteLine("店長からのメッセージ");
             sw.Close();
