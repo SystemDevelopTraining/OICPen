@@ -59,6 +59,15 @@ namespace OICPen
             }
         }
 
+        public static void AlphaMode(TextBox x,KeyPressEventArgs e)
+        {
+            x.ImeMode = ImeMode.Alpha;
+        }
+        public static void HiraganaMode(TextBox x, KeyPressEventArgs e)
+        {
+            x.ImeMode = ImeMode.Hiragana;
+        }
+
         public static string Hash(string s)
         {
             //文字列をbyte型配列に変換する
@@ -84,8 +93,6 @@ namespace OICPen
 
             //結果を表示
             return result.ToString();
-        }
-
     }
 
 }
