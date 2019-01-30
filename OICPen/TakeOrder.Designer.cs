@@ -486,7 +486,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TakeOrder";
             this.Text = "TakeOrder";
-            this.Load += new System.EventHandler(this.TakeOrder_Load);
+            this.Activated += new System.EventHandler(this.TakeOrder_Activated);
+            this.EnabledChanged += new System.EventHandler(this.TakeOrder_EnabledChanged);
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.completeOrdersDgv)).EndInit();
             this.ResumeLayout(false);
