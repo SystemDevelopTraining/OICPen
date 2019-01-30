@@ -402,7 +402,7 @@
             // 
             this.phoneNumberTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
             this.phoneNumberTbox.Location = new System.Drawing.Point(1099, 637);
-            this.phoneNumberTbox.MaxLength = 15;
+            this.phoneNumberTbox.MaxLength = 14;
             this.phoneNumberTbox.Name = "phoneNumberTbox";
             this.phoneNumberTbox.Size = new System.Drawing.Size(295, 40);
             this.phoneNumberTbox.TabIndex = 8;

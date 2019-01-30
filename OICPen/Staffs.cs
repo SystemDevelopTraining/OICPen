@@ -181,7 +181,7 @@ namespace OICPen
             var staff = new StaffT();
             staff.Name = registerNameTbox.Text;
             staff.Hurigana = registerFuriganaTbox.Text;
-            staff.Password = passwordTbox.Text;
+            staff.Password = Utility.Hash(passwordTbox.Text);
             staff.Permission = (Permission)permissionCbox.SelectedIndex;
             return staff;
         }

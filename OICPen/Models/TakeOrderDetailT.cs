@@ -12,7 +12,8 @@ namespace OICPen.Models
         public int ItemTID { get; set; }// 商品Id
         [Required]
         public int Quantity { get; set; } // 数量
-
+        public int TakeOrderPrice { get; set; } //注文時販売価格
+        [Required]
         public virtual TakeOrderT TakeOrderT { get; set; }
         public virtual ItemT ItemT { get; set; }
     }

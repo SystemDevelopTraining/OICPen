@@ -331,7 +331,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GiveOrder";
             this.Text = "GiveOrder";
-            this.Load += new System.EventHandler(this.GiveOrder_Load);
+            this.Activated += new System.EventHandler(this.GiveOrder_Activated);
+            this.EnabledChanged += new System.EventHandler(this.GiveOrder_EnabledChanged);
             ((System.ComponentModel.ISupportInitialize)(this.giveOrderListDgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsViewDgv)).EndInit();
             this.ResumeLayout(false);

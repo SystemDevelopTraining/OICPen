@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.IO;
 
 namespace OICPen
 {
@@ -57,6 +58,8 @@ namespace OICPen
                 new Clients(dbcontext),
                 new Staffs(dbcontext)
             };
+            foreach(var x in forms)
+                ((Form)x).Enabled = false;
         }
 
         //各フォームの削除
@@ -134,6 +137,31 @@ namespace OICPen
                 var ii = i;
                 btnList[i].Click += (_, __) => ChangeForm(forms[ii], btnList[ii]);
             }
+
+            string fileName = @"warning.txt";
+            if (System.IO.File.Exists(fileName))
+            {
+                MessageBox.Show("'" + fileName + "'は存在します。");
+            }
+            else
+            {
+                MessageBox.Show("'" + fileName + "'が存在しません。");
+                StreamWriter sw = File.CreateText("warning.txt");
+            sw.WriteLine("店長からのメッセージ");
+            sw.Close();
+            }
+
+            
+
+            StreamReader sr = new StreamReader(
+        "warning.txt", Encoding.GetEncoding("UTF-8"));
+
+            string text = sr.ReadToEnd();
+
+            sr.Close();
+            warningLbl.Text = text;
+
+
         }
 
         private void ChangeForm(MyForm myf, Button btn = null)
@@ -144,8 +172,11 @@ namespace OICPen
         private void ChangeForm(Form f,Button btn = null)
         {
             f.TopLevel = false;
+            if(frameScon.Panel2.Controls.Count>0)
+            frameScon.Panel2.Controls[0].Enabled = false;
             frameScon.Panel2.Controls.Clear();
             frameScon.Panel2.Controls.Add(f);
+            f.Enabled = true;
             f.Dock = DockStyle.Fill;
             f.Show();
             f.BringToFront();

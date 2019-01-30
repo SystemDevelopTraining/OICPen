@@ -34,7 +34,7 @@ namespace OICPen
                 MessageBox.Show("該当する社員が存在しません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (staff.Password == staffPassTbox.Text)
+            if (staff.Password == Utility.Hash(staffPassTbox.Text))
                 {
                     frame.SetUser(staff);
                     staffPassTbox.Enabled = false;
@@ -70,5 +70,6 @@ namespace OICPen
         {
             Utility.TextBoxDigitCheck(staffIdTbox, e);
         }
+
     }
 }

@@ -30,11 +30,6 @@ namespace OICPen
             }
         }     
 
-        private void GiveOrder_Load(object sender, EventArgs e)
-        {
-            itemNameTbox.Focus();
-            SetDataGridView(itemServis.GetItems());
-        }
        
         //数量チェック
         private void confirmBtn_Click(object sender, EventArgs e)
@@ -253,5 +248,18 @@ namespace OICPen
             Utility.TextBoxDigitCheck(quantityTbox, e);
         }
 
+        private void GiveOrder_Activated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GiveOrder_EnabledChanged(object sender, EventArgs e)
+        {
+            if (Enabled == false)
+                return;
+            itemNameTbox.Focus();
+            SetDataGridView(itemServis.GetItems());
+
+        }
     }
 }

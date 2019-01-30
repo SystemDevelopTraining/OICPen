@@ -147,12 +147,6 @@ namespace OICPen
             }
         }
 
-        private void TakeOrder_Load(object sender, EventArgs e)
-        {
-            clientsIdTbox.Focus();
-            SetDataGridView(itemService.GetItems());
-        }
-
         //注文明細の合計金額設定
         private void ComputeTotalPrice()
         {
@@ -378,6 +372,16 @@ namespace OICPen
         {
             Utility.HiraganaMode(itemNameTbox, e);
         }
+        private void TakeOrder_Activated(object sender, EventArgs e)
+        {
+        }
+
+        private void TakeOrder_EnabledChanged(object sender, EventArgs e)
+        {
+            if (Enabled == false)
+                return;
+            clientsIdTbox.Focus();
+            SetDataGridView(itemService.GetItems());
     }
 }
 

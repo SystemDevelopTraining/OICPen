@@ -35,20 +35,20 @@ namespace OICPen
             salesDgv.Rows.Clear();
             items.ForEach(item =>
             {
-                int takeorderAllQuantity = item.TakeOrderDetailTs == null ? 0 :
+                int takeorderTotalPrice = item.TakeOrderDetailTs == null ? 0 :
                     item.TakeOrderDetailTs
                         .Where(x => x.TakeOrderT.TakeOrderDate >= startDate && x.TakeOrderT.TakeOrderDate <= endDate)
-                        .Sum(x => x.Quantity);
-                int giveOrderAllQuantity = item.GiveOrderDetailTs == null ? 0 :
+                        .Sum(x => x.Quantity * x.TakeOrderPrice);
+                int giveOrderTotalPrice = item.GiveOrderDetailTs == null ? 0 :
                     item.GiveOrderDetailTs
                         .Where(x => x.GiveOrderT.GiveOrderDate >= startDate && x.GiveOrderT.GiveOrderDate <= endDate)
-                        .Sum(x => x.Quantity);
+                        .Sum(x => x.Quantity * x.GiveOrderPurchasePrice);
 
                 salesDgv.Rows.Add(
                     item.ItemTID,
                     item.Name,
-                    item.Price * takeorderAllQuantity,
-                    item.Price * takeorderAllQuantity - item.PurchasePrice * giveOrderAllQuantity
+                    takeorderTotalPrice,
+                    takeorderTotalPrice -  giveOrderTotalPrice
                     );
             });
         }
