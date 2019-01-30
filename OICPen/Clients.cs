@@ -83,6 +83,12 @@ namespace OICPen
                 {
                     servis.AddClient(TextToClient());
                     DataShow();
+                    addressTbox.Text = "";
+                    huriganaTbox.Text = "";
+                    nameTbox.Text = "";
+                    phoneNumberTbox.Text = "";
+                    postalCodeMTbox.Text = "";
+                    MessageBox.Show("登録しました", "完了", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -304,6 +310,10 @@ namespace OICPen
         private void phoneNumberTbox_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             Utility.AlphaMode(phoneNumberTbox,e);
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), @"^[0-9\-]+$") && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void addressTbox_KeyPress(object sender, KeyPressEventArgs e)
