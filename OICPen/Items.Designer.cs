@@ -218,6 +218,7 @@
             // itemNameTbox
             // 
             this.itemNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.itemNameTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.itemNameTbox.Location = new System.Drawing.Point(1163, 464);
             this.itemNameTbox.MaxLength = 30;
             this.itemNameTbox.Name = "itemNameTbox";
@@ -254,6 +255,7 @@
             // searchItemIdTbox
             // 
             this.searchItemIdTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.searchItemIdTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.searchItemIdTbox.Location = new System.Drawing.Point(1163, 153);
             this.searchItemIdTbox.MaxLength = 6;
             this.searchItemIdTbox.Name = "searchItemIdTbox";
@@ -329,6 +331,7 @@
             // janTbox
             // 
             this.janTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.janTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.janTbox.Location = new System.Drawing.Point(1163, 632);
             this.janTbox.MaxLength = 13;
             this.janTbox.Name = "janTbox";
@@ -339,6 +342,7 @@
             // priceTbox
             // 
             this.priceTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.priceTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.priceTbox.Location = new System.Drawing.Point(1163, 589);
             this.priceTbox.MaxLength = 6;
             this.priceTbox.Name = "priceTbox";
@@ -349,6 +353,7 @@
             // noteTbox
             // 
             this.noteTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.noteTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.noteTbox.Location = new System.Drawing.Point(1163, 715);
             this.noteTbox.MaxLength = 30;
             this.noteTbox.Multiline = true;
@@ -361,6 +366,7 @@
             // safetyStockTbox
             // 
             this.safetyStockTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.safetyStockTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.safetyStockTbox.Location = new System.Drawing.Point(1163, 673);
             this.safetyStockTbox.MaxLength = 6;
             this.safetyStockTbox.Name = "safetyStockTbox";
@@ -408,6 +414,7 @@
             // searchItemNameTbox
             // 
             this.searchItemNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.searchItemNameTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.searchItemNameTbox.Location = new System.Drawing.Point(1163, 237);
             this.searchItemNameTbox.MaxLength = 30;
             this.searchItemNameTbox.Name = "searchItemNameTbox";
@@ -418,6 +425,7 @@
             // searchJanTbox
             // 
             this.searchJanTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.searchJanTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.searchJanTbox.Location = new System.Drawing.Point(1163, 195);
             this.searchJanTbox.MaxLength = 13;
             this.searchJanTbox.Name = "searchJanTbox";
@@ -481,6 +489,7 @@
             // purchasePriceTbox
             // 
             this.purchasePriceTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F);
+            this.purchasePriceTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.purchasePriceTbox.Location = new System.Drawing.Point(1163, 548);
             this.purchasePriceTbox.MaxLength = 6;
             this.purchasePriceTbox.Name = "purchasePriceTbox";

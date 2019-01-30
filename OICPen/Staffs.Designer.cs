@@ -135,6 +135,7 @@
             // idTbox
             // 
             this.idTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.idTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.idTbox.Location = new System.Drawing.Point(1180, 152);
             this.idTbox.MaxLength = 6;
             this.idTbox.Name = "idTbox";
@@ -165,6 +166,7 @@
             // searchNameTbox
             // 
             this.searchNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.searchNameTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.searchNameTbox.Location = new System.Drawing.Point(1180, 220);
             this.searchNameTbox.MaxLength = 15;
             this.searchNameTbox.Name = "searchNameTbox";
@@ -208,6 +210,7 @@
             // registerNameTbox
             // 
             this.registerNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.registerNameTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.registerNameTbox.Location = new System.Drawing.Point(1180, 542);
             this.registerNameTbox.MaxLength = 15;
             this.registerNameTbox.Name = "registerNameTbox";
@@ -238,6 +241,7 @@
             // passwordTbox
             // 
             this.passwordTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.passwordTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.passwordTbox.Location = new System.Drawing.Point(1180, 674);
             this.passwordTbox.MaxLength = 20;
             this.passwordTbox.Name = "passwordTbox";
@@ -249,6 +253,7 @@
             // password2Tbox
             // 
             this.password2Tbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.password2Tbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.password2Tbox.Location = new System.Drawing.Point(1180, 740);
             this.password2Tbox.MaxLength = 20;
             this.password2Tbox.Name = "password2Tbox";
