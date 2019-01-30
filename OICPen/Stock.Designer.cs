@@ -119,6 +119,7 @@
             // itemsCodeTbox
             // 
             this.itemsCodeTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.itemsCodeTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.itemsCodeTbox.Location = new System.Drawing.Point(1165, 228);
             this.itemsCodeTbox.MaxLength = 6;
             this.itemsCodeTbox.Name = "itemsCodeTbox";
@@ -129,6 +130,7 @@
             // itemsNameTbox
             // 
             this.itemsNameTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.itemsNameTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.itemsNameTbox.Location = new System.Drawing.Point(1165, 314);
             this.itemsNameTbox.MaxLength = 50;
             this.itemsNameTbox.Name = "itemsNameTbox";

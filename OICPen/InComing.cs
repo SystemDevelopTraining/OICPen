@@ -57,7 +57,6 @@ namespace OICPen
 
         private void incomingTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.AlphaMode(incomingTbox,e);
             Utility.TextBoxDigitCheck(incomingTbox, e);
         }
 

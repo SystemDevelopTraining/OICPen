@@ -178,6 +178,7 @@
             // nameTbox
             // 
             this.nameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.nameTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.nameTbox.Location = new System.Drawing.Point(1099, 546);
             this.nameTbox.MaxLength = 30;
             this.nameTbox.Name = "nameTbox";
@@ -243,6 +244,7 @@
             // addressTbox
             // 
             this.addressTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.addressTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.addressTbox.Location = new System.Drawing.Point(1099, 730);
             this.addressTbox.MaxLength = 50;
             this.addressTbox.Multiline = true;
@@ -319,6 +321,7 @@
             // searchNameTbox
             // 
             this.searchNameTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.searchNameTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.searchNameTbox.Location = new System.Drawing.Point(1105, 191);
             this.searchNameTbox.MaxLength = 30;
             this.searchNameTbox.Name = "searchNameTbox";
@@ -329,6 +332,7 @@
             // searchIdTbox
             // 
             this.searchIdTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.searchIdTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.searchIdTbox.Location = new System.Drawing.Point(1105, 237);
             this.searchIdTbox.MaxLength = 6;
             this.searchIdTbox.Name = "searchIdTbox";
@@ -401,6 +405,7 @@
             // phoneNumberTbox
             // 
             this.phoneNumberTbox.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 24.75F);
+            this.phoneNumberTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.phoneNumberTbox.Location = new System.Drawing.Point(1099, 637);
             this.phoneNumberTbox.MaxLength = 14;
             this.phoneNumberTbox.Name = "phoneNumberTbox";

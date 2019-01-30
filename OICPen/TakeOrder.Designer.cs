@@ -123,7 +123,7 @@
             // 
             this.itemIdTbox.Enabled = false;
             this.itemIdTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.itemIdTbox.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.itemIdTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.itemIdTbox.Location = new System.Drawing.Point(260, 511);
             this.itemIdTbox.MaxLength = 6;
             this.itemIdTbox.Name = "itemIdTbox";
@@ -146,7 +146,7 @@
             // 
             this.countsTbox.Enabled = false;
             this.countsTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.countsTbox.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.countsTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.countsTbox.Location = new System.Drawing.Point(581, 675);
             this.countsTbox.MaxLength = 6;
             this.countsTbox.Name = "countsTbox";

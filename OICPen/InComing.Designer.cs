@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.titleLbl = new System.Windows.Forms.Label();
             this.incomingDgv = new System.Windows.Forms.DataGridView();
+            this.GiveOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiveOrdDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CompleteDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StaffTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
             this.giveOrderedCheckBtn = new System.Windows.Forms.Button();
             this.giveOrderLbl = new System.Windows.Forms.Label();
             this.incomingTbox = new System.Windows.Forms.TextBox();
@@ -39,11 +44,6 @@
             this.fixBtn = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.giveOrderCheckBtn = new System.Windows.Forms.Button();
-            this.GiveOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiveOrdDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CompleteDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StaffTID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Details = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.incomingDgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -87,6 +87,36 @@
             this.incomingDgv.TabStop = false;
             this.incomingDgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellContentClick);
             // 
+            // GiveOrderID
+            // 
+            this.GiveOrderID.HeaderText = "発注ID";
+            this.GiveOrderID.Name = "GiveOrderID";
+            this.GiveOrderID.ReadOnly = true;
+            // 
+            // GiveOrdDate
+            // 
+            this.GiveOrdDate.HeaderText = "発注日";
+            this.GiveOrdDate.Name = "GiveOrdDate";
+            this.GiveOrdDate.ReadOnly = true;
+            // 
+            // CompleteDate
+            // 
+            this.CompleteDate.HeaderText = "入庫日";
+            this.CompleteDate.Name = "CompleteDate";
+            this.CompleteDate.ReadOnly = true;
+            // 
+            // StaffTID
+            // 
+            this.StaffTID.HeaderText = "担当社員";
+            this.StaffTID.Name = "StaffTID";
+            this.StaffTID.ReadOnly = true;
+            // 
+            // Details
+            // 
+            this.Details.HeaderText = "詳細";
+            this.Details.Name = "Details";
+            this.Details.ReadOnly = true;
+            // 
             // giveOrderedCheckBtn
             // 
             this.giveOrderedCheckBtn.Font = new System.Drawing.Font("HG創英ﾌﾟﾚｾﾞﾝｽEB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -111,6 +141,7 @@
             // incomingTbox
             // 
             this.incomingTbox.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.incomingTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.incomingTbox.Location = new System.Drawing.Point(1374, 577);
             this.incomingTbox.MaxLength = 8;
             this.incomingTbox.Name = "incomingTbox";
@@ -161,36 +192,6 @@
             this.giveOrderCheckBtn.Text = "未入庫一覧";
             this.giveOrderCheckBtn.UseVisualStyleBackColor = true;
             this.giveOrderCheckBtn.Click += new System.EventHandler(this.giveOrderCheckBtn_Click);
-            // 
-            // GiveOrderID
-            // 
-            this.GiveOrderID.HeaderText = "発注ID";
-            this.GiveOrderID.Name = "GiveOrderID";
-            this.GiveOrderID.ReadOnly = true;
-            // 
-            // GiveOrdDate
-            // 
-            this.GiveOrdDate.HeaderText = "発注日";
-            this.GiveOrdDate.Name = "GiveOrdDate";
-            this.GiveOrdDate.ReadOnly = true;
-            // 
-            // CompleteDate
-            // 
-            this.CompleteDate.HeaderText = "入庫日";
-            this.CompleteDate.Name = "CompleteDate";
-            this.CompleteDate.ReadOnly = true;
-            // 
-            // StaffTID
-            // 
-            this.StaffTID.HeaderText = "担当社員";
-            this.StaffTID.Name = "StaffTID";
-            this.StaffTID.ReadOnly = true;
-            // 
-            // Details
-            // 
-            this.Details.HeaderText = "詳細";
-            this.Details.Name = "Details";
-            this.Details.ReadOnly = true;
             // 
             // InComing
             // 

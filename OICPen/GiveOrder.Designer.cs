@@ -143,6 +143,7 @@
             // itemNameTbox
             // 
             this.itemNameTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.itemNameTbox.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.itemNameTbox.Location = new System.Drawing.Point(286, 228);
             this.itemNameTbox.MaxLength = 30;
             this.itemNameTbox.Name = "itemNameTbox";
@@ -277,6 +278,7 @@
             // itemIdTbox
             // 
             this.itemIdTbox.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.itemIdTbox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.itemIdTbox.Location = new System.Drawing.Point(286, 305);
             this.itemIdTbox.MaxLength = 6;
             this.itemIdTbox.Name = "itemIdTbox";
