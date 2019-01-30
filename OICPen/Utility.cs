@@ -18,7 +18,7 @@ namespace OICPen
         }
 
         //textBoxに半角数字しか入らないようにする
-        public static void TextBoxDigitCheck(TextBox x,KeyPressEventArgs e)
+        public static void TextBoxDigitCheck(TextBox x, KeyPressEventArgs e)
         {
             if (!Regex.IsMatch(e.KeyChar.ToString(), "[0-9]") && !char.IsControl(e.KeyChar))
             {
@@ -29,12 +29,12 @@ namespace OICPen
         //textBoxが空か判断する
         public static bool TextIsEmpty(string x)
         {
-           if(x == "")
+            if (x == "")
             {
                 return true;
 
             }
-           return false;
+            return false;
 
         }
 
@@ -51,7 +51,7 @@ namespace OICPen
             }
         }
 
-        public static void HiraganaCheckKeyPress(TextBox x,KeyPressEventArgs e)
+        public static void HiraganaCheckKeyPress(TextBox x, KeyPressEventArgs e)
         {
             if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), @"^[\p{IsHiragana}\u30FC]+$") && !char.IsControl(e.KeyChar))
             {
@@ -59,7 +59,7 @@ namespace OICPen
             }
         }
 
-        public static void AlphaMode(TextBox x,KeyPressEventArgs e)
+        public static void AlphaMode(TextBox x, KeyPressEventArgs e)
         {
             x.ImeMode = ImeMode.Alpha;
         }
@@ -93,6 +93,7 @@ namespace OICPen
 
             //結果を表示
             return result.ToString();
-    }
+        }
 
+    }
 }

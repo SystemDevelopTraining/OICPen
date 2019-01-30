@@ -7,7 +7,7 @@ using OICPen.Models;
 
 namespace OICPen
 {
-    public partial class TakeOrder : Form,MyForm
+    public partial class TakeOrder : Form, MyForm
     {
         private StaffT staff;
         private Services.TakeOrderService takeOrderService;
@@ -154,7 +154,7 @@ namespace OICPen
                 completeOrdersDgv.Rows.Cast<DataGridViewRow>()
                 .Aggregate(0, (acc, row) => acc + int.Parse(row.Cells[4].Value.ToString())
             );
-            totalPriceLbl.Text = "合計:"+value+ "円";
+            totalPriceLbl.Text = "合計:" + value + "円";
         }
 
         //DGVから注文明細一覧に注文IDを付与して取得する
@@ -284,7 +284,7 @@ namespace OICPen
             itemsViewDgv.Rows.Clear();
             SetDataGridView(itemService.GetItems());
 
-            
+
             foreach (var x in GetTakeOrderDetailTFromDgv(takeOrderId))
                 takeOrderDetailService.AddTakeOrderDetail(x);
 
@@ -312,7 +312,7 @@ namespace OICPen
         }
         private void clientsIdTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.AlphaMode(clientsIdTbox,e);
+            Utility.AlphaMode(clientsIdTbox, e);
             Utility.TextBoxDigitCheck(clientsIdTbox, e);
         }
         private void itemIdTbox_KeyPress(object sender, KeyPressEventArgs e)
@@ -382,6 +382,7 @@ namespace OICPen
                 return;
             clientsIdTbox.Focus();
             SetDataGridView(itemService.GetItems());
+        }
     }
 }
 
