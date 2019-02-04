@@ -24,6 +24,39 @@ namespace OICPen
             salesDisplayBtn.Focus();
             SetDataGridView(service.GetItems());
         }
+        //商品一つに対する売り上げ情報
+        struct SaleInfo
+        {
+            //売上金額
+            public int salesTotal;
+            //仕入れ合計金額
+            public int purchaseTotal;
+            //商品情報
+            public ItemT item;
+            public SaleInfo(int salesTotal, int purchaseTotal,ItemT item)
+            {
+                this.salesTotal = salesTotal;
+                this.purchaseTotal = purchaseTotal;
+                this.item = item;
+            }
+        }
+        //指定した期間の商品ごとの売上一覧を配列で返す
+         SaleInfo[] SalesInfo(List<ItemT> items,DateTime startDate,DateTime endDate)
+        {
+            return items.Select(item =>
+            {
+                //  商品一つに対する売上集計
+                int salesTotal = item.TakeOrderDetailTs == null ? 0 :
+                    item.TakeOrderDetailTs
+                        .Where(x => x.TakeOrderT.TakeOrderDate >= startDate && x.TakeOrderT.TakeOrderDate <= endDate)
+                        .Sum(x => x.Quantity * x.TakeOrderPrice);
+                int purchaseTotal = item.GiveOrderDetailTs == null ? 0 :
+                    item.GiveOrderDetailTs
+                        .Where(x => x.GiveOrderT.GiveOrderDate >= startDate && x.GiveOrderT.GiveOrderDate <= endDate)
+                        .Sum(x => x.Quantity * x.GiveOrderPurchasePrice);
+                return new SaleInfo (salesTotal, purchaseTotal, item );
+            }).ToArray();
+        }
 
         //データグリッドビューに売り上げ一覧を表示する
         void SetDataGridView(List<ItemT> items)
@@ -33,24 +66,13 @@ namespace OICPen
             startDate = new DateTime(startDate.Year, startDate.Month, startDate.Day, 0, 0, 0);
             endDate = new DateTime(endDate.Year, endDate.Month, endDate.Day, 23, 59, 59);
             salesDgv.Rows.Clear();
-            items.ForEach(item =>
-            {
-                int takeorderTotalPrice = item.TakeOrderDetailTs == null ? 0 :
-                    item.TakeOrderDetailTs
-                        .Where(x => x.TakeOrderT.TakeOrderDate >= startDate && x.TakeOrderT.TakeOrderDate <= endDate)
-                        .Sum(x => x.Quantity * x.TakeOrderPrice);
-                int giveOrderTotalPrice = item.GiveOrderDetailTs == null ? 0 :
-                    item.GiveOrderDetailTs
-                        .Where(x => x.GiveOrderT.GiveOrderDate >= startDate && x.GiveOrderT.GiveOrderDate <= endDate)
-                        .Sum(x => x.Quantity * x.GiveOrderPurchasePrice);
-
+            foreach(var salesInfo in SalesInfo(items, startDate, endDate))
                 salesDgv.Rows.Add(
-                    item.ItemTID,
-                    item.Name,
-                    takeorderTotalPrice,
-                    takeorderTotalPrice -  giveOrderTotalPrice
-                    );
-            });
+                                salesInfo.item.ItemTID,
+                                salesInfo.item.Name,
+                                salesInfo.salesTotal,
+                                salesInfo.salesTotal - salesInfo.purchaseTotal
+                                );           
         }
 
         private void salesDisplayBtn_Click(object sender, EventArgs e)

@@ -161,17 +161,21 @@
             // 
             // chart1
             // 
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(75, 51);
+            this.chart1.Location = new System.Drawing.Point(140, 197);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
+            series1.MarkerBorderColor = System.Drawing.Color.Red;
+            series1.MarkerSize = 1;
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Diamond;
             series1.Name = "売上";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1247, 591);
+            this.chart1.Size = new System.Drawing.Size(1006, 708);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
             // 
