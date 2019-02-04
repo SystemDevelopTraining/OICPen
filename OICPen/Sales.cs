@@ -57,5 +57,22 @@ namespace OICPen
         {
             SetDataGridView(service.GetItems());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.chart1.Series["売上"].Points.AddXY("1月",53546);
+            this.chart1.Series["売上"].Points.AddXY("2月", 556);
+            this.chart1.Series["売上"].Points.AddXY("3月", 15355);
+            this.chart1.Series["売上"].Points.AddXY("4月", 53545);
+            this.chart1.Series["売上"].Points.AddXY("5月", 2546);
+            this.chart1.Series["売上"].Points.AddXY("6月", 535446);
+            this.chart1.Series["売上"].Points.AddXY("7月", 53546);
+            this.chart1.Series["売上"].Points.AddXY("8月", 5346);
+            this.chart1.Series["売上"].Points.AddXY("9月", 5354);
+            this.chart1.Series["売上"].Points.AddXY("10月", 53546);
+            this.chart1.Series["売上"].Points.AddXY("11月", 53546);
+            this.chart1.Series["売上"].Points.AddXY("12月", 53546);
+
+        }
     }
 }

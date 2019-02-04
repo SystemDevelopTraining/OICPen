@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.salesEndDtp = new System.Windows.Forms.DateTimePicker();
             this.titleLbl = new System.Windows.Forms.Label();
             this.salesDisplayBtn = new System.Windows.Forms.Button();
@@ -39,7 +42,10 @@
             this.salesStartDtp = new System.Windows.Forms.DateTimePicker();
             this.salesAndLbl = new System.Windows.Forms.Label();
             this.salesBetweenLbl = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.salesDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // salesEndDtp
@@ -153,12 +159,40 @@
             this.salesBetweenLbl.TabIndex = 0;
             this.salesBetweenLbl.Text = "指定期間";
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(75, 51);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "売上";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(1247, 591);
+            this.chart1.TabIndex = 4;
+            this.chart1.Text = "chart1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1384, 323);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(1610, 982);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.salesBetweenLbl);
             this.Controls.Add(this.salesAndLbl);
             this.Controls.Add(this.salesEndDtp);
@@ -171,6 +205,7 @@
             this.Text = "sales";
             this.Load += new System.EventHandler(this.sales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.salesDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +224,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn itemSales;
         private System.Windows.Forms.DataGridViewTextBoxColumn gain;
         private System.Windows.Forms.DateTimePicker salesEndDtp;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Button button1;
     }
 }
